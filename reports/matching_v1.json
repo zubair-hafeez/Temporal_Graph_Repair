@@ -1,0 +1,395 @@
+{
+  "status": "development_matching_baseline",
+  "source_report": "reports/baseline_probe_v1.json",
+  "source_hash": "4e9797d88a50b1cbaffca70379fd11faf79fbdca924c454761ca38216f22acf8",
+  "training": "BPI2012 development-fit only",
+  "rows": 256000,
+  "positive_rows": 1692,
+  "parameters": {
+    "categorical_features": "from_dtype",
+    "class_weight": null,
+    "early_stopping": "auto",
+    "interaction_cst": null,
+    "l2_regularization": 1.0,
+    "learning_rate": 0.08,
+    "loss": "log_loss",
+    "max_bins": 255,
+    "max_depth": null,
+    "max_features": 1.0,
+    "max_iter": 150,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "monotonic_cst": null,
+    "n_iter_no_change": 10,
+    "random_state": 0,
+    "scoring": "loss",
+    "tol": 1e-07,
+    "validation_fraction": 0.1,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "model_sha256": "238b027d17674171d811db1d456f2f5dd747ec5624f1728191326289e3922586",
+  "seconds": 2.713891234016046,
+  "runs": [
+    {
+      "dataset": "bpi2012_fit",
+      "mode": "independent",
+      "seed": 0,
+      "training_queries": true,
+      "queries": 1000,
+      "target_links": 1000,
+      "candidate_recall_macro": 0.978,
+      "candidate_recall_micro": 0.978,
+      "multi_target_queries": 0,
+      "recall_at_known_cardinality": {
+        "degree": 0.0,
+        "cooccurrence": 0.0110301452020202,
+        "normalized_cooccurrence": 0.007578125,
+        "jaccard": 0.011578125,
+        "temporal_nearest": 0.577,
+        "context_temporal": 0.713578125,
+        "activity_temporal": 0.065,
+        "structural_temporal": 0.711,
+        "activity_transition": 0.685,
+        "learned_matching": 0.8885,
+        "uniform_candidates": 0.007640625
+      },
+      "per_type": {
+        "Application": {
+          "queries": 1000,
+          "candidate_recall_macro": 0.978,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.0110301452020202,
+            "normalized_cooccurrence": 0.007578125,
+            "jaccard": 0.011578125,
+            "temporal_nearest": 0.577,
+            "context_temporal": 0.713578125,
+            "activity_temporal": 0.065,
+            "structural_temporal": 0.711,
+            "activity_transition": 0.685,
+            "learned_matching": 0.8885,
+            "uniform_candidates": 0.007640625
+          }
+        }
+      }
+    },
+    {
+      "dataset": "bpi2012_fit",
+      "mode": "contiguous",
+      "seed": 0,
+      "training_queries": true,
+      "queries": 1000,
+      "target_links": 1000,
+      "candidate_recall_macro": 0.714,
+      "candidate_recall_micro": 0.714,
+      "multi_target_queries": 0,
+      "recall_at_known_cardinality": {
+        "degree": 0.0,
+        "cooccurrence": 0.0054765625,
+        "normalized_cooccurrence": 0.0014765625,
+        "jaccard": 0.0054765625,
+        "temporal_nearest": 0.292,
+        "context_temporal": 0.4294765625,
+        "activity_temporal": 0.045,
+        "structural_temporal": 0.415,
+        "activity_transition": 0.363,
+        "learned_matching": 0.572,
+        "uniform_candidates": 0.005578125
+      },
+      "per_type": {
+        "Application": {
+          "queries": 1000,
+          "candidate_recall_macro": 0.714,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.0054765625,
+            "normalized_cooccurrence": 0.0014765625,
+            "jaccard": 0.0054765625,
+            "temporal_nearest": 0.292,
+            "context_temporal": 0.4294765625,
+            "activity_temporal": 0.045,
+            "structural_temporal": 0.415,
+            "activity_transition": 0.363,
+            "learned_matching": 0.572,
+            "uniform_candidates": 0.005578125
+          }
+        }
+      }
+    },
+    {
+      "dataset": "bpi2012_tune",
+      "mode": "independent",
+      "seed": 0,
+      "training_queries": false,
+      "queries": 1000,
+      "target_links": 1000,
+      "candidate_recall_macro": 0.991,
+      "candidate_recall_micro": 0.991,
+      "multi_target_queries": 0,
+      "recall_at_known_cardinality": {
+        "degree": 0.003,
+        "cooccurrence": 0.0221015625,
+        "normalized_cooccurrence": 0.0136015625,
+        "jaccard": 0.0206015625,
+        "temporal_nearest": 0.73,
+        "context_temporal": 0.8196015625,
+        "activity_temporal": 0.108,
+        "structural_temporal": 0.845,
+        "activity_transition": 0.826,
+        "learned_matching": 0.909,
+        "uniform_candidates": 0.0077421875
+      },
+      "per_type": {
+        "Application": {
+          "queries": 1000,
+          "candidate_recall_macro": 0.991,
+          "recall_at_known_cardinality": {
+            "degree": 0.003,
+            "cooccurrence": 0.0221015625,
+            "normalized_cooccurrence": 0.0136015625,
+            "jaccard": 0.0206015625,
+            "temporal_nearest": 0.73,
+            "context_temporal": 0.8196015625,
+            "activity_temporal": 0.108,
+            "structural_temporal": 0.845,
+            "activity_transition": 0.826,
+            "learned_matching": 0.909,
+            "uniform_candidates": 0.0077421875
+          }
+        }
+      }
+    },
+    {
+      "dataset": "bpi2012_tune",
+      "mode": "contiguous",
+      "seed": 0,
+      "training_queries": false,
+      "queries": 1000,
+      "target_links": 1000,
+      "candidate_recall_macro": 0.898,
+      "candidate_recall_micro": 0.898,
+      "multi_target_queries": 0,
+      "recall_at_known_cardinality": {
+        "degree": 0.006,
+        "cooccurrence": 0.01234375,
+        "normalized_cooccurrence": 0.01559375,
+        "jaccard": 0.01309375,
+        "temporal_nearest": 0.412,
+        "context_temporal": 0.49059375,
+        "activity_temporal": 0.089,
+        "structural_temporal": 0.476,
+        "activity_transition": 0.434,
+        "learned_matching": 0.56,
+        "uniform_candidates": 0.007015625
+      },
+      "per_type": {
+        "Application": {
+          "queries": 1000,
+          "candidate_recall_macro": 0.898,
+          "recall_at_known_cardinality": {
+            "degree": 0.006,
+            "cooccurrence": 0.01234375,
+            "normalized_cooccurrence": 0.01559375,
+            "jaccard": 0.01309375,
+            "temporal_nearest": 0.412,
+            "context_temporal": 0.49059375,
+            "activity_temporal": 0.089,
+            "structural_temporal": 0.476,
+            "activity_transition": 0.434,
+            "learned_matching": 0.56,
+            "uniform_candidates": 0.007015625
+          }
+        }
+      }
+    },
+    {
+      "dataset": "logistics",
+      "mode": "independent",
+      "seed": 0,
+      "training_queries": false,
+      "queries": 1000,
+      "target_links": 1052,
+      "candidate_recall_macro": 0.8755,
+      "candidate_recall_micro": 0.8773764258555133,
+      "multi_target_queries": 22,
+      "recall_at_known_cardinality": {
+        "degree": 0.0,
+        "cooccurrence": 0.01572735281543941,
+        "normalized_cooccurrence": 0.018267187499999997,
+        "jaccard": 0.011444965277777778,
+        "temporal_nearest": 0.14097222222222222,
+        "context_temporal": 0.32027408088312337,
+        "activity_temporal": 0.082,
+        "structural_temporal": 0.32885833333333336,
+        "activity_transition": 0.28534722222222225,
+        "learned_matching": 0.5061277777777777,
+        "uniform_candidates": 0.0072109375
+      },
+      "per_type": {
+        "Container": {
+          "queries": 490,
+          "candidate_recall_macro": 0.9683673469387755,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.011708546473774218,
+            "normalized_cooccurrence": 0.012694515306122449,
+            "jaccard": 0.011016510770975057,
+            "temporal_nearest": 0.24382086167800454,
+            "context_temporal": 0.6416298662337795,
+            "activity_temporal": 0.1673469387755102,
+            "structural_temporal": 0.6170578231292517,
+            "activity_transition": 0.44560657596371883,
+            "learned_matching": 0.7135260770975056,
+            "uniform_candidates": 0.008306760204081633
+          }
+        },
+        "Customer Order": {
+          "queries": 23,
+          "candidate_recall_macro": 0.8695652173913043,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.006793478260869565,
+            "normalized_cooccurrence": 0.006793478260869565,
+            "jaccard": 0.006793478260869565,
+            "temporal_nearest": 0.0,
+            "context_temporal": 0.006793478260869565,
+            "activity_temporal": 0.0,
+            "structural_temporal": 0.0,
+            "activity_transition": 0.043478260869565216,
+            "learned_matching": 0.10869565217391304,
+            "uniform_candidates": 0.006793478260869565
+          }
+        },
+        "Handling Unit": {
+          "queries": 444,
+          "candidate_recall_macro": 0.7612612612612613,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.0029032939189189188,
+            "normalized_cooccurrence": 0.0029032939189189188,
+            "jaccard": 0.0029032939189189188,
+            "temporal_nearest": 0.028153153153153154,
+            "context_temporal": 0.0029032939189189188,
+            "activity_temporal": 0.0,
+            "structural_temporal": 0.019144144144144143,
+            "activity_transition": 0.10135135135135136,
+            "learned_matching": 0.27927927927927926,
+            "uniform_candidates": 0.005947353603603604
+          }
+        },
+        "Transport Document": {
+          "queries": 43,
+          "candidate_recall_macro": 1.0,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.19871750100674518,
+            "normalized_cooccurrence": 0.24654796511627908,
+            "jaccard": 0.10701308139534883,
+            "temporal_nearest": 0.20930232558139536,
+            "context_temporal": 0.10302637043189371,
+            "activity_temporal": 0.0,
+            "structural_temporal": 0.4186046511627907,
+            "activity_transition": 0.4883720930232558,
+            "learned_matching": 0.6976744186046512,
+            "uniform_candidates": 0.007994186046511628
+          }
+        }
+      }
+    },
+    {
+      "dataset": "logistics",
+      "mode": "contiguous",
+      "seed": 0,
+      "training_queries": false,
+      "queries": 1000,
+      "target_links": 1019,
+      "candidate_recall_macro": 0.9616666666666667,
+      "candidate_recall_micro": 0.9617271835132483,
+      "multi_target_queries": 11,
+      "recall_at_known_cardinality": {
+        "degree": 0.0013745711965046153,
+        "cooccurrence": 0.017667756936986478,
+        "normalized_cooccurrence": 0.017202083333333333,
+        "jaccard": 0.00969097222222222,
+        "temporal_nearest": 0.13495,
+        "context_temporal": 0.30435223027587155,
+        "activity_temporal": 0.077,
+        "structural_temporal": 0.3241833333333333,
+        "activity_transition": 0.24,
+        "learned_matching": 0.4870833333333333,
+        "uniform_candidates": 0.00765625
+      },
+      "per_type": {
+        "Container": {
+          "queries": 520,
+          "candidate_recall_macro": 0.9532051282051283,
+          "recall_at_known_cardinality": {
+            "degree": 0.00264340614712426,
+            "cooccurrence": 0.007657345071127838,
+            "normalized_cooccurrence": 0.00799579326923077,
+            "jaccard": 0.006051348824786325,
+            "temporal_nearest": 0.19028846153846155,
+            "context_temporal": 0.5733303249352841,
+            "activity_temporal": 0.14807692307692308,
+            "structural_temporal": 0.5580448717948718,
+            "activity_transition": 0.2903846153846154,
+            "learned_matching": 0.6169871794871794,
+            "uniform_candidates": 0.007662259615384615
+          }
+        },
+        "Customer Order": {
+          "queries": 30,
+          "candidate_recall_macro": 1.0,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.0078125,
+            "normalized_cooccurrence": 0.0078125,
+            "jaccard": 0.0078125,
+            "temporal_nearest": 0.0,
+            "context_temporal": 0.0078125,
+            "activity_temporal": 0.0,
+            "structural_temporal": 0.0,
+            "activity_transition": 0.03333333333333333,
+            "learned_matching": 0.15555555555555553,
+            "uniform_candidates": 0.0078125
+          }
+        },
+        "Handling Unit": {
+          "queries": 404,
+          "candidate_recall_macro": 0.9653465346534653,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.0034614789603960396,
+            "normalized_cooccurrence": 0.0034614789603960396,
+            "jaccard": 0.0034614789603960396,
+            "temporal_nearest": 0.05198019801980198,
+            "context_temporal": 0.0034614789603960396,
+            "activity_temporal": 0.0,
+            "structural_temporal": 0.02599009900990099,
+            "activity_transition": 0.16336633663366337,
+            "learned_matching": 0.3207508250825082,
+            "uniform_candidates": 0.007541769801980198
+          }
+        },
+        "Transport Document": {
+          "queries": 46,
+          "candidate_recall_macro": 1.0,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.2620244565217391,
+            "normalized_cooccurrence": 0.24807518115942026,
+            "jaccard": 0.10677083333333333,
+            "temporal_nearest": 0.32608695652173914,
+            "context_temporal": 0.09973149585921325,
+            "activity_temporal": 0.0,
+            "structural_temporal": 0.5108695652173914,
+            "activity_transition": 0.4782608695652174,
+            "learned_matching": 0.6956521739130435,
+            "uniform_candidates": 0.008491847826086956
+          }
+        }
+      }
+    }
+  ]
+}

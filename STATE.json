@@ -1,0 +1,45 @@
+{
+  "project": "generative_temporal_graph_repair",
+  "status": "active",
+  "stage": "strong_sequential_baseline_and_generator_pilot",
+  "learned_model_trained": true,
+  "main_target_tests_opened": false,
+  "current_unit": {
+    "scope": "Develop nonleaking adapters, explicit observation faults, and strong matching baselines on logistics and BPI 2012 only.",
+    "owned_paths": [
+      "docs/",
+      "tgrepair/",
+      "scripts/",
+      "tests/",
+      "reports/",
+      "data/",
+      "STATE.json",
+      "RESUME.md",
+      "LEDGER.md"
+    ],
+    "acceptance": [
+      "Source hashes and data permissions recorded.",
+      "Learner inputs exclude source case containers, identifier attributes, corruption masks, and clean derived adjacency.",
+      "Corruption provenance and targets live separately from observations.",
+      "Temporal, role-aware structural, and matching baselines evaluated reproducibly.",
+      "Candidate recall and irreducible ambiguity reported separately from repair accuracy."
+    ]
+  },
+  "authorization": "User authorized autonomous paper development and experiments through final review; no external submission.",
+  "next_action": "Train and assess source/synthetic identity matching and a compact coordinated edit model; freeze independent mechanism validation and maintain sealed main targets.",
+  "trained_models": [
+    "BPI2012 development-fit feature-based matching baseline; no proposed neural model yet"
+  ],
+  "completed_evidence": [
+    "reports/development_data.json",
+    "reports/baseline_probe_v1.json",
+    "reports/matching_v1.json",
+    "5 observation-boundary tests passed",
+    "reports/matching_attributes_v2.json",
+    "reports/deployment_matching_v1_recovered.json",
+    "reports/sequential_development_v1.json",
+    "reports/workflow_pilot_v2.json",
+    "15 research tests and 9 factory extension tests passed"
+  ],
+  "factory_increment": "TR0 bounded source acceptance; see ../RF_Dataset_Factory/reports/temporal_repair_acceptance.json"
+}

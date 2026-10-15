@@ -1,0 +1,604 @@
+{
+  "status": "development_identity_diagnostic",
+  "dataset": "bpi2012_tune_attributes",
+  "seed": 0,
+  "source_hash": "423040ac47935a0f3cb358fce60831b864a3a197ef39cd6e9aaa22c7806f55a8",
+  "runs": [
+    {
+      "condition": "fragmentation_only",
+      "config": {
+        "seed": 0,
+        "missing_rate": 0,
+        "wrong_rate": 0,
+        "fragment_rate": 0.25,
+        "gap_mode": "contiguous",
+        "eligible_types": [
+          "Application"
+        ]
+      },
+      "fragmentations": 355,
+      "alias_candidate_recall": 0.9323943661971831,
+      "missing_links": 0,
+      "wrong_links": 0,
+      "no_change": {
+        "traceability": {
+          "precision": 1.0,
+          "recall": 0.907983411093831,
+          "f1": 0.9304570692418972,
+          "exact_history_fraction": 0.815966822187662,
+          "entities": 1929,
+          "per_type": {
+            "Application": {
+              "precision": 1.0,
+              "recall": 0.907983411093831,
+              "f1": 0.9304570692418972,
+              "exact_history_fraction": 0.815966822187662,
+              "entities": 1929
+            }
+          }
+        },
+        "identity": {
+          "predicted_pairs": 0,
+          "true_pairs": 355,
+          "correct_pairs": 0,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "comparisons": [
+        {
+          "threshold": 0.25,
+          "global_assignment": false,
+          "traceability": {
+            "precision": 0.2445137120450556,
+            "recall": 0.9748574390876101,
+            "f1": 0.3270633442296095,
+            "exact_history_fraction": 0.07879730430274753,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.2445137120450556,
+                "recall": 0.9748574390876101,
+                "f1": 0.3270633442296095,
+                "exact_history_fraction": 0.07879730430274753,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 8927,
+            "true_pairs": 355,
+            "correct_pairs": 258,
+            "precision": 0.02890108659124006,
+            "recall": 0.7267605633802817,
+            "f1": 0.055591467356173235
+          }
+        },
+        {
+          "threshold": 0.25,
+          "global_assignment": true,
+          "traceability": {
+            "precision": 0.2058498323420849,
+            "recall": 0.9748574390876101,
+            "f1": 0.27956880522625305,
+            "exact_history_fraction": 0.06998444790046657,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.2058498323420849,
+                "recall": 0.9748574390876101,
+                "f1": 0.27956880522625305,
+                "exact_history_fraction": 0.06998444790046657,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 11020,
+            "true_pairs": 355,
+            "correct_pairs": 258,
+            "precision": 0.023411978221415608,
+            "recall": 0.7267605633802817,
+            "f1": 0.04536263736263736
+          }
+        },
+        {
+          "threshold": 0.5,
+          "global_assignment": false,
+          "traceability": {
+            "precision": 0.2445137120450556,
+            "recall": 0.9748574390876101,
+            "f1": 0.3270633442296095,
+            "exact_history_fraction": 0.07879730430274753,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.2445137120450556,
+                "recall": 0.9748574390876101,
+                "f1": 0.3270633442296095,
+                "exact_history_fraction": 0.07879730430274753,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 8927,
+            "true_pairs": 355,
+            "correct_pairs": 258,
+            "precision": 0.02890108659124006,
+            "recall": 0.7267605633802817,
+            "f1": 0.055591467356173235
+          }
+        },
+        {
+          "threshold": 0.5,
+          "global_assignment": true,
+          "traceability": {
+            "precision": 0.21076780704024256,
+            "recall": 0.9743390357698289,
+            "f1": 0.28650964446371613,
+            "exact_history_fraction": 0.06998444790046657,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.21076780704024256,
+                "recall": 0.9743390357698289,
+                "f1": 0.28650964446371613,
+                "exact_history_fraction": 0.06998444790046657,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 10710,
+            "true_pairs": 355,
+            "correct_pairs": 256,
+            "precision": 0.023902894491129784,
+            "recall": 0.7211267605633803,
+            "f1": 0.046272028920018075
+          }
+        },
+        {
+          "threshold": 0.75,
+          "global_assignment": false,
+          "traceability": {
+            "precision": 0.6215596473695882,
+            "recall": 0.9681181959564541,
+            "f1": 0.6579803787391113,
+            "exact_history_fraction": 0.4572317262830482,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.6215596473695882,
+                "recall": 0.9681181959564541,
+                "f1": 0.6579803787391113,
+                "exact_history_fraction": 0.4572317262830482,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 3977,
+            "true_pairs": 355,
+            "correct_pairs": 232,
+            "precision": 0.058335428715111895,
+            "recall": 0.6535211267605634,
+            "f1": 0.10710987996306556
+          }
+        },
+        {
+          "threshold": 0.75,
+          "global_assignment": true,
+          "traceability": {
+            "precision": 0.6165572768484474,
+            "recall": 0.9673405909797823,
+            "f1": 0.653655341426934,
+            "exact_history_fraction": 0.45049248315189216,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.6165572768484474,
+                "recall": 0.9673405909797823,
+                "f1": 0.653655341426934,
+                "exact_history_fraction": 0.45049248315189216,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 3991,
+            "true_pairs": 355,
+            "correct_pairs": 229,
+            "precision": 0.05737910298170885,
+            "recall": 0.6450704225352113,
+            "f1": 0.10538426138978371
+          }
+        },
+        {
+          "threshold": 0.9,
+          "global_assignment": false,
+          "traceability": {
+            "precision": 0.9982232904472407,
+            "recall": 0.9085018144116123,
+            "f1": 0.9297087895278321,
+            "exact_history_fraction": 0.813893208916537,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.9982232904472407,
+                "recall": 0.9085018144116123,
+                "f1": 0.9297087895278321,
+                "exact_history_fraction": 0.813893208916537,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 7,
+            "true_pairs": 355,
+            "correct_pairs": 2,
+            "precision": 0.2857142857142857,
+            "recall": 0.005633802816901409,
+            "f1": 0.011049723756906077
+          }
+        },
+        {
+          "threshold": 0.9,
+          "global_assignment": true,
+          "traceability": {
+            "precision": 0.9982232904472407,
+            "recall": 0.9085018144116123,
+            "f1": 0.9297087895278321,
+            "exact_history_fraction": 0.813893208916537,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.9982232904472407,
+                "recall": 0.9085018144116123,
+                "f1": 0.9297087895278321,
+                "exact_history_fraction": 0.813893208916537,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 7,
+            "true_pairs": 355,
+            "correct_pairs": 2,
+            "precision": 0.2857142857142857,
+            "recall": 0.005633802816901409,
+            "f1": 0.011049723756906077
+          }
+        }
+      ],
+      "attribute_variant_adaptation": {
+        "traceability": {
+          "precision": 0.10316226023846599,
+          "recall": 1.0,
+          "f1": 0.12681326911511281,
+          "exact_history_fraction": 0.06220839813374806,
+          "entities": 1929,
+          "per_type": {
+            "Application": {
+              "precision": 0.10316226023846599,
+              "recall": 1.0,
+              "f1": 0.12681326911511281,
+              "exact_history_fraction": 0.06220839813374806,
+              "entities": 1929
+            }
+          }
+        },
+        "identity": {
+          "predicted_pairs": 147634,
+          "true_pairs": 355,
+          "correct_pairs": 355,
+          "precision": 0.0024045951474592573,
+          "recall": 1.0,
+          "f1": 0.004797653879680247
+        }
+      }
+    },
+    {
+      "condition": "mixed",
+      "config": {
+        "seed": 0,
+        "missing_rate": 0.1,
+        "wrong_rate": 0.1,
+        "fragment_rate": 0.25,
+        "gap_mode": "contiguous",
+        "eligible_types": [
+          "Application"
+        ]
+      },
+      "fragmentations": 355,
+      "alias_candidate_recall": 0.7690140845070422,
+      "missing_links": 3885,
+      "wrong_links": 3530,
+      "no_change": {
+        "traceability": {
+          "precision": 0.8111644639568613,
+          "recall": 0.7348161258728212,
+          "f1": 0.7444561977676645,
+          "exact_history_fraction": 0.036288232244686365,
+          "entities": 1929,
+          "per_type": {
+            "Application": {
+              "precision": 0.8111644639568613,
+              "recall": 0.7348161258728212,
+              "f1": 0.7444561977676645,
+              "exact_history_fraction": 0.036288232244686365,
+              "entities": 1929
+            }
+          }
+        },
+        "identity": {
+          "predicted_pairs": 0,
+          "true_pairs": 355,
+          "correct_pairs": 0,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "comparisons": [
+        {
+          "threshold": 0.25,
+          "global_assignment": false,
+          "traceability": {
+            "precision": 0.2372102930256205,
+            "recall": 0.7740771324358346,
+            "f1": 0.3099834367390951,
+            "exact_history_fraction": 0.0015552099533437014,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.2372102930256205,
+                "recall": 0.7740771324358346,
+                "f1": 0.3099834367390951,
+                "exact_history_fraction": 0.0015552099533437014,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 5435,
+            "true_pairs": 355,
+            "correct_pairs": 182,
+            "precision": 0.033486660533578655,
+            "recall": 0.5126760563380282,
+            "f1": 0.06286701208981002
+          }
+        },
+        {
+          "threshold": 0.25,
+          "global_assignment": true,
+          "traceability": {
+            "precision": 0.20485845890868798,
+            "recall": 0.776998289165541,
+            "f1": 0.2729499419174786,
+            "exact_history_fraction": 0.002073613271124935,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.20485845890868798,
+                "recall": 0.776998289165541,
+                "f1": 0.2729499419174786,
+                "exact_history_fraction": 0.002073613271124935,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 6921,
+            "true_pairs": 355,
+            "correct_pairs": 197,
+            "precision": 0.028464094783990753,
+            "recall": 0.5549295774647888,
+            "f1": 0.05415063221550302
+          }
+        },
+        {
+          "threshold": 0.5,
+          "global_assignment": false,
+          "traceability": {
+            "precision": 0.2372102930256205,
+            "recall": 0.7740771324358346,
+            "f1": 0.3099834367390951,
+            "exact_history_fraction": 0.0015552099533437014,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.2372102930256205,
+                "recall": 0.7740771324358346,
+                "f1": 0.3099834367390951,
+                "exact_history_fraction": 0.0015552099533437014,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 5435,
+            "true_pairs": 355,
+            "correct_pairs": 182,
+            "precision": 0.033486660533578655,
+            "recall": 0.5126760563380282,
+            "f1": 0.06286701208981002
+          }
+        },
+        {
+          "threshold": 0.5,
+          "global_assignment": true,
+          "traceability": {
+            "precision": 0.21318736861888885,
+            "recall": 0.7767989032740867,
+            "f1": 0.2832049371988125,
+            "exact_history_fraction": 0.002073613271124935,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.21318736861888885,
+                "recall": 0.7767989032740867,
+                "f1": 0.2832049371988125,
+                "exact_history_fraction": 0.002073613271124935,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 6454,
+            "true_pairs": 355,
+            "correct_pairs": 196,
+            "precision": 0.03036876355748373,
+            "recall": 0.5521126760563381,
+            "f1": 0.057570862094286974
+          }
+        },
+        {
+          "threshold": 0.75,
+          "global_assignment": false,
+          "traceability": {
+            "precision": 0.5920810778868381,
+            "recall": 0.7675198437889162,
+            "f1": 0.6095116672306091,
+            "exact_history_fraction": 0.008812856402280975,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.5920810778868381,
+                "recall": 0.7675198437889162,
+                "f1": 0.6095116672306091,
+                "exact_history_fraction": 0.008812856402280975,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 1199,
+            "true_pairs": 355,
+            "correct_pairs": 151,
+            "precision": 0.12593828190158465,
+            "recall": 0.4253521126760563,
+            "f1": 0.19433719433719435
+          }
+        },
+        {
+          "threshold": 0.75,
+          "global_assignment": true,
+          "traceability": {
+            "precision": 0.5865532349821229,
+            "recall": 0.7675479062742103,
+            "f1": 0.6053022815291541,
+            "exact_history_fraction": 0.00933125972006221,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.5865532349821229,
+                "recall": 0.7675479062742103,
+                "f1": 0.6053022815291541,
+                "exact_history_fraction": 0.00933125972006221,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 1236,
+            "true_pairs": 355,
+            "correct_pairs": 151,
+            "precision": 0.12216828478964402,
+            "recall": 0.4253521126760563,
+            "f1": 0.18981772470144564
+          }
+        },
+        {
+          "threshold": 0.9,
+          "global_assignment": false,
+          "traceability": {
+            "precision": 0.806941103940344,
+            "recall": 0.7348161258728212,
+            "f1": 0.7413845887572388,
+            "exact_history_fraction": 0.03473302229134267,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.806941103940344,
+                "recall": 0.7348161258728212,
+                "f1": 0.7413845887572388,
+                "exact_history_fraction": 0.03473302229134267,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 13,
+            "true_pairs": 355,
+            "correct_pairs": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        {
+          "threshold": 0.9,
+          "global_assignment": true,
+          "traceability": {
+            "precision": 0.806941103940344,
+            "recall": 0.7348161258728212,
+            "f1": 0.7413845887572388,
+            "exact_history_fraction": 0.03473302229134267,
+            "entities": 1929,
+            "per_type": {
+              "Application": {
+                "precision": 0.806941103940344,
+                "recall": 0.7348161258728212,
+                "f1": 0.7413845887572388,
+                "exact_history_fraction": 0.03473302229134267,
+                "entities": 1929
+              }
+            }
+          },
+          "identity": {
+            "predicted_pairs": 13,
+            "true_pairs": 355,
+            "correct_pairs": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      ],
+      "attribute_variant_adaptation": {
+        "traceability": {
+          "precision": 0.4663900290010001,
+          "recall": 0.7403669741250312,
+          "f1": 0.4765768380687405,
+          "exact_history_fraction": 0.002073613271124935,
+          "entities": 1929,
+          "per_type": {
+            "Application": {
+              "precision": 0.4663900290010001,
+              "recall": 0.7403669741250312,
+              "f1": 0.4765768380687405,
+              "exact_history_fraction": 0.002073613271124935,
+              "entities": 1929
+            }
+          }
+        },
+        "identity": {
+          "predicted_pairs": 11952,
+          "true_pairs": 355,
+          "correct_pairs": 22,
+          "precision": 0.0018406961178045514,
+          "recall": 0.061971830985915494,
+          "f1": 0.0035752011050621596
+        }
+      }
+    }
+  ],
+  "limits": [
+    "No observation attributes or object-object links in this track.",
+    "Nonoverlap is a baseline assumption; it is not enforced on real business behavior.",
+    "Mixed wrong participants are random same-type alternatives; hard stale-map faults remain pending."
+  ],
+  "seconds": 50.067125296918675
+}

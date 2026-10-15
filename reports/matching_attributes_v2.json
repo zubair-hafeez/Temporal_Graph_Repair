@@ -1,0 +1,223 @@
+{
+  "status": "development_matching_baseline",
+  "source_report": "reports/baseline_attributes_v2.json",
+  "source_hash": "2b0e4c53098441a188777fab2b2da40c436a7643afc19d7c75c565c2403dd80b",
+  "training": "BPI2012 development-fit only",
+  "rows": 1024000,
+  "positive_rows": 1961,
+  "parameters": {
+    "categorical_features": "from_dtype",
+    "class_weight": null,
+    "early_stopping": false,
+    "interaction_cst": null,
+    "l2_regularization": 1.0,
+    "learning_rate": 0.08,
+    "loss": "log_loss",
+    "max_bins": 255,
+    "max_depth": null,
+    "max_features": 1.0,
+    "max_iter": 150,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "monotonic_cst": null,
+    "n_iter_no_change": 10,
+    "random_state": 0,
+    "scoring": "loss",
+    "tol": 1e-07,
+    "validation_fraction": 0.1,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "model_sha256": "22cde11f7187b1108a5acceacebf0c5731786860072b5edf2395d47def4c0977",
+  "seconds": 5.619552824064158,
+  "runs": [
+    {
+      "dataset": "bpi2012_fit_attributes",
+      "mode": "independent",
+      "seed": 0,
+      "training_queries": true,
+      "queries": 1000,
+      "target_links": 1000,
+      "candidate_recall_macro": 0.992,
+      "candidate_recall_micro": 0.992,
+      "multi_target_queries": 0,
+      "recall_at_known_cardinality": {
+        "degree": 0.0,
+        "cooccurrence": 0.0103984375,
+        "normalized_cooccurrence": 0.0071484375,
+        "jaccard": 0.0111484375,
+        "temporal_nearest": 0.577,
+        "context_temporal": 0.7131484375,
+        "activity_temporal": 0.065,
+        "structural_temporal": 0.711,
+        "activity_transition": 0.681,
+        "attribute_exact": 0.07502377985488964,
+        "attribute_temporal": 0.939,
+        "learned_matching": 0.972,
+        "uniform_candidates": 0.0019375
+      },
+      "per_type": {
+        "Application": {
+          "queries": 1000,
+          "candidate_recall_macro": 0.992,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.0103984375,
+            "normalized_cooccurrence": 0.0071484375,
+            "jaccard": 0.0111484375,
+            "temporal_nearest": 0.577,
+            "context_temporal": 0.7131484375,
+            "activity_temporal": 0.065,
+            "structural_temporal": 0.711,
+            "activity_transition": 0.681,
+            "attribute_exact": 0.07502377985488964,
+            "attribute_temporal": 0.939,
+            "learned_matching": 0.972,
+            "uniform_candidates": 0.0019375
+          }
+        }
+      }
+    },
+    {
+      "dataset": "bpi2012_fit_attributes",
+      "mode": "contiguous",
+      "seed": 0,
+      "training_queries": true,
+      "queries": 1000,
+      "target_links": 1000,
+      "candidate_recall_macro": 0.969,
+      "candidate_recall_micro": 0.969,
+      "multi_target_queries": 0,
+      "recall_at_known_cardinality": {
+        "degree": 0.0,
+        "cooccurrence": 0.005166015625,
+        "normalized_cooccurrence": 0.001166015625,
+        "jaccard": 0.005166015625,
+        "temporal_nearest": 0.292,
+        "context_temporal": 0.429166015625,
+        "activity_temporal": 0.045,
+        "structural_temporal": 0.415,
+        "activity_transition": 0.358,
+        "attribute_exact": 0.05551676416658725,
+        "attribute_temporal": 0.624,
+        "learned_matching": 0.832,
+        "uniform_candidates": 0.001892578125
+      },
+      "per_type": {
+        "Application": {
+          "queries": 1000,
+          "candidate_recall_macro": 0.969,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.005166015625,
+            "normalized_cooccurrence": 0.001166015625,
+            "jaccard": 0.005166015625,
+            "temporal_nearest": 0.292,
+            "context_temporal": 0.429166015625,
+            "activity_temporal": 0.045,
+            "structural_temporal": 0.415,
+            "activity_transition": 0.358,
+            "attribute_exact": 0.05551676416658725,
+            "attribute_temporal": 0.624,
+            "learned_matching": 0.832,
+            "uniform_candidates": 0.001892578125
+          }
+        }
+      }
+    },
+    {
+      "dataset": "bpi2012_tune_attributes",
+      "mode": "independent",
+      "seed": 0,
+      "training_queries": false,
+      "queries": 1000,
+      "target_links": 1000,
+      "candidate_recall_macro": 0.999,
+      "candidate_recall_micro": 0.999,
+      "multi_target_queries": 0,
+      "recall_at_known_cardinality": {
+        "degree": 0.003,
+        "cooccurrence": 0.021650390625,
+        "normalized_cooccurrence": 0.013150390625,
+        "jaccard": 0.020150390625,
+        "temporal_nearest": 0.73,
+        "context_temporal": 0.819150390625,
+        "activity_temporal": 0.108,
+        "structural_temporal": 0.845,
+        "activity_transition": 0.826,
+        "attribute_exact": 0.10170760568162453,
+        "attribute_temporal": 0.96,
+        "learned_matching": 0.973,
+        "uniform_candidates": 0.001951171875
+      },
+      "per_type": {
+        "Application": {
+          "queries": 1000,
+          "candidate_recall_macro": 0.999,
+          "recall_at_known_cardinality": {
+            "degree": 0.003,
+            "cooccurrence": 0.021650390625,
+            "normalized_cooccurrence": 0.013150390625,
+            "jaccard": 0.020150390625,
+            "temporal_nearest": 0.73,
+            "context_temporal": 0.819150390625,
+            "activity_temporal": 0.108,
+            "structural_temporal": 0.845,
+            "activity_transition": 0.826,
+            "attribute_exact": 0.10170760568162453,
+            "attribute_temporal": 0.96,
+            "learned_matching": 0.973,
+            "uniform_candidates": 0.001951171875
+          }
+        }
+      }
+    },
+    {
+      "dataset": "bpi2012_tune_attributes",
+      "mode": "contiguous",
+      "seed": 0,
+      "training_queries": false,
+      "queries": 1000,
+      "target_links": 1000,
+      "candidate_recall_macro": 1.0,
+      "candidate_recall_micro": 1.0,
+      "multi_target_queries": 0,
+      "recall_at_known_cardinality": {
+        "degree": 0.006,
+        "cooccurrence": 0.011916015625,
+        "normalized_cooccurrence": 0.015166015625,
+        "jaccard": 0.012666015625,
+        "temporal_nearest": 0.412,
+        "context_temporal": 0.490166015625,
+        "activity_temporal": 0.089,
+        "structural_temporal": 0.476,
+        "activity_transition": 0.412,
+        "attribute_exact": 0.1145392824218841,
+        "attribute_temporal": 0.724,
+        "learned_matching": 0.825,
+        "uniform_candidates": 0.001953125
+      },
+      "per_type": {
+        "Application": {
+          "queries": 1000,
+          "candidate_recall_macro": 1.0,
+          "recall_at_known_cardinality": {
+            "degree": 0.006,
+            "cooccurrence": 0.011916015625,
+            "normalized_cooccurrence": 0.015166015625,
+            "jaccard": 0.012666015625,
+            "temporal_nearest": 0.412,
+            "context_temporal": 0.490166015625,
+            "activity_temporal": 0.089,
+            "structural_temporal": 0.476,
+            "activity_transition": 0.412,
+            "attribute_exact": 0.1145392824218841,
+            "attribute_temporal": 0.724,
+            "learned_matching": 0.825,
+            "uniform_candidates": 0.001953125
+          }
+        }
+      }
+    }
+  ]
+}

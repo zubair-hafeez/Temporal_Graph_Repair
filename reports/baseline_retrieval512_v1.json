@@ -1,0 +1,388 @@
+{
+  "status": "exploratory_known_hole_track",
+  "config": {
+    "datasets": [
+      "bpi2012_fit",
+      "bpi2012_tune",
+      "logistics"
+    ],
+    "seeds": [
+      0
+    ],
+    "modes": [
+      "contiguous"
+    ],
+    "queries": 1000,
+    "budget": 512,
+    "output": "baseline_retrieval512_v1"
+  },
+  "features": [
+    "log_degree",
+    "log_cooccurrence",
+    "normalized_cooccurrence",
+    "max_jaccard",
+    "partner_coverage",
+    "object_time",
+    "context_time",
+    "same_activity_time",
+    "bracketed",
+    "activity_likelihood_ratio",
+    "previous_transition_ratio",
+    "next_transition_ratio",
+    "observed_context_count"
+  ],
+  "code_hashes": {
+    "tgrepair/__init__.py": "ad83ce5fca3e2bfa1cc153276de4379a3c8302b7f2a0a85ae40503c7bb3d62ca",
+    "tgrepair/corruption.py": "686bf542a4ea04f50dc21c2e847799524715d6d0a345a4e05a0a1ac280c05857",
+    "tgrepair/data.py": "e075088ac687bae4abd1cf46f65cf7da5623ff6d153233298acb50cc16da5d42",
+    "tgrepair/matching.py": "16ec675e0aa4eeb3d2e865192101df80e39e7faeb1b70070bef891fe77850b04",
+    "scripts/fit_matching_baseline.py": "383bf0109b4d8c69bf4d064379d1d91e2f8f2d519af13d94ddc029a6720e59f7",
+    "scripts/prepare_development.py": "050c58a6b66949ce8fc82f05ac242b3a4a55519d1f56b1d9cf8d06b28117ba2f",
+    "scripts/run_baseline_probe.py": "b1bc61f8b637415057afd4cc67d5d82f05ba14dc8ec9b4fefb620d2fa14b0e24"
+  },
+  "limits": [
+    "Missing event/type and cardinality supplied for diagnostic scoring.",
+    "Reference targets do not enter candidate retrieval or features.",
+    "No identity fragmentation or wrong-link diagnosis evaluated.",
+    "No object-object or descriptive attribute evidence in this track.",
+    "All runs are development, not final target outcomes."
+  ],
+  "runs": [
+    {
+      "dataset": "bpi2012_fit",
+      "mode": "contiguous",
+      "seed": 0,
+      "graph_hash": "16f6b4f3399948b9de1a112c9d9ba6895e25f8385ac7f6027334b95485638b48",
+      "cache": "data/probe_cache/baseline_retrieval512_v1/bpi2012_fit_contiguous_0.npz",
+      "observed_graph": {
+        "name": "bpi2012_development_fit_contiguous_0",
+        "events": 181057,
+        "objects": 9191,
+        "object_types": {
+          "Application": 9124,
+          "Resource": 67
+        },
+        "event_types": {
+          "A_SUBMITTED::COMPLETE": 9124,
+          "A_PARTLYSUBMITTED::COMPLETE": 9124,
+          "A_PREACCEPTED::COMPLETE": 5107,
+          "W_Completeren aanvraag::SCHEDULE": 5110,
+          "A_DECLINED::COMPLETE": 5317,
+          "W_Completeren aanvraag::START": 16305,
+          "W_Completeren aanvraag::COMPLETE": 16620,
+          "A_ACCEPTED::COMPLETE": 3546,
+          "O_SELECTED::COMPLETE": 4865,
+          "A_FINALIZED::COMPLETE": 3477,
+          "O_CREATED::COMPLETE": 4865,
+          "O_SENT::COMPLETE": 4865,
+          "W_Nabellen offertes::SCHEDULE": 4602,
+          "W_Nabellen offertes::START": 15628,
+          "W_Nabellen offertes::COMPLETE": 16022,
+          "O_CANCELLED::COMPLETE": 2523,
+          "W_Afhandelen leads::SCHEDULE": 3323,
+          "A_CANCELLED::COMPLETE": 1974,
+          "W_Afhandelen leads::START": 4088,
+          "W_Afhandelen leads::COMPLETE": 4089,
+          "W_Beoordelen fraude::SCHEDULE": 82,
+          "W_Beoordelen fraude::START": 191,
+          "W_Beoordelen fraude::COMPLETE": 191,
+          "O_SENT_BACK::COMPLETE": 2379,
+          "W_Valideren aanvraag::SCHEDULE": 3436,
+          "W_Valideren aanvraag::START": 5376,
+          "W_Nabellen incomplete dossiers::SCHEDULE": 1609,
+          "W_Valideren aanvraag::COMPLETE": 5379,
+          "W_Nabellen incomplete dossiers::START": 7543,
+          "W_Nabellen incomplete dossiers::COMPLETE": 7549,
+          "O_ACCEPTED::COMPLETE": 1544,
+          "A_APPROVED::COMPLETE": 1546,
+          "A_ACTIVATED::COMPLETE": 1546,
+          "A_REGISTERED::COMPLETE": 1546,
+          "O_DECLINED::COMPLETE": 554,
+          "W_Wijzigen contractgegevens::SCHEDULE": 12
+        },
+        "participation_links": 313456
+      },
+      "eligible_types": [
+        "Application"
+      ],
+      "all_hidden_links": 36166,
+      "all_query_groups": 36166,
+      "severity": 0.19974925023611348,
+      "candidate_budget": 512,
+      "time_scale_seconds": 46.31000006198883,
+      "queries_without_visible_partner": 85,
+      "truths_without_observed_history": 0,
+      "queries": 1000,
+      "target_links": 1000,
+      "candidate_recall_macro": 0.876,
+      "candidate_recall_micro": 0.876,
+      "multi_target_queries": 0,
+      "recall_at_known_cardinality": {
+        "degree": 0.0,
+        "cooccurrence": 0.005140625,
+        "normalized_cooccurrence": 0.001140625,
+        "jaccard": 0.005140625,
+        "temporal_nearest": 0.292,
+        "context_temporal": 0.429140625,
+        "activity_temporal": 0.045,
+        "structural_temporal": 0.415,
+        "activity_transition": 0.358,
+        "uniform_candidates": 0.0017109375
+      },
+      "per_type": {
+        "Application": {
+          "queries": 1000,
+          "candidate_recall_macro": 0.876,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.005140625,
+            "normalized_cooccurrence": 0.001140625,
+            "jaccard": 0.005140625,
+            "temporal_nearest": 0.292,
+            "context_temporal": 0.429140625,
+            "activity_temporal": 0.045,
+            "structural_temporal": 0.415,
+            "activity_transition": 0.358,
+            "uniform_candidates": 0.0017109375
+          }
+        }
+      },
+      "seconds": 18.011147462995723
+    },
+    {
+      "dataset": "bpi2012_tune",
+      "mode": "contiguous",
+      "seed": 0,
+      "graph_hash": "3ebe0bed47474060941f590809a04c3f2b01a56c856297ae2e7569142ca1a76e",
+      "cache": "data/probe_cache/baseline_retrieval512_v1/bpi2012_tune_contiguous_0.npz",
+      "observed_graph": {
+        "name": "bpi2012_development_tune_contiguous_0",
+        "events": 38777,
+        "objects": 1991,
+        "object_types": {
+          "Application": 1929,
+          "Resource": 62
+        },
+        "event_types": {
+          "A_SUBMITTED::COMPLETE": 1929,
+          "A_PARTLYSUBMITTED::COMPLETE": 1929,
+          "W_Afhandelen leads::SCHEDULE": 703,
+          "W_Afhandelen leads::START": 897,
+          "A_PREACCEPTED::COMPLETE": 1069,
+          "W_Completeren aanvraag::SCHEDULE": 1070,
+          "W_Afhandelen leads::COMPLETE": 897,
+          "W_Completeren aanvraag::START": 3485,
+          "W_Completeren aanvraag::COMPLETE": 3557,
+          "A_DECLINED::COMPLETE": 1132,
+          "A_ACCEPTED::COMPLETE": 746,
+          "A_FINALIZED::COMPLETE": 729,
+          "O_SELECTED::COMPLETE": 1022,
+          "O_CREATED::COMPLETE": 1022,
+          "O_SENT::COMPLETE": 1022,
+          "W_Nabellen offertes::SCHEDULE": 957,
+          "W_Nabellen offertes::START": 3290,
+          "O_CANCELLED::COMPLETE": 541,
+          "W_Nabellen offertes::COMPLETE": 3385,
+          "A_CANCELLED::COMPLETE": 412,
+          "W_Beoordelen fraude::SCHEDULE": 18,
+          "O_SENT_BACK::COMPLETE": 504,
+          "W_Valideren aanvraag::SCHEDULE": 743,
+          "W_Beoordelen fraude::START": 38,
+          "W_Beoordelen fraude::COMPLETE": 38,
+          "W_Valideren aanvraag::START": 1157,
+          "W_Nabellen incomplete dossiers::SCHEDULE": 371,
+          "W_Valideren aanvraag::COMPLETE": 1159,
+          "W_Nabellen incomplete dossiers::START": 1760,
+          "W_Nabellen incomplete dossiers::COMPLETE": 1761,
+          "A_APPROVED::COMPLETE": 333,
+          "O_ACCEPTED::COMPLETE": 332,
+          "A_ACTIVATED::COMPLETE": 333,
+          "A_REGISTERED::COMPLETE": 333,
+          "O_DECLINED::COMPLETE": 103
+        },
+        "participation_links": 67053
+      },
+      "eligible_types": [
+        "Application"
+      ],
+      "all_hidden_links": 7768,
+      "all_query_groups": 7768,
+      "severity": 0.20032493488408076,
+      "candidate_budget": 512,
+      "time_scale_seconds": 76.04900002479553,
+      "queries_without_visible_partner": 85,
+      "truths_without_observed_history": 0,
+      "queries": 1000,
+      "target_links": 1000,
+      "candidate_recall_macro": 0.996,
+      "candidate_recall_micro": 0.996,
+      "multi_target_queries": 0,
+      "recall_at_known_cardinality": {
+        "degree": 0.006,
+        "cooccurrence": 0.011916015625,
+        "normalized_cooccurrence": 0.015166015625,
+        "jaccard": 0.012666015625,
+        "temporal_nearest": 0.412,
+        "context_temporal": 0.490166015625,
+        "activity_temporal": 0.089,
+        "structural_temporal": 0.476,
+        "activity_transition": 0.415,
+        "uniform_candidates": 0.0019453125
+      },
+      "per_type": {
+        "Application": {
+          "queries": 1000,
+          "candidate_recall_macro": 0.996,
+          "recall_at_known_cardinality": {
+            "degree": 0.006,
+            "cooccurrence": 0.011916015625,
+            "normalized_cooccurrence": 0.015166015625,
+            "jaccard": 0.012666015625,
+            "temporal_nearest": 0.412,
+            "context_temporal": 0.490166015625,
+            "activity_temporal": 0.089,
+            "structural_temporal": 0.476,
+            "activity_transition": 0.415,
+            "uniform_candidates": 0.0019453125
+          }
+        }
+      },
+      "seconds": 13.257671821978875
+    },
+    {
+      "dataset": "logistics",
+      "mode": "contiguous",
+      "seed": 0,
+      "graph_hash": "75daac5907ef39e523f37153ad9fe9c23e5f6360e5d55355211c60bcbe86343c",
+      "cache": "data/probe_cache/baseline_retrieval512_v1/logistics_contiguous_0.npz",
+      "observed_graph": {
+        "name": "logistics_development_contiguous_0",
+        "events": 35372,
+        "objects": 13882,
+        "object_types": {
+          "Customer Order": 600,
+          "Transport Document": 594,
+          "Container": 1999,
+          "Truck": 6,
+          "Handling Unit": 10553,
+          "Forklift": 3,
+          "Vehicle": 127
+        },
+        "event_types": {
+          "Register Customer Order": 600,
+          "Create Transport Document": 594,
+          "Book Vehicles": 594,
+          "Order Empty Containers": 593,
+          "Collect Goods": 10553,
+          "Pick Up Empty Container": 1995,
+          "Load Truck": 10553,
+          "Drive to Terminal": 1989,
+          "Weigh": 1989,
+          "Place in Stock": 1814,
+          "Bring to Loading Bay": 1969,
+          "Load to Vehicle": 1966,
+          "Depart": 127,
+          "Reschedule Container": 36
+        },
+        "participation_links": 64001
+      },
+      "eligible_types": [
+        "Container",
+        "Customer Order",
+        "Handling Unit",
+        "Transport Document"
+      ],
+      "all_hidden_links": 10271,
+      "all_query_groups": 10097,
+      "severity": 0.2008526116119444,
+      "candidate_budget": 512,
+      "time_scale_seconds": 1893.0,
+      "queries_without_visible_partner": 242,
+      "truths_without_observed_history": 0,
+      "queries": 1000,
+      "target_links": 1019,
+      "candidate_recall_macro": 0.996,
+      "candidate_recall_micro": 0.9960745829244357,
+      "multi_target_queries": 11,
+      "recall_at_known_cardinality": {
+        "degree": 0.00032349372952507815,
+        "cooccurrence": 0.016202913186986478,
+        "normalized_cooccurrence": 0.015737239583333333,
+        "jaccard": 0.00822612847222222,
+        "temporal_nearest": 0.13495,
+        "context_temporal": 0.30288738652587155,
+        "activity_temporal": 0.077,
+        "structural_temporal": 0.3241833333333333,
+        "activity_transition": 0.24,
+        "uniform_candidates": 0.001982421875
+      },
+      "per_type": {
+        "Container": {
+          "queries": 520,
+          "candidate_recall_macro": 0.9942307692307693,
+          "recall_at_known_cardinality": {
+            "degree": 0.0006221033260097657,
+            "cooccurrence": 0.007289256128820146,
+            "normalized_cooccurrence": 0.007627704326923077,
+            "jaccard": 0.005683259882478632,
+            "temporal_nearest": 0.19028846153846155,
+            "context_temporal": 0.5729622359929765,
+            "activity_temporal": 0.14807692307692308,
+            "structural_temporal": 0.5580448717948718,
+            "activity_transition": 0.2923076923076923,
+            "uniform_candidates": 0.0019981971153846152
+          }
+        },
+        "Customer Order": {
+          "queries": 30,
+          "candidate_recall_macro": 1.0,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.001953125,
+            "normalized_cooccurrence": 0.001953125,
+            "jaccard": 0.001953125,
+            "temporal_nearest": 0.0,
+            "context_temporal": 0.001953125,
+            "activity_temporal": 0.0,
+            "structural_temporal": 0.0,
+            "activity_transition": 0.03333333333333333,
+            "uniform_candidates": 0.001953125
+          }
+        },
+        "Handling Unit": {
+          "queries": 404,
+          "candidate_recall_macro": 0.9975247524752475,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.0008895420792079208,
+            "normalized_cooccurrence": 0.0008895420792079208,
+            "jaccard": 0.0008895420792079208,
+            "temporal_nearest": 0.05198019801980198,
+            "context_temporal": 0.0008895420792079208,
+            "activity_temporal": 0.0,
+            "structural_temporal": 0.02599009900990099,
+            "activity_transition": 0.16336633663366337,
+            "uniform_candidates": 0.0019482905321782178
+          }
+        },
+        "Transport Document": {
+          "queries": 46,
+          "candidate_recall_macro": 1.0,
+          "recall_at_known_cardinality": {
+            "degree": 0.0,
+            "cooccurrence": 0.2607506793478261,
+            "normalized_cooccurrence": 0.24680140398550723,
+            "jaccard": 0.10549705615942029,
+            "temporal_nearest": 0.32608695652173914,
+            "context_temporal": 0.0984577186853002,
+            "activity_temporal": 0.0,
+            "structural_temporal": 0.5108695652173914,
+            "activity_transition": 0.45652173913043476,
+            "uniform_candidates": 0.002122961956521739
+          }
+        }
+      },
+      "seconds": 10.93653225095477
+    }
+  ]
+}
