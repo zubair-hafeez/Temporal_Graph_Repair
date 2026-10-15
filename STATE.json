@@ -1,7 +1,7 @@
 {
   "project": "generative_temporal_graph_repair",
   "status": "active",
-  "stage": "strong_sequential_baseline_and_generator_pilot",
+  "stage": "iterative_edit_learning_and_generator_transfer",
   "learned_model_trained": true,
   "main_target_tests_opened": false,
   "current_unit": {
@@ -26,9 +26,12 @@
     ]
   },
   "authorization": "User authorized autonomous paper development and experiments through final review; no external submission.",
-  "next_action": "Train and assess source/synthetic identity matching and a compact coordinated edit model; freeze independent mechanism validation and maintain sealed main targets.",
+  "next_action": "Complete expanded-generator transfer and graph-edit comparisons, then validate the surviving method against strong source-trained controls before freezing target tests.",
   "trained_models": [
-    "BPI2012 development-fit feature-based matching baseline; no proposed neural model yet"
+    "source participant matcher",
+    "source and synthetic identity matchers",
+    "synthetic temporal graph-edit policy",
+    "matched-input MLP and boosted edit controls"
   ],
   "completed_evidence": [
     "reports/development_data.json",
@@ -39,7 +42,14 @@
     "reports/deployment_matching_v1_recovered.json",
     "reports/sequential_development_v1.json",
     "reports/workflow_pilot_v2.json",
-    "15 research tests and 9 factory extension tests passed"
+    "15 research tests and 9 factory extension tests passed",
+    "reports/identity_learned_source_v1.json",
+    "reports/identity_learned_synthetic_v1.json",
+    "reports/edit_temporal_v1.json",
+    "reports/decode_temporal_v1.json",
+    "reports/decode_feature_v1.json",
+    "reports/workflow_train_v4.json",
+    "reports/matching_optimization_v1.json"
   ],
   "factory_increment": "TR0 bounded source acceptance; see ../RF_Dataset_Factory/reports/temporal_repair_acceptance.json"
 }

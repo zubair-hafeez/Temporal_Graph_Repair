@@ -1,0 +1,1148 @@
+{
+  "status": "development_edit_learning_cache",
+  "config": {
+    "generated": "workflow_validation_v3",
+    "episodes": 96,
+    "output": "edit_validation_v1",
+    "partial": false,
+    "event_budget": 48,
+    "participant_budget": 16,
+    "pair_budget": 32
+  },
+  "counts": {
+    "ADD_PARTICIPANT_actions": 118835,
+    "ADD_PARTICIPANT_positive": 1602,
+    "REMOVE_PARTICIPANT_actions": 7693,
+    "REMOVE_PARTICIPANT_positive": 583,
+    "MERGE_ALIASES_actions": 48257,
+    "MERGE_ALIASES_positive": 676,
+    "states": 120,
+    "nodes": 20289
+  },
+  "source_snapshot": {
+    "file": "data/source_snapshots/3eeef19c5c3d2aadf84da80121897eb5fffd5f4e3ff3600327b71b425c778b92.tar.gz",
+    "sha256": "c585cf5887589f87198b6676f7faa0d8ebbe3cbf07eb0a63a9c073d68199743e",
+    "source_set_hash": "3eeef19c5c3d2aadf84da80121897eb5fffd5f4e3ff3600327b71b425c778b92",
+    "files": {
+      "research/tgrepair/__init__.py": "ad83ce5fca3e2bfa1cc153276de4379a3c8302b7f2a0a85ae40503c7bb3d62ca",
+      "research/tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7",
+      "research/tgrepair/corruption.py": "d04efa6b65698f47f47aa2769431ed99ea8626cad7f3bb5fb63c68fbe633361b",
+      "research/tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2",
+      "research/tgrepair/edits.py": "90a22c41bfa49f1d9981e1ad643ec128833fec2e314dd480a1e6aa2c4cf1a9c6",
+      "research/tgrepair/entity_features.py": "6122ad15c21c44645521d0a920f0bd855cd112cf4caca49d548ebc8adba84dff",
+      "research/tgrepair/factory_plugin.py": "5724eb624c08060892e20cda1f8285ccb34ef5f0a58ac03dca207521b83afba9",
+      "research/tgrepair/identity_matching.py": "b707a4ca0efa7ade90fc5a15ec6401470a02ddc333c8c8eedacf3921e12ef4ac",
+      "research/tgrepair/matching.py": "e47ad9dd83d9ac0195a5647955487a8c38c9c7bbfffa71fb0c50fa8052c8bae3",
+      "research/tgrepair/metrics.py": "903faf015149e0095544ee40368bf20412d1cef856e84eebfb36e3e1c8f2e97b",
+      "research/tgrepair/neural_policy.py": "da9444696f623bc1683812a2b1b9aeee4723bf56d2b0de7bfa6a57e59796cfdf",
+      "research/tgrepair/provenance.py": "1f427099dacbba70402931d18dc6d63fc07c04a4ac6cde732033b43e926d964b",
+      "research/scripts/evaluate_matching.py": "8509e6a411c71e68e1c9dd86dc70475d6118af142b1cc3ad6d0450d8003cdc7e",
+      "research/scripts/fit_matching_baseline.py": "e8477430d3a8c7e72b09019e869bd855273224931317a266888256fa1bb0167a",
+      "research/scripts/generate_workflow_pilot.py": "9732e667b6f932605eb42f83a439827de45f515ec90f89ddc694f8b0e0b14cb6",
+      "research/scripts/prepare_development.py": "2c10d01c60055b6b79e91e99726d3e738afa16e559d694f940b28638c9a0636f",
+      "research/scripts/prepare_edit_learning.py": "de125b695a1d38c51e58e628c306334173c3c6e5c1cdbd6cd2b4d8196a88380d",
+      "research/scripts/repair_development_graph.py": "3e629cafb0ed8c2d18381badcbbe7cb041441fc15b7d7987585a799a23505a75",
+      "research/scripts/run_baseline_probe.py": "90e7d881dccecde9dda9f7183014484e0325b09b30453ccd87ea48f8685f73de",
+      "research/scripts/run_deployment_probe.py": "f7787dd29ace7b69de65f04b9705c8cf1f82d11824c2d7b085310b8c133be46e",
+      "research/scripts/run_identity_probe.py": "26fbd0aafca577458f5b0536d482441cb78f6569d355a557f98d365fc94809f6",
+      "research/scripts/train_edit_policy.py": "87cd537140e89b4cbe584dceab8450c3668158f5187d83af7f2c01461c1aa319",
+      "research/scripts/train_identity_baselines.py": "3d5e72c957a5146e18d06ac99e85872ea8b4c357588a4684cb78ce761aa906ca",
+      "research/tests/test_application_metrics.py": "0bc7fb819cb6565f2273a085e4ecb35da06448c2f02c7ca8429389a73ec4af6d",
+      "research/tests/test_edits.py": "82cc8f201811ed347807f0e29164b25def5dcadb0731fb70ea555270d66e5679",
+      "research/tests/test_factory_integration.py": "6cbd875afa3d08b925e3bbb01ce0a0555fa91fe7fe8bfe2de0059fd2f6530117",
+      "research/tests/test_identity_features.py": "7636f879f19cf06847d322e05b6a82f6394193bcabc418cd3dda011275ffb7c5",
+      "research/tests/test_neural_inputs.py": "f42870e91884f7d53033075061d5db7eaff27237388eed6352e632fbe94e5a5d",
+      "research/tests/test_observation_boundary.py": "6e944c76f152519702eb992341dc144f62c7287fcc7361737a127a11b5e01aa0",
+      "factory/src/temporal_factory/__init__.py": "d401743947ab8a821e6edbf60dc4435e2fea6d8f8f08ed5c47df799e6640bf3a",
+      "factory/src/temporal_factory/core.py": "171d6de2068f9ca7d7d13b47868d9044959b8ebf94ce5caf523defbf6535b058",
+      "factory/src/temporal_factory/workflow.py": "6eeaf7d9944165e67cf142bfde03247f3da8cb67defb4f9aab68247a71788431",
+      "factory/src/rfdf/__init__.py": "0e0e411ad05093b259f07ae8cc4769b7a7dcbae4917316a0bc3a35c16789fca7",
+      "factory/src/rfdf/storage.py": "a7b6e034740730ed3da33997a023e362d9afa768924e73ceae8af5b356bede25",
+      "factory/pyproject.toml": "2d7f7864648740cee45f838e4bf02527cf539cd0d3221c17405eb935ccc05ef5"
+    }
+  },
+  "source_data": "workflow_validation_v3",
+  "records": [
+    {
+      "file": "000000.pt",
+      "episode": "episode-000000",
+      "group": "9ad7b163dd2a3ba16beba7154f65ecf3dc86514782b10879ba34c6149993585a",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1385,
+      "positive": 28
+    },
+    {
+      "file": "000001.pt",
+      "episode": "episode-000000",
+      "group": "9ad7b163dd2a3ba16beba7154f65ecf3dc86514782b10879ba34c6149993585a",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1203,
+      "positive": 0
+    },
+    {
+      "file": "000002.pt",
+      "episode": "episode-000001",
+      "group": "7019213db3e1d40f92f6a3209a9d3b57b6cddcc7304d93b4d0807725f3f3939d",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 939,
+      "positive": 11
+    },
+    {
+      "file": "000003.pt",
+      "episode": "episode-000002",
+      "group": "60c5fd89e82b78e53edfc68d84fac384bacb082d95122b507897eea1ca07c486",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1174,
+      "positive": 7
+    },
+    {
+      "file": "000004.pt",
+      "episode": "episode-000003",
+      "group": "6a7c6b5d12b1129348ffadf121886688d0e34c607642491cb97ae5cc8c4ddb8c",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 763,
+      "positive": 15
+    },
+    {
+      "file": "000005.pt",
+      "episode": "episode-000004",
+      "group": "d661e91233ff73c729217082fd1139efb2633defca038bbf944f8dada79b699a",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 888,
+      "positive": 31
+    },
+    {
+      "file": "000006.pt",
+      "episode": "episode-000004",
+      "group": "d661e91233ff73c729217082fd1139efb2633defca038bbf944f8dada79b699a",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 642,
+      "positive": 0
+    },
+    {
+      "file": "000007.pt",
+      "episode": "episode-000005",
+      "group": "315ebe7b4241b84bae8715f91296bbf5b029cd195e8ed32ec321debb515dbf04",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1174,
+      "positive": 22
+    },
+    {
+      "file": "000008.pt",
+      "episode": "episode-000006",
+      "group": "ae647bfdc0bda012f189ecfe3ede2df44194643d7596d0e9aa88e0d5af4c4ac2",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 978,
+      "positive": 16
+    },
+    {
+      "file": "000009.pt",
+      "episode": "episode-000007",
+      "group": "4098bdcde1a2146f05982bf1fe69b02a65f08a9935b2898731b7c4a5d96a76bb",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1119,
+      "positive": 42
+    },
+    {
+      "file": "000010.pt",
+      "episode": "episode-000008",
+      "group": "7f1bd8790cba0073b31ccf213be6bf6a1bdbaed33f67484c971d2b6d9fbec83a",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 999,
+      "positive": 36
+    },
+    {
+      "file": "000011.pt",
+      "episode": "episode-000008",
+      "group": "7f1bd8790cba0073b31ccf213be6bf6a1bdbaed33f67484c971d2b6d9fbec83a",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 904,
+      "positive": 0
+    },
+    {
+      "file": "000012.pt",
+      "episode": "episode-000009",
+      "group": "c0fc9b6fd301887c327a9acb0f934fc7808d847149bcf38d39fd81fdbc67f1d1",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1869,
+      "positive": 46
+    },
+    {
+      "file": "000013.pt",
+      "episode": "episode-000010",
+      "group": "e614a38411d50be771ee1c05c9c1a61a8816ba1b46fc143281a763262eea5348",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2172,
+      "positive": 33
+    },
+    {
+      "file": "000014.pt",
+      "episode": "episode-000011",
+      "group": "ab87d00aa52e8dd15551889e8407006398e067c50890150aaccdc14af131f7c2",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1650,
+      "positive": 36
+    },
+    {
+      "file": "000015.pt",
+      "episode": "episode-000012",
+      "group": "85efa7a7779e1c1b1e6a96a188727c19203f5947b98192cea90cd73b9f693846",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2403,
+      "positive": 71
+    },
+    {
+      "file": "000016.pt",
+      "episode": "episode-000012",
+      "group": "85efa7a7779e1c1b1e6a96a188727c19203f5947b98192cea90cd73b9f693846",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1788,
+      "positive": 0
+    },
+    {
+      "file": "000017.pt",
+      "episode": "episode-000013",
+      "group": "a4574824f83d3ea21da9ad7d326a8e4aaef3d5e66a7b9415cd338778c763db46",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1932,
+      "positive": 44
+    },
+    {
+      "file": "000018.pt",
+      "episode": "episode-000014",
+      "group": "38eba550d098d355a6b4b3388bc9e48ded20f7209e31553cb28685735ea831ca",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2355,
+      "positive": 68
+    },
+    {
+      "file": "000019.pt",
+      "episode": "episode-000015",
+      "group": "9e29e3298d59a8f70990f420029bee39194868baab13a009d855620de81f2fe4",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1392,
+      "positive": 41
+    },
+    {
+      "file": "000020.pt",
+      "episode": "episode-000016",
+      "group": "82a53dcbf8e66c4011b8fc8c2478d74e2566d66084a627e1dd397b0cb23bb58f",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1600,
+      "positive": 5
+    },
+    {
+      "file": "000021.pt",
+      "episode": "episode-000016",
+      "group": "82a53dcbf8e66c4011b8fc8c2478d74e2566d66084a627e1dd397b0cb23bb58f",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1600,
+      "positive": 0
+    },
+    {
+      "file": "000022.pt",
+      "episode": "episode-000017",
+      "group": "7d562d9bcc01b1e5f6b13f472f9c10a14780562be7318a586106561e5d08b215",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2078,
+      "positive": 65
+    },
+    {
+      "file": "000023.pt",
+      "episode": "episode-000018",
+      "group": "d63a549b41c7dc0ab1e91e086080b31d8f67814bb46338437616aeed47e7bdbf",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 958,
+      "positive": 34
+    },
+    {
+      "file": "000024.pt",
+      "episode": "episode-000019",
+      "group": "df7fb5b74e499cf32039c6dcde29705a0c23e74915bc49bece30e3dd912bd713",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1264,
+      "positive": 7
+    },
+    {
+      "file": "000025.pt",
+      "episode": "episode-000020",
+      "group": "896c327c242fb2b12180a47a2bb67bec9e52570aca5463a4fbfb4b0a9501633c",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 642,
+      "positive": 9
+    },
+    {
+      "file": "000026.pt",
+      "episode": "episode-000020",
+      "group": "896c327c242fb2b12180a47a2bb67bec9e52570aca5463a4fbfb4b0a9501633c",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 642,
+      "positive": 0
+    },
+    {
+      "file": "000027.pt",
+      "episode": "episode-000021",
+      "group": "9f0b5d46e9b8cbe9c3dd281837e77220874d7344a9b0a7f184c9dc6685b61aae",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1410,
+      "positive": 10
+    },
+    {
+      "file": "000028.pt",
+      "episode": "episode-000022",
+      "group": "eeabfc93908371ec1194c0c8342710a1672048bbd7e24c3d4c55635199791e35",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 921,
+      "positive": 33
+    },
+    {
+      "file": "000029.pt",
+      "episode": "episode-000023",
+      "group": "6bf9b4b93d771201826fc081538fc0a6cafb6423ba3dd8aa5fa9163d8d323a2d",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1575,
+      "positive": 27
+    },
+    {
+      "file": "000030.pt",
+      "episode": "episode-000024",
+      "group": "296317a6d1de4a4ba76104ad3593cbda4421fefef19fd77af0dec3e082afcf1d",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 888,
+      "positive": 10
+    },
+    {
+      "file": "000031.pt",
+      "episode": "episode-000024",
+      "group": "296317a6d1de4a4ba76104ad3593cbda4421fefef19fd77af0dec3e082afcf1d",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 642,
+      "positive": 0
+    },
+    {
+      "file": "000032.pt",
+      "episode": "episode-000025",
+      "group": "9946712389d1f5e91cb7a0683e68bfd1f7d9ee17cc00ae482d36f56deed91684",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1146,
+      "positive": 15
+    },
+    {
+      "file": "000033.pt",
+      "episode": "episode-000026",
+      "group": "c943c870acfe15f6e8bca60b17096c5b2d3d9346a7ca1305b2935d63120e929d",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1264,
+      "positive": 18
+    },
+    {
+      "file": "000034.pt",
+      "episode": "episode-000027",
+      "group": "af1453792068e3c413a67b968211a5cb4026f06e860c074cd5f8308964531337",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2014,
+      "positive": 62
+    },
+    {
+      "file": "000035.pt",
+      "episode": "episode-000028",
+      "group": "3a43e44f92575f80d85a2f38c85a4da9e88c287338492fe5faf49f9d279f8022",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2393,
+      "positive": 75
+    },
+    {
+      "file": "000036.pt",
+      "episode": "episode-000028",
+      "group": "3a43e44f92575f80d85a2f38c85a4da9e88c287338492fe5faf49f9d279f8022",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1788,
+      "positive": 0
+    },
+    {
+      "file": "000037.pt",
+      "episode": "episode-000029",
+      "group": "90770a2b719c724d5691da5c99cab48e517788d192e3d0893c0db662afb02e2f",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1938,
+      "positive": 26
+    },
+    {
+      "file": "000038.pt",
+      "episode": "episode-000030",
+      "group": "82ba4a6bec354163fb999157f35c0d041c2a66e5a3547ac308abb0730e847542",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1563,
+      "positive": 35
+    },
+    {
+      "file": "000039.pt",
+      "episode": "episode-000031",
+      "group": "28907425eb2021b3fbad0cd374291e7c4bef25c221c09e753a3065cf21bd25f7",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1465,
+      "positive": 27
+    },
+    {
+      "file": "000040.pt",
+      "episode": "episode-000032",
+      "group": "ee6dcd7958ba62e92ce20fd2016aba6a677d554a484f5d26a6917a007520610e",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2214,
+      "positive": 71
+    },
+    {
+      "file": "000041.pt",
+      "episode": "episode-000032",
+      "group": "ee6dcd7958ba62e92ce20fd2016aba6a677d554a484f5d26a6917a007520610e",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1620,
+      "positive": 0
+    },
+    {
+      "file": "000042.pt",
+      "episode": "episode-000033",
+      "group": "ec12c1a933e1da5cb9143a67967d07f49a949b8af713bb1be35a53e593860a03",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1869,
+      "positive": 57
+    },
+    {
+      "file": "000043.pt",
+      "episode": "episode-000034",
+      "group": "abe60def39c8f6ca09e7b4b3878ef486658e48384790eb3659c6cc2adb3316ac",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2428,
+      "positive": 24
+    },
+    {
+      "file": "000044.pt",
+      "episode": "episode-000035",
+      "group": "4b050793ae5bbbd5e5a966e03a559a53a69a3a4d8ce2e4efe94ae1a11ffdb98c",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1784,
+      "positive": 35
+    },
+    {
+      "file": "000045.pt",
+      "episode": "episode-000036",
+      "group": "595cbcaef73cbb625da6c946419f5e7fe5cd7d7244fdde3b06013f51e752ff79",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1093,
+      "positive": 34
+    },
+    {
+      "file": "000046.pt",
+      "episode": "episode-000036",
+      "group": "595cbcaef73cbb625da6c946419f5e7fe5cd7d7244fdde3b06013f51e752ff79",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 904,
+      "positive": 0
+    },
+    {
+      "file": "000047.pt",
+      "episode": "episode-000037",
+      "group": "1c987c836bc9cc01d649ca13a1ce879bb5b9bbb7f8affb847f33b7dd1734f816",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1693,
+      "positive": 25
+    },
+    {
+      "file": "000048.pt",
+      "episode": "episode-000038",
+      "group": "d716d5719b539bd490fef908f57918b141c4fbb8212653b3c7674aaf0dc43c9f",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 921,
+      "positive": 21
+    },
+    {
+      "file": "000049.pt",
+      "episode": "episode-000039",
+      "group": "d8f980e5df241bbfee5c6cc4eaeefde45e6df82d9ec4113ae04e331951b1d680",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1044,
+      "positive": 20
+    },
+    {
+      "file": "000050.pt",
+      "episode": "episode-000040",
+      "group": "38ebc70511b13b1deea8d1d268bb7aee599d374b78f87652429dfc1b62a6d2a3",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1233,
+      "positive": 14
+    },
+    {
+      "file": "000051.pt",
+      "episode": "episode-000040",
+      "group": "38ebc70511b13b1deea8d1d268bb7aee599d374b78f87652429dfc1b62a6d2a3",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1021,
+      "positive": 0
+    },
+    {
+      "file": "000052.pt",
+      "episode": "episode-000041",
+      "group": "8562b97f8d96b7d5d4be128738b9a2fc52232ca666ce467cf5976d5f0e51f7ba",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1603,
+      "positive": 28
+    },
+    {
+      "file": "000053.pt",
+      "episode": "episode-000042",
+      "group": "e559b1a4bab534e0b9a33902d74624eedc674d2fd4ef140d6aacfa3ecfec44b9",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1264,
+      "positive": 16
+    },
+    {
+      "file": "000054.pt",
+      "episode": "episode-000043",
+      "group": "c47d0a4d3618049a20991e0f2b0c7bd4febd03b84c8a4ee74e8e976afcfa5148",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1428,
+      "positive": 24
+    },
+    {
+      "file": "000055.pt",
+      "episode": "episode-000044",
+      "group": "71e93e3006bf177d63b1a4a15fb9c02e7e440f1715373c0fcd5f77a6782b3908",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1146,
+      "positive": 20
+    },
+    {
+      "file": "000056.pt",
+      "episode": "episode-000044",
+      "group": "71e93e3006bf177d63b1a4a15fb9c02e7e440f1715373c0fcd5f77a6782b3908",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 904,
+      "positive": 0
+    },
+    {
+      "file": "000057.pt",
+      "episode": "episode-000045",
+      "group": "f437c6f0dc1cfd7ebb067cc10d83115976460b41ee9497c74af91968c9477be2",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1741,
+      "positive": 59
+    },
+    {
+      "file": "000058.pt",
+      "episode": "episode-000046",
+      "group": "96c443df59c89f6d9f247d833ed664da9ba472a4cf4fffd30633e34d4e6f55fd",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1855,
+      "positive": 70
+    },
+    {
+      "file": "000059.pt",
+      "episode": "episode-000047",
+      "group": "f43a0e56b9efee0c9a154b08aa65cf810bdb9edb35f493078f630c7bde6a8218",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1948,
+      "positive": 43
+    },
+    {
+      "file": "000060.pt",
+      "episode": "episode-000048",
+      "group": "ab3995a40d960fa43de6d834f040ea5cdaad9d96f372ec990d494c85d5feedf5",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2034,
+      "positive": 72
+    },
+    {
+      "file": "000061.pt",
+      "episode": "episode-000048",
+      "group": "ab3995a40d960fa43de6d834f040ea5cdaad9d96f372ec990d494c85d5feedf5",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1581,
+      "positive": 0
+    },
+    {
+      "file": "000062.pt",
+      "episode": "episode-000049",
+      "group": "e0b4ad76624b17f0903563ec0bf6db81e23179f8504ec3f2dc3e7e3e8610c31d",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2363,
+      "positive": 65
+    },
+    {
+      "file": "000063.pt",
+      "episode": "episode-000050",
+      "group": "423a511769a50b18d0c9e0773b2128f490adb6563a2280ed11c96fcadfcd5511",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1284,
+      "positive": 27
+    },
+    {
+      "file": "000064.pt",
+      "episode": "episode-000051",
+      "group": "3a85eab622d317660df2e24f51a8cc141e11a2537eb1334bafed8efead24a975",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1465,
+      "positive": 26
+    },
+    {
+      "file": "000065.pt",
+      "episode": "episode-000052",
+      "group": "5d815c87aae981de48605e04b743afb601205bb4fa66d4d5f1fa8a8a4bd802b8",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2621,
+      "positive": 46
+    },
+    {
+      "file": "000066.pt",
+      "episode": "episode-000052",
+      "group": "5d815c87aae981de48605e04b743afb601205bb4fa66d4d5f1fa8a8a4bd802b8",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1875,
+      "positive": 0
+    },
+    {
+      "file": "000067.pt",
+      "episode": "episode-000053",
+      "group": "7213e0cde8c3466e2754f361c75cfe86104ae669a981fa0b583abdcac7beafd0",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2367,
+      "positive": 72
+    },
+    {
+      "file": "000068.pt",
+      "episode": "episode-000054",
+      "group": "28b03e433f96b0d1af68464fa6a2de71e10db601059f3b8f2cb2dd322f26d19f",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1382,
+      "positive": 35
+    },
+    {
+      "file": "000069.pt",
+      "episode": "episode-000055",
+      "group": "1fc71e5fc380858350b1d37b998578d0fcaada6a328dbd93dad9220bbb35e269",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1535,
+      "positive": 29
+    },
+    {
+      "file": "000070.pt",
+      "episode": "episode-000056",
+      "group": "ded1f5eb4106ce705a7aaf0c79326cb13ff28205de77f96963582a5a64c391e7",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1093,
+      "positive": 35
+    },
+    {
+      "file": "000071.pt",
+      "episode": "episode-000056",
+      "group": "ded1f5eb4106ce705a7aaf0c79326cb13ff28205de77f96963582a5a64c391e7",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 978,
+      "positive": 0
+    },
+    {
+      "file": "000072.pt",
+      "episode": "episode-000057",
+      "group": "5aea8600366cc0c2e6eaa4037a052f05de0e2be459641216835d328a4449c185",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1264,
+      "positive": 19
+    },
+    {
+      "file": "000073.pt",
+      "episode": "episode-000058",
+      "group": "1eddb518bcbcb3c15524bea460cb61ff80a8fa0abb76c59e4a5f137f3e09dd2e",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1326,
+      "positive": 15
+    },
+    {
+      "file": "000074.pt",
+      "episode": "episode-000059",
+      "group": "ef485db7b4e22b0f4627a8ad27eea5ccd097657d326bc805d5ae87c49e7e27cd",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1327,
+      "positive": 20
+    },
+    {
+      "file": "000075.pt",
+      "episode": "episode-000060",
+      "group": "140f96d9ccdc4da115d3619bd53161c446df4f143f105ebcf7b3e426e7aa1403",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 642,
+      "positive": 21
+    },
+    {
+      "file": "000076.pt",
+      "episode": "episode-000060",
+      "group": "140f96d9ccdc4da115d3619bd53161c446df4f143f105ebcf7b3e426e7aa1403",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 642,
+      "positive": 0
+    },
+    {
+      "file": "000077.pt",
+      "episode": "episode-000061",
+      "group": "89975f70345ed56da90bd633070932e1672c77c8d38cb722f4767dbbb856d530",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1264,
+      "positive": 20
+    },
+    {
+      "file": "000078.pt",
+      "episode": "episode-000062",
+      "group": "4d8dc585ea48fd6313d620f2ee178a67b64792da3e8404551e7d50d8599fa4f5",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1264,
+      "positive": 25
+    },
+    {
+      "file": "000079.pt",
+      "episode": "episode-000063",
+      "group": "9c551f99041b77c6a9e2798318962be3ecceebed36e229b176718845410f3ba4",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2342,
+      "positive": 42
+    },
+    {
+      "file": "000080.pt",
+      "episode": "episode-000064",
+      "group": "dedde149cfefd6e6a56ed98483a9f36e1ee7e9b4bfe11df62fde20660a7b07a3",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1856,
+      "positive": 24
+    },
+    {
+      "file": "000081.pt",
+      "episode": "episode-000064",
+      "group": "dedde149cfefd6e6a56ed98483a9f36e1ee7e9b4bfe11df62fde20660a7b07a3",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1710,
+      "positive": 0
+    },
+    {
+      "file": "000082.pt",
+      "episode": "episode-000065",
+      "group": "cc9ad18e7e15d1c718ea999e63ebc3e6ed82d4a01c98f494f1d57515cca1a951",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2254,
+      "positive": 51
+    },
+    {
+      "file": "000083.pt",
+      "episode": "episode-000066",
+      "group": "3d01b3951aef859a9a2448f8bec0cae6cee7dbe581319ab3ff55275f1c6e83c6",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1629,
+      "positive": 30
+    },
+    {
+      "file": "000084.pt",
+      "episode": "episode-000067",
+      "group": "e0439673e9eeaf13e243c8f2857c8a8d9c07b1fa91229d5836209a849ca0c8f1",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1903,
+      "positive": 40
+    },
+    {
+      "file": "000085.pt",
+      "episode": "episode-000068",
+      "group": "cfbbd185a1a696b7392432b41b475039f2e6a75e4ece5acd083509781f806c35",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2112,
+      "positive": 38
+    },
+    {
+      "file": "000086.pt",
+      "episode": "episode-000068",
+      "group": "cfbbd185a1a696b7392432b41b475039f2e6a75e4ece5acd083509781f806c35",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 2051,
+      "positive": 0
+    },
+    {
+      "file": "000087.pt",
+      "episode": "episode-000069",
+      "group": "793902583c04999ed79a91f60eab2aae872bca7f953a58ff4f7404b0bebeb96a",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2029,
+      "positive": 17
+    },
+    {
+      "file": "000088.pt",
+      "episode": "episode-000070",
+      "group": "28dbeb1b4beb27cdf675f1fe67151341e2e27e640075a2fbfda47556457bb1f0",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1784,
+      "positive": 11
+    },
+    {
+      "file": "000089.pt",
+      "episode": "episode-000071",
+      "group": "1f58e0927d906a0694cdc0d04dc13f0e5f848cf47da4f984fea1389e26454e33",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1663,
+      "positive": 25
+    },
+    {
+      "file": "000090.pt",
+      "episode": "episode-000072",
+      "group": "97f747651a31f927450db85c810a38f924bd516b6135baa6685b7e8cc5a32f5f",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1146,
+      "positive": 15
+    },
+    {
+      "file": "000091.pt",
+      "episode": "episode-000072",
+      "group": "97f747651a31f927450db85c810a38f924bd516b6135baa6685b7e8cc5a32f5f",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1068,
+      "positive": 0
+    },
+    {
+      "file": "000092.pt",
+      "episode": "episode-000073",
+      "group": "61d8b386efc9c3694fcfcb39b31f06ba91e404b6dbea89383e8dc548cdfe63a1",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 939,
+      "positive": 20
+    },
+    {
+      "file": "000093.pt",
+      "episode": "episode-000074",
+      "group": "3de4d23ac23d6b76b787520a6948954a6f6499c8f977b9e571fbe83a6f89a2be",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1146,
+      "positive": 12
+    },
+    {
+      "file": "000094.pt",
+      "episode": "episode-000075",
+      "group": "0cccfdf7de04cf47f669938b2625563fb0b9e09986516dc3040bec2ec9229a71",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 825,
+      "positive": 5
+    },
+    {
+      "file": "000095.pt",
+      "episode": "episode-000076",
+      "group": "fcf70d6f21de026b2d499d21d68dec159447fcb7cad2d93df88ef7307723977c",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1146,
+      "positive": 5
+    },
+    {
+      "file": "000096.pt",
+      "episode": "episode-000076",
+      "group": "fcf70d6f21de026b2d499d21d68dec159447fcb7cad2d93df88ef7307723977c",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1068,
+      "positive": 0
+    },
+    {
+      "file": "000097.pt",
+      "episode": "episode-000077",
+      "group": "3968dba5a7e37ee066d2f2bff1df8415a52b3a30a5b2c1c8c2edde5f91215f56",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1174,
+      "positive": 30
+    },
+    {
+      "file": "000098.pt",
+      "episode": "episode-000078",
+      "group": "c903e6a9e46c626394fd34c9144851bd57a57d2f4ee7a27c3db8cc0a3579b742",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1233,
+      "positive": 23
+    },
+    {
+      "file": "000099.pt",
+      "episode": "episode-000079",
+      "group": "e6cccbefc961448c52b9bef5d32edf4d6901bf7016fe5745ccd76edd80c081d0",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 939,
+      "positive": 33
+    },
+    {
+      "file": "000100.pt",
+      "episode": "episode-000080",
+      "group": "dccea3f7d62f8f6926d160aef59493ccbf815b59b7e980ad94ecdd18898bfd2d",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 904,
+      "positive": 11
+    },
+    {
+      "file": "000101.pt",
+      "episode": "episode-000080",
+      "group": "dccea3f7d62f8f6926d160aef59493ccbf815b59b7e980ad94ecdd18898bfd2d",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 642,
+      "positive": 0
+    },
+    {
+      "file": "000102.pt",
+      "episode": "episode-000081",
+      "group": "2648f816288521a91fd97485844f5b4b0253e82b7e05011181092f0b0f4a284e",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1684,
+      "positive": 14
+    },
+    {
+      "file": "000103.pt",
+      "episode": "episode-000082",
+      "group": "5e2bf64fbfceb9cd59d73bf6275d79a738d0245532fdf239dfe19ed0877d340c",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1606,
+      "positive": 31
+    },
+    {
+      "file": "000104.pt",
+      "episode": "episode-000083",
+      "group": "6d0b91e0aecb679b0c264786f8d63e26c0fb22424a2328496477e58087eda9db",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1588,
+      "positive": 20
+    },
+    {
+      "file": "000105.pt",
+      "episode": "episode-000084",
+      "group": "979d440543bb30ecfd5783d3f59885d667273cd8f45eede1fa53ff140c900fdd",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2106,
+      "positive": 33
+    },
+    {
+      "file": "000106.pt",
+      "episode": "episode-000084",
+      "group": "979d440543bb30ecfd5783d3f59885d667273cd8f45eede1fa53ff140c900fdd",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1969,
+      "positive": 0
+    },
+    {
+      "file": "000107.pt",
+      "episode": "episode-000085",
+      "group": "1efa6785af8dea48139d0c88a62180a46eb7b17af1a09ecc0853f887ec9ae20b",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1996,
+      "positive": 19
+    },
+    {
+      "file": "000108.pt",
+      "episode": "episode-000086",
+      "group": "9a7eb240b2a8f9da36b54e4fe7bb6bf570dcabb8af4958a65f4daee8174d08a6",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1590,
+      "positive": 31
+    },
+    {
+      "file": "000109.pt",
+      "episode": "episode-000087",
+      "group": "d617d8b46e0b5d20c4c4180cf07fa76fa768d7b97997134a97d3ea5a7a4d5c94",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 2384,
+      "positive": 36
+    },
+    {
+      "file": "000110.pt",
+      "episode": "episode-000088",
+      "group": "af6d47256e1339df8696a5d56c31377e6eb605323109f85dd2e0211d1b083c2e",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1788,
+      "positive": 24
+    },
+    {
+      "file": "000111.pt",
+      "episode": "episode-000088",
+      "group": "af6d47256e1339df8696a5d56c31377e6eb605323109f85dd2e0211d1b083c2e",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1735,
+      "positive": 0
+    },
+    {
+      "file": "000112.pt",
+      "episode": "episode-000089",
+      "group": "a674f8e365dc07cb59d8cfc7bfe8c36ba5b3a09fb0211862c59f19577099705d",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1404,
+      "positive": 7
+    },
+    {
+      "file": "000113.pt",
+      "episode": "episode-000090",
+      "group": "f3fcb716f7bbc3b0136ced6ff898fa227a0ba7284483d95efae809d7ea6ae45a",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 763,
+      "positive": 9
+    },
+    {
+      "file": "000114.pt",
+      "episode": "episode-000091",
+      "group": "a9210e402364404497f0e0d44bfbf6268a468bc11b53a31d492e7557be44aefa",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 921,
+      "positive": 12
+    },
+    {
+      "file": "000115.pt",
+      "episode": "episode-000092",
+      "group": "7d85c4e0f36acbfb08ff810d3f0e579c6b3dba1dea28e907729ddad836447cfd",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1326,
+      "positive": 27
+    },
+    {
+      "file": "000116.pt",
+      "episode": "episode-000092",
+      "group": "7d85c4e0f36acbfb08ff810d3f0e579c6b3dba1dea28e907729ddad836447cfd",
+      "variant": "clean",
+      "stage": "raw",
+      "actions": 1146,
+      "positive": 0
+    },
+    {
+      "file": "000117.pt",
+      "episode": "episode-000093",
+      "group": "5e447fc002577f2e224a637d907f22b9537291f24b2191dd6ee0c88d83ff2cfe",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1350,
+      "positive": 21
+    },
+    {
+      "file": "000118.pt",
+      "episode": "episode-000094",
+      "group": "41a4eb154366bfb37b829cbc1178223bb739cae6178e676d8d70d255f3d56923",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 888,
+      "positive": 36
+    },
+    {
+      "file": "000119.pt",
+      "episode": "episode-000095",
+      "group": "c55bd6a98a15d2dc4bc5de161fa9e338335690cc1601f568be31e6d1186c2e0f",
+      "variant": "mixed",
+      "stage": "raw",
+      "actions": 1438,
+      "positive": 16
+    }
+  ],
+  "seconds": 11.780475673964247
+}

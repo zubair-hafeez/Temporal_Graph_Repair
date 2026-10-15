@@ -40,6 +40,9 @@ class ObservedIndex:
         self.degree = Counter()
         self.attribute_objects = defaultdict(set)
         self.attribute_samples = defaultdict(list)
+        self.attribute_values = defaultdict(lambda: defaultdict(Counter))
+        self.attribute_patterns = defaultdict(Counter)
+        self._attribute_feature_cache = {}
         self.by_type = defaultdict(list)
         for o, typ in graph.objects.items():
             self.by_type[typ].append(o)
@@ -53,6 +56,8 @@ class ObservedIndex:
                 typ = graph.objects[o]
                 for key, value in e.attributes.items():
                     self.attribute_objects[typ, key, value].add(o)
+                    self.attribute_values[o][key][value] += 1
+                self.attribute_patterns[o][tuple(sorted(e.attributes.items()))] += 1
                 self.type_kind_count[typ][e.kind] += 1
                 self.type_count[typ] += 1
                 self.type_occurrences[typ].append((e.time, o))
@@ -66,6 +71,11 @@ class ObservedIndex:
                     self.attribute_samples[key].append(value)
         self.attribute_scales = {key: max(1.0, float(np.std(values)))
                                  for key, values in self.attribute_samples.items()}
+        self.attribute_numeric = {}
+        for o, fields in self.attribute_values.items():
+            for key, counts in fields.items():
+                if all(isinstance(v, (int, float)) for v in counts):
+                    self.attribute_numeric[o, key] = sorted(v for v, n in counts.items() for _ in range(n))
         durations = []
         for o, hist in self.hist.items():
             typ = graph.objects[o]
@@ -168,6 +178,38 @@ class ObservedIndex:
         gap = min(abs(times[j] - time) for j in (i - 1, i) if 0 <= j < len(times))
         return 1.0 / (1.0 + gap / self.scale)
 
+    def attribute_features(self, o, query, contains_query):
+        if not query:
+            return 0., 0., 0., 0., 0.
+        signature = tuple(sorted(query.items()))
+        cache_key = (o, signature, contains_query)
+        if cache_key in self._attribute_feature_cache:
+            return self._attribute_feature_cache[cache_key]
+        agreement, conflict, coverage, numerical, numeric_count = 0., 0., 0., 0., 0
+        subtract = int(contains_query)
+        for key, value in query.items():
+            counts = self.attribute_values.get(o, {}).get(key, {})
+            n = sum(counts.values()) - subtract
+            if n > 0:
+                match = (counts.get(value, 0) - subtract) / n
+                agreement += match; conflict += 1 - match; coverage += 1
+                values = self.attribute_numeric.get((o, key))
+                if isinstance(value, (int, float)) and values is not None:
+                    # Median after excluding one known query value, without copying the history.
+                    removed = bisect_left(values, value) if contains_query else len(values)
+                    left, right = (n - 1) // 2, n // 2
+                    a = values[left + int(left >= removed)]
+                    b = values[right + int(right >= removed)]
+                    median = (a + b) / 2.
+                    numerical += 1 / (1 + abs(value - median) / self.attribute_scales[key])
+                    numeric_count += 1
+        exact_count = sum(n for pattern, n in self.attribute_patterns.get(o, {}).items()
+                          if all(dict(pattern).get(k) == v for k, v in query.items())) - subtract
+        result = (agreement / len(query), conflict / len(query), coverage / len(query),
+                  exact_count / max(1, self.degree[o] - subtract), numerical / max(1, numeric_count))
+        self._attribute_feature_cache[cache_key] = result
+        return result
+
     def features(self, event_uid, candidates, exclude_query=False):
         e = self.events[event_uid]
         rows = []
@@ -180,7 +222,7 @@ class ObservedIndex:
             hist = self.hist.get(o, [])
             times = self.times.get(o, [])
             partners_visible = list(e.participants)
-            contains_query = e.uid in self.hist_ids.get(o, []) if exclude_query else False
+            contains_query = o in e.participants if exclude_query else False
             if exclude_query:
                 partners_visible = [p for p in e.participants if self.graph.objects[p] != typ]
             if contains_query:
@@ -220,22 +262,7 @@ class ObservedIndex:
                     prob = (self.transitions[typ, e.kind, b] + base_b) / (self.transition_from[typ, e.kind] + 1)
                     ratios.append(prob / base_b)
                 next_ratio = math.log(max(sum(ratios) / len(ratios), 1e-8))
-            attributes = ([self.events[uid].attributes for uid in self.hist_ids.get(o, [])
-                           if not exclude_query or uid != e.uid] if e.attributes else [])
-            agreement, conflict, coverage, exact, numerical = 0., 0., 0., 0., 0.
-            if e.attributes:
-                numeric_count = 0
-                for key, value in e.attributes.items():
-                    vals = [a[key] for a in attributes if key in a]
-                    if vals:
-                        match = sum(v == value for v in vals) / len(vals)
-                        agreement += match; conflict += 1 - match; coverage += 1
-                        if isinstance(value, (int, float)) and all(isinstance(v, (int, float)) for v in vals):
-                            numerical += 1 / (1 + abs(value - float(np.median(vals))) / self.attribute_scales[key])
-                            numeric_count += 1
-                agreement /= len(e.attributes); conflict /= len(e.attributes); coverage /= len(e.attributes)
-                exact = sum(all(a.get(k) == v for k, v in e.attributes.items()) for a in attributes) / max(1, len(attributes))
-                numerical /= max(1, numeric_count)
+            agreement, conflict, coverage, exact, numerical = self.attribute_features(o, e.attributes, contains_query)
             rows.append([math.log1p(deg), math.log1p(cooc), normalized, jaccard,
                          partners / max(1, len(partners_visible)), self.proximity(times, e.time),
                          ctx_time, self.proximity(same_activity, e.time),

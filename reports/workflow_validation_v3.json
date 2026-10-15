@@ -1,0 +1,3843 @@
+{
+  "status": "generated_development_workflow_collection",
+  "config": {
+    "count": 96,
+    "jobs": 12,
+    "seed": 50000,
+    "output": "workflow_validation_v3",
+    "split": "validation"
+  },
+  "counts": {
+    "repair_variants": 192,
+    "missing_links": 2448,
+    "wrong_links": 1648,
+    "fragmented_entities": 722,
+    "world_events": 12961,
+    "world_entities": 4235,
+    "genuine_exception_events": 452,
+    "prediction_targets": 1199
+  },
+  "source_snapshot": {
+    "file": "data/source_snapshots/66ed32491e1b007f515b9ddf507e7e62c84b54c3b3c008d8e671cbbafd1287d7.tar.gz",
+    "sha256": "5608fcbcef8f0c21ce5f49926a09843d4ca53078ad8689ef0a7d8c88d670f67e",
+    "source_set_hash": "66ed32491e1b007f515b9ddf507e7e62c84b54c3b3c008d8e671cbbafd1287d7",
+    "files": {
+      "research/tgrepair/__init__.py": "ad83ce5fca3e2bfa1cc153276de4379a3c8302b7f2a0a85ae40503c7bb3d62ca",
+      "research/tgrepair/corruption.py": "d04efa6b65698f47f47aa2769431ed99ea8626cad7f3bb5fb63c68fbe633361b",
+      "research/tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2",
+      "research/tgrepair/factory_plugin.py": "5724eb624c08060892e20cda1f8285ccb34ef5f0a58ac03dca207521b83afba9",
+      "research/tgrepair/identity_matching.py": "b707a4ca0efa7ade90fc5a15ec6401470a02ddc333c8c8eedacf3921e12ef4ac",
+      "research/tgrepair/matching.py": "e47ad9dd83d9ac0195a5647955487a8c38c9c7bbfffa71fb0c50fa8052c8bae3",
+      "research/tgrepair/metrics.py": "903faf015149e0095544ee40368bf20412d1cef856e84eebfb36e3e1c8f2e97b",
+      "research/tgrepair/provenance.py": "1f427099dacbba70402931d18dc6d63fc07c04a4ac6cde732033b43e926d964b",
+      "research/scripts/evaluate_matching.py": "8509e6a411c71e68e1c9dd86dc70475d6118af142b1cc3ad6d0450d8003cdc7e",
+      "research/scripts/fit_matching_baseline.py": "e8477430d3a8c7e72b09019e869bd855273224931317a266888256fa1bb0167a",
+      "research/scripts/generate_workflow_pilot.py": "9732e667b6f932605eb42f83a439827de45f515ec90f89ddc694f8b0e0b14cb6",
+      "research/scripts/prepare_development.py": "2c10d01c60055b6b79e91e99726d3e738afa16e559d694f940b28638c9a0636f",
+      "research/scripts/repair_development_graph.py": "3e629cafb0ed8c2d18381badcbbe7cb041441fc15b7d7987585a799a23505a75",
+      "research/scripts/run_baseline_probe.py": "90e7d881dccecde9dda9f7183014484e0325b09b30453ccd87ea48f8685f73de",
+      "research/scripts/run_deployment_probe.py": "f7787dd29ace7b69de65f04b9705c8cf1f82d11824c2d7b085310b8c133be46e",
+      "research/scripts/run_identity_probe.py": "26fbd0aafca577458f5b0536d482441cb78f6569d355a557f98d365fc94809f6",
+      "research/tests/test_application_metrics.py": "0bc7fb819cb6565f2273a085e4ecb35da06448c2f02c7ca8429389a73ec4af6d",
+      "research/tests/test_factory_integration.py": "6cbd875afa3d08b925e3bbb01ce0a0555fa91fe7fe8bfe2de0059fd2f6530117",
+      "research/tests/test_observation_boundary.py": "6e944c76f152519702eb992341dc144f62c7287fcc7361737a127a11b5e01aa0",
+      "factory/src/temporal_factory/__init__.py": "d401743947ab8a821e6edbf60dc4435e2fea6d8f8f08ed5c47df799e6640bf3a",
+      "factory/src/temporal_factory/core.py": "171d6de2068f9ca7d7d13b47868d9044959b8ebf94ce5caf523defbf6535b058",
+      "factory/src/temporal_factory/workflow.py": "6eeaf7d9944165e67cf142bfde03247f3da8cb67defb4f9aab68247a71788431",
+      "factory/src/rfdf/__init__.py": "0e0e411ad05093b259f07ae8cc4769b7a7dcbae4917316a0bc3a35c16789fca7",
+      "factory/src/rfdf/storage.py": "a7b6e034740730ed3da33997a023e362d9afa768924e73ceae8af5b356bede25",
+      "factory/pyproject.toml": "2d7f7864648740cee45f838e4bf02527cf539cd0d3221c17405eb935ccc05ef5"
+    }
+  },
+  "compositions": [
+    [
+      "queues",
+      "branch_join",
+      "handoff",
+      "retry"
+    ],
+    [
+      "queues",
+      "batch_split",
+      "handoff",
+      "cancel_return"
+    ],
+    [
+      "queues",
+      "branch_join",
+      "batch_split",
+      "cancel_return"
+    ]
+  ],
+  "episodes": [
+    {
+      "id": "episode-000000",
+      "group": "9ad7b163dd2a3ba16beba7154f65ecf3dc86514782b10879ba34c6149993585a",
+      "recipe": {
+        "version": 1,
+        "seed": 50000,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 2,
+        "arrival_interval": 0.5,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "c7a31651ceb6c4b79779a7c07636a17b7a73ecfb82f0ad738a573822f79382c1",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000000/mixed/manifest.json",
+          "manifest_hash": "230e9ab3584ce02299a5f38bb290e4dc71bac2a93e37bcb86a853b738c046e9a"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000000/clean/manifest.json",
+          "manifest_hash": "5c7ea688ae5bcdf2f08ce643bde20068298a8142dbbae3eb8fde51f9909fddc5"
+        }
+      ]
+    },
+    {
+      "id": "episode-000001",
+      "group": "7019213db3e1d40f92f6a3209a9d3b57b6cddcc7304d93b4d0807725f3f3939d",
+      "recipe": {
+        "version": 1,
+        "seed": 50001,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "4604393b13fc3142e604843662ec11ea54df9b105f0627a084e5e13f4063718e",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000001/mixed/manifest.json",
+          "manifest_hash": "752478528f7b5ecd1e2257ac4cb8f2355e8ed4605907a15f3ec6b9f78db6ddaa"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000001/clean/manifest.json",
+          "manifest_hash": "cb24b750e6dcb522684277bee834e607ff6a0236af1682ec83f82fcdd37831c4"
+        }
+      ]
+    },
+    {
+      "id": "episode-000002",
+      "group": "60c5fd89e82b78e53edfc68d84fac384bacb082d95122b507897eea1ca07c486",
+      "recipe": {
+        "version": 1,
+        "seed": 50002,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 8,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "8bc45dca1d602be02d16895043c3f1a126c974f1d41bc6f1594f60eaa87318fb",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000002/mixed/manifest.json",
+          "manifest_hash": "4fba0b6fed209cd976c49a321141de3933c207983ebbb652bb7fed5b409fb7ab"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000002/clean/manifest.json",
+          "manifest_hash": "3d6817103a97126a16b7fe81e9029af9d19dcaed70d252e419d6bcf768358bf0"
+        }
+      ]
+    },
+    {
+      "id": "episode-000003",
+      "group": "6a7c6b5d12b1129348ffadf121886688d0e34c607642491cb97ae5cc8c4ddb8c",
+      "recipe": {
+        "version": 1,
+        "seed": 50003,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "7963869cf2b6eb531c40a9df8151267ebf1ec457751ef549260c7a80651bc712",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000003/mixed/manifest.json",
+          "manifest_hash": "f782fe9cf99616857b966fc6132b9fc52d8817383a63d6dafb832edf18c91ac7"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000003/clean/manifest.json",
+          "manifest_hash": "5a3dbef11d30762e209ef0d8f15fc62c7e5c694fecd0ab7032db92023e4d6952"
+        }
+      ]
+    },
+    {
+      "id": "episode-000004",
+      "group": "d661e91233ff73c729217082fd1139efb2633defca038bbf944f8dada79b699a",
+      "recipe": {
+        "version": 1,
+        "seed": 50004,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "53fa640e1bbd00066359a6cd10b6b5f1f5548480648074fa22a20ca2ba6bf336",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000004/mixed/manifest.json",
+          "manifest_hash": "be18a6ad7bb9f0a12c919165ec167c7e525dfae89cec5c9326eefc5e20607a49"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000004/clean/manifest.json",
+          "manifest_hash": "bb5d5d8d8a109aa3b1f5ae11bfb43683daa29e126b68b77e47190a771b2b674d"
+        }
+      ]
+    },
+    {
+      "id": "episode-000005",
+      "group": "315ebe7b4241b84bae8715f91296bbf5b029cd195e8ed32ec321debb515dbf04",
+      "recipe": {
+        "version": 1,
+        "seed": 50005,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 8,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "1c6986b3073b3820a3555b3794eaf8f2e046df743dad7ad0426e6a455766b0ba",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000005/mixed/manifest.json",
+          "manifest_hash": "798d89475371c6468311e2dbb110733843dd7c0de0dbdb47192a91e55722d4a6"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000005/clean/manifest.json",
+          "manifest_hash": "9ca88d65343950528fe2a3e61a5751fe315b2642d74860113fa089f3191be2cd"
+        }
+      ]
+    },
+    {
+      "id": "episode-000006",
+      "group": "ae647bfdc0bda012f189ecfe3ede2df44194643d7596d0e9aa88e0d5af4c4ac2",
+      "recipe": {
+        "version": 1,
+        "seed": 50006,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "1e4f0af6235b881ade0f1dd5e845ede8f821003abcb685c3583855f1d9c10527",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000006/mixed/manifest.json",
+          "manifest_hash": "f698230471d49c728d57f8bb2519f7475eb3255b26ed81122c28d888e1a00334"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000006/clean/manifest.json",
+          "manifest_hash": "2b78bcb088ea9043e6b672533234e9f61a3dde53f0cee0358480e99ec02771cd"
+        }
+      ]
+    },
+    {
+      "id": "episode-000007",
+      "group": "4098bdcde1a2146f05982bf1fe69b02a65f08a9935b2898731b7c4a5d96a76bb",
+      "recipe": {
+        "version": 1,
+        "seed": 50007,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 8,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "12b43eecf4c047c386331c26fff34b7ae5266dafcdec57735aa883d109a645ba",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000007/mixed/manifest.json",
+          "manifest_hash": "7232cc12123af1c5d76c3ed3b1fe03113784080051c4cd57d95b97b1a23d15bc"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000007/clean/manifest.json",
+          "manifest_hash": "c9555ad495479b13e0c8286009856966be8c83d7fa9d280e39655851e3b96c11"
+        }
+      ]
+    },
+    {
+      "id": "episode-000008",
+      "group": "7f1bd8790cba0073b31ccf213be6bf6a1bdbaed33f67484c971d2b6d9fbec83a",
+      "recipe": {
+        "version": 1,
+        "seed": 50008,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 2,
+        "arrival_interval": 8.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "412ec87fb77c5ea7ee3e04b1795b53b327cb43167090454d92ddc944ee5efdcc",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000008/mixed/manifest.json",
+          "manifest_hash": "96488865bda207c1f5d6d4eceb93cf6886a5336313c373f68e726a409559819e"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000008/clean/manifest.json",
+          "manifest_hash": "5bc0c40e2c6cb7e3d9238f50f39f399f428ff141e7cfa0e47dca7feebeced749"
+        }
+      ]
+    },
+    {
+      "id": "episode-000009",
+      "group": "c0fc9b6fd301887c327a9acb0f934fc7808d847149bcf38d39fd81fdbc67f1d1",
+      "recipe": {
+        "version": 1,
+        "seed": 50009,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 8,
+        "arrival_interval": 2.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "6c092977f508c088fdc98cd7d46473e9ec9809dbd2ec5efac940e466300ef77e",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000009/mixed/manifest.json",
+          "manifest_hash": "662ad6efd43f2bbf4dc54a599586da3b29be41895cb4376d3ea138b1899970bc"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000009/clean/manifest.json",
+          "manifest_hash": "6e7801afdd09c20395c6a89831f830e2a9546d49d7f45bd3ebb6dd3f705e25ea"
+        }
+      ]
+    },
+    {
+      "id": "episode-000010",
+      "group": "e614a38411d50be771ee1c05c9c1a61a8816ba1b46fc143281a763262eea5348",
+      "recipe": {
+        "version": 1,
+        "seed": 50010,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 2,
+        "arrival_interval": 2.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "f69992655cba5949774c8be91949e77990fbb5698c3395b47586506d15905dd8",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000010/mixed/manifest.json",
+          "manifest_hash": "2314ca2ddb02d082e3b153d52e6f5b53a79b5317aa8c0017e1fbe5d660ffacc8"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000010/clean/manifest.json",
+          "manifest_hash": "1934a9a8d3fd90f486621c6abff362d11c9b52bf424f5b73134afc9bdfa29214"
+        }
+      ]
+    },
+    {
+      "id": "episode-000011",
+      "group": "ab87d00aa52e8dd15551889e8407006398e067c50890150aaccdc14af131f7c2",
+      "recipe": {
+        "version": 1,
+        "seed": 50011,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 2,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "9dd53457a56303afaec875c5a28f413046a3e38da1e4f72c3c01ca98314eb6db",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000011/mixed/manifest.json",
+          "manifest_hash": "1479f18cdebe075edb207aa6e2889bda46abc19d4c80ac0533ba981595385105"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000011/clean/manifest.json",
+          "manifest_hash": "471b78ec4d152e4da826d95d1aa5c69ea6b7257b0b25311fd101055e5d596179"
+        }
+      ]
+    },
+    {
+      "id": "episode-000012",
+      "group": "85efa7a7779e1c1b1e6a96a188727c19203f5947b98192cea90cd73b9f693846",
+      "recipe": {
+        "version": 1,
+        "seed": 50012,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 8,
+        "arrival_interval": 8.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "665bed3ec53279b11e3d8b5601f96e9ab7f571055703c75b9647d0e769fb6fa0",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000012/mixed/manifest.json",
+          "manifest_hash": "42d88cbfa0b471bf2a5d4689dc61de654efc99f04d835832dc7d806bc7e3c4fc"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000012/clean/manifest.json",
+          "manifest_hash": "454710eabc4027ec3c75550255926a1694337413604ed3634066c5f751e9d77e"
+        }
+      ]
+    },
+    {
+      "id": "episode-000013",
+      "group": "a4574824f83d3ea21da9ad7d326a8e4aaef3d5e66a7b9415cd338778c763db46",
+      "recipe": {
+        "version": 1,
+        "seed": 50013,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "a8d9156ccf76ea17eb6e399f9239c51d5bdba94872324a4164f34030857ef7c4",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000013/mixed/manifest.json",
+          "manifest_hash": "b8b41da1e6d0c02097e284b51a3e4e553872fa2c61ea0200012e4199786aa278"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000013/clean/manifest.json",
+          "manifest_hash": "f45653450dad4f32e394eed9769b12c6815a645edf050c3c865de9930220e041"
+        }
+      ]
+    },
+    {
+      "id": "episode-000014",
+      "group": "38eba550d098d355a6b4b3388bc9e48ded20f7209e31553cb28685735ea831ca",
+      "recipe": {
+        "version": 1,
+        "seed": 50014,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "53a2cba63dbf278d6c94a3adc90a417b5c45aa0ee26be34ece2746318ce59884",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000014/mixed/manifest.json",
+          "manifest_hash": "af094c5120425aa3d0489d86abc1be7ae3c318fbca57e7c7360c2fd8a96943e9"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000014/clean/manifest.json",
+          "manifest_hash": "21c6a36379e3e62312ce58585402d45889fee43c414f237c527ba3f335e1e863"
+        }
+      ]
+    },
+    {
+      "id": "episode-000015",
+      "group": "9e29e3298d59a8f70990f420029bee39194868baab13a009d855620de81f2fe4",
+      "recipe": {
+        "version": 1,
+        "seed": 50015,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 2,
+        "arrival_interval": 0.5,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "64088eb1192e9e6efcbc6b272f42c270a17cf13f087171252813896c4ba9cbe6",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000015/mixed/manifest.json",
+          "manifest_hash": "ef50a7c72cd60fa9d60a183670b1fc1f624cdc85c52189856a320ce2b755805c"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000015/clean/manifest.json",
+          "manifest_hash": "a3fdbb1655d3ec14c6458a1ae7a49b03f63b3c88b7a3768c7336ab5aaa216255"
+        }
+      ]
+    },
+    {
+      "id": "episode-000016",
+      "group": "82a53dcbf8e66c4011b8fc8c2478d74e2566d66084a627e1dd397b0cb23bb58f",
+      "recipe": {
+        "version": 1,
+        "seed": 50016,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 0.5,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "49df8431e5ee87968fddfc8c11cb0770a510bf71765982d411f80dde437f5f26",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000016/mixed/manifest.json",
+          "manifest_hash": "cd89396897efe84eb91887d8ef6cbe84510b68b7ef0dba825f6e95ddfbb41be2"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000016/clean/manifest.json",
+          "manifest_hash": "2baca1d257ecfb6438e806cb070a274e20610d2a922c7fc8e99d3ae0e91abc38"
+        }
+      ]
+    },
+    {
+      "id": "episode-000017",
+      "group": "7d562d9bcc01b1e5f6b13f472f9c10a14780562be7318a586106561e5d08b215",
+      "recipe": {
+        "version": 1,
+        "seed": 50017,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 2,
+        "arrival_interval": 0.5,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "92dbd07b35ecf483448e1f999a0345be31270a2622835300dfb305b6e7c65171",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000017/mixed/manifest.json",
+          "manifest_hash": "797b1227bda50ec34cb76f188d7ee8eda1227f03f9dcbf8baf982c625936af17"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000017/clean/manifest.json",
+          "manifest_hash": "6b26e7ef42f9d781506597ef11f2a8fe75ec4cac6851224032af160963a4ecd6"
+        }
+      ]
+    },
+    {
+      "id": "episode-000018",
+      "group": "d63a549b41c7dc0ab1e91e086080b31d8f67814bb46338437616aeed47e7bdbf",
+      "recipe": {
+        "version": 1,
+        "seed": 50018,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 0.5,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "709b4c64b11a8dec63abb6664fc1d4f1f29c8fd87842a983945a24f450e4c94f",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000018/mixed/manifest.json",
+          "manifest_hash": "9cb18fddae6929688001051a83d31e56d337d871243fe2746747483c6daa5587"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000018/clean/manifest.json",
+          "manifest_hash": "2843b3118c4185729702717acfae3f9fe380bcb9dc073c6a79b3eb226f8f17d7"
+        }
+      ]
+    },
+    {
+      "id": "episode-000019",
+      "group": "df7fb5b74e499cf32039c6dcde29705a0c23e74915bc49bece30e3dd912bd713",
+      "recipe": {
+        "version": 1,
+        "seed": 50019,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "caa134feda147aa0afdef21552fe1ed451c0bddd845d439d355998c0d6a40475",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000019/mixed/manifest.json",
+          "manifest_hash": "1b82431b916ab6eca4acc639bb56ab58cd1a48b514bc8d925f566dd60e8896c9"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000019/clean/manifest.json",
+          "manifest_hash": "75ccc35ddb85d3d193e9f2a675aec33756509145116b32da28406e396cfc3ec6"
+        }
+      ]
+    },
+    {
+      "id": "episode-000020",
+      "group": "896c327c242fb2b12180a47a2bb67bec9e52570aca5463a4fbfb4b0a9501633c",
+      "recipe": {
+        "version": 1,
+        "seed": 50020,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "2601a4b13a12cded6bdc2e69cf738843a4aeaf2fa845fbdd89836b4af969a88f",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000020/mixed/manifest.json",
+          "manifest_hash": "15d95955a8e6412fe2a7ab1728a6cd9b7718fa0d67d3ad506d0a9c8729e3be9a"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000020/clean/manifest.json",
+          "manifest_hash": "bef95387fe8c51880e7a301e477db6937c8cbcc704e1aaa1b37be163670bb32a"
+        }
+      ]
+    },
+    {
+      "id": "episode-000021",
+      "group": "9f0b5d46e9b8cbe9c3dd281837e77220874d7344a9b0a7f184c9dc6685b61aae",
+      "recipe": {
+        "version": 1,
+        "seed": 50021,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "06723ce50f130fb4bad76444dccf37c252c0178944e682296d6671f1f97b4d89",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000021/mixed/manifest.json",
+          "manifest_hash": "b2262f44d970aa2b0cca05a7a0d90bd049aef1c7782c0b5826621640397cb349"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000021/clean/manifest.json",
+          "manifest_hash": "1eaf0593ce3d4b73ef6ca87e4b4894813bda16b84812807c31520d9e2af68598"
+        }
+      ]
+    },
+    {
+      "id": "episode-000022",
+      "group": "eeabfc93908371ec1194c0c8342710a1672048bbd7e24c3d4c55635199791e35",
+      "recipe": {
+        "version": 1,
+        "seed": 50022,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "73b23676773d7bbfc90cbf88b05f144b4705799ec72792d5842d68609ede72cf",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000022/mixed/manifest.json",
+          "manifest_hash": "44cb5db83984dbf33f99913d3d40e7063f23fe95724f55d4d25cf5da306e0bd8"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000022/clean/manifest.json",
+          "manifest_hash": "8431e167f0a9d8b510b4eea6bd932d0e0eae766be528ca3cfbd85f20649edacf"
+        }
+      ]
+    },
+    {
+      "id": "episode-000023",
+      "group": "6bf9b4b93d771201826fc081538fc0a6cafb6423ba3dd8aa5fa9163d8d323a2d",
+      "recipe": {
+        "version": 1,
+        "seed": 50023,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "8e55b7b855fbd346f8bb364d7661811becc73dd96ef82f87bd5cd3641675bec8",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000023/mixed/manifest.json",
+          "manifest_hash": "8289a3cd109836c7ec17d64669fa15fecf12a419ea5ce9a5e8694ae5820613c3"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000023/clean/manifest.json",
+          "manifest_hash": "ff2ed8c5bb9bd99a83652eac30d66869bfcf7a02285fd340e7cd0b1016532be9"
+        }
+      ]
+    },
+    {
+      "id": "episode-000024",
+      "group": "296317a6d1de4a4ba76104ad3593cbda4421fefef19fd77af0dec3e082afcf1d",
+      "recipe": {
+        "version": 1,
+        "seed": 50024,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "7618dd3d102b51c4b39d895bef209af149db8a5c04577759852e68a02c01bebe",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000024/mixed/manifest.json",
+          "manifest_hash": "a3f2f2ca51d5bbca4d2c203ca9ab50f66381ea19aa917aa1811d8c254c4a9b4b"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000024/clean/manifest.json",
+          "manifest_hash": "f079aa89977866b1942248e5068875b7e437b6b817bceb5034f11b2d6b8a4288"
+        }
+      ]
+    },
+    {
+      "id": "episode-000025",
+      "group": "9946712389d1f5e91cb7a0683e68bfd1f7d9ee17cc00ae482d36f56deed91684",
+      "recipe": {
+        "version": 1,
+        "seed": 50025,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "8568eeaf417e118543bd5725dd9f9eb1d71007438f914d7959c746e6be77f9ae",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000025/mixed/manifest.json",
+          "manifest_hash": "98b56be827dd544ac6de74ecbe3224c02e6e9e6347c2246e35d9bf37a2009221"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000025/clean/manifest.json",
+          "manifest_hash": "69d03705c693c5430cbd0a0ede5bd79d0c1326f4482d53369ca5917717bea02a"
+        }
+      ]
+    },
+    {
+      "id": "episode-000026",
+      "group": "c943c870acfe15f6e8bca60b17096c5b2d3d9346a7ca1305b2935d63120e929d",
+      "recipe": {
+        "version": 1,
+        "seed": 50026,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 8,
+        "arrival_interval": 8.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "7067b35f63507151cff29ee7f2377fcc8bdce50661b46692209ba268f958b7f6",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000026/mixed/manifest.json",
+          "manifest_hash": "1512a36b39bb09745b1913143965083f57812b00b9cb996026bd48bc13b40917"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000026/clean/manifest.json",
+          "manifest_hash": "fd0d3b68630800674081305609768219fb503eb9aac488edabb23b5f39317805"
+        }
+      ]
+    },
+    {
+      "id": "episode-000027",
+      "group": "af1453792068e3c413a67b968211a5cb4026f06e860c074cd5f8308964531337",
+      "recipe": {
+        "version": 1,
+        "seed": 50027,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 2,
+        "arrival_interval": 8.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "dd83882af5c1a57f26724d58deef4bdaf7a205f32ad9ff31beb428e86516f160",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000027/mixed/manifest.json",
+          "manifest_hash": "68abf94c00dae844a4716e8914f3ae63b247579e0871d1b4fea1a98de06e0d8e"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000027/clean/manifest.json",
+          "manifest_hash": "38b6a187ddbe3379d109401538f4ae24e1288e8c83e3bf9cdd0842b19d16b7dd"
+        }
+      ]
+    },
+    {
+      "id": "episode-000028",
+      "group": "3a43e44f92575f80d85a2f38c85a4da9e88c287338492fe5faf49f9d279f8022",
+      "recipe": {
+        "version": 1,
+        "seed": 50028,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 4,
+        "arrival_interval": 0.5,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "237bcdb58ee18e9ddfb3559a58f096ca8d4b1be2e515215ece16079048bd978c",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000028/mixed/manifest.json",
+          "manifest_hash": "c3ed1be05f6e6eae5e281a790423f2b74d711ba57f65ddec506c2755c74d3cc1"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000028/clean/manifest.json",
+          "manifest_hash": "d269f8807b50f78d5217a826bf73c80ff0db8ff412661e05606960978a13ba33"
+        }
+      ]
+    },
+    {
+      "id": "episode-000029",
+      "group": "90770a2b719c724d5691da5c99cab48e517788d192e3d0893c0db662afb02e2f",
+      "recipe": {
+        "version": 1,
+        "seed": 50029,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 2,
+        "arrival_interval": 0.5,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "e761df571b204010a159fc775837d4533b90c5a7c53cc94bffe006fa0bd1fa62",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000029/mixed/manifest.json",
+          "manifest_hash": "d986740e49243d70f99edbf41e70b7bfa80ed318fc0012bde410543fc7c85c91"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000029/clean/manifest.json",
+          "manifest_hash": "32ec14270b56c7e9f6a7a1db71ad01e260ba83e6e1c0fdc8f1192f7964e528f4"
+        }
+      ]
+    },
+    {
+      "id": "episode-000030",
+      "group": "82ba4a6bec354163fb999157f35c0d041c2a66e5a3547ac308abb0730e847542",
+      "recipe": {
+        "version": 1,
+        "seed": 50030,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 8,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "c9a7088875a78df8cc670fe24efbb4e836e21a0b0b7264e5928ce327bc6c65be",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000030/mixed/manifest.json",
+          "manifest_hash": "a82d2ebe442682403af66cc0717a539d0f2ac4e3a12a220a85efbd2dafe05eaf"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000030/clean/manifest.json",
+          "manifest_hash": "1f720c406f19b2669e66f9126e0eb5a7056722c87cc0c244f2c492a69132db0a"
+        }
+      ]
+    },
+    {
+      "id": "episode-000031",
+      "group": "28907425eb2021b3fbad0cd374291e7c4bef25c221c09e753a3065cf21bd25f7",
+      "recipe": {
+        "version": 1,
+        "seed": 50031,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "2c67725bdaed924139da013adf9569de93e376e465106d4769c7697e8816ff0d",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000031/mixed/manifest.json",
+          "manifest_hash": "503cef7a595973366cfc554d3ad0a6b4fac94924d9f5ba8d45db9b6d75fa81b2"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000031/clean/manifest.json",
+          "manifest_hash": "87941e1a7d411684586be7a03dfa7fc3234f04dd40e4c00f45200daa6908f520"
+        }
+      ]
+    },
+    {
+      "id": "episode-000032",
+      "group": "ee6dcd7958ba62e92ce20fd2016aba6a677d554a484f5d26a6917a007520610e",
+      "recipe": {
+        "version": 1,
+        "seed": 50032,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 2,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "f7f50c977b069f24334c861b7d182ae8c56bcb8b1db6310d9ec2a8224e2e6efe",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000032/mixed/manifest.json",
+          "manifest_hash": "7e6b68ac217ac2d67951f3b8e06ed2cd610a66f43cdefc2be49e0510e1025992"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000032/clean/manifest.json",
+          "manifest_hash": "305261238433cb324660e1c001ebb4f19dd328fbd09fcf1110ada8de0fd314d0"
+        }
+      ]
+    },
+    {
+      "id": "episode-000033",
+      "group": "ec12c1a933e1da5cb9143a67967d07f49a949b8af713bb1be35a53e593860a03",
+      "recipe": {
+        "version": 1,
+        "seed": 50033,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 8,
+        "arrival_interval": 0.5,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "eda79827dd26bae59814c0939a9690d1416309510dabfbdb1d8c18d4adfad268",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000033/mixed/manifest.json",
+          "manifest_hash": "b6c1e3c198306a211107a6f44f7c7e351e1b1f7130504f1d0b200fb323d73a05"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000033/clean/manifest.json",
+          "manifest_hash": "a2486ed6d316ac3d7e3b245ffad468fd914fd80c8dcd9c77f7cb0262977f258c"
+        }
+      ]
+    },
+    {
+      "id": "episode-000034",
+      "group": "abe60def39c8f6ca09e7b4b3878ef486658e48384790eb3659c6cc2adb3316ac",
+      "recipe": {
+        "version": 1,
+        "seed": 50034,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 2,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "b5c1aef75a04d8c0e2c7e6c69a8dfb12a57b0fdecfc8b377aecbbd6ed68f328f",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000034/mixed/manifest.json",
+          "manifest_hash": "4b2d1ce39b80229f15ea12f9ba4c259cd6bdf9d331145e3c73411f71f220816f"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000034/clean/manifest.json",
+          "manifest_hash": "244bcc6b9423ba22ae4a10332b462d6af6d546e35d1b8d83f6a7740ec353ccf3"
+        }
+      ]
+    },
+    {
+      "id": "episode-000035",
+      "group": "4b050793ae5bbbd5e5a966e03a559a53a69a3a4d8ce2e4efe94ae1a11ffdb98c",
+      "recipe": {
+        "version": 1,
+        "seed": 50035,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "1f76c1e6e53811832270e8b1f96a544729d6c3f6f37ab9089a0cd2c76d1e2296",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000035/mixed/manifest.json",
+          "manifest_hash": "4f733d26452050ac5b542ffd84c1e29a115ecd848c06c8b15eebdd1c3b8966e7"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000035/clean/manifest.json",
+          "manifest_hash": "755464192f47124a74b0036890b4028af2d387aa4078ae6059358ed977746df3"
+        }
+      ]
+    },
+    {
+      "id": "episode-000036",
+      "group": "595cbcaef73cbb625da6c946419f5e7fe5cd7d7244fdde3b06013f51e752ff79",
+      "recipe": {
+        "version": 1,
+        "seed": 50036,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "ada469b2a8b4b01465221add40c19533a7e414d22e0004fa0cfeb58d2b0f5749",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000036/mixed/manifest.json",
+          "manifest_hash": "a21f1853987751bdfc8cffeb22099d448f8f07fde660c68b619647ef06651077"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000036/clean/manifest.json",
+          "manifest_hash": "aba7de5f6bcf1904f5149bdc7797e8327a938dc7c06191a92ddbf7d7ee3bc93e"
+        }
+      ]
+    },
+    {
+      "id": "episode-000037",
+      "group": "1c987c836bc9cc01d649ca13a1ce879bb5b9bbb7f8affb847f33b7dd1734f816",
+      "recipe": {
+        "version": 1,
+        "seed": 50037,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 4,
+        "arrival_interval": 0.5,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "630a32a4c4aa03171d0d42716b1c15c334dedc7bc5dec9181ebeecec863e6083",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000037/mixed/manifest.json",
+          "manifest_hash": "2655309bd02a3a5192b46c570bdebca7fadf19ed3476f95a11d74de5e28d24ff"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000037/clean/manifest.json",
+          "manifest_hash": "df8c3ff9a6b4ea04f381958fcda84cab34c298e615950b737d787eb68f2eeba2"
+        }
+      ]
+    },
+    {
+      "id": "episode-000038",
+      "group": "d716d5719b539bd490fef908f57918b141c4fbb8212653b3c7674aaf0dc43c9f",
+      "recipe": {
+        "version": 1,
+        "seed": 50038,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 2,
+        "arrival_interval": 8.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "d66feadfe98d44c8a700a2aae7e8a990d8de1f4dd0a99b6efe1512a64664097a",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000038/mixed/manifest.json",
+          "manifest_hash": "5df26f4f27e0ea2f3acc042e98155c45ee4482b009c7f00ba80625a89201d235"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000038/clean/manifest.json",
+          "manifest_hash": "c14243437ba9497b5b3ba26128aab2efe1a5f7f6df21c6ba8a3a55a67a3391b9"
+        }
+      ]
+    },
+    {
+      "id": "episode-000039",
+      "group": "d8f980e5df241bbfee5c6cc4eaeefde45e6df82d9ec4113ae04e331951b1d680",
+      "recipe": {
+        "version": 1,
+        "seed": 50039,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "094637002ee93e50b1377c4e7a50c80e3743da8fc2cacc9d28690617158bc00a",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000039/mixed/manifest.json",
+          "manifest_hash": "38168404b675634e148ce0929c61cd2c4842e4e3fa1898e617c97176bd367f08"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000039/clean/manifest.json",
+          "manifest_hash": "2527a102f4e4c242afb46e97a84a2e8e445251000ab5d1044af7d17678767bb3"
+        }
+      ]
+    },
+    {
+      "id": "episode-000040",
+      "group": "38ebc70511b13b1deea8d1d268bb7aee599d374b78f87652429dfc1b62a6d2a3",
+      "recipe": {
+        "version": 1,
+        "seed": 50040,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 2,
+        "arrival_interval": 2.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "4438618652863a30fb25a2eb3b13fa0e07da0cdc7b57da9c8c78f3713794a974",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000040/mixed/manifest.json",
+          "manifest_hash": "e3abb20c1770b638c2cd19d933279eb563ba1d835914e2d9198c851da1225045"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000040/clean/manifest.json",
+          "manifest_hash": "4f85c50c156f35d456fa39f0d8e7cbd0c59af73c1760f33fd5bedac3f297c396"
+        }
+      ]
+    },
+    {
+      "id": "episode-000041",
+      "group": "8562b97f8d96b7d5d4be128738b9a2fc52232ca666ce467cf5976d5f0e51f7ba",
+      "recipe": {
+        "version": 1,
+        "seed": 50041,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 8,
+        "arrival_interval": 8.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "bd4d09927571f0b3b692fe136670f0b71b2597e446eed7a97fcd296a168ab8c5",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000041/mixed/manifest.json",
+          "manifest_hash": "46ffa36f1f653fd173e89d75a1cad84ac16671b87245e7471d1b55a1a5191a45"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000041/clean/manifest.json",
+          "manifest_hash": "cd6ade946eef9c5100cef4416136ca66cd3d01421b336d7259afbf270e8828a7"
+        }
+      ]
+    },
+    {
+      "id": "episode-000042",
+      "group": "e559b1a4bab534e0b9a33902d74624eedc674d2fd4ef140d6aacfa3ecfec44b9",
+      "recipe": {
+        "version": 1,
+        "seed": 50042,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "6507a0ccfba905773708e891876d8ae5d6222f4781016a29cb7cfe86d4c8eda9",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000042/mixed/manifest.json",
+          "manifest_hash": "f8969eea2f2c43038d4a7c6b35855ed9e31aea9997c4cff2af5e5ed5dcc139e3"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000042/clean/manifest.json",
+          "manifest_hash": "30a080c1107e9bfd76638cd71f53d3251a72be6c193c7761551a69feea9b9f0a"
+        }
+      ]
+    },
+    {
+      "id": "episode-000043",
+      "group": "c47d0a4d3618049a20991e0f2b0c7bd4febd03b84c8a4ee74e8e976afcfa5148",
+      "recipe": {
+        "version": 1,
+        "seed": 50043,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 2,
+        "arrival_interval": 8.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "b876d010fff0bfd289b7f81ad1c789df162ea8d26c2136980e4545534f18d1a8",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000043/mixed/manifest.json",
+          "manifest_hash": "60976ccc5e86c4d422048a706bf3384c1b3a5d622e556d102cf869407c4c9066"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000043/clean/manifest.json",
+          "manifest_hash": "80fe4345a67179bca56d46a409185bbdeecd912a1e92353bbf8deebbf7d6815f"
+        }
+      ]
+    },
+    {
+      "id": "episode-000044",
+      "group": "71e93e3006bf177d63b1a4a15fb9c02e7e440f1715373c0fcd5f77a6782b3908",
+      "recipe": {
+        "version": 1,
+        "seed": 50044,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "379b6549b9b78f6b6431e69efaaa89fb92401153ad8a09890d9b097f12eb5448",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000044/mixed/manifest.json",
+          "manifest_hash": "03098d3e6f85d45b1445944dcc1ef548c5136c195bf2bfd60477089577cbb330"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000044/clean/manifest.json",
+          "manifest_hash": "8554df358847c1838a12a5e70ee7a9ba54564e5ed293d0f38cd16088d7710301"
+        }
+      ]
+    },
+    {
+      "id": "episode-000045",
+      "group": "f437c6f0dc1cfd7ebb067cc10d83115976460b41ee9497c74af91968c9477be2",
+      "recipe": {
+        "version": 1,
+        "seed": 50045,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "6f217567ecd7aa841014851d46dbbd38dfb72036fcf5c68362bdc43283e995b7",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000045/mixed/manifest.json",
+          "manifest_hash": "6063ea98e7e2982d7f1dd207d0b715ae4a368168d873ed8a708c2392425d73e6"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000045/clean/manifest.json",
+          "manifest_hash": "f16dccb1241acd5770ac8b680fd2adbc15da531c8e2d154a2faffb98a0819936"
+        }
+      ]
+    },
+    {
+      "id": "episode-000046",
+      "group": "96c443df59c89f6d9f247d833ed664da9ba472a4cf4fffd30633e34d4e6f55fd",
+      "recipe": {
+        "version": 1,
+        "seed": 50046,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "7ef2e75f0d011ffcc7b96f7c0f1a822f91c166d3336691a7c5bb0ca6d11a0ede",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000046/mixed/manifest.json",
+          "manifest_hash": "355b1c2579fd4b399d2f4d60f7a85716f18bacf8443aa1eaf2cf91cf1a1547f7"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000046/clean/manifest.json",
+          "manifest_hash": "4bff7ea54bd7ea9589288467834844f7e2ee2c74c8c25487a8ccf44b6b931b3d"
+        }
+      ]
+    },
+    {
+      "id": "episode-000047",
+      "group": "f43a0e56b9efee0c9a154b08aa65cf810bdb9edb35f493078f630c7bde6a8218",
+      "recipe": {
+        "version": 1,
+        "seed": 50047,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 8,
+        "arrival_interval": 0.5,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "5a0eebe928dbde4e78cf6c552e54d0d7440020595dfa057368fb9c53bddf8074",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000047/mixed/manifest.json",
+          "manifest_hash": "2e14aa4a4b7fbc14414cb88ab1b361d8fff32f48e2425a97bd2a33697e949268"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000047/clean/manifest.json",
+          "manifest_hash": "dcdbe8afdd4ea1d9649ba2fcc2b7fe6bc672679565e1b0b36bea6bf67e708d93"
+        }
+      ]
+    },
+    {
+      "id": "episode-000048",
+      "group": "ab3995a40d960fa43de6d834f040ea5cdaad9d96f372ec990d494c85d5feedf5",
+      "recipe": {
+        "version": 1,
+        "seed": 50048,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 2,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "9f5d29d618b4bfe1ec4b82b5244f83899083a95ff961c1170f2e92445cc18462",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000048/mixed/manifest.json",
+          "manifest_hash": "cea9c15a080dedc2c2c155aef85d9680b8ed0cf51da6ed3cfa2019ddc0545056"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000048/clean/manifest.json",
+          "manifest_hash": "15fe4bab14278bedbbf368bc63a0caa027cc19b5b33d6b6aee3ab6eb347a44e8"
+        }
+      ]
+    },
+    {
+      "id": "episode-000049",
+      "group": "e0b4ad76624b17f0903563ec0bf6db81e23179f8504ec3f2dc3e7e3e8610c31d",
+      "recipe": {
+        "version": 1,
+        "seed": 50049,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 2,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "4ba08c2aa516ff19009c51c7e9e1465aefa5ded6e1c44f5aaf763668df35762f",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000049/mixed/manifest.json",
+          "manifest_hash": "3689a7cfa8df524ddd2d9f55e37a4da296b4ee4e66ad278a19ef963bf1175269"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000049/clean/manifest.json",
+          "manifest_hash": "0e48b16936521908cb10d1d5d68f67e36b3fc246248a3cbb38dff35013d050bb"
+        }
+      ]
+    },
+    {
+      "id": "episode-000050",
+      "group": "423a511769a50b18d0c9e0773b2128f490adb6563a2280ed11c96fcadfcd5511",
+      "recipe": {
+        "version": 1,
+        "seed": 50050,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 8,
+        "arrival_interval": 8.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "ef36ccedbfc7ed0f1b866ec608ba5dd2774c7f35e245ae03434e03b7df7b9f83",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000050/mixed/manifest.json",
+          "manifest_hash": "4be82753dbafdf125e2c13d8723d43c1faa81f910a0d7d777c11a31370427b9f"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000050/clean/manifest.json",
+          "manifest_hash": "fdaba7ef49a5e2e33a23ab0817619f53dab6bca52cc0b06f757239e85bb303f5"
+        }
+      ]
+    },
+    {
+      "id": "episode-000051",
+      "group": "3a85eab622d317660df2e24f51a8cc141e11a2537eb1334bafed8efead24a975",
+      "recipe": {
+        "version": 1,
+        "seed": 50051,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 2,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "59b6cb1cf2859d49ff7f4afb6f034a1f21d7c4b164cdee4c29c247d0411055b9",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000051/mixed/manifest.json",
+          "manifest_hash": "27651059e8c8e37b4b8ea1be841d6bf08c5fb5853b00f4f3b979757b3b4c9bdd"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000051/clean/manifest.json",
+          "manifest_hash": "b89a52de4f1b4e4dc3d9926b87b0c8f464ea5f19dc358744d10d4983c8f93089"
+        }
+      ]
+    },
+    {
+      "id": "episode-000052",
+      "group": "5d815c87aae981de48605e04b743afb601205bb4fa66d4d5f1fa8a8a4bd802b8",
+      "recipe": {
+        "version": 1,
+        "seed": 50052,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "211ff905316a432ec030ab4bb726cde1b7b8304aeba79835c61bf80fb53159e0",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000052/mixed/manifest.json",
+          "manifest_hash": "ddcbd65fc2ceecf8f9ea4db82d8dc7c044026ef381d1caedad62f313ec277647"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000052/clean/manifest.json",
+          "manifest_hash": "d959b344543c99761f1ab8cdb21316a56e99237a661503f41870bed1091db18b"
+        }
+      ]
+    },
+    {
+      "id": "episode-000053",
+      "group": "7213e0cde8c3466e2754f361c75cfe86104ae669a981fa0b583abdcac7beafd0",
+      "recipe": {
+        "version": 1,
+        "seed": 50053,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 8,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "532defe5ceb38623e32d9c6db4d9043076537b85cc74ad51ee4bd90734645341",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000053/mixed/manifest.json",
+          "manifest_hash": "76f9b982442c73b003fccb17f48970047cb8bd257a358c212b3c19d9b596195d"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000053/clean/manifest.json",
+          "manifest_hash": "6bd78a5d575f4af07e2a967df68930b449012233faa4c40c0813f07165c868f5"
+        }
+      ]
+    },
+    {
+      "id": "episode-000054",
+      "group": "28b03e433f96b0d1af68464fa6a2de71e10db601059f3b8f2cb2dd322f26d19f",
+      "recipe": {
+        "version": 1,
+        "seed": 50054,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 2,
+        "arrival_interval": 8.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "a2c8393dcc9943f1ca14ed50c2a58c90c4f2aa789ff9b5e37aae830ea7b3b3d6",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000054/mixed/manifest.json",
+          "manifest_hash": "c92ebe08b3ce7424415cdae72d8db426774d98cd35197e5fc694e1330a893f27"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000054/clean/manifest.json",
+          "manifest_hash": "8be34653c7182d7347737160135ae50944c49b473979842ce569a2af8ddbce7c"
+        }
+      ]
+    },
+    {
+      "id": "episode-000055",
+      "group": "1fc71e5fc380858350b1d37b998578d0fcaada6a328dbd93dad9220bbb35e269",
+      "recipe": {
+        "version": 1,
+        "seed": 50055,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "ba6da65d3e4348d6d63df210cbc42c391655282d83470d03e3c987eeabbffa3e",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000055/mixed/manifest.json",
+          "manifest_hash": "95c1dc631d30dba7b012fec7c0df504663e44917d1ee5444552a0c811839c8f1"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000055/clean/manifest.json",
+          "manifest_hash": "4fbf8f0a86eb6e8f0adf8e31e66d8a0e844b05deab8640978f1631e58bbad591"
+        }
+      ]
+    },
+    {
+      "id": "episode-000056",
+      "group": "ded1f5eb4106ce705a7aaf0c79326cb13ff28205de77f96963582a5a64c391e7",
+      "recipe": {
+        "version": 1,
+        "seed": 50056,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 2,
+        "arrival_interval": 0.5,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "922d739c23f6eb3950716f3c5e036ce6f7970c18f2c59e93f2bfaae0e0db3438",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000056/mixed/manifest.json",
+          "manifest_hash": "7885f3c1c32c485657b0adad5780d0b67ef579ab2c1471e639bf99c2ec979e48"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000056/clean/manifest.json",
+          "manifest_hash": "d27e1f773343aa2c37cf3bbf382a2e35b5994062a97c48e719a779a929a1e409"
+        }
+      ]
+    },
+    {
+      "id": "episode-000057",
+      "group": "5aea8600366cc0c2e6eaa4037a052f05de0e2be459641216835d328a4449c185",
+      "recipe": {
+        "version": 1,
+        "seed": 50057,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 2,
+        "arrival_interval": 0.5,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "ee412e7fdf615758e9fe97e29078d218ef86d90f8eb646261eea0ce170339bc3",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000057/mixed/manifest.json",
+          "manifest_hash": "2fe34890150dd9f89a19abb01d0156d46088e7191d097aa6726ad17c11a80552"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000057/clean/manifest.json",
+          "manifest_hash": "ad8c7071022d441a571d3784d5a49b2e516bb81c062463c0fb61d31ccf0dd985"
+        }
+      ]
+    },
+    {
+      "id": "episode-000058",
+      "group": "1eddb518bcbcb3c15524bea460cb61ff80a8fa0abb76c59e4a5f137f3e09dd2e",
+      "recipe": {
+        "version": 1,
+        "seed": 50058,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 8,
+        "arrival_interval": 0.5,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "e957e98541d78e72c5416934cfca104d232edbaf3af3cfd247582d595de42872",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000058/mixed/manifest.json",
+          "manifest_hash": "1574a823ee753e271646c5057a3d547bd462041b88581a32395f817dd0fef560"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000058/clean/manifest.json",
+          "manifest_hash": "1f50e9cad6a4da2d1f673d155eebbdc48bac4f09d9133a635a6b00d987140071"
+        }
+      ]
+    },
+    {
+      "id": "episode-000059",
+      "group": "ef485db7b4e22b0f4627a8ad27eea5ccd097657d326bc805d5ae87c49e7e27cd",
+      "recipe": {
+        "version": 1,
+        "seed": 50059,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 2,
+        "arrival_interval": 0.5,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "67333662d8af87dc1ecb8ae0a4e7458441494ee219ee1b72e5886fdd2dbe4d9a",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000059/mixed/manifest.json",
+          "manifest_hash": "9e9b1cc1a865c370e8558c5606d6b7a3787ca6932697e55d76c795efd5990be6"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000059/clean/manifest.json",
+          "manifest_hash": "2c02ba323922d4bf9c19337131a686f1a573b896fb0f697278d5ac23a13a8469"
+        }
+      ]
+    },
+    {
+      "id": "episode-000060",
+      "group": "140f96d9ccdc4da115d3619bd53161c446df4f143f105ebcf7b3e426e7aa1403",
+      "recipe": {
+        "version": 1,
+        "seed": 50060,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "3a5b7ca46e1e6a21aaf8ffb1e7bc02968b8380a34fc1f84fc41dccb67f619d2f",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000060/mixed/manifest.json",
+          "manifest_hash": "cd5dd6f3deeff1766533284cc698aa4d6b989a1ca4bf3792c3db38e6adffb2b6"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000060/clean/manifest.json",
+          "manifest_hash": "4d71e8ba30d0b62bb9aa75c3edd8cf5031ac1a2a89ee40e0d4451cf00fc03b7a"
+        }
+      ]
+    },
+    {
+      "id": "episode-000061",
+      "group": "89975f70345ed56da90bd633070932e1672c77c8d38cb722f4767dbbb856d530",
+      "recipe": {
+        "version": 1,
+        "seed": 50061,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "9748ddc91b02156b64761e8503b79cc2a82617aec5d60f709e2f3dd085814a4d",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000061/mixed/manifest.json",
+          "manifest_hash": "28dd45a00f572761fbb92b86ee9369e3595b2682ce56dc9201a8f64da18d4f2a"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000061/clean/manifest.json",
+          "manifest_hash": "2ebbbf8f5f54a8523ba490563efae9b76e1da89eb3a72b383f1f9fad0b588e2e"
+        }
+      ]
+    },
+    {
+      "id": "episode-000062",
+      "group": "4d8dc585ea48fd6313d620f2ee178a67b64792da3e8404551e7d50d8599fa4f5",
+      "recipe": {
+        "version": 1,
+        "seed": 50062,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "e2f1a8ca92407ffe7ab4106d1f0b2f45cc40f1e9bcd0f3624f6e9154f31d3fb5",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000062/mixed/manifest.json",
+          "manifest_hash": "22eb9a763520eeae96d3702a7ecc221e2f5eb060d6355f79f0e5af421f9b94a8"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000062/clean/manifest.json",
+          "manifest_hash": "68fc88d9ae8b0c9a931608fd56943c7e7504aff289535375193fcb22248ef2d2"
+        }
+      ]
+    },
+    {
+      "id": "episode-000063",
+      "group": "9c551f99041b77c6a9e2798318962be3ecceebed36e229b176718845410f3ba4",
+      "recipe": {
+        "version": 1,
+        "seed": 50063,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "436beb13c36103dde9e7876be0c1fa52b42e24b159a4afd7fc299f63e8ad67a6",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000063/mixed/manifest.json",
+          "manifest_hash": "67b8000bc7a59910ec3a96f4b62eb9ef011379b2eb20849f72e5f10945eb3b0e"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000063/clean/manifest.json",
+          "manifest_hash": "a2e4645d994497b7901cbf6c584e06a3d721232dd937eec7f3c1b0e1d1f44362"
+        }
+      ]
+    },
+    {
+      "id": "episode-000064",
+      "group": "dedde149cfefd6e6a56ed98483a9f36e1ee7e9b4bfe11df62fde20660a7b07a3",
+      "recipe": {
+        "version": 1,
+        "seed": 50064,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 4,
+        "arrival_interval": 0.5,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "98047fc1068ecf676546f4598cf6ecb38636fea7143f7260147495c4027d780d",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000064/mixed/manifest.json",
+          "manifest_hash": "166a92ea944c7f9c0b8083886e2c837082bc7d4f45e0832bd671751085f2be88"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000064/clean/manifest.json",
+          "manifest_hash": "3d425d3b715949c4b002ce138ed2b9b671f8e94acb5dc460cb3f2e735990cc84"
+        }
+      ]
+    },
+    {
+      "id": "episode-000065",
+      "group": "cc9ad18e7e15d1c718ea999e63ebc3e6ed82d4a01c98f494f1d57515cca1a951",
+      "recipe": {
+        "version": 1,
+        "seed": 50065,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 2,
+        "arrival_interval": 0.5,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "44f79995a3b536fc035f70647552ab1621116d88e9ceb2c0410b115d8376c45f",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000065/mixed/manifest.json",
+          "manifest_hash": "04441e941272b144a3117cdcee993179979572baf3869d224e57bdbe0e3bf178"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000065/clean/manifest.json",
+          "manifest_hash": "95da078c6c273e469ff505513a8bb8ecb225046eddb171ae89de4d2dccbc68e7"
+        }
+      ]
+    },
+    {
+      "id": "episode-000066",
+      "group": "3d01b3951aef859a9a2448f8bec0cae6cee7dbe581319ab3ff55275f1c6e83c6",
+      "recipe": {
+        "version": 1,
+        "seed": 50066,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "f8435cbe11af3fcad5f70ab00ca60a0531a69eca73a83c7753d3e8f54140aa75",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000066/mixed/manifest.json",
+          "manifest_hash": "5f475ac99d3c4c211c50db99611be7be9ffb905c6f4dbed96982350368aacc70"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000066/clean/manifest.json",
+          "manifest_hash": "ca774d48ab0886363c43c6cea1f0beabfe53b65b42e99d02a81c20a1825a48b9"
+        }
+      ]
+    },
+    {
+      "id": "episode-000067",
+      "group": "e0439673e9eeaf13e243c8f2857c8a8d9c07b1fa91229d5836209a849ca0c8f1",
+      "recipe": {
+        "version": 1,
+        "seed": 50067,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "94dfbc81d55536846527a43b49f7d1dc1825bbff6b1a7dc7223a044e82534297",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000067/mixed/manifest.json",
+          "manifest_hash": "f88a56438f728b5db3c5b0cd0f0daa1fde5525e425dadee45735ea85ae64450d"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000067/clean/manifest.json",
+          "manifest_hash": "f1153cf4448e4cb6eb28e636222155d14306ffe03cf1e269e48ce6cbd8f63354"
+        }
+      ]
+    },
+    {
+      "id": "episode-000068",
+      "group": "cfbbd185a1a696b7392432b41b475039f2e6a75e4ece5acd083509781f806c35",
+      "recipe": {
+        "version": 1,
+        "seed": 50068,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 8,
+        "arrival_interval": 2.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "dc4133d52b1a98ca094c06cb0886c135c6cb55bafaf1d94b3dd71356df37e162",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000068/mixed/manifest.json",
+          "manifest_hash": "21ab2aad956f220c22b2d8af31ffc6ec543edf16ec916eb704760b6d480829f6"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000068/clean/manifest.json",
+          "manifest_hash": "1b1f40fe67fdcc98198b8099f6c911c35266fc5a20634caabaa1160abae4281b"
+        }
+      ]
+    },
+    {
+      "id": "episode-000069",
+      "group": "793902583c04999ed79a91f60eab2aae872bca7f953a58ff4f7404b0bebeb96a",
+      "recipe": {
+        "version": 1,
+        "seed": 50069,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 2,
+        "arrival_interval": 2.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "7f7fc3c8b36a09ffd29a153af3c0e198fbdca6ce631ce86b1dff1348b581959a",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000069/mixed/manifest.json",
+          "manifest_hash": "abf024ff470e092f0e1b457618fb8a50abaec77e2d0378270c3520d31ce4d578"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000069/clean/manifest.json",
+          "manifest_hash": "fdaab14eefebd83e077dd32ff2b84004cd5c5aa4c1ea862c09a3fce25d8a00c0"
+        }
+      ]
+    },
+    {
+      "id": "episode-000070",
+      "group": "28dbeb1b4beb27cdf675f1fe67151341e2e27e640075a2fbfda47556457bb1f0",
+      "recipe": {
+        "version": 1,
+        "seed": 50070,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 2,
+        "arrival_interval": 8.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "56bf029e789c22cffd4ad3e8bfd302129099c39b9a72894145dc5a3c9e1291e7",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000070/mixed/manifest.json",
+          "manifest_hash": "02822bfe8257f961fce78114e9172b4c456bc61a6550a41d2654ebe1e374c594"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000070/clean/manifest.json",
+          "manifest_hash": "6256d81880effffe6e3841074db95651a8d213dbea239744498e9b2b1ba07a18"
+        }
+      ]
+    },
+    {
+      "id": "episode-000071",
+      "group": "1f58e0927d906a0694cdc0d04dc13f0e5f848cf47da4f984fea1389e26454e33",
+      "recipe": {
+        "version": 1,
+        "seed": 50071,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 8,
+        "arrival_interval": 8.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "9e3d43a5730216a355213e4d284caf5e5fc82db423a049459a69bf96f178895a",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000071/mixed/manifest.json",
+          "manifest_hash": "3aad694ab199a0a582ba6efc618d265e0fccb1569c6ef7bab432938537f28af9"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000071/clean/manifest.json",
+          "manifest_hash": "8e965ea70c17bddf536dabb434196c868591452301babc5a3c38da6c40d7f6a8"
+        }
+      ]
+    },
+    {
+      "id": "episode-000072",
+      "group": "97f747651a31f927450db85c810a38f924bd516b6135baa6685b7e8cc5a32f5f",
+      "recipe": {
+        "version": 1,
+        "seed": 50072,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 2,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "35c98838ed6b3000a298ad647b60c9f3dd34fe7743173e85a2b591ca6f57edbd",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000072/mixed/manifest.json",
+          "manifest_hash": "1a787011e309de4336529b40980b65a734200400aafc4c7a064bab86f9039d3c"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000072/clean/manifest.json",
+          "manifest_hash": "a8a2161c88abf5fe63fe73109b56a7920e2b597184a2e5bf83f09854b28b4508"
+        }
+      ]
+    },
+    {
+      "id": "episode-000073",
+      "group": "61d8b386efc9c3694fcfcb39b31f06ba91e404b6dbea89383e8dc548cdfe63a1",
+      "recipe": {
+        "version": 1,
+        "seed": 50073,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "605234012a3a329c778ea1fb413895f27d889b4b4b8ccbc76ae2d55b5e93073f",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000073/mixed/manifest.json",
+          "manifest_hash": "08af2a8a4354ddb0c5dd16405f365d882849e08782b436ffe936f54d286fa1ea"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000073/clean/manifest.json",
+          "manifest_hash": "a2fbeecb6d1a09a1ab5ebe66177df35adf7d827fe2a30e219d429579b138bebb"
+        }
+      ]
+    },
+    {
+      "id": "episode-000074",
+      "group": "3de4d23ac23d6b76b787520a6948954a6f6499c8f977b9e571fbe83a6f89a2be",
+      "recipe": {
+        "version": 1,
+        "seed": 50074,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 2,
+        "arrival_interval": 8.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "1532ff521de80b63ec7fbb1d25da2f9c7f2f325078dd6f2469935808668c3897",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000074/mixed/manifest.json",
+          "manifest_hash": "c8d0b2f6346c4313a64a05f755058c2537d0eb6471a29ab4df200cfbdd4317dd"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000074/clean/manifest.json",
+          "manifest_hash": "bbfb3f0d86c2c882c61ded753a31283839cc2e2b3165c36b78fcefa65305d387"
+        }
+      ]
+    },
+    {
+      "id": "episode-000075",
+      "group": "0cccfdf7de04cf47f669938b2625563fb0b9e09986516dc3040bec2ec9229a71",
+      "recipe": {
+        "version": 1,
+        "seed": 50075,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "53c4fa12648c53b9537c499a755a281e1213dae0b7146f7addc03553883aac61",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000075/mixed/manifest.json",
+          "manifest_hash": "3f5e6d8680358e8494a34b5167847a9b6ec6d604e8ff5f33dc7774f53e0b57f4"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000075/clean/manifest.json",
+          "manifest_hash": "377e8228abd7ce282ecce3749e49a25c704d26168fd10aef478271b394495c70"
+        }
+      ]
+    },
+    {
+      "id": "episode-000076",
+      "group": "fcf70d6f21de026b2d499d21d68dec159447fcb7cad2d93df88ef7307723977c",
+      "recipe": {
+        "version": 1,
+        "seed": 50076,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "559b0378da2e518900edbd1a72f2ec3e96212ac2187c39f99c181d43296aee9f",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000076/mixed/manifest.json",
+          "manifest_hash": "af5da22028782117c2332b094762a2356daa1d768c9c361ed4330873eab81576"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000076/clean/manifest.json",
+          "manifest_hash": "1ec4ecd4844a2ad3d663f12ff8f96c0c5d03e1e29291603e10adc4024fef1a64"
+        }
+      ]
+    },
+    {
+      "id": "episode-000077",
+      "group": "3968dba5a7e37ee066d2f2bff1df8415a52b3a30a5b2c1c8c2edde5f91215f56",
+      "recipe": {
+        "version": 1,
+        "seed": 50077,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "f5059046a33187a377271e2638dfd8298a97071f7214b443a3913f6de4aca375",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000077/mixed/manifest.json",
+          "manifest_hash": "763d8186bc2e109407617ab4dfd3f2a4e74996c9cbe3ead3eeed2fcde51769fb"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000077/clean/manifest.json",
+          "manifest_hash": "544ed705999253412271df9ae353ae1ceb3cb3c6c3e1161799656c7f4b96d650"
+        }
+      ]
+    },
+    {
+      "id": "episode-000078",
+      "group": "c903e6a9e46c626394fd34c9144851bd57a57d2f4ee7a27c3db8cc0a3579b742",
+      "recipe": {
+        "version": 1,
+        "seed": 50078,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 8,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "bedde137c69907bb319cc46f5069c907dcb44ec6d95cf9aff4c4936bcbf9b398",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000078/mixed/manifest.json",
+          "manifest_hash": "e06211bc3df5ddbe596858b693b7461bd7bafe56ce43ea3be0b7a08d29249979"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000078/clean/manifest.json",
+          "manifest_hash": "4f567564ee04e2e6dda05aae35ffc6529a0eb7aa61a85fad4d8720ddc3e2d040"
+        }
+      ]
+    },
+    {
+      "id": "episode-000079",
+      "group": "e6cccbefc961448c52b9bef5d32edf4d6901bf7016fe5745ccd76edd80c081d0",
+      "recipe": {
+        "version": 1,
+        "seed": 50079,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 4,
+        "arrival_interval": 2.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "c642330ddda0ea9701f1435bb62b34d6fbdc160b53ee2514341359c2748f0c3c",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000079/mixed/manifest.json",
+          "manifest_hash": "573d3b8cf66ddef547b112aef5a5e29115962703d7e91e8a7f41ede264053352"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000079/clean/manifest.json",
+          "manifest_hash": "9b6057a35db050a30adce281ccefac2b68d991c0c974b4f284e8eb6de69cd6d1"
+        }
+      ]
+    },
+    {
+      "id": "episode-000080",
+      "group": "dccea3f7d62f8f6926d160aef59493ccbf815b59b7e980ad94ecdd18898bfd2d",
+      "recipe": {
+        "version": 1,
+        "seed": 50080,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "f2142d67b2f3e1ad179c133da2c03aed0407330614e0cb799bda217b3711f71e",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000080/mixed/manifest.json",
+          "manifest_hash": "e1c4fa670a0fde9564c891d1a7214439dc30d32769ed65f56cbbf54e38eb334d"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000080/clean/manifest.json",
+          "manifest_hash": "a335fadf46290d346e07d7a38ca7ce47fa53f81c678837d451dbaa1850652312"
+        }
+      ]
+    },
+    {
+      "id": "episode-000081",
+      "group": "2648f816288521a91fd97485844f5b4b0253e82b7e05011181092f0b0f4a284e",
+      "recipe": {
+        "version": 1,
+        "seed": 50081,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 0.5,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "e9f1f973923371bd07b91a6fcf344a51995b406217506f09d9875033a79bd0fb",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000081/mixed/manifest.json",
+          "manifest_hash": "4ed6bfba26c6ee841b8bbf29e9c70011a9d774592e608a1c39f827c58ff110fd"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000081/clean/manifest.json",
+          "manifest_hash": "60bf36132e5f64d3dbee770c559b0e1167bb067495584bde71ed06623e669db8"
+        }
+      ]
+    },
+    {
+      "id": "episode-000082",
+      "group": "5e2bf64fbfceb9cd59d73bf6275d79a738d0245532fdf239dfe19ed0877d340c",
+      "recipe": {
+        "version": 1,
+        "seed": 50082,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 2,
+        "arrival_interval": 8.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "23a5277d4132462f019c1351699fd8646da3620fff0ec062c66fe108fa4b5fbd",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000082/mixed/manifest.json",
+          "manifest_hash": "28c1db958cfddbc40da6628c3fa3550bb94e778d0b4815bb666b8bd86192dbc9"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000082/clean/manifest.json",
+          "manifest_hash": "5101bb71f25b4b44fad5d3bd806e7260d9418b78a6608da5eea9abc10dcded4e"
+        }
+      ]
+    },
+    {
+      "id": "episode-000083",
+      "group": "6d0b91e0aecb679b0c264786f8d63e26c0fb22424a2328496477e58087eda9db",
+      "recipe": {
+        "version": 1,
+        "seed": 50083,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "99efc9bab01ae449c9dc8bfed0708ac64107f88ed938760180e6d0702b1caaa1",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000083/mixed/manifest.json",
+          "manifest_hash": "57435b75d6250e503819e918e0808fab2eca3b5fa4bfa9a95d14b672a9714ff0"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000083/clean/manifest.json",
+          "manifest_hash": "5eaba05408ae80e76d44db7eb7f756d610ce2c03432021a4fb94074b7f5f4028"
+        }
+      ]
+    },
+    {
+      "id": "episode-000084",
+      "group": "979d440543bb30ecfd5783d3f59885d667273cd8f45eede1fa53ff140c900fdd",
+      "recipe": {
+        "version": 1,
+        "seed": 50084,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 8,
+        "arrival_interval": 2.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "a628c228694a4e6d6f66188ce3981d1e356ee2738bc9215e24685c76d49abab5",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000084/mixed/manifest.json",
+          "manifest_hash": "c5303d7c55483c3162adbb243890798ef807c95a9261d5d4fa4f65add21bdee2"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000084/clean/manifest.json",
+          "manifest_hash": "3762a7c7fd5697f52470e9318eafe450d4aff7e9ab8c113d4ccb3eb7df5106ee"
+        }
+      ]
+    },
+    {
+      "id": "episode-000085",
+      "group": "1efa6785af8dea48139d0c88a62180a46eb7b17af1a09ecc0853f887ec9ae20b",
+      "recipe": {
+        "version": 1,
+        "seed": 50085,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 8,
+        "arrival_interval": 2.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "e380b124a63f113fe5d6af45df1a55357c69999389c5c14b92a56418a18f3f0f",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000085/mixed/manifest.json",
+          "manifest_hash": "2792d1a54f35a1c31eb4e1ce67906597c1a3ae6f8c12952bd4d04414504ec7ce"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000085/clean/manifest.json",
+          "manifest_hash": "0400eac23333e150a8de9f20116f160bdc398a0c4a344490466d46adca7fa0bd"
+        }
+      ]
+    },
+    {
+      "id": "episode-000086",
+      "group": "9a7eb240b2a8f9da36b54e4fe7bb6bf570dcabb8af4958a65f4daee8174d08a6",
+      "recipe": {
+        "version": 1,
+        "seed": 50086,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 2,
+        "arrival_interval": 2.0,
+        "service_scale": 1.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 4
+      },
+      "execution_hash": "d2d15d9d050544250c476db699fe507d4e95445c2474baa81584fe1ba2c27a36",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000086/mixed/manifest.json",
+          "manifest_hash": "62fe9292320687959ad8599f3295fc88b8250f211a2f3b37824ca887b9622af0"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000086/clean/manifest.json",
+          "manifest_hash": "3c61c185a1e840518cf34ab40b58860bae251caaac6bfdc9eaf198af46018b5e"
+        }
+      ]
+    },
+    {
+      "id": "episode-000087",
+      "group": "d617d8b46e0b5d20c4c4180cf07fa76fa768d7b97997134a97d3ea5a7a4d5c94",
+      "recipe": {
+        "version": 1,
+        "seed": 50087,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 4,
+        "arrival_interval": 0.5,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "a52c42d0f0ae99bbd654179b4879b13011ceb820e3acef54000159bb1da62d99",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000087/mixed/manifest.json",
+          "manifest_hash": "96812061af42554076f4c078509396b5fc1d8d879195b10e6ea120031d294267"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000087/clean/manifest.json",
+          "manifest_hash": "8c660e217e63f4692766a88d859c7758ff3c20507125da9ec5857ec7a2856288"
+        }
+      ]
+    },
+    {
+      "id": "episode-000088",
+      "group": "af6d47256e1339df8696a5d56c31377e6eb605323109f85dd2e0211d1b083c2e",
+      "recipe": {
+        "version": 1,
+        "seed": 50088,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 8,
+        "arrival_interval": 8.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "dbafd51ce20aed7636486321b2b865e5c9240c13f6f4bc9905474e9709746491",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000088/mixed/manifest.json",
+          "manifest_hash": "fce828a1a772827dfb88c80929c6c9182ec8fea9c5af3d8f63a7b601cee2d2a2"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000088/clean/manifest.json",
+          "manifest_hash": "e1bcfbda9706f15bcc550ba87d96692b040ce3ee9739605509e29308d115512f"
+        }
+      ]
+    },
+    {
+      "id": "episode-000089",
+      "group": "a674f8e365dc07cb59d8cfc7bfe8c36ba5b3a09fb0211862c59f19577099705d",
+      "recipe": {
+        "version": 1,
+        "seed": 50089,
+        "family": "assembly",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "f536fd5d508db92245c9ca25e51fff68bdbfcbb2fe269a1cfde3f33acc17f408",
+      "projection": "multi_object",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000089/mixed/manifest.json",
+          "manifest_hash": "f7dc26335040cffc737e14e2b38dad3f2cccf351f3e7af5ba578b8daff7bd245"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000089/clean/manifest.json",
+          "manifest_hash": "42c17de15975bedc7705290315edb170cc0f23a57e77e8808428f79c7d49d7a9"
+        }
+      ]
+    },
+    {
+      "id": "episode-000090",
+      "group": "f3fcb716f7bbc3b0136ced6ff898fa227a0ba7284483d95efae809d7ea6ae45a",
+      "recipe": {
+        "version": 1,
+        "seed": 50090,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 8,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "40710773570e4e111ba7a6acf746e4eb6017b963cf3618581daef8c2da14d626",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000090/mixed/manifest.json",
+          "manifest_hash": "6c64b852b723168ffd9b9751ce947a6cf48144ceee48ed1dce2584923af78008"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000090/clean/manifest.json",
+          "manifest_hash": "a9be9007909c156bbdcfd39f188a5714683bc2b141770c00fe33bc6d954a9911"
+        }
+      ]
+    },
+    {
+      "id": "episode-000091",
+      "group": "a9210e402364404497f0e0d44bfbf6268a468bc11b53a31d492e7557be44aefa",
+      "recipe": {
+        "version": 1,
+        "seed": 50091,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 2,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 3.0,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 16
+      },
+      "execution_hash": "112322768c7a7cb36ad38a17d57210d101b464439d98f4caa89bb6b8dfdc2276",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000091/mixed/manifest.json",
+          "manifest_hash": "ad8917cb03c9bc88066fb09454b526b1dfbe74ca8a518f25f3b0a4bd2d88ba09"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000091/clean/manifest.json",
+          "manifest_hash": "eb45ab7e11705a5dfebd61fea3566dd1ea0b02f523b0909ed42bcb2e5243de81"
+        }
+      ]
+    },
+    {
+      "id": "episode-000092",
+      "group": "7d85c4e0f36acbfb08ff810d3f0e579c6b3dba1dea28e907729ddad836447cfd",
+      "recipe": {
+        "version": 1,
+        "seed": 50092,
+        "family": "service",
+        "jobs": 12,
+        "max_children": 3,
+        "resources": 2,
+        "arrival_interval": 2.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "51c55ec991f14691967e7a26e0c85eef22e748feac87fe33ac02fcef99dbc4ef",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000092/mixed/manifest.json",
+          "manifest_hash": "bdab30141475fbc67e0bf91679c7df39ca0d308bab14473df1027732195bd356"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000092/clean/manifest.json",
+          "manifest_hash": "15144278e911c12d5f717462ecdcd517f427043805b13edd9637ed45c337c18e"
+        }
+      ]
+    },
+    {
+      "id": "episode-000093",
+      "group": "5e447fc002577f2e224a637d907f22b9537291f24b2191dd6ee0c88d83ff2cfe",
+      "recipe": {
+        "version": 1,
+        "seed": 50093,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 4,
+        "arrival_interval": 8.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "branch_join",
+          "handoff",
+          "queues",
+          "retry"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 8
+      },
+      "execution_hash": "7fbcf0444a9d7fe6f1780f2de0a406d5ae4fd3d2930840c009da973268504e04",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000093/mixed/manifest.json",
+          "manifest_hash": "511701de7fbbc48965736bacb63e48f0065cadaf0644ac4f19a2427e83a2bca6"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000093/clean/manifest.json",
+          "manifest_hash": "0b8b2aa88f4d3961fa98d160b5b278e02af73f0ee0ea95f2725bf310dcacd359"
+        }
+      ]
+    },
+    {
+      "id": "episode-000094",
+      "group": "41a4eb154366bfb37b829cbc1178223bb739cae6178e676d8d70d255f3d56923",
+      "recipe": {
+        "version": 1,
+        "seed": 50094,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 1,
+        "resources": 2,
+        "arrival_interval": 2.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "cancel_return",
+          "handoff",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "6915d9754b36b78a0bc6ecf4af1d18971f6423f8b98989e58e39affb560dc137",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000094/mixed/manifest.json",
+          "manifest_hash": "7185fbde605f6d4e26abac3cffddddb3904da3dcbe3527e46849e4bb9b7c0a32"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000094/clean/manifest.json",
+          "manifest_hash": "cea9a603805ccae652ef1f1fba06b581179e7a4069f1eacd1f646706cf0e657b"
+        }
+      ]
+    },
+    {
+      "id": "episode-000095",
+      "group": "c55bd6a98a15d2dc4bc5de161fa9e338335690cc1601f568be31e6d1186c2e0f",
+      "recipe": {
+        "version": 1,
+        "seed": 50095,
+        "family": "fulfillment",
+        "jobs": 12,
+        "max_children": 4,
+        "resources": 2,
+        "arrival_interval": 2.0,
+        "service_scale": 0.5,
+        "batch_window": 5.0,
+        "mechanisms": [
+          "batch_split",
+          "branch_join",
+          "cancel_return",
+          "queues"
+        ],
+        "retry_probability": 0.2,
+        "cancel_probability": 0.1,
+        "return_probability": 0.1,
+        "attribute_palette": 2
+      },
+      "execution_hash": "b3c5a87ee9a3fcafd2dcafe5a2d459f676f38dd48981b0aff0c36f37709b6321",
+      "projection": "flat",
+      "variants": [
+        {
+          "variant": "mixed",
+          "manifest": "data/generated/workflow_validation_v3/episode-000095/mixed/manifest.json",
+          "manifest_hash": "2915f1db3ac962a5981ecdbec2cb93d1873c23972b69499772efdbb9e6581941"
+        },
+        {
+          "variant": "clean",
+          "manifest": "data/generated/workflow_validation_v3/episode-000095/clean/manifest.json",
+          "manifest_hash": "7a0003feedb0dac8e666b882bd47042d266b77346991e0efdeed2dbbe686bf7e"
+        }
+      ]
+    }
+  ],
+  "seconds": 23.383492530090734,
+  "code_hashes": {
+    "tgrepair/__init__.py": "ad83ce5fca3e2bfa1cc153276de4379a3c8302b7f2a0a85ae40503c7bb3d62ca",
+    "tgrepair/corruption.py": "d04efa6b65698f47f47aa2769431ed99ea8626cad7f3bb5fb63c68fbe633361b",
+    "tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2",
+    "tgrepair/factory_plugin.py": "5724eb624c08060892e20cda1f8285ccb34ef5f0a58ac03dca207521b83afba9",
+    "tgrepair/identity_matching.py": "b707a4ca0efa7ade90fc5a15ec6401470a02ddc333c8c8eedacf3921e12ef4ac",
+    "tgrepair/matching.py": "e47ad9dd83d9ac0195a5647955487a8c38c9c7bbfffa71fb0c50fa8052c8bae3",
+    "tgrepair/metrics.py": "903faf015149e0095544ee40368bf20412d1cef856e84eebfb36e3e1c8f2e97b",
+    "tgrepair/provenance.py": "1f427099dacbba70402931d18dc6d63fc07c04a4ac6cde732033b43e926d964b",
+    "scripts/evaluate_matching.py": "8509e6a411c71e68e1c9dd86dc70475d6118af142b1cc3ad6d0450d8003cdc7e",
+    "scripts/fit_matching_baseline.py": "e8477430d3a8c7e72b09019e869bd855273224931317a266888256fa1bb0167a",
+    "scripts/generate_workflow_pilot.py": "9732e667b6f932605eb42f83a439827de45f515ec90f89ddc694f8b0e0b14cb6",
+    "scripts/prepare_development.py": "2c10d01c60055b6b79e91e99726d3e738afa16e559d694f940b28638c9a0636f",
+    "scripts/repair_development_graph.py": "3e629cafb0ed8c2d18381badcbbe7cb041441fc15b7d7987585a799a23505a75",
+    "scripts/run_baseline_probe.py": "90e7d881dccecde9dda9f7183014484e0325b09b30453ccd87ea48f8685f73de",
+    "scripts/run_deployment_probe.py": "f7787dd29ace7b69de65f04b9705c8cf1f82d11824c2d7b085310b8c133be46e",
+    "scripts/run_identity_probe.py": "26fbd0aafca577458f5b0536d482441cb78f6569d355a557f98d365fc94809f6"
+  },
+  "limits": [
+    "Symbolic execution, not a calibrated organizational simulator.",
+    "Family names change the schema vocabulary; they are not independent simulator implementations.",
+    "The split is a generated learning/development partition, not a real-source final test.",
+    "These datasets establish generation behavior, not synthetic-to-real learning benefit."
+  ]
+}

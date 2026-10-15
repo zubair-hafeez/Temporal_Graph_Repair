@@ -23,11 +23,15 @@ def repair_task(execution, config):
     if not target_types <= visible_types or not visible_types <= set(execution['schema']['entity_types']):
         raise ValueError('Repair targets must belong to the declared visible entity types')
     objects = {o:e['kind'] for o,e in execution['entities'].items() if e['kind'] in visible_types}
+    visible_attributes = set(config.get('visible_attributes', execution['schema'].get('attributes', {})))
+    if not visible_attributes <= set(execution['schema'].get('attributes', {})):
+        raise ValueError('Unknown visible observation attribute')
     events = []
     for e in execution['events']:
         participants = tuple(o for o in e['participants'] if o in objects)
         if participants:
-            events.append(Event(e['id'],e['time'],e['kind'],participants,dict(e['attributes'])))
+            events.append(Event(e['id'],e['time'],e['kind'],participants,
+                                {k:v for k,v in e['attributes'].items() if k in visible_attributes}))
     graph = Graph('workflow_reference', objects, events)
     observed, reference = mixed_faults(graph,config['observation_seed'],target_types,
                                        missing_rate=config.get('missing_rate',.1),wrong_rate=config.get('wrong_rate',.1),
@@ -38,6 +42,7 @@ def repair_task(execution, config):
     learner['schema'] = {**execution['schema'], 'entity_types':sorted(visible_types),
                          'entity_roles':{role:typ for role,typ in execution['schema'].get('entity_roles',{}).items() if typ in visible_types},
                          'target_types':sorted(target_types),
+                         'attributes':{k:v for k,v in execution['schema'].get('attributes',{}).items() if k in visible_attributes},
                          'protected_fields':['time','kind','attributes'],
                          'allowed_edits':['ADD_PARTICIPANT','REMOVE_PARTICIPANT','MERGE_ALIASES','STOP','UNRESOLVED']}
     return {'task':'temporal_graph_repair','learner':learner,'reference':reference,

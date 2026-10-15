@@ -26,3 +26,13 @@
 - Two 32-world pilots generated paired clean/mixed data plus prefix prediction. Pilot v2 schema/projection coupling found and disclosed; subsequent training must use an independent factorial schedule.
 - Added source snapshot archives for subsequent runs. Early development runs retain hashes/models/caches but have no complete historical source archive; final experiments must use frozen source snapshots.
 - Next: stronger learned identity/sequential baseline and synthetic-trained coordinated edit model, with held-out mechanism validation and untouched real targets.
+
+## 2026-10-15 — Strong identity baselines and first neural edit iteration
+
+- Source identity matching improves history F1 0.8922 to 0.9107 after participant repair; synthetic v1 gives 0.8959. Preserved both reports and models. Candidate recall remains a separate limit.
+- Added reversible edit state, observation-only action construction, compact temporal message passing, matched MLP/boosted controls, training caches, validation calibration, and joint/fixed-sequence decoding. No target tests opened.
+- The first graph policy has only a small generated-validation advantage over the boosted control; no model novelty or publication readiness claim is made. Details in ITERATION_03 and source-pinned experiment reports.
+- The sandbox CUDA failure occurred before training; the same scoped training script was approved and ran on the existing GPUs. No environment or other processes changed.
+- Expanded factory-derived collections contain 512 train worlds / 444,161 events and 96 validation worlds / 102,174 events. Original collections remain intact. The route/lifecycle extension is motivated by fit-only mismatch, not target outcomes.
+- Optimized repeated attribute features; all 51,200 float32 feature rows match the old implementation exactly. Check reduced feature computation from 5.31s to 1.15s; this is a bounded microbenchmark, not a total runtime claim.
+- Next: finish expanded-generator transfer and edit comparisons, assess public-source repair, retain the simplest effective method, and freeze a final protocol only after development evidence supports it.

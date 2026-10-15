@@ -1,0 +1,478 @@
+{
+  "status": "development_neural_training",
+  "config": {
+    "train": "edit_train_v1",
+    "validation": "edit_validation_v1",
+    "output": "edit_temporal_v1",
+    "representation": "temporal",
+    "epochs": 12,
+    "seed": 0,
+    "device": "cuda:1",
+    "max_actions": 2048
+  },
+  "source_snapshot": {
+    "file": "data/source_snapshots/89e596b95c701d72e7f6bb2ac7a214ed6549bb515efc59042e9c363026263d47.tar.gz",
+    "sha256": "517d206e496f50f27bfd5e45a2eec32ec6be081a7fc6c86158c24f125f90435c",
+    "source_set_hash": "89e596b95c701d72e7f6bb2ac7a214ed6549bb515efc59042e9c363026263d47",
+    "files": {
+      "research/tgrepair/__init__.py": "ad83ce5fca3e2bfa1cc153276de4379a3c8302b7f2a0a85ae40503c7bb3d62ca",
+      "research/tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7",
+      "research/tgrepair/corruption.py": "d04efa6b65698f47f47aa2769431ed99ea8626cad7f3bb5fb63c68fbe633361b",
+      "research/tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2",
+      "research/tgrepair/edits.py": "90a22c41bfa49f1d9981e1ad643ec128833fec2e314dd480a1e6aa2c4cf1a9c6",
+      "research/tgrepair/entity_features.py": "6122ad15c21c44645521d0a920f0bd855cd112cf4caca49d548ebc8adba84dff",
+      "research/tgrepair/factory_plugin.py": "6ac1ade56b775242db66579b75c36ff77af5f2c06ba8bd3c4364d91f48e0055d",
+      "research/tgrepair/identity_matching.py": "b707a4ca0efa7ade90fc5a15ec6401470a02ddc333c8c8eedacf3921e12ef4ac",
+      "research/tgrepair/matching.py": "e47ad9dd83d9ac0195a5647955487a8c38c9c7bbfffa71fb0c50fa8052c8bae3",
+      "research/tgrepair/metrics.py": "903faf015149e0095544ee40368bf20412d1cef856e84eebfb36e3e1c8f2e97b",
+      "research/tgrepair/neural_policy.py": "da9444696f623bc1683812a2b1b9aeee4723bf56d2b0de7bfa6a57e59796cfdf",
+      "research/tgrepair/provenance.py": "1f427099dacbba70402931d18dc6d63fc07c04a4ac6cde732033b43e926d964b",
+      "research/scripts/evaluate_matching.py": "8509e6a411c71e68e1c9dd86dc70475d6118af142b1cc3ad6d0450d8003cdc7e",
+      "research/scripts/fit_matching_baseline.py": "e8477430d3a8c7e72b09019e869bd855273224931317a266888256fa1bb0167a",
+      "research/scripts/generate_workflow_pilot.py": "de7b959ad5c7e200757b8e9c62ff51cf543e407e99e2ca6fc33f5ba49e3bb2ac",
+      "research/scripts/prepare_development.py": "2c10d01c60055b6b79e91e99726d3e738afa16e559d694f940b28638c9a0636f",
+      "research/scripts/prepare_edit_learning.py": "de125b695a1d38c51e58e628c306334173c3c6e5c1cdbd6cd2b4d8196a88380d",
+      "research/scripts/repair_development_graph.py": "3e629cafb0ed8c2d18381badcbbe7cb041441fc15b7d7987585a799a23505a75",
+      "research/scripts/run_baseline_probe.py": "90e7d881dccecde9dda9f7183014484e0325b09b30453ccd87ea48f8685f73de",
+      "research/scripts/run_deployment_probe.py": "f7787dd29ace7b69de65f04b9705c8cf1f82d11824c2d7b085310b8c133be46e",
+      "research/scripts/run_identity_probe.py": "26fbd0aafca577458f5b0536d482441cb78f6569d355a557f98d365fc94809f6",
+      "research/scripts/train_edit_policy.py": "87cd537140e89b4cbe584dceab8450c3668158f5187d83af7f2c01461c1aa319",
+      "research/scripts/train_identity_baselines.py": "3d5e72c957a5146e18d06ac99e85872ea8b4c357588a4684cb78ce761aa906ca",
+      "research/tests/test_application_metrics.py": "0bc7fb819cb6565f2273a085e4ecb35da06448c2f02c7ca8429389a73ec4af6d",
+      "research/tests/test_edits.py": "82cc8f201811ed347807f0e29164b25def5dcadb0731fb70ea555270d66e5679",
+      "research/tests/test_factory_integration.py": "382dcffd23f814f8dc7e51967e9e485a05cb814460e2a7eb1d0e430e2d5c65cc",
+      "research/tests/test_identity_features.py": "7636f879f19cf06847d322e05b6a82f6394193bcabc418cd3dda011275ffb7c5",
+      "research/tests/test_neural_inputs.py": "f42870e91884f7d53033075061d5db7eaff27237388eed6352e632fbe94e5a5d",
+      "research/tests/test_observation_boundary.py": "6e944c76f152519702eb992341dc144f62c7287fcc7361737a127a11b5e01aa0",
+      "factory/src/temporal_factory/__init__.py": "d401743947ab8a821e6edbf60dc4435e2fea6d8f8f08ed5c47df799e6640bf3a",
+      "factory/src/temporal_factory/core.py": "171d6de2068f9ca7d7d13b47868d9044959b8ebf94ce5caf523defbf6535b058",
+      "factory/src/temporal_factory/workflow.py": "cca70d3ab13332439d4a9a4f019ef8de885be3ef550daa7b2e331badea40faf9",
+      "factory/src/rfdf/__init__.py": "0e0e411ad05093b259f07ae8cc4769b7a7dcbae4917316a0bc3a35c16789fca7",
+      "factory/src/rfdf/storage.py": "a7b6e034740730ed3da33997a023e362d9afa768924e73ceae8af5b356bede25",
+      "factory/pyproject.toml": "2d7f7864648740cee45f838e4bf02527cf539cd0d3221c17405eb935ccc05ef5"
+    }
+  },
+  "train_source_snapshot": {
+    "file": "data/source_snapshots/3eeef19c5c3d2aadf84da80121897eb5fffd5f4e3ff3600327b71b425c778b92.tar.gz",
+    "sha256": "c585cf5887589f87198b6676f7faa0d8ebbe3cbf07eb0a63a9c073d68199743e",
+    "source_set_hash": "3eeef19c5c3d2aadf84da80121897eb5fffd5f4e3ff3600327b71b425c778b92",
+    "files": {
+      "research/tgrepair/__init__.py": "ad83ce5fca3e2bfa1cc153276de4379a3c8302b7f2a0a85ae40503c7bb3d62ca",
+      "research/tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7",
+      "research/tgrepair/corruption.py": "d04efa6b65698f47f47aa2769431ed99ea8626cad7f3bb5fb63c68fbe633361b",
+      "research/tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2",
+      "research/tgrepair/edits.py": "90a22c41bfa49f1d9981e1ad643ec128833fec2e314dd480a1e6aa2c4cf1a9c6",
+      "research/tgrepair/entity_features.py": "6122ad15c21c44645521d0a920f0bd855cd112cf4caca49d548ebc8adba84dff",
+      "research/tgrepair/factory_plugin.py": "5724eb624c08060892e20cda1f8285ccb34ef5f0a58ac03dca207521b83afba9",
+      "research/tgrepair/identity_matching.py": "b707a4ca0efa7ade90fc5a15ec6401470a02ddc333c8c8eedacf3921e12ef4ac",
+      "research/tgrepair/matching.py": "e47ad9dd83d9ac0195a5647955487a8c38c9c7bbfffa71fb0c50fa8052c8bae3",
+      "research/tgrepair/metrics.py": "903faf015149e0095544ee40368bf20412d1cef856e84eebfb36e3e1c8f2e97b",
+      "research/tgrepair/neural_policy.py": "da9444696f623bc1683812a2b1b9aeee4723bf56d2b0de7bfa6a57e59796cfdf",
+      "research/tgrepair/provenance.py": "1f427099dacbba70402931d18dc6d63fc07c04a4ac6cde732033b43e926d964b",
+      "research/scripts/evaluate_matching.py": "8509e6a411c71e68e1c9dd86dc70475d6118af142b1cc3ad6d0450d8003cdc7e",
+      "research/scripts/fit_matching_baseline.py": "e8477430d3a8c7e72b09019e869bd855273224931317a266888256fa1bb0167a",
+      "research/scripts/generate_workflow_pilot.py": "9732e667b6f932605eb42f83a439827de45f515ec90f89ddc694f8b0e0b14cb6",
+      "research/scripts/prepare_development.py": "2c10d01c60055b6b79e91e99726d3e738afa16e559d694f940b28638c9a0636f",
+      "research/scripts/prepare_edit_learning.py": "de125b695a1d38c51e58e628c306334173c3c6e5c1cdbd6cd2b4d8196a88380d",
+      "research/scripts/repair_development_graph.py": "3e629cafb0ed8c2d18381badcbbe7cb041441fc15b7d7987585a799a23505a75",
+      "research/scripts/run_baseline_probe.py": "90e7d881dccecde9dda9f7183014484e0325b09b30453ccd87ea48f8685f73de",
+      "research/scripts/run_deployment_probe.py": "f7787dd29ace7b69de65f04b9705c8cf1f82d11824c2d7b085310b8c133be46e",
+      "research/scripts/run_identity_probe.py": "26fbd0aafca577458f5b0536d482441cb78f6569d355a557f98d365fc94809f6",
+      "research/scripts/train_edit_policy.py": "87cd537140e89b4cbe584dceab8450c3668158f5187d83af7f2c01461c1aa319",
+      "research/scripts/train_identity_baselines.py": "3d5e72c957a5146e18d06ac99e85872ea8b4c357588a4684cb78ce761aa906ca",
+      "research/tests/test_application_metrics.py": "0bc7fb819cb6565f2273a085e4ecb35da06448c2f02c7ca8429389a73ec4af6d",
+      "research/tests/test_edits.py": "82cc8f201811ed347807f0e29164b25def5dcadb0731fb70ea555270d66e5679",
+      "research/tests/test_factory_integration.py": "6cbd875afa3d08b925e3bbb01ce0a0555fa91fe7fe8bfe2de0059fd2f6530117",
+      "research/tests/test_identity_features.py": "7636f879f19cf06847d322e05b6a82f6394193bcabc418cd3dda011275ffb7c5",
+      "research/tests/test_neural_inputs.py": "f42870e91884f7d53033075061d5db7eaff27237388eed6352e632fbe94e5a5d",
+      "research/tests/test_observation_boundary.py": "6e944c76f152519702eb992341dc144f62c7287fcc7361737a127a11b5e01aa0",
+      "factory/src/temporal_factory/__init__.py": "d401743947ab8a821e6edbf60dc4435e2fea6d8f8f08ed5c47df799e6640bf3a",
+      "factory/src/temporal_factory/core.py": "171d6de2068f9ca7d7d13b47868d9044959b8ebf94ce5caf523defbf6535b058",
+      "factory/src/temporal_factory/workflow.py": "6eeaf7d9944165e67cf142bfde03247f3da8cb67defb4f9aab68247a71788431",
+      "factory/src/rfdf/__init__.py": "0e0e411ad05093b259f07ae8cc4769b7a7dcbae4917316a0bc3a35c16789fca7",
+      "factory/src/rfdf/storage.py": "a7b6e034740730ed3da33997a023e362d9afa768924e73ceae8af5b356bede25",
+      "factory/pyproject.toml": "2d7f7864648740cee45f838e4bf02527cf539cd0d3221c17405eb935ccc05ef5"
+    }
+  },
+  "validation_source_snapshot": {
+    "file": "data/source_snapshots/3eeef19c5c3d2aadf84da80121897eb5fffd5f4e3ff3600327b71b425c778b92.tar.gz",
+    "sha256": "c585cf5887589f87198b6676f7faa0d8ebbe3cbf07eb0a63a9c073d68199743e",
+    "source_set_hash": "3eeef19c5c3d2aadf84da80121897eb5fffd5f4e3ff3600327b71b425c778b92",
+    "files": {
+      "research/tgrepair/__init__.py": "ad83ce5fca3e2bfa1cc153276de4379a3c8302b7f2a0a85ae40503c7bb3d62ca",
+      "research/tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7",
+      "research/tgrepair/corruption.py": "d04efa6b65698f47f47aa2769431ed99ea8626cad7f3bb5fb63c68fbe633361b",
+      "research/tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2",
+      "research/tgrepair/edits.py": "90a22c41bfa49f1d9981e1ad643ec128833fec2e314dd480a1e6aa2c4cf1a9c6",
+      "research/tgrepair/entity_features.py": "6122ad15c21c44645521d0a920f0bd855cd112cf4caca49d548ebc8adba84dff",
+      "research/tgrepair/factory_plugin.py": "5724eb624c08060892e20cda1f8285ccb34ef5f0a58ac03dca207521b83afba9",
+      "research/tgrepair/identity_matching.py": "b707a4ca0efa7ade90fc5a15ec6401470a02ddc333c8c8eedacf3921e12ef4ac",
+      "research/tgrepair/matching.py": "e47ad9dd83d9ac0195a5647955487a8c38c9c7bbfffa71fb0c50fa8052c8bae3",
+      "research/tgrepair/metrics.py": "903faf015149e0095544ee40368bf20412d1cef856e84eebfb36e3e1c8f2e97b",
+      "research/tgrepair/neural_policy.py": "da9444696f623bc1683812a2b1b9aeee4723bf56d2b0de7bfa6a57e59796cfdf",
+      "research/tgrepair/provenance.py": "1f427099dacbba70402931d18dc6d63fc07c04a4ac6cde732033b43e926d964b",
+      "research/scripts/evaluate_matching.py": "8509e6a411c71e68e1c9dd86dc70475d6118af142b1cc3ad6d0450d8003cdc7e",
+      "research/scripts/fit_matching_baseline.py": "e8477430d3a8c7e72b09019e869bd855273224931317a266888256fa1bb0167a",
+      "research/scripts/generate_workflow_pilot.py": "9732e667b6f932605eb42f83a439827de45f515ec90f89ddc694f8b0e0b14cb6",
+      "research/scripts/prepare_development.py": "2c10d01c60055b6b79e91e99726d3e738afa16e559d694f940b28638c9a0636f",
+      "research/scripts/prepare_edit_learning.py": "de125b695a1d38c51e58e628c306334173c3c6e5c1cdbd6cd2b4d8196a88380d",
+      "research/scripts/repair_development_graph.py": "3e629cafb0ed8c2d18381badcbbe7cb041441fc15b7d7987585a799a23505a75",
+      "research/scripts/run_baseline_probe.py": "90e7d881dccecde9dda9f7183014484e0325b09b30453ccd87ea48f8685f73de",
+      "research/scripts/run_deployment_probe.py": "f7787dd29ace7b69de65f04b9705c8cf1f82d11824c2d7b085310b8c133be46e",
+      "research/scripts/run_identity_probe.py": "26fbd0aafca577458f5b0536d482441cb78f6569d355a557f98d365fc94809f6",
+      "research/scripts/train_edit_policy.py": "87cd537140e89b4cbe584dceab8450c3668158f5187d83af7f2c01461c1aa319",
+      "research/scripts/train_identity_baselines.py": "3d5e72c957a5146e18d06ac99e85872ea8b4c357588a4684cb78ce761aa906ca",
+      "research/tests/test_application_metrics.py": "0bc7fb819cb6565f2273a085e4ecb35da06448c2f02c7ca8429389a73ec4af6d",
+      "research/tests/test_edits.py": "82cc8f201811ed347807f0e29164b25def5dcadb0731fb70ea555270d66e5679",
+      "research/tests/test_factory_integration.py": "6cbd875afa3d08b925e3bbb01ce0a0555fa91fe7fe8bfe2de0059fd2f6530117",
+      "research/tests/test_identity_features.py": "7636f879f19cf06847d322e05b6a82f6394193bcabc418cd3dda011275ffb7c5",
+      "research/tests/test_neural_inputs.py": "f42870e91884f7d53033075061d5db7eaff27237388eed6352e632fbe94e5a5d",
+      "research/tests/test_observation_boundary.py": "6e944c76f152519702eb992341dc144f62c7287fcc7361737a127a11b5e01aa0",
+      "factory/src/temporal_factory/__init__.py": "d401743947ab8a821e6edbf60dc4435e2fea6d8f8f08ed5c47df799e6640bf3a",
+      "factory/src/temporal_factory/core.py": "171d6de2068f9ca7d7d13b47868d9044959b8ebf94ce5caf523defbf6535b058",
+      "factory/src/temporal_factory/workflow.py": "6eeaf7d9944165e67cf142bfde03247f3da8cb67defb4f9aab68247a71788431",
+      "factory/src/rfdf/__init__.py": "0e0e411ad05093b259f07ae8cc4769b7a7dcbae4917316a0bc3a35c16789fca7",
+      "factory/src/rfdf/storage.py": "a7b6e034740730ed3da33997a023e362d9afa768924e73ceae8af5b356bede25",
+      "factory/pyproject.toml": "2d7f7864648740cee45f838e4bf02527cf539cd0d3221c17405eb935ccc05ef5"
+    }
+  },
+  "parameters": 141125,
+  "torch": "2.5.1+cu124",
+  "device": "NVIDIA RTX A6000",
+  "epochs": [
+    {
+      "epoch": 1,
+      "loss": 0.2718358586067292,
+      "validation": {
+        "ADD_PARTICIPANT": {
+          "average_precision": 0.5116152622833956,
+          "roc_auc": 0.9762622469569414,
+          "positives": 1602,
+          "actions": 118835
+        },
+        "REMOVE_PARTICIPANT": {
+          "average_precision": 0.911587931988604,
+          "roc_auc": 0.9885790071722721,
+          "positives": 583,
+          "actions": 7693
+        },
+        "MERGE_ALIASES": {
+          "average_precision": 0.5018725956759434,
+          "roc_auc": 0.9724110451824973,
+          "positives": 676,
+          "actions": 48257
+        }
+      },
+      "macro_ap": 0.6416919299826477,
+      "seconds": 8.183109364006668
+    },
+    {
+      "epoch": 2,
+      "loss": 0.2019931284194172,
+      "validation": {
+        "ADD_PARTICIPANT": {
+          "average_precision": 0.5588447299354701,
+          "roc_auc": 0.9812558663198899,
+          "positives": 1602,
+          "actions": 118835
+        },
+        "REMOVE_PARTICIPANT": {
+          "average_precision": 0.9356203349512757,
+          "roc_auc": 0.9896443537355886,
+          "positives": 583,
+          "actions": 7693
+        },
+        "MERGE_ALIASES": {
+          "average_precision": 0.5468132563469028,
+          "roc_auc": 0.9745060245443801,
+          "positives": 676,
+          "actions": 48257
+        }
+      },
+      "macro_ap": 0.6804261070778829,
+      "seconds": 14.113027940969914
+    },
+    {
+      "epoch": 3,
+      "loss": 0.1744142569644152,
+      "validation": {
+        "ADD_PARTICIPANT": {
+          "average_precision": 0.6033424102083068,
+          "roc_auc": 0.9854443091674633,
+          "positives": 1602,
+          "actions": 118835
+        },
+        "REMOVE_PARTICIPANT": {
+          "average_precision": 0.9423529045980056,
+          "roc_auc": 0.9902940317915241,
+          "positives": 583,
+          "actions": 7693
+        },
+        "MERGE_ALIASES": {
+          "average_precision": 0.5553893450545674,
+          "roc_auc": 0.9773495405965461,
+          "positives": 676,
+          "actions": 48257
+        }
+      },
+      "macro_ap": 0.7003615532869599,
+      "seconds": 20.087115815957077
+    },
+    {
+      "epoch": 4,
+      "loss": 0.15649625003314732,
+      "validation": {
+        "ADD_PARTICIPANT": {
+          "average_precision": 0.6232873414270178,
+          "roc_auc": 0.9871459153236383,
+          "positives": 1602,
+          "actions": 118835
+        },
+        "REMOVE_PARTICIPANT": {
+          "average_precision": 0.9431687950250562,
+          "roc_auc": 0.9909463635639896,
+          "positives": 583,
+          "actions": 7693
+        },
+        "MERGE_ALIASES": {
+          "average_precision": 0.5784329399712639,
+          "roc_auc": 0.9792126823533187,
+          "positives": 676,
+          "actions": 48257
+        }
+      },
+      "macro_ap": 0.714963025474446,
+      "seconds": 25.968432563939132
+    },
+    {
+      "epoch": 5,
+      "loss": 0.14486511060288518,
+      "validation": {
+        "ADD_PARTICIPANT": {
+          "average_precision": 0.6344505269622681,
+          "roc_auc": 0.9877703826432359,
+          "positives": 1602,
+          "actions": 118835
+        },
+        "REMOVE_PARTICIPANT": {
+          "average_precision": 0.9506163009407197,
+          "roc_auc": 0.9911058278027469,
+          "positives": 583,
+          "actions": 7693
+        },
+        "MERGE_ALIASES": {
+          "average_precision": 0.5971562200750379,
+          "roc_auc": 0.9803383865246793,
+          "positives": 676,
+          "actions": 48257
+        }
+      },
+      "macro_ap": 0.7274076826593419,
+      "seconds": 31.911000175983645
+    },
+    {
+      "epoch": 6,
+      "loss": 0.13699150509806454,
+      "validation": {
+        "ADD_PARTICIPANT": {
+          "average_precision": 0.6571564524464222,
+          "roc_auc": 0.9883216712179815,
+          "positives": 1602,
+          "actions": 118835
+        },
+        "REMOVE_PARTICIPANT": {
+          "average_precision": 0.9562923080537541,
+          "roc_auc": 0.9923338954387438,
+          "positives": 583,
+          "actions": 7693
+        },
+        "MERGE_ALIASES": {
+          "average_precision": 0.6060034445949519,
+          "roc_auc": 0.9800897603575789,
+          "positives": 676,
+          "actions": 48257
+        }
+      },
+      "macro_ap": 0.739817401698376,
+      "seconds": 37.82343522692099
+    },
+    {
+      "epoch": 7,
+      "loss": 0.13038075374554733,
+      "validation": {
+        "ADD_PARTICIPANT": {
+          "average_precision": 0.6425991939993602,
+          "roc_auc": 0.9876836820573278,
+          "positives": 1602,
+          "actions": 118835
+        },
+        "REMOVE_PARTICIPANT": {
+          "average_precision": 0.951700107516168,
+          "roc_auc": 0.9904122428005877,
+          "positives": 583,
+          "actions": 7693
+        },
+        "MERGE_ALIASES": {
+          "average_precision": 0.6146576735897678,
+          "roc_auc": 0.9809375827380752,
+          "positives": 676,
+          "actions": 48257
+        }
+      },
+      "macro_ap": 0.7363189917017653,
+      "seconds": 43.74686731793918
+    },
+    {
+      "epoch": 8,
+      "loss": 0.1239295543192936,
+      "validation": {
+        "ADD_PARTICIPANT": {
+          "average_precision": 0.6509705007370974,
+          "roc_auc": 0.9883344768993123,
+          "positives": 1602,
+          "actions": 118835
+        },
+        "REMOVE_PARTICIPANT": {
+          "average_precision": 0.9541107355846352,
+          "roc_auc": 0.990372678299595,
+          "positives": 583,
+          "actions": 7693
+        },
+        "MERGE_ALIASES": {
+          "average_precision": 0.6095003908458096,
+          "roc_auc": 0.9812730430785797,
+          "positives": 676,
+          "actions": 48257
+        }
+      },
+      "macro_ap": 0.738193875722514,
+      "seconds": 49.75756136793643
+    },
+    {
+      "epoch": 9,
+      "loss": 0.1177280735064252,
+      "validation": {
+        "ADD_PARTICIPANT": {
+          "average_precision": 0.646278910866004,
+          "roc_auc": 0.9881069404418039,
+          "positives": 1602,
+          "actions": 118835
+        },
+        "REMOVE_PARTICIPANT": {
+          "average_precision": 0.9538520456442546,
+          "roc_auc": 0.9906925717649386,
+          "positives": 583,
+          "actions": 7693
+        },
+        "MERGE_ALIASES": {
+          "average_precision": 0.6145397979693378,
+          "roc_auc": 0.9813218542680691,
+          "positives": 676,
+          "actions": 48257
+        }
+      },
+      "macro_ap": 0.7382235848265322,
+      "seconds": 55.86626534094103
+    },
+    {
+      "epoch": 10,
+      "loss": 0.1129014962091089,
+      "validation": {
+        "ADD_PARTICIPANT": {
+          "average_precision": 0.6426150753229477,
+          "roc_auc": 0.9876632941347434,
+          "positives": 1602,
+          "actions": 118835
+        },
+        "REMOVE_PARTICIPANT": {
+          "average_precision": 0.9516841949887513,
+          "roc_auc": 0.9899717258566076,
+          "positives": 583,
+          "actions": 7693
+        },
+        "MERGE_ALIASES": {
+          "average_precision": 0.6098668266885388,
+          "roc_auc": 0.9813515917857422,
+          "positives": 676,
+          "actions": 48257
+        }
+      },
+      "macro_ap": 0.7347220323334126,
+      "seconds": 61.93788882589433
+    },
+    {
+      "epoch": 11,
+      "loss": 0.10896816214961648,
+      "validation": {
+        "ADD_PARTICIPANT": {
+          "average_precision": 0.6437803177814797,
+          "roc_auc": 0.9876371369998008,
+          "positives": 1602,
+          "actions": 118835
+        },
+        "REMOVE_PARTICIPANT": {
+          "average_precision": 0.9517435964594325,
+          "roc_auc": 0.9900000723740872,
+          "positives": 583,
+          "actions": 7693
+        },
+        "MERGE_ALIASES": {
+          "average_precision": 0.6189115248438305,
+          "roc_auc": 0.981592336655686,
+          "positives": 676,
+          "actions": 48257
+        }
+      },
+      "macro_ap": 0.7381451463615809,
+      "seconds": 67.87493388797157
+    },
+    {
+      "epoch": 12,
+      "loss": 0.10521875400045896,
+      "validation": {
+        "ADD_PARTICIPANT": {
+          "average_precision": 0.6421771014504796,
+          "roc_auc": 0.9876723086954473,
+          "positives": 1602,
+          "actions": 118835
+        },
+        "REMOVE_PARTICIPANT": {
+          "average_precision": 0.9516158666791068,
+          "roc_auc": 0.9900928318291585,
+          "positives": 583,
+          "actions": 7693
+        },
+        "MERGE_ALIASES": {
+          "average_precision": 0.6197940849500434,
+          "roc_auc": 0.9817388168590492,
+          "positives": 676,
+          "actions": 48257
+        }
+      },
+      "macro_ap": 0.7378623510265433,
+      "seconds": 73.84418446593918
+    }
+  ],
+  "training_class_counts": [
+    [
+      877932.0,
+      10571.0
+    ],
+    [
+      53835.0,
+      4224.0
+    ],
+    [
+      324496.0,
+      3722.0
+    ]
+  ],
+  "positive_weights": [
+    30.0,
+    12.745028495788574,
+    30.0
+  ],
+  "selected_epoch": 6,
+  "checkpoint_hash": "58193b7cb904932652742b2666fb0ee7b10cccf42b34ffc2f93723e1218c52cb",
+  "seconds": 73.8441861589672
+}

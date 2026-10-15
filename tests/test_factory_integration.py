@@ -66,3 +66,13 @@ def test_flat_projection_changes_observation_and_not_execution():
     assert set(graph.objects.values())=={roles['child'],roles['resource']}
     assert roles['parent'] in {v['kind'] for v in execution['entities'].values()}
     assert len(graph.events)<len(execution['events'])
+
+
+def test_attribute_projection_is_observation_only():
+    modules=registry();execution=modules.create_world('workflow',{'jobs':4,'seed':4}).run()
+    roles=execution['schema']['entity_roles']
+    artifact=modules.build_task('temporal_graph_repair',execution,
+                                {'target_types':[roles['child']],'visible_attributes':['Amount'],'observation_seed':1})
+    assert set(artifact['learner']['schema']['attributes'])=={'Amount'}
+    assert all(set(e.attributes)<={'Amount'} for e in learner_graph(artifact['learner']).events)
+    assert any('Priority' in e['attributes'] for e in execution['events'])
