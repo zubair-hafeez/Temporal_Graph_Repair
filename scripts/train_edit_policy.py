@@ -30,7 +30,7 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument('--train',required=True);p.add_argument('--validation',required=True)
     p.add_argument('--output',required=True)
-    p.add_argument('--representation',choices=['temporal','static','mlp'],default='temporal')
+    p.add_argument('--representation',choices=['temporal','static','mlp','sage'],default='temporal')
     p.add_argument('--epochs',type=int,default=12);p.add_argument('--seed',type=int,default=0)
     p.add_argument('--device',default='cuda:1');p.add_argument('--max-actions',type=int,default=2048)
     args=p.parse_args();destination=ROOT/'reports'/f'{args.output}.json'
@@ -53,6 +53,7 @@ def main():
     report={'status':'development_neural_training','config':vars(args),'source_snapshot':snapshot,
             'train_source_snapshot':train_manifest['source_snapshot'],'validation_source_snapshot':validation_manifest['source_snapshot'],
             'parameters':sum(p.numel() for p in model.parameters()),'torch':torch.__version__,
+            'optimized_parameters':sum(p.numel() for p in model.parameters() if p.requires_grad),
             'device':torch.cuda.get_device_name(probe.device) if probe.is_cuda else 'cpu','epochs':[]}
     counts=np.zeros((3,2))
     for row in train:

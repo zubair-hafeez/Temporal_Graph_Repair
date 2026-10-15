@@ -36,3 +36,15 @@ def test_teacher_program_restores_reference_modulo_identity_equivalence():
     assert teacher_edits(state,reference,types)==[]
     for _ in program:state.undo()
     assert state.graph==graph
+
+
+def test_commuting_batch_matches_sequential_edits_and_undo():
+    graph=Graph('fixture',{'a':'Case','b':'Case','c':'Case','d':'Case','r':'Resource'},
+                [Event('e0',0,'Open',('a','r')),Event('e1',1,'Work',('b','c','r')),Event('e2',2,'Finish',('r',))])
+    edits=[Edit('MERGE_ALIASES','a','b'),Edit('REMOVE_PARTICIPANT','e1','c'),Edit('ADD_PARTICIPANT','e2','d')]
+    sequential=RepairState(graph);batched=RepairState(graph)
+    for edit in edits:sequential.apply(edit)
+    batched.apply_batch(edits)
+    assert batched.graph==sequential.graph and batched.clusters==sequential.clusters
+    batched.undo()
+    assert batched.graph==graph and batched.clusters=={o:o for o in graph.objects}

@@ -8,7 +8,7 @@ from .action_features import ACTION_DIM,NODE_DIM
 class GraphEditPolicy(nn.Module):
     def __init__(self,width=64,layers=2,representation='temporal'):
         super().__init__()
-        if representation not in {'temporal','static','mlp'}:raise ValueError(representation)
+        if representation not in {'temporal','static','mlp','sage'}:raise ValueError(representation)
         self.representation=representation
         self.node_input=nn.Linear(NODE_DIM,width)
         self.type_embedding=nn.Embedding(17,width,padding_idx=0)
@@ -19,13 +19,28 @@ class GraphEditPolicy(nn.Module):
         self.updates=nn.ModuleList([nn.Sequential(nn.Linear(2*width,width),nn.ReLU(),nn.Dropout(.1)) for _ in range(layers)])
         self.norms=nn.ModuleList([nn.LayerNorm(width) for _ in range(layers)])
         self.heads=nn.ModuleList([nn.Sequential(nn.Linear(3*width+ACTION_DIM,128),nn.ReLU(),nn.Dropout(.1),nn.Linear(128,1)) for _ in range(3)])
+        if representation=='sage':
+            self.sage_neighbors=nn.ModuleList([nn.ModuleList([nn.Linear(width,width,bias=False) for _ in range(4)]) for _ in range(layers)])
+            self.sage_roots=nn.ModuleList([nn.Linear(width,width) for _ in range(layers)])
+            for module in [self.messages,self.gates,self.updates,self.relation_embedding]:
+                for parameter in module.parameters():parameter.requires_grad_(False)
 
     def forward(self,data):
         h=torch.relu(self.node_input(data['node_features'])+self.type_embedding(data['node_types'])+self.activity_embedding(data['activity_types']))
         edges=data['edges'];features=data['edge_features']
         if self.representation=='static':
             keep=features[:,0]<2;edges=edges[:,keep];features=features[keep]
-        if self.representation!='mlp' and edges.shape[1]:
+        if self.representation=='sage' and edges.shape[1]:
+            for neighbors,root,norm in zip(self.sage_neighbors,self.sage_roots,self.norms):
+                update=root(h)
+                for relation,transform in enumerate(neighbors):
+                    mask=features[:,0]==relation;source,target=edges[:,mask]
+                    if not len(source):continue
+                    aggregate=torch.zeros_like(h).index_add_(0,target,h[source])
+                    count=torch.zeros((len(h),1),device=h.device).index_add_(0,target,torch.ones((len(target),1),device=h.device)).clamp_min(1)
+                    update=update+transform(aggregate/count)
+                h=norm(torch.relu(update))
+        elif self.representation!='mlp' and edges.shape[1]:
             source,target=edges
             relation=torch.cat([self.relation_embedding(features[:,0].long()),features[:,1:]],dim=1)
             for message,gate,update,norm in zip(self.messages,self.gates,self.updates,self.norms):

@@ -1,0 +1,127 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\title{Learning to Restore Operational Histories from Executable Temporal Worlds}
+\author{Author details pending final review}
+\date{Development manuscript: 15 October 2026}
+\begin{document}
+\maketitle
+\begin{center}\fbox{\parbox{.9\linewidth}{\textbf{Internal development draft.} The experiments below are development evidence. Independent confirmation, final ablations, bibliography reconciliation and reproducibility review are incomplete. This version is not ready for submission.}}\end{center}
+
+\begin{abstract}
+Operational event records often contain enough information to describe what happened, yet unreliable object identifiers prevent users from retrieving a complete history of the affected order, application or asset. Missing participation, incorrect joins and fragmented identities interact: repairing one relation changes the evidence available for other decisions. We study restoration of typed event--object temporal graphs while retaining recorded activities, timestamps and legitimate exceptions. We develop executable workflow worlds that separate process behavior from recording faults and export learner inputs independently from repair references. The same execution supports repair and future-participation tasks. An auditable learned edit system retrieves candidate additions, removals and identity merges, updates the observed graph, and abstains when its development-selected criterion is unmet. Our development study compares temporal message passing, an MLP, boosted matching, sequential repair and source-data supervision. The simpler boosted edit learner is the strongest of the tested generated-data models; the temporal neural architecture does not establish an advantage. Generated-data training improves history recovery on an explored real-source log, but remains below a source-trained control and weakens under independently implemented recording faults. The final study will test the surviving claims on reserved process sources and report where executable training data helps, where it fails, and what information is required for dependable operational traceability.
+\end{abstract}
+
+\section{Application and research question}
+An analyst investigating an application cancellation needs the records belonging to that application. A resource interaction assigned to the wrong application creates a false association. A missing application reference hides part of the history. If two systems use different identifiers for the same application, each identifier retrieves only a fragment. A high average link accuracy can therefore coexist with incomplete operational histories.
+
+We ask whether supervision from executable workflow worlds can support useful restoration when clean operational histories are scarce. The application is offline reconstruction within an available observation window. It is not forecasting future links, changing the process to match a normative model, or inventing unrecorded activities. A canceled or retried operation is a fact to retain. The repair target is its association with the relevant entities.
+
+The intended contribution is an application task, an executable training and evaluation artifact, and an empirically justified repair system. Generic event-log repair, simulation, synthetic supervision, iterative correction and graph neural networks all have substantial prior work. Our contribution must be assessed through the joint participation/identity task, reusable execution--observation--task separation, and independent application evidence. No neural-architecture novelty is claimed on the current results.
+
+\section{Related work and comparison boundaries}
+HERE combines Transformer prediction and domain rules for missing case identifiers~\cite{here}. Its native output is a single case identifier. SANAGRAPH reconstructs missing attributes within supplied traces through heterogeneous graph learning~\cite{sanagraph}. An unchanged trace-based model cannot be supplied with correct trace membership in a benchmark where that membership is itself damaged. DDTR uses diffusion for activity-trace recovery~\cite{ddtr}; its generative formulation likewise does not make it an unchanged entity-identity repair baseline.
+
+Swevels et al. already use contextual Event Knowledge Graphs and physical inference rules to recover missing identifiers~\cite{ekginference}. Thus graph-based operational history reconstruction is established prior work. Object-centric imperfection patterns further document identity and association problems~\cite{ocip}. The present study addresses learned restoration under coupled faults and limited clean supervision; it cannot claim to originate these problems.
+
+HoloClean unifies heterogeneous signals for probabilistic data repair~\cite{holoclean}. It precludes attributing novelty to the combination of constraints and learned matching alone. We retain strong observation-only matching and refreshed sequential controls. Our heterogeneous GraphSAGE edit control is an explicit adaptation of a standard operator to event/entity inputs and typed edits; its scores are not an exact SANAGRAPH reproduction.
+
+Object-centric simulation also predates this work~\cite{ocsim}. A recent independent collection provides six synthetic relational systems with reference object-centric event logs~\cite{relationalocel}. We use this collection to challenge simulator dependence rather than claiming to introduce multitype operational simulation. The complete general dataset factory remains outside the scope of this paper.
+
+FLAWD already provides a language and tool for controlled event-log fault injection~\cite{flawd}. Algebraic repair expressions also have existing language support~\cite{repairlanguage}. Consequently, executable fault scenarios and an auditable edit vocabulary are supporting components, not sufficient novelty by themselves.
+
+\section{Task and information boundary}
+Let an event be $e=(u,t,a,P,x)$, where $u$ is an opaque event handle, $t$ is occurrence time, $a$ is activity, $P$ is a set of typed object handles and $x$ contains legitimate observed attributes. The entity catalog supplies handle types. The observed temporal graph contains event--object incidence and temporal adjacency derived from observed histories. Equal-time records are simultaneous; source row order is not treated as a causal order.
+
+The repair system receives the damaged graph and a declared target-type schema. It does not receive the true identity map, original case containers, missing-edge locations, fault seed or clean derived adjacency. Allowed changes are \texttt{ADD\_PARTICIPANT}, \texttt{REMOVE\_PARTICIPANT} and \texttt{MERGE\_ALIASES}. Activities, timestamps and descriptive attributes are protected. A merge identifies same-type handles and deduplicates their participation. The system may stop with unresolved uncertainty.
+
+The entity catalog is assumed available. This is a material assumption: reconstructing entirely unknown entities is a different open-catalog problem. Likewise, offline context may include later records in the declared window. It must not be compared directly with a strictly online predictor receiving only past events.
+
+Reference graphs are evaluator-only. Simulated executions provide exact symbolic references. Public-source logs provide controlled-corruption references, not an independent certification that every native record is correct. Attributes copied from source trace metadata into event records form an explicitly denormalized observation condition; they must be reported separately from native-event and structural-only conditions.
+
+\section{Executable training worlds}
+\subsection{Execution, observation and task construction}
+A world executes a finite workflow with parents, work items, resources and optional batches. Mechanisms include branching and joining, resource queues, handoffs, batching, retries, cancellation and return. The expanded configuration adds finite multistage work routes, repeated work, start/completion records and waiting-time variation. Resource-capacity constraints are enforced when queueing is enabled. These are symbolic mechanisms, not a calibrated organizational digital twin.
+
+Observation projection selects visible entity types and descriptive fields before faults are applied. Clean and damaged variants share execution ancestry. The repair task exports a public learner graph and separate reference participation, identity and fault records. A second task exports available prefix observations and future-participation targets from the same execution, excluding future-born entities from the candidate catalog. This reuse is a bounded interface check, not evidence for a universal dataset platform.
+
+Each execution records its normalized recipe, random states, source fingerprint and pending work. A JSON checkpoint resumes to the same execution as an uninterrupted run. Export manifests hash learner, reference and metadata files; observations derived from one execution remain in the same split. Changing source code invalidates incompatible checkpoints.
+
+\subsection{Variation and held-out conditions}
+Training and generated validation use disjoint mechanism compositions. Vocabulary profiles vary independently of flat versus multi-object projection. The profiles share one simulator engine and therefore do not constitute independent domains. History length, resource count, waiting scales, attribute collisions and error severity vary independently within the declared schedule.
+
+The original recording faults combine contiguous or independent missing participation, same-type incorrect joins and time-cut identity fragmentation. An independently implemented development stressor uses activity-routed namespaces, a recording outage over a time interval and persistent stale join mappings. Its rates are declared experimental conditions, not estimates of real incident frequencies. Both fault families preserve recorded activity and time.
+
+\section{Auditable learned graph edits}
+Candidate retrieval combines temporal proximity, activity context, observed co-participation and descriptive agreement. Candidate recall is reported separately from classifier performance. Handles are anonymous identifiers, never numerical predictors. Cold objects with no evidence remain difficult or unidentifiable; reference knowledge does not make them recoverable from the learner input.
+
+For participation candidates, the learner uses degree, normalized context overlap, temporal bracketing, activity transitions and attribute agreement. The queried event is excluded from supporting history when assessing its current association. Identity candidates use symmetric history and context features, including overlap, activity profiles, observed attributes and temporal boundary compatibility. Overlapping lifetimes are permitted in candidate retrieval.
+
+Training references label candidate edits and create valid partial-repair states. They are never inputs to the candidate constructor or inference scorer. The boosted control uses separate conditional action classifiers. It is a discriminative edit learner trained with generated supervision, not a deep generative density model. Neural controls use the same candidate action features and graph-derived node inputs, with temporal message passing, relation-specific mean GraphSAGE or no graph messages.
+
+At inference, the system scores candidate edits, selects a commuting batch, applies it and recomputes evidence. A batch cannot merge an entity while also modifying its participation. The implementation records scores and reversible changes. Development thresholds and the pass limit determine abstention; the thresholds do not provide an out-of-domain precision guarantee. One-pass and fixed-sequence variants isolate the benefit of revisiting the graph. Repeated source-trained matching is also a required comparator.
+
+\section{Evaluation design}
+\subsection{Sources and splits}
+BPI 2012 and the public simulated logistics log are development sources. BPI 2012 cases are assigned to fit, tune and reserved check partitions before anonymization. Shared resource types are allowed, but held-out events do not enter another partition's observation context. BPI 2017 and BPI 2019 final targets remain unopened for model selection at this draft stage.
+
+The expanded executable collection contains 512 training worlds and 96 validation worlds. The independent relational/OCEL collection uses BatteryVault and ClaimStream as development domains, selected by alphabetical order before record inspection; its remaining four scenarios are reserved for confirmation. These are external simulations, not additional real-world datasets.
+
+Final experiments must distinguish synthetic-only learning, source-only learning, mixed learning and any target-data adaptation. For limited source annotation, a verified history supplies its event memberships and alias handles. All available annotated positive pairs may train the matcher even if candidate retrieval missed them; inference retrieval remains label-free. Development label budgets must not be described as total annotation costs when additional labeled validation data select thresholds.
+
+\subsection{Application outcomes}
+For an observed handle, the predicted cluster returns an event-history set. We compare this set with the reference entity history. Scores are first averaged across handles belonging to the same reference entity and then across entities, preventing heavily fragmented entities from dominating the metric. We report history precision, recall, F1 and the fraction of exactly restored histories. Identity-pair precision and recall expose false merges and unresolved fragments.
+
+Operational queries measure whether a handle retrieves evidence of a cancellation-related event and whether the first and last recorded timestamps are correctly recovered. Matching a boundary timestamp does not imply that every simultaneous boundary event is restored. These queries concern recorded evidence, not a causal judgment that an entire business transaction was canceled. Correct-event preservation, cold-history coverage, genuine exception associations, candidate coverage and runtime accompany aggregate repair scores.
+
+\section{Development evidence and decisions}
+Table~\ref{tab:dev} contains exploratory results, not frozen final comparisons. Generated-data thresholds are selected on generated validation. The table is intended to make development decisions auditable while confirmation remains outstanding.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrr}
+\toprule
+Expanded generated validation (24 worlds) & Damaged F1 & Clean F1\\
+\midrule
+No repair & .7429 & 1.0000\\
+Boosted edits, one pass & .7996 & .99984\\
+MLP edits, iterative & .8243 & .99975\\
+Temporal message passing, iterative & .8182 & .99984\\
+Heterogeneous GraphSAGE, iterative & .8384 & .99854\\
+Boosted edits, fixed sequence & .8500 & .99964\\
+Boosted edits, coordinated & .8529 & .99964\\
+\bottomrule
+\end{tabular}
+\caption{Development history F1. Differences between coordinated and fixed-sequence decoding are small; the neural encoder does not improve this collection. Independent confirmation and multiple seeds remain required.}
+\label{tab:dev}
+\end{table}
+
+On the explored BPI 2012 tune graph with denormalized amount observations, synthetic-only boosted edits raise history F1 from .7445 to .8380. This run uses no real-source training labels and selects its thresholds on generated validation. It preserves 31,101 of 31,362 initially correct event assignments and merges 18 identity pairs, 17 correctly. Its low identity recall (.0479) limits any claim of complete identity restoration.
+
+The source-trained participant matcher reaches .8922 history F1. Adding a learned source identity matcher reaches .9107, and refreshing both matchers reaches .9164 in a second cycle. These stronger controls must remain visible. The synthetic policy is useful in this development setting but does not surpass source supervision. Under the independent pipeline faults on generated validation, history F1 rises only from .7465 to .7811, indicating a substantial recording-mechanism transfer limitation.
+
+The development conclusion is to retain boosted matching as the leading learner, investigate source-label efficiency and recording-mechanism transfer, and avoid presenting the temporal neural architecture as the contribution. Final tables will replace this section only after the declared confirmation protocol is completed.
+
+At a fixed budget of 16 verified source training histories, generated augmentation raises history F1 from .8359 to .8912. At 64 histories, the corresponding values are .8321 and .8905. Both comparisons use additional source-development labels for threshold selection and therefore do not establish total annotation costs of 16 or 64 histories.
+
+The first independent-simulator tests expose a failure of the current model. On native event attributes, BatteryVault history F1 decreases from .7682 to .7371, and ClaimStream from .7617 to .7519. Excessive removal of valid associations is a principal observed error. The model's good generated-validation preservation therefore does not establish safe transfer. Structural-only diagnostics and a control trained through additional corruption of already imperfect source observations are being evaluated before revising the method.
+
+\section{Limitations and outstanding validation}
+The workflows share one symbolic implementation; vocabulary changes are not independent domains. Generated behavior is not calibrated to any particular company. Public-source corruption tests do not establish effectiveness on naturally occurring, independently labeled errors. The task assumes an entity catalog, protected event fields and offline context. Some object identities are observationally indistinguishable, so exact recovery is impossible without additional evidence.
+
+Current results use development-selected operating points and mostly one training seed. A few positive labels can make identity calibration abstain entirely. Generated-data gains may depend on training volume, history-length coverage and observation attributes; matched-budget ablations are needed to separate those factors. The final package must include source hashes, command manifests, split definitions, data permissions, uncertainty across repeated runs, failure cases, code and model artifacts, and a critical claim-by-claim review. No acceptance outcome is guaranteed by the current draft.
+
+\begin{thebibliography}{99}
+\bibitem{here} F. Zetzsche et al. \emph{Case ID Revealed HERE: Hybrid Elusive Case Repair Method for Transformer-Driven Business Process Event Log Enhancement}. Business \& Information Systems Engineering 67, 311--337, 2025. \url{https://doi.org/10.1007/s12599-025-00935-5}.
+\bibitem{sanagraph} \emph{Graph-Based Event Log Repair}. CAiSE 2026, 423--440. \url{https://doi.org/10.1007/978-3-032-28117-3_24}. Accessible author preprint: \url{https://arxiv.org/abs/2508.05145}.
+\bibitem{ddtr} \emph{DDTR: Diffusion Denoising Trace Recovery}. ICPM 2025. \url{https://arxiv.org/abs/2510.22553}.
+\bibitem{holoclean} T. Rekatsinas, X. Chu, I. F. Ilyas and C. R\'e. \emph{HoloClean: Holistic Data Repairs with Probabilistic Inference}. 2017. \url{https://arxiv.org/abs/1702.00820}.
+\bibitem{ocsim} B. Knopp, M. Pourbafrani and W. M. P. van der Aalst. \emph{Discovering Object-Centric Process Simulation Models}. ICPM 2023. \url{https://ieeexplore.ieee.org/document/10271944/}.
+\bibitem{relationalocel} A. Berti. \emph{Synthetic relational databases and reference OCELs}. Zenodo, version 1, 2026. \url{https://doi.org/10.5281/zenodo.22079246}.
+\bibitem{ekginference} A. Swevels, R. Dijkman and D. Fahland. \emph{Inferring Missing Entity Identifiers from Context Using Event Knowledge Graphs}. BPM 2023, 180--197. \url{https://doi.org/10.1007/978-3-031-41620-0_11}.
+\bibitem{ocip} S. Sadeghianasl et al. \emph{Object-centric event-data imperfection patterns}. Information Systems 141, 102766, 2026. \url{https://doi.org/10.1016/j.is.2026.102766}.
+\bibitem{flawd} M. Comuzzi, J. Ko and F. M. Maggi. \emph{A Language to Model and Simulate Data Quality Issues in Process Mining}. ACM J. Data Inf. Qual. 17(2), Article 6, 2025. \url{https://doi.org/10.1145/3743144}.
+\bibitem{repairlanguage} S. Sadeghianasl, R. Dijkman, R. Andrews and A. Barros. \emph{A Language for Efficient Event Log Repair}. EDOC 2026. Conference record: \url{https://conf.researchr.org/details/edoc-2026/edoc-2026-papers/8/A-Language-for-Efficient-Event-Log-Repair}.
+\end{thebibliography}
+\end{document}

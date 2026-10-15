@@ -20,6 +20,8 @@ from tgrepair.decoding import decode,NeuralScorer,FeatureScorer
 from tgrepair.factory_plugin import learner_graph
 from tgrepair.metrics import traceability,identity_pair_scores
 from tgrepair.provenance import snapshot_sources
+from tgrepair.data import sha256
+from tgrepair.pipeline_faults import pipeline_faults
 
 
 def thresholds_from_validation(name,target_precision):
@@ -60,15 +62,18 @@ def main():
     p.add_argument('--generated',default='workflow_validation_v3');p.add_argument('--episodes',type=int,default=24)
     p.add_argument('--precision',type=float,default=.95);p.add_argument('--mode',choices=['joint','sequential','one_pass'],default='joint')
     p.add_argument('--rounds',type=int,default=8);p.add_argument('--output',required=True);p.add_argument('--device',default='cpu')
+    p.add_argument('--fault-family',choices=['original','pipeline'],default='original')
     args=p.parse_args();destination=ROOT/'reports'/f'{args.output}.json'
     if destination.exists():raise FileExistsError(destination)
     torch.set_num_threads(4);start=time.monotonic();snapshot=snapshot_sources(ROOT)
     thresholds,calibration=thresholds_from_validation(args.model,args.precision)
-    scorer=NeuralScorer(ROOT/'checkpoints'/f'{args.model}.pt',args.device) if args.kind=='neural' else FeatureScorer(ROOT/'checkpoints'/f'{args.model}.joblib')
+    model_path=ROOT/'checkpoints'/(args.model+('.pt' if args.kind=='neural' else '.joblib'))
+    model_hash=sha256(model_path)
+    scorer=NeuralScorer(model_path,args.device) if args.kind=='neural' else FeatureScorer(model_path)
     folder=ROOT/'data/generated'/args.generated;manifest=json.loads((folder/'dataset_manifest.json').read_text())
     episodes=random.Random(919).sample(manifest['episodes'],min(args.episodes,len(manifest['episodes'])))
     report={'status':'development_application_evaluation','config':vars(args),'source_snapshot':snapshot,
-            'thresholds':thresholds,'action_validation_calibration':calibration,'results':[]}
+            'thresholds':thresholds,'model_hash':model_hash,'action_validation_calibration':calibration,'results':[]}
     audit_folder=ROOT/'data/decoding'/args.output;audit_folder.mkdir(parents=True)
     with threadpool_limits(limits=4):
         for j,episode in enumerate(episodes):
@@ -76,6 +81,9 @@ def main():
                 location=folder/episode['id']/variant
                 learner=json.loads((location/'learner.json').read_text());reference=json.loads((location/'reference.json').read_text())
                 graph=learner_graph(learner);types=set(learner['schema']['target_types'])
+                if variant=='mixed' and args.fault_family=='pipeline':
+                    clean=json.loads((folder/episode['id']/'clean'/'learner.json').read_text())
+                    graph,reference=pipeline_faults(learner_graph(clean),int(episode['id'].split('-')[-1])+210001,types)
                 baseline=traceability(graph,reference,types)
                 state,audit=decode(graph,types,scorer,thresholds,rounds=args.rounds,mode=args.mode)
                 result={'episode':episode['id'],'group':episode['group'],'variant':variant,'projection':episode['projection'],
@@ -94,6 +102,7 @@ def main():
                           'mean_after_f1':float(np.mean([r['after']['history']['f1'] for r in rows])),
                           'mean_seconds':float(np.mean([r['seconds'] for r in rows])),
                           'edits':sum(r['edit_count'] for r in rows)}
+    if sha256(model_path)!=model_hash:raise RuntimeError('Model changed during evaluation')
     report['summary']=summary;destination.write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(summary),flush=True)
 
 

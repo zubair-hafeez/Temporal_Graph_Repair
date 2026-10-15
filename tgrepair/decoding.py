@@ -6,13 +6,22 @@ import time
 import numpy as np
 
 from .action_features import propose_actions,OPERATIONS
-from .edits import RepairState
+from .edits import RepairState,Edit
 
 
-def decode(graph,target_types,scorer,thresholds,rounds=8,mode='joint',participant_budget=16,pair_budget=32):
+def decode(graph,target_types,scorer,thresholds,rounds=8,mode='joint',participant_budget=16,pair_budget=32,progress=None,
+           resume_history=None,checkpoint=None):
     if mode not in {'joint','sequential','one_pass'}:raise ValueError(mode)
     state=RepairState(graph);history=[];applied=set();applied_keys=set();start=time.monotonic()
-    for iteration in range(rounds):
+    if resume_history:
+        for record in resume_history:
+            edits=[Edit(**item['edit']) for item in record['edits']]
+            state.apply_batch(edits)
+            applied.update(edits)
+            applied_keys.update((edit.operation,edit.source,edit.target) for edit in edits)
+            history.append(record)
+    already_stopped=bool(history and not history[-1]['edits'] and (mode!='sequential' or history[-1]['stage']=='identity'))
+    for iteration in range(len(history),rounds) if not already_stopped else []:
         observation=propose_actions(state,target_types,seed=0,event_budget=None,
                                     participant_budget=participant_budget,pair_budget=pair_budget)
         scores=scorer(observation)
@@ -35,11 +44,17 @@ def decode(graph,target_types,scorer,thresholds,rounds=8,mode='joint',participan
                 if inverse in applied_keys:continue
                 used_events.add(event_key);touched.add(edit.target)
             selected.append((edit,float(scores[i])))
+        state.apply_batch([edit for edit,score in selected])
         for edit,score in selected:
-            state.apply(edit);applied.add(edit);applied_keys.add((edit.operation,edit.source,edit.target))
+            applied.add(edit);applied_keys.add((edit.operation,edit.source,edit.target))
         history.append({'round':iteration+1,'stage':stage,'candidates':len(scores),
                         'counts':dict(Counter(edit.operation for edit,_ in selected)),
                         'edits':[{'edit':asdict(edit),'score':score} for edit,score in selected]})
+        if progress is not None:
+            progress({'round':iteration+1,'candidates':len(scores),'accepted':len(selected),
+                      'counts':history[-1]['counts'],'seconds':time.monotonic()-start})
+        if checkpoint is not None:
+            checkpoint(history)
         if mode=='one_pass':break
         if not selected and (mode!='sequential' or stage=='identity'):break
     return state,{'rounds':history,'seconds':time.monotonic()-start,'stopped':not history[-1]['edits'] if history else True,

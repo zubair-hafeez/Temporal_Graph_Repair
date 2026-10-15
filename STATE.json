@@ -1,11 +1,11 @@
 {
   "project": "generative_temporal_graph_repair",
   "status": "active",
-  "stage": "iterative_edit_learning_and_generator_transfer",
+  "stage": "independent_application_transfer_and_strong_controls",
   "learned_model_trained": true,
   "main_target_tests_opened": false,
   "current_unit": {
-    "scope": "Develop nonleaking adapters, explicit observation faults, and strong matching baselines on logistics and BPI 2012 only.",
+    "scope": "Validate synthetic-only transfer, limited verified-history augmentation, independent operational simulations and no-clean-label controls before freezing final tests.",
     "owned_paths": [
       "docs/",
       "tgrepair/",
@@ -26,7 +26,7 @@
     ]
   },
   "authorization": "User authorized autonomous paper development and experiments through final review; no external submission.",
-  "next_action": "Complete expanded-generator transfer and graph-edit comparisons, then validate the surviving method against strong source-trained controls before freezing target tests.",
+  "next_action": "Complete independent BatteryVault/ClaimStream and 64/256-history development evaluations; compare with extra corruption of imperfect observations; retain final targets sealed.",
   "trained_models": [
     "source participant matcher",
     "source and synthetic identity matchers",
@@ -49,7 +49,54 @@
     "reports/decode_temporal_v1.json",
     "reports/decode_feature_v1.json",
     "reports/workflow_train_v4.json",
-    "reports/matching_optimization_v1.json"
+    "reports/matching_optimization_v1.json",
+    "reports/source_decode_feature_v2.json",
+    "reports/source_decode_source16_v3.json",
+    "reports/source_decode_mixed16_v3.json",
+    "reports/decode_sage_v2.json",
+    "reports/decode_feature_pipeline_v2.json",
+    "reports/matching_optimization_v2.json",
+    "reports/external_development_v1.json",
+    "39 prior research/factory tests and 3 new native OCEL adapter tests passed",
+    "33 research tests + 10 bounded factory tests passed after external/pseudo-label additions"
   ],
-  "factory_increment": "TR0 bounded source acceptance; see ../RF_Dataset_Factory/reports/temporal_repair_acceptance.json"
+  "factory_increment": "TR0 and TR1 bounded source acceptance; general factory/RF/wheel scope unchanged",
+  "manuscript": "paper/main.tex is an incomplete development draft; no final paper or acceptance claim",
+  "reserved_external_scenarios": [
+    "ForgeFlow",
+    "PermitFlow",
+    "ProcureChange",
+    "TrialVersion"
+  ],
+  "development_jobs": {
+    "source256": {
+      "session": 94489,
+      "report": "source_decode_source256_v3"
+    },
+    "mixed256": {
+      "session": 55317,
+      "report": "source_decode_mixed256_v3"
+    },
+    "battery_structural": {
+      "session": 78097,
+      "report": "external_battery_structural_v1"
+    },
+    "claim_structural": {
+      "session": 61181,
+      "report": "external_claim_structural_v1"
+    },
+    "selfsupervised": {
+      "session": 27225,
+      "report": "source_decode_selfsupervised_v1"
+    },
+    "selfsupervised_mixed": {
+      "session": 51076,
+      "report": "source_decode_selfsupervised_mixed_v1"
+    },
+    "attribute_diagnostic": {
+      "session": 43463,
+      "report": "external_attribute_diagnostic_v1"
+    }
+  },
+  "independent_native_transfer": "Failed initial transfer: Battery F1 .7682 to .7371; Claim .7617 to .7519; retain negative results and diagnose attribute mismatch before final freeze."
 }

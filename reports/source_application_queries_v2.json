@@ -1,0 +1,195 @@
+{
+  "status": "development_operational_query_diagnostic",
+  "reference_hash": "989c2799e9a07cc80637839d5ebd8ac2f28ef9cd8cd2059afacf3fd80a72413e",
+  "correction": "v1 called timestamp equality record correctness. v2 uses first/last timestamp correctness, the predicate actually measured. v1 is preserved.",
+  "results": {
+    "damaged": {
+      "entities": 1929,
+      "empty_history_fraction": 0.002073613271124935,
+      "first_timestamp_correct_fraction": 0.4082426127527216,
+      "last_timestamp_correct_fraction": 0.39683773976153447,
+      "queries": {
+        "cancellation_evidence": {
+          "true_positive": 448.5,
+          "false_positive": 51.5,
+          "false_negative": 115.5,
+          "true_negative": 1313.5,
+          "precision": 0.897,
+          "recall": 0.7952127659574468,
+          "f1": 0.8430451127819549
+        },
+        "exception_evidence": {
+          "true_positive": 0.0,
+          "false_positive": 0.0,
+          "false_negative": 0.0,
+          "true_negative": 1929.0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      }
+    },
+    "participant_repair": {
+      "entities": 1929,
+      "empty_history_fraction": 0.017366511145671334,
+      "first_timestamp_correct_fraction": 0.8268532918610679,
+      "last_timestamp_correct_fraction": 0.7750129600829445,
+      "queries": {
+        "cancellation_evidence": {
+          "true_positive": 495.5,
+          "false_positive": 10.0,
+          "false_negative": 68.5,
+          "true_negative": 1355.0,
+          "precision": 0.9802176063303659,
+          "recall": 0.8785460992907801,
+          "f1": 0.9266012155212716
+        },
+        "exception_evidence": {
+          "true_positive": 0.0,
+          "false_positive": 0.0,
+          "false_negative": 0.0,
+          "true_negative": 1929.0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      }
+    },
+    "iterative_source": {
+      "entities": 1929,
+      "empty_history_fraction": 0.02021772939346812,
+      "first_timestamp_correct_fraction": 0.8732503888024883,
+      "last_timestamp_correct_fraction": 0.8374805598755832,
+      "queries": {
+        "cancellation_evidence": {
+          "true_positive": 516.0,
+          "false_positive": 11.0,
+          "false_negative": 48.0,
+          "true_negative": 1354.0,
+          "precision": 0.9791271347248577,
+          "recall": 0.9148936170212766,
+          "f1": 0.9459211732355637
+        },
+        "exception_evidence": {
+          "true_positive": 0.0,
+          "false_positive": 0.0,
+          "false_negative": 0.0,
+          "true_negative": 1929.0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      }
+    },
+    "source_decode_feature_v2": {
+      "entities": 1929,
+      "empty_history_fraction": 0.021513737687921204,
+      "first_timestamp_correct_fraction": 0.7249870399170555,
+      "last_timestamp_correct_fraction": 0.7179885951270089,
+      "queries": {
+        "cancellation_evidence": {
+          "true_positive": 444.5,
+          "false_positive": 5.5,
+          "false_negative": 119.5,
+          "true_negative": 1359.5,
+          "precision": 0.9877777777777778,
+          "recall": 0.7881205673758865,
+          "f1": 0.8767258382642998
+        },
+        "exception_evidence": {
+          "true_positive": 0.0,
+          "false_positive": 0.0,
+          "false_negative": 0.0,
+          "true_negative": 1929.0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      }
+    },
+    "source_decode_source16_v3": {
+      "entities": 1929,
+      "empty_history_fraction": 0.03602903058579575,
+      "first_timestamp_correct_fraction": 0.7257646448937273,
+      "last_timestamp_correct_fraction": 0.7770865733540695,
+      "queries": {
+        "cancellation_evidence": {
+          "true_positive": 470.0,
+          "false_positive": 3.5,
+          "false_negative": 94.0,
+          "true_negative": 1361.5,
+          "precision": 0.9926082365364308,
+          "recall": 0.8333333333333334,
+          "f1": 0.9060240963855422
+        },
+        "exception_evidence": {
+          "true_positive": 0.0,
+          "false_positive": 0.0,
+          "false_negative": 0.0,
+          "true_negative": 1929.0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      }
+    },
+    "source_decode_mixed16_v3": {
+      "entities": 1929,
+      "empty_history_fraction": 0.01607050285121825,
+      "first_timestamp_correct_fraction": 0.8538102643856921,
+      "last_timestamp_correct_fraction": 0.8343701399688958,
+      "queries": {
+        "cancellation_evidence": {
+          "true_positive": 479.0,
+          "false_positive": 5.5,
+          "false_negative": 85.0,
+          "true_negative": 1359.5,
+          "precision": 0.9886480908152735,
+          "recall": 0.849290780141844,
+          "f1": 0.9136862184072484
+        },
+        "exception_evidence": {
+          "true_positive": 0.0,
+          "false_positive": 0.0,
+          "false_negative": 0.0,
+          "true_negative": 1929.0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      }
+    }
+  },
+  "inputs": {
+    "damaged": {
+      "graph": "data/sequential_development_v1/observed.json.gz",
+      "graph_hash": "2114cb121d02c570226a04cf461a53458dc13612f9fec74684b8c71db5dfe680",
+      "clusters_hash": null
+    },
+    "participant_repair": {
+      "graph": "data/sequential_development_v1/repaired.json.gz",
+      "graph_hash": "cffc4eddc80427e81c15e70ef697f8b40c8f11db131e1706be1b47cb2a44139b",
+      "clusters_hash": null
+    },
+    "iterative_source": {
+      "graph": "data/iterative_source_v1/round2.json.gz",
+      "graph_hash": "bd5cd5dd7a0251d976a7846a2af3f24a3a3767076b703614dbcd662d9beb644a",
+      "clusters_hash": "534c0073434a16ae69de139222f919c050149def771d61b2a40458999217ebf6"
+    },
+    "source_decode_feature_v2": {
+      "graph": "data/decoding/source_decode_feature_v2/repaired.json.gz",
+      "graph_hash": "9850676d9429570c5fa1d70a280cdd565fbe446f72a23c303d750c069c31ed9e",
+      "clusters_hash": "5b7b065beeffdbbd115791ebb95f550b906b9af81ac651eb1f3076cb227ddcad"
+    },
+    "source_decode_source16_v3": {
+      "graph": "data/decoding/source_decode_source16_v3/repaired.json.gz",
+      "graph_hash": "9c1057aace582bc0aac1412baeceb495883aa77f8774a14eaba9335250df814c",
+      "clusters_hash": "e80b6b49f05439ab928d9aa5efd8e0b7d738d4ee4b4246b63129e0ca56554a9a"
+    },
+    "source_decode_mixed16_v3": {
+      "graph": "data/decoding/source_decode_mixed16_v3/repaired.json.gz",
+      "graph_hash": "e62df37e025add8bf4357314a11cab54704df2f2b60ff7be9cdc7c2f57501652",
+      "clusters_hash": "e80b6b49f05439ab928d9aa5efd8e0b7d738d4ee4b4246b63129e0ca56554a9a"
+    }
+  }
+}

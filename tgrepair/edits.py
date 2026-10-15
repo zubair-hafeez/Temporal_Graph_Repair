@@ -72,6 +72,45 @@ class RepairState:
         self.clusters.update(record['prior_clusters'])
         self.graph.events=[replace(e,participants=record['prior_events'][e.uid]) if e.uid in record['prior_events'] else e for e in self.graph.events]
 
+    def apply_batch(self, edits):
+        """Apply commuting edits in one graph traversal; undo restores the batch."""
+        edits=list(edits)
+        if not edits:return self
+        events={e.uid:e for e in self.graph.events};changes=defaultdict(list)
+        merged=set();remap={};participants=set()
+        for edit in edits:
+            if edit.operation=='MERGE_ALIASES':
+                a,b=edit.source,edit.target
+                if a not in self.clusters or b not in self.clusters or self.clusters[a]!=a or self.clusters[b]!=b:
+                    raise ValueError('Batch merge requires active handles')
+                if a==b or self.graph.objects[a]!=self.graph.objects[b] or {a,b}&merged:
+                    raise ValueError('Batch merges must be disjoint and same-type')
+                keep,remove=sorted((a,b));merged.update([a,b]);remap[remove]=keep
+            elif edit.operation in {'ADD_PARTICIPANT','REMOVE_PARTICIPANT'}:
+                if edit.source not in events or edit.target not in self.clusters or self.clusters[edit.target]!=edit.target:
+                    raise ValueError('Invalid batch participation endpoint')
+                present=edit.target in events[edit.source].participants
+                if present==(edit.operation=='ADD_PARTICIPANT'):
+                    raise ValueError('Redundant batch participation edit')
+                if edit in changes[edit.source]:raise ValueError('Duplicate batch edit')
+                changes[edit.source].append(edit);participants.add(edit.target)
+            else:raise ValueError('Unsupported batch edit')
+        if merged&participants:raise ValueError('Batch merge and participation actions do not commute')
+        prior_events={};prior_clusters={};result=[]
+        for event in self.graph.events:
+            values={remap.get(o,o) for o in event.participants}
+            for edit in changes.get(event.uid,[]):
+                if edit.operation=='ADD_PARTICIPANT':values.add(edit.target)
+                else:values.remove(edit.target)
+            if values!=set(event.participants):
+                prior_events[event.uid]=event.participants;event=replace(event,participants=tuple(sorted(values)))
+            result.append(event)
+        for o,c in self.clusters.items():
+            if c in remap:prior_clusters[o]=c;self.clusters[o]=remap[c]
+        self.graph.events=result
+        self.log.append({'edits':edits,'prior_events':prior_events,'prior_clusters':prior_clusters})
+        return self
+
 
 def teacher_edits(state,reference,target_types):
     """Evaluator/training-only canonical program; never called at inference."""

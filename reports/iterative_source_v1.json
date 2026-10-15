@@ -1,0 +1,222 @@
+{
+  "status": "development_iterative_source_control",
+  "config": {
+    "identity_model": "identity_learned_source_v1",
+    "threshold": 0.9,
+    "rounds": 3,
+    "output": "iterative_source_v1"
+  },
+  "source_snapshot": {
+    "file": "data/source_snapshots/ab566f37ce72163d99422c2ebf7d8c3b27611a99db2c25f5e77c5e531ed0556f.tar.gz",
+    "sha256": "8e4a87c94df56822e5d0818e224d987d6832350bfa840f94478c311aa3ebda01",
+    "source_set_hash": "ab566f37ce72163d99422c2ebf7d8c3b27611a99db2c25f5e77c5e531ed0556f",
+    "files": {
+      "research/tgrepair/__init__.py": "ad83ce5fca3e2bfa1cc153276de4379a3c8302b7f2a0a85ae40503c7bb3d62ca",
+      "research/tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7",
+      "research/tgrepair/corruption.py": "d04efa6b65698f47f47aa2769431ed99ea8626cad7f3bb5fb63c68fbe633361b",
+      "research/tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2",
+      "research/tgrepair/decoding.py": "77a58fe85b8253e8f420f377f8488a624f43433a3e3328e8d0551c225843ca97",
+      "research/tgrepair/edits.py": "90a22c41bfa49f1d9981e1ad643ec128833fec2e314dd480a1e6aa2c4cf1a9c6",
+      "research/tgrepair/entity_features.py": "6122ad15c21c44645521d0a920f0bd855cd112cf4caca49d548ebc8adba84dff",
+      "research/tgrepair/factory_plugin.py": "6ac1ade56b775242db66579b75c36ff77af5f2c06ba8bd3c4364d91f48e0055d",
+      "research/tgrepair/identity_matching.py": "b707a4ca0efa7ade90fc5a15ec6401470a02ddc333c8c8eedacf3921e12ef4ac",
+      "research/tgrepair/matching.py": "ea93d6b877c63db856e55f70ab0647b67d7207e405920e51f8f1009f5ed7ac07",
+      "research/tgrepair/metrics.py": "903faf015149e0095544ee40368bf20412d1cef856e84eebfb36e3e1c8f2e97b",
+      "research/tgrepair/neural_policy.py": "da9444696f623bc1683812a2b1b9aeee4723bf56d2b0de7bfa6a57e59796cfdf",
+      "research/tgrepair/provenance.py": "1f427099dacbba70402931d18dc6d63fc07c04a4ac6cde732033b43e926d964b",
+      "research/scripts/evaluate_edit_policy.py": "7adf44c638622f75584bc0edef9bf729bff9cf63296ec5d72343d7a831741cd8",
+      "research/scripts/evaluate_matching.py": "8509e6a411c71e68e1c9dd86dc70475d6118af142b1cc3ad6d0450d8003cdc7e",
+      "research/scripts/fit_matching_baseline.py": "e8477430d3a8c7e72b09019e869bd855273224931317a266888256fa1bb0167a",
+      "research/scripts/generate_workflow_pilot.py": "de7b959ad5c7e200757b8e9c62ff51cf543e407e99e2ca6fc33f5ba49e3bb2ac",
+      "research/scripts/prepare_development.py": "2c10d01c60055b6b79e91e99726d3e738afa16e559d694f940b28638c9a0636f",
+      "research/scripts/prepare_edit_learning.py": "de125b695a1d38c51e58e628c306334173c3c6e5c1cdbd6cd2b4d8196a88380d",
+      "research/scripts/repair_development_graph.py": "3e629cafb0ed8c2d18381badcbbe7cb041441fc15b7d7987585a799a23505a75",
+      "research/scripts/run_baseline_probe.py": "90e7d881dccecde9dda9f7183014484e0325b09b30453ccd87ea48f8685f73de",
+      "research/scripts/run_deployment_probe.py": "f7787dd29ace7b69de65f04b9705c8cf1f82d11824c2d7b085310b8c133be46e",
+      "research/scripts/run_identity_probe.py": "26fbd0aafca577458f5b0536d482441cb78f6569d355a557f98d365fc94809f6",
+      "research/scripts/run_iterative_source_control.py": "bd230ae748277a641e997a6aacea5c5b46bab2c98a0d823cedf8b89ee0d21872",
+      "research/scripts/train_edit_feature_policy.py": "10a21a81ba0f326a872820b9dc396f820ff050dc294febd70bb6627b94fbe5a1",
+      "research/scripts/train_edit_policy.py": "87cd537140e89b4cbe584dceab8450c3668158f5187d83af7f2c01461c1aa319",
+      "research/scripts/train_identity_baselines.py": "3d5e72c957a5146e18d06ac99e85872ea8b4c357588a4684cb78ce761aa906ca",
+      "research/tests/test_application_metrics.py": "0bc7fb819cb6565f2273a085e4ecb35da06448c2f02c7ca8429389a73ec4af6d",
+      "research/tests/test_decoding.py": "d3e6cf2b7d5dc96dd9cf839dce5d49bab3a40f072fc7d59871c31636aac48d24",
+      "research/tests/test_edits.py": "82cc8f201811ed347807f0e29164b25def5dcadb0731fb70ea555270d66e5679",
+      "research/tests/test_factory_integration.py": "382dcffd23f814f8dc7e51967e9e485a05cb814460e2a7eb1d0e430e2d5c65cc",
+      "research/tests/test_identity_features.py": "7636f879f19cf06847d322e05b6a82f6394193bcabc418cd3dda011275ffb7c5",
+      "research/tests/test_matching_cache.py": "38475e38f8dea27cf986d01337e511b88a90f863a7a23e84f45f6bec108f146d",
+      "research/tests/test_neural_inputs.py": "f42870e91884f7d53033075061d5db7eaff27237388eed6352e632fbe94e5a5d",
+      "research/tests/test_observation_boundary.py": "6e944c76f152519702eb992341dc144f62c7287fcc7361737a127a11b5e01aa0",
+      "factory/src/temporal_factory/__init__.py": "d401743947ab8a821e6edbf60dc4435e2fea6d8f8f08ed5c47df799e6640bf3a",
+      "factory/src/temporal_factory/core.py": "171d6de2068f9ca7d7d13b47868d9044959b8ebf94ce5caf523defbf6535b058",
+      "factory/src/temporal_factory/workflow.py": "cca70d3ab13332439d4a9a4f019ef8de885be3ef550daa7b2e331badea40faf9",
+      "factory/src/rfdf/__init__.py": "0e0e411ad05093b259f07ae8cc4769b7a7dcbae4917316a0bc3a35c16789fca7",
+      "factory/src/rfdf/storage.py": "a7b6e034740730ed3da33997a023e362d9afa768924e73ceae8af5b356bede25",
+      "factory/pyproject.toml": "2d7f7864648740cee45f838e4bf02527cf539cd0d3221c17405eb935ccc05ef5"
+    }
+  },
+  "initial_after_participation": {
+    "precision": 0.9385495854409339,
+    "recall": 0.8858386838961995,
+    "f1": 0.8922016716754546,
+    "exact_history_fraction": 0.49922239502332816,
+    "entities": 1929,
+    "per_type": {
+      "Application": {
+        "precision": 0.9385495854409339,
+        "recall": 0.8858386838961995,
+        "f1": 0.8922016716754546,
+        "exact_history_fraction": 0.49922239502332816,
+        "entities": 1929
+      }
+    }
+  },
+  "iterations": [
+    {
+      "round": 1,
+      "stage": "identity",
+      "changes": 129,
+      "history": {
+        "precision": 0.9338020072565417,
+        "recall": 0.915390013256252,
+        "f1": 0.9107133745145045,
+        "exact_history_fraction": 0.5298081907724209,
+        "entities": 1929,
+        "per_type": {
+          "Application": {
+            "precision": 0.9338020072565417,
+            "recall": 0.915390013256252,
+            "f1": 0.9107133745145045,
+            "exact_history_fraction": 0.5298081907724209,
+            "entities": 1929
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 134,
+        "true_pairs": 355,
+        "correct_pairs": 115,
+        "precision": 0.8582089552238806,
+        "recall": 0.323943661971831,
+        "f1": 0.4703476482617587
+      }
+    },
+    {
+      "round": 2,
+      "stage": "participation",
+      "changes": 291,
+      "history": {
+        "precision": 0.9388243832468864,
+        "recall": 0.9168961708158239,
+        "f1": 0.9147189795704197,
+        "exact_history_fraction": 0.5873509590461379,
+        "entities": 1929,
+        "per_type": {
+          "Application": {
+            "precision": 0.9388243832468864,
+            "recall": 0.9168961708158239,
+            "f1": 0.9147189795704197,
+            "exact_history_fraction": 0.5873509590461379,
+            "entities": 1929
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 134,
+        "true_pairs": 355,
+        "correct_pairs": 115,
+        "precision": 0.8582089552238806,
+        "recall": 0.323943661971831,
+        "f1": 0.4703476482617587
+      }
+    },
+    {
+      "round": 2,
+      "stage": "identity",
+      "changes": 14,
+      "history": {
+        "precision": 0.937881447407212,
+        "recall": 0.9202381442044536,
+        "f1": 0.9164378785155772,
+        "exact_history_fraction": 0.5914981855883877,
+        "entities": 1929,
+        "per_type": {
+          "Application": {
+            "precision": 0.937881447407212,
+            "recall": 0.9202381442044536,
+            "f1": 0.9164378785155772,
+            "exact_history_fraction": 0.5914981855883877,
+            "entities": 1929
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 148,
+        "true_pairs": 355,
+        "correct_pairs": 127,
+        "precision": 0.8581081081081081,
+        "recall": 0.35774647887323946,
+        "f1": 0.5049701789264414
+      }
+    },
+    {
+      "round": 3,
+      "stage": "participation",
+      "changes": 46,
+      "history": {
+        "precision": 0.937241708395833,
+        "recall": 0.9199384975913295,
+        "f1": 0.9161344460584616,
+        "exact_history_fraction": 0.5951270088128564,
+        "entities": 1929,
+        "per_type": {
+          "Application": {
+            "precision": 0.937241708395833,
+            "recall": 0.9199384975913295,
+            "f1": 0.9161344460584616,
+            "exact_history_fraction": 0.5951270088128564,
+            "entities": 1929
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 148,
+        "true_pairs": 355,
+        "correct_pairs": 127,
+        "precision": 0.8581081081081081,
+        "recall": 0.35774647887323946,
+        "f1": 0.5049701789264414
+      }
+    },
+    {
+      "round": 3,
+      "stage": "identity",
+      "changes": 1,
+      "history": {
+        "precision": 0.937241708395833,
+        "recall": 0.9201976992502202,
+        "f1": 0.916315887219685,
+        "exact_history_fraction": 0.5956454121306376,
+        "entities": 1929,
+        "per_type": {
+          "Application": {
+            "precision": 0.937241708395833,
+            "recall": 0.9201976992502202,
+            "f1": 0.916315887219685,
+            "exact_history_fraction": 0.5956454121306376,
+            "entities": 1929
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 149,
+        "true_pairs": 355,
+        "correct_pairs": 128,
+        "precision": 0.8590604026845637,
+        "recall": 0.36056338028169016,
+        "f1": 0.5079365079365079
+      }
+    }
+  ],
+  "schema_assumption": "Exactly one Application per event, shared with the prior source-trained sequential control.",
+  "seconds": 329.95620418398175
+}

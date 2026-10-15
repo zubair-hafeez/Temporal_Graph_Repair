@@ -43,6 +43,9 @@ class ObservedIndex:
         self.attribute_values = defaultdict(lambda: defaultdict(Counter))
         self.attribute_patterns = defaultdict(Counter)
         self._attribute_feature_cache = {}
+        self._near_cache = {}
+        self._cooc_cache = {}
+        self._attribute_prior_cache = {}
         self.by_type = defaultdict(list)
         for o, typ in graph.objects.items():
             self.by_type[typ].append(o)
@@ -110,16 +113,19 @@ class ObservedIndex:
         self.priors = {typ: sorted(os, key=lambda o: (-self.degree[o], o))
                        for typ, os in self.by_type.items()}
 
-    @staticmethod
-    def nearest(rows, times, time, limit):
+    def nearest(self, rows, times, time, limit):
         if not rows:
             return []
+        key = (id(rows), time, limit)
+        if key in self._near_cache:
+            return self._near_cache[key]
         i = bisect_left(times, time)
         left, right = i - 1, i
         seen = set()
         result = []
         inspected = 0
-        while len(result) < limit and inspected < max(512, limit * 32) and (left >= 0 or right < len(rows)):
+        inspection_limit = max(512, limit * 32)
+        while len(result) < limit and inspected < inspection_limit and (left >= 0 or right < len(rows)):
             if right >= len(rows) or (left >= 0 and time - times[left] <= times[right] - time):
                 o = rows[left][1]
                 left -= 1
@@ -130,6 +136,9 @@ class ObservedIndex:
             if o not in seen:
                 result.append(o)
                 seen.add(o)
+        if len(self._near_cache) >= 4096:
+            self._near_cache.clear()
+        self._near_cache[key] = result
         return result
 
     def candidates(self, event_uid, object_type, budget=128, allow_current=False):
@@ -142,10 +151,13 @@ class ObservedIndex:
         cooc = Counter()
         partner_near = []
         partners = [p for p in e.participants if not allow_current or self.graph.objects[p] != object_type]
+        cooc_key = (tuple(partners), object_type, tuple(sorted(forbidden)))
+        cooc_stream = self._cooc_cache.get(cooc_key)
         for p in partners:
-            for o, times in self.pairs.get(p, {}).items():
-                if self.graph.objects[o] == object_type and o not in forbidden:
-                    cooc[o] += len(times) / math.sqrt(max(1, self.degree[p] * self.degree[o]))
+            if cooc_stream is None:
+                for o, times in self.pairs.get(p, {}).items():
+                    if self.graph.objects[o] == object_type and o not in forbidden:
+                        cooc[o] += len(times) / math.sqrt(max(1, self.degree[p] * self.degree[o]))
             key = p, object_type
             partner_near.append(self.nearest(self.partner_occurrences.get(key, []),
                                             self.partner_times.get(key, []), e.time, budget))
@@ -155,11 +167,19 @@ class ObservedIndex:
                                 self.activity_times.get((object_type, e.kind), []), e.time, budget)]
         streams.extend(partner_near)
         for key, value in e.attributes.items():
-            streams.insert(0, sorted(self.attribute_objects.get((object_type, key, value), set()),
-                                     key=lambda o: (-self.degree[o], o)))
+            attribute_key = (object_type, key, value)
+            if attribute_key not in self._attribute_prior_cache:
+                self._attribute_prior_cache[attribute_key] = sorted(self.attribute_objects.get(attribute_key, set()),
+                                                                    key=lambda o: (-self.degree[o], o))
+            streams.insert(0, self._attribute_prior_cache[attribute_key])
         if allow_current:
             streams.insert(0, current)
-        streams.append(sorted(cooc, key=lambda o: (-cooc[o], o)))
+        if cooc_stream is None:
+            cooc_stream = sorted(cooc, key=lambda o: (-cooc[o], o))
+            if len(self._cooc_cache) >= 4096:
+                self._cooc_cache.clear()
+            self._cooc_cache[cooc_key] = cooc_stream
+        streams.append(cooc_stream)
         streams.append(self.priors.get(object_type, []))
         selected = set()
         # Round robin prevents one very high-degree participant from taking the pool.
