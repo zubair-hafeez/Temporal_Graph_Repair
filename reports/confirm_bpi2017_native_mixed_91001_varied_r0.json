@@ -1,5 +1,5 @@
 {
-  "status": "running_confirmation_evaluation",
+  "status": "completed_confirmation_evaluation",
   "config": {
     "task": "data/confirmation_v1/bpi2017/native/mixed_91001",
     "model": "edit_feature_attributes_v3",
@@ -10,7 +10,7 @@
     "pair_budget": 64,
     "precision": 0.95,
     "calibration": "edit_feature_attributes_v3",
-    "resume": false,
+    "resume": true,
     "attribute_view": "all",
     "stability_threshold": 0.5,
     "protocol": "docs/CONFIRMATION_PROTOCOL_V1.json",
@@ -118,9 +118,9 @@
     "reference_sha256": "3b6ccaa396c3442c3d4a6658445de39236f155e31f924634e34e2f8d58393098"
   },
   "source_snapshot": {
-    "file": "data/source_snapshots/3e9b287bac69b277c0172bd2ee1e9b0e7a5e27fe5fc31d94e9f955b4f71d2b0e.tar.gz",
-    "sha256": "9ce4915288574265bf54f8d6057f07aaab3f55d4724579bdb796186d3d0fac98",
-    "source_set_hash": "3e9b287bac69b277c0172bd2ee1e9b0e7a5e27fe5fc31d94e9f955b4f71d2b0e",
+    "file": "data/source_snapshots/38bffa095cfccbc51dc0d5f9b34230651aec6775c38fde670d356480087f265d.tar.gz",
+    "sha256": "b8143c8a77479345a7ca91fff549a1a508b556755c0fa90f314ce02bc8054fd3",
+    "source_set_hash": "38bffa095cfccbc51dc0d5f9b34230651aec6775c38fde670d356480087f265d",
     "files": {
       "research/tgrepair/__init__.py": "ad83ce5fca3e2bfa1cc153276de4379a3c8302b7f2a0a85ae40503c7bb3d62ca",
       "research/tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7",
@@ -144,9 +144,12 @@
       "research/tgrepair/pipeline_faults.py": "6091ecfa95f9a5c83c6edc3c4c70d114ad949ed1d8a260bb787c71f5e0e5e690",
       "research/tgrepair/provenance.py": "1f427099dacbba70402931d18dc6d63fc07c04a4ac6cde732033b43e926d964b",
       "research/tgrepair/view_decoding.py": "061bb8f361cbe7181ea3d9885149070064b4fb874d3094ce96dc46e0174a7696",
+      "research/scripts/audit_application_cases.py": "764e9f45a7c75ef9bbcc23844c1453142597061aeb22d2fe4f31779d4c7d4834",
       "research/scripts/audit_attribute_scenarios.py": "194aa074a9df4340b328b901fb4a6bc5cecf5034248c4b8d4bb9931aa8e3c1ff",
       "research/scripts/audit_external_queries.py": "cbda4902616b128c049b98e0766aa3d86baa07984bb9c2a2ebd0fec286337a32",
       "research/scripts/audit_source_queries.py": "e41228ec6aec41ff52e13bcf8ea61aa43748152d0b0000f493469b45da62bf14",
+      "research/scripts/audit_task_candidates.py": "d85ebb0bf8907b429e1d2b4d880e5262e40efd805e2dcfeae68a4712edb28cd3",
+      "research/scripts/collect_confirmation_evidence.py": "07fb2d7541df29ef3b41c64a0169acaa7618b5229f0161e7ec4be6399b524775",
       "research/scripts/diagnose_external_attributes.py": "dba7e4b2b017de9cb021a05e1464b9b54f4f3d53c7e652995061a988434c5d08",
       "research/scripts/diagnose_observed_scale.py": "08a7f0f0b23ab87055002fb389ade4c971909bced1d29878e67a513d2e644761",
       "research/scripts/evaluate_edit_policy.py": "8b51b67cae4da2b939b4b28d3ff4258ac8317db2efd9d16febc17904fde590a2",
@@ -156,7 +159,9 @@
       "research/scripts/fit_matching_baseline.py": "e8477430d3a8c7e72b09019e869bd855273224931317a266888256fa1bb0167a",
       "research/scripts/generate_attribute_scenarios.py": "7d6916e6616d1c9386f09ddf3b1357a828ae2f02e572d6edf9cc84acfd4dd737",
       "research/scripts/generate_workflow_pilot.py": "de7b959ad5c7e200757b8e9c62ff51cf543e407e99e2ca6fc33f5ba49e3bb2ac",
+      "research/scripts/plot_application_case.py": "b80a307b648bcd762108f23681fd691aad4e7325d5fff449e12132130b6f6d24",
       "research/scripts/plot_development_evidence.py": "88cb6db6234dc2850a3e2148d669792126c7f06ffe8fc5aa1fd781e417b3ac64",
+      "research/scripts/plot_method_overview.py": "57007892352ff00ad947a8ea226ea5dd92c7a1e0ab0d691119ae161cd5de9064",
       "research/scripts/prepare_confirmation_tasks.py": "194bb722f0556cf96a66ccef1a0da765a6ef54401899133c2570c74dc38d68ef",
       "research/scripts/prepare_development.py": "2c10d01c60055b6b79e91e99726d3e738afa16e559d694f940b28638c9a0636f",
       "research/scripts/prepare_edit_learning.py": "35e277ac1eae3d18cd96849f719997547b99ea58535455c417d8d09fd614e53b",
@@ -299,10 +304,78 @@
   "attribute_view": {
     "mode": "all"
   },
-  "resumed_rounds": 0,
+  "resumed_rounds": 2,
   "limits": [
     "Controlled recording faults on public-source references, not independently labelled natural errors.",
     "Calibration provenance is recorded separately; target evaluation labels never enter decoding.",
     "Queries concern the available window; lifetime histories may be censored."
-  ]
+  ],
+  "after": {
+    "history": {
+      "precision": 0.9523581966748197,
+      "recall": 0.7334272130916168,
+      "f1": 0.807628228701327,
+      "exact_history_fraction": 0.19281585466556564,
+      "entities": 2422,
+      "per_type": {
+        "Application": {
+          "precision": 0.975287974296626,
+          "recall": 0.710516643985572,
+          "f1": 0.8030740157586267,
+          "exact_history_fraction": 0.001953125,
+          "entities": 1024
+        },
+        "Offer": {
+          "precision": 0.9355627086313774,
+          "recall": 0.7502086313781571,
+          "f1": 0.8109640756636438,
+          "exact_history_fraction": 0.33261802575107297,
+          "entities": 1398
+        }
+      }
+    },
+    "identity": {
+      "predicted_pairs": 8,
+      "true_pairs": 453,
+      "correct_pairs": 8,
+      "precision": 1.0,
+      "recall": 0.017660044150110375,
+      "f1": 0.03470715835140998
+    },
+    "events": {
+      "originally_correct_events": 30681,
+      "preserved_correct_events": 30386,
+      "damaged_events": 8141,
+      "repaired_events": 177
+    },
+    "protected_event_fields_preserved": true
+  },
+  "queries_after": {
+    "entities": 2422,
+    "empty_history_fraction": 0.005573905862923204,
+    "first_timestamp_correct_fraction": 0.7182080924855492,
+    "last_timestamp_correct_fraction": 0.6812551610239471,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 997.0,
+        "false_positive": 36.0,
+        "false_negative": 238.0,
+        "true_negative": 1151.0,
+        "precision": 0.9651500484027106,
+        "recall": 0.8072874493927126,
+        "f1": 0.8791887125220459
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 2422.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "seconds": 1527.5651714069536,
+  "edit_count": 3868
 }

@@ -1,0 +1,239 @@
+{
+  "evidence_report": "reports/confirmation_real_evidence_v1.json",
+  "evidence_sha256": "5549787a046d051fa37f31820f019765cb51e8fa3eb5e57c80fd37f5062e337a",
+  "script_sha256": "bd69234774b19eeb7f05106d74d93361db78bd6e32b18b29b9d6518a9d9d730a",
+  "domains": [
+    "bpi2017",
+    "bpi2019",
+    "bpi2012_check"
+  ],
+  "primary_only": true,
+  "plotted_metrics": [
+    {
+      "domain": "bpi2017",
+      "suite": "primary",
+      "arm": "varied",
+      "field": "before_f1",
+      "values": [
+        0.7877786841469488,
+        0.7864770996868758,
+        0.787208226990144
+      ],
+      "defined_trials": 3,
+      "mean": 0.7871546702746562,
+      "min": 0.7864770996868758,
+      "max": 0.7877786841469488
+    },
+    {
+      "domain": "bpi2017",
+      "suite": "primary",
+      "arm": "plain",
+      "field": "after_f1",
+      "values": [
+        0.7963036501108005,
+        0.7901206236896774,
+        0.7877943158033869
+      ],
+      "defined_trials": 3,
+      "mean": 0.7914061965346216,
+      "min": 0.7877943158033869,
+      "max": 0.7963036501108005
+    },
+    {
+      "domain": "bpi2017",
+      "suite": "primary",
+      "arm": "varied",
+      "field": "after_f1",
+      "values": [
+        0.807628228701327,
+        0.8061164948860013,
+        0.8011659183021906
+      ],
+      "defined_trials": 3,
+      "mean": 0.804970213963173,
+      "min": 0.8011659183021906,
+      "max": 0.807628228701327
+    },
+    {
+      "domain": "bpi2019",
+      "suite": "primary",
+      "arm": "varied",
+      "field": "before_f1",
+      "values": [
+        0.7592264730464978,
+        0.7640027574834398,
+        0.7560597530544705
+      ],
+      "defined_trials": 3,
+      "mean": 0.759762994528136,
+      "min": 0.7560597530544705,
+      "max": 0.7640027574834398
+    },
+    {
+      "domain": "bpi2019",
+      "suite": "primary",
+      "arm": "plain",
+      "field": "after_f1",
+      "values": [
+        0.8246983861256701,
+        0.8112545650120214,
+        0.7914681326585948
+      ],
+      "defined_trials": 3,
+      "mean": 0.8091403612654288,
+      "min": 0.7914681326585948,
+      "max": 0.8246983861256701
+    },
+    {
+      "domain": "bpi2019",
+      "suite": "primary",
+      "arm": "varied",
+      "field": "after_f1",
+      "values": [
+        0.8412402653484315,
+        0.8263878447758135,
+        0.8113966394274486
+      ],
+      "defined_trials": 3,
+      "mean": 0.8263415831838978,
+      "min": 0.8113966394274486,
+      "max": 0.8412402653484315
+    },
+    {
+      "domain": "bpi2012_check",
+      "suite": "primary",
+      "arm": "varied",
+      "field": "before_f1",
+      "values": [
+        0.7423494121944259,
+        0.7524002821260535,
+        0.7412587840549786
+      ],
+      "defined_trials": 3,
+      "mean": 0.745336159458486,
+      "min": 0.7412587840549786,
+      "max": 0.7524002821260535
+    },
+    {
+      "domain": "bpi2012_check",
+      "suite": "primary",
+      "arm": "plain",
+      "field": "after_f1",
+      "values": [
+        0.7824718766196989,
+        0.7793948255830776,
+        0.7662412656700528
+      ],
+      "defined_trials": 3,
+      "mean": 0.7760359892909431,
+      "min": 0.7662412656700528,
+      "max": 0.7824718766196989
+    },
+    {
+      "domain": "bpi2012_check",
+      "suite": "primary",
+      "arm": "varied",
+      "field": "after_f1",
+      "values": [
+        0.8068899660498828,
+        0.827374039801099,
+        0.812112191142151
+      ],
+      "defined_trials": 3,
+      "mean": 0.8154587323310443,
+      "min": 0.8068899660498828,
+      "max": 0.827374039801099
+    },
+    {
+      "domain": "bpi2017",
+      "suite": "pipeline",
+      "arm": "varied",
+      "field": "gain_f1",
+      "values": [
+        -0.00026182501927718427,
+        -0.0006272799119371175,
+        -0.003386001226963198
+      ],
+      "defined_trials": 3,
+      "mean": -0.0014250353860591665,
+      "min": -0.003386001226963198,
+      "max": -0.00026182501927718427
+    },
+    {
+      "domain": "bpi2017",
+      "suite": "clean",
+      "arm": "varied",
+      "field": "newly_damaged_events",
+      "values": [
+        31,
+        10,
+        34
+      ],
+      "defined_trials": 3,
+      "mean": 25,
+      "min": 10,
+      "max": 34
+    },
+    {
+      "domain": "bpi2019",
+      "suite": "pipeline",
+      "arm": "varied",
+      "field": "gain_f1",
+      "values": [
+        0.021578873627642214,
+        0.004281694149342763,
+        0.006525177159260376
+      ],
+      "defined_trials": 3,
+      "mean": 0.010795248312081784,
+      "min": 0.004281694149342763,
+      "max": 0.021578873627642214
+    },
+    {
+      "domain": "bpi2019",
+      "suite": "clean",
+      "arm": "varied",
+      "field": "newly_damaged_events",
+      "values": [
+        14,
+        0,
+        0
+      ],
+      "defined_trials": 3,
+      "mean": 4.666666666666667,
+      "min": 0,
+      "max": 14
+    },
+    {
+      "domain": "bpi2012_check",
+      "suite": "pipeline",
+      "arm": "varied",
+      "field": "gain_f1",
+      "values": [
+        0.005390409466255686,
+        0.004756245485891486,
+        0.011140439989366424
+      ],
+      "defined_trials": 3,
+      "mean": 0.0070956983138378655,
+      "min": 0.004756245485891486,
+      "max": 0.011140439989366424
+    },
+    {
+      "domain": "bpi2012_check",
+      "suite": "clean",
+      "arm": "varied",
+      "field": "newly_damaged_events",
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "defined_trials": 3,
+      "mean": 0,
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "error_bars": "Observed minimum and maximum across the three declared joint trials, not confidence intervals."
+}

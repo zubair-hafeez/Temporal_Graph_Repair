@@ -1,0 +1,15 @@
+\begin{table}[ht]
+\centering\small
+\sbox{\resulttablebox}{\begin{tabular}{lcccc}
+\toprule
+Source & Damaged events & Repaired events & Correct-event preservation & Identity recall\\
+\midrule
+BPI 2017 & 8141/8078/8221 & 177/160/135 & \shortstack{0.990\\{\scriptsize [0.986, 0.992]}} & \shortstack{0.010\\{\scriptsize [0.005, 0.018]}}\\
+BPI 2019 & 6963/6960/7104 & 1920/1143/1226 & \shortstack{0.991\\{\scriptsize [0.987, 0.996]}} & \shortstack{0.196\\{\scriptsize [0.064, 0.351]}}\\
+BPI 2012 check & 8015/8002/8127 & 827/822/1288 & \shortstack{0.995\\{\scriptsize [0.993, 0.999]}} & \shortstack{0.023\\{\scriptsize [0.000, 0.040]}}\\
+\bottomrule
+\end{tabular}}
+\ifdim\wd\resulttablebox>\linewidth\resizebox{\linewidth}{!}{\usebox{\resulttablebox}}\else\usebox{\resulttablebox}\fi
+\caption{Mixed-fault event and identity recovery for varied-observation training. Counts list the three trials; fractions show means and observed ranges. An event is repaired only when all declared target participation is correct. History F1 also changes when an incomplete history improves without an event becoming fully correct. Identity recall counts recovered true alias pairs.}
+\label{tab:confirmation-recovery}
+\end{table}

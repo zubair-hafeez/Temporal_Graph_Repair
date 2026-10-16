@@ -73,7 +73,10 @@ def main():
         raise ValueError('Unresolved citations: '+repr(cited-bibliography))
     for name, status in [
         ('reports/portability_full_task_replay_v1.json', 'full_relocated_task_replay_passed'),
-        ('reports/portability_raw_source_rebuild_v1.json', 'exact_public_source_split_reproduction')]:
+        ('reports/portability_raw_source_rebuild_v1.json', 'exact_public_source_split_reproduction'),
+        ('reports/claim_audit_v1.json', 'scientific_claim_review_complete'),
+        ('reports/source_snapshot_audit_v1.json', 'all_archive_members_verified_with_historical_checksum_errata'),
+        ('reports/provenance_writer_fix_v1.json', 'post_evaluation_logging_fix_verified')]:
         if read(name)['status'] != status:
             raise ValueError('Reproduction check failed')
     checked['paper/main.tex'] = sha256(manuscript)

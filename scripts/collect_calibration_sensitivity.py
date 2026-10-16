@@ -67,7 +67,7 @@ def main():
               'source_reports': sources, 'script_hash': sha256(__file__), 'trials': rows, 'groups': groups}
     output = ROOT/'reports/calibration_sensitivity_evidence_v1.json'
     output.write_text(json.dumps(result, indent=2)+'\n')
-    content = table(['Source', 'Damaged', 'Source calibration', 'Generated calibration', 'Source: new damage', 'Generated: new damage'], table_rows,
+    content = table(['Source', 'Damaged', r'\shortstack{Source\\calibration}', r'\shortstack{Generated\\calibration}', r'\shortstack{Source: new\\damage}', r'\shortstack{Generated: new\\damage}'], table_rows,
         'Exploratory calibration sensitivity declared after inspecting primary transfer results. The source-trained weights are identical in both conditions; both calibration caches were frozen before confirmation, but this comparison was added later. F1 cells show mean and observed range across three fault seeds. Counts list newly damaged events in each trial. These results supplement rather than replace the originally declared source-calibrated control.',
         'tab:calibration-sensitivity')
     (ROOT/'paper/tables/calibration_sensitivity.tex').write_text(content)

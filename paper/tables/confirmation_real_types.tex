@@ -1,0 +1,17 @@
+\begin{table}[ht]
+\centering\small
+\sbox{\resulttablebox}{\begin{tabular}{lcccc}
+\toprule
+Source & Target type & Entities & Before & After\\
+\midrule
+BPI 2017 & Application & 1024 & \shortstack{0.769\\{\scriptsize [0.768, 0.770]}} & \shortstack{0.803\\{\scriptsize [0.802, 0.803]}}\\
+BPI 2017 & Offer & 1398 & \shortstack{0.800\\{\scriptsize [0.799, 0.802]}} & \shortstack{0.806\\{\scriptsize [0.800, 0.811]}}\\
+BPI 2019 & PO & 1024 & \shortstack{0.727\\{\scriptsize [0.726, 0.730]}} & \shortstack{0.837\\{\scriptsize [0.826, 0.856]}}\\
+BPI 2019 & POItem & 3301 & \shortstack{0.770\\{\scriptsize [0.765, 0.776]}} & \shortstack{0.823\\{\scriptsize [0.807, 0.837]}}\\
+BPI 2012 check & Application & 2034 & \shortstack{0.745\\{\scriptsize [0.741, 0.752]}} & \shortstack{0.815\\{\scriptsize [0.807, 0.827]}}\\
+\bottomrule
+\end{tabular}}
+\ifdim\wd\resulttablebox>\linewidth\resizebox{\linewidth}{!}{\usebox{\resulttablebox}}\else\usebox{\resulttablebox}\fi
+\caption{History F1 by target entity type for varied-observation training, with three-trial means and observed ranges. Each source cohort is fixed across fault trials. These views expose differences obscured by pooling multiple entity types.}
+\label{tab:confirmation-types}
+\end{table}

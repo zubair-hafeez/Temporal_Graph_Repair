@@ -1,8 +1,8 @@
 # Generative temporal graph repair
 
-Active research project: learn transferable restoration of event participation and fragmented identities from generated operational histories. The intended application is traceability in purchasing, loan processing, and logistics.
+Research manuscript and reproduction package for author review: learn transferable restoration of event participation and fragmented identities from generated operational histories. The application is traceability in purchasing, loan processing, and logistics. Start with [the paper](paper/main.pdf) and [the plain-English review guide](REVIEW_NOTES.txt).
 
-The archived [research proposal](docs/proposal_archive/PROPOSAL.md) and [novelty audit](docs/proposal_archive/NOVELTY_AUDIT.md) record the starting point. Results, including failed hypotheses, determine the final claims. Development experiments found both useful transfer and consequential failures. The [confirmation protocol](docs/CONFIRMATION_PROTOCOL_V1.json) is frozen; all primary comparisons are complete, with final controls and a separately declared calibration sensitivity in progress.
+The archived [research proposal](docs/proposal_archive/PROPOSAL.md) and [novelty audit](docs/proposal_archive/NOVELTY_AUDIT.md) record the starting point. All 84 original comparisons on the three available operational cohorts, six generated-model evaluations and nine separately declared calibration-sensitivity runs are complete. The [completion record](docs/CONFIRMATION_COMPLETION_SCOPE_V1.json) accounts for four additional predeclared simulation sources that could not be retrieved; their comparisons were not executed. The [original protocol](docs/CONFIRMATION_PROTOCOL_V1.json) and negative results remain unchanged.
 
 Read [RESUME.md](RESUME.md), [STATE.json](STATE.json), and [docs/TASK_CONTRACT.md](docs/TASK_CONTRACT.md) before continuing. The completed forecasting paper remains a separate project. Its raw public data can be read; its source, labels, results, and release artifacts must remain unchanged.
 
@@ -17,7 +17,7 @@ The analysis command below validates completed report/task/protocol hashes and e
 ```bash
 python scripts/collect_confirmation_evidence.py \
   --domains bpi2017 bpi2019 bpi2012_check \
-  --output confirmation_real_evidence_v1
+  --output confirmation_real_evidence_v1 --require-complete
 ```
 
 The seven evaluation suites are `primary`, `clean`, `pipeline`, `source`, `adaptation`, `structural`, and `controls`. `scripts/run_confirmation_suite.py --plan-only` lists exact jobs without running them. Existing runs require `--resume`; process locks prevent duplicate suite execution. Frozen files must remain unchanged during confirmation. The [operational continuation declaration](docs/CONFIRMATION_OPERATIONAL_CONTINUATION_V1.json) records recovery after interrupted tool processes, preserving partial reports and the original scientific choices.
@@ -85,4 +85,8 @@ This generates 512 training and 96 validation worlds, creates their paired obser
 
 The artifact is prepared for private final review. It does not submit the manuscript, publish data, choose author affiliations, or grant a new software license. Third-party dataset terms continue to apply.
 
+The [source-archive audit](reports/source_snapshot_audit_v1.json) verifies all 60 historical source archives against their per-file inventories. Eight original reports captured a transient archive checksum during a concurrent write; the audit preserves those fields and records the correct complete-archive checksums separately. Model, calibration and dataset pins are unaffected. The archive writer now publishes files atomically, and the local suite passes 52 checks including a concurrent-write regression. The 28 frozen inference/adapter files remain unchanged.
+
 The manuscript PDF is included. Its LaTeX source uses standard article, AMS math, graphics, booktabs and hyperref packages, with Latin Modern extension symbols. From the `paper` directory, `tectonic main.tex` builds it when the TeX bundle is available. The working study uses a local cached Tectonic installation; no TeX binary or complete package installation is assumed to be part of the review bundle. Figures are supplied as vector PDFs, with their generating scripts and source hashes.
+
+`python scripts/build_manuscript.py --compiler tectonic` also records the exact source/PDF correspondence. `python scripts/audit_final_review.py` checks the completed evidence, manuscript dependencies and reproduction records without rerunning model experiments. The evidence audit requires original operational task files only if you choose to regenerate the aggregate analysis; the supplied aggregate and its source-report hashes are included in the review artifact.

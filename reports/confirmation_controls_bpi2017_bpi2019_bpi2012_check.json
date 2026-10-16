@@ -1,0 +1,392 @@
+{
+  "status": "completed_confirmation_block",
+  "config": {
+    "protocol": "docs/CONFIRMATION_PROTOCOL_V1.json",
+    "domains": [
+      "bpi2017",
+      "bpi2019",
+      "bpi2012_check"
+    ],
+    "suite": "controls",
+    "workers": 4,
+    "resume": true,
+    "plan_only": false
+  },
+  "protocol_hash": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "jobs": [
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "no_temporal_scoring",
+      "model": "edit_feature_no_temporal_v3",
+      "output": "confirm_bpi2017_native_mixed_91001_no_temporal_scoring",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "no_context_scoring",
+      "model": "edit_feature_no_context_v3",
+      "output": "confirm_bpi2017_native_mixed_91001_no_context_scoring",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "one_pass",
+      "model": "edit_feature_attributes_v3",
+      "mode": "one_pass",
+      "output": "confirm_bpi2017_native_mixed_91001_one_pass",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "fixed_sequence",
+      "model": "edit_feature_attributes_v3",
+      "mode": "sequential",
+      "output": "confirm_bpi2017_native_mixed_91001_fixed_sequence",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "stable_fields",
+      "model": "edit_feature_v2",
+      "attribute_view": "stable",
+      "calibration": "edit_feature_v2_stable_calibration_v3",
+      "output": "confirm_bpi2017_native_mixed_91001_stable_fields",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "sage",
+      "model": "edit_sage_attributes_v3",
+      "output": "confirm_bpi2017_native_mixed_91001_sage",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "mlp",
+      "model": "edit_mlp_attributes_v3",
+      "output": "confirm_bpi2017_native_mixed_91001_mlp",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "temporal",
+      "model": "edit_temporal_attributes_v3",
+      "output": "confirm_bpi2017_native_mixed_91001_temporal",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "no_temporal_scoring",
+      "model": "edit_feature_no_temporal_v3",
+      "output": "confirm_bpi2019_native_mixed_91001_no_temporal_scoring",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "no_context_scoring",
+      "model": "edit_feature_no_context_v3",
+      "output": "confirm_bpi2019_native_mixed_91001_no_context_scoring",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "one_pass",
+      "model": "edit_feature_attributes_v3",
+      "mode": "one_pass",
+      "output": "confirm_bpi2019_native_mixed_91001_one_pass",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "fixed_sequence",
+      "model": "edit_feature_attributes_v3",
+      "mode": "sequential",
+      "output": "confirm_bpi2019_native_mixed_91001_fixed_sequence",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "stable_fields",
+      "model": "edit_feature_v2",
+      "attribute_view": "stable",
+      "calibration": "edit_feature_v2_stable_calibration_v3",
+      "output": "confirm_bpi2019_native_mixed_91001_stable_fields",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "sage",
+      "model": "edit_sage_attributes_v3",
+      "output": "confirm_bpi2019_native_mixed_91001_sage",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "mlp",
+      "model": "edit_mlp_attributes_v3",
+      "output": "confirm_bpi2019_native_mixed_91001_mlp",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "temporal",
+      "model": "edit_temporal_attributes_v3",
+      "output": "confirm_bpi2019_native_mixed_91001_temporal",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "no_temporal_scoring",
+      "model": "edit_feature_no_temporal_v3",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_no_temporal_scoring",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "no_context_scoring",
+      "model": "edit_feature_no_context_v3",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_no_context_scoring",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "one_pass",
+      "model": "edit_feature_attributes_v3",
+      "mode": "one_pass",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_one_pass",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "fixed_sequence",
+      "model": "edit_feature_attributes_v3",
+      "mode": "sequential",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_fixed_sequence",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "stable_fields",
+      "model": "edit_feature_v2",
+      "attribute_view": "stable",
+      "calibration": "edit_feature_v2_stable_calibration_v3",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_stable_fields",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "sage",
+      "model": "edit_sage_attributes_v3",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_sage",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "mlp",
+      "model": "edit_mlp_attributes_v3",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_mlp",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "temporal",
+      "model": "edit_temporal_attributes_v3",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_temporal",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001"
+    }
+  ],
+  "outcomes": [
+    {
+      "output": "confirm_bpi2017_native_mixed_91001_no_temporal_scoring",
+      "status": "already_completed",
+      "report_hash": "f5eb976615df2791db41a59fd20eaf50b0edd0d2e9f5b4e8aa25ca4588f4e337"
+    },
+    {
+      "output": "confirm_bpi2017_native_mixed_91001_no_context_scoring",
+      "status": "already_completed",
+      "report_hash": "da5922eb8883c2ed6c6b5296254a4a2ab0512a2e7b3ff350694d762e159607a6"
+    },
+    {
+      "output": "confirm_bpi2017_native_mixed_91001_fixed_sequence",
+      "status": "already_completed",
+      "report_hash": "37cbe1f862ab28a6ea0c1e6da2cb9d456f8beddd3c8f0692ae37bed339ad5ce8"
+    },
+    {
+      "output": "confirm_bpi2017_native_mixed_91001_one_pass",
+      "status": "already_completed",
+      "report_hash": "5dd6cc96cdafa66b51f40c139749f468e7b74d821f6f35d2f3d1266612ff5f2a"
+    },
+    {
+      "output": "confirm_bpi2017_native_mixed_91001_stable_fields",
+      "status": "already_completed",
+      "report_hash": "5b90398c99c17274f444222913858653c4bba29c4bf8c98c38ac06196ac8e4fe"
+    },
+    {
+      "output": "confirm_bpi2017_native_mixed_91001_mlp",
+      "status": "already_completed",
+      "report_hash": "98c79e885ae81167b3a9978d96bcedffdb62bd18c98edf7149e2b76fb8c54c20"
+    },
+    {
+      "output": "confirm_bpi2017_native_mixed_91001_sage",
+      "status": "already_completed",
+      "report_hash": "8c07be3230fcc592ccd8ae39217a66fe79c4204c04c30f21fda4dc6d121fc200"
+    },
+    {
+      "output": "confirm_bpi2017_native_mixed_91001_temporal",
+      "status": "already_completed",
+      "report_hash": "a8e5b30ac6fbfc93ae955a1ddc07dfde346395f74ba3380b1f5be45cdb06d8c6"
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91001_no_temporal_scoring",
+      "status": "already_completed",
+      "report_hash": "02a3fb70e52e92390c825001d3df0b1c1340a89cc926ce125bf0417079321c56"
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91001_one_pass",
+      "status": "already_completed",
+      "report_hash": "474f7c759c0bfa7793cabd4672b0ed584616f47100e8b11803258ec1b2782b60"
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91001_no_context_scoring",
+      "status": "already_completed",
+      "report_hash": "4a327b21f28a9d4297a20e71916409d7598fcf9fbfb4c972ff5ed0dfe38d7dcc"
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91001_fixed_sequence",
+      "status": "already_completed",
+      "report_hash": "bbae2ceeb7db03d8d5ef493d84aed750f2635fec04437522645315d7e1027a64"
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91001_stable_fields",
+      "status": "already_completed",
+      "report_hash": "c8c1db9ce37618d56eec9792fd9d44eba53a8c056a0ac4083c1fab11ce152c12"
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91001_sage",
+      "status": "already_completed",
+      "report_hash": "f574a94a7b8e2f1a8fb3d995a25e77f46d49b75edb3f6054c1e6e30adff55af6"
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91001_mlp",
+      "status": "already_completed",
+      "report_hash": "34aa73856269e8038f32fcaa8bfa2e0aad5222b3218dfd07ffb3a5ab8339b7dc"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_no_context_scoring",
+      "status": "already_completed",
+      "report_hash": "ae09ab2804021b6edd4f0d76e728bb3cbdce7d282a74adf2e51e516a3a605874"
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91001_temporal",
+      "status": "already_completed",
+      "report_hash": "56ece89a6eda9d4ef1f4e24a4d8e43b4a696461d6177ebb0acad882c17e3199a"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_no_temporal_scoring",
+      "status": "already_completed",
+      "report_hash": "3efb502165074589a748fac93d65c267147d6f5f53fc72fc73da7b130019ae62"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_one_pass",
+      "status": "already_completed",
+      "report_hash": "ee619691605e02c57847922f88c8e5da85e8aaad1589dac79a08c9ebaeb0e058"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_fixed_sequence",
+      "status": "already_completed",
+      "report_hash": "0834a9e252bff7b0e8b3ca8039afdc84266016efc17968f74d276dfea8149a90"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_stable_fields",
+      "status": "already_completed",
+      "report_hash": "41b2e32e9f7093bf9754059ddb2fc62b9c12f2e1ccba2385082fceb3a0a53d8a"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_sage",
+      "status": "already_completed",
+      "report_hash": "fe2f296891f3c416714f2c2b5315ac84a7bccb091fe8233a3193bf1a10607606"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_mlp",
+      "status": "already_completed",
+      "report_hash": "ef967f69f8db034ca501fe9233143793e31cabec715054a85acc1d9d9c36f7d4"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_temporal",
+      "status": "already_completed",
+      "report_hash": "541f74dfc214d5e1af602b69c00e81e3bad6d03f4470096c47c787c036bb954e"
+    }
+  ]
+}

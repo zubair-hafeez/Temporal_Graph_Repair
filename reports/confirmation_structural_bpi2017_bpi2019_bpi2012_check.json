@@ -1,0 +1,232 @@
+{
+  "status": "completed_confirmation_block",
+  "config": {
+    "protocol": "docs/CONFIRMATION_PROTOCOL_V1.json",
+    "domains": [
+      "bpi2017",
+      "bpi2019",
+      "bpi2012_check"
+    ],
+    "suite": "structural",
+    "workers": 2,
+    "resume": true,
+    "plan_only": false
+  },
+  "protocol_hash": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "jobs": [
+    {
+      "domain": "bpi2017",
+      "view": "structural",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "plain",
+      "model": "edit_feature_v2",
+      "output": "confirm_bpi2017_structural_mixed_91001_plain",
+      "task": "data/confirmation_v1/bpi2017/structural/mixed_91001"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "structural",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "varied",
+      "model": "edit_feature_attributes_v3",
+      "output": "confirm_bpi2017_structural_mixed_91001_varied",
+      "task": "data/confirmation_v1/bpi2017/structural/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "structural",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "plain",
+      "model": "edit_feature_v2",
+      "output": "confirm_bpi2019_structural_mixed_91001_plain",
+      "task": "data/confirmation_v1/bpi2019/structural/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "structural",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "varied",
+      "model": "edit_feature_attributes_v3",
+      "output": "confirm_bpi2019_structural_mixed_91001_varied",
+      "task": "data/confirmation_v1/bpi2019/structural/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "structural",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "plain",
+      "model": "edit_feature_v2",
+      "output": "confirm_bpi2012_check_structural_mixed_91001_plain",
+      "task": "data/confirmation_v1/bpi2012_check/structural/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "structural",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "varied",
+      "model": "edit_feature_attributes_v3",
+      "output": "confirm_bpi2012_check_structural_mixed_91001_varied",
+      "task": "data/confirmation_v1/bpi2012_check/structural/mixed_91001"
+    }
+  ],
+  "outcomes": [
+    {
+      "output": "confirm_bpi2017_structural_mixed_91001_plain",
+      "status": "already_completed",
+      "report_hash": "3871e95c45cf055e44fbabad227ccaee0f255a8d6a2b057811a5319d7f3024f7"
+    },
+    {
+      "output": "confirm_bpi2017_structural_mixed_91001_varied",
+      "status": "completed",
+      "report_hash": "e16b4bbcc5c618a72007b2e32b6cf9b190e99bec28b26cad5cddd2eb020b2c86",
+      "seconds": 367.1953257450368,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2017/structural/mixed_91001",
+          "--model",
+          "edit_feature_attributes_v3",
+          "--kind",
+          "feature",
+          "--calibration",
+          "edit_feature_attributes_v3",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2017_structural_mixed_91001_varied",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all",
+          "--resume"
+        ]
+      ],
+      "f1": 0.8075751625736023
+    },
+    {
+      "output": "confirm_bpi2019_structural_mixed_91001_plain",
+      "status": "completed",
+      "report_hash": "f9ae158ddebdb6095ac1bf7bdd56041e1564d0472f1d947e1d382bf996e2be6f",
+      "seconds": 780.3257540300256,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2019/structural/mixed_91001",
+          "--model",
+          "edit_feature_v2",
+          "--kind",
+          "feature",
+          "--calibration",
+          "edit_feature_v2_attributes_calibration_v3",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2019_structural_mixed_91001_plain",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all",
+          "--resume"
+        ]
+      ],
+      "f1": 0.7687772422016833
+    },
+    {
+      "output": "confirm_bpi2012_check_structural_mixed_91001_plain",
+      "status": "completed",
+      "report_hash": "0c17f48b3b76c78a08fef5c89ef6e5d0d26651de67c39273cbc7eee124aafd49",
+      "seconds": 423.167860204936,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2012_check/structural/mixed_91001",
+          "--model",
+          "edit_feature_v2",
+          "--kind",
+          "feature",
+          "--calibration",
+          "edit_feature_v2_attributes_calibration_v3",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2012_check_structural_mixed_91001_plain",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.7428816628482405
+    },
+    {
+      "output": "confirm_bpi2019_structural_mixed_91001_varied",
+      "status": "completed",
+      "report_hash": "12ad1bf84df6850f8beac05626a59a7813fa9f393f0f6d084082fd3afb9cb8e8",
+      "seconds": 1034.0821896820562,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2019/structural/mixed_91001",
+          "--model",
+          "edit_feature_attributes_v3",
+          "--kind",
+          "feature",
+          "--calibration",
+          "edit_feature_attributes_v3",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2019_structural_mixed_91001_varied",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.8038187574869102
+    },
+    {
+      "output": "confirm_bpi2012_check_structural_mixed_91001_varied",
+      "status": "completed",
+      "report_hash": "037d61c0d49546644a867b41af79ddc92a5bba569434436b70d5bbecd7069045",
+      "seconds": 752.8622819629963,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2012_check/structural/mixed_91001",
+          "--model",
+          "edit_feature_attributes_v3",
+          "--kind",
+          "feature",
+          "--calibration",
+          "edit_feature_attributes_v3",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2012_check_structural_mixed_91001_varied",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.7625227653217582
+    }
+  ]
+}

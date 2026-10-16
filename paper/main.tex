@@ -3,13 +3,17 @@
 \usepackage{amsmath,amssymb,booktabs,graphicx,hyperref}
 \DeclareSymbolFont{largesymbols}{OMX}{lmex}{m}{n}
 \newsavebox{\resulttablebox}
+\setlength{\emergencystretch}{1em}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{5}
+\renewcommand{\topfraction}{.9}
+\renewcommand{\textfraction}{.07}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
 \title{Restoring Operational Histories with Synthetic Temporal Graph Supervision}
 \author{Author details pending final review}
-\date{Development manuscript: 15 October 2026}
+\date{15 October 2026}
 \begin{document}
 \maketitle
-\begin{center}\fbox{\parbox{.9\linewidth}{\textbf{Internal research draft.} Generated confirmation and the loan comparison are complete. Remaining operational comparisons and the final artifact review are in progress. Completed confirmation is distinguished from development evidence. This version is not ready for submission.}}\end{center}
 
 \begin{abstract}
 Broken object references prevent analysts from retrieving the records of an order, loan application or asset, even when the recorded activities are correct. We study offline restoration of event--object temporal graphs with missing participation, incorrect joins and fragmented identifiers. Our approach generates repair supervision by executing workflows, varying their observed descriptions and injecting recording faults separately. A learned edit system adds or removes participation and merges aliases while retaining recorded event content. The principal experiment holds executions, faults and learner capacity fixed within paired original-observation and varied-observation training collections. Across three independently generated collections, observation variation raises mean history-retrieval F1 from .759 to .800 on 96 held-out workflow worlds. On controlled corruptions of reserved BPI 2017 and BPI 2019 cohorts, it raises F1 from .791 to .805 and from .809 to .826, respectively; all six paired improvements are positive. The BPI 2012 check partition shows a further gain from .776 to .815, while source-supervised learning remains stronger on that process (.878). Exact histories, false identity pairs and damage to correct records expose limits hidden by mean F1. In particular, an independent recording-fault family slightly worsens loan recovery. These results support executable, varied observations as useful repair supervision, while showing that transfer across recording mechanisms and preservation of correct evidence remain unresolved.
@@ -158,12 +162,17 @@ The same neural controls recover 37, 41 and 32 true identity pairs without false
 
 Purchasing trial zero shows a different ordering: boosted, GraphSAGE, MLP and temporal-message scoring reach .8412, .8384, .8204 and .8197. Removing temporal scoring lowers the selected learner to .8044; removing contextual scoring lowers it to .7730. Recomputing evidence over multiple passes improves over one pass (.8121) and fixed-sequence repair (.8348). The automatic stable-field view reaches .8170 but damages 6,363 initially correct event assignments, so it is not a generally safe substitute for varied-observation training.
 
+On BPI 2012 check, GraphSAGE reaches .8448, the MLP .8294 and temporal-message scoring .8322, all above the principal boosted learner's .8069 in trial zero. The original learner with the stable-field view also reaches .8367 while damaging 197 initially correct assignments, compared with 248 for varied training. Thus the consistent paired observation-training gain does not establish superiority over every available operating configuration. Removing temporal scoring reduces F1 to .7440, whereas removing context scoring slightly raises it to .8087; the value of a scoring component depends on the process and its observations.
+
 With descriptive fields hidden at application time, varied training still exceeds original training in all three structural-only diagnostics: .8076 versus .7886 for loans, .8038 versus .7688 for purchasing, and .7625 versus .7429 for BPI 2012 check (Table~\ref{tab:confirmation-structural}). These single-trial results suggest that observation variation also changes reliance on structural evidence. They do not isolate whether the effect comes from changed candidate examples or fitted feature weights.
 
 \subsection{Exploratory calibration sensitivity}
 After inspecting the original transfer outcomes, we declared a nine-run sensitivity comparison that holds the source-trained model fixed and switches from its source-development calibration to an existing generated calibration cache. Both weights and caches were hashed before confirmation, but the decision to compare them was made later. These outcomes are therefore exploratory and supplement the originally declared control. No target outcomes refit the model or select a new threshold.
 
 The source-calibrated removal threshold is .02983, whereas the generated-calibrated threshold is .98680; both conditions abstain from identity merges. On the three loan fault trials, generated calibration raises mean history F1 from .5472 to .7922 and reduces newly damaged event assignments from 5,916/5,750/5,676 to 676/642/604. The revised operating point remains below varied-observation training (.8050), but removes much of the original transfer failure. This result shows that the fitted model and its calibration must be assessed together when interpreting cross-process repair.
+
+On purchasing, switching calibration changes mean history F1 only from .7602 to .7609, while reducing new damage from 1,666/1,676/1,541 events to 0/1/0. On BPI 2012 check, it lowers F1 from .8778 to .8253 and reduces mean new damage from 495 to 52 events. The more conservative operating point therefore has different recovery and preservation consequences across processes. Neither calibration universally dominates, and the source-supervised model remains stronger than the principal generated-only learner on its own process under either calibration.
+\input{tables/calibration_sensitivity.tex}
 
 \section{Application interpretation and limitations}
 The intended output is a reconstructed history and an inspectable record of suggested changes. It can help an analyst recover evidence spread across identifiers, but the current operating point does not establish safe unattended repair. The loan example in Appendix~\ref{sec:cases} restores an offer-creation record while retaining cancellation evidence, yet a short offer history loses a correct record. The examples illustrate outcomes already counted in the aggregate metrics.
@@ -198,6 +207,8 @@ The revised neural controls train for 16 epochs with AdamW (learning rate .001, 
 The local review artifact contains the generated test worlds, model checkpoints, generated calibration scores, source snapshots, trial reports and saved edit programs. A relocated copy passes 51 observation-boundary, decoder, adapter and generator checks. Replaying the fixed first generated graph independently for each of the six primary models reproduces its full application outcomes and exact edit program. Rebuilding the 14 BPI 2012 confirmation tasks in the relocated tree reproduces all 28 observation/reference file hashes. A complete four-pass mixed-fault evaluation then reproduces every edit, application query and before/after score, with byte-identical repaired graph and identity clusters. These are same-environment reproducibility checks, not independent retraining evidence.
 
 The original protocol remains unchanged, identified by SHA-256 beginning \texttt{a3e12b092cc7670f8}. Protocol relocation changes only declared source paths and the output task directory, verifies source bytes, and records both protocol hashes. Interrupted processes resume completed rounds; runs interrupted before their first checkpoint archive the empty partial record and replay the same configuration. Generated evaluations retain completed graph outcomes and continue in the original order. No observed result is removed to improve an aggregate.
+
+The final provenance audit found eight historical archive-checksum fields captured before concurrent source-archive writes finished. All 60 archives match every recorded per-file source inventory. The artifact retains the original reports and a separate checksum erratum; model, calibration and dataset pins are unaffected. A subsequent logging-only fix publishes complete archives atomically and has a concurrent-write regression check. The frozen inference and adapter files remain unchanged.
 
 \section{Development evidence motivating observation variation}
 \label{sec:development}
@@ -240,6 +251,7 @@ The same case-selection rule applied to reserved BPI 2017 trial zero identifies 
 
 Applying the same selection rule to purchasing trial zero gives a 43-record order with two aliases. Its entity-averaged history F1 improves from .5288 to .5981. For the displayed hash-selected handle, repair removes an invoice-receipt record belonging to another entity, while a genuine goods-receipt cancellation remains missing. The worst-loss item has only one reference record: its creation association is removed and history F1 falls from .6667 to zero. Across this trial, 2,341 entity histories improve, 142 worsen and 1,842 are unchanged. The examples show why an improved mean score should not be equated with a complete audit trail for every queried identifier.
 
+\clearpage
 \begin{thebibliography}{99}
 \bibitem{here} F. Zetzsche et al. \emph{Case ID Revealed HERE: Hybrid Elusive Case Repair Method for Transformer-Driven Business Process Event Log Enhancement}. Business \& Information Systems Engineering 67, 311--337, 2025. \url{https://doi.org/10.1007/s12599-025-00935-5}.
 \bibitem{sanagraph} S. Dissegna, C. Di Francescomarino and M. Ronzani. \emph{Graph-Based Event Log Repair}. CAiSE 2026, 423--440. \url{https://doi.org/10.1007/978-3-032-28117-3_24}. Accessible author preprint: \url{https://arxiv.org/abs/2508.05145}.

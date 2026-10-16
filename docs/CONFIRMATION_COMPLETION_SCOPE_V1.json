@@ -1,0 +1,43 @@
+{
+  "status": "original_selected_confirmation_complete",
+  "created_utc": "2026-10-16T03:03:04.806945+00:00",
+  "original_protocol_hash": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "planned_operational_sources": [
+    "bpi2012_check",
+    "bpi2017",
+    "bpi2019",
+    "forgeflow",
+    "permitflow",
+    "procurechange",
+    "trialversion"
+  ],
+  "completed_operational_sources": [
+    "bpi2017",
+    "bpi2019",
+    "bpi2012_check"
+  ],
+  "completed_original_jobs": 84,
+  "unexecuted_original_jobs": 112,
+  "unexecuted_sources": [
+    "forgeflow",
+    "permitflow",
+    "procurechange",
+    "trialversion"
+  ],
+  "reason": "Repeated public API/direct-file requests failed in this execution environment. The final individual four-source retries returned three TLS resets and one zero-byte timeout. No records were decoded from the four unavailable sources and no replacement was selected by observed model outcomes.",
+  "download_evidence": "reports/reserved_download_audit_v1.json",
+  "generated_confirmation": {
+    "paired_training_trials": 3,
+    "models": 6,
+    "worlds_per_model": 96,
+    "variants": [
+      "mixed",
+      "clean"
+    ],
+    "completed_graph_evaluations": 1152
+  },
+  "additional_followup": "Nine source-calibration sensitivity jobs were declared after inspecting primary outcomes and are explicitly separated from the original confirmation. See CALIBRATION_SENSITIVITY_V1.json.",
+  "scope": "This completion record reports what was executed; it does not retrospectively change the original protocol or represent a public preregistration.",
+  "completed_post_freeze_sensitivity_jobs": 9,
+  "sensitivity_evidence": "reports/calibration_sensitivity_evidence_v1.json"
+}

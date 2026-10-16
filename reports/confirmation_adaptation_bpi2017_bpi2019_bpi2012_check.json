@@ -1,0 +1,155 @@
+{
+  "status": "completed_confirmation_block",
+  "config": {
+    "protocol": "docs/CONFIRMATION_PROTOCOL_V1.json",
+    "domains": [
+      "bpi2017",
+      "bpi2019",
+      "bpi2012_check"
+    ],
+    "suite": "adaptation",
+    "workers": 2,
+    "resume": true,
+    "plan_only": false
+  },
+  "protocol_hash": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "jobs": [
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "target_selfsupervised",
+      "model": null,
+      "output": "confirm_bpi2017_native_mixed_91001_target_selfsupervised",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "arm": "target_selfsupervised",
+      "model": null,
+      "output": "confirm_bpi2017_native_mixed_91002_target_selfsupervised",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91002"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "arm": "target_selfsupervised",
+      "model": null,
+      "output": "confirm_bpi2017_native_mixed_91003_target_selfsupervised",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91003"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "target_selfsupervised",
+      "model": null,
+      "output": "confirm_bpi2019_native_mixed_91001_target_selfsupervised",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "arm": "target_selfsupervised",
+      "model": null,
+      "output": "confirm_bpi2019_native_mixed_91002_target_selfsupervised",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91002"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "arm": "target_selfsupervised",
+      "model": null,
+      "output": "confirm_bpi2019_native_mixed_91003_target_selfsupervised",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91003"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "target_selfsupervised",
+      "model": null,
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_target_selfsupervised",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91002,
+      "arm": "target_selfsupervised",
+      "model": null,
+      "output": "confirm_bpi2012_check_denormalized_mixed_91002_target_selfsupervised",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91002"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91003,
+      "arm": "target_selfsupervised",
+      "model": null,
+      "output": "confirm_bpi2012_check_denormalized_mixed_91003_target_selfsupervised",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91003"
+    }
+  ],
+  "outcomes": [
+    {
+      "output": "confirm_bpi2017_native_mixed_91002_target_selfsupervised",
+      "status": "already_completed",
+      "report_hash": "4aa06d4b433188329d550fa1f8d8d2e22f2801ea412f99e3b38d62c264222881"
+    },
+    {
+      "output": "confirm_bpi2017_native_mixed_91001_target_selfsupervised",
+      "status": "already_completed",
+      "report_hash": "e95cab7fc427b908940304ea55bf9ed7d60fe9f4b3dbe275e26bc49cd7ee2b83"
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91001_target_selfsupervised",
+      "status": "already_completed",
+      "report_hash": "6dd1bc0a76045effd7469bed73b65a96769c804e417187d8c956db80ef4841be"
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91002_target_selfsupervised",
+      "status": "already_completed",
+      "report_hash": "73afc9a9cdcf6794e037a7c0adc553d44d679f0d3c9747e839e9b4f721ac81e1"
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91003_target_selfsupervised",
+      "status": "already_completed",
+      "report_hash": "831d78a045a23d6c27ce304cc23a52181589302374b2ea14bf4b49ccb2e81d83"
+    },
+    {
+      "output": "confirm_bpi2017_native_mixed_91003_target_selfsupervised",
+      "status": "already_completed",
+      "report_hash": "d5a5ab8004838d1c55c2299513eef9783dfeea088fcb68cee679ce61575ba6d4"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_target_selfsupervised",
+      "status": "already_completed",
+      "report_hash": "7a8cf8e08e002b092d705d241cc754c51c10caa1b64300e0da36c7e9e1e6544f"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91003_target_selfsupervised",
+      "status": "already_completed",
+      "report_hash": "803b34b05c6193d80301a9fa378c5357f5b78aafb413bf28b2950ca4bfded4f9"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91002_target_selfsupervised",
+      "status": "already_completed",
+      "report_hash": "3796e25fec353f7d4a08c5b39f27854d37bd58b60deed676b1539a09b9d95d2d"
+    }
+  ]
+}

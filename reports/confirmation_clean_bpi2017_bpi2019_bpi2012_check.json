@@ -1,0 +1,155 @@
+{
+  "status": "completed_confirmation_block",
+  "config": {
+    "protocol": "docs/CONFIRMATION_PROTOCOL_V1.json",
+    "domains": [
+      "bpi2017",
+      "bpi2019",
+      "bpi2012_check"
+    ],
+    "suite": "clean",
+    "workers": 2,
+    "resume": true,
+    "plan_only": false
+  },
+  "protocol_hash": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "jobs": [
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "clean",
+      "seed": 0,
+      "arm": "varied_r0",
+      "model": "edit_feature_attributes_v3",
+      "output": "confirm_bpi2017_native_clean_0_varied_r0",
+      "task": "data/confirmation_v1/bpi2017/native/clean_0"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "clean",
+      "seed": 0,
+      "arm": "varied_r1",
+      "model": "edit_feature_attributes_repeat1",
+      "output": "confirm_bpi2017_native_clean_0_varied_r1",
+      "task": "data/confirmation_v1/bpi2017/native/clean_0"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "clean",
+      "seed": 0,
+      "arm": "varied_r2",
+      "model": "edit_feature_attributes_repeat2",
+      "output": "confirm_bpi2017_native_clean_0_varied_r2",
+      "task": "data/confirmation_v1/bpi2017/native/clean_0"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "clean",
+      "seed": 0,
+      "arm": "varied_r0",
+      "model": "edit_feature_attributes_v3",
+      "output": "confirm_bpi2019_native_clean_0_varied_r0",
+      "task": "data/confirmation_v1/bpi2019/native/clean_0"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "clean",
+      "seed": 0,
+      "arm": "varied_r1",
+      "model": "edit_feature_attributes_repeat1",
+      "output": "confirm_bpi2019_native_clean_0_varied_r1",
+      "task": "data/confirmation_v1/bpi2019/native/clean_0"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "clean",
+      "seed": 0,
+      "arm": "varied_r2",
+      "model": "edit_feature_attributes_repeat2",
+      "output": "confirm_bpi2019_native_clean_0_varied_r2",
+      "task": "data/confirmation_v1/bpi2019/native/clean_0"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "clean",
+      "seed": 0,
+      "arm": "varied_r0",
+      "model": "edit_feature_attributes_v3",
+      "output": "confirm_bpi2012_check_denormalized_clean_0_varied_r0",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/clean_0"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "clean",
+      "seed": 0,
+      "arm": "varied_r1",
+      "model": "edit_feature_attributes_repeat1",
+      "output": "confirm_bpi2012_check_denormalized_clean_0_varied_r1",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/clean_0"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "clean",
+      "seed": 0,
+      "arm": "varied_r2",
+      "model": "edit_feature_attributes_repeat2",
+      "output": "confirm_bpi2012_check_denormalized_clean_0_varied_r2",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/clean_0"
+    }
+  ],
+  "outcomes": [
+    {
+      "output": "confirm_bpi2017_native_clean_0_varied_r0",
+      "status": "already_completed",
+      "report_hash": "13dc53e3415c7fcb858468bc2350ba3616208ec721f16a49bb792de9f368a854"
+    },
+    {
+      "output": "confirm_bpi2017_native_clean_0_varied_r1",
+      "status": "already_completed",
+      "report_hash": "0020f2714232e4bf775e34099927c55039e765006fa0f0a160203984b0852633"
+    },
+    {
+      "output": "confirm_bpi2019_native_clean_0_varied_r0",
+      "status": "already_completed",
+      "report_hash": "9632de9e80ae5b639653ea1068580ae9b4338ad1d144df76051dfbf4a51430d5"
+    },
+    {
+      "output": "confirm_bpi2017_native_clean_0_varied_r2",
+      "status": "already_completed",
+      "report_hash": "cb68c98e976a17fb208ded91057e1eeeb618bad67d88393d1dc1583d89cb5665"
+    },
+    {
+      "output": "confirm_bpi2019_native_clean_0_varied_r1",
+      "status": "already_completed",
+      "report_hash": "5f8f7997d7100b7534861027d3e6f2aead6431a85b7e77d09b78b36f05874de7"
+    },
+    {
+      "output": "confirm_bpi2019_native_clean_0_varied_r2",
+      "status": "already_completed",
+      "report_hash": "773a22dc2f2ddb6f2fd3f35c63d4094cf6fe511f38a4ad0df132d58ad951db0e"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_clean_0_varied_r0",
+      "status": "already_completed",
+      "report_hash": "33ec87dee68307af85a527ed7f12a26dd04676d3b2f743848cf4f3364b377e60"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_clean_0_varied_r1",
+      "status": "already_completed",
+      "report_hash": "a37f34d3e11e6e2bcde606f6647022933e60f320d3e40ceccc4cc9ce4ac0e36f"
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_clean_0_varied_r2",
+      "status": "already_completed",
+      "report_hash": "52803359a4c2e95c40db14d4f0f23c042397685df9e22dba7675f6521f107e33"
+    }
+  ]
+}

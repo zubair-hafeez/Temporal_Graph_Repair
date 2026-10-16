@@ -1,5 +1,5 @@
 {
-  "status": "running_external_development",
+  "status": "completed_external_development",
   "config": {
     "task": "data/external_development_v1/claimstream/mixed",
     "model": "edit_feature_attributes_repeat2",
@@ -269,5 +269,73 @@
     "Controlled recording faults on public-source references, not independently labelled natural errors.",
     "Calibration provenance is recorded separately; target evaluation labels never enter decoding.",
     "Queries concern the available window; lifetime histories may be censored."
-  ]
+  ],
+  "after": {
+    "history": {
+      "precision": 0.9231454772782977,
+      "recall": 0.8388415226897035,
+      "f1": 0.8603488835128658,
+      "exact_history_fraction": 0.211984171848502,
+      "entities": 1769,
+      "per_type": {
+        "Claim": {
+          "precision": 0.9265301583635203,
+          "recall": 0.8535143178765094,
+          "f1": 0.8715805194281077,
+          "exact_history_fraction": 0.18220338983050846,
+          "entities": 944
+        },
+        "Exposure": {
+          "precision": 0.9192725815880523,
+          "recall": 0.8220522879547377,
+          "f1": 0.8474971692049946,
+          "exact_history_fraction": 0.24606060606060606,
+          "entities": 825
+        }
+      }
+    },
+    "identity": {
+      "predicted_pairs": 37,
+      "true_pairs": 403,
+      "correct_pairs": 37,
+      "precision": 1.0,
+      "recall": 0.09181141439205956,
+      "f1": 0.16818181818181818
+    },
+    "events": {
+      "originally_correct_events": 18325,
+      "preserved_correct_events": 18313,
+      "damaged_events": 6604,
+      "repaired_events": 3715
+    },
+    "protected_event_fields_preserved": true
+  },
+  "queries_after": {
+    "entities": 1769,
+    "empty_history_fraction": 0.0022611644997173543,
+    "first_timestamp_correct_fraction": 0.7210288298473714,
+    "last_timestamp_correct_fraction": 0.7131147540983607,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 32.0,
+        "false_positive": 1.5,
+        "false_negative": 10.0,
+        "true_negative": 1725.5,
+        "precision": 0.9552238805970149,
+        "recall": 0.7619047619047619,
+        "f1": 0.847682119205298
+      },
+      "exception_evidence": {
+        "true_positive": 567.0,
+        "false_positive": 3.5,
+        "false_negative": 80.0,
+        "true_negative": 1118.5,
+        "precision": 0.9938650306748467,
+        "recall": 0.8763523956723338,
+        "f1": 0.9314168377823409
+      }
+    }
+  },
+  "seconds": 1517.2738334279275,
+  "edit_count": 6909
 }

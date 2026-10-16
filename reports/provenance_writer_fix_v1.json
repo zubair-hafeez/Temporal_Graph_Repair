@@ -1,0 +1,18 @@
+{
+  "status": "post_evaluation_logging_fix_verified",
+  "created_utc": "2026-10-16T03:14:22.404110+00:00",
+  "file": "tgrepair/provenance.py",
+  "original_sha256": "1f427099dacbba70402931d18dc6d63fc07c04a4ac6cde732033b43e926d964b",
+  "fixed_sha256": "21a59b6bd04dc39ef0ec122713904aa6459c83029219c03027ef382342207c3b",
+  "change": "Capture source member bytes once; write gzip/tar to a private temporary file and atomically replace the complete destination. Concurrent callers cannot observe a partial archive.",
+  "scientific_scope": "Applied after all 84 original selected and nine follow-up evaluations completed. No model, threshold, dataset, adapter, inference rule or reported metric changed. The logging helper is outside the frozen 28-file scientific implementation set.",
+  "historical_evidence": "reports/source_snapshot_audit_v1.json",
+  "regression_test": "tests/test_provenance_concurrency.py",
+  "regression_sha256": "4219958d1b34e854822c6c2e0a9adc66e4c12a45815be9885c4a069b83d93f25",
+  "validation": {
+    "command": "/home/zubair/zubairEnv/bin/python -m pytest -q tests ../RF_Dataset_Factory/tests/test_temporal_factory.py",
+    "passed": 52,
+    "failed": 0,
+    "seconds": 2.15
+  }
+}

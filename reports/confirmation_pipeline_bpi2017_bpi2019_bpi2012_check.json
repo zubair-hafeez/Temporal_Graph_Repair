@@ -1,0 +1,301 @@
+{
+  "status": "completed_confirmation_block",
+  "config": {
+    "protocol": "docs/CONFIRMATION_PROTOCOL_V1.json",
+    "domains": [
+      "bpi2017",
+      "bpi2019",
+      "bpi2012_check"
+    ],
+    "suite": "pipeline",
+    "workers": 2,
+    "resume": true,
+    "plan_only": false
+  },
+  "protocol_hash": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "jobs": [
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91001,
+      "arm": "varied_r0",
+      "model": "edit_feature_attributes_v3",
+      "output": "confirm_bpi2017_native_pipeline_91001_varied_r0",
+      "task": "data/confirmation_v1/bpi2017/native/pipeline_91001"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91002,
+      "arm": "varied_r1",
+      "model": "edit_feature_attributes_repeat1",
+      "output": "confirm_bpi2017_native_pipeline_91002_varied_r1",
+      "task": "data/confirmation_v1/bpi2017/native/pipeline_91002"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91003,
+      "arm": "varied_r2",
+      "model": "edit_feature_attributes_repeat2",
+      "output": "confirm_bpi2017_native_pipeline_91003_varied_r2",
+      "task": "data/confirmation_v1/bpi2017/native/pipeline_91003"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91001,
+      "arm": "varied_r0",
+      "model": "edit_feature_attributes_v3",
+      "output": "confirm_bpi2019_native_pipeline_91001_varied_r0",
+      "task": "data/confirmation_v1/bpi2019/native/pipeline_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91002,
+      "arm": "varied_r1",
+      "model": "edit_feature_attributes_repeat1",
+      "output": "confirm_bpi2019_native_pipeline_91002_varied_r1",
+      "task": "data/confirmation_v1/bpi2019/native/pipeline_91002"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91003,
+      "arm": "varied_r2",
+      "model": "edit_feature_attributes_repeat2",
+      "output": "confirm_bpi2019_native_pipeline_91003_varied_r2",
+      "task": "data/confirmation_v1/bpi2019/native/pipeline_91003"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91001,
+      "arm": "varied_r0",
+      "model": "edit_feature_attributes_v3",
+      "output": "confirm_bpi2012_check_denormalized_pipeline_91001_varied_r0",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/pipeline_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91002,
+      "arm": "varied_r1",
+      "model": "edit_feature_attributes_repeat1",
+      "output": "confirm_bpi2012_check_denormalized_pipeline_91002_varied_r1",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/pipeline_91002"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91003,
+      "arm": "varied_r2",
+      "model": "edit_feature_attributes_repeat2",
+      "output": "confirm_bpi2012_check_denormalized_pipeline_91003_varied_r2",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/pipeline_91003"
+    }
+  ],
+  "outcomes": [
+    {
+      "output": "confirm_bpi2017_native_pipeline_91002_varied_r1",
+      "status": "already_completed",
+      "report_hash": "bc6f6ead46fbaf7c927046cde125f0f5c452801e9e6b0acbcb8abdac5271f6de"
+    },
+    {
+      "output": "confirm_bpi2017_native_pipeline_91001_varied_r0",
+      "status": "already_completed",
+      "report_hash": "186fae2396034477270576fc5ea2ed3e6c7b016b562099bb74b8488f86658804"
+    },
+    {
+      "output": "confirm_bpi2019_native_pipeline_91001_varied_r0",
+      "status": "already_completed",
+      "report_hash": "1cedcc96f66248fe452528ef3c0b2031676b3729b963ead584d3dd26bb96c3ba"
+    },
+    {
+      "output": "confirm_bpi2017_native_pipeline_91003_varied_r2",
+      "status": "completed",
+      "report_hash": "8ff4630816b392d958019e5fe431590412ec0d434f19d5dafc5e219af4b432d3",
+      "seconds": 380.57421254203655,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2017/native/pipeline_91003",
+          "--model",
+          "edit_feature_attributes_repeat2",
+          "--kind",
+          "feature",
+          "--calibration",
+          "edit_feature_attributes_repeat2",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2017_native_pipeline_91003_varied_r2",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all",
+          "--resume"
+        ]
+      ],
+      "f1": 0.7788308775376469
+    },
+    {
+      "output": "confirm_bpi2019_native_pipeline_91002_varied_r1",
+      "status": "completed",
+      "report_hash": "3c798b15fcc41b571629e7dbd278ef17d1fba64e4600b00c7df34307d0d90d7b",
+      "seconds": 864.4505541109247,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2019/native/pipeline_91002",
+          "--model",
+          "edit_feature_attributes_repeat1",
+          "--kind",
+          "feature",
+          "--calibration",
+          "edit_feature_attributes_repeat1",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2019_native_pipeline_91002_varied_r1",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all",
+          "--resume"
+        ]
+      ],
+      "f1": 0.7816755948138816
+    },
+    {
+      "output": "confirm_bpi2019_native_pipeline_91003_varied_r2",
+      "status": "completed",
+      "report_hash": "b62cddd07ce209749d1eaf8b6642f86113e5fb33655ffd3117a5a08e29bca4e4",
+      "seconds": 1155.8792194449343,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2019/native/pipeline_91003",
+          "--model",
+          "edit_feature_attributes_repeat2",
+          "--kind",
+          "feature",
+          "--calibration",
+          "edit_feature_attributes_repeat2",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2019_native_pipeline_91003_varied_r2",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.7727275660718307
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_pipeline_91001_varied_r0",
+      "status": "completed",
+      "report_hash": "01c5446428084a6ff0975693473b0597aeecb657f4c7794250e3d026e0a7c248",
+      "seconds": 925.3873540699715,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2012_check/denormalized/pipeline_91001",
+          "--model",
+          "edit_feature_attributes_v3",
+          "--kind",
+          "feature",
+          "--calibration",
+          "edit_feature_attributes_v3",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2012_check_denormalized_pipeline_91001_varied_r0",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.7671728865123377
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_pipeline_91002_varied_r1",
+      "status": "completed",
+      "report_hash": "5e74bb24b18f6bdeeefdca898287bd57d0a23f7d3a02b73b1413910836812e57",
+      "seconds": 898.1025084659923,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2012_check/denormalized/pipeline_91002",
+          "--model",
+          "edit_feature_attributes_repeat1",
+          "--kind",
+          "feature",
+          "--calibration",
+          "edit_feature_attributes_repeat1",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2012_check_denormalized_pipeline_91002_varied_r1",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.7539507058576963
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_pipeline_91003_varied_r2",
+      "status": "completed",
+      "report_hash": "a449dc536135a5cfd342335fdf9d621441bbb254d812f8255de60ab794da6b32",
+      "seconds": 845.7563887889264,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2012_check/denormalized/pipeline_91003",
+          "--model",
+          "edit_feature_attributes_repeat2",
+          "--kind",
+          "feature",
+          "--calibration",
+          "edit_feature_attributes_repeat2",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2012_check_denormalized_pipeline_91003_varied_r2",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.7728436887562667
+    }
+  ]
+}

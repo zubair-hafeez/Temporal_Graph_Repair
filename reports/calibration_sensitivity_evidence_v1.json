@@ -1,0 +1,391 @@
+{
+  "status": "complete_post_freeze_calibration_analysis",
+  "scope": "Exploratory follow-up prompted by observed poor source-model transfer. Both weights and alternate calibration cache existed and were hashed in the original frozen protocol, but this comparison was not among the predeclared confirmation jobs. No fitting or threshold selection uses these target results. Report every one of the nine outcomes separately from primary confirmation; do not replace the original source-calibrated baseline.",
+  "source_reports": {
+    "docs/CALIBRATION_SENSITIVITY_V1.json": "656f2ec3482f39d088021405c91af14af9c7b69a2d0d24006d5d46e7e4764a05",
+    "reports/calibration_sensitivity_v1.json": "b1a1f6bf5ce40a6aead27bc19dd3dbecbec8b132b33ced292609d46ae8a83cb8",
+    "reports/sensitivity_bpi2017_native_mixed_91001_source256_generated_calibration.json": "c19bd74479b89b05c134f34a57be7ff6e9b674791601962371df47b0416629ec",
+    "reports/confirm_bpi2017_native_mixed_91001_source256.json": "3874fb7976363e18ec061ca5cf279fe60f400cb859c14eb8b6f708ef61486be5",
+    "reports/sensitivity_bpi2017_native_mixed_91002_source256_generated_calibration.json": "5bd00251d048fe9e73d118ab4d86938a5696b349899038239159da2ba6fc062d",
+    "reports/confirm_bpi2017_native_mixed_91002_source256.json": "df15d8c3af43d2dea22e40d4c7c8d61200202ab6b5891f687f573a39133a437b",
+    "reports/sensitivity_bpi2017_native_mixed_91003_source256_generated_calibration.json": "cf51f521b69baa9d49942c50b8dc8abe6ab8b9e91896cd71a7ffbcdd1d173da8",
+    "reports/confirm_bpi2017_native_mixed_91003_source256.json": "a78b1b915f9ccdcd4dc13fe249ad5a7032ce73eb9312f908bfc993ca6fd5011f",
+    "reports/sensitivity_bpi2019_native_mixed_91001_source256_generated_calibration.json": "e95dc4fc3fd6558724492fa631fd7f540158efed41873820a1bfd27bec275f15",
+    "reports/confirm_bpi2019_native_mixed_91001_source256.json": "d8fa0410b5a69dcdaa34ae2412ae4924c3d301626702d50cc9b951e78722c590",
+    "reports/sensitivity_bpi2019_native_mixed_91002_source256_generated_calibration.json": "75adfc3185aa29a0359945937775c5858926a3519a34e60e7304aa826e7ff753",
+    "reports/confirm_bpi2019_native_mixed_91002_source256.json": "3ae39e33d47c0304c98a4ac203af95242cf0d7e8cc200a28432b88de07014f04",
+    "reports/sensitivity_bpi2019_native_mixed_91003_source256_generated_calibration.json": "2cc82c848f1b6a6ffc88e995dfd410b603e9518fe31a025a95046e22b73bf136",
+    "reports/confirm_bpi2019_native_mixed_91003_source256.json": "bb1229825aa889339ac7565065cd957f1723a7ace990559c253383c8d1abcde9",
+    "reports/sensitivity_bpi2012_check_denormalized_mixed_91001_source256_generated_calibration.json": "3eeb25a25210d8a884008430393e2177684f2548700ac0ac67459caee0caccfc",
+    "reports/confirm_bpi2012_check_denormalized_mixed_91001_source256.json": "f4b862eb5932d0b2e27cbb061c7ed4981cbe050b6775fe39ef512787c5564837",
+    "reports/sensitivity_bpi2012_check_denormalized_mixed_91002_source256_generated_calibration.json": "2589b8f40d06b2299f280c563f5b58a193c5cb767053233a5919d99951109ef3",
+    "reports/confirm_bpi2012_check_denormalized_mixed_91002_source256.json": "9cb0b4f31b749aaf44c706c6e8e45b885f2179f9a1d79bb2b700f2fafb54d213",
+    "reports/sensitivity_bpi2012_check_denormalized_mixed_91003_source256_generated_calibration.json": "3a13849d281d1dff8a384b316d965d2c82a37b2961d4827e01038b61062e9a33",
+    "reports/confirm_bpi2012_check_denormalized_mixed_91003_source256.json": "7ed80e31cf08e2b528b5ff27c65909a69bf07d9fd2ca43d3729ce94305f5c6a3"
+  },
+  "script_hash": "e67ddad120de8bf6b2467bc86fa835adeaca13988be6f4143cde331afc701b75",
+  "trials": [
+    {
+      "domain": "bpi2017",
+      "seed": 91001,
+      "output": "sensitivity_bpi2017_native_mixed_91001_source256_generated_calibration",
+      "before_f1": 0.7877786841469488,
+      "source_calibration_f1": 0.5486299380636033,
+      "generated_calibration_f1": 0.7912263242040318,
+      "source_calibration_new_damage": 5916,
+      "generated_calibration_new_damage": 676,
+      "source_thresholds": [
+        0.9985311601738184,
+        0.029832398999918495,
+        1.1
+      ],
+      "generated_thresholds": [
+        0.99983762132911,
+        0.9868038401334459,
+        1.1
+      ]
+    },
+    {
+      "domain": "bpi2017",
+      "seed": 91002,
+      "output": "sensitivity_bpi2017_native_mixed_91002_source256_generated_calibration",
+      "before_f1": 0.7864770996868758,
+      "source_calibration_f1": 0.5457639401650984,
+      "generated_calibration_f1": 0.7905028636594851,
+      "source_calibration_new_damage": 5750,
+      "generated_calibration_new_damage": 642,
+      "source_thresholds": [
+        0.9985311601738184,
+        0.029832398999918495,
+        1.1
+      ],
+      "generated_thresholds": [
+        0.99983762132911,
+        0.9868038401334459,
+        1.1
+      ]
+    },
+    {
+      "domain": "bpi2017",
+      "seed": 91003,
+      "output": "sensitivity_bpi2017_native_mixed_91003_source256_generated_calibration",
+      "before_f1": 0.787208226990144,
+      "source_calibration_f1": 0.5471410652046701,
+      "generated_calibration_f1": 0.7948111157248736,
+      "source_calibration_new_damage": 5676,
+      "generated_calibration_new_damage": 604,
+      "source_thresholds": [
+        0.9985311601738184,
+        0.029832398999918495,
+        1.1
+      ],
+      "generated_thresholds": [
+        0.99983762132911,
+        0.9868038401334459,
+        1.1
+      ]
+    },
+    {
+      "domain": "bpi2019",
+      "seed": 91001,
+      "output": "sensitivity_bpi2019_native_mixed_91001_source256_generated_calibration",
+      "before_f1": 0.7592264730464978,
+      "source_calibration_f1": 0.7578726809387616,
+      "generated_calibration_f1": 0.7602092639834755,
+      "source_calibration_new_damage": 1666,
+      "generated_calibration_new_damage": 0,
+      "source_thresholds": [
+        0.9985311601738184,
+        0.029832398999918495,
+        1.1
+      ],
+      "generated_thresholds": [
+        0.99983762132911,
+        0.9868038401334459,
+        1.1
+      ]
+    },
+    {
+      "domain": "bpi2019",
+      "seed": 91002,
+      "output": "sensitivity_bpi2019_native_mixed_91002_source256_generated_calibration",
+      "before_f1": 0.7640027574834398,
+      "source_calibration_f1": 0.7642606080079658,
+      "generated_calibration_f1": 0.7655274520316085,
+      "source_calibration_new_damage": 1676,
+      "generated_calibration_new_damage": 1,
+      "source_thresholds": [
+        0.9985311601738184,
+        0.029832398999918495,
+        1.1
+      ],
+      "generated_thresholds": [
+        0.99983762132911,
+        0.9868038401334459,
+        1.1
+      ]
+    },
+    {
+      "domain": "bpi2019",
+      "seed": 91003,
+      "output": "sensitivity_bpi2019_native_mixed_91003_source256_generated_calibration",
+      "before_f1": 0.7560597530544705,
+      "source_calibration_f1": 0.7584318073136659,
+      "generated_calibration_f1": 0.7569064099234248,
+      "source_calibration_new_damage": 1541,
+      "generated_calibration_new_damage": 0,
+      "source_thresholds": [
+        0.9985311601738184,
+        0.029832398999918495,
+        1.1
+      ],
+      "generated_thresholds": [
+        0.99983762132911,
+        0.9868038401334459,
+        1.1
+      ]
+    },
+    {
+      "domain": "bpi2012_check",
+      "seed": 91001,
+      "output": "sensitivity_bpi2012_check_denormalized_mixed_91001_source256_generated_calibration",
+      "before_f1": 0.7423494121944259,
+      "source_calibration_f1": 0.8755498922500446,
+      "generated_calibration_f1": 0.8202129438158802,
+      "source_calibration_new_damage": 473,
+      "generated_calibration_new_damage": 62,
+      "source_thresholds": [
+        0.9985311601738184,
+        0.029832398999918495,
+        1.1
+      ],
+      "generated_thresholds": [
+        0.99983762132911,
+        0.9868038401334459,
+        1.1
+      ]
+    },
+    {
+      "domain": "bpi2012_check",
+      "seed": 91002,
+      "output": "sensitivity_bpi2012_check_denormalized_mixed_91002_source256_generated_calibration",
+      "before_f1": 0.7524002821260535,
+      "source_calibration_f1": 0.888685946047046,
+      "generated_calibration_f1": 0.8324898116129185,
+      "source_calibration_new_damage": 485,
+      "generated_calibration_new_damage": 45,
+      "source_thresholds": [
+        0.9985311601738184,
+        0.029832398999918495,
+        1.1
+      ],
+      "generated_thresholds": [
+        0.99983762132911,
+        0.9868038401334459,
+        1.1
+      ]
+    },
+    {
+      "domain": "bpi2012_check",
+      "seed": 91003,
+      "output": "sensitivity_bpi2012_check_denormalized_mixed_91003_source256_generated_calibration",
+      "before_f1": 0.7412587840549786,
+      "source_calibration_f1": 0.8691625592718142,
+      "generated_calibration_f1": 0.8230688068176644,
+      "source_calibration_new_damage": 527,
+      "generated_calibration_new_damage": 49,
+      "source_thresholds": [
+        0.9985311601738184,
+        0.029832398999918495,
+        1.1
+      ],
+      "generated_thresholds": [
+        0.99983762132911,
+        0.9868038401334459,
+        1.1
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "domain": "bpi2017",
+      "metrics": {
+        "before_f1": {
+          "values": [
+            0.7877786841469488,
+            0.7864770996868758,
+            0.787208226990144
+          ],
+          "defined_trials": 3,
+          "mean": 0.7871546702746562,
+          "min": 0.7864770996868758,
+          "max": 0.7877786841469488
+        },
+        "source_calibration_f1": {
+          "values": [
+            0.5486299380636033,
+            0.5457639401650984,
+            0.5471410652046701
+          ],
+          "defined_trials": 3,
+          "mean": 0.5471783144777906,
+          "min": 0.5457639401650984,
+          "max": 0.5486299380636033
+        },
+        "generated_calibration_f1": {
+          "values": [
+            0.7912263242040318,
+            0.7905028636594851,
+            0.7948111157248736
+          ],
+          "defined_trials": 3,
+          "mean": 0.7921801011961301,
+          "min": 0.7905028636594851,
+          "max": 0.7948111157248736
+        },
+        "source_calibration_new_damage": {
+          "values": [
+            5916,
+            5750,
+            5676
+          ],
+          "defined_trials": 3,
+          "mean": 5780.666666666667,
+          "min": 5676,
+          "max": 5916
+        },
+        "generated_calibration_new_damage": {
+          "values": [
+            676,
+            642,
+            604
+          ],
+          "defined_trials": 3,
+          "mean": 640.6666666666666,
+          "min": 604,
+          "max": 676
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "metrics": {
+        "before_f1": {
+          "values": [
+            0.7592264730464978,
+            0.7640027574834398,
+            0.7560597530544705
+          ],
+          "defined_trials": 3,
+          "mean": 0.759762994528136,
+          "min": 0.7560597530544705,
+          "max": 0.7640027574834398
+        },
+        "source_calibration_f1": {
+          "values": [
+            0.7578726809387616,
+            0.7642606080079658,
+            0.7584318073136659
+          ],
+          "defined_trials": 3,
+          "mean": 0.7601883654201311,
+          "min": 0.7578726809387616,
+          "max": 0.7642606080079658
+        },
+        "generated_calibration_f1": {
+          "values": [
+            0.7602092639834755,
+            0.7655274520316085,
+            0.7569064099234248
+          ],
+          "defined_trials": 3,
+          "mean": 0.760881041979503,
+          "min": 0.7569064099234248,
+          "max": 0.7655274520316085
+        },
+        "source_calibration_new_damage": {
+          "values": [
+            1666,
+            1676,
+            1541
+          ],
+          "defined_trials": 3,
+          "mean": 1627.6666666666667,
+          "min": 1541,
+          "max": 1676
+        },
+        "generated_calibration_new_damage": {
+          "values": [
+            0,
+            1,
+            0
+          ],
+          "defined_trials": 3,
+          "mean": 0.3333333333333333,
+          "min": 0,
+          "max": 1
+        }
+      }
+    },
+    {
+      "domain": "bpi2012_check",
+      "metrics": {
+        "before_f1": {
+          "values": [
+            0.7423494121944259,
+            0.7524002821260535,
+            0.7412587840549786
+          ],
+          "defined_trials": 3,
+          "mean": 0.745336159458486,
+          "min": 0.7412587840549786,
+          "max": 0.7524002821260535
+        },
+        "source_calibration_f1": {
+          "values": [
+            0.8755498922500446,
+            0.888685946047046,
+            0.8691625592718142
+          ],
+          "defined_trials": 3,
+          "mean": 0.8777994658563016,
+          "min": 0.8691625592718142,
+          "max": 0.888685946047046
+        },
+        "generated_calibration_f1": {
+          "values": [
+            0.8202129438158802,
+            0.8324898116129185,
+            0.8230688068176644
+          ],
+          "defined_trials": 3,
+          "mean": 0.8252571874154877,
+          "min": 0.8202129438158802,
+          "max": 0.8324898116129185
+        },
+        "source_calibration_new_damage": {
+          "values": [
+            473,
+            485,
+            527
+          ],
+          "defined_trials": 3,
+          "mean": 495,
+          "min": 473,
+          "max": 527
+        },
+        "generated_calibration_new_damage": {
+          "values": [
+            62,
+            45,
+            49
+          ],
+          "defined_trials": 3,
+          "mean": 52,
+          "min": 45,
+          "max": 62
+        }
+      }
+    }
+  ]
+}

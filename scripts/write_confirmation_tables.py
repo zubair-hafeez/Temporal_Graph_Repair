@@ -11,9 +11,10 @@ NAMES={'bpi2017':'BPI 2017','bpi2019':'BPI 2019','bpi2012_check':'BPI 2012 check
        'forgeflow':'ForgeFlow','permitflow':'PermitFlow','procurechange':'ProcureChange','trialversion':'TrialVersion'}
 
 
-def cell(metric):
+def cell(metric,digits=3):
     if metric['defined_trials']!=len(metric['values']):raise ValueError('Undefined table metric')
-    return r'\shortstack{'+f"{metric['mean']:.3f}"+r'\\{\scriptsize ['+f"{metric['min']:.3f}, {metric['max']:.3f}"+']}}'
+    if len(metric['values'])==1:return f"{metric['mean']:.{digits}f}"
+    return r'\shortstack{'+f"{metric['mean']:.{digits}f}"+r'\\{\scriptsize ['+f"{metric['min']:.{digits}f}, {metric['max']:.{digits}f}"+']}}'
 
 
 def table(headers, rows, caption, label):
@@ -44,7 +45,7 @@ def main():
         main_rows.append([NAMES[domain],cell(b['before_f1']),cell(a['after_f1']),cell(b['after_f1']),cell(s['after_f1']),cell(t['after_f1'])])
         clean=metrics(domain,'clean','varied');pipeline=metrics(domain,'pipeline','varied')
         structural_plain=metrics(domain,'structural','plain');structural_varied=metrics(domain,'structural','varied')
-        structural_rows.append([NAMES[domain],cell(structural_plain['after_f1']),cell(structural_varied['after_f1'])])
+        structural_rows.append([NAMES[domain],cell(structural_plain['after_f1'],4),cell(structural_varied['after_f1'],4)])
         recovery_rows.append([NAMES[domain],
             '/'.join(str(int(v)) for v in b['damaged_events']['values']),
             '/'.join(str(int(v)) for v in b['repaired_events']['values']),
@@ -52,7 +53,7 @@ def main():
         safety_rows.append([NAMES[domain],cell(b['before_exact']),cell(b['after_exact']),
             '/'.join(str(int(v)) for v in b['identity_false_pairs']['values']),
             '/'.join(str(int(v)) for v in b['newly_damaged_events']['values']),
-            '/'.join(str(int(v)) for v in clean['newly_damaged_events']['values']),cell(pipeline['gain_f1'])])
+            '/'.join(str(int(v)) for v in clean['newly_damaged_events']['values']),cell(pipeline['gain_f1'],4)])
         for title,key in [('First recorded time','first_timestamp_correct_fraction'),
                           ('Last recorded time','last_timestamp_correct_fraction'),
                           ('Cancellation evidence','cancellation_evidence_f1')]:
@@ -86,7 +87,7 @@ def main():
       'history':table(['Source','Damaged','Original','Varied','Source labels','Target-local'],main_rows,
         'Frozen confirmation: entity-history F1, mean and observed range over three trials. Original and varied training share executed worlds and generated calibration within a trial. Source supervision uses 256 verified BPI 2012 training histories plus additional source calibration labels. Target-local learning uses extra corruption of the imperfect target and generated calibration. BPI 2012 check retains explicitly denormalized requested amount.',
         'tab:confirmation-history'),
-      'safety':table(['Source','Exact before','Exact after','False merge pairs','Mixed: new damage','Clean: new damage','Pipeline F1 change'],safety_rows,
+      'safety':table(['Source','Exact before','Exact after',r'\shortstack{False identity\\pairs}',r'\shortstack{Mixed: new\\damage}',r'\shortstack{Clean: new\\damage}',r'\shortstack{Pipeline\\F1 change}'],safety_rows,
         'Recovery and failure boundaries of the varied-observation learner. Exact-history fractions and pipeline changes show trial means/ranges. Counts separated by slashes give the three trial values in order. New damage counts initially correct events whose target participation becomes wrong. False merge pairs are inferred identity pairs, not merely the number of merge operations. Clean inputs are uncorrupted source references, not certified error-free organizational records.',
         'tab:confirmation-safety'),
       'controls':table(['Control',*[NAMES[d] for d in args.domains]],ablation_rows,

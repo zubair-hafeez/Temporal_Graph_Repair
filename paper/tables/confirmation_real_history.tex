@@ -1,0 +1,15 @@
+\begin{table}[ht]
+\centering\small
+\sbox{\resulttablebox}{\begin{tabular}{lccccc}
+\toprule
+Source & Damaged & Original & Varied & Source labels & Target-local\\
+\midrule
+BPI 2017 & \shortstack{0.787\\{\scriptsize [0.786, 0.788]}} & \shortstack{0.791\\{\scriptsize [0.788, 0.796]}} & \shortstack{0.805\\{\scriptsize [0.801, 0.808]}} & \shortstack{0.547\\{\scriptsize [0.546, 0.549]}} & \shortstack{0.787\\{\scriptsize [0.787, 0.788]}}\\
+BPI 2019 & \shortstack{0.760\\{\scriptsize [0.756, 0.764]}} & \shortstack{0.809\\{\scriptsize [0.791, 0.825]}} & \shortstack{0.826\\{\scriptsize [0.811, 0.841]}} & \shortstack{0.760\\{\scriptsize [0.758, 0.764]}} & \shortstack{0.762\\{\scriptsize [0.760, 0.764]}}\\
+BPI 2012 check & \shortstack{0.745\\{\scriptsize [0.741, 0.752]}} & \shortstack{0.776\\{\scriptsize [0.766, 0.782]}} & \shortstack{0.815\\{\scriptsize [0.807, 0.827]}} & \shortstack{0.878\\{\scriptsize [0.869, 0.889]}} & \shortstack{0.778\\{\scriptsize [0.745, 0.816]}}\\
+\bottomrule
+\end{tabular}}
+\ifdim\wd\resulttablebox>\linewidth\resizebox{\linewidth}{!}{\usebox{\resulttablebox}}\else\usebox{\resulttablebox}\fi
+\caption{Frozen confirmation: entity-history F1, mean and observed range over three trials. Original and varied training share executed worlds and generated calibration within a trial. Source supervision uses 256 verified BPI 2012 training histories plus additional source calibration labels. Target-local learning uses extra corruption of the imperfect target and generated calibration. BPI 2012 check retains explicitly denormalized requested amount.}
+\label{tab:confirmation-history}
+\end{table}

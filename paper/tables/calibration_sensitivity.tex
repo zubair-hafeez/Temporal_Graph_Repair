@@ -1,0 +1,15 @@
+\begin{table}[ht]
+\centering\small
+\sbox{\resulttablebox}{\begin{tabular}{lccccc}
+\toprule
+Source & Damaged & \shortstack{Source\\calibration} & \shortstack{Generated\\calibration} & \shortstack{Source: new\\damage} & \shortstack{Generated: new\\damage}\\
+\midrule
+BPI 2017 & \shortstack{0.787\\{\scriptsize [0.786, 0.788]}} & \shortstack{0.547\\{\scriptsize [0.546, 0.549]}} & \shortstack{0.792\\{\scriptsize [0.791, 0.795]}} & 5916/5750/5676 & 676/642/604\\
+BPI 2019 & \shortstack{0.760\\{\scriptsize [0.756, 0.764]}} & \shortstack{0.760\\{\scriptsize [0.758, 0.764]}} & \shortstack{0.761\\{\scriptsize [0.757, 0.766]}} & 1666/1676/1541 & 0/1/0\\
+BPI 2012 check & \shortstack{0.745\\{\scriptsize [0.741, 0.752]}} & \shortstack{0.878\\{\scriptsize [0.869, 0.889]}} & \shortstack{0.825\\{\scriptsize [0.820, 0.832]}} & 473/485/527 & 62/45/49\\
+\bottomrule
+\end{tabular}}
+\ifdim\wd\resulttablebox>\linewidth\resizebox{\linewidth}{!}{\usebox{\resulttablebox}}\else\usebox{\resulttablebox}\fi
+\caption{Exploratory calibration sensitivity declared after inspecting primary transfer results. The source-trained weights are identical in both conditions; both calibration caches were frozen before confirmation, but this comparison was added later. F1 cells show mean and observed range across three fault seeds. Counts list newly damaged events in each trial. These results supplement rather than replace the originally declared source-calibrated control.}
+\label{tab:calibration-sensitivity}
+\end{table}

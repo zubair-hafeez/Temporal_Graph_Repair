@@ -1,7 +1,7 @@
 {
   "project": "generative_temporal_graph_repair",
-  "status": "active",
-  "stage": "frozen_confirmation_experiments",
+  "status": "awaiting_user_final_review",
+  "stage": "completed_manuscript_for_author_review",
   "learned_model_trained": true,
   "main_target_tests_opened": true,
   "current_unit": {
@@ -26,7 +26,7 @@
     ]
   },
   "authorization": "User authorized autonomous paper development and experiments through final review; no external submission.",
-  "next_action": "Finish final BPI2012 controls and all nine declared post-freeze calibration runs; aggregate, complete manuscript and final local review artifact. Four reserved simulations remain unexecuted after individual approved retries.",
+  "next_action": "User final review of manuscript, author information, venue and any release/submission decision. Do not restart experiments or expand the general factory automatically.",
   "trained_models": [
     "source participant matcher",
     "source and synthetic identity matchers",
@@ -82,10 +82,15 @@
     "reports/generated_confirmation_evidence_v1.json",
     "reports/confirmation_candidate_evidence_v1.json",
     "reports/portability_audit_v1.json",
-    "reports/portability_full_task_replay_v1.json"
+    "reports/portability_full_task_replay_v1.json",
+    "reports/calibration_sensitivity_evidence_v1.json",
+    "reports/source_snapshot_audit_v1.json",
+    "reports/provenance_writer_fix_v1.json",
+    "52 local research/factory checks passed",
+    "reports/final_review_audit_v1.json"
   ],
   "factory_increment": "TR0 and TR1 bounded source acceptance; general factory/RF/wheel scope unchanged",
-  "manuscript": "paper/main.tex rewritten around complete primary confirmation; control and calibration-sensitivity tables and final PDF/artifact checks remain.",
+  "manuscript": "paper/main.tex and main.pdf contain the completed study, controls, exploratory sensitivity, limitations and reproducibility appendix; author details await user review.",
   "reserved_external_scenarios": [
     "ForgeFlow",
     "PermitFlow",
@@ -95,19 +100,23 @@
   "development_jobs": {
     "external_battery_attributes_repeat1": {
       "session": 10878,
-      "report": "external_battery_attributes_repeat1"
+      "report": "external_battery_attributes_repeat1",
+      "status": "completed_external_development"
     },
     "external_claim_attributes_repeat1": {
       "session": 66073,
-      "report": "external_claim_attributes_repeat1"
+      "report": "external_claim_attributes_repeat1",
+      "status": "completed_external_development"
     },
     "external_battery_attributes_repeat2": {
       "session": 96402,
-      "report": "external_battery_attributes_repeat2"
+      "report": "external_battery_attributes_repeat2",
+      "status": "completed_external_development"
     },
     "external_claim_attributes_repeat2": {
       "session": 89357,
-      "report": "external_claim_attributes_repeat2"
+      "report": "external_claim_attributes_repeat2",
+      "status": "completed_external_development"
     }
   },
   "independent_native_transfer": "Revised varied-attribute generated training reaches .880412 BatteryVault and .919719 ClaimStream; clean counterparts receive zero edits. Pipeline faults remain harder (.807484/.798482), including false merges. BPI tune decreases to .807426 from old .837963.",
@@ -183,7 +192,8 @@
     },
     "controls_real": {
       "session": 12367,
-      "report": "confirmation_controls_bpi2017_bpi2019_bpi2012_check"
+      "report": "confirmation_controls_bpi2017_bpi2019_bpi2012_check",
+      "status": "completed_and_reconciled"
     },
     "adaptation_bpi2019_seed2_restart": {
       "session": 96907,
@@ -220,7 +230,8 @@
     "calibration_sensitivity": {
       "session": 57463,
       "report": "calibration_sensitivity_v1",
-      "scope": "post-freeze exploratory calibration sensitivity; nine declared runs"
+      "scope": "post-freeze exploratory calibration sensitivity; nine declared runs",
+      "status": "completed_all_nine"
     }
   },
   "operational_continuation": "docs/CONFIRMATION_OPERATIONAL_CONTINUATION_V1.json",
@@ -235,12 +246,13 @@
       "original": 0.8091403612654288,
       "varied": 0.8263415831838978
     },
-    "limit": "All primary groups complete. Final BPI2012 controls and separate post-freeze calibration sensitivity still running. Four reserved simulation files not retrieved; no unseen records decoded.",
+    "limit": "All 84 available-source original jobs and nine separate calibration follow-ups complete. Four predeclared simulations remain unexecuted and explicitly disclosed.",
     "bpi2012_check": {
       "damaged": 0.745336159458486,
       "original": 0.7760359892909431,
       "varied": 0.8154587323310443,
       "source_supervised": 0.8777994658563016
     }
-  }
+  },
+  "scientific_completion_utc": "2026-10-16T03:16:06.378540+00:00"
 }

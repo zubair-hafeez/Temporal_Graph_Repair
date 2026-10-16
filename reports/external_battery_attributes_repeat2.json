@@ -1,5 +1,5 @@
 {
-  "status": "running_external_development",
+  "status": "completed_external_development",
   "config": {
     "task": "data/external_development_v1/batteryvault/mixed",
     "model": "edit_feature_attributes_repeat2",
@@ -269,5 +269,73 @@
     "Controlled recording faults on public-source references, not independently labelled natural errors.",
     "Calibration provenance is recorded separately; target evaluation labels never enter decoding.",
     "Queries concern the available window; lifetime histories may be censored."
-  ]
+  ],
+  "after": {
+    "history": {
+      "precision": 0.9276216605766813,
+      "recall": 0.8118536900538107,
+      "f1": 0.845150720997877,
+      "exact_history_fraction": 0.20107349298100743,
+      "entities": 1211,
+      "per_type": {
+        "BatteryPack": {
+          "precision": 0.9439957881482071,
+          "recall": 0.8127867054931552,
+          "f1": 0.8528953218225528,
+          "exact_history_fraction": 0.11442516268980477,
+          "entities": 922
+        },
+        "ServiceOrder": {
+          "precision": 0.8753830944142362,
+          "recall": 0.8088770802438624,
+          "f1": 0.8204430325537594,
+          "exact_history_fraction": 0.47750865051903113,
+          "entities": 289
+        }
+      }
+    },
+    "identity": {
+      "predicted_pairs": 10,
+      "true_pairs": 246,
+      "correct_pairs": 10,
+      "precision": 1.0,
+      "recall": 0.04065040650406504,
+      "f1": 0.078125
+    },
+    "events": {
+      "originally_correct_events": 17708,
+      "preserved_correct_events": 17674,
+      "damaged_events": 4377,
+      "repaired_events": 2069
+    },
+    "protected_event_fields_preserved": true
+  },
+  "queries_after": {
+    "entities": 1211,
+    "empty_history_fraction": 0.008670520231213872,
+    "first_timestamp_correct_fraction": 0.7535094962840627,
+    "last_timestamp_correct_fraction": 0.7374071015689513,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 1211.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "exception_evidence": {
+        "true_positive": 326.5,
+        "false_positive": 6.5,
+        "false_negative": 53.5,
+        "true_negative": 824.5,
+        "precision": 0.9804804804804805,
+        "recall": 0.8592105263157894,
+        "f1": 0.9158485273492286
+      }
+    }
+  },
+  "seconds": 1305.4040666889632,
+  "edit_count": 3909
 }

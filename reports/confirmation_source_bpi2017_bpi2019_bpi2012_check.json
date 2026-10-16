@@ -1,0 +1,373 @@
+{
+  "status": "completed_confirmation_block",
+  "config": {
+    "protocol": "docs/CONFIRMATION_PROTOCOL_V1.json",
+    "domains": [
+      "bpi2017",
+      "bpi2019",
+      "bpi2012_check"
+    ],
+    "suite": "source",
+    "workers": 2,
+    "resume": true,
+    "plan_only": false
+  },
+  "protocol_hash": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "jobs": [
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "source256",
+      "model": "source_edit_learning_v2_source_only_256",
+      "output": "confirm_bpi2017_native_mixed_91001_source256",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "arm": "source256",
+      "model": "source_edit_learning_v2_source_only_256",
+      "output": "confirm_bpi2017_native_mixed_91002_source256",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91002"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "arm": "source256",
+      "model": "source_edit_learning_v2_source_only_256",
+      "output": "confirm_bpi2017_native_mixed_91003_source256",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91003"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "source256",
+      "model": "source_edit_learning_v2_source_only_256",
+      "output": "confirm_bpi2019_native_mixed_91001_source256",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "arm": "source256",
+      "model": "source_edit_learning_v2_source_only_256",
+      "output": "confirm_bpi2019_native_mixed_91002_source256",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91002"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "arm": "source256",
+      "model": "source_edit_learning_v2_source_only_256",
+      "output": "confirm_bpi2019_native_mixed_91003_source256",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91003"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "source256",
+      "model": "source_edit_learning_v2_source_only_256",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_source256",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91002,
+      "arm": "source256",
+      "model": "source_edit_learning_v2_source_only_256",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91002_source256",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91002"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91003,
+      "arm": "source256",
+      "model": "source_edit_learning_v2_source_only_256",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91003_source256",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91003"
+    }
+  ],
+  "outcomes": [
+    {
+      "output": "confirm_bpi2017_native_mixed_91001_source256",
+      "status": "completed",
+      "report_hash": "3874fb7976363e18ec061ca5cf279fe60f400cb859c14eb8b6f708ef61486be5",
+      "seconds": 394.22278370603453,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2017/native/mixed_91001",
+          "--model",
+          "source_edit_learning_v2_source_only_256",
+          "--kind",
+          "feature",
+          "--calibration",
+          "source_edit_learning_v2_source_only_256",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2017_native_mixed_91001_source256",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all",
+          "--resume"
+        ]
+      ],
+      "f1": 0.5486299380636033
+    },
+    {
+      "output": "confirm_bpi2017_native_mixed_91002_source256",
+      "status": "completed",
+      "report_hash": "df15d8c3af43d2dea22e40d4c7c8d61200202ab6b5891f687f573a39133a437b",
+      "seconds": 398.7227704679826,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2017/native/mixed_91002",
+          "--model",
+          "source_edit_learning_v2_source_only_256",
+          "--kind",
+          "feature",
+          "--calibration",
+          "source_edit_learning_v2_source_only_256",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2017_native_mixed_91002_source256",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all",
+          "--resume"
+        ]
+      ],
+      "f1": 0.5457639401650984
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91001_source256",
+      "status": "completed",
+      "report_hash": "d8fa0410b5a69dcdaa34ae2412ae4924c3d301626702d50cc9b951e78722c590",
+      "seconds": 1234.3462104459759,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2019/native/mixed_91001",
+          "--model",
+          "source_edit_learning_v2_source_only_256",
+          "--kind",
+          "feature",
+          "--calibration",
+          "source_edit_learning_v2_source_only_256",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2019_native_mixed_91001_source256",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.7578726809387616
+    },
+    {
+      "output": "confirm_bpi2017_native_mixed_91003_source256",
+      "status": "completed",
+      "report_hash": "a78b1b915f9ccdcd4dc13fe249ad5a7032ce73eb9312f908bfc993ca6fd5011f",
+      "seconds": 1466.4380515549565,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2017/native/mixed_91003",
+          "--model",
+          "source_edit_learning_v2_source_only_256",
+          "--kind",
+          "feature",
+          "--calibration",
+          "source_edit_learning_v2_source_only_256",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2017_native_mixed_91003_source256",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.5471410652046701
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91002_source256",
+      "status": "completed",
+      "report_hash": "3ae39e33d47c0304c98a4ac203af95242cf0d7e8cc200a28432b88de07014f04",
+      "seconds": 1109.4440751119982,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2019/native/mixed_91002",
+          "--model",
+          "source_edit_learning_v2_source_only_256",
+          "--kind",
+          "feature",
+          "--calibration",
+          "source_edit_learning_v2_source_only_256",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2019_native_mixed_91002_source256",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.7642606080079658
+    },
+    {
+      "output": "confirm_bpi2019_native_mixed_91003_source256",
+      "status": "completed",
+      "report_hash": "bb1229825aa889339ac7565065cd957f1723a7ace990559c253383c8d1abcde9",
+      "seconds": 1163.8299839859828,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2019/native/mixed_91003",
+          "--model",
+          "source_edit_learning_v2_source_only_256",
+          "--kind",
+          "feature",
+          "--calibration",
+          "source_edit_learning_v2_source_only_256",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2019_native_mixed_91003_source256",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.7584318073136659
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_source256",
+      "status": "completed",
+      "report_hash": "f4b862eb5932d0b2e27cbb061c7ed4981cbe050b6775fe39ef512787c5564837",
+      "seconds": 912.6344932490028,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001",
+          "--model",
+          "source_edit_learning_v2_source_only_256",
+          "--kind",
+          "feature",
+          "--calibration",
+          "source_edit_learning_v2_source_only_256",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2012_check_denormalized_mixed_91001_source256",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.8755498922500446
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91002_source256",
+      "status": "completed",
+      "report_hash": "9cb0b4f31b749aaf44c706c6e8e45b885f2179f9a1d79bb2b700f2fafb54d213",
+      "seconds": 885.8896357100457,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2012_check/denormalized/mixed_91002",
+          "--model",
+          "source_edit_learning_v2_source_only_256",
+          "--kind",
+          "feature",
+          "--calibration",
+          "source_edit_learning_v2_source_only_256",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2012_check_denormalized_mixed_91002_source256",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.888685946047046
+    },
+    {
+      "output": "confirm_bpi2012_check_denormalized_mixed_91003_source256",
+      "status": "completed",
+      "report_hash": "7ed80e31cf08e2b528b5ff27c65909a69bf07d9fd2ca43d3729ce94305f5c6a3",
+      "seconds": 858.2175339369569,
+      "commands": [
+        [
+          "/home/zubair/zubairEnv/bin/python",
+          "/mnt/zubair/Temporal_Graph_Repair/scripts/evaluate_external_policy.py",
+          "--task",
+          "data/confirmation_v1/bpi2012_check/denormalized/mixed_91003",
+          "--model",
+          "source_edit_learning_v2_source_only_256",
+          "--kind",
+          "feature",
+          "--calibration",
+          "source_edit_learning_v2_source_only_256",
+          "--protocol",
+          "docs/CONFIRMATION_PROTOCOL_V1.json",
+          "--output",
+          "confirm_bpi2012_check_denormalized_mixed_91003_source256",
+          "--mode",
+          "joint",
+          "--attribute-view",
+          "all"
+        ]
+      ],
+      "f1": 0.8691625592718142
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "status": "working_claim_audit",
+  "status": "scientific_claim_review_complete",
   "claims": [
     {
       "claim": "Generated observation variation improves held-out compositional history retrieval.",
@@ -81,18 +81,20 @@
       "evidence": [
         "reports/portability_audit_v1.json",
         "reports/portability_sample_replay_v1.json",
-        "reports/portability_task_regeneration_v1.json"
+        "reports/portability_task_regeneration_v1.json",
+        "reports/portability_full_task_replay_v1.json",
+        "reports/portability_raw_source_rebuild_v1.json"
       ],
-      "boundary": "Same interpreter/environment; sampled six-model inference and full task regeneration, not independent retraining."
+      "boundary": "Same interpreter/environment: all six models replayed on the fixed first generated graph, all 14 tasks regenerated, and a complete mixed task reproduced byte-identical outputs. Raw public BPI2012 also regenerates its exact check split. No new-hardware retraining claim."
     },
     {
       "claim": "All declared confirmation experiments have finished.",
-      "status": "pending",
+      "status": "not_claimed",
       "evidence": [
         "reports/confirmation_real_evidence_v1.json",
         "reports/reserved_download_audit_v1.json"
       ],
-      "boundary": "Selected real-source blocks are running; four reserved public simulations have not been retrieved in this environment."
+      "boundary": "All 84 original selected real-source jobs, six generated-model runs and nine separately declared follow-up runs completed. Four reserved simulations (112 planned jobs) remain unexecuted after documented download failures."
     },
     {
       "claim": "Varied observations improve reserved purchasing history F1 over the paired original learner.",
@@ -110,13 +112,38 @@
         "reports/confirm_bpi2017_native_mixed_91001_varied_r0.json"
       ],
       "boundary": "GraphSAGE has higher loan trial-zero F1 (.812206 versus .807628), alongside more newly damaged events (1848 versus 295). Report the trade-off without post-hoc utility selection."
+    },
+    {
+      "claim": "The source model\u2019s poor original loan transfer is intrinsic to its fitted weights.",
+      "status": "refuted",
+      "evidence": [
+        "reports/calibration_sensitivity_evidence_v1.json"
+      ],
+      "boundary": "An explicitly post-freeze switch to an already-frozen generated calibration raises F1 from .547178 to .792180 without changing the source weights."
+    },
+    {
+      "claim": "Paired observation variation improves the held-out BPI2012 check relative to original-observation training.",
+      "status": "supported",
+      "evidence": [
+        "reports/confirmation_real_evidence_v1.json"
+      ],
+      "boundary": "All three pairs positive; mean .815459 versus .776036. Source supervision and some neural/stable-field configurations remain stronger."
+    },
+    {
+      "claim": "Every historical source-archive byte checksum field was recorded correctly.",
+      "status": "refuted_and_disclosed",
+      "evidence": [
+        "reports/source_snapshot_audit_v1.json",
+        "reports/provenance_writer_fix_v1.json"
+      ],
+      "boundary": "Eight transient byte-checksum fields are preserved with explicit errata. Every member of all 60 archives matches its recorded source inventory. Scientific model/data pins are unaffected."
     }
   ],
-  "required_before_final_review": [
-    "Complete all 84 selected real-source jobs and their provenance-checked tables.",
-    "Explicitly account for four reserved simulation sources if retrieval continues to fail.",
-    "Finish whole-graph portability replay and compare the original output.",
-    "Replace developmental abstract and pending language, then compile and inspect the final PDF.",
-    "Build and checksum the final review bundle; do not publish or submit."
+  "completed_utc": "2026-10-16T03:14:22.404110+00:00",
+  "external_review_items": [
+    "Author names and affiliations",
+    "Scientific framing and explicit limitations",
+    "Venue-specific format and submission decision",
+    "Release license decision"
   ]
 }
