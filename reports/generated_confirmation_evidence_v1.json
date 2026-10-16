@@ -1,0 +1,447 @@
+{
+  "status": "complete_generated_confirmation_analysis",
+  "protocol_hash": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "source_reports": {
+    "reports/confirm_generated_plain_r0.json": "44cb47808fa9317ca094902517111faef7a64d7967a9a754d84e0bf9e0d01e16",
+    "reports/confirm_generated_varied_r0.json": "754a5ccb7a79b5757e9e074dbf50755dd773031ee033d108c22a2ecb360c4ae4",
+    "reports/confirm_generated_plain_r1.json": "8e085848ccebbfbd1e4e147e0273f0d4077b23ad11157ae0469b649eadf4b785",
+    "reports/confirm_generated_varied_r1.json": "f38d5644f32a5f9edb05809fb8f756a6686459747b1d7126b63d57afef12fb29",
+    "reports/confirm_generated_plain_r2.json": "c2876a5e9dd4248369c43a6b86c2cd31f35d7703f2a1b3ab555785745a8052d9",
+    "reports/confirm_generated_varied_r2.json": "c3f498a0867b9e80df28e0f1bb4a11132ffd100de4961a6f9036cb5a5c4e415b"
+  },
+  "script_hash": "162fe096ad5953990fdcad243ae9c7aefae7d7e0d7faf914969328fba5ea0055",
+  "worlds_per_model": 96,
+  "trials": [
+    {
+      "replicate": 0,
+      "plain": {
+        "mixed": {
+          "before_f1": 0.7340165428653854,
+          "after_f1": 0.7649641274477047,
+          "before_exact": 0.008991517452516673,
+          "after_exact": 0.04398713226352276,
+          "improved_worlds": 83,
+          "worsened_worlds": 9,
+          "edits": 15772
+        },
+        "clean": {
+          "before_f1": 1.0,
+          "after_f1": 0.9997772889116564,
+          "before_exact": 1.0,
+          "after_exact": 0.9946582943629437,
+          "improved_worlds": 0,
+          "worsened_worlds": 6,
+          "edits": 63
+        }
+      },
+      "varied": {
+        "mixed": {
+          "before_f1": 0.7340165428653854,
+          "after_f1": 0.8113208114534025,
+          "before_exact": 0.008991517452516673,
+          "after_exact": 0.1329447426809602,
+          "improved_worlds": 89,
+          "worsened_worlds": 7,
+          "edits": 29368
+        },
+        "clean": {
+          "before_f1": 1.0,
+          "after_f1": 0.999801670188886,
+          "before_exact": 1.0,
+          "after_exact": 0.9966868758330758,
+          "improved_worlds": 0,
+          "worsened_worlds": 7,
+          "edits": 16
+        }
+      },
+      "paired_mixed_f1_gain": 0.04635668400569781
+    },
+    {
+      "replicate": 1,
+      "plain": {
+        "mixed": {
+          "before_f1": 0.7340165428653854,
+          "after_f1": 0.7561224511908354,
+          "before_exact": 0.008991517452516673,
+          "after_exact": 0.031045814169679848,
+          "improved_worlds": 68,
+          "worsened_worlds": 12,
+          "edits": 10411
+        },
+        "clean": {
+          "before_f1": 1.0,
+          "after_f1": 0.999445650015959,
+          "before_exact": 1.0,
+          "after_exact": 0.9865096860664979,
+          "improved_worlds": 0,
+          "worsened_worlds": 10,
+          "edits": 138
+        }
+      },
+      "varied": {
+        "mixed": {
+          "before_f1": 0.7340165428653854,
+          "after_f1": 0.7973427669486566,
+          "before_exact": 0.008991517452516673,
+          "after_exact": 0.09966012377145797,
+          "improved_worlds": 90,
+          "worsened_worlds": 5,
+          "edits": 26117
+        },
+        "clean": {
+          "before_f1": 1.0,
+          "after_f1": 0.9998374854022993,
+          "before_exact": 1.0,
+          "after_exact": 0.9981150793650794,
+          "improved_worlds": 0,
+          "worsened_worlds": 3,
+          "edits": 14
+        }
+      },
+      "paired_mixed_f1_gain": 0.04122031575782115
+    },
+    {
+      "replicate": 2,
+      "plain": {
+        "mixed": {
+          "before_f1": 0.7340165428653854,
+          "after_f1": 0.7554203529775585,
+          "before_exact": 0.008991517452516673,
+          "after_exact": 0.032003985147841654,
+          "improved_worlds": 74,
+          "worsened_worlds": 3,
+          "edits": 12384
+        },
+        "clean": {
+          "before_f1": 1.0,
+          "after_f1": 0.9999534545335187,
+          "before_exact": 1.0,
+          "after_exact": 0.9986652057424116,
+          "improved_worlds": 0,
+          "worsened_worlds": 4,
+          "edits": 8
+        }
+      },
+      "varied": {
+        "mixed": {
+          "before_f1": 0.7340165428653854,
+          "after_f1": 0.7913316341243757,
+          "before_exact": 0.008991517452516673,
+          "after_exact": 0.0968798197069192,
+          "improved_worlds": 90,
+          "worsened_worlds": 5,
+          "edits": 26907
+        },
+        "clean": {
+          "before_f1": 1.0,
+          "after_f1": 0.9999612968371051,
+          "before_exact": 1.0,
+          "after_exact": 0.998111147406117,
+          "improved_worlds": 0,
+          "worsened_worlds": 3,
+          "edits": 21
+        }
+      },
+      "paired_mixed_f1_gain": 0.03591128114681719
+    }
+  ],
+  "summaries": {
+    "plain": {
+      "mixed": {
+        "before_f1": {
+          "values": [
+            0.7340165428653854,
+            0.7340165428653854,
+            0.7340165428653854
+          ],
+          "mean": 0.7340165428653854,
+          "min": 0.7340165428653854,
+          "max": 0.7340165428653854
+        },
+        "after_f1": {
+          "values": [
+            0.7649641274477047,
+            0.7561224511908354,
+            0.7554203529775585
+          ],
+          "mean": 0.7588356438720328,
+          "min": 0.7554203529775585,
+          "max": 0.7649641274477047
+        },
+        "before_exact": {
+          "values": [
+            0.008991517452516673,
+            0.008991517452516673,
+            0.008991517452516673
+          ],
+          "mean": 0.008991517452516673,
+          "min": 0.008991517452516673,
+          "max": 0.008991517452516673
+        },
+        "after_exact": {
+          "values": [
+            0.04398713226352276,
+            0.031045814169679848,
+            0.032003985147841654
+          ],
+          "mean": 0.03567897719368142,
+          "min": 0.031045814169679848,
+          "max": 0.04398713226352276
+        },
+        "improved_worlds": {
+          "values": [
+            83,
+            68,
+            74
+          ],
+          "mean": 75,
+          "min": 68,
+          "max": 83
+        },
+        "worsened_worlds": {
+          "values": [
+            9,
+            12,
+            3
+          ],
+          "mean": 8,
+          "min": 3,
+          "max": 12
+        },
+        "edits": {
+          "values": [
+            15772,
+            10411,
+            12384
+          ],
+          "mean": 12855.666666666666,
+          "min": 10411,
+          "max": 15772
+        }
+      },
+      "clean": {
+        "before_f1": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "after_f1": {
+          "values": [
+            0.9997772889116564,
+            0.999445650015959,
+            0.9999534545335187
+          ],
+          "mean": 0.9997254644870447,
+          "min": 0.999445650015959,
+          "max": 0.9999534545335187
+        },
+        "before_exact": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "after_exact": {
+          "values": [
+            0.9946582943629437,
+            0.9865096860664979,
+            0.9986652057424116
+          ],
+          "mean": 0.993277728723951,
+          "min": 0.9865096860664979,
+          "max": 0.9986652057424116
+        },
+        "improved_worlds": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "worsened_worlds": {
+          "values": [
+            6,
+            10,
+            4
+          ],
+          "mean": 6.666666666666667,
+          "min": 4,
+          "max": 10
+        },
+        "edits": {
+          "values": [
+            63,
+            138,
+            8
+          ],
+          "mean": 69.66666666666667,
+          "min": 8,
+          "max": 138
+        }
+      }
+    },
+    "varied": {
+      "mixed": {
+        "before_f1": {
+          "values": [
+            0.7340165428653854,
+            0.7340165428653854,
+            0.7340165428653854
+          ],
+          "mean": 0.7340165428653854,
+          "min": 0.7340165428653854,
+          "max": 0.7340165428653854
+        },
+        "after_f1": {
+          "values": [
+            0.8113208114534025,
+            0.7973427669486566,
+            0.7913316341243757
+          ],
+          "mean": 0.7999984041754783,
+          "min": 0.7913316341243757,
+          "max": 0.8113208114534025
+        },
+        "before_exact": {
+          "values": [
+            0.008991517452516673,
+            0.008991517452516673,
+            0.008991517452516673
+          ],
+          "mean": 0.008991517452516673,
+          "min": 0.008991517452516673,
+          "max": 0.008991517452516673
+        },
+        "after_exact": {
+          "values": [
+            0.1329447426809602,
+            0.09966012377145797,
+            0.0968798197069192
+          ],
+          "mean": 0.10982822871977913,
+          "min": 0.0968798197069192,
+          "max": 0.1329447426809602
+        },
+        "improved_worlds": {
+          "values": [
+            89,
+            90,
+            90
+          ],
+          "mean": 89.66666666666667,
+          "min": 89,
+          "max": 90
+        },
+        "worsened_worlds": {
+          "values": [
+            7,
+            5,
+            5
+          ],
+          "mean": 5.666666666666667,
+          "min": 5,
+          "max": 7
+        },
+        "edits": {
+          "values": [
+            29368,
+            26117,
+            26907
+          ],
+          "mean": 27464,
+          "min": 26117,
+          "max": 29368
+        }
+      },
+      "clean": {
+        "before_f1": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "after_f1": {
+          "values": [
+            0.999801670188886,
+            0.9998374854022993,
+            0.9999612968371051
+          ],
+          "mean": 0.9998668174760968,
+          "min": 0.999801670188886,
+          "max": 0.9999612968371051
+        },
+        "before_exact": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "after_exact": {
+          "values": [
+            0.9966868758330758,
+            0.9981150793650794,
+            0.998111147406117
+          ],
+          "mean": 0.9976377008680907,
+          "min": 0.9966868758330758,
+          "max": 0.9981150793650794
+        },
+        "improved_worlds": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "worsened_worlds": {
+          "values": [
+            7,
+            3,
+            3
+          ],
+          "mean": 4.333333333333333,
+          "min": 3,
+          "max": 7
+        },
+        "edits": {
+          "values": [
+            16,
+            14,
+            21
+          ],
+          "mean": 17,
+          "min": 14,
+          "max": 21
+        }
+      }
+    }
+  },
+  "limits": [
+    "Each trial is a separately generated training/validation collection; all models evaluate the same held-out worlds.",
+    "World-level performance is first averaged equally; training trials, not events, define the reported range.",
+    "All worlds share a simulator. This evaluates held-out compositions of known mechanisms, not independent-domain transfer."
+  ]
+}

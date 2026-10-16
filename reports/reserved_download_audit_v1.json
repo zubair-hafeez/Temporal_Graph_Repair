@@ -1,5 +1,28 @@
 {
   "status": "reserved_download_incomplete",
   "records_decoded": false,
-  "files": {}
+  "files": {},
+  "latest_attempt_recorded_utc": "2026-10-16T02:13:01.920559+00:00",
+  "latest_attempt": {
+    "url": "https://zenodo.org/records/22079246/files/forgeflow.jsonocel.gz?download=1",
+    "approved_network_retry": true,
+    "connect_timeout_seconds": 15,
+    "max_seconds": 45,
+    "exit_code": 28,
+    "error": "Connection timed out after 15000 milliseconds",
+    "session": 91587
+  },
+  "files_present": [],
+  "preserved_attempts": [
+    {
+      "url": "https://zenodo.org/api/records/22079246/files/forgeflow.jsonocel.gz/content",
+      "approved_network_retry": true,
+      "http_version": "1.1",
+      "connect_timeout_seconds": 15,
+      "max_seconds": 45,
+      "exit_code": 28,
+      "error": "Connection timed out after 15000 milliseconds"
+    }
+  ],
+  "scope": "These download failures occurred in this execution environment. The publication metadata remains accessible through the research browser; this is not a claim that the dataset is globally unavailable."
 }

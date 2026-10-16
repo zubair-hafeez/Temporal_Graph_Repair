@@ -1,0 +1,429 @@
+{
+  "status": "posthoc_illustrative_case_audit",
+  "config": {
+    "task": "data/confirmation_v1/bpi2017/native/mixed_91001",
+    "run": "confirm_bpi2017_native_mixed_91001_varied_r0",
+    "output": "confirm_bpi2017_application_cases_v1"
+  },
+  "task_hash": "9e2ad886966fde9a4ecd3ed4f8d700183826f544282637b8a55ea83c0c5f044c",
+  "result_hash": "869a5988de13cb7353112b60fed00934fbf8e318a925bcdd3e163e499bf66f93",
+  "case_audit_script_hash": "764e9f45a7c75ef9bbcc23844c1453142597061aeb22d2fe4f31779d4c7d4834",
+  "population": {
+    "entities": 2422,
+    "improved": 1036,
+    "worsened": 79,
+    "unchanged": 1307
+  },
+  "cases": [
+    {
+      "selection_rule": "exception_success_nearest_median_gain",
+      "true": "o000000331",
+      "type": "Application",
+      "before_f1": 0.8979591836734694,
+      "after_f1": 0.9387755102040817,
+      "gain": 0.04081632653061229,
+      "records": 26,
+      "has_exception_evidence": true,
+      "handles": [
+        "o000000331"
+      ],
+      "queried_handle": "o000000331",
+      "events": [
+        {
+          "uid": "e000026846",
+          "time": 1464013330.761,
+          "activity": "W_Call incomplete files::complete",
+          "in_reference_history": false,
+          "retrieved_before": true,
+          "retrieved_after": false,
+          "attributes": {
+            "Action": "Deleted",
+            "EventOrigin": "Workflow"
+          }
+        },
+        {
+          "uid": "e000009150",
+          "time": 1473354806.731,
+          "activity": "A_Create Application::complete",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "Created",
+            "EventOrigin": "Application"
+          }
+        },
+        {
+          "uid": "e000008338",
+          "time": 1473354806.767,
+          "activity": "A_Submitted::complete",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Application"
+          }
+        },
+        {
+          "uid": "e000020303",
+          "time": 1473354807.249,
+          "activity": "W_Handle leads::schedule",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "Created",
+            "EventOrigin": "Workflow"
+          }
+        },
+        {
+          "uid": "e000026470",
+          "time": 1473354879.297,
+          "activity": "W_Handle leads::withdraw",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "Deleted",
+            "EventOrigin": "Workflow"
+          }
+        },
+        {
+          "uid": "e000030600",
+          "time": 1473354879.304,
+          "activity": "W_Complete application::schedule",
+          "in_reference_history": true,
+          "retrieved_before": false,
+          "retrieved_after": false,
+          "attributes": {
+            "Action": "Created",
+            "EventOrigin": "Workflow"
+          }
+        },
+        {
+          "uid": "e000037143",
+          "time": 1473354879.308,
+          "activity": "A_Concept::complete",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Application"
+          }
+        },
+        {
+          "uid": "e000037725",
+          "time": 1473357347.413,
+          "activity": "W_Complete application::start",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "Obtained",
+            "EventOrigin": "Workflow"
+          }
+        },
+        {
+          "uid": "e000024053",
+          "time": 1473357417.233,
+          "activity": "W_Complete application::suspend",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "Released",
+            "EventOrigin": "Workflow"
+          }
+        },
+        {
+          "uid": "e000001569",
+          "time": 1473359825.881,
+          "activity": "A_Accepted::complete",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Application"
+          }
+        },
+        {
+          "uid": "e000032692",
+          "time": 1473360293.794,
+          "activity": "O_Create Offer::complete",
+          "in_reference_history": true,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "Created",
+            "FirstWithdrawalAmount": 0.0,
+            "NumberOfTerms": 127.0,
+            "Accepted": true,
+            "MonthlyCost": 150.0,
+            "EventOrigin": "Offer",
+            "Selected": false,
+            "CreditScore": 0.0,
+            "OfferedAmount": 15000.0
+          }
+        },
+        {
+          "uid": "e000035616",
+          "time": 1473360294.531,
+          "activity": "O_Created::complete",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Offer"
+          }
+        },
+        {
+          "uid": "e000013072",
+          "time": 1473360305.971,
+          "activity": "O_Sent (mail and online)::complete",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Offer"
+          }
+        },
+        {
+          "uid": "e000014811",
+          "time": 1473360305.983,
+          "activity": "W_Complete application::ate_abort",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "Deleted",
+            "EventOrigin": "Workflow"
+          }
+        },
+        {
+          "uid": "e000000144",
+          "time": 1473360305.989,
+          "activity": "W_Call after offers::schedule",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "Created",
+            "EventOrigin": "Workflow"
+          }
+        },
+        {
+          "uid": "e000007429",
+          "time": 1473360305.991,
+          "activity": "W_Call after offers::start",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "Obtained",
+            "EventOrigin": "Workflow"
+          }
+        },
+        {
+          "uid": "e000030810",
+          "time": 1473360305.993,
+          "activity": "A_Complete::complete",
+          "in_reference_history": true,
+          "retrieved_before": false,
+          "retrieved_after": false,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Application"
+          }
+        },
+        {
+          "uid": "e000033038",
+          "time": 1473360494.372,
+          "activity": "W_Call after offers::suspend",
+          "in_reference_history": true,
+          "retrieved_before": false,
+          "retrieved_after": false,
+          "attributes": {
+            "Action": "Released",
+            "EventOrigin": "Workflow"
+          }
+        },
+        {
+          "uid": "e000016463",
+          "time": 1473760021.542,
+          "activity": "W_Call after offers::resume",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "Obtained",
+            "EventOrigin": "Workflow"
+          }
+        },
+        {
+          "uid": "e000000750",
+          "time": 1473760084.596,
+          "activity": "W_Call after offers::suspend",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "Released",
+            "EventOrigin": "Workflow"
+          }
+        },
+        {
+          "uid": "e000008259",
+          "time": 1474705720.756,
+          "activity": "O_Create Offer::complete",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "Created",
+            "FirstWithdrawalAmount": 0.0,
+            "NumberOfTerms": 126.0,
+            "Accepted": true,
+            "MonthlyCost": 250.0,
+            "EventOrigin": "Offer",
+            "Selected": false,
+            "CreditScore": 0.0,
+            "OfferedAmount": 25000.0
+          }
+        },
+        {
+          "uid": "e000010465",
+          "time": 1474705721.596,
+          "activity": "O_Created::complete",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Offer"
+          }
+        },
+        {
+          "uid": "e000012112",
+          "time": 1474705775.779,
+          "activity": "O_Sent (mail and online)::complete",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Offer"
+          }
+        },
+        {
+          "uid": "e000026645",
+          "time": 1477375362.313,
+          "activity": "A_Cancelled::complete",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Application"
+          }
+        },
+        {
+          "uid": "e000012097",
+          "time": 1477375362.36,
+          "activity": "O_Cancelled::complete",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Offer"
+          }
+        },
+        {
+          "uid": "e000014094",
+          "time": 1477375362.371,
+          "activity": "O_Cancelled::complete",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Offer"
+          }
+        },
+        {
+          "uid": "e000007471",
+          "time": 1477375362.387,
+          "activity": "W_Call after offers::ate_abort",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "Deleted",
+            "EventOrigin": "Workflow"
+          }
+        }
+      ]
+    },
+    {
+      "selection_rule": "largest_history_f1_loss",
+      "true": "o000001216",
+      "type": "Offer",
+      "before_f1": 0.5,
+      "after_f1": 0.0,
+      "gain": -0.5,
+      "records": 2,
+      "has_exception_evidence": true,
+      "handles": [
+        "o000001216"
+      ],
+      "queried_handle": "o000001216",
+      "events": [
+        {
+          "uid": "e000005169",
+          "time": 1470392041.081,
+          "activity": "O_Created::complete",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": false,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Offer"
+          }
+        },
+        {
+          "uid": "e000009882",
+          "time": 1470392328.758,
+          "activity": "O_Cancelled::complete",
+          "in_reference_history": true,
+          "retrieved_before": false,
+          "retrieved_after": false,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Offer"
+          }
+        },
+        {
+          "uid": "e000005078",
+          "time": 1481621325.34,
+          "activity": "O_Created::complete",
+          "in_reference_history": false,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "Action": "statechange",
+            "EventOrigin": "Offer"
+          }
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Examples are selected from evaluated outcomes to illustrate behavior, not an independent efficacy test.",
+    "Entity scores average across aliases; the displayed record list uses one hash-selected observed handle."
+  ]
+}

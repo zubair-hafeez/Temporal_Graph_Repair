@@ -1,0 +1,62 @@
+{
+  "status": "sampled_frozen_inference_replay_passed",
+  "protocol_hash": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "script_hash": "51bf9fe8e2443d28e6a2a466abcb5ebe658b600931827a720695f6f3d8077887",
+  "replays": [
+    {
+      "report": "confirm_generated_plain_r0",
+      "report_snapshot_sha256": "44cb47808fa9317ca094902517111faef7a64d7967a9a754d84e0bf9e0d01e16",
+      "episode": "episode-000086",
+      "variant": "mixed",
+      "edits": 18,
+      "seconds": 5.495440121972933,
+      "exact_outcome_and_edit_program_match": true
+    },
+    {
+      "report": "confirm_generated_varied_r0",
+      "report_snapshot_sha256": "754a5ccb7a79b5757e9e074dbf50755dd773031ee033d108c22a2ecb360c4ae4",
+      "episode": "episode-000086",
+      "variant": "mixed",
+      "edits": 35,
+      "seconds": 11.053249732940458,
+      "exact_outcome_and_edit_program_match": true
+    },
+    {
+      "report": "confirm_generated_plain_r1",
+      "report_snapshot_sha256": "8e085848ccebbfbd1e4e147e0273f0d4077b23ad11157ae0469b649eadf4b785",
+      "episode": "episode-000086",
+      "variant": "mixed",
+      "edits": 1,
+      "seconds": 5.4022599019808695,
+      "exact_outcome_and_edit_program_match": true
+    },
+    {
+      "report": "confirm_generated_varied_r1",
+      "report_snapshot_sha256": "f38d5644f32a5f9edb05809fb8f756a6686459747b1d7126b63d57afef12fb29",
+      "episode": "episode-000086",
+      "variant": "mixed",
+      "edits": 28,
+      "seconds": 15.969213798991404,
+      "exact_outcome_and_edit_program_match": true
+    },
+    {
+      "report": "confirm_generated_plain_r2",
+      "report_snapshot_sha256": "c2876a5e9dd4248369c43a6b86c2cd31f35d7703f2a1b3ab555785745a8052d9",
+      "episode": "episode-000086",
+      "variant": "mixed",
+      "edits": 8,
+      "seconds": 8.730229676002637,
+      "exact_outcome_and_edit_program_match": true
+    },
+    {
+      "report": "confirm_generated_varied_r2",
+      "report_snapshot_sha256": "c3f498a0867b9e80df28e0f1bb4a11132ffd100de4961a6f9036cb5a5c4e415b",
+      "episode": "episode-000086",
+      "variant": "mixed",
+      "edits": 27,
+      "seconds": 11.999096212093718,
+      "exact_outcome_and_edit_program_match": true
+    }
+  ],
+  "limit": "Fixed first completed graph from each listed run; this is a reproducibility check, not additional statistical replication."
+}

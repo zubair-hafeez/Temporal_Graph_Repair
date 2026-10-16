@@ -1,0 +1,1240 @@
+{
+  "status": "complete_candidate_analysis",
+  "protocol_hash": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "script_hash": "9b80e751a4647e666bfb42abaabcf91ef6a41985aa2d50d05caab796fc35d652",
+  "source_reports": {
+    "reports/confirmation_candidate_audits_real_v1.json": "7c5955437fa2c03b731b98175f3bd270b6238b4fb041b3495da9d2bff15b671d",
+    "reports/candidate_bpi2017_native_mixed_91001.json": "df4b5c3f49302131ec2bab588ba7c91caa0c8cc0e45f3262a1de388afdf1a475",
+    "reports/candidate_bpi2017_native_mixed_91002.json": "939f51df06ade5bb47fe12da814c95b82f458ed67ad0573eea8882209094b864",
+    "reports/candidate_bpi2017_native_mixed_91003.json": "7c256ac0eaf2d9e358c304aa34d43773e36133c1ee3df148e0e668a4efa73e39",
+    "reports/candidate_bpi2017_native_pipeline_91001.json": "ea4f773c203913f2aca5a86a05d3695bdd73ebc83a737832a15268017e8bc4b6",
+    "reports/candidate_bpi2017_native_pipeline_91002.json": "b654711f334ddb81526f8b61e8e9015c16437641cf4378d68efffd783093534c",
+    "reports/candidate_bpi2017_native_pipeline_91003.json": "3ad9d29bce7702e881f9d2095a7131d7603b94c9fe3ac62e8d02c0a7618ae540",
+    "reports/candidate_bpi2019_native_mixed_91001.json": "07219a0d152e97eb1c46798de780117985295e047ccda6d16f51538f85e997f5",
+    "reports/candidate_bpi2019_native_mixed_91002.json": "5cb0231a2d25b11ebda33d5f7ffa56223d20ce38b75a549443103c18110a18c8",
+    "reports/candidate_bpi2019_native_mixed_91003.json": "43b36adaf0db40b4b48d878fe3c1c111f01f0d7fb8a1314dcf6d87604c8551b5",
+    "reports/candidate_bpi2019_native_pipeline_91001.json": "805d4d9b32765b2c9befd5834a212394086b059421ad3d8b6674082b32b0ea49",
+    "reports/candidate_bpi2019_native_pipeline_91002.json": "d4346569d9db6af46faa381c06f722042afd507bb1a7a4e1865eb30dd24894f8",
+    "reports/candidate_bpi2019_native_pipeline_91003.json": "5344273677e4d005c3d69d084e8c3408988419b32d160d352c0057915e5aae1d",
+    "reports/candidate_bpi2012_check_denormalized_mixed_91001.json": "eb3d48863ba83d3a9e24dfb2be3fce6df4f92c6d33288e90c02193a77c476c57",
+    "reports/candidate_bpi2012_check_denormalized_mixed_91002.json": "016b541e8124b893b66159148e0492476a50bba3ee0314cce838735f5ed905f8",
+    "reports/candidate_bpi2012_check_denormalized_mixed_91003.json": "1a89c59aa96c25e042445a8c0f5959dc22841fadaa1f6a784df43e3bdc5a8c87",
+    "reports/candidate_bpi2012_check_denormalized_pipeline_91001.json": "543e693aa4376b38de17a833ee509d7ef21b0f0c6c5467fe2441bc1f775e9dee",
+    "reports/candidate_bpi2012_check_denormalized_pipeline_91002.json": "77a437bba088014d4d79ec2f9114ded04dd9225aeaaf1d722a1c26d241c8231e",
+    "reports/candidate_bpi2012_check_denormalized_pipeline_91003.json": "c04b8179985391a146f96d2143760412edc7f60688b82d9926cb546a39850318"
+  },
+  "trial_results": [
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2017_native_mixed_91001",
+      "metric": "identity_all",
+      "value": 0.6710816777041942
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2017_native_mixed_91001",
+      "metric": "identity_both_observed",
+      "value": 0.7004608294930875
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2017_native_mixed_91001",
+      "metric": "cold_handles",
+      "value": 21
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2017_native_mixed_91001",
+      "metric": "missing_Application",
+      "value": 0.9681697612732095
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2017_native_mixed_91001",
+      "metric": "missing_Offer",
+      "value": 0.8135593220338984
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2017_native_mixed_91002",
+      "metric": "identity_all",
+      "value": 0.680365296803653
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2017_native_mixed_91002",
+      "metric": "identity_both_observed",
+      "value": 0.7163461538461539
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2017_native_mixed_91002",
+      "metric": "cold_handles",
+      "value": 27
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2017_native_mixed_91002",
+      "metric": "missing_Application",
+      "value": 0.9819587628865979
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2017_native_mixed_91002",
+      "metric": "missing_Offer",
+      "value": 0.75
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2017_native_mixed_91003",
+      "metric": "identity_all",
+      "value": 0.6908665105386417
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2017_native_mixed_91003",
+      "metric": "identity_both_observed",
+      "value": 0.7356608478802993
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2017_native_mixed_91003",
+      "metric": "cold_handles",
+      "value": 29
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2017_native_mixed_91003",
+      "metric": "missing_Application",
+      "value": 0.955
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2017_native_mixed_91003",
+      "metric": "missing_Offer",
+      "value": 0.8620689655172413
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2017_native_pipeline_91001",
+      "metric": "identity_all",
+      "value": 0.9
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2017_native_pipeline_91001",
+      "metric": "identity_both_observed",
+      "value": 0.9451073985680191
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2017_native_pipeline_91001",
+      "metric": "cold_handles",
+      "value": 135
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2017_native_pipeline_91001",
+      "metric": "missing_Application",
+      "value": 0.49627791563275436
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2017_native_pipeline_91001",
+      "metric": "missing_Offer",
+      "value": 0.5909090909090909
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2017_native_pipeline_91002",
+      "metric": "identity_all",
+      "value": 0.916010498687664
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2017_native_pipeline_91002",
+      "metric": "identity_both_observed",
+      "value": 0.9721448467966574
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2017_native_pipeline_91002",
+      "metric": "cold_handles",
+      "value": 123
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2017_native_pipeline_91002",
+      "metric": "missing_Application",
+      "value": 0.5128205128205128
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2017_native_pipeline_91002",
+      "metric": "missing_Offer",
+      "value": 0.42
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2017_native_pipeline_91003",
+      "metric": "identity_all",
+      "value": 0.8768115942028986
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2017_native_pipeline_91003",
+      "metric": "identity_both_observed",
+      "value": 0.9132075471698113
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2017_native_pipeline_91003",
+      "metric": "cold_handles",
+      "value": 117
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2017_native_pipeline_91003",
+      "metric": "missing_Application",
+      "value": 0.5257731958762887
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2017_native_pipeline_91003",
+      "metric": "missing_Offer",
+      "value": 0.43137254901960786
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2019_native_mixed_91001",
+      "metric": "identity_all",
+      "value": 0.9039256198347108
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2019_native_mixed_91001",
+      "metric": "identity_both_observed",
+      "value": 0.9531590413943355
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2019_native_mixed_91001",
+      "metric": "cold_handles",
+      "value": 70
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2019_native_mixed_91001",
+      "metric": "missing_PO",
+      "value": 1.0
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2019_native_mixed_91001",
+      "metric": "missing_POItem",
+      "value": 0.986737400530504
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2019_native_mixed_91002",
+      "metric": "identity_all",
+      "value": 0.9132821075740944
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2019_native_mixed_91002",
+      "metric": "identity_both_observed",
+      "value": 0.9552238805970149
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2019_native_mixed_91002",
+      "metric": "cold_handles",
+      "value": 58
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2019_native_mixed_91002",
+      "metric": "missing_PO",
+      "value": 1.0
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2019_native_mixed_91002",
+      "metric": "missing_POItem",
+      "value": 0.9759036144578314
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2019_native_mixed_91003",
+      "metric": "identity_all",
+      "value": 0.9021406727828746
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2019_native_mixed_91003",
+      "metric": "identity_both_observed",
+      "value": 0.946524064171123
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2019_native_mixed_91003",
+      "metric": "cold_handles",
+      "value": 64
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2019_native_mixed_91003",
+      "metric": "missing_PO",
+      "value": 0.997624703087886
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2019_native_mixed_91003",
+      "metric": "missing_POItem",
+      "value": 0.9833729216152018
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2019_native_pipeline_91001",
+      "metric": "identity_all",
+      "value": 0.9264544456641054
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2019_native_pipeline_91001",
+      "metric": "identity_both_observed",
+      "value": 0.9558323895809739
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2019_native_pipeline_91001",
+      "metric": "cold_handles",
+      "value": 70
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2019_native_pipeline_91001",
+      "metric": "missing_PO",
+      "value": 0.9251101321585903
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2019_native_pipeline_91001",
+      "metric": "missing_POItem",
+      "value": 0.88
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2019_native_pipeline_91002",
+      "metric": "identity_all",
+      "value": 0.9085648148148148
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2019_native_pipeline_91002",
+      "metric": "identity_both_observed",
+      "value": 0.9549878345498783
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2019_native_pipeline_91002",
+      "metric": "cold_handles",
+      "value": 74
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2019_native_pipeline_91002",
+      "metric": "missing_PO",
+      "value": 0.9602803738317757
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2019_native_pipeline_91002",
+      "metric": "missing_POItem",
+      "value": 0.9438502673796791
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2019_native_pipeline_91003",
+      "metric": "identity_all",
+      "value": 0.881675392670157
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2019_native_pipeline_91003",
+      "metric": "identity_both_observed",
+      "value": 0.9365962180200222
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2019_native_pipeline_91003",
+      "metric": "cold_handles",
+      "value": 92
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2019_native_pipeline_91003",
+      "metric": "missing_PO",
+      "value": 0.9784172661870504
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2019_native_pipeline_91003",
+      "metric": "missing_POItem",
+      "value": 0.9530026109660574
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2012_check_denormalized_mixed_91001",
+      "metric": "identity_all",
+      "value": 0.7192982456140351
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2012_check_denormalized_mixed_91001",
+      "metric": "identity_both_observed",
+      "value": 0.7247474747474747
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2012_check_denormalized_mixed_91001",
+      "metric": "cold_handles",
+      "value": 3
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "output": "candidate_bpi2012_check_denormalized_mixed_91001",
+      "metric": "missing_Application",
+      "value": 0.9738903394255874
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2012_check_denormalized_mixed_91002",
+      "metric": "identity_all",
+      "value": 0.7692307692307693
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2012_check_denormalized_mixed_91002",
+      "metric": "identity_both_observed",
+      "value": 0.7734806629834254
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2012_check_denormalized_mixed_91002",
+      "metric": "cold_handles",
+      "value": 2
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91002,
+      "output": "candidate_bpi2012_check_denormalized_mixed_91002",
+      "metric": "missing_Application",
+      "value": 0.9780821917808219
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2012_check_denormalized_mixed_91003",
+      "metric": "identity_all",
+      "value": 0.7263157894736842
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2012_check_denormalized_mixed_91003",
+      "metric": "identity_both_observed",
+      "value": 0.7340425531914894
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2012_check_denormalized_mixed_91003",
+      "metric": "cold_handles",
+      "value": 5
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91003,
+      "output": "candidate_bpi2012_check_denormalized_mixed_91003",
+      "metric": "missing_Application",
+      "value": 0.9852941176470589
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2012_check_denormalized_pipeline_91001",
+      "metric": "identity_all",
+      "value": 0.9122340425531915
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2012_check_denormalized_pipeline_91001",
+      "metric": "identity_both_observed",
+      "value": 0.9527777777777777
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2012_check_denormalized_pipeline_91001",
+      "metric": "cold_handles",
+      "value": 99
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91001,
+      "output": "candidate_bpi2012_check_denormalized_pipeline_91001",
+      "metric": "missing_Application",
+      "value": 0.6666666666666666
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2012_check_denormalized_pipeline_91002",
+      "metric": "identity_all",
+      "value": 0.8883116883116883
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2012_check_denormalized_pipeline_91002",
+      "metric": "identity_both_observed",
+      "value": 0.9293478260869565
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2012_check_denormalized_pipeline_91002",
+      "metric": "cold_handles",
+      "value": 111
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91002,
+      "output": "candidate_bpi2012_check_denormalized_pipeline_91002",
+      "metric": "missing_Application",
+      "value": 0.668903803131991
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2012_check_denormalized_pipeline_91003",
+      "metric": "identity_all",
+      "value": 0.875
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2012_check_denormalized_pipeline_91003",
+      "metric": "identity_both_observed",
+      "value": 0.9112426035502958
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2012_check_denormalized_pipeline_91003",
+      "metric": "cold_handles",
+      "value": 83
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "seed": 91003,
+      "output": "candidate_bpi2012_check_denormalized_pipeline_91003",
+      "metric": "missing_Application",
+      "value": 0.696078431372549
+    }
+  ],
+  "groups": [
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "metric": "identity_all",
+      "summary": {
+        "values": [
+          0.6710816777041942,
+          0.680365296803653,
+          0.6908665105386417
+        ],
+        "mean": 0.680771161682163,
+        "min": 0.6710816777041942,
+        "max": 0.6908665105386417
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "metric": "identity_both_observed",
+      "summary": {
+        "values": [
+          0.7004608294930875,
+          0.7163461538461539,
+          0.7356608478802993
+        ],
+        "mean": 0.7174892770731802,
+        "min": 0.7004608294930875,
+        "max": 0.7356608478802993
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "metric": "cold_handles",
+      "summary": {
+        "values": [
+          21,
+          27,
+          29
+        ],
+        "mean": 25.666666666666668,
+        "min": 21,
+        "max": 29
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "metric": "missing_Application",
+      "summary": {
+        "values": [
+          0.9681697612732095,
+          0.9819587628865979,
+          0.955
+        ],
+        "mean": 0.9683761747199358,
+        "min": 0.955,
+        "max": 0.9819587628865979
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "metric": "missing_Offer",
+      "summary": {
+        "values": [
+          0.8135593220338984,
+          0.75,
+          0.8620689655172413
+        ],
+        "mean": 0.8085427625170466,
+        "min": 0.75,
+        "max": 0.8620689655172413
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "metric": "identity_all",
+      "summary": {
+        "values": [
+          0.9,
+          0.916010498687664,
+          0.8768115942028986
+        ],
+        "mean": 0.8976073642968542,
+        "min": 0.8768115942028986,
+        "max": 0.916010498687664
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "metric": "identity_both_observed",
+      "summary": {
+        "values": [
+          0.9451073985680191,
+          0.9721448467966574,
+          0.9132075471698113
+        ],
+        "mean": 0.9434865975114959,
+        "min": 0.9132075471698113,
+        "max": 0.9721448467966574
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "metric": "cold_handles",
+      "summary": {
+        "values": [
+          135,
+          123,
+          117
+        ],
+        "mean": 125,
+        "min": 117,
+        "max": 135
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "metric": "missing_Application",
+      "summary": {
+        "values": [
+          0.49627791563275436,
+          0.5128205128205128,
+          0.5257731958762887
+        ],
+        "mean": 0.5116238747765186,
+        "min": 0.49627791563275436,
+        "max": 0.5257731958762887
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "pipeline",
+      "metric": "missing_Offer",
+      "summary": {
+        "values": [
+          0.5909090909090909,
+          0.42,
+          0.43137254901960786
+        ],
+        "mean": 0.4807605466428996,
+        "min": 0.42,
+        "max": 0.5909090909090909
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "metric": "identity_all",
+      "summary": {
+        "values": [
+          0.9039256198347108,
+          0.9132821075740944,
+          0.9021406727828746
+        ],
+        "mean": 0.9064494667305599,
+        "min": 0.9021406727828746,
+        "max": 0.9132821075740944
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "metric": "identity_both_observed",
+      "summary": {
+        "values": [
+          0.9531590413943355,
+          0.9552238805970149,
+          0.946524064171123
+        ],
+        "mean": 0.9516356620541578,
+        "min": 0.946524064171123,
+        "max": 0.9552238805970149
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "metric": "cold_handles",
+      "summary": {
+        "values": [
+          70,
+          58,
+          64
+        ],
+        "mean": 64,
+        "min": 58,
+        "max": 70
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "metric": "missing_PO",
+      "summary": {
+        "values": [
+          1.0,
+          1.0,
+          0.997624703087886
+        ],
+        "mean": 0.9992082343626286,
+        "min": 0.997624703087886,
+        "max": 1.0
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "metric": "missing_POItem",
+      "summary": {
+        "values": [
+          0.986737400530504,
+          0.9759036144578314,
+          0.9833729216152018
+        ],
+        "mean": 0.9820046455345124,
+        "min": 0.9759036144578314,
+        "max": 0.986737400530504
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "metric": "identity_all",
+      "summary": {
+        "values": [
+          0.9264544456641054,
+          0.9085648148148148,
+          0.881675392670157
+        ],
+        "mean": 0.9055648843830257,
+        "min": 0.881675392670157,
+        "max": 0.9264544456641054
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "metric": "identity_both_observed",
+      "summary": {
+        "values": [
+          0.9558323895809739,
+          0.9549878345498783,
+          0.9365962180200222
+        ],
+        "mean": 0.9491388140502915,
+        "min": 0.9365962180200222,
+        "max": 0.9558323895809739
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "metric": "cold_handles",
+      "summary": {
+        "values": [
+          70,
+          74,
+          92
+        ],
+        "mean": 78.66666666666667,
+        "min": 70,
+        "max": 92
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "metric": "missing_PO",
+      "summary": {
+        "values": [
+          0.9251101321585903,
+          0.9602803738317757,
+          0.9784172661870504
+        ],
+        "mean": 0.9546025907258054,
+        "min": 0.9251101321585903,
+        "max": 0.9784172661870504
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "pipeline",
+      "metric": "missing_POItem",
+      "summary": {
+        "values": [
+          0.88,
+          0.9438502673796791,
+          0.9530026109660574
+        ],
+        "mean": 0.9256176261152456,
+        "min": 0.88,
+        "max": 0.9530026109660574
+      }
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "metric": "identity_all",
+      "summary": {
+        "values": [
+          0.7192982456140351,
+          0.7692307692307693,
+          0.7263157894736842
+        ],
+        "mean": 0.7382816014394962,
+        "min": 0.7192982456140351,
+        "max": 0.7692307692307693
+      }
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "metric": "identity_both_observed",
+      "summary": {
+        "values": [
+          0.7247474747474747,
+          0.7734806629834254,
+          0.7340425531914894
+        ],
+        "mean": 0.7440902303074631,
+        "min": 0.7247474747474747,
+        "max": 0.7734806629834254
+      }
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "metric": "cold_handles",
+      "summary": {
+        "values": [
+          3,
+          2,
+          5
+        ],
+        "mean": 3.3333333333333335,
+        "min": 2,
+        "max": 5
+      }
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "metric": "missing_Application",
+      "summary": {
+        "values": [
+          0.9738903394255874,
+          0.9780821917808219,
+          0.9852941176470589
+        ],
+        "mean": 0.979088882951156,
+        "min": 0.9738903394255874,
+        "max": 0.9852941176470589
+      }
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "metric": "identity_all",
+      "summary": {
+        "values": [
+          0.9122340425531915,
+          0.8883116883116883,
+          0.875
+        ],
+        "mean": 0.8918485769549599,
+        "min": 0.875,
+        "max": 0.9122340425531915
+      }
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "metric": "identity_both_observed",
+      "summary": {
+        "values": [
+          0.9527777777777777,
+          0.9293478260869565,
+          0.9112426035502958
+        ],
+        "mean": 0.93112273580501,
+        "min": 0.9112426035502958,
+        "max": 0.9527777777777777
+      }
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "metric": "cold_handles",
+      "summary": {
+        "values": [
+          99,
+          111,
+          83
+        ],
+        "mean": 97.66666666666667,
+        "min": 83,
+        "max": 111
+      }
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "pipeline",
+      "metric": "missing_Application",
+      "summary": {
+        "values": [
+          0.6666666666666666,
+          0.668903803131991,
+          0.696078431372549
+        ],
+        "mean": 0.6772163003904023,
+        "min": 0.6666666666666666,
+        "max": 0.696078431372549
+      }
+    }
+  ],
+  "limits": [
+    "Uniform sample of 2048 observed events per task; labels are used only after candidate construction.",
+    "Identity coverage enumerates initial candidate pairs. The both-observed condition excludes cold handles.",
+    "Coverage is retrievability, not identifiability. Later graph edits can change candidate coverage.",
+    "Mean and observed range are across three fault trials, not independent events."
+  ]
+}

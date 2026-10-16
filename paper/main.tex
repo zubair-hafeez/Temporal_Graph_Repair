@@ -1,8 +1,9 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,booktabs,graphicx,hyperref}
+\DeclareSymbolFont{largesymbols}{OMX}{lmex}{m}{n}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
-\title{Learning to Restore Operational Histories from Executable Temporal Worlds}
+\title{Restoring Operational Histories with Synthetic Temporal Graph Supervision}
 \author{Author details pending final review}
 \date{Development manuscript: 15 October 2026}
 \begin{document}
@@ -18,20 +19,22 @@ An analyst investigating an application cancellation needs the records belonging
 
 We ask whether supervision from executable workflow worlds can support useful restoration when clean operational histories are scarce. The application is offline reconstruction within an available observation window. It is not forecasting future links, changing the process to match a normative model, or inventing unrecorded activities. A canceled or retried operation is a fact to retain. The repair target is its association with the relevant entities.
 
-The intended contribution is an application task, an executable training and evaluation artifact, and an empirically justified repair system. Generic event-log repair, simulation, synthetic supervision, iterative correction and graph neural networks all have substantial prior work. Our contribution must be assessed through the joint participation/identity task, reusable execution--observation--task separation, and independent application evidence. No neural-architecture novelty is claimed on the current results.
+Clean repair examples are difficult to obtain precisely because broken identifiers obscure which records belong together. Executable workflows offer a source of supervision, but a model can learn the recording conventions of the simulator instead of transferable evidence. For example, a simulator's amount field may remain constant throughout an order, while an operational field records changing costs. A learned consistency rule can then remove valid records from a new process. This motivates our central question: does varying the observation of an unchanged execution improve the transfer of temporal graph repair?
+
+We contribute an executable supervision protocol that separates workflow execution, observed fields and recording faults; a paired study of observation variation for coupled participation and identity edits; and an application evaluation based on retrieved histories, preserved records and false associations. The repair system uses established classifiers and graph operators. The contribution is the training-data construction and its measured application behavior, rather than a new neural architecture. Its bounded generator component also exports a future-participation task from the same execution, providing a reusable interface without making the general dataset factory part of this paper.
 
 \section{Related work and comparison boundaries}
 HERE combines Transformer prediction and domain rules for missing case identifiers~\cite{here}. Its native output is a single case identifier. SANAGRAPH reconstructs missing attributes within supplied traces through heterogeneous graph learning~\cite{sanagraph}. An unchanged trace-based model cannot be supplied with correct trace membership in a benchmark where that membership is itself damaged. DDTR uses diffusion for activity-trace recovery~\cite{ddtr}; its generative formulation likewise does not make it an unchanged entity-identity repair baseline.
 
-Swevels et al. already use contextual Event Knowledge Graphs and physical inference rules to recover missing identifiers~\cite{ekginference}. Thus graph-based operational history reconstruction is established prior work. Object-centric imperfection patterns further document identity and association problems~\cite{ocip}. The present study addresses learned restoration under coupled faults and limited clean supervision; it cannot claim to originate these problems.
+Swevels et al. use contextual Event Knowledge Graphs and physical inference rules to recover missing identifiers~\cite{ekginference}. Their implementation uses domain semantics such as loading, unloading and physical location. Object-centric imperfection patterns characterize identity and association problems~\cite{ocip}. We study their coupled effects on history retrieval when such physical rules and clean target histories are unavailable. This differs from originating the identifier-repair problem itself.
 
-HoloClean unifies heterogeneous signals for probabilistic data repair~\cite{holoclean}. It precludes attributing novelty to the combination of constraints and learned matching alone. We retain strong observation-only matching and refreshed sequential controls. Our heterogeneous GraphSAGE edit control is an explicit adaptation of a standard operator to event/entity inputs and typed edits; its scores are not an exact SANAGRAPH reproduction.
+HoloClean combines heterogeneous signals for probabilistic data repair~\cite{holoclean}. Our implementation likewise uses multiple sources of observed evidence, but learns its edit scores from generated workflow references and evaluates entity-history recovery. Comparisons include observation-only boosted matching, target-local pseudo supervision, fixed-sequence repair and neural edit models. The heterogeneous GraphSAGE control adapts the standard aggregation operator~\cite{graphsage} to event/entity inputs and typed edits; it is not an exact SANAGRAPH reproduction.
 
 Object-centric simulation also predates this work~\cite{ocsim}. A recent independent collection provides six synthetic relational systems with reference object-centric event logs~\cite{relationalocel}. We use this collection to challenge simulator dependence rather than claiming to introduce multitype operational simulation. The complete general dataset factory remains outside the scope of this paper.
 
-Synthetic training and observation randomization are established approaches to transfer~\cite{domainrandomization}. PluRel and RDB-PFN generate relational databases for model training and demonstrate transfer to relational prediction tasks~\cite{plurel,rdbpfn}. TIGGER learns to generate temporal interaction graphs~\cite{tigger}. These works rule out a generic novelty claim for synthetic relational or temporal training data. Our specific question concerns training edit decisions from executed workflows when the available event--object associations themselves are unreliable. We evaluate the downstream recovery of entity histories, including false associations introduced by repair, rather than claiming that our simulator matches a real graph distribution.
+Synthetic training and observation randomization are established approaches to transfer~\cite{domainrandomization}. PluRel and RDB-PFN generate relational databases for model training and transfer to relational prediction tasks~\cite{plurel,rdbpfn}. TIGGER learns to generate temporal interaction graphs~\cite{tigger}. We apply synthetic supervision to a different target: edit decisions when the available event--object associations themselves are unreliable. The evaluation asks whether generated supervision restores useful histories and how often repair introduces false associations. It does not measure fidelity to a learned real-graph distribution.
 
-FLAWD already provides a language and tool for controlled event-log fault injection~\cite{flawd}. Algebraic repair expressions also have existing language support~\cite{repairlanguage}. Consequently, executable fault scenarios and an auditable edit vocabulary are supporting components, not sufficient novelty by themselves.
+FLAWD provides a language and tool for controlled event-log fault injection~\cite{flawd}, and algebraic repair expressions have dedicated language support~\cite{repairlanguage}. Fault scenarios and auditable edits serve as supporting components here. The paired observation experiment holds execution and fault references fixed so that their contribution can be distinguished from the choice of repair scorer.
 
 \section{Task and information boundary}
 Let an event be $e=(u,t,a,P,x)$, where $u$ is an opaque event handle, $t$ is occurrence time, $a$ is activity, $P$ is a set of typed object handles and $x$ contains legitimate observed attributes. The entity catalog supplies handle types. The observed temporal graph contains event--object incidence and temporal adjacency derived from observed histories. Equal-time records are simultaneous; source row order is not treated as a causal order.
@@ -39,6 +42,8 @@ Let an event be $e=(u,t,a,P,x)$, where $u$ is an opaque event handle, $t$ is occ
 The repair system receives the damaged graph and a declared target-type schema. It does not receive the true identity map, original case containers, missing-edge locations, fault seed or clean derived adjacency. Allowed changes are \texttt{ADD\_PARTICIPANT}, \texttt{REMOVE\_PARTICIPANT} and \texttt{MERGE\_ALIASES}. Activities, timestamps and descriptive attributes are protected. A merge identifies same-type handles and deduplicates their participation. The system may stop with unresolved uncertainty.
 
 The entity catalog is assumed available. This is a material assumption: reconstructing entirely unknown entities is a different open-catalog problem. Likewise, offline context may include later records in the declared window. It must not be compared directly with a strictly online predictor receiving only past events.
+
+The controlled faults affect declared target types. Other observed relations, such as resources or vendors, supply context and are left unchanged. This is a scoped recording-error model: the experiments do not establish robustness when every contextual relation or timestamp may also be unreliable. No type is supplied with a trusted canonical identity map.
 
 Reference graphs are evaluator-only. Simulated executions provide exact symbolic references. Public-source logs provide controlled-corruption references, not an independent certification that every native record is correct. Attributes copied from source trace metadata into event records form an explicitly denormalized observation condition; they must be reported separately from native-event and structural-only conditions.
 
@@ -66,6 +71,8 @@ Training and generated validation use disjoint mechanism compositions. Vocabular
 
 The original recording faults combine contiguous or independent missing participation, same-type incorrect joins and time-cut identity fragmentation. An independently implemented development stressor uses activity-routed namespaces, a recording outage over a time interval and persistent stale join mappings. Its rates are declared experimental conditions, not estimates of real incident frequencies. Both fault families preserve recorded activity and time.
 
+The reserved mixed condition fragments eligible histories of at least four records with probability .25, removes approximately .10 of each resulting handle's participation in a contiguous block, and replaces remaining target participations with probability .10 by a different same-type entity. Stochastic rounding includes short histories in the missing-link process. The pipeline condition routes activities between two namespaces, selects eligible entities for fragmentation with probability .25, removes target links over a time interval covering approximately .10 of the ordered records, and gives selected entities a persistent incorrect join over half their surviving history. The latter selection probability is .25. Equal timestamps stay together at the outage boundary. Actual damaged-event counts are reported because these mechanisms do not produce identical corruption severity.
+
 \section{Auditable learned graph edits}
 Candidate retrieval combines temporal proximity, activity context, observed co-participation and descriptive agreement. Candidate recall is reported separately from classifier performance. Handles are anonymous identifiers, never numerical predictors. Cold objects with no evidence remain difficult or unidentifiable; reference knowledge does not make them recoverable from the learner input.
 
@@ -90,63 +97,41 @@ The expanded executable collection contains 512 training worlds and 96 validatio
 Final experiments must distinguish synthetic-only learning, source-only learning, mixed learning and any target-data adaptation. For limited source annotation, a verified history supplies its event memberships and alias handles. All available annotated positive pairs may train the matcher even if candidate retrieval missed them; inference retrieval remains label-free. Development label budgets must not be described as total annotation costs when additional labeled validation data select thresholds.
 
 \subsection{Application outcomes}
-For an observed handle, the predicted cluster returns an event-history set. We compare this set with the reference entity history. Scores are first averaged across handles belonging to the same reference entity and then across entities, preventing heavily fragmented entities from dominating the metric. We report history precision, recall, F1 and the fraction of exactly restored histories. Identity-pair precision and recall expose false merges and unresolved fragments.
+For an observed handle $u$, its predicted cluster retrieves an event set $\widehat H(u)$. Let $H_q$ be the reference history of entity $q$ and $A_q$ its observed handles. The primary metric is
+\[
+ F_{\rm history}=\frac{1}{|Q|}\sum_{q\in Q}\frac{1}{|A_q|}
+ \sum_{u\in A_q}\frac{2|\widehat H(u)\cap H_q|}{|\widehat H(u)|+|H_q|}.
+\]
+Only reference entities with a recorded history enter $Q$. This first averages over an entity's aliases and then equally over entities, preventing heavily fragmented entities from dominating. Exact-history retrieval replaces the inner F1 by $1[\widehat H(u)=H_q]$ with the same weighting; it is not a requirement that every alias of an entity succeed simultaneously. We also report history precision/recall and per-type results. Identity-pair precision and recall expose false merges and unresolved fragments.
 
 Operational queries measure whether a handle retrieves evidence of a cancellation-related event and whether the first and last recorded timestamps are correctly recovered. Matching a boundary timestamp does not imply that every simultaneous boundary event is restored. These queries concern recorded evidence, not a causal judgment that an entire business transaction was canceled. Correct-event preservation, cold-history coverage, genuine exception associations, candidate coverage and runtime accompany aggregate repair scores.
 
-\section{Development evidence and decisions}
-Table~\ref{tab:dev} contains exploratory results, not frozen final comparisons. Generated-data thresholds are selected on generated validation. The table is intended to make development decisions auditable while confirmation remains outstanding.
+\section{Generated confirmation}
+The frozen compositional test contains 96 worlds from two mechanism combinations absent from both training and validation. The mechanisms and simulator engine are shared. All six learners evaluate the same worlds and recording faults. Across three independently generated training collections, observation variation raises mean history F1 from .7588 to .8000, compared with .7340 before repair (Figure~\ref{fig:generated-confirmation}). The three paired improvements are .0464, .0412 and .0359. The observed trial range is .7554--.7650 for original fields and .7913--.8113 for varied fields. These are descriptive ranges across training collections, not event-level confidence intervals.
 
-\begin{table}[ht]
-\centering
-\begin{tabular}{lrr}
-\toprule
-Expanded generated validation (24 worlds) & Damaged F1 & Clean F1\\
-\midrule
-No repair & .7429 & 1.0000\\
-Boosted edits, one pass & .7996 & .99984\\
-MLP edits, iterative & .8243 & .99975\\
-Temporal message passing, iterative & .8182 & .99984\\
-Heterogeneous GraphSAGE, iterative & .8384 & .99854\\
-Boosted edits, fixed sequence & .8500 & .99964\\
-Boosted edits, coordinated & .8529 & .99964\\
-\bottomrule
-\end{tabular}
-\caption{Development history F1. Differences between coordinated and fixed-sequence decoding are small; the neural encoder does not improve this collection. Independent confirmation and multiple seeds remain required.}
-\label{tab:dev}
-\end{table}
-
-On the explored BPI 2012 tune graph with denormalized amount observations, synthetic-only boosted edits raise history F1 from .7445 to .8380. This run uses no real-source training labels and selects its thresholds on generated validation. It preserves 31,101 of 31,362 initially correct event assignments and merges 18 identity pairs, 17 correctly. Its low identity recall (.0479) limits any claim of complete identity restoration.
-
-The source-trained participant matcher reaches .8922 history F1. Adding a learned source identity matcher reaches .9107, and refreshing both matchers reaches .9164 in a second cycle. These stronger controls must remain visible. The synthetic policy is useful in this development setting but does not surpass source supervision. Under the independent pipeline faults on generated validation, history F1 rises only from .7465 to .7811, indicating a substantial recording-mechanism transfer limitation.
-
-The development conclusion is to retain boosted matching as the leading learner, investigate source-label efficiency and recording-mechanism transfer, and avoid presenting the temporal neural architecture as the contribution. Final tables will replace this section only after the declared confirmation protocol is completed.
-
-At a fixed budget of 16 verified source training histories, generated augmentation raises history F1 from .8359 to .8912. At 64 histories, the corresponding values are .8321 and .8905. Both comparisons use additional source-development labels for threshold selection and therefore do not establish total annotation costs of 16 or 64 histories.
-
-At 256 verified training histories, the source-only and augmented results are .8753 and .8896. Augmentation gains are smaller at this budget, and neither sequence is monotonically increasing. These single-seed results motivate repeated, fully budgeted comparisons rather than an unconditional label-efficiency claim.
-
-The first independent-simulator tests expose a failure of the original model. On native event attributes, BatteryVault history F1 decreases from .7682 to .7371, and ClaimStream from .7617 to .7519. Excessive removal of valid associations is a principal observed error. The model's good generated-validation preservation therefore does not establish safe transfer. Structural-only diagnostics and a control trained through additional corruption of already imperfect source observations are being evaluated before revising the method.
-
-The completed attribute-hiding diagnostic raises F1 to .8543 in BatteryVault and .8844 in ClaimStream (Figure~\ref{fig:views}), retaining timing, activities and observed relations. On BatteryVault's clean counterpart, history F1 remains .99945. These development-selected diagnostics do not yet specify a final automatic observation policy. Using evaluator-only native exception flags consistently across views, exception-evidence retrieval F1 improves from .8700 to .9244 for BatteryVault and from .8374 to .9510 for ClaimStream. The first structural diagnostic incorrectly derived its exception-positive set from hidden learner fields; a separate corrected query audit preserves the original history results and uses the pinned native parent records for evaluation labels.
-
+Exactly restored histories increase from .0090 before repair to .0357 with original fields and .1098 with varied fields. Thus most histories remain incomplete even when average F1 improves. Varied-field training improves 89, 90 and 90 of the 96 damaged worlds and worsens 7, 5 and 5, respectively. On the paired clean worlds its mean history F1 is .999867, with 16, 14 and 21 edits across the three trials; 7, 3 and 3 clean worlds worsen. The result supports useful compositional recovery while retaining evidence of unnecessary edits.
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{figures/development_observation_views.pdf}
-\caption{Single-run development comparison on the same independent-simulator records and faults. Original training fails with native fields. Hiding attributes is a manual diagnostic; calibration-only retains the original fitted model. Varied-attribute training changes generated observations while preserving the executed workflows and fault labels. All operating points use generated validation.}
-\label{fig:views}
+\includegraphics[width=\linewidth]{figures/generated_confirmation.pdf}
+\caption{Frozen generated confirmation. Each dot is the equal-world average from one independent training collection; bars show their mean and whiskers their observed range. All trials use the same 96 held-out worlds. Complete-history recovery remains substantially below average history F1.}
+\label{fig:generated-confirmation}
 \end{figure}
 
-The paired observation-generation revision improves native-field history F1 to .8804 on BatteryVault and .9197 on ClaimStream. Keeping the original model but changing its generated calibration reaches only .7964 and .7978, separating a training-data benefit from a calibration-only effect. The revised model makes zero changes on the clean counterparts of both domains. Under mixed faults, it preserves 17,624 of 17,708 and 18,267 of 18,325 initially correct events. Exception-evidence F1 reaches .9247 and .9648. Identity recall remains incomplete: 69 of 246 and 199 of 403 true identity pairs are restored, with nine and four incorrect predicted pairs.
+\section{Confirmation on operational sources}
+The loan cohort provides a complete three-trial comparison. With mixed recording faults, mean history F1 increases from .7872 before repair to .7914 under original generated observations and .8050 under varied observations. The paired varied-observation advantage is positive in all three trials. Exact-history retrieval increases from .1696 to .1865. The varied learner introduces no false identity pairs in these trials, but recovers only .0105 of the true identity pairs on average. Most of its benefit therefore comes from participation repair, rather than complete recovery of fragmented identifiers.
 
-This revision has a measured trade-off: BPI 2012 tune history F1 decreases from .8380 with the original generated learner to .8074. An alternative automatic field-stability filter reaches .8393 on BPI and .8588/.8920 on the two independent simulations. The filter keeps fields whose observed within-entity agreement exceeds chance-adjusted between-entity agreement by the development threshold .5. Neither approach dominates across all three development sources. A final claim must therefore report per-process outcomes and retain this negative comparison.
+The BPI 2012 source-supervised edit model transfers poorly to the loan cohort, reaching mean F1 .5472 and damaging thousands of originally correct event associations. Target-local extra-corruption training mostly abstains. These controls distinguish transfer from having useful supervision in the same process: the strong source-development results in Appendix~\ref{sec:development} do not imply reliable cross-process transfer.
 
-Using the same original generated calibration, a control trained only to undo extra corruption of imperfect BPI observations reaches .7551 history F1. Combining that noisy pseudo supervision with generated training reaches .8329, compared with .8380 for generated training alone. Target-local versions of this control, independently repeated world collections and refitted scoring-feature ablations remain in progress at this draft stage.
+The independent pipeline fault family exposes a different outcome. Loan history F1 decreases in every trial, from mean .7785 to .7771, with zero correctly recovered identity pairs. This failure remains part of the confirmation result. On uncorrupted loan references, F1 is .999887 on average, but 31, 10 and 34 event assignments become incorrect. High clean-set F1 must therefore be interpreted together with the counts of damaged records.
 
-\section{Limitations and outstanding validation}
-The workflows share one symbolic implementation; vocabulary changes are not independent domains. Generated behavior is not calibrated to any particular company. Public-source corruption tests do not establish effectiveness on naturally occurring, independently labeled errors. The task assumes an entity catalog, protected event fields and offline context. Some object identities are observationally indistinguishable, so exact recovery is impossible without additional evidence.
+\section{Application interpretation and limitations}
+The intended output is a reconstructed history and an inspectable record of suggested changes. It can help an analyst recover evidence spread across identifiers, but the current operating point does not establish safe unattended repair. The loan example in Appendix~\ref{sec:cases} restores an offer-creation record while retaining cancellation evidence, yet a short offer history loses a correct record. The examples illustrate outcomes already counted in the aggregate metrics.
 
-Current results use development-selected operating points and mostly one training seed. A few positive labels can make identity calibration abstain entirely. Generated-data gains may depend on training volume, history-length coverage and observation attributes; matched-budget ablations are needed to separate those factors. The final package must include source hashes, command manifests, split definitions, data permissions, uncertainty across repeated runs, failure cases, code and model artifacts, and a critical claim-by-claim review. No acceptance outcome is guaranteed by the current draft.
+Initial candidate coverage helps locate a failure before the learned scorer is applied. Across the three loan mixed-fault trials, the correct application is retrievable for .955--.982 of sampled missing application links. Under the pipeline faults, this falls to .496--.526. Initial offer-link coverage is .750--.862 for mixed faults and .420--.591 for pipeline faults. Identity-pair coverage is higher under the pipeline condition, yet the decoder recovers no true pairs there. Candidate availability is thus necessary but insufficient: identity evidence, learned scores and abstention also matter. These initial-state diagnostics are not fixed upper bounds, because later edits can change retrieval.
+
+The generated worlds share one symbolic engine. The held-out test assesses new compositions of known mechanisms, not organizational realism. BPI 2017 comes from the same institution as BPI 2012, whereas BPI 2019 supplies another application family through a released OCEL conversion. Controlled corruption references are reproducible but do not certify native records or substitute for independently annotated natural errors. Protected event content, a typed catalog and reliable non-target context are material task assumptions.
+
+Three primary trials jointly vary generated training worlds and test corruption seeds. Paired comparisons hold both fixed within a trial, but their separate variance components are not identified. Single-trial neural, structural and decoding controls support bounded mechanism comparisons, not broad architecture rankings. Neural training samples actions while boosted training uses all cached candidates. Runtime was measured under shared concurrent load and is not presented as a controlled speed benchmark. The reference labels identify locally correct edits; neither their classifier loss nor the irreversible decoder guarantees the best final history.
 
 \appendix
 \section{Implementation details}
@@ -160,7 +145,33 @@ Neural controls use width 64, two message-passing layers where applicable, 16-di
 
 The revised neural controls train for 16 epochs with AdamW (learning rate .001, weight decay .0001), cosine decay to .0001, gradient clipping at 5 and dropout .1. The mean generated-validation average precision across operations selects the checkpoint; epoch 10 was selected for all three revised controls. Positive loss weights are computed from training frequencies and capped at 30. No reserved-target labels select checkpoints or thresholds.
 
+\section{Candidate coverage and reproducibility}
+\input{tables/confirmation_candidates.tex}
+The local review artifact contains the generated test worlds, model checkpoints, generated calibration scores, source snapshots, trial reports and saved edit programs. A relocated copy passes 51 observation-boundary, decoder, adapter and generator checks. Replaying the fixed first generated graph independently for each of the six primary models reproduces its full application outcomes and exact edit program. Rebuilding the 14 BPI 2012 confirmation tasks in the relocated tree reproduces all 28 observation/reference file hashes. These are same-environment reproducibility checks, not independent retraining evidence.
+
+The original protocol remains unchanged, identified by SHA-256 beginning \texttt{a3e12b092cc7670f8}. Protocol relocation changes only declared source paths and the output task directory, verifies source bytes, and records both protocol hashes. Interrupted processes resume completed rounds; runs interrupted before their first checkpoint archive the empty partial record and replay the same configuration. Generated evaluations retain completed graph outcomes and continue in the original order. No observed result is removed to improve an aggregate.
+
+\section{Development evidence motivating observation variation}
+\label{sec:development}
+These results influenced method selection and are exploratory. On the BPI 2012 tune partition, the original generated learner raises history F1 from .7445 to .8380. A participant matcher trained on source histories reaches .8922, adding source-trained identity matching reaches .9107, and refreshing both reaches .9164. Those matching controls also exploit the source task's one-application-per-event contract. They are useful within-process reference points, not unchanged multi-object baselines.
+
+At 16, 64 and 256 verified source training histories, source-only edit learning reaches .8359, .8321 and .8753; adding generated examples reaches .8912, .8905 and .8896. All use additional source-development calibration labels. These single-selection results suggest a possible augmentation benefit, but do not establish the total annotation cost or a monotone label-efficiency curve.
+
+On the independent BatteryVault and ClaimStream simulations, the original generated learner fails with native fields (.7371 and .7519), below the damaged inputs (.7682 and .7617). Hiding descriptive attributes as a diagnostic reaches .8543 and .8844. Changing generated calibration alone gives .7964 and .7978. Paired varied-observation training reaches .8804 and .9197 in the initial trial (Figure~\ref{fig:views}). Two independent training collections give .8861/.8452 for BatteryVault and .9195/.8603 for ClaimStream. The respective three-trial means are .8706 and .8999; all use the same development fault realization.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/development_observation_views.pdf}
+\caption{Development diagnostic on the same independent-simulator records and faults. Hiding attributes is a manual diagnostic. Calibration-only retains the original fitted model, while varied-observation training changes generated descriptions with executed workflows and fault labels held fixed. The figure shows the initial trial, not the later confirmation cohorts.}
+\label{fig:views}
+\end{figure}
+
+The revised learner's initial trial makes zero edits on the uncorrupted counterparts of both simulations. Under mixed faults, exception-evidence F1 reaches .9247 and .9648. Under pipeline faults, history F1 reaches only .8075 and .7985, including 7 and 26 false identity pairs. Varied-observation training also lowers BPI 2012 tune F1 from .8380 to .8074. The automatic stable-field alternative reaches .8393 on BPI 2012 and .8588/.8920 on the simulations. These trade-offs motivated retaining the stable-field control and per-source reporting in confirmation.
+
+The original structural exception audit was corrected after discovering that its positive-event set had been derived from hidden learner fields. The corrected audit uses evaluator-only exception flags from the pinned native observations; history results are unchanged. Reports retain both the original record and the corrected query evidence.
+
 \section{Illustrative application audit}
+\label{sec:cases}
 Figure~\ref{fig:cases} shows two post hoc examples from BatteryVault development. The success case is an exception-bearing history whose improvement is nearest the median positive improvement among such histories. The failure case has the largest history-F1 loss. Ties use a hash of the opaque identifier. These illustrations explain behavior and are not separate evidence of generalization.
 \begin{figure}[ht]
 \centering
@@ -169,11 +180,20 @@ Figure~\ref{fig:cases} shows two post hoc examples from BatteryVault development
 \label{fig:cases}
 \end{figure}
 
+The same case-selection rule applied to reserved BPI 2017 trial zero identifies the application in Figure~\ref{fig:loan-cases}. Its full reference history contains 26 records. Repair removes an unrelated call record and restores an offer-creation record, increasing history F1 from .8980 to .9388 while retaining the recorded application and offer cancellations. Three reference records remain missing. Across that trial, 1,036 entity histories improve, 79 worsen and 1,307 remain unchanged. The paired failure has only two reference offer records: its correct creation association is removed, its cancellation remains missing and an unrelated creation record remains attached. These examples make both the operational benefit and the risk of automatic short-history repair concrete.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/confirmation_loan_cases.pdf}
+\caption{Post hoc illustrations from reserved loan trial zero. The application panel shows changed associations and cancellation records; its score uses the full history, including records omitted from the diagram. The short offer panel shows the complete union of reference and retrieved records. Purple marks retained or missing cancellation evidence; rust marks an unrelated entity's record. Columns are chronologically ordered and evenly spaced, with relative hours shown.}
+\label{fig:loan-cases}
+\end{figure}
+
 \begin{thebibliography}{99}
 \bibitem{here} F. Zetzsche et al. \emph{Case ID Revealed HERE: Hybrid Elusive Case Repair Method for Transformer-Driven Business Process Event Log Enhancement}. Business \& Information Systems Engineering 67, 311--337, 2025. \url{https://doi.org/10.1007/s12599-025-00935-5}.
 \bibitem{sanagraph} S. Dissegna, C. Di Francescomarino and M. Ronzani. \emph{Graph-Based Event Log Repair}. CAiSE 2026, 423--440. \url{https://doi.org/10.1007/978-3-032-28117-3_24}. Accessible author preprint: \url{https://arxiv.org/abs/2508.05145}.
 \bibitem{ddtr} M. Matyash, A. Gal and A. Senderovich. \emph{DDTR: Diffusion Denoising Trace Recovery}. 2025. \url{https://arxiv.org/abs/2510.22553}.
 \bibitem{holoclean} T. Rekatsinas, X. Chu, I. F. Ilyas and C. R\'e. \emph{HoloClean: Holistic Data Repairs with Probabilistic Inference}. 2017. \url{https://arxiv.org/abs/1702.00820}.
+\bibitem{graphsage} W. L. Hamilton, R. Ying and J. Leskovec. \emph{Inductive Representation Learning on Large Graphs}. Advances in Neural Information Processing Systems 30, 2017. \url{https://arxiv.org/abs/1706.02216}.
 \bibitem{ocsim} B. Knopp, M. Pourbafrani and W. M. P. van der Aalst. \emph{Discovering Object-Centric Process Simulation Models}. ICPM 2023. \url{https://ieeexplore.ieee.org/document/10271944/}.
 \bibitem{relationalocel} A. Berti. \emph{Synthetic relational databases and reference OCELs}. Zenodo, version 1, 2026. \url{https://doi.org/10.5281/zenodo.22079246}.
 \bibitem{ekginference} A. Swevels, R. Dijkman and D. Fahland. \emph{Inferring Missing Entity Identifiers from Context Using Event Knowledge Graphs}. BPM 2023, 180--197. \url{https://doi.org/10.1007/978-3-031-41620-0_11}.

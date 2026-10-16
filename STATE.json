@@ -78,7 +78,10 @@
     "docs/CONFIRMATION_PROTOCOL_V1.json",
     "reports/generated_replay_audit_v1.json",
     "reports/generated_split_audit_v1.json",
-    "reports/confirmation_candidate_audits_real_v1.json"
+    "reports/confirmation_candidate_audits_real_v1.json",
+    "reports/generated_confirmation_evidence_v1.json",
+    "reports/confirmation_candidate_evidence_v1.json",
+    "reports/portability_audit_v1.json"
   ],
   "factory_increment": "TR0 and TR1 bounded source acceptance; general factory/RF/wheel scope unchanged",
   "manuscript": "paper/main.tex and main.pdf are internal development drafts; cached offline TeX compilation works. Figures are development-only.",
@@ -121,40 +124,47 @@
     },
     "generated_varied_r0": {
       "session": 87960,
-      "report": "confirm_generated_varied_r0"
+      "report": "confirm_generated_varied_r0",
+      "status": "completed"
     },
     "generated_plain_r0": {
       "session": 2746,
-      "report": "confirm_generated_plain_r0"
+      "report": "confirm_generated_plain_r0",
+      "status": "completed"
     },
     "generated_plain_r1": {
       "session": 50262,
-      "report": "confirm_generated_plain_r1"
+      "report": "confirm_generated_plain_r1",
+      "status": "completed"
     },
     "generated_varied_r1": {
       "session": 33162,
-      "report": "confirm_generated_varied_r1"
+      "report": "confirm_generated_varied_r1",
+      "status": "completed"
     },
     "generated_plain_r2": {
       "session": 38165,
-      "report": "confirm_generated_plain_r2"
+      "report": "confirm_generated_plain_r2",
+      "status": "completed"
     },
     "generated_varied_r2": {
-      "session": 24025,
-      "report": "confirm_generated_varied_r2"
+      "session": 95913,
+      "report": "confirm_generated_varied_r2",
+      "status": "completed"
     },
     "clean_real": {
-      "session": 69932,
+      "session": 67476,
       "report": "confirmation_clean_bpi2017_bpi2019_bpi2012_check",
-      "log": "reports/confirmation_clean_real.log"
+      "log": "reports/confirmation_clean_real.log",
+      "status": "completed"
     },
     "adaptation_real": {
-      "session": 52861,
+      "session": 48775,
       "report": "confirmation_adaptation_bpi2017_bpi2019_bpi2012_check",
       "log": "reports/confirmation_adaptation_real.log"
     },
     "pipeline_real": {
-      "session": 35481,
+      "session": 95927,
       "report": "confirmation_pipeline_bpi2017_bpi2019_bpi2012_check"
     },
     "source_real": {
@@ -163,20 +173,40 @@
     },
     "structural_real": {
       "session": 81961,
-      "report": "confirmation_structural_bpi2017_bpi2019_bpi2012_check"
+      "report": "confirmation_structural_bpi2017_bpi2019_bpi2012_check",
+      "status": "completed"
     },
     "controls_real": {
-      "session": 6555,
+      "session": 12367,
       "report": "confirmation_controls_bpi2017_bpi2019_bpi2012_check"
     },
     "adaptation_bpi2019_seed2_restart": {
       "session": 96907,
-      "report": "confirm_bpi2019_native_mixed_91002_target_selfsupervised_operational_restart"
+      "report": "confirm_bpi2019_native_mixed_91002_target_selfsupervised_operational_restart",
+      "status": "completed"
     },
     "candidate_audits_real": {
       "session": 99157,
       "report": "confirmation_candidate_audits_real_v1",
       "status": "completed"
+    },
+    "bpi12_clean_r2_restart": {
+      "session": 10764,
+      "status": "completed"
+    },
+    "bpi12_adaptation_r1_restart": {
+      "session": 96931
+    },
+    "bpi17_sage_restart": {
+      "session": 60604
+    },
+    "bpi17_mlp_restart": {
+      "session": 46114
+    },
+    "portable_mixed_replay": {
+      "session": 42032,
+      "root": "/tmp/temporal_repair_portability_v1/Temporal_Graph_Repair",
+      "report": "portability_bpi2012_mixed_r0"
     }
   },
   "operational_continuation": "docs/CONFIRMATION_OPERATIONAL_CONTINUATION_V1.json"
