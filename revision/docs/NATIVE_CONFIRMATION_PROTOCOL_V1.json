@@ -1,0 +1,113 @@
+{
+  "status": "frozen_before_native_outcomes",
+  "created_utc": "2026-10-16T05:40:26.895828+00:00",
+  "task": "Closed-case missing single-root identifiers; separate from coupled repair and manual-verification budgets.",
+  "jobs": [
+    [
+      "bpi2017",
+      0,
+      0.3,
+      30,
+      2048
+    ],
+    [
+      "bpi2017",
+      1,
+      0.3,
+      30,
+      2048
+    ],
+    [
+      "bpi2017",
+      2,
+      0.3,
+      30,
+      2048
+    ],
+    [
+      "bpi2019",
+      0,
+      0.3,
+      30,
+      2048
+    ],
+    [
+      "bpi2019",
+      1,
+      0.3,
+      30,
+      2048
+    ],
+    [
+      "bpi2019",
+      2,
+      0.3,
+      30,
+      2048
+    ]
+  ],
+  "methods": [
+    "HERE-Transformer without expert rules",
+    "generated_original_top1",
+    "generated_varied_top1",
+    "known_labels_only_HGB_top1",
+    "nearest_known_event"
+  ],
+  "here": {
+    "author_commit": "814b1db618aaa9f14e6f471504699ade9fcbf203",
+    "epochs": 30,
+    "checkpoint": "last epoch",
+    "architecture": "512 model dimension, 3 layers, 8 heads, 2048 feed-forward, dropout 0.1",
+    "optimizer": "Adam lr=1e-4 eps=1e-9",
+    "batch_size": 8,
+    "window_events": 15,
+    "training": "Only events with retained IDs enter targets. Author-like 90% usable windows, 90% of usable fit. Overlapping-window validation is diagnostic only.",
+    "expert_rules": false,
+    "prediction": "Author greedy decoder, threshold zero, trusted existing IDs preserved."
+  },
+  "controls": {
+    "candidate_budget": 128,
+    "known_label_HGB_query_limit": 4096,
+    "parameters": "Inherited fixed 200-iteration/15-leaf HGB; no native tuning.",
+    "known_label_access": "HERE has all retained IDs as training data. HGB fits a fixed 4096-query sample with leave-query-out profiles; all retained memberships are observed context for temporal matching. Unequal fitting counts must be reported.",
+    "generated_weights": "Original fixed models; no native labels used for model fitting or threshold selection; top-one task decision."
+  },
+  "outcomes": [
+    "accuracy over all missing IDs",
+    "assigned precision and coverage",
+    "history F1 and exact fraction",
+    "retrieval coverage",
+    "training and inference cost"
+  ],
+  "selection_rule": "Report every seed and method. No native outcome selects a method or modifies this track. These outcomes do not substitute for fresh coupled-repair confirmation.",
+  "inputs_contract": "Activity/resource/time, existing case catalog and trusted remaining case IDs. No child IDs, vendor relations, descriptive fields, wrong IDs, or aliases.",
+  "public_data_only": true,
+  "implementation": {
+    "revision/native_here.py": "dda2a92df08719cb8274fffe71ab748f7ea87b560c58c39ae7c5e85157ae5979",
+    "revision/native_matched_controls.py": "e0305c36ae21d2356828d9c802208b97eef04b13efd582d96ac8f3edade46c03",
+    "revision/native_protocol.py": "cb750c2eb0a0cf0b6080f60fc7a7e0d79de8579b5bdc2dc0f5d3bb75af97ac5c",
+    "revision/here_benchmark.py": "4b7e74fa2bc57ba7307aa3b391222f6a1fa73f39193ba001db98dde155b2bf0e",
+    "revision/native_controls.py": "a4d3a1282c66b157351834978c0d98ef69e8ef2c2e16f3f74c703b65c14bcd86",
+    "revision/budget_learning.py": "7e6904e99aeca7ab2f0f1e58fffbfa9bdc992dd7877f3193a56dbeeb6af73bd2",
+    "revision/vendor/here_model.py": "4f44d790f99a047023c993069d3c86b8dea99d5ff0e4d72c50a2b439dd8dca67",
+    "revision/vendor/here_dataset.py": "1ae9e771d662ece5957cac4c4b11225e2041efb72d4437b288db4b7630b0781e",
+    "revision/vendor/here_train.py": "4903ad303fc85645776a0950d467827f36e98833b2b8a1210a6aca8b69c957fa",
+    "revision/vendor/here_LICENSE.md": "796a7f9dd50ab35afcaa24de367870ad494d3ac19e42d504bb8c9491c66aa3b9",
+    "tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2",
+    "tgrepair/metrics.py": "903faf015149e0095544ee40368bf20412d1cef856e84eebfb36e3e1c8f2e97b",
+    "tgrepair/matching.py": "304595e5d38ef157072cc693c7714ef3c2d4dee408648c860cca6dc97899b54f",
+    "tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7",
+    "tgrepair/entity_features.py": "6122ad15c21c44645521d0a920f0bd855cd112cf4caca49d548ebc8adba84dff"
+  },
+  "inputs": {
+    "revision/docs/NATIVE_COHORT_AMENDMENT_V1.json": "6c7c76d59719950e6b7b968ed1a5aa0dbab926ef27ede17b86a50e9831698b4b",
+    "revision/reports/native_cohort_bpi2017_v1.json": "965b3ce24661315147cf0d2ee0bc4f0f1cf2a380fde9acfe9588ee5df9317c43",
+    "revision/data/native_cohort_v1/bpi2017/reference_graph.json.gz": "891dafeccd5710a72da5008513a48d5b85f479965b9dc2c4b6e21b04f8abafb0",
+    "revision/reports/native_cohort_bpi2019_v1.json": "bc507a1603983e99ea3d3d82fdce8913f71ed7166d52b5b529dd5b70b3954385",
+    "revision/data/native_cohort_v1/bpi2019/reference_graph.json.gz": "0e7269092767da43c5aaefe1ca2475988829bc77fbd5f039c09379ed279ae58e"
+  },
+  "models": {
+    "checkpoints/edit_feature_v2.joblib": "c2a95d9173329ddc77876ccdf00193ade110c63b0487dafb4c13a1d7adfe33e9",
+    "checkpoints/edit_feature_attributes_v3.joblib": "803be97285c169b99459277debcba0db576224ed62355cd015280b4256b3f07a"
+  }
+}

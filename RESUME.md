@@ -1,4 +1,10 @@
-# Temporal graph repair: final review state
+# Temporal graph repair: active revision, 16 October 2026
+
+The user has now authorized iterative improvements and a maximum of **15 total pages**, including references and appendices. The original completed study below is preserved; its manuscript is also copied to `paper/archive/review_v1/`. The active research is isolated under `revision/`. Read `revision/docs/REVISION_CHARTER.json` and `revision/STATE.json` for the current work and running sessions. Do not mistake the original completion state for the current revision status.
+
+The new goal is honest stronger evidence: total verified-history budgets including calibration, fair published-code comparisons, reduced repair harm, and independently verifiable natural-error evidence if obtainable. Existing inspected outcomes are development evidence for new decisions. Fresh confirmation outcomes require a new freeze. No external submission, RF, or full factory expansion is authorized. The saved GPU approval covers `/home/zubair/zubairEnv/bin/python revision/research.py`.
+
+## Preserved original final-review state
 
 The user-authorized scientific work is complete and the manuscript is prepared for final author review. Nothing has been submitted or published. The earlier Operational_Temporal_Graphs paper is preserved. RF and the general scientific dataset factory remain outside this paper's scope. No sub-agents were authorized.
 

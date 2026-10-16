@@ -1,0 +1,149 @@
+{
+  "status": "scientific_claim_review_complete",
+  "claims": [
+    {
+      "claim": "Generated observation variation improves held-out compositional history retrieval.",
+      "status": "supported",
+      "evidence": [
+        "reports/generated_confirmation_evidence_v1.json"
+      ],
+      "boundary": "Same simulator and mechanisms; three independent training collections, shared 96 test worlds."
+    },
+    {
+      "claim": "Observation variation improves reserved loan history F1 over the paired original-observation learner.",
+      "status": "supported",
+      "evidence": [
+        "reports/confirmation_real_evidence_v1.json"
+      ],
+      "boundary": "All three loan pairs are complete; improvement is modest and identity recall remains low."
+    },
+    {
+      "claim": "The method is dependable under arbitrary logging-pipeline changes.",
+      "status": "refuted",
+      "evidence": [
+        "reports/confirmation_real_evidence_v1.json",
+        "reports/confirmation_candidate_evidence_v1.json"
+      ],
+      "boundary": "Loan pipeline history F1 worsens in all three trials."
+    },
+    {
+      "claim": "Generated supervision removes the need for any target-specific assessment.",
+      "status": "unsupported",
+      "evidence": [
+        "reports/confirmation_real_evidence_v1.json"
+      ],
+      "boundary": "False merges and damage to initially correct records remain; generated calibration is not a new-domain safety guarantee."
+    },
+    {
+      "claim": "The work introduces graph-based identifier repair, simulation or domain randomization.",
+      "status": "not_claimed",
+      "evidence": [
+        "docs/PUBLISHED_BASELINE_CONTRACT.md",
+        "docs/LITERATURE_REFRESH.md"
+      ],
+      "boundary": "Relevant established prior work is cited; contribution concerns paired executable supervision and measured history-repair behavior."
+    },
+    {
+      "claim": "The system is a new temporal GNN or deep generative model.",
+      "status": "not_claimed",
+      "evidence": [
+        "paper/main.tex"
+      ],
+      "boundary": "The principal edit scorer is a histogram boosting classifier; neural edit models are controls."
+    },
+    {
+      "claim": "The method outperforms published native-task methods under their original protocols.",
+      "status": "unsupported",
+      "evidence": [
+        "docs/PUBLISHED_BASELINE_CONTRACT.md"
+      ],
+      "boundary": "No exact HERE/SANAGRAPH/EKG numerical reproduction. Information assumptions differ; adaptations are explicitly labeled."
+    },
+    {
+      "claim": "The test measures recovery of independently labeled natural errors.",
+      "status": "not_claimed",
+      "evidence": [
+        "docs/CONFIRMATION_PROTOCOL_V1.json"
+      ],
+      "boundary": "Controlled recording faults use released public references or symbolic simulated truth."
+    },
+    {
+      "claim": "The general scientific dataset factory is complete.",
+      "status": "not_claimed",
+      "evidence": [
+        "README.md"
+      ],
+      "boundary": "Only bounded executable-world/task interfaces are implemented for this paper."
+    },
+    {
+      "claim": "The relocated review artifact can reproduce fixed model decisions.",
+      "status": "supported_with_scope",
+      "evidence": [
+        "reports/portability_audit_v1.json",
+        "reports/portability_sample_replay_v1.json",
+        "reports/portability_task_regeneration_v1.json",
+        "reports/portability_full_task_replay_v1.json",
+        "reports/portability_raw_source_rebuild_v1.json"
+      ],
+      "boundary": "Same interpreter/environment: all six models replayed on the fixed first generated graph, all 14 tasks regenerated, and a complete mixed task reproduced byte-identical outputs. Raw public BPI2012 also regenerates its exact check split. No new-hardware retraining claim."
+    },
+    {
+      "claim": "All declared confirmation experiments have finished.",
+      "status": "not_claimed",
+      "evidence": [
+        "reports/confirmation_real_evidence_v1.json",
+        "reports/reserved_download_audit_v1.json"
+      ],
+      "boundary": "All 84 original selected real-source jobs, six generated-model runs and nine separately declared follow-up runs completed. Four reserved simulations (112 planned jobs) remain unexecuted after documented download failures."
+    },
+    {
+      "claim": "Varied observations improve reserved purchasing history F1 over the paired original learner.",
+      "status": "supported",
+      "evidence": [
+        "reports/confirmation_real_evidence_v1.json"
+      ],
+      "boundary": "Three complete pairs: mean .826342 versus .809140; false identity pairs 37/12/5 and newly damaged events 145/179/54 remain."
+    },
+    {
+      "claim": "The selected boosted learner uniformly outperforms neural edit models.",
+      "status": "refuted",
+      "evidence": [
+        "reports/confirm_bpi2017_native_mixed_91001_sage.json",
+        "reports/confirm_bpi2017_native_mixed_91001_varied_r0.json"
+      ],
+      "boundary": "GraphSAGE has higher loan trial-zero F1 (.812206 versus .807628), alongside more newly damaged events (1848 versus 295). Report the trade-off without post-hoc utility selection."
+    },
+    {
+      "claim": "The source model\u2019s poor original loan transfer is intrinsic to its fitted weights.",
+      "status": "refuted",
+      "evidence": [
+        "reports/calibration_sensitivity_evidence_v1.json"
+      ],
+      "boundary": "An explicitly post-freeze switch to an already-frozen generated calibration raises F1 from .547178 to .792180 without changing the source weights."
+    },
+    {
+      "claim": "Paired observation variation improves the held-out BPI2012 check relative to original-observation training.",
+      "status": "supported",
+      "evidence": [
+        "reports/confirmation_real_evidence_v1.json"
+      ],
+      "boundary": "All three pairs positive; mean .815459 versus .776036. Source supervision and some neural/stable-field configurations remain stronger."
+    },
+    {
+      "claim": "Every historical source-archive byte checksum field was recorded correctly.",
+      "status": "refuted_and_disclosed",
+      "evidence": [
+        "reports/source_snapshot_audit_v1.json",
+        "reports/provenance_writer_fix_v1.json"
+      ],
+      "boundary": "Eight transient byte-checksum fields are preserved with explicit errata. Every member of all 60 archives matches its recorded source inventory. Scientific model/data pins are unaffected."
+    }
+  ],
+  "completed_utc": "2026-10-16T03:14:22.404110+00:00",
+  "external_review_items": [
+    "Author names and affiliations",
+    "Scientific framing and explicit limitations",
+    "Venue-specific format and submission decision",
+    "Release license decision"
+  ]
+}

@@ -1,0 +1,129 @@
+AUTHOR REVIEW GUIDE
+
+Paper: Restoring Operational Histories with Synthetic Temporal Graph Supervision
+Main manuscript: paper/main.pdf
+Editable source: paper/main.tex
+Reproduction commands: README.md
+
+The application in easy English
+
+A company records what happened to a loan application or purchase order. Some
+records lose their object reference, attach to the wrong object, or use a second
+identifier for the same object. An analyst then sees an incomplete or misleading
+history. This paper studies learning to repair those connections while keeping
+the recorded activities, times, cancellations and other event content intact.
+
+The training idea
+
+We execute small workflow worlds where the correct history is known. We vary how
+the same execution is described: for example, fields can change with activities,
+contain noisy measurements, or be sparse. Recording errors are applied separately.
+These worlds teach a model which participation links to add/remove and which
+identifier fragments to merge. The paper's principal contribution is this paired
+training-data study and its application evidence. It does not introduce a new
+neural architecture or claim a new general domain-randomization principle.
+
+The strongest completed finding
+
+Three paired training/fault trials were completed on each operational cohort.
+Mean history-retrieval F1 is shown below. Higher is better.
+
+                         Damaged input   Original training   Varied training
+BPI 2017 loans/offers          0.787              0.791              0.805
+BPI 2019 orders/items         0.760              0.809              0.826
+BPI 2012 check                0.745              0.776              0.815
+
+Every one of these nine paired comparisons favors varied training. On the 96
+held-out workflow worlds, the three-trial mean improves from 0.759 to 0.800.
+The public-source evaluation uses controlled recording errors; these are not
+independently annotated naturally occurring errors.
+
+Why the paper reports more than one score
+
+Better average histories do not mean every history is correct. The loan result
+recovers few identity pairs, and its independent pipeline-fault test gets slightly
+worse. Purchasing produces false identity pairs in all three mixed-fault trials.
+Some correct event assignments are damaged. Short histories can lose their only
+correct record. Exact-history and preservation results, examples and failures are
+therefore retained in the manuscript and machine-readable reports.
+
+The selected boosted model is not the best architecture on every cohort.
+GraphSAGE has higher trial-zero history F1 on loans and BPI 2012 check. A stable-
+field operating configuration also performs better on BPI 2012, but causes severe
+assignment damage on purchasing. The paper claims a benefit over matched original-
+observation training, not universal superiority over every method or setting.
+
+Calibration and supervised examples matter
+
+The BPI 2012 source-supervised control reaches 0.878 on its same-process check
+partition, above generated-only training. Its original loan transfer result is
+poor, but an explicitly post-freeze sensitivity using already-frozen generated
+calibration improves it from 0.547 to 0.792. That original failure cannot fairly be
+attributed to the source-trained weights alone. The sensitivity uses no target
+labels to fit new weights or tune a new threshold, and is reported separately
+from the original predeclared comparisons.
+
+All nine sensitivity runs are complete. Generated calibration changes purchasing
+F1 only slightly (0.760 to 0.761) while almost eliminating new assignment damage.
+On BPI 2012 check it lowers F1 from 0.878 to 0.825 while reducing mean new damage
+from 495 to 52 events. Calibration therefore exposes a recovery/preservation
+trade-off; no single operating point dominates across all applications.
+
+Study scope and remaining publication risks
+
+- All 84 original evaluations on the three available operational cohorts are
+  complete. The generated study contains six model evaluations of 96 worlds in
+  both damaged and clean conditions: 1,152 graph evaluations, not 1,152 independent
+  training trials.
+- Four additional public simulation sources were declared but could not be
+  retrieved in this environment. Their 112 planned comparisons were not run.
+  The original protocol, failed download record and exact omission remain visible.
+- BatteryVault and ClaimStream are independent-simulator development evidence.
+  Their results influenced method selection and are not presented as untouched
+  confirmation datasets.
+- There is no unchanged numerical reproduction of HERE, SANAGRAPH or the physical
+  Event Knowledge Graph rules. Their native input/target assumptions differ.
+  The manuscript and published-method audit explain the compatible controls.
+- The main novelty is an application-focused supervision and evaluation protocol.
+  A reviewer may ask for stronger native-method comparison or natural-error
+  validation. Acceptance cannot be guaranteed by completing experiments.
+- The three primary trials jointly vary training worlds and test faults. Reported
+  ranges are descriptive; events are not treated as independent replications.
+
+Reproducibility already checked
+
+The relocated core passed 51 research/generator checks. All six primary models
+reproduced the fixed first generated graph's metrics and exact edit program.
+The 14 BPI 2012 tasks regenerated byte-identical observation/reference files.
+A complete relocated mixed-task evaluation reproduced every edit, application
+query, repaired graph and identity cluster. The check split also rebuilt exactly
+from the raw public BPI 2012 source alone. These are same-environment replay and
+conversion checks; they are not a claim of independent retraining on new hardware.
+
+A final provenance audit identified eight historical archive checksum fields
+captured during concurrent writes. Every member of all 60 source archives matches
+its recorded per-file inventory; model, calibration and dataset hashes are
+unaffected. Original reports are preserved, and source_snapshot_audit_v1.json
+contains the explicit checksum errata. Atomic archive writing now prevents the
+race, and the complete local suite passes 52 checks including its regression test.
+
+Important files
+
+reports/confirmation_real_evidence_v1.json and its trial/type CSV files
+reports/generated_confirmation_evidence_v1.json
+reports/calibration_sensitivity_evidence_v1.json
+reports/confirmation_candidate_evidence_v1.json
+reports/claim_audit_v1.json
+reports/final_review_audit_v1.json
+docs/CONFIRMATION_PROTOCOL_V1.json
+docs/CONFIRMATION_COMPLETION_SCOPE_V1.json
+docs/PUBLISHED_BASELINE_CONTRACT.md
+
+Your final review
+
+Please review the scientific framing and retained limitations, provide the final
+author names and affiliations, and decide the target venue and release license.
+The manuscript uses a neutral article format until a venue is chosen. Nothing has
+been submitted or published externally. The earlier paper is preserved. The general
+scientific dataset factory remains a separate future project; this study uses only
+its bounded temporal generator/task component. RF is excluded from the experiments.

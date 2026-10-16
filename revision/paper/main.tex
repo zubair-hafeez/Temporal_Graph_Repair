@@ -1,0 +1,126 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,hyperref,xcolor}
+\DeclareSymbolFont{largesymbols}{OMX}{lmex}{m}{n}
+\setlength{\emergencystretch}{1em}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{5}
+\renewcommand{\topfraction}{.9}
+\renewcommand{\textfraction}{.07}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\newcommand{\pending}[1]{\par\noindent\textcolor{red}{[Revision evidence pending: #1]}\par}
+\title{Restoring Operational Histories with Generated Temporal Graph Supervision}
+\author{Author details pending final review}
+\date{Working revision---not the final review manuscript}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+An analyst investigating a purchase order or loan application needs its complete history, including cancellations and retries. Missing object links, wrong joins and fragmented identifiers can hide relevant records or introduce false evidence. We study offline repair of these associations while preserving recorded event content. Executable workflows provide training references; separate observation and fault models vary the conditions under which a learner must recover them. We evaluate the resulting supervision against models trained on the same limited number of verified operational histories, counting both fitting and calibration labels. A separate comparison implements the published HERE Transformer on its supported missing-case-identifier task. Evaluation measures retrieved histories, operational queries, false identity merges and newly damaged records. The study distinguishes generated references, controlled faults in public business logs, and naturally verified corrections.
+\pending{The final quantitative finding and its scope will be written only after all declared confirmation experiments finish.}
+\end{abstract}
+
+\section{Application and contribution}
+A cancellation can be correctly recorded yet absent from the history retrieved for an order. A wrong join can make another customer's record appear in that history. When two systems assign different identifiers to the same object, either identifier may retrieve only part of its evidence. These failures make operational investigation difficult even when activities and timestamps themselves are accurate.
+
+The practical objective is to restore recorded evidence, including exceptional behavior. We retain cancellations, returns and repeated work rather than changing the record to resemble an ideal process. The input is an available window of event--object relations, and the output is an auditable set of association and identity edits. This is offline reconstruction; later observations inside the window can support an earlier association.
+
+Training such a repair system requires examples of correct histories and the ways their observed connections can fail. Verification is costly because an investigator may need to reconcile several records and identifiers. Executable workflows offer exact symbolic references, but simulated observations can contain misleading regularities. For example, an amount may be constant throughout a simulated order while the corresponding operational measurement changes between activities. A learner can mistake such differences for incorrect joins.
+
+We therefore ask two linked application questions. Does varying observations of an unchanged workflow execution improve generated repair supervision? When some histories can be verified, does this supervision add value beyond a model using the same verification budget? The second question includes the labels needed to choose operating thresholds. Improved average retrieval is insufficient if a method introduces damaging false associations.
+
+The contribution is an executable training-data protocol and its evaluation for coupled temporal association and identity repair. The classifiers, observation-randomization principle and graph operators are established components. The evidence includes a paired observation study, explicitly accounted adaptation budgets, a published-code comparison on a compatible task, and measurements of useful recovery and harm. The generator is a bounded component; building a universal scientific dataset platform is outside this paper.
+
+\section{Related work and comparison scope}
+HERE combines a Transformer with optional expert knowledge for missing case identifiers~\cite{here}. We retain its author model, tensor dataset and greedy decoder in a separate single-case comparison. Its output contract does not directly express simultaneous multi-object participation edits and alias merging. SANAGRAPH repairs event-log attributes using supplied trace structure~\cite{sanagraph}; providing correct trace membership would expose a target of our task. DDTR and process-tree approaches recover trace content~\cite{ddtr,processtree}. Their objectives differ from preserving event content while restoring its associations.
+
+Contextual Event Knowledge Graph inference uses available relations and physical rules to infer missing entity identifiers~\cite{ekginference}. Object-centric imperfection patterns identify association and identity problems encountered in practice~\cite{ocip}. Their public artifacts include injected event--object faults and observed cross-log object--object disagreements. The latter are useful evidence of data inconsistency, but do not independently certify the missing or wrong event--object links evaluated here. We do not claim to introduce these error categories.
+
+Object-centric simulation~\cite{ocsim}, configurable process-data faults~\cite{flawd}, and temporal graph generation~\cite{tigger} supply relevant building blocks. Domain randomization is an established transfer strategy~\cite{domainrandomization}; synthetic relational pretraining also has recent precedents~\cite{plurel,rdbpfn}. Our question concerns what these ideas buy an operational repair application under explicit information and verification limits. HoloClean illustrates joint evidence-based data repair~\cite{holoclean}; the present study concentrates on temporal histories, their identity fragmentation and the consequences of repairing them.
+
+\section{Task and executable supervision}
+\subsection{Observed information and permitted edits}
+An event is $e=(u,t,a,P,x)$: an opaque handle, time, activity, typed participants and legitimate descriptive fields. Event--object incidence and temporal adjacency within observed histories form the temporal graph. Equal-time records remain simultaneous; source row order supplies no causal ordering. A typed catalog contains the available object handles, including any aliases.
+
+The system can add or remove participation and merge same-type aliases. It cannot invent events, change recorded activities or times, create entirely unknown entities, or split an already overmerged identity. A merge consolidates handles and deduplicates participation. These capabilities matter when choosing a dataset: natural errors requiring a different operation cannot validate this repair vocabulary.
+
+Only the observed graph and target-type schema enter inference. The canonical identity map, clean case containers, corruption locations, seeds and clean-derived adjacency remain outside the learner interface. Target links are corrupted while resources and, where available, vendors remain context. This is a scoped fault model, not evidence of robustness to unreliable timestamps or pervasive context corruption. Public logs provide reference representations for controlled fault injection; they are not certifications that every underlying business record is correct.
+
+\subsection{Generate execution, observation and recording faults separately}
+Executable worlds contain parents, work items, resources and optional batches. Mechanisms include branching, joins, resource queues, handoffs, multistage routes, repeated work, cancellations and returns. Queueing configurations enforce resource capacity. The worlds are symbolic workflows, not calibrated digital twins of the evaluated organizations.
+
+Observation projection determines visible entity types and fields. Recording faults are applied afterwards, producing learner observations and separate participation/identity references. Normalized recipes, random states, source fingerprints and export hashes record provenance. Execution checkpoints reproduce uninterrupted runs. Observations sharing an execution stay in the same data split.
+
+The paired observation comparison holds executed events, timestamps, target types and faults fixed. Generated views retain original fields or introduce activity-dependent categories, noisy numerical measurements, incidental categories and time bands, with varying field availability. Measurements can depend on an observed amount and activity, but never on a target identifier. Clean and damaged versions receive aligned descriptions through builder-only execution ancestry. Each trial contains 512 fitting worlds and 96 generated calibration worlds. Three independently generated collections test sensitivity to generated training data.
+
+The mixed fault family splits eligible histories at a temporal cut with probability .25, removes approximately .10 of each resulting handle's links in a contiguous block, and replaces surviving target links with probability .10 by a different same-type identity. Histories require at least four events to be fragmented. Missing-block widths use stochastic rounding so short histories can also lose links. A separately implemented pipeline stressor uses activity-routed aliases, a recording outage and persistent stale joins. These are declared experimental conditions, not estimates of natural incident rates.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{../../paper/figures/method_overview.pdf}
+\caption{Executable references supervise repair training. Inference uses the observed temporal graph and preserves recorded event content. Reference identities and fault locations remain outside learner input.}
+\label{fig:method}
+\end{figure}
+
+\subsection{Learn and apply auditable edits}
+Candidate retrieval uses temporal proximity, activity, co-participation and descriptive agreement. Participation features summarize history degree, temporal bracketing, transitions and contextual agreement. The query event is excluded from the evidence supporting its existing association. Identity features compare temporal boundaries and activity, context and field profiles. Opaque identifier values are not numerical predictors.
+
+Separate boosted classifiers score additions, removals and merges. An addition is labelled correct when it supplies a missing reference entity; a removal when the current entity is incorrect; a merge when both handles refer to the same entity. Generated training includes partial teacher-repaired states. These local targets do not guarantee improvement in final history retrieval. Earlier neural controls use the same candidates with MLP, GraphSAGE~\cite{graphsage} or temporal message-passing scorers; architecture superiority is not our contribution.
+
+The decoder selects a commuting batch, applies it, recomputes observed evidence and repeats for at most four passes in the revision experiments. It cannot simultaneously merge an entity and edit its participation. Accepted participation edits are not reversed; accepted merges cannot be split by inference. Every batch retains a reversible audit record. For operational graphs, candidate limits are 128 participants per event/type and 64 identity candidates per anchor. Candidate coverage is reported separately from scoring accuracy.
+
+\section{Verified-history budgets and evaluation}
+\subsection{Public sources and prospectively assigned cohorts}
+Loan data come from BPI 2017~\cite{bpi2017}. Targets are applications and explicitly referenced offers; resources are context. Purchasing data use the released BPI 2019 OCEL representation~\cite{bpi2019,bpiconversion,bpiocel}; targets are purchase orders and items, with resources and vendors as context. Identifiers and copied trace/object fields are removed from learner attributes. The loan adapter retains allowed event-level descriptions; the purchasing adapter retains cumulative net worth. An absent native offer link is not treated as proof that no real-world relationship existed.
+
+The revision excludes the earlier feasibility prefixes, earlier confirmation roots and their target children. Roots sharing target children, or crossing an excluded target child, are also excluded. A declared hash ranking assigns 512 development, 1,024 annotation and 1,024 confirmation roots per source, followed by a separate native-method block. Associated target children stay with their root; context resources and vendors may overlap. The native block was prospectively extended from 256 to 2,048 roots for a credible training volume, before its outcomes were inspected. All preceding root partitions were checked to remain unchanged.
+
+The main confirmation cohorts contain 39,421 loan events and 21,680 purchasing events. The native-method cohorts contain 77,981 and 40,483 events. These are fresh object histories from previously studied processes, not new institutions or untouched source domains. Earlier study outcomes inform revision development and are identified separately from the new confirmation.
+
+\subsection{Count fitting and calibration together}
+A verification unit is a complete root history bundle: the root, its target children, all their alias handles and their event memberships. A restricted label view exposes exactly the selected bundles. It cannot reveal the canonical identities of unselected histories. Complete alias verification makes an unlisted candidate a valid negative for a selected entity; this assumption must hold for the simulated verification protocol to represent real annotation.
+
+Total budgets of 16, 64 and 256 bundles allocate 12/48/192 to fitting and 4/16/64 to calibration. Hash-based assignments are nested, and a root retains its role as the budget increases. Three allocation/fault seeds are retained. Reports count verified events, entities and aliases, as well as sampled training queries. Each role uses at most 4,096 event queries; the complete verification cost is still counted. These are simulated reference accesses, not measured human work hours.
+
+Real-only, original-generated-plus-real and varied-generated-plus-real classifiers receive identical real labels at each budget. Hyperparameters are fixed: 200 boosting iterations, 15 leaves, learning rate .08, regularization 1 and no early stopping. Mixed fitting initially gives generated and real examples equal weight mass, followed by class balancing. The generated collection is held fixed across these adaptation seeds. If fitting lacks a positive or negative class for an operation, that operation abstains.
+
+Calibration chooses the highest-recall threshold attaining empirical precision of at least .95 and at least five correct actions for each operation. An infeasible operation abstains. A zero-budget control uses generated calibration. A calibration-only control spends the complete selected target budget on thresholds for fixed generated weights, without target fitting. It uses the same selected bundles as the fitting-plus-calibration comparisons. Thus calibration is neither free nor silently supplied from another labelled target set. Historical research and development labels are additional costs; these curves measure incremental adaptation to new histories in known processes.
+
+\subsection{Measure useful recovery and introduced errors}
+For reference entity $q$, let $H_q$ be its event history, $A_q$ its observed aliases, and $\widehat H(u)$ the events retrieved by the predicted cluster of handle $u$. The primary outcome is
+\[
+ F_{\mathrm{history}}=\frac{1}{|Q|}\sum_{q\in Q}\frac{1}{|A_q|}
+ \sum_{u\in A_q}\frac{2|\widehat H(u)\cap H_q|}{|\widehat H(u)|+|H_q|}.
+\]
+Entities with no reference events do not enter $Q$. Exact-history recovery replaces the inner score by an equality indicator, retaining the same entity/alias weighting. It does not require every alias of an entity to succeed simultaneously.
+
+We separately measure identity-pair precision/recall and changes to initially correct events. The revised damage measure expands each predicted cluster to \emph{all} its reference identities before checking participation. Consequently, a false merge can damage events on both sides, including events whose representative handle did not change. Direct assignment damage is also retained for comparison with the earlier study. Event activity, timestamp and fields are checked to remain unchanged.
+
+Application queries ask whether a retrieved history contains recorded cancellation evidence and whether its first/last timestamps are recovered. Cancellation evidence uses the case-insensitive substring \texttt{cancel} consistently in predictions and references. It does not establish the final business outcome, and boundary timestamps do not certify every simultaneous boundary record. Three-seed means and observed ranges summarize the declared trials; events are not treated as independent statistical replications.
+
+\subsection{Reliability and published-method controls}
+The reliability study tests a simple schema control where the public representation declares exactly one root per event. Removing a sole root requires a supported replacement, committed in the same batch. A missing root can receive one supported candidate. Other target types and alias decisions retain the original decoder rules. The middle 64-bundle budget and real-only/varied-mixture regimes are fixed for development comparison. A stricter .99 empirical-precision operating point for the original decoder is essential: a more complex control is useful only if it improves recovery at comparable damage. This control imposes an explicit application schema and does not guarantee correct identities.
+
+The native comparison masks .30 of single root identifiers in each 2,048-root cohort, using three fixed seeds. Activity, resource and time are available; child identifiers, vendor relations and descriptive fields are removed for every method. Trusted remaining case IDs provide closed-case supervision. HERE's author Transformer uses 512-dimensional states, three layers, eight heads, 15-event windows, batch size eight and 30 epochs. The final epoch is evaluated. Only retained identifiers enter training targets; overlapping-window validation is diagnostic, not an independent test. The headless runner and masking/evaluation protocol are explicit adaptations. No expert rules are supplied, so the comparison is named \emph{HERE-Transformer without expert rules}, not a reproduction of the complete published system.
+
+Matched controls include both fixed generated scorers, a target-local boosted scorer and nearest-known-event matching. Generated scorers choose one candidate for each missing ID. The local boosted control fits at most 4,096 retained-ID queries with leave-query-out profiles, whereas HERE uses the remaining known events throughout its training windows; this unequal fitting volume is reported. All retained memberships are observed context. Existing IDs remain unchanged. Native results therefore assess missing-ID completion, not robustness to wrong existing IDs, coupled alias repair or verification-budget efficiency. Data, weights, code and all six native jobs were pinned before native outcomes.
+
+\section{Results and application interpretation}
+\IfFileExists{results.tex}{\input{results.tex}}{\pending{Complete matched-budget, reliability and native-method results; freeze and execute fresh coupled-repair confirmation.}}
+
+\section{Scope, limitations and reproducibility}
+The earlier paired study supports observation variation as a useful generated-data condition, but it does not establish that synthetic augmentation always beats verified operational supervision. The revision retains real-only and calibration-only controls precisely to test that boundary. Numerical claims about reduced supervision will be limited to the completed matched comparisons.
+
+All operational error labels in the main evaluation come from controlled perturbations of released representations. Public natural-error candidates were audited without substituting their tasks: S2AND identity disagreements largely require splitting overmerged profiles, while the public object-centric imperfection demonstration compares object--object relationships across logs. Neither provides independent natural business-error ground truth compatible with the implemented operations. Field validation with verified operational corrections remains open.
+
+Sparse or empty histories may not contain enough information to identify a missing participant. False merges can contaminate many retrieved histories. Confidence thresholds fitted on a few bundles are uncertain, and precision measured on those bundles is not a deployment guarantee. The fault families, uncorrupted context, available catalog and offline window all limit transfer claims. Sampling complete roots also changes concurrency relative to a complete enterprise log.
+
+The original study included a BPI 2012 check~\cite{bpi2012}, architecture controls and generated compositional tests. Their results and failures remain in the separate supporting artifact. Four originally declared external simulation sources could not be retrieved; their planned evaluations remain explicitly unexecuted. No substitute was chosen based on outcomes. The revision preserves that earlier study and does not present it as untouched confirmation for newly selected methods.
+
+Recipes, split rules, label-access tests, source/model hashes, predictions, edit audits and per-trial results support reproduction. Third-party source data are obtained separately under their terms. The artifact distinguishes source regeneration, replay of stored models and fresh retraining. No human annotation-time study or independent hardware replication is claimed.
+
+\section{Conclusion}
+\pending{State the supported application finding, the verified-history cost, and the most important remaining failure after confirmation. Do not replace mixed evidence with an unconditional superiority claim.}
+
+\input{references.tex}
+\end{document}

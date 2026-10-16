@@ -1,7 +1,9 @@
 {
   "project": "generative_temporal_graph_repair",
-  "status": "awaiting_user_final_review",
-  "stage": "completed_manuscript_for_author_review",
+  "status": "active_authorized_revision",
+  "stage": "revision_development_total_annotation_budgets_and_published_baseline",
+  "active_revision_state": "revision/STATE.json",
+  "revised_manuscript_page_limit_including_references": 15,
   "learned_model_trained": true,
   "main_target_tests_opened": true,
   "current_unit": {
@@ -26,7 +28,7 @@
     ]
   },
   "authorization": "User authorized autonomous paper development and experiments through final review; no external submission.",
-  "next_action": "User final review of manuscript, author information, venue and any release/submission decision. Do not restart experiments or expand the general factory automatically.",
+  "next_action": "Continue the user-authorized isolated revision under revision/; preserve original evidence and require a new protocol before fresh confirmation evaluation. See revision/STATE.json.",
   "trained_models": [
     "source participant matcher",
     "source and synthetic identity matchers",

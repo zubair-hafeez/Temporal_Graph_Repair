@@ -1,0 +1,100 @@
+{
+  "status": "active_revision_development",
+  "user_constraint": "At most 15 pages total including references and appendices; iterate to an evidence-supported good paper for final review only.",
+  "original_study": "Preserved. Original protocol and frozen scientific code unchanged. Original manuscript archived under paper/archive/review_v1 and original review bundle remains intact.",
+  "goal_status": "active",
+  "current_stage": "Remaining matched-budget development seeds; native cohort preparation; reliability controls and public artifact audit",
+  "completed": [
+    "Revision charter and prospective cohort plan saved before new record selection.",
+    "BPI2017/BPI2019 fresh root/child-disjoint partitions prepared: 512 development, 1024 annotation, 1024 confirmation, 256 native comparison each. Original audited roots and original 1024-root confirmation excluded.",
+    "Total budgets 16/64/256 include 12/48/192 fitting and 4/16/64 calibration histories; selected root bundles include target child identities. Event and identity annotation counts recorded.",
+    "Restricted label view prevents unverified identity/reference labels entering fitting. Seven revision tests currently pass, including unverified-label invariance and full alias contamination counting.",
+    "All nine seed-zero models fitted per domain: real-only, original-synthetic mixture, varied-synthetic mixture at all three budgets. Original generated training collection held fixed.",
+    "HERE author model/dataset/greedy decoder integrated; two-epoch GPU pilots completed on 128-root development projections. Not final comparisons.",
+    "S2AND ArnetMiner signatures/papers/clusters downloaded for schema/compatibility audit only; no natural-error claim or performance evaluation yet.",
+    "Readable <=15-page manuscript space allocation saved in revision/paper/OUTLINE.txt.",
+    "All 54 budget models fitted across two domains, three allocation seeds and three regimes/budgets.",
+    "Both seed-zero budget development evaluations completed. Mixed varied data improves all purchasing budgets but does not beat real-only loan models in seed zero. These are development results.",
+    "Full 30-epoch HERE development runs completed on 512 roots: missing-ID accuracy 0.8563 loans and 0.5288 purchasing. Strong known-label HGB and nearest-event controls retained.",
+    "ArnetMiner compatibility audit completed: most natural disagreements require identity splitting, outside this repair vocabulary. No natural business-error validation claimed.",
+    "Prospective native-cohort expansion from 256 to 2048 roots declared before any native outcomes.",
+    "Expanded native cohorts prepared: 2048 roots each, 77981 loan events and 40483 purchase events. Earlier raw-root partitions unchanged.",
+    "Native comparison protocol frozen: c20c91503824137b73b0621cf492a6a6e05dea86d6783b639333df19299e0428; three seeds, 30% missing IDs, 30 HERE epochs, all four matched controls. Native outcomes may now be opened only under this separate freeze; main coupled-repair confirmation remains unopened.",
+    "Zero-label and full-budget calibration-only controls prepared for seed0, both domains, not yet decoded.",
+    "Root-transaction reliability control implemented; a strict 99%-calibration original decoder is included as a fair comparator. Development evaluation only.",
+    "11 distinct revision tests have passed (10 full suite plus new protocol boundary test; two relevant native tests also passed).",
+    "Public OCIP artifact audit completed using lower-cost model and pinned blob verification. Natural demonstrations concern cross-log object-object disagreements, not independent event-object repair truth."
+  ],
+  "running_jobs": {
+    "budget_development_bpi2017_seed1": {
+      "session_id": 40577
+    },
+    "budget_development_bpi2019_seed1": {
+      "session_id": 91361
+    },
+    "budget_development_bpi2017_seed2": {
+      "session_id": 9258
+    },
+    "budget_development_bpi2019_seed2": {
+      "session_id": 70749
+    },
+    "native_confirmation_bpi2017_all_seeds": {
+      "session_id": 43875,
+      "device": "cuda:0"
+    },
+    "native_confirmation_bpi2019_all_seeds": {
+      "session_id": 15359,
+      "device": "cuda:1"
+    },
+    "reliability_development_bpi2017_seed0": {
+      "session_id": 98530
+    },
+    "reliability_development_bpi2019_seed0": {
+      "session_id": 16789
+    }
+  },
+  "completed_jobs": {
+    "cohorts_bpi2017": 37537,
+    "cohorts_bpi2019": 15118,
+    "annotation_bpi2017_seed0": 79458,
+    "annotation_bpi2019_seed0": 94155,
+    "training_bpi2017_seed0": 24433,
+    "training_bpi2019_seed0": 73627,
+    "here_pilot_bpi2017": 10817,
+    "here_pilot_bpi2019": 20009
+  },
+  "here_pilot": {
+    "bpi2017": {
+      "missing_id_accuracy": 0.39651416122004357,
+      "missing_events": 459,
+      "seconds": 32.7693
+    },
+    "bpi2019": {
+      "missing_id_accuracy": 0.5956416464891041,
+      "missing_events": 413,
+      "seconds": 29.5558
+    },
+    "warning": "Only two epochs; not evidence of full-budget method performance. Need full declared 30-epoch training and matched-input generated/source/temporal baselines, plus adequate data-volume assessment. No native-comparison outcomes opened."
+  },
+  "critical_next_steps": [
+    "Monitor both development evaluations; they take roughly 80-100 seconds per pass with 3-5 million candidate edits.",
+    "Complete credible full-budget HERE comparison protocol on missing case IDs. Author model uses closed case vocabulary, activity/resource/time inputs and optional expert rules; this runner currently has no expert rules.",
+    "Assess data volume before native confirmation. Current sealed 256-root native purchasing cohort has only 4441 events; consider an explicitly pre-outcome expansion so a data-hungry Transformer is not evaluated only at small scale.",
+    "Prepare remaining allocation seeds and budget-zero controls after reviewing implementation correctness. Any calibration-only control must count its actual label usage.",
+    "Investigate reliability improvements on development evidence; compare against calibrated original decoding rather than adding untested complexity.",
+    "Audit ArnetMiner compatibility. Natural author mentions are not proof of naturally wrong loan/order associations; do not force this case into the main paper.",
+    "Freeze exact revised method/evaluation jobs before any fresh confirmation outcomes. All 1024-root confirmation and native-comparison outcomes currently unopened.",
+    "Write and validate <=15-page manuscript and reproducible final-review bundle once evidence is complete."
+  ],
+  "label_budget_caution": "These are incremental fitting/calibration budgets on fresh histories in previously studied source processes. Historical research/development labels are not zero and must be disclosed. Do not claim a total project-wide annotation budget or unseen-domain transfer from these same-source cohorts.",
+  "gpu_runner": "/home/zubair/zubairEnv/bin/python revision/research.py",
+  "gpu_approval": "Saved categorical prefix for the paper runner; CUDA works outside sandbox. Both RTX A6000 GPUs verified. Use approved runner for future GPU jobs.",
+  "untracked_user_files": "Preserve paper/.ipynb_checkpoints/.",
+  "no_external_submission": true,
+  "updated_utc": "2026-10-16T05:41:22.554330+00:00",
+  "public_data_only": true,
+  "user_preferences": {
+    "public_data_only": true,
+    "small_tasks": "Use lower-cost models for bounded audits/formatting; main agent retains scientific decisions and review."
+  }
+}

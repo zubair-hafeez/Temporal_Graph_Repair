@@ -1,0 +1,15 @@
+{
+  "status": "declared_before_revision_record_selection",
+  "created_utc": "2026-10-16",
+  "domains": ["bpi2017", "bpi2019"],
+  "ranking_namespace": "tgrepair_revision_20261016_cohort_v1",
+  "partition_sizes": {"development": 512, "annotation": 1024, "confirmation": 1024, "native_comparison": 256},
+  "original_exclusion": "Exclude all roots in the original audited prefix and the original 1024-root confirmation cohort, plus every target child object associated with those excluded roots.",
+  "structural_exclusion": "Exclude roots sharing a target child with a different root, and roots crossing any excluded target child. This is a schema/partition-boundary exclusion, not selection by repair outcome or completeness; count all exclusions.",
+  "assignment": "Rank remaining root identifiers by SHA256(namespace + ':' + domain + ':' + raw_root_id); allocate consecutive disjoint blocks in the order listed in partition_sizes.",
+  "anonymization_seeds": {"development": 120101, "annotation": 120102, "confirmation": 120103, "native_comparison": 120104},
+  "record_contract": "All events of selected roots, native allowed event fields only, no copied trace/object attributes or exposed canonical root/child IDs. Child histories stay with their root. Resources and vendors may overlap partitions.",
+  "freshness": "New object histories from previously used source datasets; not new institutions, an independent population sample, or untouched source schema.",
+  "access": "Development and annotation records may inform method development. Confirmation and native_comparison outcomes remain unopened until their separate method/evaluation freezes. Preparing graphs and checking schema/partition integrity is permitted.",
+  "fallback": "Fail if a requested block is unavailable; record any amendment before replacement selection. Never choose a smaller or different cohort based on scores."
+}
