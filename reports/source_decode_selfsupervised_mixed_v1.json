@@ -1,5 +1,5 @@
 {
-  "status": "running_development_source_evaluation",
+  "status": "completed_development_source_evaluation",
   "config": {
     "model": "selfsupervised_learning_v1_self_supervised_plus_generated",
     "kind": "feature",
@@ -119,5 +119,40 @@
     "Thresholds use added faults on already imperfect fit observations. No true source reference labels enter fitting or calibration.",
     "This policy receives target entity types but no singleton-participation constraint."
   ],
-  "resumed_rounds": 0
+  "resumed_rounds": 0,
+  "after": {
+    "history": {
+      "precision": 0.8700326941448684,
+      "recall": 0.734465991406232,
+      "f1": 0.7720542095136654,
+      "exact_history_fraction": 0.05184033177812338,
+      "entities": 1929,
+      "per_type": {
+        "Application": {
+          "precision": 0.8700326941448684,
+          "recall": 0.734465991406232,
+          "f1": 0.7720542095136654,
+          "exact_history_fraction": 0.05184033177812338,
+          "entities": 1929
+        }
+      }
+    },
+    "identity": {
+      "predicted_pairs": 0,
+      "true_pairs": 355,
+      "correct_pairs": 0,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "events": {
+      "originally_correct_events": 31362,
+      "preserved_correct_events": 31353,
+      "damaged_events": 7415,
+      "repaired_events": 0
+    },
+    "protected_event_fields_preserved": true
+  },
+  "seconds": 620.1533271739027,
+  "edit_count": 1833
 }

@@ -1,0 +1,199 @@
+{
+  "status": "running_confirmation_block",
+  "config": {
+    "protocol": "docs/CONFIRMATION_PROTOCOL_V1.json",
+    "domains": [
+      "bpi2017",
+      "bpi2019",
+      "bpi2012_check"
+    ],
+    "suite": "primary",
+    "workers": 4,
+    "resume": false,
+    "plan_only": false
+  },
+  "protocol_hash": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "jobs": [
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "plain_r0",
+      "model": "edit_feature_v2",
+      "output": "confirm_bpi2017_native_mixed_91001_plain_r0",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "varied_r0",
+      "model": "edit_feature_attributes_v3",
+      "output": "confirm_bpi2017_native_mixed_91001_varied_r0",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "arm": "plain_r1",
+      "model": "edit_feature_plain_repeat1",
+      "output": "confirm_bpi2017_native_mixed_91002_plain_r1",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91002"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "arm": "varied_r1",
+      "model": "edit_feature_attributes_repeat1",
+      "output": "confirm_bpi2017_native_mixed_91002_varied_r1",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91002"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "arm": "plain_r2",
+      "model": "edit_feature_plain_repeat2",
+      "output": "confirm_bpi2017_native_mixed_91003_plain_r2",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91003"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "arm": "varied_r2",
+      "model": "edit_feature_attributes_repeat2",
+      "output": "confirm_bpi2017_native_mixed_91003_varied_r2",
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91003"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "plain_r0",
+      "model": "edit_feature_v2",
+      "output": "confirm_bpi2019_native_mixed_91001_plain_r0",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "varied_r0",
+      "model": "edit_feature_attributes_v3",
+      "output": "confirm_bpi2019_native_mixed_91001_varied_r0",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91001"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "arm": "plain_r1",
+      "model": "edit_feature_plain_repeat1",
+      "output": "confirm_bpi2019_native_mixed_91002_plain_r1",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91002"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91002,
+      "arm": "varied_r1",
+      "model": "edit_feature_attributes_repeat1",
+      "output": "confirm_bpi2019_native_mixed_91002_varied_r1",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91002"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "arm": "plain_r2",
+      "model": "edit_feature_plain_repeat2",
+      "output": "confirm_bpi2019_native_mixed_91003_plain_r2",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91003"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "variant": "mixed",
+      "seed": 91003,
+      "arm": "varied_r2",
+      "model": "edit_feature_attributes_repeat2",
+      "output": "confirm_bpi2019_native_mixed_91003_varied_r2",
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91003"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "plain_r0",
+      "model": "edit_feature_v2",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_plain_r0",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91001,
+      "arm": "varied_r0",
+      "model": "edit_feature_attributes_v3",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91001_varied_r0",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91002,
+      "arm": "plain_r1",
+      "model": "edit_feature_plain_repeat1",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91002_plain_r1",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91002"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91002,
+      "arm": "varied_r1",
+      "model": "edit_feature_attributes_repeat1",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91002_varied_r1",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91002"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91003,
+      "arm": "plain_r2",
+      "model": "edit_feature_plain_repeat2",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91003_plain_r2",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91003"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "variant": "mixed",
+      "seed": 91003,
+      "arm": "varied_r2",
+      "model": "edit_feature_attributes_repeat2",
+      "output": "confirm_bpi2012_check_denormalized_mixed_91003_varied_r2",
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91003"
+    }
+  ],
+  "outcomes": []
+}

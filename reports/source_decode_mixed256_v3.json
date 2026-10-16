@@ -1,5 +1,5 @@
 {
-  "status": "running_development_source_evaluation",
+  "status": "completed_development_source_evaluation",
   "config": {
     "model": "source_edit_learning_v2_mixed_256",
     "kind": "feature",
@@ -118,5 +118,40 @@
     "Thresholds use a source-development sample from this evaluation log; this is a development result, not an independent test or total annotation-budget claim.",
     "This policy receives target entity types but no singleton-participation constraint."
   ],
-  "resumed_rounds": 0
+  "resumed_rounds": 0,
+  "after": {
+    "history": {
+      "precision": 0.9657942790948203,
+      "recall": 0.8541255858192239,
+      "f1": 0.8896346700637109,
+      "exact_history_fraction": 0.46708138932089166,
+      "entities": 1929,
+      "per_type": {
+        "Application": {
+          "precision": 0.9657942790948203,
+          "recall": 0.8541255858192239,
+          "f1": 0.8896346700637109,
+          "exact_history_fraction": 0.46708138932089166,
+          "entities": 1929
+        }
+      }
+    },
+    "identity": {
+      "predicted_pairs": 0,
+      "true_pairs": 355,
+      "correct_pairs": 0,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "events": {
+      "originally_correct_events": 31362,
+      "preserved_correct_events": 31035,
+      "damaged_events": 7415,
+      "repaired_events": 4573
+    },
+    "protected_event_fields_preserved": true
+  },
+  "seconds": 622.5524517620215,
+  "edit_count": 8733
 }

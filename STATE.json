@@ -1,9 +1,9 @@
 {
   "project": "generative_temporal_graph_repair",
   "status": "active",
-  "stage": "independent_application_transfer_and_strong_controls",
+  "stage": "frozen_confirmation_experiments",
   "learned_model_trained": true,
-  "main_target_tests_opened": false,
+  "main_target_tests_opened": true,
   "current_unit": {
     "scope": "Validate synthetic-only transfer, limited verified-history augmentation, independent operational simulations and no-clean-label controls before freezing final tests.",
     "owned_paths": [
@@ -26,7 +26,7 @@
     ]
   },
   "authorization": "User authorized autonomous paper development and experiments through final review; no external submission.",
-  "next_action": "Complete independent BatteryVault/ClaimStream and 64/256-history development evaluations; compare with extra corruption of imperfect observations; retain final targets sealed.",
+  "next_action": "Run remaining frozen suites after source preparation; finish 96-world compositional tests and retrieve the four externally hosted reserved logs. Preserve all results and do not retune frozen models from them.",
   "trained_models": [
     "source participant matcher",
     "source and synthetic identity matchers",
@@ -58,10 +58,27 @@
     "reports/matching_optimization_v2.json",
     "reports/external_development_v1.json",
     "39 prior research/factory tests and 3 new native OCEL adapter tests passed",
-    "33 research tests + 10 bounded factory tests passed after external/pseudo-label additions"
+    "33 research tests + 10 bounded factory tests passed after external/pseudo-label additions",
+    "reports/external_attribute_diagnostic_v1.json",
+    "reports/external_battery_structural_v1.json",
+    "reports/external_claim_structural_v1.json",
+    "reports/external_battery_clean_structural_v1.json",
+    "reports/external_claim_clean_structural_v1.json",
+    "reports/attribute_scenarios_audit_v1.json",
+    "reports/external_application_queries_v2.json",
+    "reports/edit_feature_attributes_v3.json",
+    "reports/source_decode_source256_v3.json",
+    "reports/source_decode_mixed256_v3.json",
+    "reports/source_decode_selfsupervised_v1.json",
+    "reports/source_decode_selfsupervised_mixed_v1.json",
+    "docs/ITERATION_06.md",
+    "reports/training_repeat1_pipeline.json",
+    "reports/training_repeat2_pipeline.json",
+    "41 research tests and 10 bounded factory tests passed",
+    "docs/CONFIRMATION_PROTOCOL_V1.json"
   ],
   "factory_increment": "TR0 and TR1 bounded source acceptance; general factory/RF/wheel scope unchanged",
-  "manuscript": "paper/main.tex is an incomplete development draft; no final paper or acceptance claim",
+  "manuscript": "paper/main.tex and main.pdf are internal development drafts; cached offline TeX compilation works. Figures are development-only.",
   "reserved_external_scenarios": [
     "ForgeFlow",
     "PermitFlow",
@@ -69,34 +86,51 @@
     "TrialVersion"
   ],
   "development_jobs": {
-    "source256": {
-      "session": 94489,
-      "report": "source_decode_source256_v3"
+    "external_battery_attributes_repeat1": {
+      "session": 10878,
+      "report": "external_battery_attributes_repeat1"
     },
-    "mixed256": {
-      "session": 55317,
-      "report": "source_decode_mixed256_v3"
+    "external_claim_attributes_repeat1": {
+      "session": 66073,
+      "report": "external_claim_attributes_repeat1"
     },
-    "battery_structural": {
-      "session": 78097,
-      "report": "external_battery_structural_v1"
+    "external_battery_attributes_repeat2": {
+      "session": 96402,
+      "report": "external_battery_attributes_repeat2"
     },
-    "claim_structural": {
-      "session": 61181,
-      "report": "external_claim_structural_v1"
+    "external_claim_attributes_repeat2": {
+      "session": 89357,
+      "report": "external_claim_attributes_repeat2"
     },
-    "selfsupervised": {
-      "session": 27225,
-      "report": "source_decode_selfsupervised_v1"
+    "decode_sage_attributes_v3": {
+      "session": 17957,
+      "report": "decode_sage_attributes_v3"
     },
-    "selfsupervised_mixed": {
-      "session": 51076,
-      "report": "source_decode_selfsupervised_mixed_v1"
+    "decode_temporal_attributes_v3": {
+      "session": 28639,
+      "report": "decode_temporal_attributes_v3"
     },
-    "attribute_diagnostic": {
-      "session": 43463,
-      "report": "external_attribute_diagnostic_v1"
+    "decode_mlp_attributes_v3": {
+      "session": 31948,
+      "report": "decode_mlp_attributes_v3"
     }
   },
-  "independent_native_transfer": "Failed initial transfer: Battery F1 .7682 to .7371; Claim .7617 to .7519; retain negative results and diagnose attribute mismatch before final freeze."
+  "independent_native_transfer": "Revised varied-attribute generated training reaches .880412 BatteryVault and .919719 ClaimStream; clean counterparts receive zero edits. Pipeline faults remain harder (.807484/.798482), including false merges. BPI tune decreases to .807426 from old .837963.",
+  "confirmation_protocol": {
+    "path": "docs/CONFIRMATION_PROTOCOL_V1.json",
+    "sha256": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+    "status": "frozen_before_reserved_evaluation"
+  },
+  "reserved_preparation_started": true,
+  "confirmation_jobs": {
+    "primary_real": {
+      "session": 86752,
+      "report": "confirmation_primary_bpi2017_bpi2019_bpi2012_check",
+      "log": "reports/confirmation_primary_real.log"
+    },
+    "workflow_confirmation_attributes_v1": {
+      "session": 3267,
+      "report": "workflow_confirmation_attributes_v1"
+    }
+  }
 }

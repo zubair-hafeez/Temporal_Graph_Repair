@@ -25,6 +25,7 @@ def main():
     parser.add_argument('--source-cache',default='selfsupervised_controls_v1')
     parser.add_argument('--synthetic-cache',default='edit_train_v2')
     parser.add_argument('--output',default='selfsupervised_learning_v1')
+    parser.add_argument('--regime',choices=['both','self_supervised','self_supervised_plus_generated'],default='both')
     args=parser.parse_args();destination=ROOT/'reports'/f'{args.output}.json'
     if destination.exists():raise FileExistsError(destination)
     start=time.monotonic();snapshot=snapshot_sources(ROOT)
@@ -32,17 +33,18 @@ def main():
     train=np.load(source/'train.npz');valid=np.load(source/'validation.npz')
     rx,ry,rop=train['x'],train['y'],train['operation']
     vx,vy,vop=valid['x'],valid['y'],valid['operation']
-    sx,sy,sop,synthetic=load(args.synthetic_cache)
+    if args.regime!='self_supervised':sx,sy,sop,synthetic=load(args.synthetic_cache)
     report={'status':'development_no_clean_label_training','config':vars(args),'source_snapshot':snapshot,
             'source_cache_manifest_hash':sha256(source/'manifest.json'),'models':[],
             'contract':'Imperfect-observation pseudo labels only; separately added faults calibrate thresholds. No true clean source labels.'}
     with threadpool_limits(limits=8):
-        for regime in ['self_supervised','self_supervised_plus_generated']:
+        for regime in (['self_supervised','self_supervised_plus_generated'] if args.regime=='both' else [args.regime]):
             models=[];metrics={};prediction=np.zeros(len(vy))
             for op,name in enumerate(OPERATIONS):
-                rm=rop==op;sm=sop==op;x,y=rx[rm],ry[rm]
+                rm=rop==op;x,y=rx[rm],ry[rm]
                 weights=np.full(len(y),1/max(1,len(y)))
                 if regime=='self_supervised_plus_generated':
+                    sm=sop==op
                     weights=np.concatenate([weights*.5,np.full(sm.sum(),.5/max(1,sm.sum()))])
                     x=np.concatenate([x,sx[sm]]);y=np.concatenate([y,sy[sm]])
                 positive_mass=weights[y>0].sum();negative_mass=weights[y==0].sum()

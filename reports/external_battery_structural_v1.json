@@ -1,5 +1,5 @@
 {
-  "status": "running_external_development",
+  "status": "completed_external_development",
   "config": {
     "task": "data/external_structural_v1/batteryvault/mixed",
     "model": "edit_feature_v2",
@@ -242,5 +242,73 @@
     "Independent public simulations, not naturally corrupted operational logs.",
     "Thresholds selected on generated validation only; this target is development.",
     "Queries concern the available window; lifetime histories may be censored."
-  ]
+  ],
+  "after": {
+    "history": {
+      "precision": 0.9557804805281693,
+      "recall": 0.802483546353769,
+      "f1": 0.854299823979416,
+      "exact_history_fraction": 0.28736581337737405,
+      "entities": 1211,
+      "per_type": {
+        "BatteryPack": {
+          "precision": 0.9674079847284304,
+          "recall": 0.7855017078464365,
+          "f1": 0.848008691156183,
+          "exact_history_fraction": 0.13177874186550975,
+          "entities": 922
+        },
+        "ServiceOrder": {
+          "precision": 0.9186851211072664,
+          "recall": 0.8566608996539792,
+          "f1": 0.8743704968618463,
+          "exact_history_fraction": 0.7837370242214533,
+          "entities": 289
+        }
+      }
+    },
+    "identity": {
+      "predicted_pairs": 15,
+      "true_pairs": 246,
+      "correct_pairs": 15,
+      "precision": 1.0,
+      "recall": 0.06097560975609756,
+      "f1": 0.11494252873563218
+    },
+    "events": {
+      "originally_correct_events": 17708,
+      "preserved_correct_events": 17284,
+      "damaged_events": 4377,
+      "repaired_events": 2215
+    },
+    "protected_event_fields_preserved": true
+  },
+  "queries_after": {
+    "entities": 1211,
+    "empty_history_fraction": 0.03014037985136251,
+    "first_timestamp_correct_fraction": 0.8307184145334434,
+    "last_timestamp_correct_fraction": 0.7943848059454995,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 1211.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 1211.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "seconds": 642.382367583923,
+  "edit_count": 4858
 }

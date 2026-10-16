@@ -22,6 +22,8 @@ from tgrepair.metrics import traceability,identity_pair_scores
 from tgrepair.provenance import snapshot_sources
 from tgrepair.data import sha256
 from tgrepair.pipeline_faults import pipeline_faults
+from tgrepair.view_decoding import select_fields,decode_with_view
+from tgrepair.confirmation_contract import verify_model
 
 
 def thresholds_from_validation(name,target_precision):
@@ -61,19 +63,37 @@ def main():
     p.add_argument('--kind',choices=['neural','feature'],required=True)
     p.add_argument('--generated',default='workflow_validation_v3');p.add_argument('--episodes',type=int,default=24)
     p.add_argument('--precision',type=float,default=.95);p.add_argument('--mode',choices=['joint','sequential','one_pass'],default='joint')
+    p.add_argument('--calibration',help='Optional separately pinned validation-score cache; default uses model name')
     p.add_argument('--rounds',type=int,default=8);p.add_argument('--output',required=True);p.add_argument('--device',default='cpu')
     p.add_argument('--fault-family',choices=['original','pipeline'],default='original')
+    p.add_argument('--attribute-view',choices=['all','none','stable'],default='all')
+    p.add_argument('--stability-threshold',type=float,default=.5)
+    p.add_argument('--confirmation-protocol')
     args=p.parse_args();destination=ROOT/'reports'/f'{args.output}.json'
     if destination.exists():raise FileExistsError(destination)
     torch.set_num_threads(4);start=time.monotonic();snapshot=snapshot_sources(ROOT)
-    thresholds,calibration=thresholds_from_validation(args.model,args.precision)
+    thresholds,calibration=thresholds_from_validation(args.calibration or args.model,args.precision)
     model_path=ROOT/'checkpoints'/(args.model+('.pt' if args.kind=='neural' else '.joblib'))
     model_hash=sha256(model_path)
+    protocol_hash=None
+    if args.confirmation_protocol:
+        protocol_path=ROOT/args.confirmation_protocol;protocol=json.loads(protocol_path.read_text())
+        expected=protocol['generated_confirmation']
+        if protocol['status']!='frozen_before_reserved_evaluation':raise ValueError('Protocol is not frozen')
+        if args.generated!=expected['attribute_collection'] or args.episodes!=expected['count']:
+            raise ValueError('Generated test collection differs from frozen protocol')
+        if [args.rounds,16,32,args.precision]!=expected['decoder_contract']:raise ValueError('Generated decoder differs from protocol')
+        verify_model(ROOT,protocol,{},args.model,model_path,args.calibration or args.model)
+        for path,digest in protocol['implementation_hashes'].items():
+            if sha256(ROOT/path)!=digest:raise ValueError('Frozen implementation changed: '+path)
+        protocol_hash=sha256(protocol_path)
     scorer=NeuralScorer(model_path,args.device) if args.kind=='neural' else FeatureScorer(model_path)
     folder=ROOT/'data/generated'/args.generated;manifest=json.loads((folder/'dataset_manifest.json').read_text())
     episodes=random.Random(919).sample(manifest['episodes'],min(args.episodes,len(manifest['episodes'])))
-    report={'status':'development_application_evaluation','config':vars(args),'source_snapshot':snapshot,
+    report={'status':'running_generated_confirmation' if protocol_hash else 'development_application_evaluation','config':vars(args),'source_snapshot':snapshot,
             'thresholds':thresholds,'model_hash':model_hash,'action_validation_calibration':calibration,'results':[]}
+    report['calibration_cache_hash']=sha256(ROOT/'data/edit_learning'/f'{args.calibration or args.model}_validation_scores.npz')
+    if protocol_hash:report['protocol_hash']=protocol_hash
     audit_folder=ROOT/'data/decoding'/args.output;audit_folder.mkdir(parents=True)
     with threadpool_limits(limits=4):
         for j,episode in enumerate(episodes):
@@ -85,10 +105,11 @@ def main():
                     clean=json.loads((folder/episode['id']/'clean'/'learner.json').read_text())
                     graph,reference=pipeline_faults(learner_graph(clean),int(episode['id'].split('-')[-1])+210001,types)
                 baseline=traceability(graph,reference,types)
-                state,audit=decode(graph,types,scorer,thresholds,rounds=args.rounds,mode=args.mode)
+                fields,view_profile=select_fields(graph,types,args.attribute_view,args.stability_threshold)
+                state,audit=decode_with_view(graph,types,scorer,thresholds,rounds=args.rounds,mode=args.mode,attribute_fields=fields)
                 result={'episode':episode['id'],'group':episode['group'],'variant':variant,'projection':episode['projection'],
                         'before':baseline,'after':compare(graph,state,reference,types),'edit_count':audit['edit_count'],
-                        'seconds':audit['seconds'],'stopped':audit['stopped']}
+                        'seconds':audit['seconds'],'stopped':audit['stopped'],'attribute_view':view_profile}
                 (audit_folder/f"{episode['id']}_{variant}.json").write_text(json.dumps(audit)+'\n')
                 report['results'].append(result);report['seconds']=time.monotonic()-start
                 destination.write_text(json.dumps(report,indent=2)+'\n')
@@ -103,7 +124,9 @@ def main():
                           'mean_seconds':float(np.mean([r['seconds'] for r in rows])),
                           'edits':sum(r['edit_count'] for r in rows)}
     if sha256(model_path)!=model_hash:raise RuntimeError('Model changed during evaluation')
-    report['summary']=summary;destination.write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(summary),flush=True)
+    report['summary']=summary
+    if protocol_hash:report['status']='completed_generated_confirmation'
+    destination.write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(summary),flush=True)
 
 
 if __name__=='__main__':main()

@@ -18,10 +18,11 @@ from tgrepair.matching import ObservedIndex
 from tgrepair.provenance import snapshot_sources
 
 
-def build(graph,reference,selected,event_limit):
+def build(graph,reference,selected,event_limit,target_types=None):
+    target_types=set(target_types or {'Application'})
     index=ObservedIndex(graph);identity=reference['identity'];events=[]
     for event in graph.events:
-        truth={o for o in reference['event_participation'][event.uid] if graph.objects[o]=='Application'}
+        truth={o for o in reference['event_participation'][event.uid] if graph.objects[o] in target_types}
         if selected is None or truth&selected:events.append(event)
     annotated_event_count=len(events)
     if len(events)>event_limit:events=random.Random(177).sample(events,event_limit)
@@ -29,16 +30,17 @@ def build(graph,reference,selected,event_limit):
     for event in events:
         truth=set(reference['event_participation'][event.uid])
         existing={identity[o] for o in event.participants}
-        candidates=index.candidates(event.uid,'Application',128,allow_current=True)
-        rows=index.features(event.uid,candidates,exclude_query=True)
-        for obj,row in zip(candidates,rows):
-            op=1 if obj in event.participants else 0
-            x=np.zeros(ACTION_DIM,dtype=np.float32);x[:len(row)]=row
-            x[25]=index.type_kind_count['Application'][event.kind]/max(1,index.kind_count[event.kind])
-            x[26]=sum(graph.objects[o]=='Application' for o in event.participants)
-            label=(identity[obj] not in truth) if op==1 else (identity[obj] in truth-existing)
-            arrays.append(x);labels.append(label);ops.append(op)
-    entities=EntityIndex(graph,{'Application'})
+        for typ in sorted(target_types):
+            candidates=index.candidates(event.uid,typ,128,allow_current=True)
+            rows=index.features(event.uid,candidates,exclude_query=True)
+            for obj,row in zip(candidates,rows):
+                op=1 if obj in event.participants else 0
+                x=np.zeros(ACTION_DIM,dtype=np.float32);x[:len(row)]=row
+                x[25]=index.type_kind_count[typ][event.kind]/max(1,index.kind_count[event.kind])
+                x[26]=sum(graph.objects[o]==typ for o in event.participants)
+                label=(identity[obj] not in truth) if op==1 else (identity[obj] in truth-existing)
+                arrays.append(x);labels.append(label);ops.append(op)
+    entities=EntityIndex(graph,target_types)
     anchors=([o for o in entities.profile if identity[o] in selected] if selected is not None else None)
     pairs=entities.pairs(64,anchors);retrieved=set(pairs)
     # Complete verified histories include their aliases. Use all available

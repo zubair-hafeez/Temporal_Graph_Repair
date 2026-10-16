@@ -1,0 +1,331 @@
+{
+  "status": "draft_not_frozen",
+  "created_utc": "2026-10-16T00:36:10.792560+00:00",
+  "task_root": "data/confirmation_v1",
+  "sources": {
+    "bpi2012_check": {
+      "path": "/mnt/zubair/Temporal_Graph_Repair/data/development/bpi2012_check_attributes.json.gz",
+      "sha256": "62a93e95f2feb1e535fad97397d494927ccaa8c7c37ca7d7425757f885abd746",
+      "target_types": [
+        "Application"
+      ],
+      "views": [
+        "denormalized",
+        "structural"
+      ],
+      "role": "same-process confirmation"
+    },
+    "bpi2017": {
+      "path": "/mnt/zubair/Operational_Temporal_Graphs/data/raw/bpi/bpi2017.xes.gz",
+      "sha256": "183c5e5189282779c811c78c33ff936351b3dd201165d612211fc220936f8249",
+      "target_types": [
+        "Application",
+        "Offer"
+      ],
+      "views": [
+        "native",
+        "structural"
+      ],
+      "role": "new process/system at the BPI2012 institution",
+      "adapter_options": {
+        "cohort_size": 1024,
+        "audited_traces": 500,
+        "seed": 91000
+      }
+    },
+    "bpi2019": {
+      "path": "/mnt/zubair/Temporal_Graph_Papers_2024-2026/analysis/new_idea_20261015/evidence/BPIC19_ocel2.zip",
+      "sha256": "f4196103cb1c41bc26e04993dd10a44b8229cd05eebc3d66c2f11f2d859a9893",
+      "target_types": [
+        "PO",
+        "POItem"
+      ],
+      "views": [
+        "native",
+        "structural"
+      ],
+      "role": "different real-source application family",
+      "adapter_options": {
+        "cohort_size": 1024,
+        "audited_events": 2000,
+        "seed": 91000
+      }
+    },
+    "forgeflow": {
+      "path": "/mnt/zubair/Temporal_Graph_Repair/data/external/relational_ocel/forgeflow.jsonocel.gz",
+      "sha256": "b6d8cfdf0d412d301b7c00fe260576badf4231fb4da3ce6b74899dff4164ca6b",
+      "target_types": [
+        "SalesOrder",
+        "Shipment"
+      ],
+      "views": [
+        "native",
+        "structural"
+      ],
+      "role": "reserved scenario from one independent simulator collection",
+      "adapter_options": {
+        "seed": 91000
+      }
+    },
+    "permitflow": {
+      "path": "/mnt/zubair/Temporal_Graph_Repair/data/external/relational_ocel/permitflow.jsonocel.gz",
+      "sha256": "cd89d014fda4940e5a61719369fdaa20d48dd861c81df420226107eef3f597c4",
+      "target_types": [
+        "PermitApplication",
+        "Inspection"
+      ],
+      "views": [
+        "native",
+        "structural"
+      ],
+      "role": "reserved scenario from one independent simulator collection",
+      "adapter_options": {
+        "seed": 91000
+      }
+    },
+    "procurechange": {
+      "path": "/mnt/zubair/Temporal_Graph_Repair/data/external/relational_ocel/procurechange.jsonocel.gz",
+      "sha256": "6ace16482a80393854b5075f8255326f8cbf0f1463ada1d43601e9d9a980ebd8",
+      "target_types": [
+        "PurchaseRequisition",
+        "Invoice"
+      ],
+      "views": [
+        "native",
+        "structural"
+      ],
+      "role": "reserved scenario from one independent simulator collection",
+      "adapter_options": {
+        "seed": 91000
+      }
+    },
+    "trialversion": {
+      "path": "/mnt/zubair/Temporal_Graph_Repair/data/external/relational_ocel/trialversion.jsonocel.gz",
+      "sha256": "bc14abf4208c7617ed30e48999e5c974ab63f80ae77410145ece7e36f6effbd9",
+      "target_types": [
+        "Participant",
+        "Sample"
+      ],
+      "views": [
+        "native",
+        "structural"
+      ],
+      "role": "reserved scenario from one independent simulator collection",
+      "adapter_options": {
+        "seed": 91000
+      }
+    }
+  },
+  "models": {
+    "edit_feature_v2": {
+      "kind": "feature",
+      "sha256": "c2a95d9173329ddc77876ccdf00193ade110c63b0487dafb4c13a1d7adfe33e9",
+      "calibrations": {
+        "edit_feature_v2_attributes_calibration_v3": "d425305712603d36682721facba2663102ecce971a3375c6123f4105eae5ac41",
+        "edit_feature_v2_stable_calibration_v3": "f0cc704f14db7a117b74d8f7580269d30052bb7a147f3ac939cfa4c5db759456"
+      }
+    },
+    "edit_feature_attributes_v3": {
+      "kind": "feature",
+      "sha256": "803be97285c169b99459277debcba0db576224ed62355cd015280b4256b3f07a",
+      "calibrations": {
+        "edit_feature_attributes_v3": "c14adb0473b2917d29ac4974bc7edad4b15e02fc5d63bd695b7b63647bbd37dd"
+      }
+    },
+    "edit_feature_plain_repeat1": {
+      "kind": "feature",
+      "sha256": "6cb26b37891df3f609603c2ff9ad85e6609e5156c42f1e0484db220f7663e048",
+      "calibrations": {
+        "edit_feature_plain_repeat1": "60824ea349683689d3e22de05aa3a8f213f0a685f97d2bab7e7e81863d94cb1b"
+      }
+    },
+    "edit_feature_attributes_repeat1": {
+      "kind": "feature",
+      "sha256": "b7914cc79bd32f35e49693cef1968274ad0cacb03d02a04d4c7f9e58c88e4787",
+      "calibrations": {
+        "edit_feature_attributes_repeat1": "f6a36371d041fc9a4739e38265d15a55799327a459d0dd13de0a13e26f1b4365"
+      }
+    },
+    "edit_feature_plain_repeat2": {
+      "kind": "feature",
+      "sha256": "9ad58c760dd7ffd30593e04ab7273a9270688954067a710b637f1b1be2c329fa",
+      "calibrations": {
+        "edit_feature_plain_repeat2": "8dc6dcfb93f663c1b60da3449384e396835785fab5e40a6815c9140212e7960d"
+      }
+    },
+    "edit_feature_attributes_repeat2": {
+      "kind": "feature",
+      "sha256": "6b44613bce65688286b8ed04f6ae575b49cd512813eb551131f504b0a594ce19",
+      "calibrations": {
+        "edit_feature_attributes_repeat2": "e4bfa52a4e123c84d4d5501fb52f302daec31c87d1409e25993e20355aa7efe8"
+      }
+    },
+    "source_edit_learning_v2_source_only_256": {
+      "kind": "feature",
+      "sha256": "a3b5a6f0055e071894c9f1a9457eeb5900953fe862f38a62f988d25dc6767141",
+      "calibrations": {
+        "source_edit_learning_v2_source_only_256": "729f5249066d5ea8239d224f4a51962d1357b2f4a7d3535ab85c820d04a34fdc",
+        "source256_generated_calibration_v3": "f0209275db4ea8057c00d84eac236455b3570cca94d062df34512988658e8de9"
+      }
+    },
+    "edit_feature_no_temporal_v3": {
+      "kind": "feature",
+      "sha256": "829c86a14369c33bc86a3f2eb60952298732077556f11961d9ed946fefbe0898",
+      "calibrations": {
+        "edit_feature_no_temporal_v3": "33530a5258083059e1546ea68e902286fdba81df2daf9b2407f665015c446d01"
+      }
+    },
+    "edit_feature_no_context_v3": {
+      "kind": "feature",
+      "sha256": "7bcf520d9faf4ab7738b1fbc03d7f84a24d82d0096c9e52d3ac52b2c74edb49a",
+      "calibrations": {
+        "edit_feature_no_context_v3": "bdcb8e4c2b32a7c549304bdc29a82d059e8f925013cd22e08d2086879bae4399"
+      }
+    },
+    "edit_sage_attributes_v3": {
+      "kind": "neural",
+      "sha256": "782cc0418840978b4130e579718fafcbf6c302255d466a8e2f2794724b2e8815",
+      "calibrations": {
+        "edit_sage_attributes_v3": "e6b3a7c3111fffce4374b171fcb61fae9bb1b90828bc1f94be80964848eeea3d"
+      }
+    },
+    "edit_mlp_attributes_v3": {
+      "kind": "neural",
+      "sha256": "92036a1834e817dc0ba6b96c9d2f8810b8a162f82984e8ac320b7dc556ecc395",
+      "calibrations": {
+        "edit_mlp_attributes_v3": "c1ab198f7cf1d5069fb489a22d143852c5c29618e7075f64c700d67792f08573"
+      }
+    },
+    "edit_temporal_attributes_v3": {
+      "kind": "neural",
+      "sha256": "14c12220190b2caa18effad868d0503fe8c5a063d7ae46577bcafd9626f90666",
+      "calibrations": {
+        "edit_temporal_attributes_v3": "5b0775a6c935f6732ad96d995ca4867e7892148f4e77cd7c04ffd36769421fc9"
+      }
+    }
+  },
+  "adapter_hashes": {
+    "scripts/prepare_confirmation_tasks.py": "194bb722f0556cf96a66ccef1a0da765a6ef54401899133c2570c74dc38d68ef",
+    "tgrepair/confirmation_sources.py": "948c530c85746640fb740992640ab3cdb956f5a84c7624cebfd6793dc2445c1b",
+    "tgrepair/json_stream.py": "ee3624472410e1fe64f41bd0abe21ce6830641fa622a4566af05999e853f15e6",
+    "tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2",
+    "tgrepair/external_ocel.py": "bcce5671a277849ed23110c20753b6a0aa89a1fe9faaaacec57caa58f343be80",
+    "tgrepair/corruption.py": "d04efa6b65698f47f47aa2769431ed99ea8626cad7f3bb5fb63c68fbe633361b",
+    "tgrepair/pipeline_faults.py": "6091ecfa95f9a5c83c6edc3c4c70d114ad949ed1d8a260bb787c71f5e0e5e690"
+  },
+  "implementation_hashes": {
+    "scripts/evaluate_external_policy.py": "fccff60bc7ba0e003564cc45dee7cb58b69e0d5554c36568c9fcafa9112ef68c",
+    "tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7",
+    "tgrepair/matching.py": "304595e5d38ef157072cc693c7714ef3c2d4dee408648c860cca6dc97899b54f",
+    "tgrepair/entity_features.py": "6122ad15c21c44645521d0a920f0bd855cd112cf4caca49d548ebc8adba84dff",
+    "tgrepair/decoding.py": "a4ef81f60296eb7a7eb698e8d83e86916ead774b0d90e16c937432d77a70cdfb",
+    "tgrepair/edits.py": "b987ed25b49435cff4d3aa0cabecefb2b9c5aaef2c27a56d56c4e6fc39ab7c6f",
+    "tgrepair/neural_policy.py": "cf7b6231798a423b80fca4cd447858e4b948c8214f1ff5fb905228ceac46c821",
+    "tgrepair/view_decoding.py": "061bb8f361cbe7181ea3d9885149070064b4fb874d3094ce96dc46e0174a7696",
+    "tgrepair/attribute_views.py": "4d5315a4f628743dffa5a1d772e3c07d590b2291b08c6fab423794e83fa3d326",
+    "tgrepair/metrics.py": "903faf015149e0095544ee40368bf20412d1cef856e84eebfb36e3e1c8f2e97b",
+    "tgrepair/application_queries.py": "84aa606f0850de1cde0ce51efdcfa6c71d5acb37b3aa951bf9c4cc62db1f026a",
+    "tgrepair/confirmation_contract.py": "9fc773bf3e615196626f632e81c558ff8d848d05e550d14e00d66717419a4cce"
+  },
+  "fault_families": [
+    "mixed",
+    "pipeline"
+  ],
+  "fault_seeds": [
+    91001,
+    91002,
+    91003
+  ],
+  "decoder_contract": [
+    4,
+    128,
+    64,
+    0.95
+  ],
+  "primary_comparison": {
+    "description": "Original versus varied-attribute generated training, paired workflows/calibration/fault seeds.",
+    "pairs": [
+      {
+        "replicate": 0,
+        "fault_seed": 91001,
+        "original": "edit_feature_v2",
+        "varied": "edit_feature_attributes_v3"
+      },
+      {
+        "replicate": 1,
+        "fault_seed": 91002,
+        "original": "edit_feature_plain_repeat1",
+        "varied": "edit_feature_attributes_repeat1"
+      },
+      {
+        "replicate": 2,
+        "fault_seed": 91003,
+        "original": "edit_feature_plain_repeat2",
+        "varied": "edit_feature_attributes_repeat2"
+      }
+    ],
+    "variant": "mixed",
+    "views": "native, or explicitly denormalized BPI2012 check",
+    "replication_limit": "Three joint world-generation/fault trials; training and test-fault variance are not separately estimated."
+  },
+  "secondary_comparisons": {
+    "clean_preservation": "All three principal learners on each native clean counterpart.",
+    "pipeline_stress": "All three principal learners on paired pipeline-fault seeds; unseen mechanism family in training.",
+    "structural_view": "Original and varied learners, replicate 0 / seed 91001, attributes hidden for both.",
+    "scoring_ablation": "Refitted no-temporal and no-context scoring controls on native mixed seed 91001; retrieval retained.",
+    "decoding_ablation": "One pass and fixed sequencing using varied replicate 0 on native mixed seed 91001.",
+    "neural_controls": "Matched GraphSAGE, MLP and temporal-message models on native mixed seed 91001.",
+    "source_supervision": "BPI2012 source-only 256-history model with source-development calibration, all three mixed seeds; training model fixed and additional calibration labels disclosed.",
+    "automatic_view": "Original model with stable-field view and its own generated calibration, native mixed seed 91001."
+  },
+  "target_local_adaptation": {
+    "description": "Self-supervised extra-corruption learning on each imperfect native mixed target, all three seeds, no original reference file read.",
+    "script_hashes": {
+      "scripts/prepare_target_selfsupervision.py": "2757fa4563c89f6da8713025d47e61cc735ee0d117b3678f860db2782e88d813",
+      "scripts/prepare_selfsupervised_control.py": "9bd6e29c9bc70a0b0bfb8dbfbefaef3c6b345150a85e010752f89236de694ed8",
+      "scripts/prepare_source_edit_controls.py": "9028a2211459812b1cdd3568a8933042967207c00179f7b1d9dfc968bc6c4498",
+      "scripts/train_selfsupervised_controls.py": "c3b41f81b66f945584be407d2bba6e82787039b3c65ec8c4a7c388b27fab592f",
+      "scripts/train_edit_feature_policy.py": "10a21a81ba0f326a872820b9dc396f820ff050dc294febd70bb6627b94fbe5a1",
+      "scripts/score_edit_feature_validation.py": "2a63d5e43e47bbc1f1613142645fc437774eccb0453cf3e8099d6c28944c773f"
+    },
+    "validation_by_fault_seed": {
+      "91001": {
+        "name": "edit_validation_attributes_v3",
+        "manifest_hash": "122c17f23637084433c8a917442692c9977b7a10fa01797bb22fd9f27dcbc59d"
+      },
+      "91002": {
+        "name": "edit_validation_attributes_repeat1",
+        "manifest_hash": "99e9ac34fe3b45bff7e5447d731d5b165eb0efbc17361cbeb259f15cfe66e947"
+      },
+      "91003": {
+        "name": "edit_validation_attributes_repeat2",
+        "manifest_hash": "b2b59aaa982c065e3e2d803cd53168ed7f7cb2b3781cc1c7a1b494a78a42ba23"
+      }
+    },
+    "training_event_budget": 8192,
+    "validation_event_budget": 2048,
+    "time_partition": 0.7,
+    "regime": "self_supervised",
+    "calibration": "same generated validation as the paired principal trial",
+    "limits": "Transductive target access without clean target labels; time partitions can share entity handles."
+  },
+  "primary_outcomes": [
+    "entity-history precision/recall/F1",
+    "exact-history fraction"
+  ],
+  "secondary_outcomes": [
+    "identity-pair precision/recall and false pairs",
+    "initially correct-event preservation",
+    "cancellation/exception evidence retrieval",
+    "first/last timestamp recovery",
+    "candidate coverage",
+    "runtime"
+  ],
+  "reporting": [
+    "Retain every predeclared domain and failure; no post-outcome target selection.",
+    "Report per-process/type scores and three trial values/means/ranges, not event-level pseudo-replicate significance.",
+    "No unseen-organization claim for BPI2017; no real-data claim for the external simulations.",
+    "Controlled faults on source references do not prove naturally occurring error recovery.",
+    "No paper acceptance or universal recovery guarantee."
+  ]
+}

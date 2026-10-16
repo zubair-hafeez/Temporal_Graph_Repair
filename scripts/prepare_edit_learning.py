@@ -17,6 +17,7 @@ from tgrepair.edits import RepairState,teacher_edits,beneficial
 from tgrepair.factory_plugin import learner_graph
 from tgrepair.neural_policy import observation_tensors
 from tgrepair.provenance import snapshot_sources
+from tgrepair.view_decoding import select_fields,propose_in_view
 
 
 def main():
@@ -28,6 +29,8 @@ def main():
     p.add_argument('--event-budget',type=int,default=48)
     p.add_argument('--participant-budget',type=int,default=16)
     p.add_argument('--pair-budget',type=int,default=32)
+    p.add_argument('--attribute-view',choices=['all','none','stable'],default='all')
+    p.add_argument('--stability-threshold',type=float,default=.5)
     args=p.parse_args()
     folder=ROOT/'data/edit_learning'/args.output
     if folder.exists():raise FileExistsError(folder)
@@ -43,6 +46,7 @@ def main():
             learner=json.loads((location/'learner.json').read_text())
             reference=json.loads((location/'reference.json').read_text())
             graph=learner_graph(learner);types=set(learner['schema']['target_types'])
+            fields,view_profile=select_fields(graph,types,args.attribute_view,args.stability_threshold)
             state=RepairState(graph)
             stages=['raw','partial'] if args.partial and variant=='mixed' and i%2==0 else ['raw']
             for stage in stages:
@@ -50,14 +54,15 @@ def main():
                     program=teacher_edits(state,reference,types)
                     for edit in program[:int(len(program)*rng.uniform(.2,.8))]:state.apply(edit)
                 # Candidate construction has no access to the teacher or reference.
-                observation=propose_actions(state,types,seed=i,event_budget=args.event_budget,
+                observation=propose_in_view(state,types,attribute_fields=fields,seed=i,event_budget=args.event_budget,
                                             participant_budget=args.participant_budget,pair_budget=args.pair_budget)
                 labels=np.asarray([beneficial(edit,state,reference) for edit in observation.edits],dtype=np.float32)
                 data=observation_tensors(observation)
                 filename=f'{len(records):06d}.pt'
                 torch.save({'observation':data,'labels':torch.from_numpy(labels)},folder/filename)
                 records.append({'file':filename,'episode':episode['id'],'group':episode['group'],
-                                'variant':variant,'stage':stage,'actions':len(labels),'positive':int(labels.sum())})
+                                'variant':variant,'stage':stage,'actions':len(labels),'positive':int(labels.sum()),
+                                'attribute_view':view_profile})
                 for op,name in enumerate(OPERATIONS):
                     mask=observation.operations==op
                     counts[name+'_actions']+=int(mask.sum());counts[name+'_positive']+=int(labels[mask].sum())

@@ -63,6 +63,8 @@ def main():
                 graph, reference = mixed_faults(clean, 61001, set(types))
             else:
                 graph, reference = pipeline_faults(clean, 61001, set(types))
+            exception_origins={e.uid for e in clean.events if e.attributes.get('is_exception') in {1,True,'1'}}
+            reference['exception_events']=[uid for uid,origin in reference['event_origin'].items() if origin in exception_origins]
             location = output/name/variant
             location.mkdir(parents=True)
             save_graph(graph, location/'observed.json.gz')

@@ -105,7 +105,24 @@ The development conclusion is to retain boosted matching as the leading learner,
 
 At a fixed budget of 16 verified source training histories, generated augmentation raises history F1 from .8359 to .8912. At 64 histories, the corresponding values are .8321 and .8905. Both comparisons use additional source-development labels for threshold selection and therefore do not establish total annotation costs of 16 or 64 histories.
 
-The first independent-simulator tests expose a failure of the current model. On native event attributes, BatteryVault history F1 decreases from .7682 to .7371, and ClaimStream from .7617 to .7519. Excessive removal of valid associations is a principal observed error. The model's good generated-validation preservation therefore does not establish safe transfer. Structural-only diagnostics and a control trained through additional corruption of already imperfect source observations are being evaluated before revising the method.
+At 256 verified training histories, the source-only and augmented results are .8753 and .8896. Augmentation gains are smaller at this budget, and neither sequence is monotonically increasing. These single-seed results motivate repeated, fully budgeted comparisons rather than an unconditional label-efficiency claim.
+
+The first independent-simulator tests expose a failure of the original model. On native event attributes, BatteryVault history F1 decreases from .7682 to .7371, and ClaimStream from .7617 to .7519. Excessive removal of valid associations is a principal observed error. The model's good generated-validation preservation therefore does not establish safe transfer. Structural-only diagnostics and a control trained through additional corruption of already imperfect source observations are being evaluated before revising the method.
+
+The completed attribute-hiding diagnostic raises F1 to .8543 in BatteryVault and .8844 in ClaimStream (Figure~\ref{fig:views}), retaining timing, activities and observed relations. On BatteryVault's clean counterpart, history F1 remains .99945. These development-selected diagnostics do not yet specify a final automatic observation policy. Using evaluator-only native exception flags consistently across views, exception-evidence retrieval F1 improves from .8700 to .9244 for BatteryVault and from .8374 to .9510 for ClaimStream. The first structural diagnostic incorrectly derived its exception-positive set from hidden learner fields; a separate corrected query audit preserves the original history results and uses the pinned native parent records for evaluation labels.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/development_observation_views.pdf}
+\caption{Single-run development comparison on the same independent-simulator records and faults. Original training fails with native fields. Hiding attributes is a manual diagnostic; calibration-only retains the original fitted model. Varied-attribute training changes generated observations while preserving the executed workflows and fault labels. All operating points use generated validation.}
+\label{fig:views}
+\end{figure}
+
+The paired observation-generation revision improves native-field history F1 to .8804 on BatteryVault and .9197 on ClaimStream. Keeping the original model but changing its generated calibration reaches only .7964 and .7978, separating a training-data benefit from a calibration-only effect. The revised model makes zero changes on the clean counterparts of both domains. Under mixed faults, it preserves 17,624 of 17,708 and 18,267 of 18,325 initially correct events. Exception-evidence F1 reaches .9247 and .9648. Identity recall remains incomplete: 69 of 246 and 199 of 403 true identity pairs are restored, with nine and four incorrect predicted pairs.
+
+This revision has a measured trade-off: BPI 2012 tune history F1 decreases from .8380 with the original generated learner to .8074. An alternative automatic field-stability filter reaches .8393 on BPI and .8588/.8920 on the two independent simulations. The filter keeps fields whose observed within-entity agreement exceeds chance-adjusted between-entity agreement by the development threshold .5. Neither approach dominates across all three development sources. A final claim must therefore report per-process outcomes and retain this negative comparison.
+
+Using the same original generated calibration, a control trained only to undo extra corruption of imperfect BPI observations reaches .7551 history F1. Combining that noisy pseudo supervision with generated training reaches .8329, compared with .8380 for generated training alone. Target-local versions of this control, independently repeated world collections and refitted scoring-feature ablations remain in progress at this draft stage.
 
 \section{Limitations and outstanding validation}
 The workflows share one symbolic implementation; vocabulary changes are not independent domains. Generated behavior is not calibrated to any particular company. Public-source corruption tests do not establish effectiveness on naturally occurring, independently labeled errors. The task assumes an entity catalog, protected event fields and offline context. Some object identities are observationally indistinguishable, so exact recovery is impossible without additional evidence.
@@ -114,8 +131,8 @@ Current results use development-selected operating points and mostly one trainin
 
 \begin{thebibliography}{99}
 \bibitem{here} F. Zetzsche et al. \emph{Case ID Revealed HERE: Hybrid Elusive Case Repair Method for Transformer-Driven Business Process Event Log Enhancement}. Business \& Information Systems Engineering 67, 311--337, 2025. \url{https://doi.org/10.1007/s12599-025-00935-5}.
-\bibitem{sanagraph} \emph{Graph-Based Event Log Repair}. CAiSE 2026, 423--440. \url{https://doi.org/10.1007/978-3-032-28117-3_24}. Accessible author preprint: \url{https://arxiv.org/abs/2508.05145}.
-\bibitem{ddtr} \emph{DDTR: Diffusion Denoising Trace Recovery}. ICPM 2025. \url{https://arxiv.org/abs/2510.22553}.
+\bibitem{sanagraph} S. Dissegna, C. Di Francescomarino and M. Ronzani. \emph{Graph-Based Event Log Repair}. CAiSE 2026, 423--440. \url{https://doi.org/10.1007/978-3-032-28117-3_24}. Accessible author preprint: \url{https://arxiv.org/abs/2508.05145}.
+\bibitem{ddtr} M. Matyash, A. Gal and A. Senderovich. \emph{DDTR: Diffusion Denoising Trace Recovery}. 2025. \url{https://arxiv.org/abs/2510.22553}.
 \bibitem{holoclean} T. Rekatsinas, X. Chu, I. F. Ilyas and C. R\'e. \emph{HoloClean: Holistic Data Repairs with Probabilistic Inference}. 2017. \url{https://arxiv.org/abs/1702.00820}.
 \bibitem{ocsim} B. Knopp, M. Pourbafrani and W. M. P. van der Aalst. \emph{Discovering Object-Centric Process Simulation Models}. ICPM 2023. \url{https://ieeexplore.ieee.org/document/10271944/}.
 \bibitem{relationalocel} A. Berti. \emph{Synthetic relational databases and reference OCELs}. Zenodo, version 1, 2026. \url{https://doi.org/10.5281/zenodo.22079246}.

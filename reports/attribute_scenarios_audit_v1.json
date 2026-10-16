@@ -1,0 +1,26 @@
+{
+  "status": "paired_attribute_scenario_integrity_check",
+  "collections": {
+    "train": {
+      "episodes": 512,
+      "checked_variant_events": 873154,
+      "visible_events": 436577,
+      "changed_attribute_records": 645418,
+      "parent_hash": "c2d4add73d7ab48cb9fe7fa2be64b729cfbedb7fa7f5e942636b0819bed75185",
+      "derived_hash": "4b55674844715cb054ec30e60cc3f8b962742d5d2ba58425e6a4053691b5290e",
+      "facts_and_fault_references_identical": true,
+      "paired_attributes_identical": true
+    },
+    "validation": {
+      "episodes": 96,
+      "checked_variant_events": 201900,
+      "visible_events": 100950,
+      "changed_attribute_records": 165432,
+      "parent_hash": "f14ee094dffb231614d94b263ed948b3b2ca832df1904badca22682a76b94780",
+      "derived_hash": "559d697c90ecc4cefdbc33dd07816f0e54994628bb772d5719727a14b8fdf6e1",
+      "facts_and_fault_references_identical": true,
+      "paired_attributes_identical": true
+    }
+  },
+  "count_note": "The v5 generation manifest field world_events counts visible clean learner events, unlike the v4 full execution count. Audit reports use visible_events explicitly."
+}

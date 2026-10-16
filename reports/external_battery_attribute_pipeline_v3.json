@@ -1,0 +1,332 @@
+{
+  "status": "completed_external_development",
+  "config": {
+    "task": "data/external_development_v1/batteryvault/pipeline",
+    "model": "edit_feature_attributes_v3",
+    "kind": "feature",
+    "output": "external_battery_attribute_pipeline_v3",
+    "rounds": 4,
+    "participant_budget": 128,
+    "pair_budget": 64,
+    "precision": 0.95,
+    "calibration": null,
+    "resume": false,
+    "attribute_view": "all",
+    "stability_threshold": 0.5
+  },
+  "task": {
+    "domain": "batteryvault",
+    "variant": "pipeline",
+    "target_types": [
+      "BatteryPack",
+      "ServiceOrder"
+    ],
+    "observation_sha256": "415580fc2df37f7579823e2e8c51bd6f672c75cc3c892c02328f8cd94e40e9b6",
+    "reference_sha256": "8aefe7d67b7749f9d871e28563c078535d99708a1b6913a82399042864cb3ce6",
+    "source_sha256": "b29f6d66ceeea39f2dd441b7dffe39274d965132fc2aa63dfe66e9d4060570b0",
+    "adapter_snapshot": {
+      "file": "data/source_snapshots/e190eac802b2d7d7fcf42c9175a032b2d53b63bfccbd80058cb56aa5f16cebfe.tar.gz",
+      "sha256": "d4a714ad3af08740741e959941def68aa3f6eeb60b52d3c1b6b32dd21373c0a1",
+      "source_set_hash": "e190eac802b2d7d7fcf42c9175a032b2d53b63bfccbd80058cb56aa5f16cebfe",
+      "files": {
+        "research/tgrepair/__init__.py": "ad83ce5fca3e2bfa1cc153276de4379a3c8302b7f2a0a85ae40503c7bb3d62ca",
+        "research/tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7",
+        "research/tgrepair/application_queries.py": "84aa606f0850de1cde0ce51efdcfa6c71d5acb37b3aa951bf9c4cc62db1f026a",
+        "research/tgrepair/corruption.py": "d04efa6b65698f47f47aa2769431ed99ea8626cad7f3bb5fb63c68fbe633361b",
+        "research/tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2",
+        "research/tgrepair/decoding.py": "a4ef81f60296eb7a7eb698e8d83e86916ead774b0d90e16c937432d77a70cdfb",
+        "research/tgrepair/edits.py": "b987ed25b49435cff4d3aa0cabecefb2b9c5aaef2c27a56d56c4e6fc39ab7c6f",
+        "research/tgrepair/entity_features.py": "6122ad15c21c44645521d0a920f0bd855cd112cf4caca49d548ebc8adba84dff",
+        "research/tgrepair/external_ocel.py": "bcce5671a277849ed23110c20753b6a0aa89a1fe9faaaacec57caa58f343be80",
+        "research/tgrepair/factory_plugin.py": "6ac1ade56b775242db66579b75c36ff77af5f2c06ba8bd3c4364d91f48e0055d",
+        "research/tgrepair/identity_matching.py": "b707a4ca0efa7ade90fc5a15ec6401470a02ddc333c8c8eedacf3921e12ef4ac",
+        "research/tgrepair/matching.py": "304595e5d38ef157072cc693c7714ef3c2d4dee408648c860cca6dc97899b54f",
+        "research/tgrepair/metrics.py": "903faf015149e0095544ee40368bf20412d1cef856e84eebfb36e3e1c8f2e97b",
+        "research/tgrepair/neural_policy.py": "cf7b6231798a423b80fca4cd447858e4b948c8214f1ff5fb905228ceac46c821",
+        "research/tgrepair/pipeline_faults.py": "6091ecfa95f9a5c83c6edc3c4c70d114ad949ed1d8a260bb787c71f5e0e5e690",
+        "research/tgrepair/provenance.py": "1f427099dacbba70402931d18dc6d63fc07c04a4ac6cde732033b43e926d964b",
+        "research/scripts/evaluate_edit_policy.py": "981b9e63a20a0065b6cd8a8fdd61d0ce2cc4bb93b889cb87162e105ab43b95fb",
+        "research/scripts/evaluate_external_policy.py": "0e4836ba3b531676a1735c6e7f1e1d80da4401f3954d5145268337997e022061",
+        "research/scripts/evaluate_matching.py": "8509e6a411c71e68e1c9dd86dc70475d6118af142b1cc3ad6d0450d8003cdc7e",
+        "research/scripts/evaluate_source_edit_policy.py": "2c5f7ad39ab146892a4b90fb2b143e906de647721d30c4b068f029cbc92a5a56",
+        "research/scripts/fit_matching_baseline.py": "e8477430d3a8c7e72b09019e869bd855273224931317a266888256fa1bb0167a",
+        "research/scripts/generate_workflow_pilot.py": "de7b959ad5c7e200757b8e9c62ff51cf543e407e99e2ca6fc33f5ba49e3bb2ac",
+        "research/scripts/prepare_development.py": "2c10d01c60055b6b79e91e99726d3e738afa16e559d694f940b28638c9a0636f",
+        "research/scripts/prepare_edit_learning.py": "de125b695a1d38c51e58e628c306334173c3c6e5c1cdbd6cd2b4d8196a88380d",
+        "research/scripts/prepare_external_development.py": "441ecac1876676f6a942b0504342dd3fbd0f78783c6899387fc5f3894e98c230",
+        "research/scripts/prepare_source_edit_controls.py": "52e2e3bb11f74829d6976c3f9fb00dfc4f0ac8d43ebcbcaebcd1dd68102e9ccd",
+        "research/scripts/repair_development_graph.py": "3e629cafb0ed8c2d18381badcbbe7cb041441fc15b7d7987585a799a23505a75",
+        "research/scripts/run_baseline_probe.py": "90e7d881dccecde9dda9f7183014484e0325b09b30453ccd87ea48f8685f73de",
+        "research/scripts/run_deployment_probe.py": "f7787dd29ace7b69de65f04b9705c8cf1f82d11824c2d7b085310b8c133be46e",
+        "research/scripts/run_identity_probe.py": "26fbd0aafca577458f5b0536d482441cb78f6569d355a557f98d365fc94809f6",
+        "research/scripts/run_iterative_source_control.py": "bd230ae748277a641e997a6aacea5c5b46bab2c98a0d823cedf8b89ee0d21872",
+        "research/scripts/train_edit_feature_policy.py": "10a21a81ba0f326a872820b9dc396f820ff050dc294febd70bb6627b94fbe5a1",
+        "research/scripts/train_edit_policy.py": "831236095d26e0a444ef55e4c5fd9daeb42d886ec28ce149c99756638f17241f",
+        "research/scripts/train_identity_baselines.py": "3d5e72c957a5146e18d06ac99e85872ea8b4c357588a4684cb78ce761aa906ca",
+        "research/scripts/train_source_edit_controls.py": "a3dbf5f0c589fd094fb247f49e09ccbbe58141021b5d4f82c5b29edc3388cc18",
+        "research/tests/test_application_metrics.py": "0bc7fb819cb6565f2273a085e4ecb35da06448c2f02c7ca8429389a73ec4af6d",
+        "research/tests/test_application_queries.py": "548118431155b6c076bdf429c452750f23287e1202677c0aca055e239af4f529",
+        "research/tests/test_decoding.py": "84654c0c2ebbf1f873739fdb7fe2bc34be218e4a7ff70fc48128009ea5d6cbe8",
+        "research/tests/test_edits.py": "d26367c5e4440e4cca8cbe04c05ecbfe33ca27c3e33a938ff08917787e770302",
+        "research/tests/test_external_ocel.py": "3af1ac24ff4a837189bd04a64c0998fb3cb9522a2cc6de3b7216785ade4c20c9",
+        "research/tests/test_factory_integration.py": "382dcffd23f814f8dc7e51967e9e485a05cb814460e2a7eb1d0e430e2d5c65cc",
+        "research/tests/test_identity_features.py": "7636f879f19cf06847d322e05b6a82f6394193bcabc418cd3dda011275ffb7c5",
+        "research/tests/test_matching_cache.py": "38475e38f8dea27cf986d01337e511b88a90f863a7a23e84f45f6bec108f146d",
+        "research/tests/test_neural_inputs.py": "f42870e91884f7d53033075061d5db7eaff27237388eed6352e632fbe94e5a5d",
+        "research/tests/test_observation_boundary.py": "6e944c76f152519702eb992341dc144f62c7287fcc7361737a127a11b5e01aa0",
+        "research/tests/test_pipeline_faults.py": "ef14dc5c7ff5302355ac737614da01617b696329dd8aff14713615c41ad014cf",
+        "factory/src/temporal_factory/__init__.py": "d401743947ab8a821e6edbf60dc4435e2fea6d8f8f08ed5c47df799e6640bf3a",
+        "factory/src/temporal_factory/core.py": "171d6de2068f9ca7d7d13b47868d9044959b8ebf94ce5caf523defbf6535b058",
+        "factory/src/temporal_factory/workflow.py": "cca70d3ab13332439d4a9a4f019ef8de885be3ef550daa7b2e331badea40faf9",
+        "factory/src/rfdf/__init__.py": "0e0e411ad05093b259f07ae8cc4769b7a7dcbae4917316a0bc3a35c16789fca7",
+        "factory/src/rfdf/storage.py": "a7b6e034740730ed3da33997a023e362d9afa768924e73ceae8af5b356bede25",
+        "factory/pyproject.toml": "2d7f7864648740cee45f838e4bf02527cf539cd0d3221c17405eb935ccc05ef5"
+      }
+    }
+  },
+  "source_snapshot": {
+    "file": "data/source_snapshots/e78e86eecdea80619eeb4a1407cd22fc426bef3f519b68888272709669c4b59d.tar.gz",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source_set_hash": "e78e86eecdea80619eeb4a1407cd22fc426bef3f519b68888272709669c4b59d",
+    "files": {
+      "research/tgrepair/__init__.py": "ad83ce5fca3e2bfa1cc153276de4379a3c8302b7f2a0a85ae40503c7bb3d62ca",
+      "research/tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7",
+      "research/tgrepair/application_queries.py": "84aa606f0850de1cde0ce51efdcfa6c71d5acb37b3aa951bf9c4cc62db1f026a",
+      "research/tgrepair/attribute_scenarios.py": "9360ce4e2df9cfb540df9c53648a225b5dbed64aac43c8e94286434710fb1799",
+      "research/tgrepair/attribute_views.py": "4d5315a4f628743dffa5a1d772e3c07d590b2291b08c6fab423794e83fa3d326",
+      "research/tgrepair/corruption.py": "d04efa6b65698f47f47aa2769431ed99ea8626cad7f3bb5fb63c68fbe633361b",
+      "research/tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2",
+      "research/tgrepair/decoding.py": "a4ef81f60296eb7a7eb698e8d83e86916ead774b0d90e16c937432d77a70cdfb",
+      "research/tgrepair/edits.py": "b987ed25b49435cff4d3aa0cabecefb2b9c5aaef2c27a56d56c4e6fc39ab7c6f",
+      "research/tgrepair/entity_features.py": "6122ad15c21c44645521d0a920f0bd855cd112cf4caca49d548ebc8adba84dff",
+      "research/tgrepair/external_ocel.py": "bcce5671a277849ed23110c20753b6a0aa89a1fe9faaaacec57caa58f343be80",
+      "research/tgrepair/factory_plugin.py": "6ac1ade56b775242db66579b75c36ff77af5f2c06ba8bd3c4364d91f48e0055d",
+      "research/tgrepair/identity_matching.py": "b707a4ca0efa7ade90fc5a15ec6401470a02ddc333c8c8eedacf3921e12ef4ac",
+      "research/tgrepair/matching.py": "304595e5d38ef157072cc693c7714ef3c2d4dee408648c860cca6dc97899b54f",
+      "research/tgrepair/metrics.py": "903faf015149e0095544ee40368bf20412d1cef856e84eebfb36e3e1c8f2e97b",
+      "research/tgrepair/neural_policy.py": "cf7b6231798a423b80fca4cd447858e4b948c8214f1ff5fb905228ceac46c821",
+      "research/tgrepair/pipeline_faults.py": "6091ecfa95f9a5c83c6edc3c4c70d114ad949ed1d8a260bb787c71f5e0e5e690",
+      "research/tgrepair/provenance.py": "1f427099dacbba70402931d18dc6d63fc07c04a4ac6cde732033b43e926d964b",
+      "research/tgrepair/view_decoding.py": "061bb8f361cbe7181ea3d9885149070064b4fb874d3094ce96dc46e0174a7696",
+      "research/scripts/audit_attribute_scenarios.py": "194aa074a9df4340b328b901fb4a6bc5cecf5034248c4b8d4bb9931aa8e3c1ff",
+      "research/scripts/audit_external_queries.py": "cbda4902616b128c049b98e0766aa3d86baa07984bb9c2a2ebd0fec286337a32",
+      "research/scripts/audit_source_queries.py": "e41228ec6aec41ff52e13bcf8ea61aa43748152d0b0000f493469b45da62bf14",
+      "research/scripts/diagnose_external_attributes.py": "dba7e4b2b017de9cb021a05e1464b9b54f4f3d53c7e652995061a988434c5d08",
+      "research/scripts/diagnose_observed_scale.py": "08a7f0f0b23ab87055002fb389ade4c971909bced1d29878e67a513d2e644761",
+      "research/scripts/evaluate_edit_policy.py": "446be63d4ddb927be68af713780b8456ce8ef8d990f894403d5934f65fab089d",
+      "research/scripts/evaluate_external_policy.py": "bfca485e9c0008e0362cb1cffc7e4408d3151b9a6f3c71cae81632720d62f401",
+      "research/scripts/evaluate_matching.py": "8509e6a411c71e68e1c9dd86dc70475d6118af142b1cc3ad6d0450d8003cdc7e",
+      "research/scripts/evaluate_source_edit_policy.py": "ab454803d38294f69b2ba46cb6a1fb2d25c10b95c4f6e8b2488fbf96fb588b8b",
+      "research/scripts/fit_matching_baseline.py": "e8477430d3a8c7e72b09019e869bd855273224931317a266888256fa1bb0167a",
+      "research/scripts/generate_attribute_scenarios.py": "7d6916e6616d1c9386f09ddf3b1357a828ae2f02e572d6edf9cc84acfd4dd737",
+      "research/scripts/generate_workflow_pilot.py": "de7b959ad5c7e200757b8e9c62ff51cf543e407e99e2ca6fc33f5ba49e3bb2ac",
+      "research/scripts/plot_development_evidence.py": "c5871d9f502a365e67c9d6c564a98c2dc301e66c5cde5fa576a5fba3a4ac8c73",
+      "research/scripts/prepare_development.py": "2c10d01c60055b6b79e91e99726d3e738afa16e559d694f940b28638c9a0636f",
+      "research/scripts/prepare_edit_learning.py": "35e277ac1eae3d18cd96849f719997547b99ea58535455c417d8d09fd614e53b",
+      "research/scripts/prepare_external_development.py": "5503bcfefbe0933291d6f44b58904f113a5cbfea5e388ce22921be32303821b3",
+      "research/scripts/prepare_external_observation_ablation.py": "b0dd7f3f3918ff0c84a58453be25e7b74931fb62b929528e88cb7faf843a0876",
+      "research/scripts/prepare_selfsupervised_control.py": "9bd6e29c9bc70a0b0bfb8dbfbefaef3c6b345150a85e010752f89236de694ed8",
+      "research/scripts/prepare_source_edit_controls.py": "52e2e3bb11f74829d6976c3f9fb00dfc4f0ac8d43ebcbcaebcd1dd68102e9ccd",
+      "research/scripts/repair_development_graph.py": "3e629cafb0ed8c2d18381badcbbe7cb041441fc15b7d7987585a799a23505a75",
+      "research/scripts/run_baseline_probe.py": "90e7d881dccecde9dda9f7183014484e0325b09b30453ccd87ea48f8685f73de",
+      "research/scripts/run_deployment_probe.py": "f7787dd29ace7b69de65f04b9705c8cf1f82d11824c2d7b085310b8c133be46e",
+      "research/scripts/run_identity_probe.py": "26fbd0aafca577458f5b0536d482441cb78f6569d355a557f98d365fc94809f6",
+      "research/scripts/run_iterative_source_control.py": "bd230ae748277a641e997a6aacea5c5b46bab2c98a0d823cedf8b89ee0d21872",
+      "research/scripts/score_edit_feature_validation.py": "2a63d5e43e47bbc1f1613142645fc437774eccb0453cf3e8099d6c28944c773f",
+      "research/scripts/train_edit_feature_policy.py": "10a21a81ba0f326a872820b9dc396f820ff050dc294febd70bb6627b94fbe5a1",
+      "research/scripts/train_edit_policy.py": "831236095d26e0a444ef55e4c5fd9daeb42d886ec28ce149c99756638f17241f",
+      "research/scripts/train_identity_baselines.py": "3d5e72c957a5146e18d06ac99e85872ea8b4c357588a4684cb78ce761aa906ca",
+      "research/scripts/train_selfsupervised_controls.py": "81ca03d4d1457739e6027159856b3428cfbb08897d672c2e13a5d60723ed3807",
+      "research/scripts/train_source_edit_controls.py": "a3dbf5f0c589fd094fb247f49e09ccbbe58141021b5d4f82c5b29edc3388cc18",
+      "research/tests/test_application_metrics.py": "0bc7fb819cb6565f2273a085e4ecb35da06448c2f02c7ca8429389a73ec4af6d",
+      "research/tests/test_application_queries.py": "548118431155b6c076bdf429c452750f23287e1202677c0aca055e239af4f529",
+      "research/tests/test_attribute_scenarios.py": "1e3a01fed704483ab64a14b81306f827ddd30a2791a775dffc1db657eb3a31de",
+      "research/tests/test_attribute_views.py": "e7362301b8d32ecb7483cc6d0da4077d2fb075dc2d6e8751765ecb34e3e5e1ee",
+      "research/tests/test_decoding.py": "84654c0c2ebbf1f873739fdb7fe2bc34be218e4a7ff70fc48128009ea5d6cbe8",
+      "research/tests/test_edits.py": "d26367c5e4440e4cca8cbe04c05ecbfe33ca27c3e33a938ff08917787e770302",
+      "research/tests/test_external_ocel.py": "3af1ac24ff4a837189bd04a64c0998fb3cb9522a2cc6de3b7216785ade4c20c9",
+      "research/tests/test_factory_integration.py": "382dcffd23f814f8dc7e51967e9e485a05cb814460e2a7eb1d0e430e2d5c65cc",
+      "research/tests/test_identity_features.py": "7636f879f19cf06847d322e05b6a82f6394193bcabc418cd3dda011275ffb7c5",
+      "research/tests/test_matching_cache.py": "38475e38f8dea27cf986d01337e511b88a90f863a7a23e84f45f6bec108f146d",
+      "research/tests/test_neural_inputs.py": "f42870e91884f7d53033075061d5db7eaff27237388eed6352e632fbe94e5a5d",
+      "research/tests/test_observation_boundary.py": "6e944c76f152519702eb992341dc144f62c7287fcc7361737a127a11b5e01aa0",
+      "research/tests/test_pipeline_faults.py": "ef14dc5c7ff5302355ac737614da01617b696329dd8aff14713615c41ad014cf",
+      "research/tests/test_selfsupervised_control.py": "4f6eb6e75633e3081b9d72cb0aa98dc457697db6bb14990d9c969af7d170f44e",
+      "research/tests/test_view_decoding.py": "edf95cf8c6dac7a340fd58bb4dab21fe2e18799b20fd62b717cb4ac00c26d69c",
+      "factory/src/temporal_factory/__init__.py": "d401743947ab8a821e6edbf60dc4435e2fea6d8f8f08ed5c47df799e6640bf3a",
+      "factory/src/temporal_factory/core.py": "171d6de2068f9ca7d7d13b47868d9044959b8ebf94ce5caf523defbf6535b058",
+      "factory/src/temporal_factory/workflow.py": "cca70d3ab13332439d4a9a4f019ef8de885be3ef550daa7b2e331badea40faf9",
+      "factory/src/rfdf/__init__.py": "0e0e411ad05093b259f07ae8cc4769b7a7dcbae4917316a0bc3a35c16789fca7",
+      "factory/src/rfdf/storage.py": "a7b6e034740730ed3da33997a023e362d9afa768924e73ceae8af5b356bede25",
+      "factory/pyproject.toml": "2d7f7864648740cee45f838e4bf02527cf539cd0d3221c17405eb935ccc05ef5"
+    }
+  },
+  "pins": {
+    "task_hash": "8e1b179ff77303037e6aa5bd575382103a6f10dd3648ed55f94704a990beb373",
+    "model_hash": "803be97285c169b99459277debcba0db576224ed62355cd015280b4256b3f07a",
+    "thresholds": [
+      0.9934468885850203,
+      0.9787817511624166,
+      0.9941543621308702
+    ],
+    "rounds": 4,
+    "participant_budget": 128,
+    "pair_budget": 64,
+    "implementation": {
+      "tgrepair/edits.py": "b987ed25b49435cff4d3aa0cabecefb2b9c5aaef2c27a56d56c4e6fc39ab7c6f",
+      "tgrepair/decoding.py": "a4ef81f60296eb7a7eb698e8d83e86916ead774b0d90e16c937432d77a70cdfb",
+      "tgrepair/matching.py": "304595e5d38ef157072cc693c7714ef3c2d4dee408648c860cca6dc97899b54f",
+      "tgrepair/entity_features.py": "6122ad15c21c44645521d0a920f0bd855cd112cf4caca49d548ebc8adba84dff",
+      "tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7",
+      "tgrepair/neural_policy.py": "cf7b6231798a423b80fca4cd447858e4b948c8214f1ff5fb905228ceac46c821",
+      "tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2"
+    }
+  },
+  "thresholds": [
+    0.9934468885850203,
+    0.9787817511624166,
+    0.9941543621308702
+  ],
+  "calibration": [
+    {
+      "precision": 0.9501246882793017,
+      "recall": 0.2673684210526316
+    },
+    {
+      "precision": 0.9512195121951219,
+      "recall": 0.538860103626943
+    },
+    {
+      "precision": 0.953125,
+      "recall": 0.12465940054495912
+    }
+  ],
+  "calibration_cache_hash": "c14adb0473b2917d29ac4974bc7edad4b15e02fc5d63bd695b7b63647bbd37dd",
+  "before": {
+    "precision": 0.9116636152286612,
+    "recall": 0.736429761243725,
+    "f1": 0.775792498213322,
+    "exact_history_fraction": 0.3938893476465731,
+    "entities": 1211,
+    "per_type": {
+      "BatteryPack": {
+        "precision": 0.9188251419729411,
+        "recall": 0.7215781044411306,
+        "f1": 0.7680821860069369,
+        "exact_history_fraction": 0.33947939262472887,
+        "entities": 922
+      },
+      "ServiceOrder": {
+        "precision": 0.8888161146811667,
+        "recall": 0.7838111715274345,
+        "f1": 0.8003907952869891,
+        "exact_history_fraction": 0.5674740484429066,
+        "entities": 289
+      }
+    }
+  },
+  "queries_before": {
+    "entities": 1211,
+    "empty_history_fraction": 0.013212221304706853,
+    "first_timestamp_correct_fraction": 0.7402972749793559,
+    "last_timestamp_correct_fraction": 0.7196531791907514,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 1211.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "exception_evidence": {
+        "true_positive": 302.0,
+        "false_positive": 20.0,
+        "false_negative": 78.0,
+        "true_negative": 811.0,
+        "precision": 0.937888198757764,
+        "recall": 0.7947368421052632,
+        "f1": 0.8603988603988604
+      }
+    }
+  },
+  "exception_query_source_hash": "415580fc2df37f7579823e2e8c51bd6f672c75cc3c892c02328f8cd94e40e9b6",
+  "attribute_view": {
+    "mode": "all"
+  },
+  "resumed_rounds": 0,
+  "limits": [
+    "Independent public simulations, not naturally corrupted operational logs.",
+    "Thresholds selected on generated validation only; this target is development.",
+    "Queries concern the available window; lifetime histories may be censored."
+  ],
+  "after": {
+    "history": {
+      "precision": 0.9131397370763861,
+      "recall": 0.7755508396003357,
+      "f1": 0.8074836404465026,
+      "exact_history_fraction": 0.4475639966969447,
+      "entities": 1211,
+      "per_type": {
+        "BatteryPack": {
+          "precision": 0.9208930716656119,
+          "recall": 0.7483774094554355,
+          "f1": 0.7911446635340645,
+          "exact_history_fraction": 0.3611713665943601,
+          "entities": 922
+        },
+        "ServiceOrder": {
+          "precision": 0.8884041852034932,
+          "recall": 0.8622425440764541,
+          "f1": 0.8596100650598917,
+          "exact_history_fraction": 0.7231833910034602,
+          "entities": 289
+        }
+      }
+    },
+    "identity": {
+      "predicted_pairs": 45,
+      "true_pairs": 257,
+      "correct_pairs": 38,
+      "precision": 0.8444444444444444,
+      "recall": 0.14785992217898833,
+      "f1": 0.25165562913907286
+    },
+    "events": {
+      "originally_correct_events": 17412,
+      "preserved_correct_events": 17246,
+      "damaged_events": 4673,
+      "repaired_events": 446
+    },
+    "protected_event_fields_preserved": true
+  },
+  "queries_after": {
+    "entities": 1211,
+    "empty_history_fraction": 0.013212221304706853,
+    "first_timestamp_correct_fraction": 0.7737407101568952,
+    "last_timestamp_correct_fraction": 0.759289843104872,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 1211.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "exception_evidence": {
+        "true_positive": 302.0,
+        "false_positive": 21.0,
+        "false_negative": 78.0,
+        "true_negative": 810.0,
+        "precision": 0.934984520123839,
+        "recall": 0.7947368421052632,
+        "f1": 0.8591749644381224
+      }
+    }
+  },
+  "seconds": 1193.0691626810003,
+  "edit_count": 1480
+}

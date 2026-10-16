@@ -1,0 +1,193 @@
+{
+  "status": "development_application_query_audit",
+  "results": {
+    "batteryvault": {
+      "input_hash": "de363284dfbd430b2ca512913e53830e7038a3223184afc02b5fb69d9a9b085f",
+      "reference_hash": "4add33e17063030378d51f4c3ae3edbe89c5a7b83ed615169ab6e5e4e35475e4",
+      "exception_events": 592,
+      "damaged": {
+        "entities": 1211,
+        "empty_history_fraction": 0.008670520231213872,
+        "first_timestamp_correct_fraction": 0.4925681255161024,
+        "last_timestamp_correct_fraction": 0.4810074318744839,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1211.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "exception_evidence": {
+            "true_positive": 314.5,
+            "false_positive": 28.5,
+            "false_negative": 65.5,
+            "true_negative": 802.5,
+            "precision": 0.9169096209912536,
+            "recall": 0.8276315789473684,
+            "f1": 0.8699861687413555
+          }
+        }
+      },
+      "methods": {
+        "external_battery_mixed_v1": {
+          "graph_hash": "6ffec730a40789f7162371e27458830430404cfbbd5c18600cd81249d62d703f",
+          "cluster_hash": "11ed8eefb98c4c485eb35d85446bb48019403e75f164c09a7b8c69ae6291e70b",
+          "queries": {
+            "entities": 1211,
+            "empty_history_fraction": 0.0458298926507019,
+            "first_timestamp_correct_fraction": 0.7217175887696119,
+            "last_timestamp_correct_fraction": 0.5809248554913294,
+            "queries": {
+              "cancellation_evidence": {
+                "true_positive": 0.0,
+                "false_positive": 0.0,
+                "false_negative": 0.0,
+                "true_negative": 1211.0,
+                "precision": null,
+                "recall": null,
+                "f1": null
+              },
+              "exception_evidence": {
+                "true_positive": 261.5,
+                "false_positive": 0.0,
+                "false_negative": 118.5,
+                "true_negative": 831.0,
+                "precision": 1.0,
+                "recall": 0.6881578947368421,
+                "f1": 0.8152766952455183
+              }
+            }
+          }
+        },
+        "external_battery_structural_v1": {
+          "graph_hash": "bb65050b6490ff3146277ac7ea4659778c567bf2d56ac247578e6f5cb6232f3c",
+          "cluster_hash": "ea356180ce239e9ac541c1265286292bd0a7486590392cf5a5e08eb76140d5fb",
+          "queries": {
+            "entities": 1211,
+            "empty_history_fraction": 0.03014037985136251,
+            "first_timestamp_correct_fraction": 0.8307184145334434,
+            "last_timestamp_correct_fraction": 0.7943848059454995,
+            "queries": {
+              "cancellation_evidence": {
+                "true_positive": 0.0,
+                "false_positive": 0.0,
+                "false_negative": 0.0,
+                "true_negative": 1211.0,
+                "precision": null,
+                "recall": null,
+                "f1": null
+              },
+              "exception_evidence": {
+                "true_positive": 327.0,
+                "false_positive": 0.5,
+                "false_negative": 53.0,
+                "true_negative": 830.5,
+                "precision": 0.9984732824427481,
+                "recall": 0.8605263157894737,
+                "f1": 0.9243816254416961
+              }
+            }
+          }
+        }
+      }
+    },
+    "claimstream": {
+      "input_hash": "34e7b5c46743a90d7f54ad5326680efd51c35d623b026c3ae484eb2f2a7c7fc9",
+      "reference_hash": "b161e18e2193ba0857c57730b53611b2558c39c15f01868548db37b3a305ac19",
+      "exception_events": 566,
+      "damaged": {
+        "entities": 1769,
+        "empty_history_fraction": 0.0022611644997173543,
+        "first_timestamp_correct_fraction": 0.4539287733182589,
+        "last_timestamp_correct_fraction": 0.43301300169587337,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 31.0,
+            "false_positive": 2.5,
+            "false_negative": 11.0,
+            "true_negative": 1724.5,
+            "precision": 0.9253731343283582,
+            "recall": 0.7380952380952381,
+            "f1": 0.8211920529801324
+          },
+          "exception_evidence": {
+            "true_positive": 488.0,
+            "false_positive": 30.5,
+            "false_negative": 159.0,
+            "true_negative": 1091.5,
+            "precision": 0.9411764705882353,
+            "recall": 0.7542503863987635,
+            "f1": 0.8374088374088374
+          }
+        }
+      },
+      "methods": {
+        "external_claim_mixed_v1": {
+          "graph_hash": "926c104444ee998dd8a6ea0e44b23c58ae917fde86e6da44c65cee8950ebc4b5",
+          "cluster_hash": "36d723497199b2b1af6d168ae2612cd7e31f78e9f3a0b688119a03679c5edeaf",
+          "queries": {
+            "entities": 1769,
+            "empty_history_fraction": 0.03278688524590164,
+            "first_timestamp_correct_fraction": 0.6704352741661956,
+            "last_timestamp_correct_fraction": 0.6147540983606558,
+            "queries": {
+              "cancellation_evidence": {
+                "true_positive": 26.0,
+                "false_positive": 0.0,
+                "false_negative": 16.0,
+                "true_negative": 1727.0,
+                "precision": 1.0,
+                "recall": 0.6190476190476191,
+                "f1": 0.7647058823529411
+              },
+              "exception_evidence": {
+                "true_positive": 458.0,
+                "false_positive": 0.0,
+                "false_negative": 189.0,
+                "true_negative": 1122.0,
+                "precision": 1.0,
+                "recall": 0.7078825347758887,
+                "f1": 0.8289592760180996
+              }
+            }
+          }
+        },
+        "external_claim_structural_v1": {
+          "graph_hash": "76624f83682b0254aab8ec02356da927b96f9d79729a2bf419a4c94938881598",
+          "cluster_hash": "e028b666ab81dad9a1a955d97dc3bbb4120577d7c59112c777063cf8d81f141b",
+          "queries": {
+            "entities": 1769,
+            "empty_history_fraction": 0.018654607122668174,
+            "first_timestamp_correct_fraction": 0.8075183719615602,
+            "last_timestamp_correct_fraction": 0.8346523459581685,
+            "queries": {
+              "cancellation_evidence": {
+                "true_positive": 32.5,
+                "false_positive": 0.0,
+                "false_negative": 9.5,
+                "true_negative": 1727.0,
+                "precision": 1.0,
+                "recall": 0.7738095238095238,
+                "f1": 0.87248322147651
+              },
+              "exception_evidence": {
+                "true_positive": 586.5,
+                "false_positive": 0.0,
+                "false_negative": 60.5,
+                "true_negative": 1122.0,
+                "precision": 1.0,
+                "recall": 0.9064914992272025,
+                "f1": 0.9509525739764897
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "correction": "Initial structural-only evaluation derived exception labels from hidden learner attributes, producing an empty positive set. History metrics and cancellation queries were unaffected. This audit obtains exception-event labels from the pinned native parent, outside decoding.",
+  "scorer_hash": "84aa606f0850de1cde0ce51efdcfa6c71d5acb37b3aa951bf9c4cc62db1f026a"
+}
