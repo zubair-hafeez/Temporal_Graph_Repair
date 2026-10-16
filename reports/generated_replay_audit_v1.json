@@ -1,0 +1,35 @@
+{
+  "status": "sampled_frozen_inference_replay_passed",
+  "protocol_hash": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "script_hash": "51bf9fe8e2443d28e6a2a466abcb5ebe658b600931827a720695f6f3d8077887",
+  "replays": [
+    {
+      "report": "confirm_generated_plain_r0",
+      "report_snapshot_sha256": "44cb47808fa9317ca094902517111faef7a64d7967a9a754d84e0bf9e0d01e16",
+      "episode": "episode-000086",
+      "variant": "mixed",
+      "edits": 18,
+      "seconds": 5.512028708006255,
+      "exact_outcome_and_edit_program_match": true
+    },
+    {
+      "report": "confirm_generated_plain_r2",
+      "report_snapshot_sha256": "d255840f60a453e42ef5b7f6eb623f406069c6d5bcb2a705b6d2b1c157fb2ce6",
+      "episode": "episode-000086",
+      "variant": "mixed",
+      "edits": 8,
+      "seconds": 7.326661220053211,
+      "exact_outcome_and_edit_program_match": true
+    },
+    {
+      "report": "confirm_generated_varied_r2",
+      "report_snapshot_sha256": "159fca240116591ee227b3c9614457dc515fe0b9a5d7749a4543fc60aec60473",
+      "episode": "episode-000086",
+      "variant": "mixed",
+      "edits": 27,
+      "seconds": 11.36407404509373,
+      "exact_outcome_and_edit_program_match": true
+    }
+  ],
+  "limit": "Fixed first completed graph from each listed run; this is a reproducibility check, not additional statistical replication."
+}

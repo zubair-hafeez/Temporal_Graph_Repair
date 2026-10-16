@@ -29,6 +29,8 @@ HoloClean unifies heterogeneous signals for probabilistic data repair~\cite{holo
 
 Object-centric simulation also predates this work~\cite{ocsim}. A recent independent collection provides six synthetic relational systems with reference object-centric event logs~\cite{relationalocel}. We use this collection to challenge simulator dependence rather than claiming to introduce multitype operational simulation. The complete general dataset factory remains outside the scope of this paper.
 
+Synthetic training and observation randomization are established approaches to transfer~\cite{domainrandomization}. PluRel and RDB-PFN generate relational databases for model training and demonstrate transfer to relational prediction tasks~\cite{plurel,rdbpfn}. TIGGER learns to generate temporal interaction graphs~\cite{tigger}. These works rule out a generic novelty claim for synthetic relational or temporal training data. Our specific question concerns training edit decisions from executed workflows when the available event--object associations themselves are unreliable. We evaluate the downstream recovery of entity histories, including false associations introduced by repair, rather than claiming that our simulator matches a real graph distribution.
+
 FLAWD already provides a language and tool for controlled event-log fault injection~\cite{flawd}. Algebraic repair expressions also have existing language support~\cite{repairlanguage}. Consequently, executable fault scenarios and an auditable edit vocabulary are supporting components, not sufficient novelty by themselves.
 
 \section{Task and information boundary}
@@ -41,12 +43,23 @@ The entity catalog is assumed available. This is a material assumption: reconstr
 Reference graphs are evaluator-only. Simulated executions provide exact symbolic references. Public-source logs provide controlled-corruption references, not an independent certification that every native record is correct. Attributes copied from source trace metadata into event records form an explicitly denormalized observation condition; they must be reported separately from native-event and structural-only conditions.
 
 \section{Executable training worlds}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/method_overview.pdf}
+\caption{The implemented training and application boundary. Executed references supervise training labels. At application time, candidate retrieval and edit scoring use the observed temporal graph. The system retains recorded event content and can leave uncertain associations unresolved.}
+\label{fig:method}
+\end{figure}
 \subsection{Execution, observation and task construction}
 A world executes a finite workflow with parents, work items, resources and optional batches. Mechanisms include branching and joining, resource queues, handoffs, batching, retries, cancellation and return. The expanded configuration adds finite multistage work routes, repeated work, start/completion records and waiting-time variation. Resource-capacity constraints are enforced when queueing is enabled. These are symbolic mechanisms, not a calibrated organizational digital twin.
 
 Observation projection selects visible entity types and descriptive fields before faults are applied. Clean and damaged variants share execution ancestry. The repair task exports a public learner graph and separate reference participation, identity and fault records. A second task exports available prefix observations and future-participation targets from the same execution, excluding future-born entities from the candidate catalog. This reuse is a bounded interface check, not evidence for a universal dataset platform.
 
 Each execution records its normalized recipe, random states, source fingerprint and pending work. A JSON checkpoint resumes to the same execution as an uninterrupted run. Export manifests hash learner, reference and metadata files; observations derived from one execution remain in the same split. Changing source code invalidates incompatible checkpoints.
+
+\subsection{Paired observation generation}
+The principal comparison changes descriptive fields while keeping executed events, visible entity types, timestamps and corruption references fixed. Each world receives one of four seeded observation profiles: original fields; activity-dependent categories; numerical measurements; or a mixture of activity categories, measurements, incidental categories and time bands. Fields can be sparse. Numerical measurements combine an existing amount, when available, with activity-dependent scales and noise; no field is derived from a target identifier. Every clean/damaged pair receives the same aligned event descriptions through builder-only execution ancestry. This is an application of observation randomization, not a new general randomization principle.
+
+The comparison holds world count, execution recipes, fault realizations, sampled query events, learner capacity and generated calibration collection fixed within each trial. Observation changes can alter candidate retrieval and therefore the number of unique candidate pairs. It is consequently not an exactly equal number of binary training examples. Independent repetitions regenerate the executed worlds and their observation fields.
 
 \subsection{Variation and held-out conditions}
 Training and generated validation use disjoint mechanism compositions. Vocabulary profiles vary independently of flat versus multi-object projection. The profiles share one simulator engine and therefore do not constitute independent domains. History length, resource count, waiting scales, attribute collisions and error severity vary independently within the declared schedule.
@@ -62,9 +75,15 @@ Training references label candidate edits and create valid partial-repair states
 
 At inference, the system scores candidate edits, selects a commuting batch, applies it and recomputes evidence. A batch cannot merge an entity while also modifying its participation. The implementation records scores and reversible changes. Development thresholds and the pass limit determine abstention; the thresholds do not provide an out-of-domain precision guarantee. One-pass and fixed-sequence variants isolate the benefit of revisiting the graph. Repeated source-trained matching is also a required comparator.
 
+The generated reference labels a merge positive when its handles refer to the same entity, a removal positive when the recorded participant is incorrect, and an addition positive when it supplies a missing reference entity. These are local edit labels, not an optimization guarantee for final history F1. Training also includes partial teacher-repaired states to expose the learner to updated context. At inference, an accepted participation edit cannot subsequently be reversed and an identity merge cannot be split. Although the audit can undo a batch, the learned decoder has no search or backtracking policy; an early mistake can therefore persist.
+
 \section{Evaluation design}
 \subsection{Sources and splits}
-BPI 2012 and the public simulated logistics log are development sources. BPI 2012 cases are assigned to fit, tune and reserved check partitions before anonymization. Shared resource types are allowed, but held-out events do not enter another partition's observation context. BPI 2017 and BPI 2019 final targets remain unopened for model selection at this draft stage.
+BPI 2012~\cite{bpi2012} and the public simulated logistics log are development sources. BPI 2012 cases are assigned to fit, tune and reserved check partitions before anonymization. Shared resource types are allowed, but held-out events do not enter another partition's observation context. BPI 2017~\cite{bpi2017} and BPI 2019~\cite{bpi2019} cohorts were reserved until the models, calibration caches, adapters, faults and comparisons were frozen. Their confirmation experiments are now running.
+
+BPI 2017 contains applications and explicitly recorded offers from the same institution as BPI 2012, after a supporting-system change. It does not establish transfer to an unseen organization. We select 1,024 applications by seeded hash rank after excluding the first 500 applications inspected for feasibility and their offers. The resulting cohort contains 38,822 events and 2,422 target entities (1,024 applications and 1,398 offers). Only explicit event-level offer references become offer participation; absence of an offer reference is not a certified absence of a real-world offer relationship.
+
+For BPI 2019 we use the released OCEL conversion~\cite{bpiconversion,bpiocel}, selecting 1,024 purchase orders after excluding orders and items occurring in the first 2,000 feasibility-audited events. The cohort contains 20,396 events and 4,325 target entities (1,024 orders and 3,301 items). Resource and vendor relations remain observed context. Here ``native'' refers to the released OCEL representation, not a claim that every relation was an explicit field in the original XES event. Copied trace attributes, identifier fields and object-to-object relations are removed from learner input. The retained descriptive event field is cumulative net worth. The reserved BPI 2012 check partition contains 42,366 events and 2,034 application histories; its copied requested amount is explicitly labeled as denormalized.
 
 The expanded executable collection contains 512 training worlds and 96 validation worlds. The independent relational/OCEL collection uses BatteryVault and ClaimStream as development domains, selected by alphabetical order before record inspection; its remaining four scenarios are reserved for confirmation. These are external simulations, not additional real-world datasets.
 
@@ -129,6 +148,27 @@ The workflows share one symbolic implementation; vocabulary changes are not inde
 
 Current results use development-selected operating points and mostly one training seed. A few positive labels can make identity calibration abstain entirely. Generated-data gains may depend on training volume, history-length coverage and observation attributes; matched-budget ablations are needed to separate those factors. The final package must include source hashes, command manifests, split definitions, data permissions, uncertainty across repeated runs, failure cases, code and model artifacts, and a critical claim-by-claim review. No acceptance outcome is guaranteed by the current draft.
 
+\appendix
+\section{Implementation details}
+The principal learner fits one histogram gradient-boosting classifier per edit operation, with 200 boosting iterations, at most 15 leaves, learning rate .08 and $L_2$ regularization 1. Early stopping is disabled and the fitting seed is zero. Positive and negative examples each receive half the aggregate training weight. This fixed learner isolates the effect of generated observations; it is not proposed as a new learning architecture.
+
+Participation scoring uses 18 history-matching features plus observed type/activity prevalence and same-type event degree. Identity scoring uses 25 symmetric history-matching features. These are placed in a shared 28-dimensional action vector and clipped to $[-10,10]$. Retrieval and feature construction exclude the queried event from its supporting history. Training samples up to 48 events per state, 16 participation candidates per event/type and 32 identity candidates per handle. Candidate generation never receives the reference labels. The 512-world training collection supplies 896 states: 512 damaged states, 128 clean states and 256 partial-repair states. Generated validation supplies 120 states from 96 worlds.
+
+For each operation, the threshold maximizes empirical recall among generated-validation thresholds with empirical precision at least .95 and at least five true positives. If none meets this criterion, that operation abstains. Scores from class-weighted training are not asserted to be calibrated probabilities. Threshold selection is a finite validation rule, with no statistical precision guarantee on a new process. The real-source and independent-simulator protocol permits four passes with participation/pair budgets 128/64; the generated compositional test uses eight passes and budgets 16/32. Thus the two test regimes are reported separately.
+
+Neural controls use width 64, two message-passing layers where applicable, 16-dimensional node features, type/activity embeddings and three edit heads. GraphSAGE uses a root projection and relation-specific mean-neighbor projections. Its adjacency includes event--object incidence and temporal neighbor relations; removing numerical edge-time inputs does not make it a time-free model. The temporal control additionally uses signed relative-time edge features and learned message gates. The MLP omits message passing but retains shared temporal node/action inputs. All three controls use the same precomputed candidate universe and generated collections. Neural training samples at most 2,048 actions per state, including at most half positives; boosted training uses all cached candidates. This optimization-budget difference limits architectural conclusions.
+
+The revised neural controls train for 16 epochs with AdamW (learning rate .001, weight decay .0001), cosine decay to .0001, gradient clipping at 5 and dropout .1. The mean generated-validation average precision across operations selects the checkpoint; epoch 10 was selected for all three revised controls. Positive loss weights are computed from training frequencies and capped at 30. No reserved-target labels select checkpoints or thresholds.
+
+\section{Illustrative application audit}
+Figure~\ref{fig:cases} shows two post hoc examples from BatteryVault development. The success case is an exception-bearing history whose improvement is nearest the median positive improvement among such histories. The failure case has the largest history-F1 loss. Ties use a hash of the opaque identifier. These illustrations explain behavior and are not separate evidence of generalization.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/development_application_cases.pdf}
+\caption{A recovered warranty record and a failed short service history. Filled circles are retrieved records; empty circles are absent. Purple denotes a genuine exception, and rust a record belonging to another order. Times are relative to the first displayed record, with chronological but evenly spaced columns. Entity scores average over aliases; the diagram displays one hash-selected handle.}
+\label{fig:cases}
+\end{figure}
+
 \begin{thebibliography}{99}
 \bibitem{here} F. Zetzsche et al. \emph{Case ID Revealed HERE: Hybrid Elusive Case Repair Method for Transformer-Driven Business Process Event Log Enhancement}. Business \& Information Systems Engineering 67, 311--337, 2025. \url{https://doi.org/10.1007/s12599-025-00935-5}.
 \bibitem{sanagraph} S. Dissegna, C. Di Francescomarino and M. Ronzani. \emph{Graph-Based Event Log Repair}. CAiSE 2026, 423--440. \url{https://doi.org/10.1007/978-3-032-28117-3_24}. Accessible author preprint: \url{https://arxiv.org/abs/2508.05145}.
@@ -140,5 +180,14 @@ Current results use development-selected operating points and mostly one trainin
 \bibitem{ocip} S. Sadeghianasl et al. \emph{Object-centric event-data imperfection patterns}. Information Systems 141, 102766, 2026. \url{https://doi.org/10.1016/j.is.2026.102766}.
 \bibitem{flawd} M. Comuzzi, J. Ko and F. M. Maggi. \emph{A Language to Model and Simulate Data Quality Issues in Process Mining}. ACM J. Data Inf. Qual. 17(2), Article 6, 2025. \url{https://doi.org/10.1145/3743144}.
 \bibitem{repairlanguage} S. Sadeghianasl, R. Dijkman, R. Andrews and A. Barros. \emph{A Language for Efficient Event Log Repair}. EDOC 2026. Conference record: \url{https://conf.researchr.org/details/edoc-2026/edoc-2026-papers/8/A-Language-for-Efficient-Event-Log-Repair}.
+\bibitem{domainrandomization} J. Tobin, R. Fong, A. Ray, J. Schneider, W. Zaremba and P. Abbeel. \emph{Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World}. 2017. \url{https://arxiv.org/abs/1703.06907}.
+\bibitem{plurel} V. Kothapalli, R. Ranjan, V. Hudovernik, V. P. Dwivedi, J. Hoffart, C. Guestrin and J. Leskovec. \emph{PluRel: Synthetic Data unlocks Scaling Laws for Relational Foundation Models}. 2026. \url{https://arxiv.org/abs/2602.04029}.
+\bibitem{rdbpfn} Y. Wang, J. You, C. Shi and M. Zhang. \emph{Relational In-Context Learning via Synthetic Pre-training with Structural Prior}. 2026. \url{https://arxiv.org/abs/2603.03805}.
+\bibitem{tigger} S. Gupta, S. Manchanda, S. Bedathur and S. Ranu. \emph{TIGGER: Scalable Generative Modelling for Temporal Interaction Graphs}. AAAI 36(6), 6819--6828, 2022. \url{https://doi.org/10.1609/aaai.v36i6.20638}.
+\bibitem{bpi2012} B. F. van Dongen. \emph{BPI Challenge 2012}. Dataset, 2012. \url{https://doi.org/10.4121/uuid:3926db30-f712-4394-aebc-75976070e91f}.
+\bibitem{bpi2017} B. F. van Dongen. \emph{BPI Challenge 2017}. Dataset, 2017. \url{https://doi.org/10.4121/uuid:5f3067df-f10b-45da-b98b-86ae4c7a310b}.
+\bibitem{bpi2019} B. F. van Dongen. \emph{BPI Challenge 2019}. Dataset, 2019. \url{https://doi.org/10.4121/uuid:d06aff4b-79f0-45e6-8ec8-e19730c248f1}.
+\bibitem{bpiconversion} S. Khayatbashi, O. Hartig and A. Jalali. \emph{Transforming Event Knowledge Graph to Object-Centric Event Logs: A Comparative Study for Multi-dimensional Process Analysis}. ER 2023, 220--238. \url{https://doi.org/10.1007/978-3-031-47262-6_12}.
+\bibitem{bpiocel} S. Khayatbashi and A. Jalali. \emph{BPI Challenge datasets---OCEL 2.0}. Zenodo, version 1, 2026. \url{https://doi.org/10.5281/zenodo.22663565}.
 \end{thebibliography}
 \end{document}

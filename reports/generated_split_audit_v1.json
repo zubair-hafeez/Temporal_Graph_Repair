@@ -1,0 +1,58 @@
+{
+  "status": "generated_split_audit_passed",
+  "collections": {
+    "train": [
+      {
+        "collection": "workflow_train_v4",
+        "worlds": 512,
+        "mechanism_compositions": 8
+      },
+      {
+        "collection": "workflow_train_repeat1",
+        "worlds": 512,
+        "mechanism_compositions": 8
+      },
+      {
+        "collection": "workflow_train_repeat2",
+        "worlds": 512,
+        "mechanism_compositions": 8
+      }
+    ],
+    "validation": [
+      {
+        "collection": "workflow_validation_v4",
+        "worlds": 96,
+        "mechanism_compositions": 3
+      },
+      {
+        "collection": "workflow_validation_repeat1",
+        "worlds": 96,
+        "mechanism_compositions": 3
+      },
+      {
+        "collection": "workflow_validation_repeat2",
+        "worlds": 96,
+        "mechanism_compositions": 3
+      }
+    ],
+    "test": [
+      {
+        "collection": "workflow_confirmation_v1",
+        "worlds": 96,
+        "mechanism_compositions": 2
+      }
+    ]
+  },
+  "manifest_hashes": {
+    "workflow_train_v4": "c2d4add73d7ab48cb9fe7fa2be64b729cfbedb7fa7f5e942636b0819bed75185",
+    "workflow_train_repeat1": "080f8063f614fa2c07f7f6db6292adba89663caa89ba5b2e9c76b59830308f68",
+    "workflow_train_repeat2": "de2d4d5edf0efce6c680cf390b0642f896affb4d686d8ceecf362ec7b20a0c6a",
+    "workflow_validation_v4": "f14ee094dffb231614d94b263ed948b3b2ca832df1904badca22682a76b94780",
+    "workflow_validation_repeat1": "5a734a3b968d7fdd3004b0275aec85654b8cd63799298b65a25f43c706a4b921",
+    "workflow_validation_repeat2": "f4625c4fcc7f676fd2c5096cb8fbadb84bc3a2d698c240ee1cade08232a3daf8",
+    "workflow_confirmation_v1": "19902ffc569fa831fdcd0dbfdfd334b488151f400b0087669f53051e8ecce336"
+  },
+  "execution_group_overlap": 0,
+  "mechanism_composition_overlap": 0,
+  "limits": "Held-out combinations of known mechanisms within one simulator; not independent domains."
+}

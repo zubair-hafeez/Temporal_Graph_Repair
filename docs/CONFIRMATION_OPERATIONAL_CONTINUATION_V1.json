@@ -1,0 +1,15 @@
+{
+  "status": "operational_continuation_without_method_change",
+  "original_protocol_sha256": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "reason": "Several tool sessions returned signal exit code 143 before completion. Cause is not established.",
+  "whole_graph_evaluations": "Use the existing frozen evaluator --resume and exact per-round checkpoints.",
+  "generated_world_evaluations": "Preserve the incoming partial report and completed graph audits; evaluate only the remaining ordered graph variants with the frozen scorer, retrieval, decoder, models, thresholds and metrics.",
+  "generated_helper": "scripts/resume_generated_confirmation.py",
+  "generated_helper_sha256": "5acc6297654630ec1496569af3067509e2eadcc8d4617a0c24454120aa329d9a",
+  "affected_generated_reports": [
+    "confirm_generated_plain_r2",
+    "confirm_generated_varied_r2"
+  ],
+  "scientific_changes": [],
+  "runtime_limit": "Active processing wall times omit interruption downtime; parallel load prevents a controlled speed comparison."
+}

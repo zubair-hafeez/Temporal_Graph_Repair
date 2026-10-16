@@ -26,7 +26,7 @@
     ]
   },
   "authorization": "User authorized autonomous paper development and experiments through final review; no external submission.",
-  "next_action": "Run remaining frozen suites after source preparation; finish 96-world compositional tests and retrieve the four externally hosted reserved logs. Preserve all results and do not retune frozen models from them.",
+  "next_action": "Complete all frozen confirmation blocks and aggregate only full trial groups; finish external downloads, application audits, final manuscript and reproducibility review.",
   "trained_models": [
     "source participant matcher",
     "source and synthetic identity matchers",
@@ -75,7 +75,10 @@
     "reports/training_repeat1_pipeline.json",
     "reports/training_repeat2_pipeline.json",
     "41 research tests and 10 bounded factory tests passed",
-    "docs/CONFIRMATION_PROTOCOL_V1.json"
+    "docs/CONFIRMATION_PROTOCOL_V1.json",
+    "reports/generated_replay_audit_v1.json",
+    "reports/generated_split_audit_v1.json",
+    "reports/confirmation_candidate_audits_real_v1.json"
   ],
   "factory_increment": "TR0 and TR1 bounded source acceptance; general factory/RF/wheel scope unchanged",
   "manuscript": "paper/main.tex and main.pdf are internal development drafts; cached offline TeX compilation works. Figures are development-only.",
@@ -101,18 +104,6 @@
     "external_claim_attributes_repeat2": {
       "session": 89357,
       "report": "external_claim_attributes_repeat2"
-    },
-    "decode_sage_attributes_v3": {
-      "session": 17957,
-      "report": "decode_sage_attributes_v3"
-    },
-    "decode_temporal_attributes_v3": {
-      "session": 28639,
-      "report": "decode_temporal_attributes_v3"
-    },
-    "decode_mlp_attributes_v3": {
-      "session": 31948,
-      "report": "decode_mlp_attributes_v3"
     }
   },
   "independent_native_transfer": "Revised varied-attribute generated training reaches .880412 BatteryVault and .919719 ClaimStream; clean counterparts receive zero edits. Pipeline faults remain harder (.807484/.798482), including false merges. BPI tune decreases to .807426 from old .837963.",
@@ -124,13 +115,69 @@
   "reserved_preparation_started": true,
   "confirmation_jobs": {
     "primary_real": {
-      "session": 86752,
+      "session": 78458,
       "report": "confirmation_primary_bpi2017_bpi2019_bpi2012_check",
       "log": "reports/confirmation_primary_real.log"
     },
-    "workflow_confirmation_attributes_v1": {
-      "session": 3267,
-      "report": "workflow_confirmation_attributes_v1"
+    "generated_varied_r0": {
+      "session": 87960,
+      "report": "confirm_generated_varied_r0"
+    },
+    "generated_plain_r0": {
+      "session": 2746,
+      "report": "confirm_generated_plain_r0"
+    },
+    "generated_plain_r1": {
+      "session": 50262,
+      "report": "confirm_generated_plain_r1"
+    },
+    "generated_varied_r1": {
+      "session": 33162,
+      "report": "confirm_generated_varied_r1"
+    },
+    "generated_plain_r2": {
+      "session": 38165,
+      "report": "confirm_generated_plain_r2"
+    },
+    "generated_varied_r2": {
+      "session": 24025,
+      "report": "confirm_generated_varied_r2"
+    },
+    "clean_real": {
+      "session": 69932,
+      "report": "confirmation_clean_bpi2017_bpi2019_bpi2012_check",
+      "log": "reports/confirmation_clean_real.log"
+    },
+    "adaptation_real": {
+      "session": 52861,
+      "report": "confirmation_adaptation_bpi2017_bpi2019_bpi2012_check",
+      "log": "reports/confirmation_adaptation_real.log"
+    },
+    "pipeline_real": {
+      "session": 35481,
+      "report": "confirmation_pipeline_bpi2017_bpi2019_bpi2012_check"
+    },
+    "source_real": {
+      "session": 92774,
+      "report": "confirmation_source_bpi2017_bpi2019_bpi2012_check"
+    },
+    "structural_real": {
+      "session": 81961,
+      "report": "confirmation_structural_bpi2017_bpi2019_bpi2012_check"
+    },
+    "controls_real": {
+      "session": 6555,
+      "report": "confirmation_controls_bpi2017_bpi2019_bpi2012_check"
+    },
+    "adaptation_bpi2019_seed2_restart": {
+      "session": 96907,
+      "report": "confirm_bpi2019_native_mixed_91002_target_selfsupervised_operational_restart"
+    },
+    "candidate_audits_real": {
+      "session": 99157,
+      "report": "confirmation_candidate_audits_real_v1",
+      "status": "completed"
     }
-  }
+  },
+  "operational_continuation": "docs/CONFIRMATION_OPERATIONAL_CONTINUATION_V1.json"
 }

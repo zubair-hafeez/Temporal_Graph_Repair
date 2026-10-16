@@ -1,0 +1,10 @@
+# Tested research interpreter: CPython 3.10.14 on Linux x86_64.
+# The installed training build is torch 2.5.1+cu124; CPU inference also works.
+torch==2.5.1
+numpy==2.2.6
+scipy==1.14.1
+scikit-learn==1.6.0
+joblib==1.4.2
+threadpoolctl==3.5.0
+matplotlib==3.10.9
+pytest==9.1.1

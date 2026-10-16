@@ -1,6 +1,6 @@
 # Iteration 6: transfer restored through varied observation scenarios
 
-All outcomes below are development results. Reserved real-log and independent-simulator targets remain unopened.
+The outcomes in this iteration record are development results. The later transition to frozen reserved evaluation is recorded below.
 
 ## Completed paired comparison
 
@@ -52,3 +52,11 @@ Both independent training-replication pipelines are complete. Matched GraphSAGE,
 The four reserved independent-simulator downloads timed out through both the API and direct-file URLs, including approved network retries. No records from those four sources have been decoded. Local real-source confirmation proceeds while downloads remain pending. This is an acquisition issue, not evidence about method performance.
 
 The research suite passes 41 tests and the bounded temporal-factory suite passes 10 tests. The paper PDF compiles locally; it remains an internal development manuscript until confirmation, application case analysis and the final evidence review are complete.
+
+## Completed development replication and application cases
+
+All three varied-observation training collections have now been evaluated on the same two development target graphs and fault realization. BatteryVault F1 is 0.880412, 0.886136 and 0.845151 (mean 0.870566); ClaimStream is 0.919719, 0.919523 and 0.860349 (mean 0.899864). The third training collection transfers less well. These are actual independent generated-training repetitions, but they share the target fault realization and remain development evidence.
+
+The revised neural controls on 24 generated validation worlds reach 0.809088 (GraphSAGE), 0.797547 (MLP), and 0.794169 (temporal messages), versus boosted edits at 0.825555. Their clean-history F1 values are 0.996960, 0.997690 and 0.998625, versus 0.999655. The comparison shares candidate universes, while neural optimization samples at most 2,048 actions/state and boosted fitting uses all cached candidates. No general architectural ranking follows from this experiment.
+
+The post hoc application audits retain both success and failure examples. BatteryVault has 1,034 improved, 19 worsened and 158 unchanged entity histories; ClaimStream has 1,706 improved, 11 worsened and 52 unchanged. The case-selection rule and full event lists are recorded in `reports/battery_application_cases_v1.json` and `reports/claim_application_cases_v1.json`. The selected battery success restores a warranty-claim opening record while retaining the genuine denial; the selected failure loses the useful associations for a short service history. The figures are illustrations, not additional independent evaluations.

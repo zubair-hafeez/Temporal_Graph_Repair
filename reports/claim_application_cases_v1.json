@@ -1,0 +1,895 @@
+{
+  "status": "posthoc_illustrative_case_audit",
+  "config": {
+    "task": "data/external_development_v1/claimstream/mixed",
+    "run": "external_claim_attribute_training_v3",
+    "output": "claim_application_cases_v1"
+  },
+  "task_hash": "b209930fd70af603e311b35036551a84119cf8a526929158dfaa1b47de5c72e9",
+  "result_hash": "f8b4fb6ef4ae826f542ca9dd73ee2cea3845b3f2bd35eade4b57ea5da486a0e6",
+  "case_audit_script_hash": "764e9f45a7c75ef9bbcc23844c1453142597061aeb22d2fe4f31779d4c7d4834",
+  "population": {
+    "entities": 1769,
+    "improved": 1706,
+    "worsened": 11,
+    "unchanged": 52
+  },
+  "cases": [
+    {
+      "selection_rule": "exception_success_nearest_median_gain",
+      "true": "o000010507",
+      "type": "Claim",
+      "before_f1": 0.8484848484848485,
+      "after_f1": 0.9714285714285714,
+      "gain": 0.12294372294372291,
+      "records": 36,
+      "has_exception_evidence": true,
+      "handles": [
+        "o000010507"
+      ],
+      "queried_handle": "o000010507",
+      "events": [
+        {
+          "uid": "e000007772",
+          "time": 1690272300.0,
+          "activity": "Incident Registered",
+          "in_reference_history": false,
+          "retrieved_before": true,
+          "retrieved_after": false,
+          "attributes": {
+            "actor_role": "INTAKE",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "BER",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000001958",
+          "time": 1690474980.0,
+          "activity": "Claim Reported",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "INTAKE",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "FRA",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000002201",
+          "time": 1690791300.0,
+          "activity": "Incident Registered",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "INTAKE",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "BER",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000009945",
+          "time": 1690960560.0,
+          "activity": "Claim Acknowledged",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "INTAKE",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "HAM",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000022182",
+          "time": 1690963800.0,
+          "activity": "Policy Located",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "COVERAGE",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "MUC",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000021142",
+          "time": 1690971960.0,
+          "activity": "Coverage Check Started",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "COVERAGE",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "CGN",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000012651",
+          "time": 1690985040.0,
+          "activity": "Coverage Confirmed",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "COVERAGE",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "FRA",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000021591",
+          "time": 1691050800.0,
+          "activity": "Exposure Opened",
+          "in_reference_history": true,
+          "retrieved_before": false,
+          "retrieved_after": false,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "HAM",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000014885",
+          "time": 1691075460.0,
+          "activity": "Exposure Classified",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "MUC",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000019428",
+          "time": 1691137320.0,
+          "activity": "Adjuster Assigned",
+          "in_reference_history": true,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "FRA",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000020786",
+          "time": 1691173560.0,
+          "activity": "Adjuster Reassigned",
+          "in_reference_history": true,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "BER",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000006013",
+          "time": 1691396640.0,
+          "activity": "Inspection Scheduled",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "INSPECTOR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "HAM",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000016342",
+          "time": 1691483100.0,
+          "activity": "Inspection Completed",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "INSPECTOR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "CGN",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000004286",
+          "time": 1691569560.0,
+          "activity": "Damage Item Added",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "FRA",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000009957",
+          "time": 1691652420.0,
+          "activity": "Evidence Requested",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "HAM",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000019586",
+          "time": 1691738880.0,
+          "activity": "Evidence Received",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "MUC",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000022934",
+          "time": 1692001740.0,
+          "activity": "Evidence Rejected",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "FRA",
+            "changed_field": "lifecycle_status",
+            "is_exception": 1,
+            "reason": "INVALID_EVIDENCE",
+            "exception_reason": "INVALID_EVIDENCE"
+          }
+        },
+        {
+          "uid": "e000018318",
+          "time": 1692084600.0,
+          "activity": "Evidence Requested",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "HAM",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000013595",
+          "time": 1692171060.0,
+          "activity": "Evidence Received",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "MUC",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000006965",
+          "time": 1692257520.0,
+          "activity": "Evidence Validated",
+          "in_reference_history": true,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "CGN",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000008558",
+          "time": 1692342960.0,
+          "activity": "Estimate Requested",
+          "in_reference_history": true,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ESTIMATOR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "BER",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 552.28,
+            "currency": "EUR"
+          }
+        },
+        {
+          "uid": "e000015605",
+          "time": 1692606840.0,
+          "activity": "Estimate Received",
+          "in_reference_history": true,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ESTIMATOR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "HAM",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 552.99,
+            "currency": "EUR"
+          }
+        },
+        {
+          "uid": "e000006648",
+          "time": 1692703860.0,
+          "activity": "Estimate Approved",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ESTIMATOR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "CGN",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 554.41,
+            "currency": "EUR"
+          }
+        },
+        {
+          "uid": "e000012624",
+          "time": 1692805800.0,
+          "activity": "Reserve Established",
+          "in_reference_history": true,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "CLAIMS_MGR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "FRA",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 555.12,
+            "currency": "EUR"
+          }
+        },
+        {
+          "uid": "e000006370",
+          "time": 1692952620.0,
+          "activity": "Fraud Score Calculated",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "FRAUD",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "CGN",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000007344",
+          "time": 1693211880.0,
+          "activity": "Liability Partially Accepted",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "CLAIMS_MGR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "CGN",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000018354",
+          "time": 1693384740.0,
+          "activity": "Repair Authorized",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "REPAIR_COORD",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "BER",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000000215",
+          "time": 1693557600.0,
+          "activity": "Repair Started",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "REPAIR_COORD",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "HAM",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000015436",
+          "time": 1693816860.0,
+          "activity": "Repair Completed",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "REPAIR_COORD",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "MUC",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000002663",
+          "time": 1693986120.0,
+          "activity": "Payment Proposed",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "PAYMENTS",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "FRA",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 565.77,
+            "currency": "EUR"
+          }
+        },
+        {
+          "uid": "e000024512",
+          "time": 1694158980.0,
+          "activity": "Payment Approved",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "PAYMENTS",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "BER",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 566.48,
+            "currency": "EUR"
+          }
+        },
+        {
+          "uid": "e000014557",
+          "time": 1694164740.0,
+          "activity": "Payment Issued",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "PAYMENTS",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "HAM",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 567.19,
+            "currency": "EUR"
+          }
+        },
+        {
+          "uid": "e000003401",
+          "time": 1694167740.0,
+          "activity": "Claim Settled",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "PROCESS_OWNER",
+            "resource_calendar": "24X7",
+            "location": "BER",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000011096",
+          "time": 1694419260.0,
+          "activity": "Reserve Released",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "CLAIMS_MGR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "MUC",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 557.25,
+            "currency": "EUR"
+          }
+        },
+        {
+          "uid": "e000024694",
+          "time": 1694451960.0,
+          "activity": "Customer Contacted",
+          "in_reference_history": true,
+          "retrieved_before": false,
+          "retrieved_after": false,
+          "attributes": {
+            "actor_role": "CUSTOMER_CARE",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "HAM",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000006708",
+          "time": 1694471460.0,
+          "activity": "Claim Closed",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "PROCESS_OWNER",
+            "resource_calendar": "24X7",
+            "location": "FRA",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000001636",
+          "time": 1694497620.0,
+          "activity": "Claim Archived",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "PROCESS_OWNER",
+            "resource_calendar": "24X7",
+            "location": "HAM",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000001944",
+          "time": 1699035780.0,
+          "activity": "Incident Registered",
+          "in_reference_history": false,
+          "retrieved_before": true,
+          "retrieved_after": false,
+          "attributes": {
+            "actor_role": "INTAKE",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "BER",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        }
+      ]
+    },
+    {
+      "selection_rule": "largest_history_f1_loss",
+      "true": "o000004975",
+      "type": "Exposure",
+      "before_f1": 0.6666666666666666,
+      "after_f1": 0.0,
+      "gain": -0.6666666666666666,
+      "records": 1,
+      "has_exception_evidence": false,
+      "handles": [
+        "o000004975"
+      ],
+      "queried_handle": "o000004975",
+      "events": [
+        {
+          "uid": "e000005612",
+          "time": 1688654100.0,
+          "activity": "Reserve Released",
+          "in_reference_history": true,
+          "retrieved_before": true,
+          "retrieved_after": false,
+          "attributes": {
+            "actor_role": "CLAIMS_MGR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "BER",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 408.04,
+            "currency": "EUR"
+          }
+        },
+        {
+          "uid": "e000010712",
+          "time": 1691048280.0,
+          "activity": "Exposure Opened",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "FRA",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000000531",
+          "time": 1691397540.0,
+          "activity": "Exposure Classified",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "BER",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000017958",
+          "time": 1691570400.0,
+          "activity": "Adjuster Assigned",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "MUC",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000011434",
+          "time": 1691739660.0,
+          "activity": "Inspection Scheduled",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "INSPECTOR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "FRA",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000003662",
+          "time": 1692002520.0,
+          "activity": "Inspection Completed",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "INSPECTOR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "HAM",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000020098",
+          "time": 1692005640.0,
+          "activity": "Damage Item Added",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "MUC",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000024627",
+          "time": 1692015420.0,
+          "activity": "Evidence Requested",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "FRA",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000011791",
+          "time": 1692030120.0,
+          "activity": "Evidence Received",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "BER",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000019023",
+          "time": 1692086460.0,
+          "activity": "Evidence Validated",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "ADJUSTER",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "HAM",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000020970",
+          "time": 1692255900.0,
+          "activity": "Reserve Established",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "CLAIMS_MGR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "MUC",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 562.86,
+            "currency": "EUR"
+          }
+        },
+        {
+          "uid": "e000000461",
+          "time": 1692605220.0,
+          "activity": "Liability Accepted",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "CLAIMS_MGR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "BER",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0
+          }
+        },
+        {
+          "uid": "e000003468",
+          "time": 1692948960.0,
+          "activity": "Payment Proposed",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "PAYMENTS",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "MUC",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 573.51,
+            "currency": "EUR"
+          }
+        },
+        {
+          "uid": "e000011343",
+          "time": 1693210320.0,
+          "activity": "Payment Approved",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "PAYMENTS",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "CGN",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 574.22,
+            "currency": "EUR"
+          }
+        },
+        {
+          "uid": "e000019700",
+          "time": 1693308120.0,
+          "activity": "Payment Issued",
+          "in_reference_history": false,
+          "retrieved_before": false,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "PAYMENTS",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "FRA",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 574.93,
+            "currency": "EUR"
+          }
+        },
+        {
+          "uid": "e000007864",
+          "time": 1693418160.0,
+          "activity": "Reserve Released",
+          "in_reference_history": false,
+          "retrieved_before": true,
+          "retrieved_after": true,
+          "attributes": {
+            "actor_role": "CLAIMS_MGR",
+            "resource_calendar": "WEEKDAY_DAY_SHIFT",
+            "location": "BER",
+            "changed_field": "lifecycle_status",
+            "is_exception": 0,
+            "amount": 564.99,
+            "currency": "EUR"
+          }
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Examples are selected from evaluated outcomes to illustrate behavior, not an independent efficacy test.",
+    "Entity scores average across aliases; the displayed record list uses one hash-selected observed handle."
+  ]
+}
