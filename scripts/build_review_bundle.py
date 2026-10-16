@@ -22,6 +22,14 @@ def main():
     if not args.allow_incomplete and evidence['status'] != 'complete_selected_confirmation':
         raise ValueError('Final review artifact requires every selected confirmation comparison')
     if not args.allow_incomplete:
+        final_audit = json.loads((ROOT/'reports/final_review_audit_v1.json').read_text())
+        if final_audit['status'] != 'final_evidence_and_manuscript_dependencies_passed':
+            raise ValueError('Final manuscript/evidence audit is incomplete')
+        for name, digest in final_audit['dependencies_checked'].items():
+            if sha256(ROOT/name) != digest:
+                raise ValueError('An audited final artifact changed: '+name)
+        if not (ROOT/'REVIEW_NOTES.txt').exists():
+            raise ValueError('Final review guide is missing')
         generated = json.loads((ROOT/'reports/generated_confirmation_evidence_v1.json').read_text())
         if generated['status'] != 'complete_generated_confirmation_analysis':
             raise ValueError('Generated confirmation is incomplete')
@@ -53,6 +61,8 @@ def main():
         files[relative.as_posix()] = path
     for name in ['README.md', 'requirements.txt', 'STATE.json', 'RESUME.md', 'LEDGER.md']:
         add(ROOT/name)
+    if (ROOT/'REVIEW_NOTES.txt').exists():
+        add(ROOT/'REVIEW_NOTES.txt')
     for folder in ['tgrepair', 'scripts', 'tests', 'docs', 'paper', 'reports', 'checkpoints']:
         for path in sorted((ROOT/folder).rglob('*')):
             if not path.is_file() or '__pycache__' in path.parts or path.suffix in {'.log', '.aux', '.out', '.pyc'}:

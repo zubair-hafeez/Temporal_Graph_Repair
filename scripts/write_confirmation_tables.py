@@ -18,9 +18,11 @@ def cell(metric):
 
 def table(headers, rows, caption, label):
     return '\n'.join([r'\begin{table}[ht]',r'\centering\small',
-        r'\resizebox{\linewidth}{!}{\begin{tabular}{l'+'c'*(len(headers)-1)+'}',r'\toprule',
+        r'\sbox{\resulttablebox}{\begin{tabular}{l'+'c'*(len(headers)-1)+'}',r'\toprule',
         ' & '.join(headers)+r'\\',r'\midrule',*[' & '.join(row)+r'\\' for row in rows],
-        r'\bottomrule',r'\end{tabular}}',r'\caption{'+caption+'}',r'\label{'+label+'}',r'\end{table}',''])
+        r'\bottomrule',r'\end{tabular}}',
+        r'\ifdim\wd\resulttablebox>\linewidth\resizebox{\linewidth}{!}{\usebox{\resulttablebox}}\else\usebox{\resulttablebox}\fi',
+        r'\caption{'+caption+'}',r'\label{'+label+'}',r'\end{table}',''])
 
 
 def main():
@@ -35,12 +37,18 @@ def main():
         if group['metrics'] is None or group['completed_trials']!=group['expected_trials']:
             raise ValueError('Table group incomplete: '+str((domain,suite,arm)))
         return group['metrics']
-    main_rows=[];safety_rows=[];query_rows=[];type_rows=[]
+    main_rows=[];safety_rows=[];query_rows=[];type_rows=[];structural_rows=[];recovery_rows=[]
     for domain in args.domains:
         a=metrics(domain,'primary','plain');b=metrics(domain,'primary','varied')
         s=metrics(domain,'source','source256');t=metrics(domain,'adaptation','target_selfsupervised')
         main_rows.append([NAMES[domain],cell(b['before_f1']),cell(a['after_f1']),cell(b['after_f1']),cell(s['after_f1']),cell(t['after_f1'])])
         clean=metrics(domain,'clean','varied');pipeline=metrics(domain,'pipeline','varied')
+        structural_plain=metrics(domain,'structural','plain');structural_varied=metrics(domain,'structural','varied')
+        structural_rows.append([NAMES[domain],cell(structural_plain['after_f1']),cell(structural_varied['after_f1'])])
+        recovery_rows.append([NAMES[domain],
+            '/'.join(str(int(v)) for v in b['damaged_events']['values']),
+            '/'.join(str(int(v)) for v in b['repaired_events']['values']),
+            cell(b['correct_event_preservation']),cell(b['identity_recall'])])
         safety_rows.append([NAMES[domain],cell(b['before_exact']),cell(b['after_exact']),
             '/'.join(str(int(v)) for v in b['identity_false_pairs']['values']),
             '/'.join(str(int(v)) for v in b['newly_damaged_events']['values']),
@@ -87,6 +95,12 @@ def main():
       'queries':table(['Source','Recorded-evidence query','Before','After'],query_rows,
         'Operational queries for the varied-observation learner under mixed faults, with trial means and observed ranges. Boundary-time scores concern timestamps, not every simultaneous event. Cancellation evidence is an event-retrieval query, not a causal or business-outcome prediction. Undefined query F1 is not replaced by zero.',
         'tab:confirmation-queries'),
+      'structural':table(['Source','Original training','Varied training'],structural_rows,
+        'Single-trial structural-only observation diagnostic, seed 91001. Both models receive the same descriptive-field-free test view. Training remains unchanged, so this tests the fitted models when event descriptions are withheld; it is not a separately retrained structure-only comparison.',
+        'tab:confirmation-structural'),
+      'recovery':table(['Source','Damaged events','Repaired events','Correct-event preservation','Identity recall'],recovery_rows,
+        'Mixed-fault event and identity recovery for varied-observation training. Counts list the three trials; fractions show means and observed ranges. An event is repaired only when all declared target participation is correct. History F1 also changes when an incomplete history improves without an event becoming fully correct. Identity recall counts recovered true alias pairs.',
+        'tab:confirmation-recovery'),
       'types':table(['Source','Target type','Entities','Before','After'],type_rows,
         'History F1 by target entity type for varied-observation training, with three-trial means and observed ranges. Each source cohort is fixed across fault trials. These views expose differences obscured by pooling multiple entity types.',
         'tab:confirmation-types')}

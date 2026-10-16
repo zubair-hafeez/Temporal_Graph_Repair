@@ -21,6 +21,7 @@ LABELS={'bpi2017':'BPI 2017\nApplications / offers',
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--evidence',required=True)
     parser.add_argument('--domains',nargs='+',required=True);parser.add_argument('--output-prefix',required=True)
+    parser.add_argument('--primary-only',action='store_true',help='Plot the paired training-data comparison; controls remain in tables')
     args=parser.parse_args();path=ROOT/'reports'/f'{args.evidence}.json';evidence=json.loads(path.read_text())
     for name,digest in evidence['source_reports'].items():
         if sha256(ROOT/name)!=digest:raise ValueError('Summarized report changed: '+name)
@@ -38,6 +39,7 @@ def main():
           ('Varied observations','primary','varied','after_f1','#287f91'),
           ('Source trained (256 + calibration)','source','source256','after_f1','#8165a5'),
           ('Target-local extra corruption','adaptation','target_selfsupervised','after_f1','#7c994e')]
+    if args.primary_only:arms=arms[:3]
     # Validate everything before writing any output.
     plotted={(d,s,a,f):metric(d,s,a,f) for d in args.domains for _,s,a,f,_ in arms}
     for d in args.domains:
@@ -45,11 +47,11 @@ def main():
             plotted[d,suite,'varied',field]=metric(d,suite,'varied',field)
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'pdf.fonttype':42,'ps.fonttype':42})
     fig,ax=plt.subplots(figsize=(max(8,len(args.domains)*3),4.7))
-    centers=np.arange(len(args.domains));width=.14
+    centers=np.arange(len(args.domains));width=.7/len(arms)
     for j,(label,suite,arm,field,color) in enumerate(arms):
         values=[plotted[d,suite,arm,field] for d in args.domains]
         means=np.array([r['mean'] for r in values]);low=np.array([r['min'] for r in values]);high=np.array([r['max'] for r in values])
-        ax.bar(centers+(j-2)*width,means,width=width,color=color,label=label,
+        ax.bar(centers+(j-(len(arms)-1)/2)*width,means,width=width,color=color,label=label,
                yerr=np.vstack([means-low,high-means]),capsize=2,error_kw={'elinewidth':.9})
     ax.set_xticks(centers,[LABELS.get(d,d) for d in args.domains]);ax.set_ylim(0,1.02)
     ax.set_ylabel('Entity-history F1');ax.grid(axis='y',alpha=.18);ax.set_axisbelow(True)
@@ -75,7 +77,7 @@ def main():
     for suffix in ['pdf','png']:fig.savefig(output/(prefix+'_failure_boundaries.'+suffix),dpi=180,bbox_inches='tight')
     plt.close(fig)
     source={'evidence_report':str(path.relative_to(ROOT)),'evidence_sha256':sha256(path),
-            'script_sha256':sha256(__file__),'domains':args.domains,
+            'script_sha256':sha256(__file__),'domains':args.domains,'primary_only':args.primary_only,
             'plotted_metrics':[{'domain':k[0],'suite':k[1],'arm':k[2],'field':k[3],**v} for k,v in plotted.items()],
             'error_bars':'Observed minimum and maximum across the three declared joint trials, not confidence intervals.'}
     (output/(prefix+'_sources.json')).write_text(json.dumps(source,indent=2)+'\n')

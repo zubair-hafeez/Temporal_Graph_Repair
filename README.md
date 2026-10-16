@@ -2,7 +2,7 @@
 
 Active research project: learn transferable restoration of event participation and fragmented identities from generated operational histories. The intended application is traceability in purchasing, loan processing, and logistics.
 
-The accepted [research proposal](../Temporal_Graph_Papers_2024-2026/analysis/new_idea_20261015/PROPOSAL.md) and [novelty audit](../Temporal_Graph_Papers_2024-2026/analysis/new_idea_20261015/NOVELTY_AUDIT.md) are the starting point. Results, including failed hypotheses, determine the final claims. Development experiments found both useful transfer and consequential failures. The [confirmation protocol](docs/CONFIRMATION_PROTOCOL_V1.json) is now frozen and its experiments are running. The manuscript remains an internal draft until those comparisons and the final review are complete.
+The archived [research proposal](docs/proposal_archive/PROPOSAL.md) and [novelty audit](docs/proposal_archive/NOVELTY_AUDIT.md) record the starting point. Results, including failed hypotheses, determine the final claims. Development experiments found both useful transfer and consequential failures. The [confirmation protocol](docs/CONFIRMATION_PROTOCOL_V1.json) is frozen; all primary comparisons are complete, with final controls and a separately declared calibration sensitivity in progress.
 
 Read [RESUME.md](RESUME.md), [STATE.json](STATE.json), and [docs/TASK_CONTRACT.md](docs/TASK_CONTRACT.md) before continuing. The completed forecasting paper remains a separate project. Its raw public data can be read; its source, labels, results, and release artifacts must remain unchanged.
 
@@ -61,7 +61,15 @@ python scripts/evaluate_external_policy.py \
   --protocol docs/REPRODUCTION_PROTOCOL.json --output reviewer_bpi2017_r0
 ```
 
-Run this in a disposable copy of the review bundle: task preparation writes its own preparation report under the historical report name. The path-only protocol preserves model, calibration, cohort, source checksum, fault and decoder settings. Its historical freeze date is copied for provenance and does not represent a new prospective registration. BPI 2012 check is a derived split; reconstruct it using `scripts/prepare_development.py` and the exact original BPI 2012 input before checking the declared derived-file hash.
+Run this in a disposable copy of the review bundle: task preparation writes its own preparation report under the historical report name. The path-only protocol preserves model, calibration, cohort, source checksum, fault and decoder settings. Its historical freeze date is copied for provenance and does not represent a new prospective registration. BPI 2012 check is a derived split. Reconstruct it from the exact original BPI 2012 input before using the derived graph in the source-path map:
+
+```bash
+python scripts/rebuild_bpi2012_check.py \
+  --source /absolute/path/to/bpi2012.xes.gz \
+  --output /tmp/rebuilt_bpi2012_check_attributes.json.gz
+```
+
+This helper validates the raw-source hash, uses the unchanged frozen adapter, and requires the derived bytes to match the original check-split hash. It does not require the unrelated logistics development file or the original project's directory layout.
 
 Training recipes are retained under `data/recipe_manifests/`, and the training/generation commands and source snapshots are in the original reports. Those manifests are not full training caches. Recreate worlds and edit-learning states in a separate working copy before retraining. Frozen-model replay and independent retraining answer different reproducibility questions; retrained binary weights need not be identical across numerical-library versions or hardware.
 

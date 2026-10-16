@@ -22,7 +22,68 @@
       "max_seconds": 45,
       "exit_code": 28,
       "error": "Connection timed out after 15000 milliseconds"
+    },
+    {
+      "url": "https://zenodo.org/records/22079246/files/forgeflow.jsonocel.gz?download=1",
+      "approved_network_retry": true,
+      "connect_timeout_seconds": 15,
+      "max_seconds": 45,
+      "exit_code": 28,
+      "error": "Connection timed out after 15000 milliseconds",
+      "session": 91587
     }
   ],
-  "scope": "These download failures occurred in this execution environment. The publication metadata remains accessible through the research browser; this is not a claim that the dataset is globally unavailable."
+  "scope": "These download failures occurred in this execution environment. The publication metadata remains accessible through the research browser; this is not a claim that the dataset is globally unavailable.",
+  "final_four_source_retry_utc": "2026-10-16T02:45:44.643195+00:00",
+  "final_four_source_retry": [
+    {
+      "domain": "forgeflow",
+      "session": 86693,
+      "exit_code": 35,
+      "error": "OpenSSL SSL_connect: Connection reset by peer",
+      "url": "https://zenodo.org/api/records/22079246/files/forgeflow.jsonocel.gz/content",
+      "approved_network_retry": true,
+      "http_version": "1.1",
+      "ipv4": true,
+      "connect_timeout_seconds": 15,
+      "max_seconds": 45
+    },
+    {
+      "domain": "permitflow",
+      "session": 55810,
+      "exit_code": 35,
+      "error": "OpenSSL SSL_connect: Connection reset by peer",
+      "url": "https://zenodo.org/api/records/22079246/files/permitflow.jsonocel.gz/content",
+      "approved_network_retry": true,
+      "http_version": "1.1",
+      "ipv4": true,
+      "connect_timeout_seconds": 15,
+      "max_seconds": 45
+    },
+    {
+      "domain": "procurechange",
+      "session": 3021,
+      "exit_code": 28,
+      "error": "Operation timed out after 15000 milliseconds with 0 bytes received",
+      "url": "https://zenodo.org/api/records/22079246/files/procurechange.jsonocel.gz/content",
+      "approved_network_retry": true,
+      "http_version": "1.1",
+      "ipv4": true,
+      "connect_timeout_seconds": 15,
+      "max_seconds": 45
+    },
+    {
+      "domain": "trialversion",
+      "session": 81886,
+      "exit_code": 35,
+      "error": "OpenSSL SSL_connect: Connection reset by peer",
+      "url": "https://zenodo.org/api/records/22079246/files/trialversion.jsonocel.gz/content",
+      "approved_network_retry": true,
+      "http_version": "1.1",
+      "ipv4": true,
+      "connect_timeout_seconds": 15,
+      "max_seconds": 45
+    }
+  ],
+  "partial_download_files": []
 }

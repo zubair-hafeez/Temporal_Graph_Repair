@@ -26,7 +26,7 @@
     ]
   },
   "authorization": "User authorized autonomous paper development and experiments through final review; no external submission.",
-  "next_action": "Complete all frozen confirmation blocks and aggregate only full trial groups; finish external downloads, application audits, final manuscript and reproducibility review.",
+  "next_action": "Finish final BPI2012 controls and all nine declared post-freeze calibration runs; aggregate, complete manuscript and final local review artifact. Four reserved simulations remain unexecuted after individual approved retries.",
   "trained_models": [
     "source participant matcher",
     "source and synthetic identity matchers",
@@ -85,7 +85,7 @@
     "reports/portability_full_task_replay_v1.json"
   ],
   "factory_increment": "TR0 and TR1 bounded source acceptance; general factory/RF/wheel scope unchanged",
-  "manuscript": "paper/main.tex and main.pdf are internal development drafts; cached offline TeX compilation works. Figures are development-only.",
+  "manuscript": "paper/main.tex rewritten around complete primary confirmation; control and calibration-sensitivity tables and final PDF/artifact checks remain.",
   "reserved_external_scenarios": [
     "ForgeFlow",
     "PermitFlow",
@@ -121,7 +121,8 @@
     "primary_real": {
       "session": 78458,
       "report": "confirmation_primary_bpi2017_bpi2019_bpi2012_check",
-      "log": "reports/confirmation_primary_real.log"
+      "log": "reports/confirmation_primary_real.log",
+      "status": "completed"
     },
     "generated_varied_r0": {
       "session": 87960,
@@ -167,11 +168,13 @@
     },
     "pipeline_real": {
       "session": 95927,
-      "report": "confirmation_pipeline_bpi2017_bpi2019_bpi2012_check"
+      "report": "confirmation_pipeline_bpi2017_bpi2019_bpi2012_check",
+      "status": "completed"
     },
     "source_real": {
       "session": 92774,
-      "report": "confirmation_source_bpi2017_bpi2019_bpi2012_check"
+      "report": "confirmation_source_bpi2017_bpi2019_bpi2012_check",
+      "status": "completed"
     },
     "structural_real": {
       "session": 81961,
@@ -232,6 +235,12 @@
       "original": 0.8091403612654288,
       "varied": 0.8263415831838978
     },
-    "limit": "BPI2012 same-process primary and several neural/other controls still running. All frozen choices unchanged."
+    "limit": "All primary groups complete. Final BPI2012 controls and separate post-freeze calibration sensitivity still running. Four reserved simulation files not retrieved; no unseen records decoded.",
+    "bpi2012_check": {
+      "damaged": 0.745336159458486,
+      "original": 0.7760359892909431,
+      "varied": 0.8154587323310443,
+      "source_supervised": 0.8777994658563016
+    }
   }
 }
