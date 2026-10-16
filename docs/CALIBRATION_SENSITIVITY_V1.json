@@ -1,0 +1,77 @@
+{
+  "status": "declared_before_sensitivity_outcomes_after_primary_inspection",
+  "created_utc": "2026-10-16T02:22:21.950629+00:00",
+  "original_protocol_hash": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+  "model": "source_edit_learning_v2_source_only_256",
+  "calibration": "source256_generated_calibration_v3",
+  "model_hash": "a3b5a6f0055e071894c9f1a9457eeb5900953fe862f38a62f988d25dc6767141",
+  "calibration_hash": "f0209275db4ea8057c00d84eac236455b3570cca94d062df34512988658e8de9",
+  "runner_hash": "f33a0c1219044cc6d3c8d94f553fa6e6522b1d54ae919ab8d43c73ac6b9b04fb",
+  "jobs": [
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "seed": 91001,
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91001",
+      "output": "sensitivity_bpi2017_native_mixed_91001_source256_generated_calibration"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "seed": 91002,
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91002",
+      "output": "sensitivity_bpi2017_native_mixed_91002_source256_generated_calibration"
+    },
+    {
+      "domain": "bpi2017",
+      "view": "native",
+      "seed": 91003,
+      "task": "data/confirmation_v1/bpi2017/native/mixed_91003",
+      "output": "sensitivity_bpi2017_native_mixed_91003_source256_generated_calibration"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "seed": 91001,
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91001",
+      "output": "sensitivity_bpi2019_native_mixed_91001_source256_generated_calibration"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "seed": 91002,
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91002",
+      "output": "sensitivity_bpi2019_native_mixed_91002_source256_generated_calibration"
+    },
+    {
+      "domain": "bpi2019",
+      "view": "native",
+      "seed": 91003,
+      "task": "data/confirmation_v1/bpi2019/native/mixed_91003",
+      "output": "sensitivity_bpi2019_native_mixed_91003_source256_generated_calibration"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "seed": 91001,
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91001",
+      "output": "sensitivity_bpi2012_check_denormalized_mixed_91001_source256_generated_calibration"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "seed": 91002,
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91002",
+      "output": "sensitivity_bpi2012_check_denormalized_mixed_91002_source256_generated_calibration"
+    },
+    {
+      "domain": "bpi2012_check",
+      "view": "denormalized",
+      "seed": 91003,
+      "task": "data/confirmation_v1/bpi2012_check/denormalized/mixed_91003",
+      "output": "sensitivity_bpi2012_check_denormalized_mixed_91003_source256_generated_calibration"
+    }
+  ],
+  "scope": "Exploratory follow-up prompted by observed poor source-model transfer. Both weights and alternate calibration cache existed and were hashed in the original frozen protocol, but this comparison was not among the predeclared confirmation jobs. No fitting or threshold selection uses these target results. Report every one of the nine outcomes separately from primary confirmation; do not replace the original source-calibrated baseline.",
+  "reason": "Source-supervised fitting and calibration provenance differ from generated-only fitting/calibration. This sensitivity separates part of the calibration contribution to transfer failures."
+}

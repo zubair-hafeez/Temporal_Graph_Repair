@@ -22,6 +22,8 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('--evidence',required=True)
     parser.add_argument('--domains',nargs='+',required=True);parser.add_argument('--output-prefix',required=True)
     args=parser.parse_args();path=ROOT/'reports'/f'{args.evidence}.json';evidence=json.loads(path.read_text())
+    for name,digest in evidence['source_reports'].items():
+        if sha256(ROOT/name)!=digest:raise ValueError('Summarized report changed: '+name)
     groups={(r['domain'],r['suite'],r['arm']):r for r in evidence['groups']}
     def metric(domain,suite,arm,field):
         row=groups[domain,suite,arm]

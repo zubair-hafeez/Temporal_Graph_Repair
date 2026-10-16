@@ -21,11 +21,29 @@ def main():
     evidence = json.loads((ROOT/'reports/confirmation_real_evidence_v1.json').read_text())
     if not args.allow_incomplete and evidence['status'] != 'complete_selected_confirmation':
         raise ValueError('Final review artifact requires every selected confirmation comparison')
+    if not args.allow_incomplete:
+        generated = json.loads((ROOT/'reports/generated_confirmation_evidence_v1.json').read_text())
+        if generated['status'] != 'complete_generated_confirmation_analysis':
+            raise ValueError('Generated confirmation is incomplete')
+        if (ROOT/'docs/CALIBRATION_SENSITIVITY_V1.json').exists():
+            sensitivity = json.loads((ROOT/'reports/calibration_sensitivity_v1.json').read_text())
+            if sensitivity['status'] != 'completed_post_freeze_calibration_sensitivity':
+                raise ValueError('Declared follow-up comparison is incomplete')
     protocol_path = ROOT/'docs/CONFIRMATION_PROTOCOL_V1.json'
     protocol = json.loads(protocol_path.read_text())
-    for name, digest in protocol['implementation_hashes'].items():
+    implementation = (protocol['implementation_hashes'] | protocol['adapter_hashes'] |
+                      protocol['generated_confirmation']['script_hashes'] |
+                      protocol['target_local_adaptation']['script_hashes'])
+    for name, digest in implementation.items():
         if sha256(ROOT/name) != digest:
             raise ValueError('Frozen inference implementation changed: '+name)
+    for name, model in protocol['models'].items():
+        suffix = '.pt' if model['kind'] == 'neural' else '.joblib'
+        if sha256(ROOT/'checkpoints'/(name+suffix)) != model['sha256']:
+            raise ValueError('Frozen model changed: '+name)
+        for calibration, digest in model['calibrations'].items():
+            if sha256(ROOT/'data/edit_learning'/(calibration+'_validation_scores.npz')) != digest:
+                raise ValueError('Frozen calibration changed: '+calibration)
     files = {}
     def add(path, relative=None):
         path = Path(path)

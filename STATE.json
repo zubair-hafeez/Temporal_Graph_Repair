@@ -81,7 +81,8 @@
     "reports/confirmation_candidate_audits_real_v1.json",
     "reports/generated_confirmation_evidence_v1.json",
     "reports/confirmation_candidate_evidence_v1.json",
-    "reports/portability_audit_v1.json"
+    "reports/portability_audit_v1.json",
+    "reports/portability_full_task_replay_v1.json"
   ],
   "factory_increment": "TR0 and TR1 bounded source acceptance; general factory/RF/wheel scope unchanged",
   "manuscript": "paper/main.tex and main.pdf are internal development drafts; cached offline TeX compilation works. Figures are development-only.",
@@ -161,7 +162,8 @@
     "adaptation_real": {
       "session": 48775,
       "report": "confirmation_adaptation_bpi2017_bpi2019_bpi2012_check",
-      "log": "reports/confirmation_adaptation_real.log"
+      "log": "reports/confirmation_adaptation_real.log",
+      "status": "completed"
     },
     "pipeline_real": {
       "session": 95927,
@@ -195,19 +197,41 @@
       "status": "completed"
     },
     "bpi12_adaptation_r1_restart": {
-      "session": 96931
+      "session": 96931,
+      "status": "completed"
     },
     "bpi17_sage_restart": {
-      "session": 60604
+      "session": 60604,
+      "status": "completed"
     },
     "bpi17_mlp_restart": {
-      "session": 46114
+      "session": 46114,
+      "status": "completed"
     },
     "portable_mixed_replay": {
       "session": 42032,
       "root": "/tmp/temporal_repair_portability_v1/Temporal_Graph_Repair",
-      "report": "portability_bpi2012_mixed_r0"
+      "report": "portability_bpi2012_mixed_r0",
+      "status": "completed_exact_match_to_original"
+    },
+    "calibration_sensitivity": {
+      "session": 57463,
+      "report": "calibration_sensitivity_v1",
+      "scope": "post-freeze exploratory calibration sensitivity; nine declared runs"
     }
   },
-  "operational_continuation": "docs/CONFIRMATION_OPERATIONAL_CONTINUATION_V1.json"
+  "operational_continuation": "docs/CONFIRMATION_OPERATIONAL_CONTINUATION_V1.json",
+  "main_primary_results": {
+    "bpi2017": {
+      "damaged": 0.7871546702746562,
+      "original": 0.7914061965346216,
+      "varied": 0.804970213963173
+    },
+    "bpi2019": {
+      "damaged": 0.759762994528136,
+      "original": 0.8091403612654288,
+      "varied": 0.8263415831838978
+    },
+    "limit": "BPI2012 same-process primary and several neural/other controls still running. All frozen choices unchanged."
+  }
 }

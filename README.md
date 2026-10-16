@@ -10,7 +10,7 @@ The implemented factory component separates executable workflow histories, obser
 
 Interpreter: `/home/zubair/zubairEnv/bin/python`. Commands are run from this project directory. Generated datasets, checkpoints, and bulky downloaded artifacts belong outside version control.
 
-The strongest current generated-data learner uses boosted edit scoring. Neural controls and negative results are retained; this project does not claim a new neural architecture or state-of-the-art performance against incompatible published tasks. [Published comparison boundaries](docs/PUBLISHED_BASELINE_CONTRACT.md) state which methods assume correct trace containers, a closed case vocabulary, or additional physical semantics.
+The principal learner, selected on development results, uses boosted edit scoring. Neural controls and negative results are retained; this project does not claim a new neural architecture or state-of-the-art performance against incompatible published tasks. [Published comparison boundaries](docs/PUBLISHED_BASELINE_CONTRACT.md) state which methods assume correct trace containers, a closed case vocabulary, or additional physical semantics.
 
 The analysis command below validates completed report/task/protocol hashes and exports per-trial and per-type CSV files. It marks unfinished groups explicitly and does not average an incomplete primary comparison:
 
@@ -65,4 +65,16 @@ Run this in a disposable copy of the review bundle: task preparation writes its 
 
 Training recipes are retained under `data/recipe_manifests/`, and the training/generation commands and source snapshots are in the original reports. Those manifests are not full training caches. Recreate worlds and edit-learning states in a separate working copy before retraining. Frozen-model replay and independent retraining answer different reproducibility questions; retrained binary weights need not be identical across numerical-library versions or hardware.
 
+For a fresh execution of an entire paired training recipe, create a code-only workspace with empty result directories. The helper refuses an existing destination and never deletes or replaces historical artifacts:
+
+```bash
+python scripts/prepare_training_workspace.py --output-dir /tmp/tgrepair_retrain
+cd /tmp/tgrepair_retrain/Temporal_Graph_Repair
+python scripts/run_training_replicate.py --replicate 1
+```
+
+This generates 512 training and 96 validation worlds, creates their paired observation variants and edit-learning states, and fits both original-field and varied-field models. It can take substantial time and disk space; its recorded stages support `--resume` after completed stages. Replicate 2 has its own fixed seeds. The original replicate-zero commands and artifact names are retained in its individual generation, training and calibration reports.
+
 The artifact is prepared for private final review. It does not submit the manuscript, publish data, choose author affiliations, or grant a new software license. Third-party dataset terms continue to apply.
+
+The manuscript PDF is included. Its LaTeX source uses standard article, AMS math, graphics, booktabs and hyperref packages, with Latin Modern extension symbols. From the `paper` directory, `tectonic main.tex` builds it when the TeX bundle is available. The working study uses a local cached Tectonic installation; no TeX binary or complete package installation is assumed to be part of the review bundle. Figures are supplied as vector PDFs, with their generating scripts and source hashes.

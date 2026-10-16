@@ -43,6 +43,7 @@ def main():
         clean=metrics(domain,'clean','varied');pipeline=metrics(domain,'pipeline','varied')
         safety_rows.append([NAMES[domain],cell(b['before_exact']),cell(b['after_exact']),
             '/'.join(str(int(v)) for v in b['identity_false_pairs']['values']),
+            '/'.join(str(int(v)) for v in b['newly_damaged_events']['values']),
             '/'.join(str(int(v)) for v in clean['newly_damaged_events']['values']),cell(pipeline['gain_f1'])])
         for title,key in [('First recorded time','first_timestamp_correct_fraction'),
                           ('Last recorded time','last_timestamp_correct_fraction'),
@@ -77,8 +78,8 @@ def main():
       'history':table(['Source','Damaged','Original','Varied','Source labels','Target-local'],main_rows,
         'Frozen confirmation: entity-history F1, mean and observed range over three trials. Original and varied training share executed worlds and generated calibration within a trial. Source supervision uses 256 verified BPI 2012 training histories plus additional source calibration labels. Target-local learning uses extra corruption of the imperfect target and generated calibration. BPI 2012 check retains explicitly denormalized requested amount.',
         'tab:confirmation-history'),
-      'safety':table(['Source','Exact before','Exact after','False merge pairs','Clean events damaged','Pipeline F1 change'],safety_rows,
-        'Recovery and failure boundaries of the varied-observation learner. Exact-history fractions and pipeline changes show trial means/ranges. Counts separated by slashes give the three trial values in order. False merge pairs are inferred identity pairs, not merely the number of merge operations. Clean inputs are uncorrupted source references, not certified error-free organizational records.',
+      'safety':table(['Source','Exact before','Exact after','False merge pairs','Mixed: new damage','Clean: new damage','Pipeline F1 change'],safety_rows,
+        'Recovery and failure boundaries of the varied-observation learner. Exact-history fractions and pipeline changes show trial means/ranges. Counts separated by slashes give the three trial values in order. New damage counts initially correct events whose target participation becomes wrong. False merge pairs are inferred identity pairs, not merely the number of merge operations. Clean inputs are uncorrupted source references, not certified error-free organizational records.',
         'tab:confirmation-safety'),
       'controls':table(['Control',*[NAMES[d] for d in args.domains]],ablation_rows,
         'Single-trial controls on the same native (or declared denormalized) mixed-fault inputs, seed 91001. Refitted scoring ablations retain temporal/contextual candidate retrieval. Neural controls share the candidate universe and training collections, with the optimization budgets described in the appendix. Their scores are adaptations to this edit task, not native reproductions of published trace-repair methods.',
