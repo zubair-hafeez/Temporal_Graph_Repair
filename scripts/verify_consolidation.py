@@ -10,6 +10,8 @@ def main():
     receipt = json.loads((ROOT / 'archives/CONSOLIDATION_MANIFEST.json').read_text())
     checked = {}
     for entry in receipt['entries']:
+        if entry.get('removed_by_user_request'):
+            continue
         path = (ROOT / entry['destination']).resolve()
         if not path.is_relative_to(ROOT.resolve()):
             raise ValueError('Destination outside consolidated project')
@@ -21,8 +23,9 @@ def main():
             checked[path] = (path.stat().st_size, h.hexdigest())
         if checked[path] != (entry['bytes'], entry['sha256']):
             raise ValueError('Retained file changed: ' + entry['destination'])
-    print(json.dumps({'status': 'all_retired_review_files_preserved',
+    print(json.dumps({'status': 'all_nonretired_review_files_preserved',
                       'original_file_entries': len(receipt['entries']),
+                      'earlier_manuscript_entries_removed_by_user': sum(bool(e.get('removed_by_user_request')) for e in receipt['entries']),
                       'distinct_retained_files': len(checked)}))
 
 

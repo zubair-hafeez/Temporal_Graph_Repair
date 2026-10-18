@@ -1,3 +1,9 @@
+# Latest-paper-only organization — 18 October 2026
+
+User explicitly requested removal of ALL earlier-version papers. Completed: keep only `revision/paper/main.pdf` (13 pages), with root `LATEST_PAPER.pdf` shortcut. Earlier manuscript files and obsolete prose sources are deleted; experimental records and support assets remain. See `reports/organization/latest_paper_only_20261018.json`. Historical notes below about preserving earlier manuscripts or reconstructing earlier release packages are superseded. Do not restore deleted manuscript versions unless explicitly requested. No new research work is authorized by cleanup.
+
+--- Earlier operational notes ---
+
 # Temporal graph repair: active revision, 16 October 2026
 
 The user has now authorized iterative improvements and a maximum of **15 total pages**, including references and appendices. The original completed study below is preserved; its manuscript is also copied to `paper/archive/review_v1/`. The active research is isolated under `revision/`. Read `revision/docs/REVISION_CHARTER.json` and `revision/STATE.json` for the current work and running sessions. Do not mistake the original completion state for the current revision status.

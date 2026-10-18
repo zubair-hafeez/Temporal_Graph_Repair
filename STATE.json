@@ -261,5 +261,15 @@
   "consolidated_project": "/mnt/zubair/Temporal_Graph_Repair",
   "latest_paper": "revision/paper/main.pdf",
   "latest_paper_shortcut": "LATEST_PAPER.pdf",
-  "consolidation_manifest": "archives/CONSOLIDATION_MANIFEST.json"
+  "consolidation_manifest": "archives/CONSOLIDATION_MANIFEST.json",
+  "manuscript_retention": {
+    "policy": "latest_only_by_explicit_user_request",
+    "latest_pdf": "revision/paper/main.pdf",
+    "pages": 13,
+    "shortcut": "LATEST_PAPER.pdf",
+    "deletion_record": "reports/organization/latest_paper_only_20261018.json",
+    "earlier_manuscripts_removed": true,
+    "scientific_evidence_retained": true,
+    "updated_utc": "2026-10-18T20:44:59.440953+00:00"
+  }
 }

@@ -1,10 +1,13 @@
 # Generative temporal graph repair
 
-**Single consolidated project folder.** Open [LATEST_PAPER.pdf](LATEST_PAPER.pdf) for the current 13-page paper. Read [START_HERE.txt](START_HERE.txt) for the directory guide. The two former review-copy folders and the redundant original tar archive were merged here and removed after content verification. Earlier paper: [paper/main.pdf](paper/main.pdf). Unique historical files and the merge inventory are under `archives/`.
+**Latest paper only:** [LATEST_PAPER.pdf](LATEST_PAPER.pdf) — 13 pages. Earlier manuscript versions have been deleted at your request. [START_HERE.txt](START_HERE.txt) is the authoritative folder guide. Historical notes and package recipes below may reference retired papers or archives.
 
-> Completed revision: [current manuscript](revision/paper/main.pdf), 13 total pages including references, is ready for author review. All 156 combined-repair evaluations and six native comparisons are complete. Start with [the revision review guide](revision/REVIEW_NOTES.txt) and [reproduction instructions](revision/REPRODUCE.txt). The original study described below remains preserved.
 
-Research manuscript and reproduction package for author review: learn transferable restoration of event participation and fragmented identities from generated operational histories. The application is traceability in purchasing, loan processing, and logistics. Start with [the paper](paper/main.pdf) and [the plain-English review guide](REVIEW_NOTES.txt).
+**Single consolidated project folder.** Open [LATEST_PAPER.pdf](LATEST_PAPER.pdf) for the current 13-page paper. Read [START_HERE.txt](START_HERE.txt) for the directory guide. The two former review-copy folders and the redundant original tar archive were merged here and removed after content verification. Earlier manuscript versions have been removed. Unique historical files and the merge inventory are under `archives/`.
+
+> Completed revision: [current manuscript](revision/paper/main.pdf), 13 total pages including references, is ready for author review. All 156 combined-repair evaluations and six native comparisons are complete. Start with [the revision review guide](revision/REVIEW_NOTES.txt) and [reproduction instructions](revision/REPRODUCE.txt). Original experimental evidence remains preserved; the earlier manuscript was removed.
+
+Research manuscript and reproduction package for author review: learn transferable restoration of event participation and fragmented identities from generated operational histories. The application is traceability in purchasing, loan processing, and logistics. Start with [the latest paper](revision/paper/main.pdf) and [the plain-English review guide](REVIEW_NOTES.txt).
 
 The archived [research proposal](docs/proposal_archive/PROPOSAL.md) and [novelty audit](docs/proposal_archive/NOVELTY_AUDIT.md) record the starting point. All 84 original comparisons on the three available operational cohorts, six generated-model evaluations and nine separately declared calibration-sensitivity runs are complete. The [completion record](docs/CONFIRMATION_COMPLETION_SCOPE_V1.json) accounts for four additional predeclared simulation sources that could not be retrieved; their comparisons were not executed. The [original protocol](docs/CONFIRMATION_PROTOCOL_V1.json) and negative results remain unchanged.
 

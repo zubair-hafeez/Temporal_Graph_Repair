@@ -1,2 +1,3 @@
-This folder preserves the EARLIER paper.
-For the latest 13-page paper, open ../LATEST_PAPER.pdf or ../revision/paper/main.pdf.
+SUPPORTING RESEARCH ASSETS ONLY. Earlier manuscript removed at user request.
+Latest paper: ../LATEST_PAPER.pdf (13 pages).
+Figures, tables and shared compiler tools are retained for reproduction.

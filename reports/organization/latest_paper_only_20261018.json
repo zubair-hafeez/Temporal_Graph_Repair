@@ -1,0 +1,49 @@
+{
+  "status": "earlier_manuscripts_removed_at_explicit_user_request",
+  "instruction": "REMOVE ALL EARLIER VERSION PAPERS FROM EACH FOLDER ONLY KEEP LATEST ONE",
+  "completed_utc": "2026-10-18T20:44:12.958449+00:00",
+  "latest_pdf": "revision/paper/main.pdf",
+  "latest_sha256": "031bc82eb3d33805a9a7dc502c5ba1fef5a376b52271b41df41d830011b94a24",
+  "removed_files": [
+    {
+      "path": "paper/LATEST_PAPER.pdf",
+      "reason": "Earlier manuscript or redundant/broken paper shortcut",
+      "sha256": null,
+      "bytes": 0,
+      "former_link": "revision/paper/main.pdf"
+    },
+    {
+      "path": "paper/main.tex",
+      "reason": "Earlier manuscript or redundant/broken paper shortcut",
+      "sha256": "1641de892ae5e74b2668426f19b9854ff1fa7d81801671162be92d23fbd9aa1b",
+      "bytes": 54440
+    },
+    {
+      "path": "paper/main.log",
+      "reason": "Earlier manuscript or redundant/broken paper shortcut",
+      "sha256": "0735ca2ec102a32a4c73e2eed1b78fc66286583eb1bce18fa9ad7231a7779d02",
+      "bytes": 14510
+    },
+    {
+      "path": "paper/archive/review_v1/main.tex",
+      "reason": "Earlier manuscript or redundant/broken paper shortcut",
+      "sha256": "1641de892ae5e74b2668426f19b9854ff1fa7d81801671162be92d23fbd9aa1b",
+      "bytes": 54440
+    },
+    {
+      "path": "paper/archive/review_v1/main.pdf",
+      "reason": "Earlier manuscript or redundant/broken paper shortcut",
+      "sha256": null,
+      "bytes": 0,
+      "former_link": "../../main.pdf"
+    },
+    {
+      "path": "paper/.ipynb_checkpoints/LATEST_PAPER-checkpoint.pdf",
+      "reason": "Earlier manuscript or redundant/broken paper shortcut",
+      "sha256": "031bc82eb3d33805a9a7dc502c5ba1fef5a376b52271b41df41d830011b94a24",
+      "bytes": 149791
+    }
+  ],
+  "archived_paper_removals": [],
+  "scope": "Earlier manuscript PDFs, entrypoint/prose sources and build logs removed. Scientific code/data/results and latest paper inputs preserved. Version-control history was not rewritten."
+}
