@@ -1,7 +1,7 @@
 {
   "status": "completed_for_author_review",
   "user_constraint": "At most 15 pages total including references and appendices; iterate to an evidence-supported good paper for final review only.",
-  "original_study": "Preserved. Original protocol and frozen scientific code unchanged. Original manuscript archived under paper/archive/review_v1 and original review bundle remains intact.",
+  "original_study": "Preserved under paper/ and original frozen reports; unique former review-copy files and manifests retained under archives/. Duplicate external review folders consolidated at user request.",
   "goal_status": "active",
   "current_stage": "Frozen combined-repair runs in progress; reproduction dependency/guide and final review/package gates prepared.",
   "completed": [
@@ -64,7 +64,7 @@
   "gpu_approval": "Saved categorical prefix for the paper runner; CUDA works outside sandbox. Both RTX A6000 GPUs verified. Use approved runner for future GPU jobs.",
   "untracked_user_files": "Preserve paper/.ipynb_checkpoints/.",
   "no_external_submission": true,
-  "updated_utc": "2026-10-18T17:04:37.368859+00:00",
+  "updated_utc": "2026-10-18T20:24:09.198646+00:00",
   "public_data_only": true,
   "user_preferences": {
     "public_data_only": true,
@@ -93,5 +93,9 @@
   "stage": "final_manuscript_and_evidence_review",
   "final_review": "revision/reports/final_revision_review_v1.json",
   "review_guide": "revision/REVIEW_NOTES.txt",
-  "review_package": "/mnt/zubair/Temporal_Graph_Repair_revision_review_v1"
+  "review_package": "/mnt/zubair/Temporal_Graph_Repair",
+  "consolidated_project": "/mnt/zubair/Temporal_Graph_Repair",
+  "latest_paper": "revision/paper/main.pdf",
+  "latest_paper_shortcut": "LATEST_PAPER.pdf",
+  "consolidation_manifest": "archives/CONSOLIDATION_MANIFEST.json"
 }

@@ -1,0 +1,37 @@
+TEMPORAL GRAPH REPAIR — ONE CONSOLIDATED PROJECT
+
+LATEST PAPER: LATEST_PAPER.pdf
+This shortcut opens revision/paper/main.pdf: the completed 13-page manuscript.
+Title: Restoring Operational Histories with Generated Temporal Graph Supervision.
+It is the version prepared for author review on 18 October 2026.
+
+Read revision/REVIEW_NOTES.txt for the findings and limitations.
+Read revision/REPRODUCE.txt for reproduction commands.
+Current experiment outputs: revision/reports/; models/data: revision/data/.
+
+EARLIER PAPER: paper/main.pdf
+This is the preserved original 20-page study, not the latest revision.
+Its frozen protocols and evidence retain their original paths.
+The archive PDF path links to this same earlier PDF without duplicating it.
+
+FOLDER CLEANUP
+The former Temporal_Graph_Repair_review_v1 and
+Temporal_Graph_Repair_revision_review_v1 folders were review snapshots.
+Their repeated files now resolve to the matching files in this project.
+Unique files remain under archives/ and supporting/review_generator/.
+The old redundant tar archive was fully verified and removed as well.
+No manuscript text, experimental results or model weights were changed.
+
+archives/CONSOLIDATION_MANIFEST.json maps every former review-copy file to its
+retained location and SHA256. Original package manifests remain under
+archives/review_manifests/. Historical copies of these instructions may refer
+to retired paths; use this guide for the current layout.
+
+Verify with the documented Python 3.10 environment from this folder:
+  python scripts/verify_consolidation.py
+  python revision/audit_final_review.py
+
+The bounded temporal generator snapshot is preserved in supporting/.
+The existing sibling factory dependency used by frozen source code was not
+moved or changed. No RF experiment or general factory work was performed.
+Nothing has been submitted or published externally.

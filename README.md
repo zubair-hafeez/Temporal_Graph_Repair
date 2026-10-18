@@ -1,5 +1,7 @@
 # Generative temporal graph repair
 
+**Single consolidated project folder.** Open [LATEST_PAPER.pdf](LATEST_PAPER.pdf) for the current 13-page paper. Read [START_HERE.txt](START_HERE.txt) for the directory guide. The two former review-copy folders and the redundant original tar archive were merged here and removed after content verification. Earlier paper: [paper/main.pdf](paper/main.pdf). Unique historical files and the merge inventory are under `archives/`.
+
 > Completed revision: [current manuscript](revision/paper/main.pdf), 13 total pages including references, is ready for author review. All 156 combined-repair evaluations and six native comparisons are complete. Start with [the revision review guide](revision/REVIEW_NOTES.txt) and [reproduction instructions](revision/REPRODUCE.txt). The original study described below remains preserved.
 
 Research manuscript and reproduction package for author review: learn transferable restoration of event participation and fragmented identities from generated operational histories. The application is traceability in purchasing, loan processing, and logistics. Start with [the paper](paper/main.pdf) and [the plain-English review guide](REVIEW_NOTES.txt).
@@ -24,7 +26,13 @@ python scripts/collect_confirmation_evidence.py \
 
 The seven evaluation suites are `primary`, `clean`, `pipeline`, `source`, `adaptation`, `structural`, and `controls`. `scripts/run_confirmation_suite.py --plan-only` lists exact jobs without running them. Existing runs require `--resume`; process locks prevent duplicate suite execution. Frozen files must remain unchanged during confirmation. The [operational continuation declaration](docs/CONFIRMATION_OPERATIONAL_CONTINUATION_V1.json) records recovery after interrupted tool processes, preserving partial reports and the original scientific choices.
 
-## Reproducing the review artifact
+## Reproducing the current consolidated project
+
+Use [revision/REPRODUCE.txt](revision/REPRODUCE.txt) for the current experiments. Check the saved final evidence with `python revision/audit_final_review.py`; check preservation of the retired review copies with `python scripts/verify_consolidation.py`. Both commands use the documented Python 3.10 environment.
+
+### Historical original-package instructions
+
+The instructions below describe the earlier package layout. Its separate folder was retired during consolidation; its manifests remain under `archives/review_manifests/`. They are retained as historical instructions, not directions to find an existing separate review folder.
 
 The local review bundle preserves the sibling layout `Temporal_Graph_Repair/` and `RF_Dataset_Factory/`. Only the bounded temporal generator and generic storage helpers are copied from the latter. No RF experiment or dataset is included. Run commands from the bundled `Temporal_Graph_Repair` directory, using Python 3.10 and the versions in `requirements.txt`. The tested environment already contains these packages; installation is needed only in a new environment.
 

@@ -1,0 +1,15 @@
+LOCAL AUTHOR-REVIEW PACKAGE
+
+Current paper: Temporal_Graph_Repair/revision/paper/main.pdf
+Reproduction guide: Temporal_Graph_Repair/revision/REPRODUCE.txt
+Final evidence review: Temporal_Graph_Repair/revision/reports/final_revision_review_v1.json
+The earlier paper/main.pdf is retained as the original study archive.
+
+Verify all included bytes from the package root:
+  python Temporal_Graph_Repair/scripts/verify_review_bundle.py --bundle .
+
+This local copy includes derived public operational graphs for evidence replay.
+It is not an externally released dataset or a new license grant.
+Raw source files are obtained separately under their source terms.
+The original bounded temporal generator dependency retains its historical
+sibling directory name; no RF data/model work is included.
