@@ -15,7 +15,9 @@ The protocols have separate cohorts and access boundaries. Native outcomes
 were known before the combined-repair freeze; this is declared in its protocol.
 
 Environment
-Run commands from Temporal_Graph_Repair using the pinned revision/requirements.txt (which includes the original requirements).
+Use Python 3.10 (tested: 3.10.14). The commands below use "python" to mean
+that interpreter, not an older system default. Run from Temporal_Graph_Repair
+using revision/requirements.txt, which includes the original requirements.
 The original interpreter is /home/zubair/zubairEnv/bin/python. CUDA is only
 needed to refit the HERE Transformer; repair decoding and evidence audits run
 on CPU. Saved model files are trusted local research artifacts; do not load
