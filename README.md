@@ -1,5 +1,7 @@
 # Generative temporal graph repair
 
+> Active revision: the current manuscript is `revision/paper/main.pdf`, with a limit of 15 total pages. The final combined-repair experiments are running; this draft is not yet ready for final review. See `revision/STATE.json` and `revision/REPRODUCE.txt`. The original completed study described below remains preserved.
+
 Research manuscript and reproduction package for author review: learn transferable restoration of event participation and fragmented identities from generated operational histories. The application is traceability in purchasing, loan processing, and logistics. Start with [the paper](paper/main.pdf) and [the plain-English review guide](REVIEW_NOTES.txt).
 
 The archived [research proposal](docs/proposal_archive/PROPOSAL.md) and [novelty audit](docs/proposal_archive/NOVELTY_AUDIT.md) record the starting point. All 84 original comparisons on the three available operational cohorts, six generated-model evaluations and nine separately declared calibration-sensitivity runs are complete. The [completion record](docs/CONFIRMATION_COMPLETION_SCOPE_V1.json) accounts for four additional predeclared simulation sources that could not be retrieved; their comparisons were not executed. The [original protocol](docs/CONFIRMATION_PROTOCOL_V1.json) and negative results remain unchanged.

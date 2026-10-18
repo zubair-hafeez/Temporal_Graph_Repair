@@ -3,7 +3,7 @@
   "user_constraint": "At most 15 pages total including references and appendices; iterate to an evidence-supported good paper for final review only.",
   "original_study": "Preserved. Original protocol and frozen scientific code unchanged. Original manuscript archived under paper/archive/review_v1 and original review bundle remains intact.",
   "goal_status": "active",
-  "current_stage": "Coupled confirmation frozen; all native and development jobs complete and native predictions independently audited.",
+  "current_stage": "Frozen combined-repair runs in progress; reproduction dependency/guide and final review/package gates prepared.",
   "completed": [
     "Revision charter and prospective cohort plan saved before new record selection.",
     "BPI2017/BPI2019 fresh root/child-disjoint partitions prepared: 512 development, 1024 annotation, 1024 confirmation, 256 native comparison each. Original audited roots and original 1024-root confirmation excluded.",
@@ -97,7 +97,7 @@
   "gpu_approval": "Saved categorical prefix for the paper runner; CUDA works outside sandbox. Both RTX A6000 GPUs verified. Use approved runner for future GPU jobs.",
   "untracked_user_files": "Preserve paper/.ipynb_checkpoints/.",
   "no_external_submission": true,
-  "updated_utc": "2026-10-18T03:44:38.987773+00:00",
+  "updated_utc": "2026-10-18T03:51:31.497748+00:00",
   "public_data_only": true,
   "user_preferences": {
     "public_data_only": true,
@@ -108,13 +108,19 @@
     "status": "incomplete_development_draft_with_explicit_pending_results",
     "pages": 10,
     "overfull_boxes": 0,
-    "note": "Completed original/native tables included; combined-repair results still pending. Five-page allowance remains."
+    "note": "Completed original/native tables and application success/failure illustration included; final combined-repair evidence pending."
   },
-  "latest_checkpoint_commit": "345f794",
+  "latest_checkpoint_commit": "bb4aafa",
   "coupled_confirmation": {
     "status": "frozen_and_execution_started",
     "protocol": "revision/docs/COUPLED_CONFIRMATION_PROTOCOL_V1.json",
     "sha256": "84832d6b049cfb1448a7cfec915f93fee9e1a72507037e91c41a4973adc5eeec",
     "jobs": 156
+  },
+  "finalization_tools": {
+    "queued": "revision/finalize_evidence.py",
+    "final_review": "revision/audit_final_review.py",
+    "package": "revision/build_review_package.py",
+    "note": "Final review needs completed experimental audit, final compiled PDF, numerical claims receipts and an actual visual/scientific review; do not fabricate completion receipts."
   }
 }
