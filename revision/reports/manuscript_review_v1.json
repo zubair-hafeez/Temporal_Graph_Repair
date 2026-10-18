@@ -1,0 +1,46 @@
+{
+  "status": "manuscript_and_visual_review_completed",
+  "reviewed_utc": "2026-10-18T17:04:37.368859+00:00",
+  "pdf_sha256": "031bc82eb3d33805a9a7dc502c5ba1fef5a376b52271b41df41d830011b94a24",
+  "page_count": 13,
+  "checks": {
+    "all_pages_visually_inspected": true,
+    "negative_results_retained": true,
+    "claims_match_available_evidence": true,
+    "public_data_and_fault_scope_explicit": true,
+    "verification_budget_counts_calibration": true,
+    "no_acceptance_guarantee": true,
+    "original_study_preserved": true,
+    "no_pending_research_text": true
+  },
+  "visual_review": {
+    "method": "Rendered final PDF with pdftoppm at 1600px and inspected each of the 13 images using view_image. All text, tables, figures and references fit; method/application figures have readable labels.",
+    "page_image_sha256": {
+      "1": "0ebf0be59f6334f68d3241f69ac9b856a7de74b78265107f9fadfbd80a532311",
+      "2": "472ef1af5c362dd7b14e6b8d1d9e6a219e5a9fa13e0295ad3cc63482ce6b96e2",
+      "3": "78d7e0d0b4b5ff324b37ea54c222db377a88fe35ba7b479f44e0e1bd79cae663",
+      "4": "841f75f18f835b82ffc7f72fb62d6ce0302281cb55335283fe16e0bc9aa26b1f",
+      "5": "765ab5040f231806329680f6f58e178b6f5f5fdecf9cc9c2f759c3bf48b8e2e7",
+      "6": "a01d2945bd89b604dc0764bbff0215e95b8ee482b9e4f3ca12b951d35d6f70b4",
+      "7": "12b4ec15f0ed337bd42146d097e87cbd1a2c4a5f4e2ec4358962d047fedefd1b",
+      "8": "9f52ec91bc0ac871c4d8db9ef5e80be5bf8421f0e196617e845741dd579ae850",
+      "9": "4762940e9912d136f31edd6c5b1a1175fc0f92195d04a45c6372c1f29b72ba29",
+      "10": "648e2ae499038e15923efabfd37467327072597d86b0bb31a2a40fcfdd6e8e1b",
+      "11": "27e2d820175667903b9bd99604893d6feee80aed8b665b293c3a84b2be00b192",
+      "12": "4df3b4864d3e5629cfa855a8b38854eff3ccd81c3edf1b965485be6c9c3ebe54",
+      "13": "1e5d440abf033980ef1a769b3c0d9ecdfe9c06d94cb91447b2fef96d64a1e7d6"
+    }
+  },
+  "numeric_audit": "revision/reports/numerical_claims_v1.json",
+  "bounded_reviewer_audit": "revision/reports/manuscript_numeric_crosscheck_v1.json",
+  "bounded_reviewer_issue_resolution": [
+    "Replaced abstract competitive wording with explicit one-trial win over generated-only purchasing.",
+    "Qualified clean harm as across trials and explicitly retained zero-damage individual runs.",
+    "Checked candidate coverage directly from all six native control reports; each exceeds .85."
+  ],
+  "original_preservation": {
+    "protocol_sha256": "a3e12b092cc7670f8b4d2c7190818eb2c04ea88e7ae4a2afb20bdffac691c25d",
+    "original_pdf_sha256": "b91fea50296444e38c4bd44aa33b34f5de14287a50b600a7768855d28b55ecc8"
+  },
+  "scope": "Internal author-review preparation, including a bounded second-model numerical check; not external peer review, acceptance, or natural-error validation."
+}

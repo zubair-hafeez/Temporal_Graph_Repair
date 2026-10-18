@@ -1,0 +1,39 @@
+AUTHOR REVIEW — COMPLETED REVISION
+
+Read revision/paper/main.pdf: 13 total pages including references.
+Title: Restoring Operational Histories with Generated Temporal Graph Supervision.
+
+What the paper does
+The system learns from generated workflow examples and a limited number of verified
+public business histories to restore missing/wrong connections and fragmented IDs.
+It preserves the recorded events and provides an audit trail of its changes.
+
+Strongest result
+For purchasing histories, generated-plus-real training with 64 complete verified
+bundles achieves mean history F1 .8561, versus .8453 for real-only training with
+256 bundles. It wins all three paired trials. Budgets include fitting and
+calibration. This is one quarter as many verified bundles in this experiment;
+it is not a measured fourfold reduction in annotation time.
+
+Honest limits that remain in the paper
+The mixed model beats generated-only purchasing repair in only one of three trials.
+Loan gains depend on the mixture and threshold, and some settings lose to real-only.
+Low-budget alias recovery is weak. Clean inputs can be damaged. Generated-only
+purchasing results are poor in the separate missing-ID task. Main evaluation uses
+controlled injected errors in public records, without independently verified
+natural business-error truth. Existing classifiers are used; no new architecture
+or universal state-of-the-art claim is made. These are material reviewer concerns.
+
+What is complete
+All 156 frozen combined-repair evaluations, six native comparison conditions,
+saved-output replay and metric audits, manuscript numerical checks, and visual
+inspection of every page are complete. Earlier study outputs and failures remain
+preserved. Reproduction steps, exact-byte versus numerical-retraining limitations,
+source hashes, models and predictions are retained in the supporting artifact.
+No more training is needed for this version. See revision/REPRODUCE.txt.
+
+Your remaining review
+Assess the scientific framing and limitations, supply author/affiliation details,
+and choose a target venue and its format. Venue-specific formatting and external
+submission have not been performed. This is a completed manuscript for your review;
+acceptance and external peer review are not established.

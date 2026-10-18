@@ -1,0 +1,146 @@
+{
+  "status": "completed_coupled_confirmation",
+  "pins": {
+    "job": {
+      "id": "bpi2017_seed0_clean_mixed_varied_64_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "clean",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9886694335229906,
+        0.9812995464100683,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    "protocol_sha256": "84832d6b049cfb1448a7cfec915f93fee9e1a72507037e91c41a4973adc5eeec",
+    "task_sha256": "f46d844ed66cc6ae3f00e10026309275186a2501082875c42178d1a97c731e1f",
+    "model_sha256": "98992061d56597b830cf79f44dd9a5923b31e1c0a7ae4f3ee73dde27c983cf47"
+  },
+  "before": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "exact_history_fraction": 1.0,
+    "entities": 2377,
+    "per_type": {
+      "Application": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_history_fraction": 1.0,
+        "entities": 1024
+      },
+      "Offer": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_history_fraction": 1.0,
+        "entities": 1353
+      }
+    }
+  },
+  "queries_before": {
+    "entities": 2377,
+    "empty_history_fraction": 0.0,
+    "first_timestamp_correct_fraction": 1.0,
+    "last_timestamp_correct_fraction": 1.0,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 1128.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 1249.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 2377.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "history": {
+    "precision": 0.9999763475435189,
+    "recall": 0.9998850818072368,
+    "f1": 0.9999289766625157,
+    "exact_history_fraction": 0.9962137147665124,
+    "entities": 2377,
+    "per_type": {
+      "Application": {
+        "precision": 0.9999450958114693,
+        "recall": 0.9997332416560561,
+        "f1": 0.9998351343035156,
+        "exact_history_fraction": 0.9912109375,
+        "entities": 1024
+      },
+      "Offer": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_history_fraction": 1.0,
+        "entities": 1353
+      }
+    }
+  },
+  "identity": {
+    "predicted_pairs": 0,
+    "true_pairs": 0,
+    "correct_pairs": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
+  "events": {
+    "originally_correct_events": 39421,
+    "originally_incorrect_events": 0,
+    "direct_new_damage": 9,
+    "direct_repaired_events": 0,
+    "expanded_new_damage": 9,
+    "expanded_repaired_events": 0
+  },
+  "queries": {
+    "entities": 2377,
+    "empty_history_fraction": 0.0,
+    "first_timestamp_correct_fraction": 1.0,
+    "last_timestamp_correct_fraction": 1.0,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 1127.0,
+        "false_positive": 0.0,
+        "false_negative": 1.0,
+        "true_negative": 1249.0,
+        "precision": 1.0,
+        "recall": 0.999113475177305,
+        "f1": 0.9995565410199556
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 2377.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "edits": 9,
+  "this_execution_seconds": 631.2791101317853,
+  "resumed_prior_passes": 0,
+  "artifacts": {
+    "repaired.json.gz": "d992db333a4957705c05705e30fcee4724850f5aa4c56f5794df92b77608156b",
+    "clusters.json": "e1aea8463e392cb24efb64d6e0e1d9788c915bb06a4ace54811b777781f3ce5a",
+    "audit.json": "ac6e7689b172d801c3416854fd8e4a9c6274f82f29391e9b5da8dc919c41880d"
+  }
+}

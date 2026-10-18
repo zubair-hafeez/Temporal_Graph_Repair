@@ -1,0 +1,146 @@
+{
+  "status": "completed_coupled_confirmation",
+  "pins": {
+    "job": {
+      "id": "bpi2019_seed1_clean_generated_original_0_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "clean",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    "protocol_sha256": "84832d6b049cfb1448a7cfec915f93fee9e1a72507037e91c41a4973adc5eeec",
+    "task_sha256": "1dcb44cebb734af392882843b9cf4f8ec3c5ece054b42dabbe7ac31388f57913",
+    "model_sha256": "c2a95d9173329ddc77876ccdf00193ade110c63b0487dafb4c13a1d7adfe33e9"
+  },
+  "before": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "exact_history_fraction": 1.0,
+    "entities": 4652,
+    "per_type": {
+      "POItem": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_history_fraction": 1.0,
+        "entities": 3628
+      },
+      "PO": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_history_fraction": 1.0,
+        "entities": 1024
+      }
+    }
+  },
+  "queries_before": {
+    "entities": 4652,
+    "empty_history_fraction": 0.0,
+    "first_timestamp_correct_fraction": 1.0,
+    "last_timestamp_correct_fraction": 1.0,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 154.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 4498.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 4652.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "history": {
+    "precision": 0.9999692912418623,
+    "recall": 0.9999947570412936,
+    "f1": 0.999980810671553,
+    "exact_history_fraction": 0.9995700773860705,
+    "entities": 4652,
+    "per_type": {
+      "POItem": {
+        "precision": 0.9999606237202708,
+        "recall": 1.0,
+        "f1": 0.9999787973878382,
+        "exact_history_fraction": 0.9997243660418964,
+        "entities": 3628
+      },
+      "PO": {
+        "precision": 1.0,
+        "recall": 0.999976181402439,
+        "f1": 0.9999879436728395,
+        "exact_history_fraction": 0.9990234375,
+        "entities": 1024
+      }
+    }
+  },
+  "identity": {
+    "predicted_pairs": 0,
+    "true_pairs": 0,
+    "correct_pairs": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
+  "events": {
+    "originally_correct_events": 21680,
+    "originally_incorrect_events": 0,
+    "direct_new_damage": 2,
+    "direct_repaired_events": 0,
+    "expanded_new_damage": 2,
+    "expanded_repaired_events": 0
+  },
+  "queries": {
+    "entities": 4652,
+    "empty_history_fraction": 0.0,
+    "first_timestamp_correct_fraction": 1.0,
+    "last_timestamp_correct_fraction": 1.0,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 154.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 4498.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 4652.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "edits": 2,
+  "this_execution_seconds": 468.0395362160634,
+  "resumed_prior_passes": 0,
+  "artifacts": {
+    "repaired.json.gz": "241267ff5dec6e5b27314a375ca2dd8bdb4ec89cbaeb64d75aa56b6b65be747c",
+    "clusters.json": "9c756b04ff3d9bf92286ba190e77daa68107f5dda1bf464c9296e25ee8b23408",
+    "audit.json": "28b715f30a72cfb5c8a549db69c59dc475fc3c578cb32f8be6b1eb6ad9cb4bfc"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "status": "active_revision_development",
+  "status": "completed_for_author_review",
   "user_constraint": "At most 15 pages total including references and appendices; iterate to an evidence-supported good paper for final review only.",
   "original_study": "Preserved. Original protocol and frozen scientific code unchanged. Original manuscript archived under paper/archive/review_v1 and original review bundle remains intact.",
   "goal_status": "active",
@@ -32,38 +32,7 @@
     "Six selected budget64 models numerically refitted within 1e-12 with identical calibration thresholds and decisions; byte identity did not reproduce and is not claimed.",
     "Added explicit Python/tokenizer reproduction dependencies, application benefit/harm illustration, and gated final review/package builders. Current draft is 10 pages with no overfull boxes."
   ],
-  "running_jobs": {
-    "coupled_confirmation_shard0": {
-      "session_id": 28297,
-      "log": "revision/reports/coupled_shard0_v1.log"
-    },
-    "coupled_confirmation_shard1": {
-      "session_id": 87263,
-      "log": "revision/reports/coupled_shard1_v1.log"
-    },
-    "coupled_confirmation_shard2": {
-      "session_id": 69461,
-      "log": "revision/reports/coupled_shard2_v1.log"
-    },
-    "coupled_confirmation_shard3": {
-      "session_id": 62317,
-      "log": "revision/reports/coupled_shard3_v1.log"
-    },
-    "coupled_confirmation_shard4": {
-      "session_id": 9789,
-      "log": "revision/reports/coupled_shard4_v1.log"
-    },
-    "coupled_confirmation_shard5": {
-      "session_id": 36180,
-      "log": "revision/reports/coupled_shard5_v1.log"
-    },
-    "evidence_finalization": {
-      "session_id": 24241,
-      "log": "revision/reports/evidence_finalization_v1.log",
-      "depends_on": "all_156_coupled_jobs",
-      "role": "Automatic independent artifact audit and full table/figure generation; no manuscript conclusion or final-readiness claim"
-    }
-  },
+  "running_jobs": {},
   "completed_jobs": {
     "cohorts_bpi2017": 37537,
     "cohorts_bpi2019": 15118,
@@ -88,17 +57,14 @@
     "warning": "Historical pilots only. Full native comparison is complete and independently audited; see revision/reports/native_confirmation_audit_v1.json."
   },
   "critical_next_steps": [
-    "Complete all 156 frozen coupled-confirmation jobs across six shards.",
-    "Recompute results from saved prediction artifacts and check event-content invariance.",
-    "Finish <=15-page manuscript with all outcomes and limitations; compile and visually inspect.",
-    "Assemble final-review reproducibility artifact and evidence audit."
+    "User scientific review, author details and venue selection; no automatic submission."
   ],
   "label_budget_caution": "These are incremental fitting/calibration budgets on fresh histories in previously studied source processes. Historical research/development labels are not zero and must be disclosed. Do not claim a total project-wide annotation budget or unseen-domain transfer from these same-source cohorts.",
   "gpu_runner": "/home/zubair/zubairEnv/bin/python revision/research.py",
   "gpu_approval": "Saved categorical prefix for the paper runner; CUDA works outside sandbox. Both RTX A6000 GPUs verified. Use approved runner for future GPU jobs.",
   "untracked_user_files": "Preserve paper/.ipynb_checkpoints/.",
   "no_external_submission": true,
-  "updated_utc": "2026-10-18T03:58:35.028039+00:00",
+  "updated_utc": "2026-10-18T17:04:37.368859+00:00",
   "public_data_only": true,
   "user_preferences": {
     "public_data_only": true,
@@ -106,14 +72,14 @@
   },
   "manuscript_draft": {
     "path": "revision/paper/main.pdf",
-    "status": "incomplete_development_draft_with_explicit_pending_results",
-    "pages": 10,
+    "status": "complete_manuscript_for_author_review",
+    "pages": 13,
     "overfull_boxes": 0,
-    "note": "Completed original/native tables and application success/failure illustration included; final combined-repair evidence pending."
+    "pdf_sha256": "031bc82eb3d33805a9a7dc502c5ba1fef5a376b52271b41df41d830011b94a24"
   },
   "latest_checkpoint_commit": "f378294",
   "coupled_confirmation": {
-    "status": "frozen_and_execution_started",
+    "status": "all_156_completed_and_audited",
     "protocol": "revision/docs/COUPLED_CONFIRMATION_PROTOCOL_V1.json",
     "sha256": "84832d6b049cfb1448a7cfec915f93fee9e1a72507037e91c41a4973adc5eeec",
     "jobs": 156
@@ -123,5 +89,9 @@
     "final_review": "revision/audit_final_review.py",
     "package": "revision/build_review_package.py",
     "note": "Final review needs completed experimental audit, final compiled PDF, numerical claims receipts and an actual visual/scientific review; do not fabricate completion receipts."
-  }
+  },
+  "stage": "final_manuscript_and_evidence_review",
+  "final_review": "revision/reports/final_revision_review_v1.json",
+  "review_guide": "revision/REVIEW_NOTES.txt",
+  "review_package": "/mnt/zubair/Temporal_Graph_Repair_revision_review_v1"
 }

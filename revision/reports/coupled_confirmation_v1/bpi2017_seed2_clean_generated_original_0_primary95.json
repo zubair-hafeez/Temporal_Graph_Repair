@@ -1,0 +1,146 @@
+{
+  "status": "completed_coupled_confirmation",
+  "pins": {
+    "job": {
+      "id": "bpi2017_seed2_clean_generated_original_0_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "clean",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    "protocol_sha256": "84832d6b049cfb1448a7cfec915f93fee9e1a72507037e91c41a4973adc5eeec",
+    "task_sha256": "d69e372405d9e48add0549af5ce17a4f56f2163f5df0be61ce236100944ec99b",
+    "model_sha256": "c2a95d9173329ddc77876ccdf00193ade110c63b0487dafb4c13a1d7adfe33e9"
+  },
+  "before": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "exact_history_fraction": 1.0,
+    "entities": 2377,
+    "per_type": {
+      "Application": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_history_fraction": 1.0,
+        "entities": 1024
+      },
+      "Offer": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_history_fraction": 1.0,
+        "entities": 1353
+      }
+    }
+  },
+  "queries_before": {
+    "entities": 2377,
+    "empty_history_fraction": 0.0,
+    "first_timestamp_correct_fraction": 1.0,
+    "last_timestamp_correct_fraction": 1.0,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 1128.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 1249.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 2377.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "history": {
+    "precision": 1.0,
+    "recall": 0.9998920977283814,
+    "f1": 0.9999453785603232,
+    "exact_history_fraction": 0.9949516196886832,
+    "entities": 2377,
+    "per_type": {
+      "Application": {
+        "precision": 1.0,
+        "recall": 0.9997495276370729,
+        "f1": 0.9998732078495003,
+        "exact_history_fraction": 0.98828125,
+        "entities": 1024
+      },
+      "Offer": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_history_fraction": 1.0,
+        "entities": 1353
+      }
+    }
+  },
+  "identity": {
+    "predicted_pairs": 0,
+    "true_pairs": 0,
+    "correct_pairs": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
+  "events": {
+    "originally_correct_events": 39421,
+    "originally_incorrect_events": 0,
+    "direct_new_damage": 12,
+    "direct_repaired_events": 0,
+    "expanded_new_damage": 12,
+    "expanded_repaired_events": 0
+  },
+  "queries": {
+    "entities": 2377,
+    "empty_history_fraction": 0.0,
+    "first_timestamp_correct_fraction": 1.0,
+    "last_timestamp_correct_fraction": 1.0,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 1126.0,
+        "false_positive": 0.0,
+        "false_negative": 2.0,
+        "true_negative": 1249.0,
+        "precision": 1.0,
+        "recall": 0.99822695035461,
+        "f1": 0.9991126885536823
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 2377.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "edits": 12,
+  "this_execution_seconds": 623.020952245919,
+  "resumed_prior_passes": 0,
+  "artifacts": {
+    "repaired.json.gz": "59ec8f8ce72cedf4a701e0037e85cc1bc9f1cbabfaa84a9aa1c497143a52673e",
+    "clusters.json": "dc7554bac1d856a7438369d2f36d50f8576c241d2c416ac795980bc891769144",
+    "audit.json": "83a2cd5dca69493f1d38e0579060532fd3a377c85dd99940bc73ed2ce35fb300"
+  }
+}

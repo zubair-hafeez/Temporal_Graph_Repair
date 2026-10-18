@@ -1,0 +1,269 @@
+{
+  "status": "completed_here_native_confirmation",
+  "name": "here_native_bpi2017_seed0_missing30_roots2048_epochs30_v1",
+  "domain": "bpi2017",
+  "seed": 0,
+  "missing_rate": 0.3,
+  "epochs": 30,
+  "config": {
+    "d_model": 512,
+    "num_layers": 3,
+    "h": 8,
+    "dropout": 0.1,
+    "d_ff": 2048
+  },
+  "source_graph_sha256": "891dafeccd5710a72da5008513a48d5b85f479965b9dc2c4b6e21b04f8abafb0",
+  "runner_sha256": "dda2a92df08719cb8274fffe71ab748f7ea87b560c58c39ae7c5e85157ae5979",
+  "observed_graph_sha256": "61e349e7959dba418cad772ddc4309e252d376744e87e29c585fd85487d2d46d",
+  "author_commit": "814b1db618aaa9f14e6f471504699ade9fcbf203",
+  "protocol_sha256": "c20c91503824137b73b0621cf492a6a6e05dea86d6783b639333df19299e0428",
+  "author_files": {
+    "here_LICENSE.md": "796a7f9dd50ab35afcaa24de367870ad494d3ac19e42d504bb8c9491c66aa3b9",
+    "here_train.py": "4903ad303fc85645776a0950d467827f36e98833b2b8a1210a6aca8b69c957fa",
+    "here_model.py": "4f44d790f99a047023c993069d3c86b8dea99d5ff0e4d72c50a2b439dd8dca67",
+    "here_dataset.py": "1ae9e771d662ece5957cac4c4b11225e2041efb72d4437b288db4b7630b0781e"
+  },
+  "observed_events": 77981,
+  "cases": 2048,
+  "hidden_test_events": 23335,
+  "known_supervision_events": 54646,
+  "fit_windows": 44251,
+  "validation_windows": 4917,
+  "source_vocab": 210,
+  "target_vocab": 2053,
+  "parameter_count": 26365445,
+  "training": [
+    {
+      "epoch": 1,
+      "fit_loss": 3.6086169399391115,
+      "validation_loss": 2.393410162421746,
+      "seconds": 260.2367952100467
+    },
+    {
+      "epoch": 2,
+      "fit_loss": 2.187127276791754,
+      "validation_loss": 1.9693747543707127,
+      "seconds": 526.4752579680644
+    },
+    {
+      "epoch": 3,
+      "fit_loss": 1.8983258878245184,
+      "validation_loss": 1.8057137345880028,
+      "seconds": 789.5177189710084
+    },
+    {
+      "epoch": 4,
+      "fit_loss": 1.7601281831166231,
+      "validation_loss": 1.716712998374691,
+      "seconds": 1056.8778459160822
+    },
+    {
+      "epoch": 5,
+      "fit_loss": 1.6689038540001633,
+      "validation_loss": 1.6441050167006206,
+      "seconds": 1325.3445669390494
+    },
+    {
+      "epoch": 6,
+      "fit_loss": 1.6042610406229139,
+      "validation_loss": 1.5960308005170125,
+      "seconds": 1585.7357183200074
+    },
+    {
+      "epoch": 7,
+      "fit_loss": 1.5508345184512355,
+      "validation_loss": 1.5494582854635348,
+      "seconds": 1853.421481559053
+    },
+    {
+      "epoch": 8,
+      "fit_loss": 1.5088812486037602,
+      "validation_loss": 1.5130477889766538,
+      "seconds": 2104.9406716200756
+    },
+    {
+      "epoch": 9,
+      "fit_loss": 1.4724601522702199,
+      "validation_loss": 1.4831100089763238,
+      "seconds": 2350.025556305074
+    },
+    {
+      "epoch": 10,
+      "fit_loss": 1.4407165114291751,
+      "validation_loss": 1.449383244281862,
+      "seconds": 2594.884417782072
+    },
+    {
+      "epoch": 11,
+      "fit_loss": 1.4116322438482436,
+      "validation_loss": 1.4179350754109825,
+      "seconds": 2836.8275679430226
+    },
+    {
+      "epoch": 12,
+      "fit_loss": 1.3854435986784688,
+      "validation_loss": 1.3921918043276158,
+      "seconds": 3074.1982373381034
+    },
+    {
+      "epoch": 13,
+      "fit_loss": 1.3618791280496145,
+      "validation_loss": 1.3701700999484798,
+      "seconds": 3311.487908586045
+    },
+    {
+      "epoch": 14,
+      "fit_loss": 1.3390708139902945,
+      "validation_loss": 1.3517718030185235,
+      "seconds": 3543.4740651350003
+    },
+    {
+      "epoch": 15,
+      "fit_loss": 1.3180716851226506,
+      "validation_loss": 1.3369200987544487,
+      "seconds": 3774.4832004060736
+    },
+    {
+      "epoch": 16,
+      "fit_loss": 1.298739335779168,
+      "validation_loss": 1.3116014709317587,
+      "seconds": 4001.47166389809
+    },
+    {
+      "epoch": 17,
+      "fit_loss": 1.2812317017403876,
+      "validation_loss": 1.2969246017254465,
+      "seconds": 4222.013154820073
+    },
+    {
+      "epoch": 18,
+      "fit_loss": 1.266554741521547,
+      "validation_loss": 1.289440468462502,
+      "seconds": 4448.553550931043
+    },
+    {
+      "epoch": 19,
+      "fit_loss": 1.25376593973959,
+      "validation_loss": 1.2801746234661195,
+      "seconds": 4675.586455323035
+    },
+    {
+      "epoch": 20,
+      "fit_loss": 1.244050837067358,
+      "validation_loss": 1.2684557579397187,
+      "seconds": 4897.834141452098
+    },
+    {
+      "epoch": 21,
+      "fit_loss": 1.2361713355206443,
+      "validation_loss": 1.2627905231181198,
+      "seconds": 5125.550711154006
+    },
+    {
+      "epoch": 22,
+      "fit_loss": 1.2285838453819677,
+      "validation_loss": 1.2625471622963262,
+      "seconds": 5353.756737723015
+    },
+    {
+      "epoch": 23,
+      "fit_loss": 1.221602241844693,
+      "validation_loss": 1.2560275091388362,
+      "seconds": 5575.962034134078
+    },
+    {
+      "epoch": 24,
+      "fit_loss": 1.2160329864840531,
+      "validation_loss": 1.251279765415967,
+      "seconds": 5804.232677014079
+    },
+    {
+      "epoch": 25,
+      "fit_loss": 1.2097388682637797,
+      "validation_loss": 1.245482065619492,
+      "seconds": 6031.785908264108
+    },
+    {
+      "epoch": 26,
+      "fit_loss": 1.2043359591878158,
+      "validation_loss": 1.240820330720607,
+      "seconds": 6254.7384827560745
+    },
+    {
+      "epoch": 27,
+      "fit_loss": 1.2008274652047686,
+      "validation_loss": 1.2374421916356901,
+      "seconds": 6481.937153198058
+    },
+    {
+      "epoch": 28,
+      "fit_loss": 1.1965003932461908,
+      "validation_loss": 1.2311417893665593,
+      "seconds": 6705.161191202002
+    },
+    {
+      "epoch": 29,
+      "fit_loss": 1.1928151434991814,
+      "validation_loss": 1.2318153726376169,
+      "seconds": 6927.252414525021
+    },
+    {
+      "epoch": 30,
+      "fit_loss": 1.189787662037886,
+      "validation_loss": 1.2298192873233702,
+      "seconds": 7153.462178459042
+    }
+  ],
+  "limits": [
+    "Reserved native-task confirmation, with an explicit adaptation of author code rather than a published-score reproduction.",
+    "Author model, tensor dataset, and greedy decoder preserved. Headless orchestration and evaluation split are explicit adaptations.",
+    "No supplied expert attributes or declarative rules; name this HERE-Transformer without expert rules.",
+    "Window validation overlaps known fitting events and is diagnostic only; no masked test identifier enters any training window.",
+    "This closed-case track uses known target IDs as supervision and is separate from the verified-history adaptation budget.",
+    "Thirty epochs are fixed before native evaluation; final epoch is evaluated without test-based checkpoint selection."
+  ],
+  "model_sha256": "cf44990f4d590e5696219128509a0b84d6eb5ebd21d5cd06f0577ecd1d982322",
+  "heldout_missing_id": {
+    "correct": 15522,
+    "assigned": 23335,
+    "hidden": 23335,
+    "accuracy_all_missing": 0.6651810584958218,
+    "precision_assigned": 0.6651810584958218,
+    "coverage": 1.0,
+    "true_cases_unseen_in_known_records": 0
+  },
+  "history_before": {
+    "precision": 1.0,
+    "recall": 0.6998676070810618,
+    "f1": 0.8206389726634163,
+    "exact_history_fraction": 0.0,
+    "entities": 2048,
+    "per_type": {
+      "Application": {
+        "precision": 1.0,
+        "recall": 0.6998676070810618,
+        "f1": 0.8206389726634163,
+        "exact_history_fraction": 0.0,
+        "entities": 2048
+      }
+    }
+  },
+  "history_after": {
+    "precision": 0.9041604059890622,
+    "recall": 0.898416574811561,
+    "f1": 0.8984458824587545,
+    "exact_history_fraction": 0.01806640625,
+    "entities": 2048,
+    "per_type": {
+      "Application": {
+        "precision": 0.9041604059890622,
+        "recall": 0.898416574811561,
+        "f1": 0.8984458824587545,
+        "exact_history_fraction": 0.01806640625,
+        "entities": 2048
+      }
+    }
+  },
+  "seconds": 7497.489002059097,
+  "predictions_sha256": "3fce4679a520b76f2324fbf4bc0097ba67e8bfed300b41a94c0d77c12a9e293b"
+}

@@ -1,0 +1,315 @@
+{
+  "status": "completed_extra_model_preparation",
+  "domain": "bpi2019",
+  "seed": 2,
+  "models": [
+    {
+      "name": "extra_bpi2019_seed2_generated_original_0_v1",
+      "regime": "generated_original",
+      "total_verified_root_bundles": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "model_sha256": "c2a95d9173329ddc77876ccdf00193ade110c63b0487dafb4c13a1d7adfe33e9",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "calibration": [
+        {
+          "precision": 0.9523809523809523,
+          "recall": 0.07017543859649122,
+          "correct_actions": 100
+        },
+        {
+          "precision": 0.9528795811518325,
+          "recall": 0.3143350604490501,
+          "correct_actions": 182
+        },
+        {
+          "precision": 0.9523809523809523,
+          "recall": 0.05449591280653951,
+          "correct_actions": 80
+        }
+      ],
+      "calibration_source": "generated_varied_observations",
+      "calibration_sha256": "d425305712603d36682721facba2663102ecce971a3375c6123f4105eae5ac41"
+    },
+    {
+      "name": "extra_bpi2019_seed2_generated_varied_0_v1",
+      "regime": "generated_varied",
+      "total_verified_root_bundles": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "model_sha256": "803be97285c169b99459277debcba0db576224ed62355cd015280b4256b3f07a",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "calibration": [
+        {
+          "precision": 0.9501246882793017,
+          "recall": 0.2673684210526316,
+          "correct_actions": 381
+        },
+        {
+          "precision": 0.9512195121951219,
+          "recall": 0.538860103626943,
+          "correct_actions": 312
+        },
+        {
+          "precision": 0.953125,
+          "recall": 0.12465940054495912,
+          "correct_actions": 183
+        }
+      ],
+      "calibration_source": "generated_varied_observations",
+      "calibration_sha256": "c14adb0473b2917d29ac4974bc7edad4b15e02fc5d63bd695b7b63647bbd37dd"
+    },
+    {
+      "name": "extra_bpi2019_seed2_calibration_only_varied_16_v1",
+      "regime": "calibration_only_varied",
+      "total_verified_root_bundles": 16,
+      "fit_verified_root_bundles": 0,
+      "calibration_verified_root_bundles": 16,
+      "annotation_cost": {
+        "fit": {
+          "verified_root_bundles": 12,
+          "verified_target_entities": 131,
+          "verified_alias_handles": 161,
+          "verified_events": 611,
+          "sampled_events": 611,
+          "actions": 165319,
+          "identity_pairs": 8903,
+          "positive_pairs_added_from_verified_histories": 11,
+          "positives_by_operation": [
+            192,
+            104,
+            25
+          ],
+          "examples_by_operation": [
+            155331,
+            1085,
+            8903
+          ],
+          "file": "fit_16.npz",
+          "sha256": "d5bf7c1505d07633da3b123abe65edc582e0d850f81e62d39d549dadb2f6d752",
+          "selected_root_ids_sha256": "d6bb2a207f0e4ecb9a5d299ab7ec1f25d2966277f55e0a6e48271b19512defa5"
+        },
+        "calibration": {
+          "verified_root_bundles": 4,
+          "verified_target_entities": 47,
+          "verified_alias_handles": 57,
+          "verified_events": 269,
+          "sampled_events": 269,
+          "actions": 72158,
+          "identity_pairs": 3294,
+          "positive_pairs_added_from_verified_histories": 0,
+          "positives_by_operation": [
+            108,
+            42,
+            10
+          ],
+          "examples_by_operation": [
+            68379,
+            485,
+            3294
+          ],
+          "file": "calibration_16.npz",
+          "sha256": "0cba12d4d05821c87fb764d7a5660a4cf53516636fe2e6e8334b6b31dbdf531a",
+          "selected_root_ids_sha256": "07315fc2a0f7f4a54f755828a50d4840f155aeddfd8403de585cb8fbc8aaf66b"
+        }
+      },
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "model_sha256": "803be97285c169b99459277debcba0db576224ed62355cd015280b4256b3f07a",
+      "thresholds": [
+        0.9917603609709853,
+        0.9752008075519331,
+        1.1
+      ],
+      "calibration": [
+        {
+          "precision": 0.9620253164556962,
+          "recall": 0.25333333333333335,
+          "correct_actions": 76
+        },
+        {
+          "precision": 0.9541984732824428,
+          "recall": 0.8561643835616438,
+          "correct_actions": 125
+        },
+        {
+          "precision": null,
+          "recall": 0.0,
+          "reason": "no_feasible_verified_operating_point"
+        }
+      ],
+      "calibration_source": "all_budgeted_target_bundles_no_model_refitting",
+      "calibration_sha256": "dad2da4a9ecea9d4d1f9235d56f586f350af8495a6145b26b3e1abae7e9352f5"
+    },
+    {
+      "name": "extra_bpi2019_seed2_calibration_only_varied_64_v1",
+      "regime": "calibration_only_varied",
+      "total_verified_root_bundles": 64,
+      "fit_verified_root_bundles": 0,
+      "calibration_verified_root_bundles": 64,
+      "annotation_cost": {
+        "fit": {
+          "verified_root_bundles": 48,
+          "verified_target_entities": 314,
+          "verified_alias_handles": 375,
+          "verified_events": 1428,
+          "sampled_events": 1428,
+          "actions": 387205,
+          "identity_pairs": 21637,
+          "positive_pairs_added_from_verified_histories": 12,
+          "positives_by_operation": [
+            513,
+            247,
+            53
+          ],
+          "examples_by_operation": [
+            363002,
+            2566,
+            21637
+          ],
+          "file": "fit_64.npz",
+          "sha256": "2ea48d6152e800ed2fe3885d13381333bf8dac223fdbf0465185cac3e5c60df3",
+          "selected_root_ids_sha256": "b2a96d9fa60036871e91369f76213c8e8b55ade00f85634260b1bae6cd2cdfb3"
+        },
+        "calibration": {
+          "verified_root_bundles": 16,
+          "verified_target_entities": 84,
+          "verified_alias_handles": 103,
+          "verified_events": 416,
+          "sampled_events": 416,
+          "actions": 112658,
+          "identity_pairs": 6162,
+          "positive_pairs_added_from_verified_histories": 1,
+          "positives_by_operation": [
+            164,
+            66,
+            19
+          ],
+          "examples_by_operation": [
+            105744,
+            752,
+            6162
+          ],
+          "file": "calibration_64.npz",
+          "sha256": "a3a82e1673eec97a756a3951550d1abcafc20c2778aa4369afd66584e15b42b2",
+          "selected_root_ids_sha256": "2ac93bae344e73f47c5827050880025e452f1a43aca75502adc8cdbc1e008a65"
+        }
+      },
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "model_sha256": "803be97285c169b99459277debcba0db576224ed62355cd015280b4256b3f07a",
+      "thresholds": [
+        0.9942640067303304,
+        0.9731379664072708,
+        1.1
+      ],
+      "calibration": [
+        {
+          "precision": 0.9523809523809523,
+          "recall": 0.11816838995568685,
+          "correct_actions": 80
+        },
+        {
+          "precision": 0.9520295202952029,
+          "recall": 0.8242811501597445,
+          "correct_actions": 258
+        },
+        {
+          "precision": null,
+          "recall": 0.0,
+          "reason": "no_feasible_verified_operating_point"
+        }
+      ],
+      "calibration_source": "all_budgeted_target_bundles_no_model_refitting",
+      "calibration_sha256": "ba257e2476c3c4d8484fbb987314e46bd249ed3eec3facb731a8202802546fa0"
+    },
+    {
+      "name": "extra_bpi2019_seed2_calibration_only_varied_256_v1",
+      "regime": "calibration_only_varied",
+      "total_verified_root_bundles": 256,
+      "fit_verified_root_bundles": 0,
+      "calibration_verified_root_bundles": 256,
+      "annotation_cost": {
+        "fit": {
+          "verified_root_bundles": 192,
+          "verified_target_entities": 1119,
+          "verified_alias_handles": 1340,
+          "verified_events": 4503,
+          "sampled_events": 4096,
+          "actions": 1122569,
+          "identity_pairs": 73993,
+          "positive_pairs_added_from_verified_histories": 17,
+          "positives_by_operation": [
+            1746,
+            728,
+            206
+          ],
+          "examples_by_operation": [
+            1041212,
+            7364,
+            73993
+          ],
+          "file": "fit_256.npz",
+          "sha256": "2be1ba791c42ace509384681b648337daea2f24f31ee3d151d569149a50b6744",
+          "selected_root_ids_sha256": "b8610f11820d390d071542d228376dece8d878737b3ed9bec1dceceac29a5cb5"
+        },
+        "calibration": {
+          "verified_root_bundles": 64,
+          "verified_target_entities": 315,
+          "verified_alias_handles": 385,
+          "verified_events": 1444,
+          "sampled_events": 1444,
+          "actions": 392365,
+          "identity_pairs": 22701,
+          "positive_pairs_added_from_verified_histories": 1,
+          "positives_by_operation": [
+            667,
+            257,
+            67
+          ],
+          "examples_by_operation": [
+            367061,
+            2603,
+            22701
+          ],
+          "file": "calibration_256.npz",
+          "sha256": "1fdec49e4c87e955af8d3e98656f1be2aca3474326c360dc39f9faaec70597c8",
+          "selected_root_ids_sha256": "2aa3a71e38f7254f2280110f87086ede894c71ab0d6d1d1aa30664342e54e6aa"
+        }
+      },
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "model_sha256": "803be97285c169b99459277debcba0db576224ed62355cd015280b4256b3f07a",
+      "thresholds": [
+        0.9930491925575279,
+        0.9811605022453403,
+        0.9973535396548383
+      ],
+      "calibration": [
+        {
+          "precision": 0.9510204081632653,
+          "recall": 0.09656029838375466,
+          "correct_actions": 233
+        },
+        {
+          "precision": 0.9503722084367245,
+          "recall": 0.7776649746192893,
+          "correct_actions": 766
+        },
+        {
+          "precision": 1.0,
+          "recall": 0.05128205128205128,
+          "correct_actions": 14
+        }
+      ],
+      "calibration_source": "all_budgeted_target_bundles_no_model_refitting",
+      "calibration_sha256": "c1254215da6483f0d6a476239666d7fe4864f65e7ba93a94259795bcd6ac8199"
+    }
+  ],
+  "implementation_sha256": "dc93f86d32d93e701d2147d4c28fdf80b68290d3acd6757dab4066214a93c311",
+  "annotation_manifest_sha256": "3aa83be4fe3b933518d663f7ef34989ddafc011b12284debecca622b4d4ace8e",
+  "contract": "Budgets count incremental target verification. Zero means no new target labels; historical research costs are not zero. Calibration-only controls use the same complete verified bundles as fitting-plus-calibration controls."
+}

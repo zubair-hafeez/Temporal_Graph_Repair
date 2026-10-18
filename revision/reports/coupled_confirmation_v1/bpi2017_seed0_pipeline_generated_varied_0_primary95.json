@@ -1,0 +1,146 @@
+{
+  "status": "completed_coupled_confirmation",
+  "pins": {
+    "job": {
+      "id": "bpi2017_seed0_pipeline_generated_varied_0_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "pipeline",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    "protocol_sha256": "84832d6b049cfb1448a7cfec915f93fee9e1a72507037e91c41a4973adc5eeec",
+    "task_sha256": "8a6aad3aaec5e107931d4abd34adde55783fc93d73ff497c14ab7074cbe0d880",
+    "model_sha256": "803be97285c169b99459277debcba0db576224ed62355cd015280b4256b3f07a"
+  },
+  "before": {
+    "precision": 0.8945659466387897,
+    "recall": 0.7354789727398829,
+    "f1": 0.7724220390046248,
+    "exact_history_fraction": 0.4312158182583088,
+    "entities": 2377,
+    "per_type": {
+      "Application": {
+        "precision": 0.8882509467247228,
+        "recall": 0.7059165216823239,
+        "f1": 0.7427946462290239,
+        "exact_history_fraction": 0.396484375,
+        "entities": 1024
+      },
+      "Offer": {
+        "precision": 0.8993453700770768,
+        "recall": 0.7578529194382845,
+        "f1": 0.7948451359759514,
+        "exact_history_fraction": 0.4575018477457502,
+        "entities": 1353
+      }
+    }
+  },
+  "queries_before": {
+    "entities": 2377,
+    "empty_history_fraction": 0.030290281867900715,
+    "first_timestamp_correct_fraction": 0.7183424484644509,
+    "last_timestamp_correct_fraction": 0.7076146403029028,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 916.5,
+        "false_positive": 42.0,
+        "false_negative": 211.5,
+        "true_negative": 1207.0,
+        "precision": 0.9561815336463224,
+        "recall": 0.8125,
+        "f1": 0.8785046728971962
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 2377.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "history": {
+    "precision": 0.9008327425330803,
+    "recall": 0.7330156637352317,
+    "f1": 0.7741906362638143,
+    "exact_history_fraction": 0.44594026083298277,
+    "entities": 2377,
+    "per_type": {
+      "Application": {
+        "precision": 0.8887157277261793,
+        "recall": 0.7028433262031014,
+        "f1": 0.7403290954784533,
+        "exact_history_fraction": 0.3837890625,
+        "entities": 1024
+      },
+      "Offer": {
+        "precision": 0.9100033435399286,
+        "recall": 0.7558511948755843,
+        "f1": 0.7998182916697277,
+        "exact_history_fraction": 0.49297856614929786,
+        "entities": 1353
+      }
+    }
+  },
+  "identity": {
+    "predicted_pairs": 1,
+    "true_pairs": 419,
+    "correct_pairs": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "events": {
+    "originally_correct_events": 30716,
+    "originally_incorrect_events": 8705,
+    "direct_new_damage": 341,
+    "direct_repaired_events": 2,
+    "expanded_new_damage": 341,
+    "expanded_repaired_events": 2
+  },
+  "queries": {
+    "entities": 2377,
+    "empty_history_fraction": 0.030290281867900715,
+    "first_timestamp_correct_fraction": 0.7240218763146824,
+    "last_timestamp_correct_fraction": 0.7143458140513252,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 911.5,
+        "false_positive": 38.5,
+        "false_negative": 216.5,
+        "true_negative": 1210.5,
+        "precision": 0.9594736842105264,
+        "recall": 0.8080673758865248,
+        "f1": 0.8772858517805582
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 2377.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "edits": 564,
+  "this_execution_seconds": 1112.99489455414,
+  "resumed_prior_passes": 0,
+  "artifacts": {
+    "repaired.json.gz": "538410a4a5259ad5e446952e8f4884a07fd9b18e538634ae605704ead67883b3",
+    "clusters.json": "1b553ae5574486fcdc73734a17a9c877055a053dbd479f0cc99ebc18e6c47910",
+    "audit.json": "ec281b90a3fdd82469a3f91bcb495e92560b0a934f2eb8cf62fee56abf3407f7"
+  }
+}

@@ -8,16 +8,15 @@
 \renewcommand{\topfraction}{.9}
 \renewcommand{\textfraction}{.07}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
-\newcommand{\pending}[1]{\par\noindent\textcolor{red}{[Revision evidence pending: #1]}\par}
 \title{Restoring Operational Histories with Generated Temporal Graph Supervision}
-\author{Author details pending final review}
-\date{Working revision---not the final review manuscript}
+\author{Anonymous manuscript for author review}
+\date{}
 \begin{document}
 \maketitle
 
 \begin{abstract}
-An analyst investigating a purchase order or loan application needs its complete history, including cancellations and retries. Missing object links, wrong joins and fragmented identifiers can hide relevant records or introduce false evidence. We study offline repair of these associations while preserving recorded event content. Executable workflows provide training references; separate observation and fault models vary the conditions under which a learner must recover them. We evaluate the resulting supervision against models trained on the same limited number of verified operational histories, counting both fitting and calibration labels. A separate comparison adapts the author-provided HERE Transformer, without expert rules, to its supported missing-case-identifier task. Evaluation measures retrieved histories, operational queries, false identity merges and newly damaged records. The study distinguishes generated references, controlled faults in public business logs, and naturally verified corrections.
-\pending{The final quantitative finding and its scope will be written only after all declared confirmation experiments finish.}
+An analyst investigating a purchase order or loan application needs its complete history, including cancellations and retries. Missing object links, wrong joins and fragmented identifiers can hide relevant records or introduce false evidence. We study offline repair of these associations while preserving recorded event content. Executable workflows provide training references; separate observation and fault models vary the conditions under which a learner must recover them. We evaluate the resulting supervision against models trained on the same limited number of verified operational histories, counting both fitting and calibration labels. A separate comparison adapts the author-provided HERE Transformer, without expert rules, to its supported missing-case-identifier task. Evaluation measures retrieved histories, operational queries, false identity merges and newly damaged records. Public business-log experiments use controlled injected faults.
+Across fresh purchasing histories, a generated-plus-real model with 64 verified bundles achieves mean history F1 of .856, exceeding .845 from real-only fitting with 256 bundles in all three paired trials. Gains depend on the application and operating point: loan improvements are smaller, the purchasing mixture beats generated-only repair in just one trial, and stricter thresholds trade recovery for fewer newly damaged records. A separate missing-ID comparison exposes severe generated-only purchasing failures. Generated supervision can reduce incremental verification requirements in the tested setting, but does not establish reliable automatic repair across processes or fault types.
 \end{abstract}
 
 \section{Application and contribution}
@@ -57,7 +56,7 @@ The mixed fault family splits eligible histories at a temporal cut with probabil
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\linewidth]{../../paper/figures/method_overview.pdf}
+\includegraphics[width=\linewidth]{figures/method_overview.pdf}
 \caption{Executable references supervise repair training. Inference uses the observed temporal graph and preserves recorded event content. Reference identities and fault locations remain outside learner input.}
 \label{fig:method}
 \end{figure}
@@ -104,13 +103,13 @@ The reliability study tests a simple schema control where the public representat
 
 The native comparison independently masks each event's single root identifier with probability .30 in each 2,048-root cohort, using three fixed seeds. Activity, resource and time are available; child identifiers, vendor relations and descriptive fields are removed for every method. Trusted remaining case IDs provide closed-case supervision. HERE's author Transformer uses 512-dimensional states, three layers, eight heads, 15-event windows, batch size eight and 30 epochs. The final epoch is evaluated. Only retained identifiers enter training targets; overlapping-window validation is diagnostic, not an independent test. The headless runner and masking/evaluation protocol are explicit adaptations. No expert rules are supplied, so the comparison is named \emph{HERE-Transformer without expert rules}, not a reproduction of the complete published system.
 
-Matched controls include both fixed generated scorers, a target-local boosted scorer and nearest-known-event matching. Generated scorers choose one candidate for each missing ID. The local boosted control fits at most 4,096 retained-ID queries with leave-query-out profiles, whereas HERE uses the remaining known events throughout its training windows; this unequal fitting volume is reported. All retained memberships are observed context. Existing IDs remain unchanged. Native results therefore assess missing-ID completion, not robustness to wrong existing IDs, coupled alias repair or verification-budget efficiency. Data, weights, code and all six native jobs were pinned before native outcomes.
+Matched controls include both fixed generated scorers, a target-local boosted scorer and nearest-known-event matching. Generated scorers choose one candidate for each missing ID. The local boosted control fits at most 4,096 retained-ID queries with leave-query-out profiles, whereas HERE uses the remaining known events throughout its training windows; this unequal fitting volume is reported. All retained memberships are observed context. Existing IDs remain unchanged. Native results therefore assess missing-ID completion, not robustness to wrong existing IDs, coupled alias repair or verification-budget efficiency. Data, fixed generated weights, implementation and all six native conditions were pinned before native outcomes; newly fitted checkpoints were recorded afterwards. The native comparison finished before the separate 156-job combined-repair protocol was frozen. That declaration retained both generated mixtures and all budget comparisons, with no subsequent model or threshold selection from confirmation outcomes.
 
 \section{Results and application interpretation}
-\IfFileExists{results.tex}{\input{results.tex}}{\pending{Complete matched-budget, reliability and native-method results; freeze and execute fresh coupled-repair confirmation.}}
+\input{results.tex}
 
 \section{Scope, limitations and reproducibility}
-The earlier paired study supports observation variation as a useful generated-data condition, but it does not establish that synthetic augmentation always beats verified operational supervision. The revision retains real-only and calibration-only controls precisely to test that boundary. Numerical claims about reduced supervision will be limited to the completed matched comparisons.
+The earlier paired study supports observation variation as a useful generated-data condition, but synthetic augmentation does not always beat verified operational supervision. The purchasing budget comparison supports a reduction in incremental verified bundles within one previously studied process. It is not a general sample-complexity result, a measured reduction in human work, or evidence of transfer to an unseen institution. The fixed mixture weighting was not tuned separately for each source; better adaptation might alter the observed boundaries, but was not tested here.
 
 All operational error labels in the main evaluation come from controlled perturbations of released representations. Public natural-error candidates were audited without substituting their tasks: S2AND identity disagreements largely require splitting overmerged profiles, while the public object-centric imperfection demonstration compares object--object relationships across logs. Neither provides independent natural business-error ground truth compatible with the implemented operations. Field validation with verified operational corrections remains open.
 
@@ -118,10 +117,10 @@ Sparse or empty histories may not contain enough information to identify a missi
 
 The original study included a BPI 2012 check~\cite{bpi2012}, architecture controls and generated compositional tests. Their results and failures remain in the separate supporting artifact. Four originally declared external simulation sources could not be retrieved; their planned evaluations remain explicitly unexecuted. No substitute was chosen based on outcomes. The revision preserves that earlier study and does not present it as untouched confirmation for newly selected methods.
 
-Recipes, split rules, label-access tests, source/model hashes, predictions, edit audits and per-trial results support reproduction. Third-party source data are obtained separately under their terms. The artifact distinguishes source regeneration, replay of stored models and fresh retraining. No human annotation-time study or independent hardware replication is claimed.
+Recipes, split rules, label-access tests, source/model hashes, predictions, edit audits and per-trial results support reproduction. All 156 combined-repair outputs passed saved-edit replay, event-content preservation and independently implemented primary-metric checks. The native accuracy audit reconstructs truth directly from the pinned source memberships. Both domains' four original revision partitions were rebuilt byte-identically from their public sources. Refitting six selected budget-64 models reproduced calibration decisions and thresholds, with score differences below $1.4\times10^{-13}$; model-file byte identity did not reproduce. These checks distinguish stored-model replay from fresh retraining. No human annotation-time study or independent hardware replication is claimed.
 
 \section{Conclusion}
-\pending{State the supported application finding, the verified-history cost, and the most important remaining failure after confirmation. Do not replace mixed evidence with an unconditional superiority claim.}
+Executable temporal workflows can provide useful repair supervision when verified operational histories are scarce. The strongest fresh result is application-specific: on purchasing, the varied-generated mixture with 64 verified bundles exceeds real-only fitting with 256 bundles in every paired trial. Observation variation alone is insufficient to select a reliable repair system. Loans favor a different mixture, a strong local control leads the separate missing-ID comparison, and even nearly perfect aggregate scores on clean data conceal newly damaged events. The practical outcome is a reproducible way to evaluate generated repair supervision against verification cost and introduced harm. Independent natural-error validation and dependable identity recovery remain necessary before unattended operational use.
 
 \input{references.tex}
 \end{document}

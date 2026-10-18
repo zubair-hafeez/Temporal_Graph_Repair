@@ -2,7 +2,26 @@
 \input{original_results.tex}
 
 \subsection{Fresh confirmation of combined repair}
-\pending{The frozen combined-repair evaluation is running. All 156 jobs must finish before inserting audited results and interpreting their application value.}
+All 156 declared jobs completed. Table~\ref{tab:coupled-budget} and Fig.~\ref{fig:budget-curves} compare identical verification budgets on the reserved histories. The original-generated mixture improves loan history F1 by 2.59 percentage points at budget 16 and 1.13 points at budget 64, averaged over the three trials. At budget 256 its mean falls slightly below real-only fitting. The varied mixture loses to real-only fitting in every loan trial at budget 256. Observation variation that helped generated-only transfer therefore does not automatically improve mixed fitting.
+
+Purchasing provides the clearest low-verification result. At budget 64, the varied mixture reaches 85.6\% history F1 versus 80.6\% for real-only fitting, winning all three paired trials. It also exceeds the 84.5\% real-only mean at budget 256 in every paired trial. This comparison uses one quarter as many complete verified bundles, including calibration, under the declared protocol. It does not measure annotation time or remove the historical development cost.
+\input{budget_results.tex}
+
+The generated-only controls qualify this finding. With no new target verification, original/varied supervision reaches 79.4/80.8\% on loans and 81.9/84.0\% on purchasing. The purchasing varied mixture at budget 64 improves on its generated-only counterpart in just one of three trials, despite its higher mean. Moreover, simply recalibrating fixed generated weights is not a substitute for mixed fitting: calibration-only mean F1 is 75.6--81.0\% on loans and 80.8--81.7\% on purchasing across the three budgets. One 16-bundle loan calibration run damages 9,028 previously correct events. Small calibration sets can produce a permissive operating point that fails when applied repeatedly to a new graph.
+
+\subsection{Operational recovery and introduced harm}
+At budget 64, the purchasing varied mixture raises exact-history recovery from 36.5\% to 48.7\% relative to real-only fitting. It restores a mean of 3,880 previously incorrect event memberships to full correctness, versus 2,992, while reducing newly damaged events from 411 to 237. The unit is an event with its complete target-participation set, including contamination through merged aliases; these counts do not imply that every incorrect association on other events was unchanged.
+
+Operational queries show a related but distinct benefit. Purchasing cancellation-evidence F1 rises from 89.3\% to 91.1\%; correct first and last timestamps rise from 73.2/73.2\% to 81.2/79.2\%. For loans, the original mixture improves cancellation-evidence F1 from 79.4\% to 87.3\% at budget 64, but correct first timestamps fall from 82.5\% to 78.6\%. A higher overall history score consequently does not imply improvement for every investigation question.
+
+Identity recovery remains limited. All loan models fitted with budgets 16 or 64 recover no true alias pairs under their calibrated operating points. On purchasing, the varied mixture at budget 64 recovers true pairs in only one trial. At budget 256 it reaches mean identity-pair precision .912 and recall .378. The supported edit vocabulary is broader than the reliable recovery achieved at small verification budgets.
+
+Tightening the empirical calibration precision target reduces mean new damage in all four tested domain/regime combinations (Table~\ref{tab:reliability}). It also reduces complete event recovery in each. For real-only loans, stricter calibration improves history F1 to 85.7\%, above the 85.3\% original-mixture result at the default operating point. For purchasing, tightening the varied mixture lowers history F1 from 85.6\% to 83.2\%. Thus the default budget advantage should not be read as superiority at every harm tolerance. The atomic-root control remains a development alternative because its recovery/damage tradeoff was inconsistent relative to simple confidence tightening.
+\input{reliability_results.tex}
+
+\subsection{Clean records and a different fault process}
+Table~\ref{tab:robustness} retains both clean-input and independent pipeline-fault outcomes. Every tested method introduces some damage across its clean-record trials, although some individual runs have zero damage; displayed history F1 values rounded to 100.0\% do not mean zero errors. Under pipeline faults, mean damaged history F1 is 77.2\% on loans and 77.7\% on purchasing. The best reported mixture means rise only to 78.4\% and 80.3\%, respectively. The purchasing original mixture introduces more new damage than real-only fitting under this stressor despite higher history F1. These results support cautious use as auditable repair proposals; a calibrated local edit score does not certify the correctness of a complete repaired history.
+\input{robustness_results.tex}
 
 \subsection{Compatible published-method comparison}
 \input{native_results.tex}

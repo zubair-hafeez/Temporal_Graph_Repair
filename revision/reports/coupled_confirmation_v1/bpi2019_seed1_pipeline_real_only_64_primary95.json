@@ -1,0 +1,146 @@
+{
+  "status": "completed_coupled_confirmation",
+  "pins": {
+    "job": {
+      "id": "bpi2019_seed1_pipeline_real_only_64_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "pipeline",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9997958342250456,
+        0.9610884629103371,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    "protocol_sha256": "84832d6b049cfb1448a7cfec915f93fee9e1a72507037e91c41a4973adc5eeec",
+    "task_sha256": "004065b3c1b5516e3b5516f81bac8209299079a8f28bc5938c061cbc6d455079",
+    "model_sha256": "8d7888eef68cca01e98e9f32da2387c7b478aef4089c5e4fac67164064fbcb4f"
+  },
+  "before": {
+    "precision": 0.9260053712683444,
+    "recall": 0.7358306669029766,
+    "f1": 0.7834075582760209,
+    "exact_history_fraction": 0.3688736027515047,
+    "entities": 4652,
+    "per_type": {
+      "POItem": {
+        "precision": 0.932300275252952,
+        "recall": 0.7398838714983617,
+        "f1": 0.791268883926407,
+        "exact_history_fraction": 0.37183020948180817,
+        "entities": 3628
+      },
+      "PO": {
+        "precision": 0.9037027231666306,
+        "recall": 0.7214702896841617,
+        "f1": 0.7555551271631687,
+        "exact_history_fraction": 0.3583984375,
+        "entities": 1024
+      }
+    }
+  },
+  "queries_before": {
+    "entities": 4652,
+    "empty_history_fraction": 0.003869303525365434,
+    "first_timestamp_correct_fraction": 0.718615649183147,
+    "last_timestamp_correct_fraction": 0.6857265692175408,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 112.5,
+        "false_positive": 11.0,
+        "false_negative": 41.5,
+        "true_negative": 4487.0,
+        "precision": 0.9109311740890689,
+        "recall": 0.7305194805194806,
+        "f1": 0.8108108108108109
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 4652.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "history": {
+    "precision": 0.9336302081806561,
+    "recall": 0.7358080128274118,
+    "f1": 0.7874640855431206,
+    "exact_history_fraction": 0.3970335339638865,
+    "entities": 4652,
+    "per_type": {
+      "POItem": {
+        "precision": 0.9414129156336865,
+        "recall": 0.7389362751768823,
+        "f1": 0.7953678645534884,
+        "exact_history_fraction": 0.4015986769570011,
+        "entities": 3628
+      },
+      "PO": {
+        "precision": 0.9060563188841826,
+        "recall": 0.7247246770814264,
+        "f1": 0.7594612435025202,
+        "exact_history_fraction": 0.380859375,
+        "entities": 1024
+      }
+    }
+  },
+  "identity": {
+    "predicted_pairs": 0,
+    "true_pairs": 1027,
+    "correct_pairs": 0,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "events": {
+    "originally_correct_events": 15161,
+    "originally_incorrect_events": 6519,
+    "direct_new_damage": 325,
+    "direct_repaired_events": 126,
+    "expanded_new_damage": 325,
+    "expanded_repaired_events": 126
+  },
+  "queries": {
+    "entities": 4652,
+    "empty_history_fraction": 0.00408426483233018,
+    "first_timestamp_correct_fraction": 0.7346302665520207,
+    "last_timestamp_correct_fraction": 0.7016337059329321,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 112.5,
+        "false_positive": 11.0,
+        "false_negative": 41.5,
+        "true_negative": 4487.0,
+        "precision": 0.9109311740890689,
+        "recall": 0.7305194805194806,
+        "f1": 0.8108108108108109
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 4652.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "edits": 1332,
+  "this_execution_seconds": 976.2834258039948,
+  "resumed_prior_passes": 0,
+  "artifacts": {
+    "repaired.json.gz": "e9fc9943e8e42caf6eda41c38cd35fab75ff8efa3d606f26d6577d77191e548a",
+    "clusters.json": "252109099c755066a71dba202f71bb6da984cea543af126943d897e76faf38d0",
+    "audit.json": "ea4dbad2e2f49f39e300c08aa6d79df799dbaba9037491f3d2b84f5e8901dc76"
+  }
+}

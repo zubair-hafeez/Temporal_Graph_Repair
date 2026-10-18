@@ -1,0 +1,781 @@
+{
+  "status": "completed_revision_development",
+  "task": {
+    "domain": "bpi2017",
+    "partition": "revision_development",
+    "variant": "mixed",
+    "seed": 0,
+    "target_types": [
+      "Application",
+      "Offer"
+    ],
+    "source_sha256": "29fa1e6a4d6f3463ab5c87a501b23716b9986f19bfc4da46343274c658631c12",
+    "graph_sha256": "d88e89ca96601b7a4fd739fa89bb13980049404b574d08eff663c1eae0e35f93",
+    "reference_sha256": "b907684e6a5196797d3dbe8d8a963645fd8917906cc9afeda6cd357f6d5c32c7"
+  },
+  "training_report_sha256": "16f59686d0c26b73ea171a31437c91359d27003f8e37410acf3881f478e2f2b0",
+  "evaluation_implementation_sha256": "af93eef14985dabc0de50f5ec60cb7e16972de4d6c6ce4761bb0c9881e5cfbae",
+  "before": {
+    "precision": 0.9003870985328696,
+    "recall": 0.7368522029754763,
+    "f1": 0.7899095154340411,
+    "exact_history_fraction": 0.15953947368421054,
+    "entities": 1216,
+    "per_type": {
+      "Application": {
+        "precision": 0.8788327704738982,
+        "recall": 0.7024979404000904,
+        "f1": 0.7635668761895799,
+        "exact_history_fraction": 0.0,
+        "entities": 512
+      },
+      "Offer": {
+        "precision": 0.9160629734848481,
+        "recall": 0.7618371212121219,
+        "f1": 0.8090677985209221,
+        "exact_history_fraction": 0.2755681818181818,
+        "entities": 704
+      }
+    }
+  },
+  "queries_before": {
+    "entities": 1216,
+    "empty_history_fraction": 0.003289473684210526,
+    "first_timestamp_correct_fraction": 0.5032894736842105,
+    "last_timestamp_correct_fraction": 0.5053453947368421,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 504.0,
+        "false_positive": 34.5,
+        "false_negative": 123.0,
+        "true_negative": 554.5,
+        "precision": 0.935933147632312,
+        "recall": 0.8038277511961722,
+        "f1": 0.8648648648648649
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 1216.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "results": [
+    {
+      "name": "budget_bpi2017_seed0_real_only_16_v1",
+      "regime": "real_only",
+      "total_verified_root_bundles": 16,
+      "thresholds": [
+        0.9994629678684571,
+        0.9978711661113961,
+        1.1
+      ],
+      "model_sha256": "9ea52df21d204e9c4401afb6ed1e86360fdd40f6e87a6de48505eb4302093136",
+      "history": {
+        "precision": 0.9427525559765452,
+        "recall": 0.8095713982084244,
+        "f1": 0.8482867292578253,
+        "exact_history_fraction": 0.33675986842105265,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.963483935027628,
+            "recall": 0.7995224353283431,
+            "f1": 0.8503239631381319,
+            "exact_history_fraction": 0.1357421875,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9276751893939388,
+            "recall": 0.8168797348484851,
+            "f1": 0.8468051046176037,
+            "exact_history_fraction": 0.48295454545454547,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 214,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15040,
+        "originally_incorrect_events": 4008,
+        "direct_new_damage": 100,
+        "direct_repaired_events": 1889,
+        "expanded_new_damage": 100,
+        "expanded_repaired_events": 1889
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.003700657894736842,
+        "first_timestamp_correct_fraction": 0.7717927631578947,
+        "last_timestamp_correct_fraction": 0.6747532894736842,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 494.0,
+            "false_positive": 28.0,
+            "false_negative": 133.0,
+            "true_negative": 561.0,
+            "precision": 0.946360153256705,
+            "recall": 0.7878787878787878,
+            "f1": 0.8598781549173194
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 3816,
+      "seconds": 392.28211833396927,
+      "audit_sha256": "46f35a468e2f1bef4841feef91bd7ea8d8df21bd02000f6c1b128fce1d1618c6"
+    },
+    {
+      "name": "budget_bpi2017_seed0_real_only_64_v1",
+      "regime": "real_only",
+      "total_verified_root_bundles": 64,
+      "thresholds": [
+        0.9983607409854305,
+        0.900365012405916,
+        1.1
+      ],
+      "model_sha256": "85e1ee63da0eb47a478c32c345fe4c3d0c916e494bb7addfa67f18e62eb3063b",
+      "history": {
+        "precision": 0.946999153517668,
+        "recall": 0.8255770278416752,
+        "f1": 0.861872236678999,
+        "exact_history_fraction": 0.4050164473684211,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9760598385627948,
+            "recall": 0.8210156234156466,
+            "f1": 0.8681681952971452,
+            "exact_history_fraction": 0.267578125,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9258641098484847,
+            "recall": 0.828894412878788,
+            "f1": 0.8572933576839822,
+            "exact_history_fraction": 0.5049715909090909,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 214,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15040,
+        "originally_incorrect_events": 4008,
+        "direct_new_damage": 194,
+        "direct_repaired_events": 2503,
+        "expanded_new_damage": 194,
+        "expanded_repaired_events": 2503
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.015213815789473685,
+        "first_timestamp_correct_fraction": 0.8458059210526315,
+        "last_timestamp_correct_fraction": 0.7421875,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 504.0,
+            "false_positive": 21.5,
+            "false_negative": 123.0,
+            "true_negative": 567.5,
+            "precision": 0.9590865842055185,
+            "recall": 0.8038277511961722,
+            "f1": 0.8746203904555314
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 4891,
+      "seconds": 443.16681279300246,
+      "audit_sha256": "5377caa3691d9e89069616a32af56b8a4d23cc9eaab94088ce2d0140006c2c95"
+    },
+    {
+      "name": "budget_bpi2017_seed0_real_only_256_v1",
+      "regime": "real_only",
+      "total_verified_root_bundles": 256,
+      "thresholds": [
+        0.9989969605887736,
+        0.7461876769198281,
+        0.9862364942251199
+      ],
+      "model_sha256": "0e8ed6add57f6680df3636fdbd9bb08c94eba98c4ae64b7ffe8c1de28d4a6d2f",
+      "history": {
+        "precision": 0.9488226960513714,
+        "recall": 0.8151338371858204,
+        "f1": 0.8575962720364945,
+        "exact_history_fraction": 0.3737664473684211,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9773215556517707,
+            "recall": 0.8189995039413263,
+            "f1": 0.8680351570670114,
+            "exact_history_fraction": 0.2119140625,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9280962527056272,
+            "recall": 0.8123224431818185,
+            "f1": 0.8500043556506625,
+            "exact_history_fraction": 0.4914772727272727,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 15,
+        "true_pairs": 214,
+        "correct_pairs": 13,
+        "precision": 0.8666666666666667,
+        "recall": 0.06074766355140187,
+        "f1": 0.11353711790393013
+      },
+      "events": {
+        "originally_correct_events": 15040,
+        "originally_incorrect_events": 4008,
+        "direct_new_damage": 192,
+        "direct_repaired_events": 2587,
+        "expanded_new_damage": 198,
+        "expanded_repaired_events": 2585
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.0234375,
+        "first_timestamp_correct_fraction": 0.8474506578947368,
+        "last_timestamp_correct_fraction": 0.7232730263157895,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 481.5,
+            "false_positive": 28.5,
+            "false_negative": 145.5,
+            "true_negative": 560.5,
+            "precision": 0.9441176470588235,
+            "recall": 0.7679425837320574,
+            "f1": 0.8469656992084432
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 4994,
+      "seconds": 486.8053640120197,
+      "audit_sha256": "8a187135f43595e5b564fa80bc6e49ecb0e652d8fd43adc5c19c9e3abfab1aa3"
+    },
+    {
+      "name": "budget_bpi2017_seed0_mixed_original_16_v1",
+      "regime": "mixed_original",
+      "total_verified_root_bundles": 16,
+      "thresholds": [
+        0.9884885846815933,
+        0.9969250704382032,
+        1.1
+      ],
+      "model_sha256": "ca2d5460e0c799a145d0fec25333f58425b1656c6545cddbf8b15a9b69b890f3",
+      "history": {
+        "precision": 0.9369320465281834,
+        "recall": 0.8093951668620935,
+        "f1": 0.8459154243923032,
+        "exact_history_fraction": 0.28536184210526316,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9652363969627684,
+            "recall": 0.8008942504641403,
+            "f1": 0.8519256520289444,
+            "exact_history_fraction": 0.123046875,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9163470643939386,
+            "recall": 0.8155776515151515,
+            "f1": 0.841544349747473,
+            "exact_history_fraction": 0.4034090909090909,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 214,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15040,
+        "originally_incorrect_events": 4008,
+        "direct_new_damage": 142,
+        "direct_repaired_events": 1972,
+        "expanded_new_damage": 142,
+        "expanded_repaired_events": 1972
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.003700657894736842,
+        "first_timestamp_correct_fraction": 0.7224506578947368,
+        "last_timestamp_correct_fraction": 0.6759868421052632,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 508.0,
+            "false_positive": 33.0,
+            "false_negative": 119.0,
+            "true_negative": 556.0,
+            "precision": 0.9390018484288355,
+            "recall": 0.810207336523126,
+            "f1": 0.8698630136986302
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 3920,
+      "seconds": 417.9807247390272,
+      "audit_sha256": "130f4e6120f93616ef1509f4a9c97e4920690065882aaf3e83e6edfcedd92cca"
+    },
+    {
+      "name": "budget_bpi2017_seed0_mixed_original_64_v1",
+      "regime": "mixed_original",
+      "total_verified_root_bundles": 64,
+      "thresholds": [
+        0.9883113902576223,
+        0.9570421878446868,
+        1.1
+      ],
+      "model_sha256": "7021623724cf32729154fec7cde8263cb6c6cb749f31102a1adfd5ab1336d22a",
+      "history": {
+        "precision": 0.9593268535426352,
+        "recall": 0.8327286869883612,
+        "f1": 0.8725884891798639,
+        "exact_history_fraction": 0.39761513157894735,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9651851313304253,
+            "recall": 0.8139936524306918,
+            "f1": 0.861537666762496,
+            "exact_history_fraction": 0.16796875,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9550662878787878,
+            "recall": 0.8463541666666667,
+            "f1": 0.8806254509379499,
+            "exact_history_fraction": 0.5646306818181818,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 214,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15040,
+        "originally_incorrect_events": 4008,
+        "direct_new_damage": 224,
+        "direct_repaired_events": 2391,
+        "expanded_new_damage": 224,
+        "expanded_repaired_events": 2391
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.0078125,
+        "first_timestamp_correct_fraction": 0.8207236842105263,
+        "last_timestamp_correct_fraction": 0.7561677631578947,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 530.5,
+            "false_positive": 24.5,
+            "false_negative": 96.5,
+            "true_negative": 564.5,
+            "precision": 0.9558558558558559,
+            "recall": 0.8460925039872408,
+            "f1": 0.8976311336717429
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 4762,
+      "seconds": 394.6926772390725,
+      "audit_sha256": "5a5925307d03f0c43decec78aba1fdca54e0d024eabe1f2552ec84f1035167b6"
+    },
+    {
+      "name": "budget_bpi2017_seed0_mixed_original_256_v1",
+      "regime": "mixed_original",
+      "total_verified_root_bundles": 256,
+      "thresholds": [
+        0.995188599291094,
+        0.929818910293176,
+        1.1
+      ],
+      "model_sha256": "410291005ffaa3f0e34d0303a7ce1756b4ca55569f376c34c9749162cb700e2c",
+      "history": {
+        "precision": 0.975725686422504,
+        "recall": 0.7853755239120681,
+        "f1": 0.8476351217880995,
+        "exact_history_fraction": 0.29769736842105265,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9802716823367804,
+            "recall": 0.8045572338744968,
+            "f1": 0.8594100759530888,
+            "exact_history_fraction": 0.130859375,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9724195075757575,
+            "recall": 0.7714251893939399,
+            "f1": 0.8390715187590179,
+            "exact_history_fraction": 0.4190340909090909,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 214,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15040,
+        "originally_incorrect_events": 4008,
+        "direct_new_damage": 123,
+        "direct_repaired_events": 2153,
+        "expanded_new_damage": 123,
+        "expanded_repaired_events": 2153
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.005345394736842105,
+        "first_timestamp_correct_fraction": 0.7606907894736842,
+        "last_timestamp_correct_fraction": 0.7582236842105263,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 505.5,
+            "false_positive": 6.5,
+            "false_negative": 121.5,
+            "true_negative": 582.5,
+            "precision": 0.9873046875,
+            "recall": 0.80622009569378,
+            "f1": 0.887620719929763
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 4297,
+      "seconds": 392.31708209891804,
+      "audit_sha256": "b46014ebe73c5a7efa71c488dd380922d84c237f65647deaf31f46efcba2cf9b"
+    },
+    {
+      "name": "budget_bpi2017_seed0_mixed_varied_16_v1",
+      "regime": "mixed_varied",
+      "total_verified_root_bundles": 16,
+      "thresholds": [
+        0.9883735893175593,
+        0.9981754755698254,
+        1.1
+      ],
+      "model_sha256": "c54ec17b1e88444cefac690499bbd584336dfa75c2ade61e9410a39e7437e593",
+      "history": {
+        "precision": 0.9337623475201525,
+        "recall": 0.8017478528997405,
+        "f1": 0.840483003089221,
+        "exact_history_fraction": 0.2713815789473684,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9613704711936953,
+            "recall": 0.796973416261886,
+            "f1": 0.8493046844202343,
+            "exact_history_fraction": 0.12109375,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9136837121212114,
+            "recall": 0.8052201704545454,
+            "f1": 0.8340672348484831,
+            "exact_history_fraction": 0.3806818181818182,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 214,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15040,
+        "originally_incorrect_events": 4008,
+        "direct_new_damage": 112,
+        "direct_repaired_events": 1868,
+        "expanded_new_damage": 112,
+        "expanded_repaired_events": 1868
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.003289473684210526,
+        "first_timestamp_correct_fraction": 0.7162828947368421,
+        "last_timestamp_correct_fraction": 0.6492598684210527,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 505.0,
+            "false_positive": 31.5,
+            "false_negative": 122.0,
+            "true_negative": 557.5,
+            "precision": 0.9412861136999068,
+            "recall": 0.8054226475279107,
+            "f1": 0.8680704770090245
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 3678,
+      "seconds": 385.0868898440385,
+      "audit_sha256": "d7202cff1cb8785b732894d071e33111feb15e4f013373ee2300858b114c4953"
+    },
+    {
+      "name": "budget_bpi2017_seed0_mixed_varied_64_v1",
+      "regime": "mixed_varied",
+      "total_verified_root_bundles": 64,
+      "thresholds": [
+        0.9886694335229906,
+        0.9812995464100683,
+        1.1
+      ],
+      "model_sha256": "98992061d56597b830cf79f44dd9a5923b31e1c0a7ae4f3ee73dde27c983cf47",
+      "history": {
+        "precision": 0.9556746787645859,
+        "recall": 0.8140866822566931,
+        "f1": 0.8587230459240253,
+        "exact_history_fraction": 0.3404605263157895,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9711759297742245,
+            "recall": 0.80072475056798,
+            "f1": 0.8549364490993226,
+            "exact_history_fraction": 0.130859375,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.944401041666666,
+            "recall": 0.8238044507575758,
+            "f1": 0.8614769345238084,
+            "exact_history_fraction": 0.4928977272727273,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 214,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15040,
+        "originally_incorrect_events": 4008,
+        "direct_new_damage": 146,
+        "direct_repaired_events": 2063,
+        "expanded_new_damage": 146,
+        "expanded_repaired_events": 2063
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.004523026315789474,
+        "first_timestamp_correct_fraction": 0.8083881578947368,
+        "last_timestamp_correct_fraction": 0.7245065789473685,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 513.5,
+            "false_positive": 27.0,
+            "false_negative": 113.5,
+            "true_negative": 562.0,
+            "precision": 0.9500462534690102,
+            "recall": 0.8189792663476874,
+            "f1": 0.8796573875802998
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 4198,
+      "seconds": 418.008163159946,
+      "audit_sha256": "11899c5ea7aa8f29530b8a91fcbe43c35fc0e04e8cd2de4f83390ccaf72335fc"
+    },
+    {
+      "name": "budget_bpi2017_seed0_mixed_varied_256_v1",
+      "regime": "mixed_varied",
+      "total_verified_root_bundles": 256,
+      "thresholds": [
+        0.9935782950089271,
+        0.9205364185799192,
+        0.9901261509890098
+      ],
+      "model_sha256": "9037c542d99443ee8a076ff08463fb4b5820ab32f36ea56e631fd2ae88fbc802",
+      "history": {
+        "precision": 0.9701322981990547,
+        "recall": 0.7920660078684882,
+        "f1": 0.8507015314164064,
+        "exact_history_fraction": 0.29851973684210525,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9796826978060894,
+            "recall": 0.7889529926459944,
+            "f1": 0.8512429600306322,
+            "exact_history_fraction": 0.095703125,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9631865530303027,
+            "recall": 0.7943300189393941,
+            "f1": 0.850307765151515,
+            "exact_history_fraction": 0.4460227272727273,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 18,
+        "true_pairs": 214,
+        "correct_pairs": 15,
+        "precision": 0.8333333333333334,
+        "recall": 0.07009345794392523,
+        "f1": 0.12931034482758622
+      },
+      "events": {
+        "originally_correct_events": 15040,
+        "originally_incorrect_events": 4008,
+        "direct_new_damage": 148,
+        "direct_repaired_events": 1805,
+        "expanded_new_damage": 149,
+        "expanded_repaired_events": 1803
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.005756578947368421,
+        "first_timestamp_correct_fraction": 0.7972861842105263,
+        "last_timestamp_correct_fraction": 0.7598684210526315,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 505.0,
+            "false_positive": 12.5,
+            "false_negative": 122.0,
+            "true_negative": 576.5,
+            "precision": 0.9758454106280193,
+            "recall": 0.8054226475279107,
+            "f1": 0.8824814329401486
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 3959,
+      "seconds": 377.25785418390296,
+      "audit_sha256": "f3a18e70190b80ef1eb83e74d8ec2c044c431842d24b3d22dc3b7e0c41a7228c"
+    }
+  ],
+  "seconds": 3716.1381363969995
+}

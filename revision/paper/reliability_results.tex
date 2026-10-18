@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering\small
+\caption{Threshold sensitivity at budget 64. Columns compare .95/.99 empirical calibration precision targets; neither is a guarantee on new histories. F1 is percent; damage and repaired-event counts are means over three seeds.}
+\label{tab:reliability}
+\begin{tabular}{llrrrrrr}
+\toprule
+Application & Method & F1 .95 & .99 & Damage .95 & .99 & Repaired .95 & .99 \\
+\midrule
+Loans & Real only & 84.2 & 85.7 & 671.7 & 227.3 & 4891.0 & 4319.7 \\
+Loans & Real + varied generated & 83.6 & 83.1 & 756.3 & 278.0 & 3994.7 & 2566.3 \\
+Purchasing & Real only & 80.6 & 79.6 & 411.3 & 84.7 & 2992.0 & 1217.7 \\
+Purchasing & Real + varied generated & 85.6 & 83.2 & 237.3 & 154.3 & 3880.3 & 2613.0 \\
+\bottomrule
+\end{tabular}
+\end{table}

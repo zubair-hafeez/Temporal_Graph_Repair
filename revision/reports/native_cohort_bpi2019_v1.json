@@ -1,0 +1,97 @@
+{
+  "source_roots": 76349,
+  "excluded_original_roots": 1560,
+  "excluded_original_children": 4903,
+  "shared_target_children": 0,
+  "roots_crossing_excluded_or_shared_children": 1560,
+  "eligible_roots": 74789,
+  "excluded_root_ids_sha256": "ea8f1114ae47a7ab77c877bc6a7b1e2cf299922aca908bcc040a6f536d7d3ad1",
+  "partitions": {
+    "development": {
+      "root_count": 512,
+      "root_ids_sha256": "b10b80041de797eec26f188d46488562fefda5b02712de086107b9fe2a88c811"
+    },
+    "annotation": {
+      "root_count": 1024,
+      "root_ids_sha256": "870cc650cf30cdb49622f01f01e4a8fd64cabfd8e8729e29273232c0588c39b5"
+    },
+    "confirmation": {
+      "root_count": 1024,
+      "root_ids_sha256": "e69923262df1810a3fc7b3d890ee77cf427ac323502fcfc05491a5f2333b5c31"
+    },
+    "native_comparison": {
+      "root_count": 2048,
+      "root_ids_sha256": "c97443ca596dcc62b793f6441841b9ed0c67aac969a23db20ce3e56e7f119e4b"
+    }
+  },
+  "root_and_child_disjointness_verified": true,
+  "source_events_scanned": 1595923,
+  "original_confirmation_root_ids_sha256": "996208e37167c088ac43e615cbd59d760f35b1dbb40a3d6c8050bd304fd73fb9",
+  "status": "expanded_native_cohort_prepared_outcomes_unopened",
+  "domain": "bpi2019",
+  "target_types": [
+    "PO",
+    "POItem"
+  ],
+  "root_type": "PO",
+  "amendment_sha256": "6c7c76d59719950e6b7b968ed1a5aa0dbab926ef27ede17b86a50e9831698b4b",
+  "base_plan_sha256": "fbc0bff178bed416596009016ac4c31f991fb52f849a87f37bcc5b7f4f98469d",
+  "previous_cohort_manifest_sha256": "8af58708f664d25568fd97e2d3ea2d909a0c045f0e8f54a4927973681f62d6e1",
+  "source_sha256": "f4196103cb1c41bc26e04993dd10a44b8229cd05eebc3d66c2f11f2d859a9893",
+  "implementation_sha256": "a38d8aac28e2df3246216ab406f7758dae0ab9864d958267121a9643156f17a7",
+  "adapter_sha256": "75266881e3419a0a7fa6e9f281ea61daed48b7b670703a5c975eab37a892f2f7",
+  "graph_sha256": "0e7269092767da43c5aaefe1ca2475988829bc77fbd5f039c09379ed279ae58e",
+  "bundles_sha256": "b50809e1272aacae7707eea38c57a3342f0e2112244d4b8ac3121ea93a844e55",
+  "summary": {
+    "name": "bpi2019_revision_native_comparison",
+    "events": 40483,
+    "objects": 9493,
+    "object_types": {
+      "Resource": 356,
+      "Vendor": 569,
+      "PO": 2048,
+      "POItem": 6520
+    },
+    "event_types": {
+      "Create Purchase Order Item": 6520,
+      "Change Quantity": 584,
+      "Create Purchase Requisition Item": 1116,
+      "Receive Order Confirmation": 937,
+      "Record Goods Receipt": 7913,
+      "Vendor creates invoice": 5599,
+      "Change Price": 317,
+      "Record Invoice Receipt": 5822,
+      "Remove Payment Block": 1534,
+      "Record Service Entry Sheet": 3887,
+      "Cancel Goods Receipt": 65,
+      "SRM: Created": 26,
+      "SRM: Document Completed": 26,
+      "SRM: Awaiting Approval": 26,
+      "SRM: Ordered": 26,
+      "SRM: Complete": 26,
+      "SRM: In Transfer to Execution Syst.": 27,
+      "SRM: Change was Transmitted": 24,
+      "Delete Purchase Order Item": 245,
+      "Update Order Confirmation": 15,
+      "Vendor creates debit memo": 200,
+      "Clear Invoice": 5001,
+      "Change Delivery Indicator": 74,
+      "Cancel Invoice Receipt": 233,
+      "Reactivate Purchase Order Item": 25,
+      "SRM: Held": 2,
+      "SRM: Incomplete": 2,
+      "Change Approval for Purchase Order": 158,
+      "Change Storage Location": 4,
+      "Set Payment Block": 9,
+      "Block Purchase Order Item": 19,
+      "Record Subsequent Invoice": 3,
+      "Cancel Subsequent Invoice": 10,
+      "SRM: Deleted": 2,
+      "Release Purchase Requisition": 5,
+      "SRM: Transfer Failed (E.Sys.)": 1
+    },
+    "participation_links": 152096
+  },
+  "earlier_partitions_unchanged": true,
+  "outcomes_opened": false
+}

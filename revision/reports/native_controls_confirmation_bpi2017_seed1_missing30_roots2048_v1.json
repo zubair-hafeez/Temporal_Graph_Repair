@@ -1,0 +1,127 @@
+{
+  "status": "completed_native_controls_confirmation",
+  "name": "native_controls_confirmation_bpi2017_seed1_missing30_roots2048_v1",
+  "domain": "bpi2017",
+  "seed": 1,
+  "missing_rate": 0.3,
+  "max_roots": 2048,
+  "source_sha256": "891dafeccd5710a72da5008513a48d5b85f479965b9dc2c4b6e21b04f8abafb0",
+  "implementation_sha256": "e0305c36ae21d2356828d9c802208b97eef04b13efd582d96ac8f3edade46c03",
+  "protocol_sha256": "c20c91503824137b73b0621cf492a6a6e05dea86d6783b639333df19299e0428",
+  "observed_graph_sha256": "e98944386b9248995a52275e0b8721e71159d0a29636459b63207f1e89d843b9",
+  "known_labels_model_sha256": "87bf42ba958ca385569c8216fb18edf13edcbb0e373a9200098cb5a95f4bfcda",
+  "generated_model_hashes": {
+    "generated_original": "c2a95d9173329ddc77876ccdf00193ade110c63b0487dafb4c13a1d7adfe33e9",
+    "generated_varied": "803be97285c169b99459277debcba0db576224ed62355cd015280b4256b3f07a"
+  },
+  "observed_events": 77981,
+  "hidden_events": 23322,
+  "known_label_training": {
+    "known_query_events_used": 4096,
+    "examples": 524288,
+    "positives": 4096,
+    "real_examples": 524288,
+    "real_positives": 4096,
+    "generated_examples": 0
+  },
+  "results": {
+    "generated_original": {
+      "correct": 21018,
+      "assigned": 23322,
+      "hidden": 23322,
+      "accuracy_all_missing": 0.9012091587342423,
+      "history": {
+        "precision": 0.9733226365910195,
+        "recall": 0.9716271129740881,
+        "f1": 0.9716948681875817,
+        "exact_history_fraction": 0.26416015625,
+        "entities": 2048,
+        "per_type": {
+          "Application": {
+            "precision": 0.9733226365910195,
+            "recall": 0.9716271129740881,
+            "f1": 0.9716948681875817,
+            "exact_history_fraction": 0.26416015625,
+            "entities": 2048
+          }
+        }
+      }
+    },
+    "generated_varied": {
+      "correct": 20813,
+      "assigned": 23322,
+      "hidden": 23322,
+      "accuracy_all_missing": 0.8924191750278707,
+      "history": {
+        "precision": 0.9671329975338547,
+        "recall": 0.9694044044380945,
+        "f1": 0.9673250132520018,
+        "exact_history_fraction": 0.21728515625,
+        "entities": 2048,
+        "per_type": {
+          "Application": {
+            "precision": 0.9671329975338547,
+            "recall": 0.9694044044380945,
+            "f1": 0.9673250132520018,
+            "exact_history_fraction": 0.21728515625,
+            "entities": 2048
+          }
+        }
+      }
+    },
+    "known_labels_only": {
+      "correct": 22063,
+      "assigned": 23322,
+      "hidden": 23322,
+      "accuracy_all_missing": 0.9460166366520881,
+      "history": {
+        "precision": 0.9854201584857499,
+        "recall": 0.984320507479291,
+        "f1": 0.9844381448973794,
+        "exact_history_fraction": 0.46923828125,
+        "entities": 2048,
+        "per_type": {
+          "Application": {
+            "precision": 0.9854201584857499,
+            "recall": 0.984320507479291,
+            "f1": 0.9844381448973794,
+            "exact_history_fraction": 0.46923828125,
+            "entities": 2048
+          }
+        }
+      }
+    },
+    "nearest_event": {
+      "correct": 19536,
+      "assigned": 23322,
+      "hidden": 23322,
+      "accuracy_all_missing": 0.8376640082325701,
+      "history": {
+        "precision": 0.955004037726996,
+        "recall": 0.9532890423599285,
+        "f1": 0.9530314233354299,
+        "exact_history_fraction": 0.11474609375,
+        "entities": 2048,
+        "per_type": {
+          "Application": {
+            "precision": 0.955004037726996,
+            "recall": 0.9532890423599285,
+            "f1": 0.9530314233354299,
+            "exact_history_fraction": 0.11474609375,
+            "entities": 2048
+          }
+        }
+      }
+    }
+  },
+  "contract": "Activity, resource, timestamp and existing case memberships only. No child IDs, vendor context, copied attributes, wrong joins, or aliases. Only missing IDs are modified.",
+  "limits": [
+    "Reserved native-task comparison, fixed by a separate protocol before outcomes.",
+    "Top-one scoring uses the known single-case task contract; it is not the full iterative repair decoder.",
+    "The target-local boosted control uses up to 4096 known events; HERE uses all remaining known events. Report this unequal fitting sample count.",
+    "Generated-only scorers use no fitting target labels beyond observed memberships."
+  ],
+  "candidate_recall": 0.9822056427407598,
+  "seconds": 170.79317197203636,
+  "predictions_sha256": "492644dc225117ea95ffff13f6afbebca33030d02923ce5620b0eb21df5403d0"
+}

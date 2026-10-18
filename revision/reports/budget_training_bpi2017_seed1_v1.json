@@ -1,0 +1,1046 @@
+{
+  "status": "completed_revision_budget_training",
+  "domain": "bpi2017",
+  "seed": 1,
+  "annotation_manifest_sha256": "7045c2b9d4b61276ca314ac611535c572e91722d1d2b19da0674fa55a5d64dcf",
+  "implementation": {
+    "revision/budget_learning.py": "7e6904e99aeca7ab2f0f1e58fffbfa9bdc992dd7877f3193a56dbeeb6af73bd2",
+    "revision/annotation.py": "c67bb8ef654c897b6910339f52188230cd5a0ef6afb2f1f979d5131c256e993c",
+    "tgrepair/matching.py": "304595e5d38ef157072cc693c7714ef3c2d4dee408648c860cca6dc97899b54f",
+    "tgrepair/entity_features.py": "6122ad15c21c44645521d0a920f0bd855cd112cf4caca49d548ebc8adba84dff",
+    "tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7"
+  },
+  "models": [
+    {
+      "name": "budget_bpi2017_seed1_real_only_16_v1",
+      "regime": "real_only",
+      "total_verified_root_bundles": 16,
+      "fit_verified_root_bundles": 12,
+      "calibration_verified_root_bundles": 4,
+      "annotation_cost": {
+        "fit": {
+          "verified_root_bundles": 12,
+          "verified_target_entities": 31,
+          "verified_alias_handles": 38,
+          "verified_events": 436,
+          "sampled_events": 436,
+          "actions": 114021,
+          "identity_pairs": 2405,
+          "positive_pairs_added_from_verified_histories": 3,
+          "positives_by_operation": [
+            95,
+            40,
+            7
+          ],
+          "examples_by_operation": [
+            111167,
+            449,
+            2405
+          ],
+          "file": "fit_16.npz",
+          "sha256": "7ce935395aab931580797d5b756476b0071137322422687b1d68a92e53d85a0f",
+          "selected_root_ids_sha256": "88d1ba2a73edfd21eab80d0707a6a4ad119f4bdaf77d73253173d8f82941ab8e"
+        },
+        "calibration": {
+          "verified_root_bundles": 4,
+          "verified_target_entities": 11,
+          "verified_alias_handles": 12,
+          "verified_events": 160,
+          "sampled_events": 160,
+          "actions": 41722,
+          "identity_pairs": 762,
+          "positive_pairs_added_from_verified_histories": 0,
+          "positives_by_operation": [
+            29,
+            11,
+            1
+          ],
+          "examples_by_operation": [
+            40793,
+            167,
+            762
+          ],
+          "file": "calibration_16.npz",
+          "sha256": "d403e22bcb44cb8ec3e8babd33f7478e2d6a47dc6c360ba7c4e2e36fb4db8c34",
+          "selected_root_ids_sha256": "e716d8ed880c288a5e6909a47249b753b7174d883c82a544aefc33db3d664994"
+        }
+      },
+      "operation_metrics": [
+        {
+          "examples": 111167,
+          "positives": 95,
+          "real_examples": 111167,
+          "real_positives": 95,
+          "generated_examples": 0,
+          "calibration_examples": 40793,
+          "calibration_positives": 29,
+          "calibration_ap": 0.7620727588943196
+        },
+        {
+          "examples": 449,
+          "positives": 40,
+          "real_examples": 449,
+          "real_positives": 40,
+          "generated_examples": 0,
+          "calibration_examples": 167,
+          "calibration_positives": 11,
+          "calibration_ap": 1.0
+        },
+        {
+          "examples": 2405,
+          "positives": 7,
+          "real_examples": 2405,
+          "real_positives": 7,
+          "generated_examples": 0,
+          "calibration_examples": 762,
+          "calibration_positives": 1,
+          "calibration_ap": 0.0029850746268656717
+        }
+      ],
+      "model_sha256": "f5b5937710d9961884dc44d6c4342b4cdddfaa40dfcefa56d3ee4ff73c02fc38",
+      "calibration_sha256": "4f863ac6401e1d676bca0be13d65c337c3696d18f298f8cdb3df56750400f6d3",
+      "thresholds": [
+        0.999448821594888,
+        0.384512903100136,
+        1.1
+      ],
+      "calibration": [
+        {
+          "precision": 1.0,
+          "recall": 0.27586206896551724,
+          "correct_actions": 8
+        },
+        {
+          "precision": 1.0,
+          "recall": 1.0,
+          "correct_actions": 11
+        },
+        {
+          "precision": null,
+          "recall": 0.0,
+          "reason": "insufficient_verified_positive_actions"
+        }
+      ],
+      "seconds": 1.7055361639941111
+    },
+    {
+      "name": "budget_bpi2017_seed1_real_only_64_v1",
+      "regime": "real_only",
+      "total_verified_root_bundles": 64,
+      "fit_verified_root_bundles": 48,
+      "calibration_verified_root_bundles": 16,
+      "annotation_cost": {
+        "fit": {
+          "verified_root_bundles": 48,
+          "verified_target_entities": 121,
+          "verified_alias_handles": 141,
+          "verified_events": 1703,
+          "sampled_events": 1703,
+          "actions": 444676,
+          "identity_pairs": 8708,
+          "positive_pairs_added_from_verified_histories": 5,
+          "positives_by_operation": [
+            387,
+            179,
+            19
+          ],
+          "examples_by_operation": [
+            434207,
+            1761,
+            8708
+          ],
+          "file": "fit_64.npz",
+          "sha256": "9aa0b609ce95f9af18d4a01c94149ad3fcf08100c49b65528c67f9e7bca883fa",
+          "selected_root_ids_sha256": "703dc83c31ae1bc159637296a57504d36dab7bf0b336bc710157037e87092978"
+        },
+        "calibration": {
+          "verified_root_bundles": 16,
+          "verified_target_entities": 38,
+          "verified_alias_handles": 44,
+          "verified_events": 614,
+          "sampled_events": 614,
+          "actions": 159975,
+          "identity_pairs": 2791,
+          "positive_pairs_added_from_verified_histories": 1,
+          "positives_by_operation": [
+            131,
+            63,
+            6
+          ],
+          "examples_by_operation": [
+            156559,
+            625,
+            2791
+          ],
+          "file": "calibration_64.npz",
+          "sha256": "84240a943d62869d8108502e2592e14897bc1648b46879c67557c0f5280f2ef9",
+          "selected_root_ids_sha256": "06b7994a1912b220b5c47e61e42baddfd4678c282f81f1815e40402c78af3968"
+        }
+      },
+      "operation_metrics": [
+        {
+          "examples": 434207,
+          "positives": 387,
+          "real_examples": 434207,
+          "real_positives": 387,
+          "generated_examples": 0,
+          "calibration_examples": 156559,
+          "calibration_positives": 131,
+          "calibration_ap": 0.8398359999209295
+        },
+        {
+          "examples": 1761,
+          "positives": 179,
+          "real_examples": 1761,
+          "real_positives": 179,
+          "generated_examples": 0,
+          "calibration_examples": 625,
+          "calibration_positives": 63,
+          "calibration_ap": 0.9977755454907142
+        },
+        {
+          "examples": 8708,
+          "positives": 19,
+          "real_examples": 8708,
+          "real_positives": 19,
+          "generated_examples": 0,
+          "calibration_examples": 2791,
+          "calibration_positives": 6,
+          "calibration_ap": 0.8111735330836455
+        }
+      ],
+      "model_sha256": "ff79d7f66f72916fb9b52e7848218b2481464869ba40f7b24961c99732f46440",
+      "calibration_sha256": "d9b96594d278216f303dde475c5fbcbb1372e8a8c8997db130390c714ddefa3b",
+      "thresholds": [
+        0.9955804538512529,
+        0.28610395113457776,
+        1.1
+      ],
+      "calibration": [
+        {
+          "precision": 0.96,
+          "recall": 0.549618320610687,
+          "correct_actions": 72
+        },
+        {
+          "precision": 0.9538461538461539,
+          "recall": 0.9841269841269841,
+          "correct_actions": 62
+        },
+        {
+          "precision": null,
+          "recall": 0.0,
+          "reason": "no_feasible_verified_operating_point"
+        }
+      ],
+      "seconds": 7.1873556829523295
+    },
+    {
+      "name": "budget_bpi2017_seed1_real_only_256_v1",
+      "regime": "real_only",
+      "total_verified_root_bundles": 256,
+      "fit_verified_root_bundles": 192,
+      "calibration_verified_root_bundles": 64,
+      "annotation_cost": {
+        "fit": {
+          "verified_root_bundles": 192,
+          "verified_target_entities": 453,
+          "verified_alias_handles": 537,
+          "verified_events": 6705,
+          "sampled_events": 4096,
+          "actions": 1080390,
+          "identity_pairs": 31814,
+          "positive_pairs_added_from_verified_histories": 30,
+          "positives_by_operation": [
+            892,
+            397,
+            81
+          ],
+          "examples_by_operation": [
+            1044357,
+            4219,
+            31814
+          ],
+          "file": "fit_256.npz",
+          "sha256": "5f3c704394f7ea6f0854e0f09130e729d4227a622bfcae05e97219f2872224f5",
+          "selected_root_ids_sha256": "120920ef7ae41bc3599735b8925ecf5dd30214a873178d0e3864fce30d8aa6b4"
+        },
+        "calibration": {
+          "verified_root_bundles": 64,
+          "verified_target_entities": 154,
+          "verified_alias_handles": 182,
+          "verified_events": 2427,
+          "sampled_events": 2427,
+          "actions": 632652,
+          "identity_pairs": 11340,
+          "positive_pairs_added_from_verified_histories": 7,
+          "positives_by_operation": [
+            549,
+            248,
+            28
+          ],
+          "examples_by_operation": [
+            618840,
+            2472,
+            11340
+          ],
+          "file": "calibration_256.npz",
+          "sha256": "4634b5fef30e70eb51ed43e721683e5d7b220a81ddc503e29c02bf142c1bb3c0",
+          "selected_root_ids_sha256": "a93456b876f02629c68cc5e633ca55d8420de0588976d7cc1876037e94f9c306"
+        }
+      },
+      "operation_metrics": [
+        {
+          "examples": 1044357,
+          "positives": 892,
+          "real_examples": 1044357,
+          "real_positives": 892,
+          "generated_examples": 0,
+          "calibration_examples": 618840,
+          "calibration_positives": 549,
+          "calibration_ap": 0.7900680101880981
+        },
+        {
+          "examples": 4219,
+          "positives": 397,
+          "real_examples": 4219,
+          "real_positives": 397,
+          "generated_examples": 0,
+          "calibration_examples": 2472,
+          "calibration_positives": 248,
+          "calibration_ap": 0.9913292917833951
+        },
+        {
+          "examples": 31814,
+          "positives": 81,
+          "real_examples": 31814,
+          "real_positives": 81,
+          "generated_examples": 0,
+          "calibration_examples": 11340,
+          "calibration_positives": 28,
+          "calibration_ap": 0.573702427955992
+        }
+      ],
+      "model_sha256": "b10cfebcfedabeeaaa524cd90ff8d933bdb71f2e6036eb45e01313bc107bd6b4",
+      "calibration_sha256": "718eb1226c8c1099406e95f052f25ea52fdd48c697f5506e55243a78fc02fcd7",
+      "thresholds": [
+        0.9983954957110601,
+        0.7854676851531688,
+        0.9934266014175359
+      ],
+      "calibration": [
+        {
+          "precision": 0.9516129032258065,
+          "recall": 0.5373406193078324,
+          "correct_actions": 295
+        },
+        {
+          "precision": 0.9518072289156626,
+          "recall": 0.9556451612903226,
+          "correct_actions": 237
+        },
+        {
+          "precision": 1.0,
+          "recall": 0.32142857142857145,
+          "correct_actions": 9
+        }
+      ],
+      "seconds": 21.060101034934632
+    },
+    {
+      "name": "budget_bpi2017_seed1_mixed_original_16_v1",
+      "regime": "mixed_original",
+      "total_verified_root_bundles": 16,
+      "fit_verified_root_bundles": 12,
+      "calibration_verified_root_bundles": 4,
+      "annotation_cost": {
+        "fit": {
+          "verified_root_bundles": 12,
+          "verified_target_entities": 31,
+          "verified_alias_handles": 38,
+          "verified_events": 436,
+          "sampled_events": 436,
+          "actions": 114021,
+          "identity_pairs": 2405,
+          "positive_pairs_added_from_verified_histories": 3,
+          "positives_by_operation": [
+            95,
+            40,
+            7
+          ],
+          "examples_by_operation": [
+            111167,
+            449,
+            2405
+          ],
+          "file": "fit_16.npz",
+          "sha256": "7ce935395aab931580797d5b756476b0071137322422687b1d68a92e53d85a0f",
+          "selected_root_ids_sha256": "88d1ba2a73edfd21eab80d0707a6a4ad119f4bdaf77d73253173d8f82941ab8e"
+        },
+        "calibration": {
+          "verified_root_bundles": 4,
+          "verified_target_entities": 11,
+          "verified_alias_handles": 12,
+          "verified_events": 160,
+          "sampled_events": 160,
+          "actions": 41722,
+          "identity_pairs": 762,
+          "positive_pairs_added_from_verified_histories": 0,
+          "positives_by_operation": [
+            29,
+            11,
+            1
+          ],
+          "examples_by_operation": [
+            40793,
+            167,
+            762
+          ],
+          "file": "calibration_16.npz",
+          "sha256": "d403e22bcb44cb8ec3e8babd33f7478e2d6a47dc6c360ba7c4e2e36fb4db8c34",
+          "selected_root_ids_sha256": "e716d8ed880c288a5e6909a47249b753b7174d883c82a544aefc33db3d664994"
+        }
+      },
+      "operation_metrics": [
+        {
+          "examples": 1050816,
+          "positives": 10303,
+          "real_examples": 111167,
+          "real_positives": 95,
+          "generated_examples": 939649,
+          "calibration_examples": 40793,
+          "calibration_positives": 29,
+          "calibration_ap": 0.794152876545504
+        },
+        {
+          "examples": 58561,
+          "positives": 4411,
+          "real_examples": 449,
+          "real_positives": 40,
+          "generated_examples": 58112,
+          "calibration_examples": 167,
+          "calibration_positives": 11,
+          "calibration_ap": 1.0
+        },
+        {
+          "examples": 1281675,
+          "positives": 8408,
+          "real_examples": 2405,
+          "real_positives": 7,
+          "generated_examples": 1279270,
+          "calibration_examples": 762,
+          "calibration_positives": 1,
+          "calibration_ap": 0.017241379310344827
+        }
+      ],
+      "model_sha256": "a149046ee462c24aff09dadd4b1097fbea009f9a14140353fd0cc0acc6039b27",
+      "calibration_sha256": "8ed75c5fba84f2d1e26a9fed2eec0da99392995eca8fe293cb4e1fb74eea0d46",
+      "thresholds": [
+        0.9901009461754073,
+        0.9881774036371033,
+        1.1
+      ],
+      "calibration": [
+        {
+          "precision": 1.0,
+          "recall": 0.3103448275862069,
+          "correct_actions": 9
+        },
+        {
+          "precision": 1.0,
+          "recall": 1.0,
+          "correct_actions": 11
+        },
+        {
+          "precision": null,
+          "recall": 0.0,
+          "reason": "insufficient_verified_positive_actions"
+        }
+      ],
+      "seconds": 45.143793313996866
+    },
+    {
+      "name": "budget_bpi2017_seed1_mixed_original_64_v1",
+      "regime": "mixed_original",
+      "total_verified_root_bundles": 64,
+      "fit_verified_root_bundles": 48,
+      "calibration_verified_root_bundles": 16,
+      "annotation_cost": {
+        "fit": {
+          "verified_root_bundles": 48,
+          "verified_target_entities": 121,
+          "verified_alias_handles": 141,
+          "verified_events": 1703,
+          "sampled_events": 1703,
+          "actions": 444676,
+          "identity_pairs": 8708,
+          "positive_pairs_added_from_verified_histories": 5,
+          "positives_by_operation": [
+            387,
+            179,
+            19
+          ],
+          "examples_by_operation": [
+            434207,
+            1761,
+            8708
+          ],
+          "file": "fit_64.npz",
+          "sha256": "9aa0b609ce95f9af18d4a01c94149ad3fcf08100c49b65528c67f9e7bca883fa",
+          "selected_root_ids_sha256": "703dc83c31ae1bc159637296a57504d36dab7bf0b336bc710157037e87092978"
+        },
+        "calibration": {
+          "verified_root_bundles": 16,
+          "verified_target_entities": 38,
+          "verified_alias_handles": 44,
+          "verified_events": 614,
+          "sampled_events": 614,
+          "actions": 159975,
+          "identity_pairs": 2791,
+          "positive_pairs_added_from_verified_histories": 1,
+          "positives_by_operation": [
+            131,
+            63,
+            6
+          ],
+          "examples_by_operation": [
+            156559,
+            625,
+            2791
+          ],
+          "file": "calibration_64.npz",
+          "sha256": "84240a943d62869d8108502e2592e14897bc1648b46879c67557c0f5280f2ef9",
+          "selected_root_ids_sha256": "06b7994a1912b220b5c47e61e42baddfd4678c282f81f1815e40402c78af3968"
+        }
+      },
+      "operation_metrics": [
+        {
+          "examples": 1373856,
+          "positives": 10595,
+          "real_examples": 434207,
+          "real_positives": 387,
+          "generated_examples": 939649,
+          "calibration_examples": 156559,
+          "calibration_positives": 131,
+          "calibration_ap": 0.8161237677293139
+        },
+        {
+          "examples": 59873,
+          "positives": 4550,
+          "real_examples": 1761,
+          "real_positives": 179,
+          "generated_examples": 58112,
+          "calibration_examples": 625,
+          "calibration_positives": 63,
+          "calibration_ap": 0.9965476151845041
+        },
+        {
+          "examples": 1287978,
+          "positives": 8420,
+          "real_examples": 8708,
+          "real_positives": 19,
+          "generated_examples": 1279270,
+          "calibration_examples": 2791,
+          "calibration_positives": 6,
+          "calibration_ap": 0.7051202321724709
+        }
+      ],
+      "model_sha256": "6cc37fbe05e846b7019a9d51b47de63cfa7272ee8233fb16f49455b6c57e0787",
+      "calibration_sha256": "053fb38f579f776f9f5ce8bce77c4b8b59e2a0a1d610e58578f5d79d37fe242f",
+      "thresholds": [
+        0.9826887757347643,
+        0.4466473986949362,
+        1.1
+      ],
+      "calibration": [
+        {
+          "precision": 0.958904109589041,
+          "recall": 0.5343511450381679,
+          "correct_actions": 70
+        },
+        {
+          "precision": 0.9545454545454546,
+          "recall": 1.0,
+          "correct_actions": 63
+        },
+        {
+          "precision": null,
+          "recall": 0.0,
+          "reason": "no_feasible_verified_operating_point"
+        }
+      ],
+      "seconds": 68.82064626493957
+    },
+    {
+      "name": "budget_bpi2017_seed1_mixed_original_256_v1",
+      "regime": "mixed_original",
+      "total_verified_root_bundles": 256,
+      "fit_verified_root_bundles": 192,
+      "calibration_verified_root_bundles": 64,
+      "annotation_cost": {
+        "fit": {
+          "verified_root_bundles": 192,
+          "verified_target_entities": 453,
+          "verified_alias_handles": 537,
+          "verified_events": 6705,
+          "sampled_events": 4096,
+          "actions": 1080390,
+          "identity_pairs": 31814,
+          "positive_pairs_added_from_verified_histories": 30,
+          "positives_by_operation": [
+            892,
+            397,
+            81
+          ],
+          "examples_by_operation": [
+            1044357,
+            4219,
+            31814
+          ],
+          "file": "fit_256.npz",
+          "sha256": "5f3c704394f7ea6f0854e0f09130e729d4227a622bfcae05e97219f2872224f5",
+          "selected_root_ids_sha256": "120920ef7ae41bc3599735b8925ecf5dd30214a873178d0e3864fce30d8aa6b4"
+        },
+        "calibration": {
+          "verified_root_bundles": 64,
+          "verified_target_entities": 154,
+          "verified_alias_handles": 182,
+          "verified_events": 2427,
+          "sampled_events": 2427,
+          "actions": 632652,
+          "identity_pairs": 11340,
+          "positive_pairs_added_from_verified_histories": 7,
+          "positives_by_operation": [
+            549,
+            248,
+            28
+          ],
+          "examples_by_operation": [
+            618840,
+            2472,
+            11340
+          ],
+          "file": "calibration_256.npz",
+          "sha256": "4634b5fef30e70eb51ed43e721683e5d7b220a81ddc503e29c02bf142c1bb3c0",
+          "selected_root_ids_sha256": "a93456b876f02629c68cc5e633ca55d8420de0588976d7cc1876037e94f9c306"
+        }
+      },
+      "operation_metrics": [
+        {
+          "examples": 1984006,
+          "positives": 11100,
+          "real_examples": 1044357,
+          "real_positives": 892,
+          "generated_examples": 939649,
+          "calibration_examples": 618840,
+          "calibration_positives": 549,
+          "calibration_ap": 0.7450832548175835
+        },
+        {
+          "examples": 62331,
+          "positives": 4768,
+          "real_examples": 4219,
+          "real_positives": 397,
+          "generated_examples": 58112,
+          "calibration_examples": 2472,
+          "calibration_positives": 248,
+          "calibration_ap": 0.9896198528667047
+        },
+        {
+          "examples": 1311084,
+          "positives": 8482,
+          "real_examples": 31814,
+          "real_positives": 81,
+          "generated_examples": 1279270,
+          "calibration_examples": 11340,
+          "calibration_positives": 28,
+          "calibration_ap": 0.5222036727866114
+        }
+      ],
+      "model_sha256": "b391599b0f1622c6e19b657f7a21482b2f77e101c775c413f610eefcb67b1ba4",
+      "calibration_sha256": "3f7237d419d2f7ad941178dbc429ee7963a9d7fe1b9d8bcef8f9e5eaca16c74a",
+      "thresholds": [
+        0.9923877893644915,
+        0.8457790817426453,
+        0.9871589531811725
+      ],
+      "calibration": [
+        {
+          "precision": 0.9525691699604744,
+          "recall": 0.43897996357012753,
+          "correct_actions": 241
+        },
+        {
+          "precision": 0.9518072289156626,
+          "recall": 0.9556451612903226,
+          "correct_actions": 237
+        },
+        {
+          "precision": 1.0,
+          "recall": 0.2857142857142857,
+          "correct_actions": 8
+        }
+      ],
+      "seconds": 100.68213521200232
+    },
+    {
+      "name": "budget_bpi2017_seed1_mixed_varied_16_v1",
+      "regime": "mixed_varied",
+      "total_verified_root_bundles": 16,
+      "fit_verified_root_bundles": 12,
+      "calibration_verified_root_bundles": 4,
+      "annotation_cost": {
+        "fit": {
+          "verified_root_bundles": 12,
+          "verified_target_entities": 31,
+          "verified_alias_handles": 38,
+          "verified_events": 436,
+          "sampled_events": 436,
+          "actions": 114021,
+          "identity_pairs": 2405,
+          "positive_pairs_added_from_verified_histories": 3,
+          "positives_by_operation": [
+            95,
+            40,
+            7
+          ],
+          "examples_by_operation": [
+            111167,
+            449,
+            2405
+          ],
+          "file": "fit_16.npz",
+          "sha256": "7ce935395aab931580797d5b756476b0071137322422687b1d68a92e53d85a0f",
+          "selected_root_ids_sha256": "88d1ba2a73edfd21eab80d0707a6a4ad119f4bdaf77d73253173d8f82941ab8e"
+        },
+        "calibration": {
+          "verified_root_bundles": 4,
+          "verified_target_entities": 11,
+          "verified_alias_handles": 12,
+          "verified_events": 160,
+          "sampled_events": 160,
+          "actions": 41722,
+          "identity_pairs": 762,
+          "positive_pairs_added_from_verified_histories": 0,
+          "positives_by_operation": [
+            29,
+            11,
+            1
+          ],
+          "examples_by_operation": [
+            40793,
+            167,
+            762
+          ],
+          "file": "calibration_16.npz",
+          "sha256": "d403e22bcb44cb8ec3e8babd33f7478e2d6a47dc6c360ba7c4e2e36fb4db8c34",
+          "selected_root_ids_sha256": "e716d8ed880c288a5e6909a47249b753b7174d883c82a544aefc33db3d664994"
+        }
+      },
+      "operation_metrics": [
+        {
+          "examples": 1050820,
+          "positives": 10129,
+          "real_examples": 111167,
+          "real_positives": 95,
+          "generated_examples": 939653,
+          "calibration_examples": 40793,
+          "calibration_positives": 29,
+          "calibration_ap": 0.7604937759377108
+        },
+        {
+          "examples": 58557,
+          "positives": 4411,
+          "real_examples": 449,
+          "real_positives": 40,
+          "generated_examples": 58108,
+          "calibration_examples": 167,
+          "calibration_positives": 11,
+          "calibration_ap": 1.0
+        },
+        {
+          "examples": 1262399,
+          "positives": 8147,
+          "real_examples": 2405,
+          "real_positives": 7,
+          "generated_examples": 1259994,
+          "calibration_examples": 762,
+          "calibration_positives": 1,
+          "calibration_ap": 0.0043859649122807015
+        }
+      ],
+      "model_sha256": "4de781189191f11627bfe81fe4ad90919f5189a708553ca27f6d2aafe2993f33",
+      "calibration_sha256": "e69f2d2500cf36d50a796746a7c3420e088fc21c986dc8e32c0ffcee9ce4554e",
+      "thresholds": [
+        0.9953012908780524,
+        0.9845107215579297,
+        1.1
+      ],
+      "calibration": [
+        {
+          "precision": 1.0,
+          "recall": 0.1724137931034483,
+          "correct_actions": 5
+        },
+        {
+          "precision": 1.0,
+          "recall": 1.0,
+          "correct_actions": 11
+        },
+        {
+          "precision": null,
+          "recall": 0.0,
+          "reason": "insufficient_verified_positive_actions"
+        }
+      ],
+      "seconds": 121.9233556749532
+    },
+    {
+      "name": "budget_bpi2017_seed1_mixed_varied_64_v1",
+      "regime": "mixed_varied",
+      "total_verified_root_bundles": 64,
+      "fit_verified_root_bundles": 48,
+      "calibration_verified_root_bundles": 16,
+      "annotation_cost": {
+        "fit": {
+          "verified_root_bundles": 48,
+          "verified_target_entities": 121,
+          "verified_alias_handles": 141,
+          "verified_events": 1703,
+          "sampled_events": 1703,
+          "actions": 444676,
+          "identity_pairs": 8708,
+          "positive_pairs_added_from_verified_histories": 5,
+          "positives_by_operation": [
+            387,
+            179,
+            19
+          ],
+          "examples_by_operation": [
+            434207,
+            1761,
+            8708
+          ],
+          "file": "fit_64.npz",
+          "sha256": "9aa0b609ce95f9af18d4a01c94149ad3fcf08100c49b65528c67f9e7bca883fa",
+          "selected_root_ids_sha256": "703dc83c31ae1bc159637296a57504d36dab7bf0b336bc710157037e87092978"
+        },
+        "calibration": {
+          "verified_root_bundles": 16,
+          "verified_target_entities": 38,
+          "verified_alias_handles": 44,
+          "verified_events": 614,
+          "sampled_events": 614,
+          "actions": 159975,
+          "identity_pairs": 2791,
+          "positive_pairs_added_from_verified_histories": 1,
+          "positives_by_operation": [
+            131,
+            63,
+            6
+          ],
+          "examples_by_operation": [
+            156559,
+            625,
+            2791
+          ],
+          "file": "calibration_64.npz",
+          "sha256": "84240a943d62869d8108502e2592e14897bc1648b46879c67557c0f5280f2ef9",
+          "selected_root_ids_sha256": "06b7994a1912b220b5c47e61e42baddfd4678c282f81f1815e40402c78af3968"
+        }
+      },
+      "operation_metrics": [
+        {
+          "examples": 1373860,
+          "positives": 10421,
+          "real_examples": 434207,
+          "real_positives": 387,
+          "generated_examples": 939653,
+          "calibration_examples": 156559,
+          "calibration_positives": 131,
+          "calibration_ap": 0.7641451478230299
+        },
+        {
+          "examples": 59869,
+          "positives": 4550,
+          "real_examples": 1761,
+          "real_positives": 179,
+          "generated_examples": 58108,
+          "calibration_examples": 625,
+          "calibration_positives": 63,
+          "calibration_ap": 0.9979996297296603
+        },
+        {
+          "examples": 1268702,
+          "positives": 8159,
+          "real_examples": 8708,
+          "real_positives": 19,
+          "generated_examples": 1259994,
+          "calibration_examples": 2791,
+          "calibration_positives": 6,
+          "calibration_ap": 0.7064102564102563
+        }
+      ],
+      "model_sha256": "eddbd28315e44056b2b1d097425074efa12d648b71f3ea4e9440c3dc08599337",
+      "calibration_sha256": "9d636de4210dd5b9c46ae7e47601685dba824923d7715a61181aa594d82a3bef",
+      "thresholds": [
+        0.9904826277256752,
+        0.4713616466822164,
+        1.1
+      ],
+      "calibration": [
+        {
+          "precision": 0.972972972972973,
+          "recall": 0.2748091603053435,
+          "correct_actions": 36
+        },
+        {
+          "precision": 0.9545454545454546,
+          "recall": 1.0,
+          "correct_actions": 63
+        },
+        {
+          "precision": null,
+          "recall": 0.0,
+          "reason": "no_feasible_verified_operating_point"
+        }
+      ],
+      "seconds": 145.5505856249947
+    },
+    {
+      "name": "budget_bpi2017_seed1_mixed_varied_256_v1",
+      "regime": "mixed_varied",
+      "total_verified_root_bundles": 256,
+      "fit_verified_root_bundles": 192,
+      "calibration_verified_root_bundles": 64,
+      "annotation_cost": {
+        "fit": {
+          "verified_root_bundles": 192,
+          "verified_target_entities": 453,
+          "verified_alias_handles": 537,
+          "verified_events": 6705,
+          "sampled_events": 4096,
+          "actions": 1080390,
+          "identity_pairs": 31814,
+          "positive_pairs_added_from_verified_histories": 30,
+          "positives_by_operation": [
+            892,
+            397,
+            81
+          ],
+          "examples_by_operation": [
+            1044357,
+            4219,
+            31814
+          ],
+          "file": "fit_256.npz",
+          "sha256": "5f3c704394f7ea6f0854e0f09130e729d4227a622bfcae05e97219f2872224f5",
+          "selected_root_ids_sha256": "120920ef7ae41bc3599735b8925ecf5dd30214a873178d0e3864fce30d8aa6b4"
+        },
+        "calibration": {
+          "verified_root_bundles": 64,
+          "verified_target_entities": 154,
+          "verified_alias_handles": 182,
+          "verified_events": 2427,
+          "sampled_events": 2427,
+          "actions": 632652,
+          "identity_pairs": 11340,
+          "positive_pairs_added_from_verified_histories": 7,
+          "positives_by_operation": [
+            549,
+            248,
+            28
+          ],
+          "examples_by_operation": [
+            618840,
+            2472,
+            11340
+          ],
+          "file": "calibration_256.npz",
+          "sha256": "4634b5fef30e70eb51ed43e721683e5d7b220a81ddc503e29c02bf142c1bb3c0",
+          "selected_root_ids_sha256": "a93456b876f02629c68cc5e633ca55d8420de0588976d7cc1876037e94f9c306"
+        }
+      },
+      "operation_metrics": [
+        {
+          "examples": 1984010,
+          "positives": 10926,
+          "real_examples": 1044357,
+          "real_positives": 892,
+          "generated_examples": 939653,
+          "calibration_examples": 618840,
+          "calibration_positives": 549,
+          "calibration_ap": 0.7154787955647806
+        },
+        {
+          "examples": 62327,
+          "positives": 4768,
+          "real_examples": 4219,
+          "real_positives": 397,
+          "generated_examples": 58108,
+          "calibration_examples": 2472,
+          "calibration_positives": 248,
+          "calibration_ap": 0.9880445008099519
+        },
+        {
+          "examples": 1291808,
+          "positives": 8221,
+          "real_examples": 31814,
+          "real_positives": 81,
+          "generated_examples": 1259994,
+          "calibration_examples": 11340,
+          "calibration_positives": 28,
+          "calibration_ap": 0.5124219004184295
+        }
+      ],
+      "model_sha256": "d1b1d4286dcc7afb7d908b72a72b5fab2b60cc7d7c58bb9eb5a1418a14f1e5b0",
+      "calibration_sha256": "5c7f5f90622edb5e023483777289a0c001462144ba9535d64e43d0091d83c534",
+      "thresholds": [
+        0.9959368739968442,
+        0.8034747865789612,
+        0.9902344428344934
+      ],
+      "calibration": [
+        {
+          "precision": 0.9545454545454546,
+          "recall": 0.22950819672131148,
+          "correct_actions": 126
+        },
+        {
+          "precision": 0.9518072289156626,
+          "recall": 0.9556451612903226,
+          "correct_actions": 237
+        },
+        {
+          "precision": 1.0,
+          "recall": 0.21428571428571427,
+          "correct_actions": 6
+        }
+      ],
+      "seconds": 176.58399009890854
+    }
+  ],
+  "fixed_parameters": {
+    "max_iter": 200,
+    "max_leaf_nodes": 15,
+    "learning_rate": 0.08,
+    "l2_regularization": 1.0,
+    "early_stopping": false,
+    "generated_real_mass_before_class_balance": [
+      0.5,
+      0.5
+    ],
+    "calibration_precision_target": 0.95,
+    "calibration_minimum_correct": 5
+  },
+  "limits": [
+    "Calibration uses only the budgeted target histories and supplies no transfer guarantee.",
+    "The annotation pool and fresh evaluation roots are disjoint; context resources may overlap.",
+    "Historical research development costs are separate from this new-history adaptation budget."
+  ],
+  "generated_manifests": {
+    "edit_train_v2": "9c3526ac2a1a47fc726cf6c6299e986bfe035b379f8d9e30e1fb37e422de7135",
+    "edit_train_attributes_v3": "7d332708c41104367d1518f852a42edc1aa5b85d4e9c5ea92df131036c6753be"
+  },
+  "seconds": 176.58512619498651
+}

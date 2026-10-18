@@ -1,6 +1,6 @@
 # Generative temporal graph repair
 
-> Active revision: the current manuscript is `revision/paper/main.pdf`, with a limit of 15 total pages. The final combined-repair experiments are running; this draft is not yet ready for final review. See `revision/STATE.json` and `revision/REPRODUCE.txt`. The original completed study described below remains preserved.
+> Completed revision: [current manuscript](revision/paper/main.pdf), 13 total pages including references, is ready for author review. All 156 combined-repair evaluations and six native comparisons are complete. Start with [the revision review guide](revision/REVIEW_NOTES.txt) and [reproduction instructions](revision/REPRODUCE.txt). The original study described below remains preserved.
 
 Research manuscript and reproduction package for author review: learn transferable restoration of event participation and fragmented identities from generated operational histories. The application is traceability in purchasing, loan processing, and logistics. Start with [the paper](paper/main.pdf) and [the plain-English review guide](REVIEW_NOTES.txt).
 

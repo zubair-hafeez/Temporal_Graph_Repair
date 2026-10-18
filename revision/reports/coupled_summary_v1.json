@@ -1,0 +1,5610 @@
+{
+  "status": "complete_audited_coupled_summary",
+  "audit_sha256": "9bbce637cf75947e7b1e989cbc7185de304aaac790d423051b6a83f0e0efa271",
+  "script_sha256": "4fd35eed933cc8dc4fe73a4895f1f261dfa10a89ed87cfe7e357e23d8848a129",
+  "groups": [
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 16,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8248121269218842,
+          "minimum": 0.7945789767781701,
+          "maximum": 0.8428321402503115,
+          "values": [
+            0.8428321402503115,
+            0.7945789767781701,
+            0.8370252637371709
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.2893703547889497,
+          "minimum": 0.19289019772822885,
+          "maximum": 0.35128312999579303,
+          "values": [
+            0.3239377366428271,
+            0.19289019772822885,
+            0.35128312999579303
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 595,
+          "minimum": 170,
+          "maximum": 828,
+          "values": [
+            170,
+            787,
+            828
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 3978,
+          "minimum": 2752,
+          "maximum": 5720,
+          "values": [
+            3462,
+            2752,
+            5720
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7742953302482121,
+          "minimum": 0.7517879680269247,
+          "maximum": 0.8111064366848969,
+          "values": [
+            0.7599915860328145,
+            0.7517879680269247,
+            0.8111064366848969
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.6508904781938017,
+          "minimum": 0.5982330668910392,
+          "maximum": 0.6811106436684897,
+          "values": [
+            0.6733277240218764,
+            0.5982330668910392,
+            0.6811106436684897
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8050054661584205,
+          "minimum": 0.717687074829932,
+          "maximum": 0.8621700879765396,
+          "values": [
+            0.8621700879765396,
+            0.717687074829932,
+            0.8351592356687898
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8416436687249061,
+          "minimum": 0.8314224899329435,
+          "maximum": 0.8581970609922146,
+          "values": [
+            0.8581970609922146,
+            0.8314224899329435,
+            0.8353114552495602
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.32365727106997616,
+          "minimum": 0.2623054270088347,
+          "maximum": 0.40534286916281026,
+          "values": [
+            0.40534286916281026,
+            0.2623054270088347,
+            0.30332351703828353
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 671.6666666666666,
+          "minimum": 369,
+          "maximum": 999,
+          "values": [
+            369,
+            999,
+            647
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 4891,
+          "minimum": 4773,
+          "maximum": 4958,
+          "values": [
+            4958,
+            4773,
+            4942
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.8250595989342308,
+          "minimum": 0.7841817416912074,
+          "maximum": 0.847076146403029,
+          "values": [
+            0.847076146403029,
+            0.843920908708456,
+            0.7841817416912074
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.6664563174870285,
+          "minimum": 0.5887673538073201,
+          "maximum": 0.7381152713504417,
+          "values": [
+            0.7381152713504417,
+            0.5887673538073201,
+            0.6724863273033235
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.793924099930368,
+          "minimum": 0.703672075149445,
+          "maximum": 0.8743276283618582,
+          "values": [
+            0.8743276283618582,
+            0.703672075149445,
+            0.8037725962798009
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "clean",
+      "regime": "real_only",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.9958657362234595,
+          "minimum": 0.9922480638905087,
+          "maximum": 0.9992266547713493,
+          "values": [
+            0.9992266547713493,
+            0.9961224900085207,
+            0.9922480638905087
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.9743374000841397,
+          "minimum": 0.950357593605385,
+          "maximum": 0.9949516196886832,
+          "values": [
+            0.9949516196886832,
+            0.9777029869583509,
+            0.950357593605385
+          ]
+        },
+        "before.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 65.66666666666667,
+          "minimum": 11,
+          "maximum": 131,
+          "values": [
+            11,
+            55,
+            131
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": null,
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.9998597672135745,
+          "minimum": 0.9995793016407236,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            0.9995793016407236,
+            1.0
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.985275557425326,
+          "minimum": 0.9726546066470341,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            0.983172065628944,
+            0.9726546066470341
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.9865681963924209,
+          "minimum": 0.9722719141323792,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            0.9874326750448833,
+            0.9722719141323792
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "pipeline",
+      "regime": "real_only",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.7790509564925319,
+          "minimum": 0.7760953042416142,
+          "maximum": 0.7841784449652847,
+          "values": [
+            0.7841784449652847,
+            0.7768791202706966,
+            0.7760953042416142
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.4354228018510728,
+          "minimum": 0.40786705931846867,
+          "maximum": 0.4663441312578881,
+          "values": [
+            0.4663441312578881,
+            0.40786705931846867,
+            0.4320572149768616
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7723301867680797,
+          "minimum": 0.7664001814200284,
+          "maximum": 0.778168339879586,
+          "values": [
+            0.7724220390046248,
+            0.7664001814200284,
+            0.778168339879586
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 680.6666666666666,
+          "minimum": 361,
+          "maximum": 915,
+          "values": [
+            361,
+            915,
+            766
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 72.66666666666667,
+          "minimum": 59,
+          "maximum": 94,
+          "values": [
+            59,
+            94,
+            65
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7446360959192259,
+          "minimum": 0.7179217501051746,
+          "maximum": 0.7595708876735381,
+          "values": [
+            0.7595708876735381,
+            0.756415649978965,
+            0.7179217501051746
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.6879119338101248,
+          "minimum": 0.6630206142196046,
+          "maximum": 0.71729070256626,
+          "values": [
+            0.71729070256626,
+            0.6630206142196046,
+            0.6834244846445099
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8422340972451713,
+          "minimum": 0.8080808080808081,
+          "maximum": 0.8743009968392901,
+          "values": [
+            0.8743009968392901,
+            0.8080808080808081,
+            0.8443204868154158
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "operating_point": "strict99",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8566685443740075,
+          "minimum": 0.8463244525873703,
+          "maximum": 0.8630528673983354,
+          "values": [
+            0.8630528673983354,
+            0.8606283131363169,
+            0.8463244525873703
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.35682232505959893,
+          "minimum": 0.31131678586453515,
+          "maximum": 0.3906184265881363,
+          "values": [
+            0.3906184265881363,
+            0.36853176272612537,
+            0.31131678586453515
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 227.33333333333334,
+          "minimum": 140,
+          "maximum": 349,
+          "values": [
+            140,
+            193,
+            349
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 4319.666666666667,
+          "minimum": 4163,
+          "maximum": 4605,
+          "values": [
+            4605,
+            4191,
+            4163
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.8073902678446221,
+          "minimum": 0.7629364745477493,
+          "maximum": 0.8357172907025663,
+          "values": [
+            0.8357172907025663,
+            0.8235170382835507,
+            0.7629364745477493
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7323657271069977,
+          "minimum": 0.7263357172907026,
+          "maximum": 0.7381152713504417,
+          "values": [
+            0.7381152713504417,
+            0.7326461926798485,
+            0.7263357172907026
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8852103366796189,
+          "minimum": 0.8691751806628457,
+          "maximum": 0.8977820636451301,
+          "values": [
+            0.888673765730881,
+            0.8977820636451301,
+            0.8691751806628457
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 256,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8599998916667599,
+          "minimum": 0.8487937962593911,
+          "maximum": 0.867251296500211,
+          "values": [
+            0.8487937962593911,
+            0.8639545822406776,
+            0.867251296500211
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.3932828495302202,
+          "minimum": 0.36159023979806476,
+          "maximum": 0.41522928060580566,
+          "values": [
+            0.36159023979806476,
+            0.41522928060580566,
+            0.4030290281867901
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 465,
+          "minimum": 451,
+          "maximum": 493,
+          "values": [
+            451,
+            451,
+            493
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 5344.333333333333,
+          "minimum": 5061,
+          "maximum": 5563,
+          "values": [
+            5061,
+            5563,
+            5409
+          ]
+        },
+        "identity.precision": {
+          "mean": 0.7916398589700697,
+          "minimum": 0.673469387755102,
+          "maximum": 0.8653846153846154,
+          "values": [
+            0.8653846153846154,
+            0.673469387755102,
+            0.8360655737704918
+          ]
+        },
+        "identity.recall": {
+          "mean": 0.09599212811287115,
+          "minimum": 0.07432432432432433,
+          "maximum": 0.1118421052631579,
+          "values": [
+            0.10180995475113122,
+            0.07432432432432433,
+            0.1118421052631579
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.8507923152433039,
+          "minimum": 0.8388725283971392,
+          "maximum": 0.8594867480016828,
+          "values": [
+            0.8388725283971392,
+            0.8540176693310896,
+            0.8594867480016828
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7295610713784882,
+          "minimum": 0.716238956668069,
+          "maximum": 0.7461085401766933,
+          "values": [
+            0.716238956668069,
+            0.7263357172907026,
+            0.7461085401766933
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8583981980194536,
+          "minimum": 0.8476591528362646,
+          "maximum": 0.8720987654320987,
+          "values": [
+            0.8476591528362646,
+            0.8554366757899975,
+            0.8720987654320987
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 16,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8507434944986567,
+          "minimum": 0.841416571110437,
+          "maximum": 0.8597183145919061,
+          "values": [
+            0.841416571110437,
+            0.8510955977936272,
+            0.8597183145919061
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.31117655307810965,
+          "minimum": 0.27156079091291546,
+          "maximum": 0.34350021034917966,
+          "values": [
+            0.27156079091291546,
+            0.3184686579722339,
+            0.34350021034917966
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 402,
+          "minimum": 217,
+          "maximum": 728,
+          "values": [
+            217,
+            261,
+            728
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 4219.333333333333,
+          "minimum": 3824,
+          "maximum": 4920,
+          "values": [
+            3914,
+            3824,
+            4920
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.743584350021035,
+          "minimum": 0.72780816154817,
+          "maximum": 0.763777871266302,
+          "values": [
+            0.72780816154817,
+            0.763777871266302,
+            0.7391670172486328
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.6900855419997195,
+          "minimum": 0.6708035338662179,
+          "maximum": 0.7090870845603702,
+          "values": [
+            0.6708035338662179,
+            0.7090870845603702,
+            0.6903660075725705
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8859949540719673,
+          "minimum": 0.8802120993010364,
+          "maximum": 0.8897939626257786,
+          "values": [
+            0.8802120993010364,
+            0.8897939626257786,
+            0.8879788002890869
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8529457961781962,
+          "minimum": 0.842400114169628,
+          "maximum": 0.8607637030263858,
+          "values": [
+            0.8607637030263858,
+            0.842400114169628,
+            0.8556735713385748
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.35499929883606784,
+          "minimum": 0.34539335296592344,
+          "maximum": 0.37210769877997474,
+          "values": [
+            0.37210769877997474,
+            0.3474968447623054,
+            0.34539335296592344
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 671.3333333333334,
+          "minimum": 427,
+          "maximum": 1059,
+          "values": [
+            427,
+            1059,
+            528
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 4740.666666666667,
+          "minimum": 4501,
+          "maximum": 5093,
+          "values": [
+            4628,
+            5093,
+            4501
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7857944187351003,
+          "minimum": 0.7726125368111064,
+          "maximum": 0.809002944888515,
+          "values": [
+            0.809002944888515,
+            0.7757677745056795,
+            0.7726125368111064
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.720726405833684,
+          "minimum": 0.6888935633151031,
+          "maximum": 0.7410601598653765,
+          "values": [
+            0.7410601598653765,
+            0.6888935633151031,
+            0.7322254943205722
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8731295160600533,
+          "minimum": 0.8458149779735683,
+          "maximum": 0.8938891520606348,
+          "values": [
+            0.8938891520606348,
+            0.8458149779735683,
+            0.8796844181459567
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "clean",
+      "regime": "mixed_original",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.9964953772468106,
+          "minimum": 0.9899336632187097,
+          "maximum": 0.9999221431934913,
+          "values": [
+            0.9999221431934913,
+            0.9899336632187097,
+            0.9996303253282309
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.9601738886551676,
+          "minimum": 0.9074463609591923,
+          "maximum": 0.9932688262515776,
+          "values": [
+            0.9932688262515776,
+            0.9074463609591923,
+            0.9798064787547328
+          ]
+        },
+        "before.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 111,
+          "minimum": 16,
+          "maximum": 267,
+          "values": [
+            16,
+            267,
+            50
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": null,
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.9995793016407236,
+          "minimum": 0.9987379049221708,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            0.9987379049221708,
+            1.0
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.9845743934931988,
+          "minimum": 0.9545645771981489,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            0.9545645771981489,
+            0.9991586032814472
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.9826357127887725,
+          "minimum": 0.9501267962806424,
+          "maximum": 0.9995565410199556,
+          "values": [
+            0.9995565410199556,
+            0.9501267962806424,
+            0.9982238010657194
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "pipeline",
+      "regime": "mixed_original",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.7839370591532491,
+          "minimum": 0.7723193501079385,
+          "maximum": 0.7910424490310226,
+          "values": [
+            0.7884493783207862,
+            0.7723193501079385,
+            0.7910424490310226
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.45526574113027624,
+          "minimum": 0.43500210349179635,
+          "maximum": 0.47265460664703407,
+          "values": [
+            0.47265460664703407,
+            0.43500210349179635,
+            0.45814051325199834
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7723301867680797,
+          "minimum": 0.7664001814200284,
+          "maximum": 0.778168339879586,
+          "values": [
+            0.7724220390046248,
+            0.7664001814200284,
+            0.778168339879586
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 722,
+          "minimum": 344,
+          "maximum": 1198,
+          "values": [
+            344,
+            1198,
+            624
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 119,
+          "minimum": 75,
+          "maximum": 194,
+          "values": [
+            75,
+            194,
+            88
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7289300238395737,
+          "minimum": 0.715187210769878,
+          "maximum": 0.7463188893563315,
+          "values": [
+            0.7463188893563315,
+            0.715187210769878,
+            0.7252839713925116
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7126630206142196,
+          "minimum": 0.6949936895246108,
+          "maximum": 0.7292806058056374,
+          "values": [
+            0.7292806058056374,
+            0.6949936895246108,
+            0.7137147665124106
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8746340395481459,
+          "minimum": 0.8467045174031104,
+          "maximum": 0.8936576061039581,
+          "values": [
+            0.8936576061039581,
+            0.8467045174031104,
+            0.8835399951373694
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 256,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.85822743858755,
+          "minimum": 0.8401838563367819,
+          "maximum": 0.8723459707775841,
+          "values": [
+            0.8401838563367819,
+            0.8621524886482839,
+            0.8723459707775841
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.36011779554059736,
+          "minimum": 0.28817837610433317,
+          "maximum": 0.4234328986116954,
+          "values": [
+            0.28817837610433317,
+            0.36874211190576356,
+            0.4234328986116954
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 333,
+          "minimum": 261,
+          "maximum": 459,
+          "values": [
+            261,
+            459,
+            279
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 4830.333333333333,
+          "minimum": 4134,
+          "maximum": 5384,
+          "values": [
+            4134,
+            4973,
+            5384
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.051051051051051045,
+          "minimum": 0.0,
+          "maximum": 0.15315315315315314,
+          "values": [
+            0.0,
+            0.15315315315315314,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7835506941522928,
+          "minimum": 0.7616743794699201,
+          "maximum": 0.8188893563315103,
+          "values": [
+            0.7616743794699201,
+            0.770088346655448,
+            0.8188893563315103
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7683354368251297,
+          "minimum": 0.7559949516196887,
+          "maximum": 0.7860748843079512,
+          "values": [
+            0.7559949516196887,
+            0.7629364745477493,
+            0.7860748843079512
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8934470311619119,
+          "minimum": 0.8881972707684941,
+          "maximum": 0.9033633349123638,
+          "values": [
+            0.8887804878048781,
+            0.8881972707684941,
+            0.9033633349123638
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 16,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.838997332736765,
+          "minimum": 0.82486334705985,
+          "maximum": 0.8569499960620415,
+          "values": [
+            0.8351786550884035,
+            0.82486334705985,
+            0.8569499960620415
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.26721357453372596,
+          "minimum": 0.23180479596129575,
+          "maximum": 0.3155237694572991,
+          "values": [
+            0.25431215818258307,
+            0.23180479596129575,
+            0.3155237694572991
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 778.3333333333334,
+          "minimum": 171,
+          "maximum": 1896,
+          "values": [
+            171,
+            268,
+            1896
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 3716.6666666666665,
+          "minimum": 1909,
+          "maximum": 5647,
+          "values": [
+            3594,
+            1909,
+            5647
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7273173467956808,
+          "minimum": 0.7183424484644509,
+          "maximum": 0.7358014303744216,
+          "values": [
+            0.7183424484644509,
+            0.72780816154817,
+            0.7358014303744216
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.6636516617585192,
+          "minimum": 0.6449305847707194,
+          "maximum": 0.6882625157761885,
+          "values": [
+            0.6577618847286496,
+            0.6882625157761885,
+            0.6449305847707194
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8732069943702266,
+          "minimum": 0.8576601040959493,
+          "maximum": 0.8848780487804878,
+          "values": [
+            0.8770828302342429,
+            0.8848780487804878,
+            0.8576601040959493
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8361732348286133,
+          "minimum": 0.8215439107074091,
+          "maximum": 0.8506233982278102,
+          "values": [
+            0.8506233982278102,
+            0.8215439107074091,
+            0.8363523955506207
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.3043051465432618,
+          "minimum": 0.296381994110223,
+          "maximum": 0.3199411022297013,
+          "values": [
+            0.3199411022297013,
+            0.29659234328986117,
+            0.296381994110223
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 756.3333333333334,
+          "minimum": 286,
+          "maximum": 1227,
+          "values": [
+            286,
+            1227,
+            756
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 3994.6666666666665,
+          "minimum": 3838,
+          "maximum": 4215,
+          "values": [
+            3931,
+            3838,
+            4215
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7845323236572711,
+          "minimum": 0.7728228859907447,
+          "maximum": 0.8010096760622634,
+          "values": [
+            0.8010096760622634,
+            0.7728228859907447,
+            0.7797644089188052
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.703898471462628,
+          "minimum": 0.6914177534707615,
+          "maximum": 0.7200252419015566,
+          "values": [
+            0.7200252419015566,
+            0.6914177534707615,
+            0.7002524190155658
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8543321392701121,
+          "minimum": 0.8402812656956303,
+          "maximum": 0.8805575582792597,
+          "values": [
+            0.8805575582792597,
+            0.8402812656956303,
+            0.8421575938354462
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "clean",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.9993677623800744,
+          "minimum": 0.9986585396791048,
+          "maximum": 0.9999289766625157,
+          "values": [
+            0.9999289766625157,
+            0.9986585396791048,
+            0.9995157707986027
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.9803674099004347,
+          "minimum": 0.9680269246949937,
+          "maximum": 0.9962137147665124,
+          "values": [
+            0.9962137147665124,
+            0.9680269246949937,
+            0.976861590239798
+          ]
+        },
+        "before.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 53,
+          "minimum": 9,
+          "maximum": 88,
+          "values": [
+            9,
+            88,
+            62
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": null,
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.9994390688542981,
+          "minimum": 0.9983172065628944,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            0.9983172065628944,
+            1.0
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.9985976721357454,
+          "minimum": 0.9970551114850652,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            0.9970551114850652,
+            0.9987379049221708
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.9971798322763878,
+          "minimum": 0.9942041908158716,
+          "maximum": 0.9995565410199556,
+          "values": [
+            0.9995565410199556,
+            0.9942041908158716,
+            0.9977787649933363
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "pipeline",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.7781984474099062,
+          "minimum": 0.7609698692206821,
+          "maximum": 0.7875081996048919,
+          "values": [
+            0.7861172734041444,
+            0.7609698692206821,
+            0.7875081996048919
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.4404010657691768,
+          "minimum": 0.4133361379890618,
+          "maximum": 0.4636095919225915,
+          "values": [
+            0.4636095919225915,
+            0.4133361379890618,
+            0.4442574673958772
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7723301867680797,
+          "minimum": 0.7664001814200284,
+          "maximum": 0.778168339879586,
+          "values": [
+            0.7724220390046248,
+            0.7664001814200284,
+            0.778168339879586
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 740.3333333333334,
+          "minimum": 252,
+          "maximum": 1215,
+          "values": [
+            252,
+            1215,
+            754
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 99.33333333333333,
+          "minimum": 54,
+          "maximum": 160,
+          "values": [
+            54,
+            160,
+            84
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7271069976160427,
+          "minimum": 0.71729070256626,
+          "maximum": 0.7347496844762306,
+          "values": [
+            0.7347496844762306,
+            0.71729070256626,
+            0.7292806058056374
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.6974477632870565,
+          "minimum": 0.6659655027345394,
+          "maximum": 0.7200252419015566,
+          "values": [
+            0.7200252419015566,
+            0.6659655027345394,
+            0.7063525452250736
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8538566980828097,
+          "minimum": 0.8092664092664092,
+          "maximum": 0.8837545126353791,
+          "values": [
+            0.8837545126353791,
+            0.8092664092664092,
+            0.8685491723466408
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "operating_point": "strict99",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8307210283837386,
+          "minimum": 0.8150073724590116,
+          "maximum": 0.8496400791755522,
+          "values": [
+            0.8150073724590116,
+            0.8496400791755522,
+            0.8275156335166522
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.2557144860468378,
+          "minimum": 0.19983172065628943,
+          "maximum": 0.3199411022297013,
+          "values": [
+            0.19983172065628943,
+            0.3199411022297013,
+            0.24737063525452252
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 278,
+          "minimum": 104,
+          "maximum": 454,
+          "values": [
+            104,
+            276,
+            454
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 2566.3333333333335,
+          "minimum": 1211,
+          "maximum": 3582,
+          "values": [
+            1211,
+            3582,
+            2906
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7487028467255644,
+          "minimum": 0.7240218763146824,
+          "maximum": 0.7904922170803533,
+          "values": [
+            0.7240218763146824,
+            0.7904922170803533,
+            0.7315944467816575
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7135745337259851,
+          "minimum": 0.6912074042911233,
+          "maximum": 0.7275978123685317,
+          "values": [
+            0.6912074042911233,
+            0.7275978123685317,
+            0.7219183845183004
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8757972221396965,
+          "minimum": 0.8676984523215178,
+          "maximum": 0.8855145818269462,
+          "values": [
+            0.8741786322706254,
+            0.8855145818269462,
+            0.8676984523215178
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 256,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.839415356185606,
+          "minimum": 0.8262741032949726,
+          "maximum": 0.8483731428514394,
+          "values": [
+            0.8435988224104062,
+            0.8262741032949726,
+            0.8483731428514394
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.2914037301921189,
+          "minimum": 0.2595708876735381,
+          "maximum": 0.3094236432477913,
+          "values": [
+            0.30521665965502737,
+            0.2595708876735381,
+            0.3094236432477913
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 425.3333333333333,
+          "minimum": 353,
+          "maximum": 555,
+          "values": [
+            353,
+            555,
+            368
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 3430,
+          "minimum": 2697,
+          "maximum": 4134,
+          "values": [
+            3459,
+            2697,
+            4134
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.06620874267933091,
+          "minimum": 0.0,
+          "maximum": 0.1036036036036036,
+          "values": [
+            0.09502262443438914,
+            0.1036036036036036,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7823587154676763,
+          "minimum": 0.7477913336137989,
+          "maximum": 0.8031131678586454,
+          "values": [
+            0.7961716449305848,
+            0.7477913336137989,
+            0.8031131678586454
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7350301500490815,
+          "minimum": 0.7158182583087926,
+          "maximum": 0.7515776188472865,
+          "values": [
+            0.7515776188472865,
+            0.7158182583087926,
+            0.7376945729911654
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8742755026616253,
+          "minimum": 0.8686313686313686,
+          "maximum": 0.8778457772337821,
+          "values": [
+            0.8763493621197253,
+            0.8686313686313686,
+            0.8778457772337821
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "generated_original",
+      "budget": 0,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.7943922345574593,
+          "minimum": 0.7928763368293253,
+          "maximum": 0.7965719608176558,
+          "values": [
+            0.793728406025397,
+            0.7965719608176558,
+            0.7928763368293253
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.17318749123545085,
+          "minimum": 0.16575515355490114,
+          "maximum": 0.18594867480016827,
+          "values": [
+            0.16785864535128314,
+            0.18594867480016827,
+            0.16575515355490114
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 273.6666666666667,
+          "minimum": 207,
+          "maximum": 332,
+          "values": [
+            207,
+            332,
+            282
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 10.666666666666666,
+          "minimum": 7,
+          "maximum": 13,
+          "values": [
+            7,
+            12,
+            13
+          ]
+        },
+        "identity.precision": {
+          "mean": 0.7256713476225671,
+          "minimum": 0.6363636363636364,
+          "maximum": 0.8333333333333334,
+          "values": [
+            0.8333333333333334,
+            0.6363636363636364,
+            0.7073170731707317
+          ]
+        },
+        "identity.recall": {
+          "mean": 0.04679229717929408,
+          "minimum": 0.03153153153153153,
+          "maximum": 0.06359649122807018,
+          "values": [
+            0.04524886877828054,
+            0.03153153153153153,
+            0.06359649122807018
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.5510447342588697,
+          "minimum": 0.5483803113167859,
+          "maximum": 0.5525872949095498,
+          "values": [
+            0.5525872949095498,
+            0.5521665965502734,
+            0.5483803113167859
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.5450147244425746,
+          "minimum": 0.5344972654606647,
+          "maximum": 0.55490113588557,
+          "values": [
+            0.5344972654606647,
+            0.55490113588557,
+            0.5456457719814892
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.871682106268452,
+          "minimum": 0.8673765730880929,
+          "maximum": 0.8751800288046088,
+          "values": [
+            0.8673765730880929,
+            0.8751800288046088,
+            0.8724897169126542
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "clean",
+      "regime": "generated_original",
+      "budget": 0,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.9999453785603232,
+          "minimum": 0.9999453785603232,
+          "maximum": 0.9999453785603232,
+          "values": [
+            0.9999453785603232,
+            0.9999453785603232,
+            0.9999453785603232
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.9949516196886832,
+          "minimum": 0.9949516196886832,
+          "maximum": 0.9949516196886832,
+          "values": [
+            0.9949516196886832,
+            0.9949516196886832,
+            0.9949516196886832
+          ]
+        },
+        "before.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 12,
+          "minimum": 12,
+          "maximum": 12,
+          "values": [
+            12,
+            12,
+            12
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": null,
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.9991126885536823,
+          "minimum": 0.9991126885536823,
+          "maximum": 0.9991126885536823,
+          "values": [
+            0.9991126885536823,
+            0.9991126885536823,
+            0.9991126885536823
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "pipeline",
+      "regime": "generated_original",
+      "budget": 0,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.7774645195264162,
+          "minimum": 0.7746712022807798,
+          "maximum": 0.7799845989775033,
+          "values": [
+            0.7799845989775033,
+            0.7746712022807798,
+            0.7777377573209655
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.4299537231804796,
+          "minimum": 0.4164913756836348,
+          "maximum": 0.44594026083298277,
+          "values": [
+            0.44594026083298277,
+            0.4164913756836348,
+            0.42742953302482123
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7723301867680797,
+          "minimum": 0.7664001814200284,
+          "maximum": 0.778168339879586,
+          "values": [
+            0.7724220390046248,
+            0.7664001814200284,
+            0.778168339879586
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 194,
+          "minimum": 154,
+          "maximum": 222,
+          "values": [
+            222,
+            206,
+            154
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 0.3333333333333333,
+          "minimum": 0,
+          "maximum": 1,
+          "values": [
+            0,
+            0,
+            1
+          ]
+        },
+        "identity.precision": {
+          "mean": 0.6702434177844014,
+          "minimum": 0.2,
+          "maximum": 0.9090909090909091,
+          "values": [
+            0.9016393442622951,
+            0.9090909090909091,
+            0.2
+          ]
+        },
+        "identity.recall": {
+          "mean": 0.08833612200023455,
+          "minimum": 0.0021645021645021645,
+          "maximum": 0.13157894736842105,
+          "values": [
+            0.13126491646778043,
+            0.13157894736842105,
+            0.0021645021645021645
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.712031973075305,
+          "minimum": 0.7061421960454354,
+          "maximum": 0.7227597812368531,
+          "values": [
+            0.7227597812368531,
+            0.7061421960454354,
+            0.7071939419436264
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7071939419436264,
+          "minimum": 0.7044594026083298,
+          "maximum": 0.7105595288178376,
+          "values": [
+            0.7105595288178376,
+            0.7044594026083298,
+            0.7065628944047119
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8769534408148167,
+          "minimum": 0.8634382566585956,
+          "maximum": 0.8905913334929375,
+          "values": [
+            0.8768307322929172,
+            0.8634382566585956,
+            0.8905913334929375
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "generated_varied",
+      "budget": 0,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8076673264057067,
+          "minimum": 0.803900174680731,
+          "maximum": 0.8125447855417922,
+          "values": [
+            0.8065570189945968,
+            0.8125447855417922,
+            0.803900174680731
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.19800869443275837,
+          "minimum": 0.1855279764408919,
+          "maximum": 0.21750105174589818,
+          "values": [
+            0.19099705511148507,
+            0.21750105174589818,
+            0.1855279764408919
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 278.6666666666667,
+          "minimum": 274,
+          "maximum": 285,
+          "values": [
+            274,
+            285,
+            277
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 170.66666666666666,
+          "minimum": 140,
+          "maximum": 197,
+          "values": [
+            140,
+            197,
+            175
+          ]
+        },
+        "identity.precision": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "identity.recall": {
+          "mean": 0.02020545789895635,
+          "minimum": 0.010964912280701754,
+          "maximum": 0.02702702702702703,
+          "values": [
+            0.02262443438914027,
+            0.02702702702702703,
+            0.010964912280701754
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7219183845183004,
+          "minimum": 0.7118216238956668,
+          "maximum": 0.7339082877576777,
+          "values": [
+            0.7200252419015566,
+            0.7339082877576777,
+            0.7118216238956668
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.692329266582527,
+          "minimum": 0.6882625157761885,
+          "maximum": 0.6981489272191839,
+          "values": [
+            0.6905763567522086,
+            0.6981489272191839,
+            0.6882625157761885
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8752304212256339,
+          "minimum": 0.8709519136408244,
+          "maximum": 0.8820388349514563,
+          "values": [
+            0.8709519136408244,
+            0.8820388349514563,
+            0.8727005150846211
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "clean",
+      "regime": "generated_varied",
+      "budget": 0,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.999882857581388,
+          "minimum": 0.999882857581388,
+          "maximum": 0.999882857581388,
+          "values": [
+            0.999882857581388,
+            0.999882857581388,
+            0.999882857581388
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.9890618426588136,
+          "minimum": 0.9890618426588136,
+          "maximum": 0.9890618426588136,
+          "values": [
+            0.9890618426588136,
+            0.9890618426588136,
+            0.9890618426588136
+          ]
+        },
+        "before.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 28,
+          "minimum": 28,
+          "maximum": 28,
+          "values": [
+            28,
+            28,
+            28
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": null,
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.9995565410199556,
+          "minimum": 0.9995565410199556,
+          "maximum": 0.9995565410199556,
+          "values": [
+            0.9995565410199556,
+            0.9995565410199556,
+            0.9995565410199556
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "pipeline",
+      "regime": "generated_varied",
+      "budget": 0,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.7736554033432264,
+          "minimum": 0.7673174081086905,
+          "maximum": 0.7794581656571741,
+          "values": [
+            0.7741906362638143,
+            0.7673174081086905,
+            0.7794581656571741
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.43430093955966903,
+          "minimum": 0.41607067732435843,
+          "maximum": 0.44594026083298277,
+          "values": [
+            0.44594026083298277,
+            0.41607067732435843,
+            0.44089188052166595
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7723301867680797,
+          "minimum": 0.7664001814200284,
+          "maximum": 0.778168339879586,
+          "values": [
+            0.7724220390046248,
+            0.7664001814200284,
+            0.778168339879586
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 448.3333333333333,
+          "minimum": 257,
+          "maximum": 747,
+          "values": [
+            341,
+            747,
+            257
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 4.333333333333333,
+          "minimum": 2,
+          "maximum": 8,
+          "values": [
+            2,
+            8,
+            3
+          ]
+        },
+        "identity.precision": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7175711681391109,
+          "minimum": 0.7105595288178376,
+          "maximum": 0.7240218763146824,
+          "values": [
+            0.7240218763146824,
+            0.7105595288178376,
+            0.7181320992848128
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.708596269807881,
+          "minimum": 0.699411022297013,
+          "maximum": 0.7143458140513252,
+          "values": [
+            0.7143458140513252,
+            0.699411022297013,
+            0.712031973075305
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8760161756335851,
+          "minimum": 0.8639110466521635,
+          "maximum": 0.8868516284680338,
+          "values": [
+            0.8772858517805582,
+            0.8639110466521635,
+            0.8868516284680338
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 16,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.7557317098830252,
+          "minimum": 0.6255870178692847,
+          "maximum": 0.8305272932814594,
+          "values": [
+            0.8305272932814594,
+            0.6255870178692847,
+            0.8110808184983314
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.164212592904221,
+          "minimum": 0.04880100967606226,
+          "maximum": 0.25305006310475386,
+          "values": [
+            0.25305006310475386,
+            0.04880100967606226,
+            0.19078670593184688
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 3166.6666666666665,
+          "minimum": 132,
+          "maximum": 9028,
+          "values": [
+            340,
+            9028,
+            132
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 2218.6666666666665,
+          "minimum": 1356,
+          "maximum": 2873,
+          "values": [
+            2427,
+            2873,
+            1356
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.5476791473846585,
+          "minimum": 0.34328986116954147,
+          "maximum": 0.7397980647875473,
+          "values": [
+            0.7397980647875473,
+            0.34328986116954147,
+            0.5599495161968868
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.5700462768195205,
+          "minimum": 0.503155237694573,
+          "maximum": 0.6809002944888515,
+          "values": [
+            0.6809002944888515,
+            0.503155237694573,
+            0.5260832982751368
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8774049793912012,
+          "minimum": 0.8753009147809341,
+          "maximum": 0.8799086757990867,
+          "values": [
+            0.8770053475935828,
+            0.8799086757990867,
+            0.8753009147809341
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.7924418428518885,
+          "minimum": 0.7856633343422426,
+          "maximum": 0.8049029907066497,
+          "values": [
+            0.7856633343422426,
+            0.786759203506773,
+            0.8049029907066497
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.13672696676482962,
+          "minimum": 0.08750525872949096,
+          "maximum": 0.17248632730332353,
+          "values": [
+            0.15018931426167437,
+            0.08750525872949096,
+            0.17248632730332353
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 1029.6666666666667,
+          "minimum": 137,
+          "maximum": 1585,
+          "values": [
+            1585,
+            1367,
+            137
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 2102.6666666666665,
+          "minimum": 920,
+          "maximum": 2836,
+          "values": [
+            2836,
+            2552,
+            920
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.6142196045435423,
+          "minimum": 0.49474127050904504,
+          "maximum": 0.720445940260833,
+          "values": [
+            0.720445940260833,
+            0.49474127050904504,
+            0.6274716028607489
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.6188472864955826,
+          "minimum": 0.5870845603702145,
+          "maximum": 0.6394615061001262,
+          "values": [
+            0.6394615061001262,
+            0.6299957930164073,
+            0.5870845603702145
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8814367161911864,
+          "minimum": 0.8770668583752695,
+          "maximum": 0.889419632194889,
+          "values": [
+            0.8770668583752695,
+            0.889419632194889,
+            0.8778236580034006
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 256,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8099460431455852,
+          "minimum": 0.8021716996897693,
+          "maximum": 0.8152206639926199,
+          "values": [
+            0.8152206639926199,
+            0.8021716996897693,
+            0.8124457657543662
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.1688402748562614,
+          "minimum": 0.11590239798064787,
+          "maximum": 0.20025241901556584,
+          "values": [
+            0.20025241901556584,
+            0.11590239798064787,
+            0.19036600757257047
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7862231585468311,
+          "minimum": 0.7833765459920556,
+          "maximum": 0.7894471158398841,
+          "values": [
+            0.7858458138085535,
+            0.7894471158398841,
+            0.7833765459920556
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 407,
+          "minimum": 153,
+          "maximum": 878,
+          "values": [
+            153,
+            878,
+            190
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 1854.3333333333333,
+          "minimum": 1562,
+          "maximum": 2396,
+          "values": [
+            1605,
+            2396,
+            1562
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.5944467816575516,
+          "minimum": 0.48401346234749687,
+          "maximum": 0.6533445519562474,
+          "values": [
+            0.6533445519562474,
+            0.48401346234749687,
+            0.6459823306689104
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.603772261954845,
+          "minimum": 0.5954985275557425,
+          "maximum": 0.6114850652082456,
+          "values": [
+            0.5954985275557425,
+            0.6114850652082456,
+            0.6043331931005469
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8816389971836057,
+          "minimum": 0.8775658053610239,
+          "maximum": 0.889100882423086,
+          "values": [
+            0.8775658053610239,
+            0.889100882423086,
+            0.8782503037667072
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 16,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.7977689892357943,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.8377170980471246,
+          "values": [
+            0.8377170980471246,
+            0.7576338905814202,
+            0.7979559790788383
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.27977214101461734,
+          "minimum": 0.11887360275150473,
+          "maximum": 0.36027515047291486,
+          "values": [
+            0.36027515047291486,
+            0.11887360275150473,
+            0.3601676698194325
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 282.3333333333333,
+          "minimum": 0,
+          "maximum": 737,
+          "values": [
+            110,
+            0,
+            737
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 1594.3333333333333,
+          "minimum": 0,
+          "maximum": 2502,
+          "values": [
+            2281,
+            0,
+            2502
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.6725781026081972,
+          "minimum": 0.5681427343078246,
+          "maximum": 0.7435511607910577,
+          "values": [
+            0.7060404127257094,
+            0.5681427343078246,
+            0.7435511607910577
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.6835769561478934,
+          "minimum": 0.5915735167669819,
+          "maximum": 0.7350601891659502,
+          "values": [
+            0.7350601891659502,
+            0.5915735167669819,
+            0.7240971625107481
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8733339102014115,
+          "minimum": 0.8484848484848485,
+          "maximum": 0.9112627986348123,
+          "values": [
+            0.9112627986348123,
+            0.8484848484848485,
+            0.8602540834845736
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8062368431384657,
+          "minimum": 0.7962608438789084,
+          "maximum": 0.8141809937279808,
+          "values": [
+            0.7962608438789084,
+            0.8141809937279808,
+            0.8082686918085078
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.36536256807108053,
+          "minimum": 0.3229793637145314,
+          "maximum": 0.4337919174548581,
+          "values": [
+            0.3393164230438521,
+            0.3229793637145314,
+            0.4337919174548581
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 411.3333333333333,
+          "minimum": 118,
+          "maximum": 574,
+          "values": [
+            574,
+            118,
+            542
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 2992,
+          "minimum": 2395,
+          "maximum": 3732,
+          "values": [
+            2395,
+            2849,
+            3732
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7324806534823732,
+          "minimum": 0.7172184006878762,
+          "maximum": 0.7439810834049871,
+          "values": [
+            0.7172184006878762,
+            0.7439810834049871,
+            0.7362424763542562
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7324089997133849,
+          "minimum": 0.7118443680137575,
+          "maximum": 0.7516122098022356,
+          "values": [
+            0.7118443680137575,
+            0.7337704213241617,
+            0.7516122098022356
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8927198484826884,
+          "minimum": 0.8658318425760286,
+          "maximum": 0.9119718309859155,
+          "values": [
+            0.9119718309859155,
+            0.900355871886121,
+            0.8658318425760286
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "clean",
+      "regime": "real_only",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.9998726712727013,
+          "minimum": 0.9996214996771358,
+          "maximum": 1.0,
+          "values": [
+            0.9999965141409682,
+            1.0,
+            0.9996214996771358
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.9990685010031528,
+          "minimum": 0.9974204643164231,
+          "maximum": 1.0,
+          "values": [
+            0.9997850386930353,
+            1.0,
+            0.9974204643164231
+          ]
+        },
+        "before.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 25.666666666666668,
+          "minimum": 0,
+          "maximum": 68,
+          "values": [
+            9,
+            0,
+            68
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": null,
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "pipeline",
+      "regime": "real_only",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.7789687809373419,
+          "minimum": 0.7695106363339653,
+          "maximum": 0.7874640855431206,
+          "values": [
+            0.7695106363339653,
+            0.7874640855431206,
+            0.7799316209349397
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.39972055030094583,
+          "minimum": 0.38886500429922616,
+          "maximum": 0.41326311263972487,
+          "values": [
+            0.41326311263972487,
+            0.3970335339638865,
+            0.38886500429922616
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7772446777145167,
+          "minimum": 0.7724147552507462,
+          "maximum": 0.7834075582760209,
+          "values": [
+            0.7724147552507462,
+            0.7834075582760209,
+            0.7759117196167827
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 337.6666666666667,
+          "minimum": 245,
+          "maximum": 443,
+          "values": [
+            245,
+            325,
+            443
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 75,
+          "minimum": 42,
+          "maximum": 126,
+          "values": [
+            42,
+            126,
+            57
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7303668672972199,
+          "minimum": 0.7243121238177128,
+          "maximum": 0.7346302665520207,
+          "values": [
+            0.7243121238177128,
+            0.7346302665520207,
+            0.7321582115219261
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.724061335626254,
+          "minimum": 0.7016337059329321,
+          "maximum": 0.7458082545141874,
+          "values": [
+            0.7247420464316423,
+            0.7016337059329321,
+            0.7458082545141874
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8112713891927269,
+          "minimum": 0.8035087719298246,
+          "maximum": 0.8194945848375451,
+          "values": [
+            0.8194945848375451,
+            0.8108108108108109,
+            0.8035087719298246
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "operating_point": "strict99",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.7964409945329307,
+          "minimum": 0.773980774246219,
+          "maximum": 0.8199755982568903,
+          "values": [
+            0.8199755982568903,
+            0.773980774246219,
+            0.795366611095683
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.23448695901404415,
+          "minimum": 0.15638435081685298,
+          "maximum": 0.339853826311264,
+          "values": [
+            0.339853826311264,
+            0.15638435081685298,
+            0.20722269991401548
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 84.66666666666667,
+          "minimum": 17,
+          "maximum": 119,
+          "values": [
+            118,
+            17,
+            119
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 1217.6666666666667,
+          "minimum": 0,
+          "maximum": 2371,
+          "values": [
+            2371,
+            1282,
+            0
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.6914230438521066,
+          "minimum": 0.6039337919174549,
+          "maximum": 0.7420464316423044,
+          "values": [
+            0.7420464316423044,
+            0.6039337919174549,
+            0.7282889079965607
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.6935726569217541,
+          "minimum": 0.6305889939810834,
+          "maximum": 0.7333404987102322,
+          "values": [
+            0.7333404987102322,
+            0.6305889939810834,
+            0.7167884780739467
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8610746146570896,
+          "minimum": 0.8045977011494253,
+          "maximum": 0.9084507042253521,
+          "values": [
+            0.9084507042253521,
+            0.8701754385964913,
+            0.8045977011494253
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 256,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8453130856493408,
+          "minimum": 0.8229611217944367,
+          "maximum": 0.8790193474599418,
+          "values": [
+            0.8229611217944367,
+            0.8790193474599418,
+            0.8339587876936441
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.45374749211808546,
+          "minimum": 0.34641014617368876,
+          "maximum": 0.551268271711092,
+          "values": [
+            0.34641014617368876,
+            0.551268271711092,
+            0.4635640584694755
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 238,
+          "minimum": 138,
+          "maximum": 316,
+          "values": [
+            138,
+            316,
+            260
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 3734.3333333333335,
+          "minimum": 2472,
+          "maximum": 4460,
+          "values": [
+            2472,
+            4460,
+            4271
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.1750236518448439,
+          "minimum": 0.0,
+          "maximum": 0.5250709555345316,
+          "values": [
+            0.0,
+            0.5250709555345316,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7913442247062196,
+          "minimum": 0.7512897678417885,
+          "maximum": 0.8420034393809115,
+          "values": [
+            0.7512897678417885,
+            0.8420034393809115,
+            0.7807394668959587
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7714961306964746,
+          "minimum": 0.7481728288907996,
+          "maximum": 0.8167454858125538,
+          "values": [
+            0.7481728288907996,
+            0.8167454858125538,
+            0.7495700773860705
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8983672753953706,
+          "minimum": 0.8607594936708861,
+          "maximum": 0.9360967184801382,
+          "values": [
+            0.8982456140350877,
+            0.9360967184801382,
+            0.8607594936708861
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 16,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8288106134026751,
+          "minimum": 0.7985095038650819,
+          "maximum": 0.8659557824453445,
+          "values": [
+            0.8659557824453445,
+            0.7985095038650819,
+            0.8219665538975991
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.410146173688736,
+          "minimum": 0.2295786758383491,
+          "maximum": 0.5214961306964746,
+          "values": [
+            0.5214961306964746,
+            0.2295786758383491,
+            0.4793637145313844
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 260.3333333333333,
+          "minimum": 39,
+          "maximum": 487,
+          "values": [
+            255,
+            39,
+            487
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 3110.3333333333335,
+          "minimum": 2288,
+          "maximum": 3642,
+          "values": [
+            3642,
+            2288,
+            3401
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7303310404127257,
+          "minimum": 0.6068357695614789,
+          "maximum": 0.8129836629406707,
+          "values": [
+            0.8129836629406707,
+            0.6068357695614789,
+            0.7711736887360275
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.724921180854113,
+          "minimum": 0.6246775580395528,
+          "maximum": 0.7896603611349957,
+          "values": [
+            0.7896603611349957,
+            0.6246775580395528,
+            0.7604256233877902
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8974232363303728,
+          "minimum": 0.8805704099821747,
+          "maximum": 0.9069373942470389,
+          "values": [
+            0.9047619047619048,
+            0.9069373942470389,
+            0.8805704099821747
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8549987377407724,
+          "minimum": 0.8414049669997702,
+          "maximum": 0.8797000215859653,
+          "values": [
+            0.8414049669997702,
+            0.8797000215859653,
+            0.8438912246365816
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.4804743479507022,
+          "minimum": 0.44969905417024936,
+          "maximum": 0.5025795356835769,
+          "values": [
+            0.44969905417024936,
+            0.5025795356835769,
+            0.4891444539982803
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 315.3333333333333,
+          "minimum": 153,
+          "maximum": 629,
+          "values": [
+            153,
+            629,
+            164
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 3807.3333333333335,
+          "minimum": 3398,
+          "maximum": 4477,
+          "values": [
+            3547,
+            3398,
+            4477
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.21538946704509618,
+          "minimum": 0.0,
+          "maximum": 0.6461684011352885,
+          "values": [
+            0.0,
+            0.6461684011352885,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.8074663227285755,
+          "minimum": 0.7795571797076526,
+          "maximum": 0.849957007738607,
+          "values": [
+            0.7795571797076526,
+            0.849957007738607,
+            0.7928847807394669
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7879764975637719,
+          "minimum": 0.7659071367153912,
+          "maximum": 0.8216895958727429,
+          "values": [
+            0.7659071367153912,
+            0.8216895958727429,
+            0.7763327601031814
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.9082996398552475,
+          "minimum": 0.8783068783068783,
+          "maximum": 0.9403973509933775,
+          "values": [
+            0.9061946902654867,
+            0.9403973509933775,
+            0.8783068783068783
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "clean",
+      "regime": "mixed_original",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.9999681516903345,
+          "minimum": 0.999928952086042,
+          "maximum": 1.0,
+          "values": [
+            0.999928952086042,
+            1.0,
+            0.9999755029849613
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.9994984236170823,
+          "minimum": 0.9989251934651763,
+          "maximum": 1.0,
+          "values": [
+            0.9989251934651763,
+            1.0,
+            0.9995700773860705
+          ]
+        },
+        "before.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 2.3333333333333335,
+          "minimum": 0,
+          "maximum": 5,
+          "values": [
+            5,
+            0,
+            2
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": null,
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.9999283462310118,
+          "minimum": 0.9997850386930353,
+          "maximum": 1.0,
+          "values": [
+            0.9997850386930353,
+            1.0,
+            1.0
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "pipeline",
+      "regime": "mixed_original",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8028263044216404,
+          "minimum": 0.7849018043883995,
+          "maximum": 0.8317172547847392,
+          "values": [
+            0.7849018043883995,
+            0.8317172547847392,
+            0.7918598540917823
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.4614860991688163,
+          "minimum": 0.433469475494411,
+          "maximum": 0.4876397248495271,
+          "values": [
+            0.46334909716251077,
+            0.4876397248495271,
+            0.433469475494411
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7772446777145167,
+          "minimum": 0.7724147552507462,
+          "maximum": 0.7834075582760209,
+          "values": [
+            0.7724147552507462,
+            0.7834075582760209,
+            0.7759117196167827
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 660.6666666666666,
+          "minimum": 295,
+          "maximum": 1241,
+          "values": [
+            295,
+            1241,
+            446
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 418.6666666666667,
+          "minimum": 275,
+          "maximum": 614,
+          "values": [
+            367,
+            275,
+            614
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.17137293086660177,
+          "minimum": 0.0,
+          "maximum": 0.5141187925998053,
+          "values": [
+            0.0,
+            0.5141187925998053,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7673402120951562,
+          "minimum": 0.7478503869303526,
+          "maximum": 0.8016981943250215,
+          "values": [
+            0.7478503869303526,
+            0.8016981943250215,
+            0.7524720550300946
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.747384637431929,
+          "minimum": 0.7430137575236457,
+          "maximum": 0.7518271711092004,
+          "values": [
+            0.7473129836629406,
+            0.7430137575236457,
+            0.7518271711092004
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8245952511944157,
+          "minimum": 0.8120567375886525,
+          "maximum": 0.8414023372287145,
+          "values": [
+            0.8203266787658802,
+            0.8414023372287145,
+            0.8120567375886525
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 256,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8457011881390855,
+          "minimum": 0.8028962222834503,
+          "maximum": 0.8721530326653854,
+          "values": [
+            0.8620543094684208,
+            0.8721530326653854,
+            0.8028962222834503
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.41530524505588995,
+          "minimum": 0.2683791917454858,
+          "maximum": 0.4889294926913156,
+          "values": [
+            0.48860705073086846,
+            0.4889294926913156,
+            0.2683791917454858
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 264,
+          "minimum": 210,
+          "maximum": 364,
+          "values": [
+            210,
+            364,
+            218
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 3447,
+          "minimum": 2144,
+          "maximum": 4238,
+          "values": [
+            4238,
+            3959,
+            2144
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.2856549167110338,
+          "minimum": 0.0,
+          "maximum": 0.5553453169347209,
+          "values": [
+            0.3016194331983806,
+            0.5553453169347209,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7897678417884781,
+          "minimum": 0.7304385210662081,
+          "maximum": 0.8303955288048152,
+          "values": [
+            0.8084694754944111,
+            0.8303955288048152,
+            0.7304385210662081
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7784823731728289,
+          "minimum": 0.7209802235597592,
+          "maximum": 0.8179277730008598,
+          "values": [
+            0.7965391229578676,
+            0.8179277730008598,
+            0.7209802235597592
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8944637498317715,
+          "minimum": 0.8311195445920304,
+          "maximum": 0.947008547008547,
+          "values": [
+            0.9052631578947369,
+            0.947008547008547,
+            0.8311195445920304
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 16,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8424583424096963,
+          "minimum": 0.8229535857874446,
+          "maximum": 0.8682098772526772,
+          "values": [
+            0.8682098772526772,
+            0.8229535857874446,
+            0.8362115641889672
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.4592290054456864,
+          "minimum": 0.2952493551160791,
+          "maximum": 0.5657781599312124,
+          "values": [
+            0.5166595012897678,
+            0.2952493551160791,
+            0.5657781599312124
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 563.3333333333334,
+          "minimum": 378,
+          "maximum": 780,
+          "values": [
+            378,
+            532,
+            780
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 4204.333333333333,
+          "minimum": 2806,
+          "maximum": 5414,
+          "values": [
+            4393,
+            2806,
+            5414
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7666236744052737,
+          "minimum": 0.6585339638865004,
+          "maximum": 0.8272785898538263,
+          "values": [
+            0.8272785898538263,
+            0.6585339638865004,
+            0.8140584694754944
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7400401261106334,
+          "minimum": 0.6367153912295787,
+          "maximum": 0.7943895098882201,
+          "values": [
+            0.7943895098882201,
+            0.6367153912295787,
+            0.7890154772141015
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.88452304056104,
+          "minimum": 0.8757961783439491,
+          "maximum": 0.8993288590604027,
+          "values": [
+            0.8757961783439491,
+            0.8784440842787682,
+            0.8993288590604027
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8561180723066606,
+          "minimum": 0.8387893636537459,
+          "maximum": 0.8896804535100858,
+          "values": [
+            0.8398843997561501,
+            0.8896804535100858,
+            0.8387893636537459
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.4865290914302092,
+          "minimum": 0.43013757523645746,
+          "maximum": 0.5817927773000859,
+          "values": [
+            0.43013757523645746,
+            0.5817927773000859,
+            0.4476569217540843
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 237.33333333333334,
+          "minimum": 111,
+          "maximum": 466,
+          "values": [
+            111,
+            466,
+            135
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 3880.3333333333335,
+          "minimum": 3436,
+          "maximum": 4141,
+          "values": [
+            3436,
+            4141,
+            4064
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.19394512771996217,
+          "minimum": 0.0,
+          "maximum": 0.5818353831598865,
+          "values": [
+            0.0,
+            0.5818353831598865,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.811908856405847,
+          "minimum": 0.7866509028374893,
+          "maximum": 0.8583404987102322,
+          "values": [
+            0.7907351676698194,
+            0.8583404987102322,
+            0.7866509028374893
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7924906850100315,
+          "minimum": 0.766981943250215,
+          "maximum": 0.8359845227858985,
+          "values": [
+            0.766981943250215,
+            0.8359845227858985,
+            0.774505588993981
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.9114270735696333,
+          "minimum": 0.8833922261484098,
+          "maximum": 0.9437086092715232,
+          "values": [
+            0.9071803852889667,
+            0.9437086092715232,
+            0.8833922261484098
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "clean",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.999310311868686,
+          "minimum": 0.9989490192842622,
+          "maximum": 0.9999384250029135,
+          "values": [
+            0.9999384250029135,
+            0.9989490192842622,
+            0.9990434913188825
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.9941960447119519,
+          "minimum": 0.9911865864144453,
+          "maximum": 0.9993551160791058,
+          "values": [
+            0.9993551160791058,
+            0.9911865864144453,
+            0.9920464316423044
+          ]
+        },
+        "before.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 20.666666666666668,
+          "minimum": 3,
+          "maximum": 30,
+          "values": [
+            3,
+            30,
+            29
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": null,
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.9998566924620235,
+          "minimum": 0.9995700773860705,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            0.9995700773860705,
+            1.0
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.9999283462310118,
+          "minimum": 0.9997850386930353,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            0.9997850386930353,
+            1.0
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "pipeline",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8032761800451801,
+          "minimum": 0.7845416155756771,
+          "maximum": 0.8373202770439472,
+          "values": [
+            0.7845416155756771,
+            0.8373202770439472,
+            0.787966647515916
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.4590856979077099,
+          "minimum": 0.41444539982803097,
+          "maximum": 0.5036543422184007,
+          "values": [
+            0.4591573516766982,
+            0.5036543422184007,
+            0.41444539982803097
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7772446777145167,
+          "minimum": 0.7724147552507462,
+          "maximum": 0.7834075582760209,
+          "values": [
+            0.7724147552507462,
+            0.7834075582760209,
+            0.7759117196167827
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 450.6666666666667,
+          "minimum": 196,
+          "maximum": 953,
+          "values": [
+            196,
+            953,
+            203
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 371.6666666666667,
+          "minimum": 296,
+          "maximum": 502,
+          "values": [
+            296,
+            502,
+            317
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.11619604024667317,
+          "minimum": 0.0,
+          "maximum": 0.3485881207400195,
+          "values": [
+            0.0,
+            0.3485881207400195,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7645815419891087,
+          "minimum": 0.7424763542562339,
+          "maximum": 0.806749785038693,
+          "values": [
+            0.7424763542562339,
+            0.806749785038693,
+            0.744518486672399
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7482086557752937,
+          "minimum": 0.7438736027515047,
+          "maximum": 0.7558039552880481,
+          "values": [
+            0.7449484092863284,
+            0.7438736027515047,
+            0.7558039552880481
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8492571953860923,
+          "minimum": 0.8351254480286738,
+          "maximum": 0.8676716917922948,
+          "values": [
+            0.8351254480286738,
+            0.8676716917922948,
+            0.8449744463373083
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "operating_point": "strict99",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8320683435928635,
+          "minimum": 0.8180298512018722,
+          "maximum": 0.8489744920372401,
+          "values": [
+            0.8292006875394782,
+            0.8489744920372401,
+            0.8180298512018722
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.3334049871023216,
+          "minimum": 0.30674978503869305,
+          "maximum": 0.3485597592433362,
+          "values": [
+            0.3449054170249355,
+            0.3485597592433362,
+            0.30674978503869305
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 154.33333333333334,
+          "minimum": 44,
+          "maximum": 359,
+          "values": [
+            60,
+            359,
+            44
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 2613,
+          "minimum": 2463,
+          "maximum": 2889,
+          "values": [
+            2463,
+            2889,
+            2487
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.1674550614947966,
+          "minimum": 0.0,
+          "maximum": 0.5023651844843898,
+          "values": [
+            0.0,
+            0.5023651844843898,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7548366294067068,
+          "minimum": 0.7512897678417885,
+          "maximum": 0.7598882201203784,
+          "values": [
+            0.7598882201203784,
+            0.7533319002579536,
+            0.7512897678417885
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7435153339065634,
+          "minimum": 0.7362424763542562,
+          "maximum": 0.7560189165950129,
+          "values": [
+            0.7560189165950129,
+            0.7382846087704213,
+            0.7362424763542562
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8935685176939755,
+          "minimum": 0.8530465949820788,
+          "maximum": 0.9324546952224053,
+          "values": [
+            0.8952042628774423,
+            0.9324546952224053,
+            0.8530465949820788
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 256,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8595064577611572,
+          "minimum": 0.8394423142520736,
+          "maximum": 0.8758662078961134,
+          "values": [
+            0.8632108511352846,
+            0.8758662078961134,
+            0.8394423142520736
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.464853826311264,
+          "minimum": 0.40240756663800514,
+          "maximum": 0.5196689595872743,
+          "values": [
+            0.4724849527085125,
+            0.5196689595872743,
+            0.40240756663800514
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 278,
+          "minimum": 198,
+          "maximum": 394,
+          "values": [
+            242,
+            394,
+            198
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 3835.6666666666665,
+          "minimum": 3085,
+          "maximum": 4401,
+          "values": [
+            4021,
+            4401,
+            3085
+          ]
+        },
+        "identity.precision": {
+          "mean": 0.9116344074456636,
+          "minimum": 0.8628048780487805,
+          "maximum": 0.9537815126050421,
+          "values": [
+            0.9183168316831684,
+            0.8628048780487805,
+            0.9537815126050421
+          ]
+        },
+        "identity.recall": {
+          "mean": 0.3781363456635781,
+          "minimum": 0.2234251968503937,
+          "maximum": 0.5354777672658467,
+          "values": [
+            0.37550607287449395,
+            0.5354777672658467,
+            0.2234251968503937
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.8183576956147893,
+          "minimum": 0.7913800515907137,
+          "maximum": 0.8428632846087705,
+          "values": [
+            0.820829750644884,
+            0.8428632846087705,
+            0.7913800515907137
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.8071438807681284,
+          "minimum": 0.787725709372313,
+          "maximum": 0.8259888220120378,
+          "values": [
+            0.8077171109200344,
+            0.8259888220120378,
+            0.787725709372313
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.9115259610143952,
+          "minimum": 0.8790035587188612,
+          "maximum": 0.9493243243243243,
+          "values": [
+            0.90625,
+            0.9493243243243243,
+            0.8790035587188612
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "generated_original",
+      "budget": 0,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8191070670580706,
+          "minimum": 0.8172419449766154,
+          "maximum": 0.8220403624179868,
+          "values": [
+            0.8220403624179868,
+            0.8172419449766154,
+            0.8180388937796094
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.28228002292920606,
+          "minimum": 0.278804815133276,
+          "maximum": 0.28729578675838346,
+          "values": [
+            0.28729578675838346,
+            0.28073946689595874,
+            0.278804815133276
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 136.33333333333334,
+          "minimum": 134,
+          "maximum": 138,
+          "values": [
+            138,
+            137,
+            134
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 1325,
+          "minimum": 1316,
+          "maximum": 1330,
+          "values": [
+            1330,
+            1316,
+            1329
+          ]
+        },
+        "identity.precision": {
+          "mean": 0.8765833600356637,
+          "minimum": 0.8557213930348259,
+          "maximum": 0.893719806763285,
+          "values": [
+            0.8557213930348259,
+            0.8803088803088803,
+            0.893719806763285
+          ]
+        },
+        "identity.recall": {
+          "mean": 0.19062683599182914,
+          "minimum": 0.17408906882591094,
+          "maximum": 0.21570482497634816,
+          "values": [
+            0.17408906882591094,
+            0.21570482497634816,
+            0.18208661417322836
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7298652909143021,
+          "minimum": 0.7247420464316423,
+          "maximum": 0.735597592433362,
+          "values": [
+            0.735597592433362,
+            0.7247420464316423,
+            0.729256233877902
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7180065921467469,
+          "minimum": 0.7137790197764402,
+          "maximum": 0.7235597592433362,
+          "values": [
+            0.7235597592433362,
+            0.7166809974204643,
+            0.7137790197764402
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8843829175917461,
+          "minimum": 0.8461538461538461,
+          "maximum": 0.9269949066213922,
+          "values": [
+            0.88,
+            0.9269949066213922,
+            0.8461538461538461
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "clean",
+      "regime": "generated_original",
+      "budget": 0,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.999980810671553,
+          "minimum": 0.999980810671553,
+          "maximum": 0.999980810671553,
+          "values": [
+            0.999980810671553,
+            0.999980810671553,
+            0.999980810671553
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.9995700773860705,
+          "minimum": 0.9995700773860705,
+          "maximum": 0.9995700773860705,
+          "values": [
+            0.9995700773860705,
+            0.9995700773860705,
+            0.9995700773860705
+          ]
+        },
+        "before.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 2,
+          "minimum": 2,
+          "maximum": 2,
+          "values": [
+            2,
+            2,
+            2
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": null,
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "pipeline",
+      "regime": "generated_original",
+      "budget": 0,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.7904956110366876,
+          "minimum": 0.781653720356668,
+          "maximum": 0.7952950212363176,
+          "values": [
+            0.781653720356668,
+            0.7945380915170772,
+            0.7952950212363176
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.42071510461450273,
+          "minimum": 0.40315993121238175,
+          "maximum": 0.43013757523645746,
+          "values": [
+            0.43013757523645746,
+            0.40315993121238175,
+            0.42884780739466893
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7772446777145167,
+          "minimum": 0.7724147552507462,
+          "maximum": 0.7834075582760209,
+          "values": [
+            0.7724147552507462,
+            0.7834075582760209,
+            0.7759117196167827
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 193.33333333333334,
+          "minimum": 168,
+          "maximum": 228,
+          "values": [
+            168,
+            228,
+            184
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 193,
+          "minimum": 182,
+          "maximum": 212,
+          "values": [
+            182,
+            185,
+            212
+          ]
+        },
+        "identity.precision": {
+          "mean": 0.5725822492739786,
+          "minimum": 0.3877551020408163,
+          "maximum": 0.8538011695906432,
+          "values": [
+            0.3877551020408163,
+            0.47619047619047616,
+            0.8538011695906432
+          ]
+        },
+        "identity.recall": {
+          "mean": 0.06671846403226778,
+          "minimum": 0.01901901901901902,
+          "maximum": 0.15192507804370448,
+          "values": [
+            0.01901901901901902,
+            0.029211295034079845,
+            0.15192507804370448
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.745091716824305,
+          "minimum": 0.7375322441960447,
+          "maximum": 0.7577386070507308,
+          "values": [
+            0.7375322441960447,
+            0.7400042992261393,
+            0.7577386070507308
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7342003439380912,
+          "minimum": 0.702171109200344,
+          "maximum": 0.7636500429922614,
+          "values": [
+            0.7367798796216681,
+            0.702171109200344,
+            0.7636500429922614
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.815710193664197,
+          "minimum": 0.8106194690265487,
+          "maximum": 0.8199643493761141,
+          "values": [
+            0.8165467625899281,
+            0.8199643493761141,
+            0.8106194690265487
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "generated_varied",
+      "budget": 0,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.840476316997873,
+          "minimum": 0.838384453083832,
+          "maximum": 0.8432042105568891,
+          "values": [
+            0.8432042105568891,
+            0.838384453083832,
+            0.8398402873528977
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.35422040699340784,
+          "minimum": 0.35146173688736027,
+          "maximum": 0.3593078245915735,
+          "values": [
+            0.3593078245915735,
+            0.35146173688736027,
+            0.35189165950128976
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 280.6666666666667,
+          "minimum": 269,
+          "maximum": 289,
+          "values": [
+            269,
+            289,
+            284
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 1984,
+          "minimum": 1927,
+          "maximum": 2056,
+          "values": [
+            1927,
+            2056,
+            1969
+          ]
+        },
+        "identity.precision": {
+          "mean": 0.8795975473060079,
+          "minimum": 0.875968992248062,
+          "maximum": 0.8842364532019704,
+          "values": [
+            0.875968992248062,
+            0.8785871964679912,
+            0.8842364532019704
+          ]
+        },
+        "identity.recall": {
+          "mean": 0.3576670785048831,
+          "minimum": 0.3431174089068826,
+          "maximum": 0.37653736991485337,
+          "values": [
+            0.3431174089068826,
+            0.37653736991485337,
+            0.35334645669291337
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7924548581255374,
+          "minimum": 0.7880481513327601,
+          "maximum": 0.796969045571797,
+          "values": [
+            0.796969045571797,
+            0.7880481513327601,
+            0.7923473774720551
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7666236744052737,
+          "minimum": 0.7647248495270851,
+          "maximum": 0.7696689595872743,
+          "values": [
+            0.7696689595872743,
+            0.7647248495270851,
+            0.7654772141014617
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.9006462591049046,
+          "minimum": 0.8788927335640139,
+          "maximum": 0.919931856899489,
+          "values": [
+            0.903114186851211,
+            0.919931856899489,
+            0.8788927335640139
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "clean",
+      "regime": "generated_varied",
+      "budget": 0,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.9993440471626246,
+          "minimum": 0.9993440471626246,
+          "maximum": 0.9993440471626246,
+          "values": [
+            0.9993440471626246,
+            0.9993440471626246,
+            0.9993440471626246
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.9929062768701634,
+          "minimum": 0.9929062768701634,
+          "maximum": 0.9929062768701634,
+          "values": [
+            0.9929062768701634,
+            0.9929062768701634,
+            0.9929062768701634
+          ]
+        },
+        "before.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 24,
+          "minimum": 24,
+          "maximum": 24,
+          "values": [
+            24,
+            24,
+            24
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 0,
+          "minimum": 0,
+          "maximum": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": null,
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "pipeline",
+      "regime": "generated_varied",
+      "budget": 0,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.7951275419406955,
+          "minimum": 0.7830358116490259,
+          "maximum": 0.8052294635569938,
+          "values": [
+            0.7830358116490259,
+            0.7971173506160668,
+            0.8052294635569938
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.43672972198337634,
+          "minimum": 0.4151977644024076,
+          "maximum": 0.45432072226999143,
+          "values": [
+            0.44067067927773,
+            0.4151977644024076,
+            0.45432072226999143
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7772446777145167,
+          "minimum": 0.7724147552507462,
+          "maximum": 0.7834075582760209,
+          "values": [
+            0.7724147552507462,
+            0.7834075582760209,
+            0.7759117196167827
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 428,
+          "minimum": 383,
+          "maximum": 486,
+          "values": [
+            415,
+            383,
+            486
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 210,
+          "minimum": 189,
+          "maximum": 230,
+          "values": [
+            189,
+            211,
+            230
+          ]
+        },
+        "identity.precision": {
+          "mean": 0.5624995254546145,
+          "minimum": 0.4,
+          "maximum": 0.8086253369272237,
+          "values": [
+            0.4,
+            0.4788732394366197,
+            0.8086253369272237
+          ]
+        },
+        "identity.recall": {
+          "mean": 0.14414704689866376,
+          "minimum": 0.05405405405405406,
+          "maximum": 0.31217481789802287,
+          "values": [
+            0.05405405405405406,
+            0.06621226874391431,
+            0.31217481789802287
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7597449125824018,
+          "minimum": 0.7470980223559759,
+          "maximum": 0.7799871023215821,
+          "values": [
+            0.7470980223559759,
+            0.7521496130696474,
+            0.7799871023215821
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7415806821438807,
+          "minimum": 0.7079750644883921,
+          "maximum": 0.7789122957867584,
+          "values": [
+            0.7378546861564919,
+            0.7079750644883921,
+            0.7789122957867584
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8191933392990686,
+          "minimum": 0.818342151675485,
+          "maximum": 0.8204225352112676,
+          "values": [
+            0.818342151675485,
+            0.8204225352112676,
+            0.818815331010453
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 16,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8097864313268373,
+          "minimum": 0.7860779743174875,
+          "maximum": 0.8263540081269192,
+          "values": [
+            0.8263540081269192,
+            0.7860779743174875,
+            0.816927311536105
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.28367727142447696,
+          "minimum": 0.1878761822871883,
+          "maximum": 0.331792777300086,
+          "values": [
+            0.3313628546861565,
+            0.1878761822871883,
+            0.331792777300086
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 164.33333333333334,
+          "minimum": 111,
+          "maximum": 205,
+          "values": [
+            205,
+            111,
+            177
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 1785.6666666666667,
+          "minimum": 0,
+          "maximum": 3064,
+          "values": [
+            3064,
+            0,
+            2293
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7395743766122098,
+          "minimum": 0.7066852966466036,
+          "maximum": 0.7562338779019776,
+          "values": [
+            0.7562338779019776,
+            0.7066852966466036,
+            0.7558039552880481
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7247420464316423,
+          "minimum": 0.6942175408426483,
+          "maximum": 0.741079105760963,
+          "values": [
+            0.7389294926913156,
+            0.6942175408426483,
+            0.741079105760963
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8712169370790733,
+          "minimum": 0.8612099644128114,
+          "maximum": 0.886986301369863,
+          "values": [
+            0.886986301369863,
+            0.8654545454545455,
+            0.8612099644128114
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 64,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8076980527409817,
+          "minimum": 0.7915142701343333,
+          "maximum": 0.8205213536944534,
+          "values": [
+            0.8205213536944534,
+            0.7915142701343333,
+            0.8110585343941584
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.2844654628833477,
+          "minimum": 0.21743336199484092,
+          "maximum": 0.3305030094582975,
+          "values": [
+            0.3305030094582975,
+            0.21743336199484092,
+            0.3054600171969046
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 154.33333333333334,
+          "minimum": 130,
+          "maximum": 186,
+          "values": [
+            147,
+            130,
+            186
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 1421.3333333333333,
+          "minimum": 458,
+          "maximum": 2062,
+          "values": [
+            2062,
+            458,
+            1744
+          ]
+        },
+        "identity.precision": null,
+        "identity.recall": {
+          "mean": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7414015477214102,
+          "minimum": 0.7138865004299226,
+          "maximum": 0.7611779879621668,
+          "values": [
+            0.7611779879621668,
+            0.7138865004299226,
+            0.749140154772141
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7203711665233591,
+          "minimum": 0.6957222699914015,
+          "maximum": 0.7412940670679278,
+          "values": [
+            0.7412940670679278,
+            0.6957222699914015,
+            0.7240971625107481
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8651086930452947,
+          "minimum": 0.8426763110307414,
+          "maximum": 0.8790035587188612,
+          "values": [
+            0.8790035587188612,
+            0.8736462093862816,
+            0.8426763110307414
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 256,
+      "operating_point": "primary95",
+      "metrics": {
+        "history.f1": {
+          "mean": 0.8170975894424227,
+          "minimum": 0.8037584032348465,
+          "maximum": 0.8259742160204085,
+          "values": [
+            0.8259742160204085,
+            0.8037584032348465,
+            0.821560149072013
+          ]
+        },
+        "history.exact_history_fraction": {
+          "mean": 0.3028804815133276,
+          "minimum": 0.24086414445399829,
+          "maximum": 0.3406061908856406,
+          "values": [
+            0.3406061908856406,
+            0.24086414445399829,
+            0.3271711092003439
+          ]
+        },
+        "before.f1": {
+          "mean": 0.7615003917642509,
+          "minimum": 0.7576338905814202,
+          "maximum": 0.7661112920974151,
+          "values": [
+            0.7661112920974151,
+            0.7576338905814202,
+            0.7607559926139172
+          ]
+        },
+        "events.expanded_new_damage": {
+          "mean": 148.66666666666666,
+          "minimum": 120,
+          "maximum": 179,
+          "values": [
+            147,
+            179,
+            120
+          ]
+        },
+        "events.expanded_repaired_events": {
+          "mean": 1601,
+          "minimum": 638,
+          "maximum": 2184,
+          "values": [
+            2184,
+            638,
+            1981
+          ]
+        },
+        "identity.precision": {
+          "mean": 0.9603932536655648,
+          "minimum": 0.935672514619883,
+          "maximum": 0.9855072463768116,
+          "values": [
+            0.9855072463768116,
+            0.935672514619883,
+            0.96
+          ]
+        },
+        "identity.recall": {
+          "mean": 0.0970212865548012,
+          "minimum": 0.06882591093117409,
+          "maximum": 0.15137180700094607,
+          "values": [
+            0.06882591093117409,
+            0.15137180700094607,
+            0.07086614173228346
+          ]
+        },
+        "queries.first_timestamp_correct_fraction": {
+          "mean": 0.7539051304098596,
+          "minimum": 0.733555460017197,
+          "maximum": 0.7691315563198624,
+          "values": [
+            0.7691315563198624,
+            0.733555460017197,
+            0.7590283748925194
+          ]
+        },
+        "queries.last_timestamp_correct_fraction": {
+          "mean": 0.7352751504729148,
+          "minimum": 0.7120593293207222,
+          "maximum": 0.7492476354256233,
+          "values": [
+            0.7492476354256233,
+            0.7120593293207222,
+            0.744518486672399
+          ]
+        },
+        "queries.queries.cancellation_evidence.f1": {
+          "mean": 0.8719209944330054,
+          "minimum": 0.851063829787234,
+          "maximum": 0.8829787234042553,
+          "values": [
+            0.8829787234042553,
+            0.8817204301075269,
+            0.851063829787234
+          ]
+        }
+      }
+    }
+  ],
+  "paired_differences": [
+    {
+      "domain": "bpi2017",
+      "budget": 16,
+      "regime": "mixed_original",
+      "seed_differences": [
+        -0.0014155691398745063,
+        0.05651662101545707,
+        0.022693050854735164
+      ],
+      "mean_difference": 0.025931367576772574,
+      "wins": 2,
+      "losses": 1
+    },
+    {
+      "domain": "bpi2017",
+      "budget": 16,
+      "regime": "mixed_varied",
+      "seed_differences": [
+        -0.007653485161908002,
+        0.03028437028167985,
+        0.019924732324870575
+      ],
+      "mean_difference": 0.014185205814880808,
+      "wins": 2,
+      "losses": 1
+    },
+    {
+      "domain": "bpi2017",
+      "budget": 16,
+      "regime": "calibration_only_varied",
+      "seed_differences": [
+        -0.012304846968852146,
+        -0.1689919589088854,
+        -0.025944445238839542
+      ],
+      "mean_difference": -0.06908041703885903,
+      "wins": 0,
+      "losses": 3
+    },
+    {
+      "domain": "bpi2017",
+      "budget": 64,
+      "regime": "mixed_original",
+      "seed_differences": [
+        0.0025666420341712293,
+        0.010977624236684469,
+        0.020362116089014615
+      ],
+      "mean_difference": 0.011302127453290104,
+      "wins": 3,
+      "losses": 0
+    },
+    {
+      "domain": "bpi2017",
+      "budget": 64,
+      "regime": "mixed_varied",
+      "seed_differences": [
+        -0.00757366276440441,
+        -0.009878579225534478,
+        0.0010409403010605
+      ],
+      "mean_difference": -0.005470433896292796,
+      "wins": 1,
+      "losses": 2
+    },
+    {
+      "domain": "bpi2017",
+      "budget": 64,
+      "regime": "calibration_only_varied",
+      "seed_differences": [
+        -0.07253372664997204,
+        -0.04466328642617057,
+        -0.030408464542910463
+      ],
+      "mean_difference": -0.04920182587301769,
+      "wins": 0,
+      "losses": 3
+    },
+    {
+      "domain": "bpi2017",
+      "budget": 256,
+      "regime": "mixed_original",
+      "seed_differences": [
+        -0.008609939922609167,
+        -0.0018020935923936943,
+        0.00509467427737309
+      ],
+      "mean_difference": -0.0017724530792099236,
+      "wins": 1,
+      "losses": 2
+    },
+    {
+      "domain": "bpi2017",
+      "budget": 256,
+      "regime": "mixed_varied",
+      "seed_differences": [
+        -0.0051949738489849295,
+        -0.03768047894570492,
+        -0.018878153648771656
+      ],
+      "mean_difference": -0.020584535481153837,
+      "wins": 0,
+      "losses": 3
+    },
+    {
+      "domain": "bpi2017",
+      "budget": 256,
+      "regime": "calibration_only_varied",
+      "seed_differences": [
+        -0.033573132266771166,
+        -0.06178288255090825,
+        -0.05480553074584482
+      ],
+      "mean_difference": -0.05005384852117475,
+      "wins": 0,
+      "losses": 3
+    },
+    {
+      "domain": "bpi2019",
+      "budget": 16,
+      "regime": "mixed_original",
+      "seed_differences": [
+        0.02823868439821997,
+        0.04087561328366174,
+        0.024010574818760788
+      ],
+      "mean_difference": 0.031041624166880832,
+      "wins": 3,
+      "losses": 0
+    },
+    {
+      "domain": "bpi2019",
+      "budget": 16,
+      "regime": "mixed_varied",
+      "seed_differences": [
+        0.0304927792055526,
+        0.06531969520602443,
+        0.03825558511012894
+      ],
+      "mean_difference": 0.04468935317390199,
+      "wins": 3,
+      "losses": 0
+    },
+    {
+      "domain": "bpi2019",
+      "budget": 16,
+      "regime": "calibration_only_varied",
+      "seed_differences": [
+        -0.011363089920205405,
+        0.028444083736067327,
+        0.018971332457266676
+      ],
+      "mean_difference": 0.012017442091042866,
+      "wins": 2,
+      "losses": 1
+    },
+    {
+      "domain": "bpi2019",
+      "budget": 64,
+      "regime": "mixed_original",
+      "seed_differences": [
+        0.0451441231208618,
+        0.06551902785798447,
+        0.035622532828073816
+      ],
+      "mean_difference": 0.0487618946023067,
+      "wins": 3,
+      "losses": 0
+    },
+    {
+      "domain": "bpi2019",
+      "budget": 64,
+      "regime": "mixed_varied",
+      "seed_differences": [
+        0.04362355587724176,
+        0.07549945978210504,
+        0.0305206718452381
+      ],
+      "mean_difference": 0.049881229168194964,
+      "wins": 3,
+      "losses": 0
+    },
+    {
+      "domain": "bpi2019",
+      "budget": 64,
+      "regime": "calibration_only_varied",
+      "seed_differences": [
+        0.02426050981554506,
+        -0.02266672359364752,
+        0.002789842585650626
+      ],
+      "mean_difference": 0.001461209602516056,
+      "wins": 2,
+      "losses": 1
+    },
+    {
+      "domain": "bpi2019",
+      "budget": 256,
+      "regime": "mixed_original",
+      "seed_differences": [
+        0.039093187673984064,
+        -0.006866314794556461,
+        -0.03106256541019381
+      ],
+      "mean_difference": 0.000388102489744598,
+      "wins": 1,
+      "losses": 2
+    },
+    {
+      "domain": "bpi2019",
+      "budget": 256,
+      "regime": "mixed_varied",
+      "seed_differences": [
+        0.04024972934084792,
+        -0.0031531395638284554,
+        0.005483526558429541
+      ],
+      "mean_difference": 0.014193372111816335,
+      "wins": 2,
+      "losses": 1
+    },
+    {
+      "domain": "bpi2019",
+      "budget": 256,
+      "regime": "calibration_only_varied",
+      "seed_differences": [
+        0.0030130942259718463,
+        -0.07526094422509533,
+        -0.012398638621631042
+      ],
+      "mean_difference": -0.028215496206918173,
+      "wins": 1,
+      "losses": 2
+    }
+  ],
+  "source_reports": {
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_real_only_16_primary95.json": "8957889666e28388e720f3da37e056c37c9492246bcaec02cf87120937433aa6",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_real_only_64_primary95.json": "41dbe86ea34ff6b77e422bd8427acc39f1ef2bc669e4c4dcc5e6acce51738f81",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_clean_real_only_64_primary95.json": "229e7b8526a4912bec3f9b10eeb1f2bd6a6bc305119859dcfd8d542d0e460c17",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_pipeline_real_only_64_primary95.json": "a6f57861c76c76690b56b1295730a924d77978dffc9e95354c5021510d141f2f",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_real_only_64_strict99.json": "8021826fb047bdf6cd7da95173d37e92fcdff4d739619fc366fbb958b9ea5d84",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_real_only_256_primary95.json": "7d9fc45b23990d1d4518da46c20e56bd10d353ed16803918dce92de293240a3a",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_mixed_original_16_primary95.json": "ffe49cbfd7ac59b09828f6d59130682fbbf41e0fc5cc80afac219c8e7976bdd6",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_mixed_original_64_primary95.json": "41a6724e11f6763a09805cd3e51f7ac8b59c541d8e27dbfdffc234323c1bc19d",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_clean_mixed_original_64_primary95.json": "b0afda2f4d2f9acd2ff98ebc8d55c878c318493dacbb1303ec2dc2b8af711aa9",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_pipeline_mixed_original_64_primary95.json": "46e9805e6e532137f858ca054583cd1c0cd85e2f9a7f122f0e714272df113661",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_mixed_original_256_primary95.json": "83cd015efc21e2efd9a75bf64fdd7eb68e1a9f839c21d47c18639e3f59362a19",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_mixed_varied_16_primary95.json": "27c62c8d8fa2ea8fbdddc08ee897a889dc2210e5ac83d8ba846dcc87f85275b0",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_mixed_varied_64_primary95.json": "1cbb8c78f6503ba11959b4d8f4fa48c5c87669531d554f52e87d705b745e39a1",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_clean_mixed_varied_64_primary95.json": "90dc4eb8bf60a792f3f6c1d00121d6dbcb1dd30714c7d7cc36e0c30f3814b849",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_pipeline_mixed_varied_64_primary95.json": "c51cf34d63361a7854bbb8a8a526c78abaa86a9251c93dfa3329672260ed8681",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_mixed_varied_64_strict99.json": "4b21ac1020b14b379d7bdb692e95961d39743835d1f724e9b44eef38a49aa30b",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_mixed_varied_256_primary95.json": "03b8fba400c25d69c3452b94d72c18c0a0a137dab0c4c13fe085bcf1b45cbc32",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_generated_original_0_primary95.json": "5a7b1a16d2fea6893fa1bde27e1e4091cc11ba255cbada492d254170492987f5",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_clean_generated_original_0_primary95.json": "0f2b148009c033f942cd26d11b5dd710bbdef64002c3c64ca41f75de607cdf94",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_pipeline_generated_original_0_primary95.json": "67a909ee967be4395306e6bb23d0952058bb86d13c520ca057ee9a9a72c1967c",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_generated_varied_0_primary95.json": "51fda6bbe4e8e0221b17bc6c10269a311be43b969483da00068902748d15a275",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_clean_generated_varied_0_primary95.json": "bf628a46a29f403ac65cd28c7f13894d988c09f1e05296c5c499150f269d6677",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_pipeline_generated_varied_0_primary95.json": "44fa11ae599a4e462717ed2b59468f64863e2b0fad1bc23e0722ea2fa8694a55",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_calibration_only_varied_16_primary95.json": "76d3aab8880fc604ff1c456f32e484f4ac9258af79cca5849792a568d6f99f3f",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_calibration_only_varied_64_primary95.json": "90cc23525baad7243904d2728068aa042c24014be866cd35ce2c1b4be103c1e1",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed0_mixed_calibration_only_varied_256_primary95.json": "7e050a108d1f1aa9296e0169102d4f206b4dfd9e4607306d9a1faed6c1647c70",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_real_only_16_primary95.json": "6ff4e1861263c24bcdbb1425f2b13ee1110d65ff84f78966d260af69c77cbc29",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_real_only_64_primary95.json": "d74322c780a35e6820d7f090d7aea088d6bbd668f9eb0b903f79f7d72788f2b1",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_clean_real_only_64_primary95.json": "289b5e2c29cb78db700ccb5ccc6d9d8efb34e53bde42768564954038cd966e09",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_pipeline_real_only_64_primary95.json": "2e605300217a35cd2e3df9f48e7103348a7f9bfb0d4b91d92159b6ba1492bee0",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_real_only_64_strict99.json": "c057df677edea19ea4a47351310d5a39885c20e335344320bfc997e9e86d8a81",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_real_only_256_primary95.json": "c204679dafa33fb5ed6738dea6c980a19cf3719e44bf89fa24dbe10cdef79bd5",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_mixed_original_16_primary95.json": "44b6bcceb2c46cdd4814ae0a526d210b3d3284922d8040d1e40b48090bec9c8a",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_mixed_original_64_primary95.json": "dfdb534ba83a70e7674587765b9a7ba18cef7918391b5a92a7e161b50775d646",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_clean_mixed_original_64_primary95.json": "447dd8c8dafdd31e9a61dfc89dc66d017a66476b83e7851fb949fb3dd5559e26",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_pipeline_mixed_original_64_primary95.json": "89f68742c5dec5b5065a41eb04559b54264b403a6eb6738bac907eefe2e76e5c",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_mixed_original_256_primary95.json": "51723e83d7d3cd601f38de3dae4307db1f6c2b56d93f311da3f958df52b7d24d",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_mixed_varied_16_primary95.json": "2835bf2ea2a53e0a6717987068797a88036de48b277b79d8048127cd1c8c36f8",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_mixed_varied_64_primary95.json": "272cbb77a88f4840a0a664d22110dbb026b5bcc784dd0764ab5530ef5fd22046",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_clean_mixed_varied_64_primary95.json": "a78f2ffb3e5d30fd3a476e0501e01efce16e8416b393ce0b5b32fd5fdf270eca",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_pipeline_mixed_varied_64_primary95.json": "60524ee1cba21e4678ca0b1a7e13b1e6dee86628496542b124ace8893d396aaf",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_mixed_varied_64_strict99.json": "9985990e7f7a0f780f0ce9933d9ab1deae62b7d9c28072dad44c5f46126c9b51",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_mixed_varied_256_primary95.json": "5494cb7a9304c935ce50b05cd887a510075cda8214f7cd152326795e4a1256cf",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_generated_original_0_primary95.json": "330b6a2a4295ac32f7a52be1e9b61b5b26843e74c165050796abd48b7582e8a7",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_clean_generated_original_0_primary95.json": "90551cd12f92cb209e3b79841b7b7af335b6a7b10a7326b81d68b2b8cf3cc5c7",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_pipeline_generated_original_0_primary95.json": "eb2205c453b0a48e8510241162da2617f34940b35e1ebfda2dea7e0ce2beecf1",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_generated_varied_0_primary95.json": "7cb83f5b67f0096dc813709a33951b2510cb56edc8de482524cf1608172844ac",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_clean_generated_varied_0_primary95.json": "5796cec486837fd733dca2a5283147c39d2ddfcf9c6c3e0af04b83cd11e4731f",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_pipeline_generated_varied_0_primary95.json": "ef2b23a25b84c8f879e1613474edd43a0f83e0f94747fe4bf8c118f5df4f2e02",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_calibration_only_varied_16_primary95.json": "dde9ba21793a8b3936e64d7e940879817eb55d5a7c232dd2b5b4f4f25a5d30ff",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_calibration_only_varied_64_primary95.json": "40bb1eafe0f28261084cb9634b8ee3bd304fd89eb1e70f1452207360bc64633c",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed1_mixed_calibration_only_varied_256_primary95.json": "8909492491f5f14c62c203625ad00e818a3a7c4a900ff129cc1fed6479633592",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_real_only_16_primary95.json": "1053e94eb0e818cc8836fca6c2dd500d4cde313205204891f78185936cd2417d",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_real_only_64_primary95.json": "d8fe40080e3ef970a1c5c5bc42da71797a2178fc7e5febb7a989cd24bd551514",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_clean_real_only_64_primary95.json": "5c4b23c07a05083ba53027e5d857775b06ddf7152fd92d00637ae3bba6c6f13b",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_pipeline_real_only_64_primary95.json": "a16e0beaa5bd3657e713efb99506033f76cf5cf6478416fc8e1be96acbffbf6e",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_real_only_64_strict99.json": "834a0a322204a318abe3c1de3680722b7d140b268303a9f02cd9083303bf6b8d",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_real_only_256_primary95.json": "bfee3fee6cbbf0e09f26a68d9818223f0295025bfea4b9f228dcf1668c2aea4f",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_mixed_original_16_primary95.json": "38264908a78d5c2c6f828d175c3fb46de335d78d9bf15a8faa55d6a5635a0279",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_mixed_original_64_primary95.json": "a708c5832f7e66b8ed63da12cfe85be93789d880603c076779e89c1188dc00c8",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_clean_mixed_original_64_primary95.json": "dcba64395b9d162c5c8e3dc885925c5e71838ec64f5dae224aa55a39d3d98bb8",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_pipeline_mixed_original_64_primary95.json": "4927f566567e41ceb38cd205ac9ccb7d7a6e3ad14d6c5adfa72e5c43fcc53d4f",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_mixed_original_256_primary95.json": "1b1f80b9217652d2faf2e411ef457f83d7b6569557d3b5cf1bea900e269eb1b1",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_mixed_varied_16_primary95.json": "0f4a169a7d847e7edd3303ed4b08a2e358b7bc9ded3b087ab7fc9b3f4e017d96",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_mixed_varied_64_primary95.json": "7181e10c4a9dd47404a463061f58c362c121391efe6d01a89806bbe75af366e6",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_clean_mixed_varied_64_primary95.json": "26b29c8147e4b10ec8f0af95b87b5f830c789ce430be1b73f4db16c52316a893",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_pipeline_mixed_varied_64_primary95.json": "9161484ad611c17b38673ba74fc40e3fa82d21ae4d55884df048733d2c04925f",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_mixed_varied_64_strict99.json": "5815bea05ce64ce198b5086c9c49d752e497af6cbbc61442de1bd59973fd5e3b",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_mixed_varied_256_primary95.json": "2bbee9b669928d2fbea54fd371fe4d5f5b779df6985552681070421b36af8b48",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_generated_original_0_primary95.json": "7d04fb64227f214498216be5b563e5e31af23bf1144b6b993d1d804280248efd",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_clean_generated_original_0_primary95.json": "e12a260de3292da6bc8e6b1ec5197280e5e3957be380c50a5a31654403b8863d",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_pipeline_generated_original_0_primary95.json": "3d6e85c8bee8d65978e59a2150a2e4e4c17662abf9f00c0f9b992514b914de27",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_generated_varied_0_primary95.json": "26a7a32e418c5c3f78e9d86f61630d99787606e37878d5f8ac61640276cb1728",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_clean_generated_varied_0_primary95.json": "7ddf4fe3c59cb479833aa9f6481c1cc2302ee3cc781889a5a1662121805c68a3",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_pipeline_generated_varied_0_primary95.json": "828e3c75067acf11aa2f4f331618fd97a6d2b58b829229c5596d5e290d7a4030",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_calibration_only_varied_16_primary95.json": "ff7986851923cf21a7111f5e95e0f77ca455dd88abded44f9e429a50b7efc65a",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_calibration_only_varied_64_primary95.json": "6fb744f38621211bdebaf3e0d7b0015d6cdc260af5eaf72c9c2ce8ada50a3718",
+    "revision/reports/coupled_confirmation_v1/bpi2017_seed2_mixed_calibration_only_varied_256_primary95.json": "31d5d95132bf6aefbf7006a7d48613d6691bcd32d3765f827e30c9216b090008",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_real_only_16_primary95.json": "858399db3313c5852c4bfbf6aa2c4d9a7e1044d9d37b24e24290c745b6b9a269",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_real_only_64_primary95.json": "0eba1de21e5b09833779e19bf39c1f39100df26542af3ed76141514b837c266d",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_clean_real_only_64_primary95.json": "58c1dc60d638a259e6e76748ad01c2aa6894841cae9610b4a1e2a63502bc9cb3",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_pipeline_real_only_64_primary95.json": "2f28bcf0be652a4316050c84872cd90f2f9ef84fe291787e1ec6046e157c1d8e",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_real_only_64_strict99.json": "596a34f0b3481e12cc690d5e9cee3e471a5717fcd5f04140aff9bb766c77e977",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_real_only_256_primary95.json": "bbe65a1c3c5056b01cb58ca3c5511218eba4e097409fab74517c5c6518f55f1d",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_mixed_original_16_primary95.json": "00d3121d6d300da4ba8eebd8663c29d76b6da0f97661129164d7c09da41f6c5a",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_mixed_original_64_primary95.json": "3265492018ca4b7443ec8cefe317248d9ef77f23a2d54185247522d55aa0c97d",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_clean_mixed_original_64_primary95.json": "aa5dce225f07493d8191c52d2ee94cf8eb1dd264bc196af6ba708e01ae3ed7c1",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_pipeline_mixed_original_64_primary95.json": "00c3920c68a65d0148ddbf80faab1566bc01c9d48e230f09f9a09f22dff0d199",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_mixed_original_256_primary95.json": "00329096ae539a391ff18af0df4c2ce89393b6ad8c827a82119dbad9ef2e1b3b",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_mixed_varied_16_primary95.json": "fb366363b28c6ea01f5c6754e9d0dcbef2253aaca55a5ccf2d6913952a6fa5ae",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_mixed_varied_64_primary95.json": "12a8bbfc1a9b1794707820f0870cfa211bd85387e4bb35b8b65d68b3837ba2df",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_clean_mixed_varied_64_primary95.json": "e0bfa31eba5038c17a8c616ad82183cad6ad3c24bb5837120202f35d79173195",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_pipeline_mixed_varied_64_primary95.json": "ee872ea006573985bd8732553f4d2fb14ee73cf47a5d7e469477ecde779e54d8",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_mixed_varied_64_strict99.json": "120f4fbb1eac15214d4bd5985043af2adb2adec4caeda753b3b62da50ef4fa4c",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_mixed_varied_256_primary95.json": "7c70f3a9fb8b71306403d726fc896f021b954b2ad43f0911bd93cf29c4b8442c",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_generated_original_0_primary95.json": "7a450f81e11f796a385407d128a15b0259b15e256588b63fa55fe97aa1ce4b93",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_clean_generated_original_0_primary95.json": "a6b058a15b7dfdc5ca0ab4d11ea6b30ade068a18f61b4a011c0d90a0034364e8",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_pipeline_generated_original_0_primary95.json": "52379f9115ef7b19828224e5b693be7c013064b6ab0144aa30f004224020029c",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_generated_varied_0_primary95.json": "165431bfd2cf38c350399d331168e2026db2075604c6b9400f8dba3aab577654",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_clean_generated_varied_0_primary95.json": "0f50d148daedbd65d8d519c3e7b6d857ad8fd6430b76fd4dd5ce98c4d5b9232c",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_pipeline_generated_varied_0_primary95.json": "09e4c960a95eeab6b64c52e69ff24eacded032b800aa3587fea7a88b55e48b40",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_calibration_only_varied_16_primary95.json": "f5bd054cd11c76e3f6327cba4f684c13eb6076bd195e65d8bc60cfd618ffff8f",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_calibration_only_varied_64_primary95.json": "6f1850a3a405176eec1ed46b51729f892c87426bc2986077a517770e19c20240",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed0_mixed_calibration_only_varied_256_primary95.json": "1f17756c1ac5e93ae3cde6ad946f418f259a017bb01bfc7af8cf1ecbfbc07082",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_real_only_16_primary95.json": "34854c385a32fede50a4466ed7648c3502e9024b1ac2cc43fa27f19142e05b07",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_real_only_64_primary95.json": "2c52fe45f22a8dd2866a327ea0ff5e23dc44d62589ea46e2d5b197b6595188ed",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_clean_real_only_64_primary95.json": "bc64126f42c7cbf2c28725f3f827826dd44a7bf5aae59dce3fb846422f700dad",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_pipeline_real_only_64_primary95.json": "fde1ebbec46e9ad0a49b42e44b0f25c63651297d1e3929ae0b0901286b55d79e",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_real_only_64_strict99.json": "4c80c22ac579248ef69175d47cc6f00e7582e7fa7af6e5070fa63eec1ebfac50",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_real_only_256_primary95.json": "31f7d5403a262f0594476af7db5f448f908245124c7126d53caa444436e6b246",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_mixed_original_16_primary95.json": "70e5f221a9fd9415235f0848990af442840735929c8cfff6020086d8958c8622",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_mixed_original_64_primary95.json": "8292c34c175ccc631839e9104989d98964c99306577f7f218538d68b9a14eb0a",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_clean_mixed_original_64_primary95.json": "ae53711d729018c186f8072eaed38cab7e3c7ac268847d8e496fc02e04e6a328",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_pipeline_mixed_original_64_primary95.json": "e81546b3f4f3f6f82db16ed415b39f9133b438d2abc5011885c597544544e064",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_mixed_original_256_primary95.json": "303ebb35dedad6f9dedeae48fbca1a5eba2c96b971274bd1084a149f79b09e28",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_mixed_varied_16_primary95.json": "f55e92589beaea84b1b0809fbbbff89505e200ffdf35b14e992bb28e1a1d78ce",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_mixed_varied_64_primary95.json": "5eb4ac5f5540e4d810585f33d86f33c150f141ddc3c6e7948f0c74419ec1e2f8",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_clean_mixed_varied_64_primary95.json": "fae253a3457432bb943a45758cb8347296ad33210943318f677087b9184b9dea",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_pipeline_mixed_varied_64_primary95.json": "ed62a463bba4f8f36d3e05789ca737900ca60b41f9421ee8982e61a51449b750",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_mixed_varied_64_strict99.json": "95cc3274da6675dfbcbb31311707bffc28a3dbf0c52756f66bd15b974f43924a",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_mixed_varied_256_primary95.json": "1adebaacfe0da466c51491453f5fbcd9cbc6d67b4550338c238cac042ec77e9e",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_generated_original_0_primary95.json": "05d11b52eb5c1eb7f49e275c3c0fee9accbc20ebec4324f1db47228d7a00d440",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_clean_generated_original_0_primary95.json": "e5604397304c7f7ae311fe42c1f9ade87400c396f37dad5cd6c39042b8fd6205",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_pipeline_generated_original_0_primary95.json": "eddf42fe7b29cbb1cf17bc3a4c3d133517f6e9338dab490911c7aa7288528bae",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_generated_varied_0_primary95.json": "ac30884064d4d3eb94c5575896c94e12879c5dde23e262327f69370baf0c0e02",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_clean_generated_varied_0_primary95.json": "0f212387f183df46f8c4b37136da5943de5c38d55ca86284da6afc1ed32e8179",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_pipeline_generated_varied_0_primary95.json": "5e3aafc6801628b5387ecd457797db0ffb07a8a020d33b7ab2bf6738668f5ae5",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_calibration_only_varied_16_primary95.json": "50d9cdcb34d7df5f97b7a8e1902ea8083ffc7287fde9bd31bcfccdbe5951e35b",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_calibration_only_varied_64_primary95.json": "569ad8401be721bcd96d16805e698dcf9eae0ab525b2b57a37d37a89e1e08b21",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed1_mixed_calibration_only_varied_256_primary95.json": "abea4a82d534d1aee9c1a2494f545e3bdf29cb8248fbd66b1234944f89218532",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_real_only_16_primary95.json": "03f05d494182ddf54f41aceb8f44ae8ab169c41fdb1db7144802c9dbf21f303c",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_real_only_64_primary95.json": "4470a7246bdf15eefa0d3dc169b91269250a0e0353e18c0ccd84c4c5be24856a",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_clean_real_only_64_primary95.json": "1693b2a1814adef4b1ac1f1b60d2c62738a6209d6b1fb08a6b3ca2b1d11fdde1",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_pipeline_real_only_64_primary95.json": "237e54282496eca17b1e6fc13cb900ed7ad61865f78d90296163ea8ae0754c78",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_real_only_64_strict99.json": "3b706ea4c0d282c14313b4f88a372da62c0713a74ab873be3c1b09cc20683d18",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_real_only_256_primary95.json": "bf640ac0b39090c3ccbf1053c9685f9850464d4d5fd5b1af77d8050f2ed93b7e",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_mixed_original_16_primary95.json": "f7c7f99c41f6426f0f5d3db2e752cd319ce5bcdbb455c8fea8e34016d844c3e4",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_mixed_original_64_primary95.json": "cf3f187a0b9203173c67516b0da9b204db95a4a565101f5e7fbb4143ff1cd5cc",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_clean_mixed_original_64_primary95.json": "08543c25b50a4ead9b0b9ad202d4507b9ddeb0fb9864ae4c3974518e969ca4af",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_pipeline_mixed_original_64_primary95.json": "af03e790332894aba0e9efe1cc20c8fdaa5152459f88c1edb5351e2e6f26db53",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_mixed_original_256_primary95.json": "93b6b0689130ab0bca2c40b89e159d76b8e10f9af28fca66b523aa09b6ec37d1",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_mixed_varied_16_primary95.json": "881cbc44907e5d826ef07d6082bf177d4fb0a5144bb72784dde5ea07c68a5d5c",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_mixed_varied_64_primary95.json": "9f85c1d9bef57334acaae24d9365ed592506b4e2f0fcdd0b505d966999f37662",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_clean_mixed_varied_64_primary95.json": "230d58b31d4483fa8d740d386df3d91cb3744bd5eeca9183b5db2523a31c455f",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_pipeline_mixed_varied_64_primary95.json": "d7f66e5a4a4f5e9841ca0105053b52633c25a47c15855a9becea3043c754f31d",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_mixed_varied_64_strict99.json": "5fda2614bf38f80f7eed8052541293c8c42a13e95cbe8f6843383403b446b2f0",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_mixed_varied_256_primary95.json": "d7a6cb09ad05879c2100df8a910d10b873f6e67dbbbc7255e8409d7aae9d45aa",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_generated_original_0_primary95.json": "c98a93a882e656684f9b26e34ad993ff322acc7498b9285843fb9b613838b7e8",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_clean_generated_original_0_primary95.json": "6fd8c0643040909135691ebeba397e42cbc6ab2cd7a2bbcd85a43dbe4e4df974",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_pipeline_generated_original_0_primary95.json": "bba1588a672659a88fe16e57c25415bb10bec47073d8d8c42095c721565c40c9",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_generated_varied_0_primary95.json": "5dd8b2f4de7e6e4874c399b18470a3c80c9f14d487a0fe71619783315a90ef69",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_clean_generated_varied_0_primary95.json": "f7cd5e0c21d8033ed9c52f337e2c68d9b7959e67bd8efaade0dec2763788ae10",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_pipeline_generated_varied_0_primary95.json": "7dcfc098f29b1fb2b692af22fae913086b079ff4c19b755cd5a6034a0518a433",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_calibration_only_varied_16_primary95.json": "d67c4e19513cdcc6d960c2c56ed0ea2f4b3e080f735a892b2a5fbcff8243eaff",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_calibration_only_varied_64_primary95.json": "5ea27747569d91271440f5d8d2d26f7a20554fd6dbea40ced4d7368728083f21",
+    "revision/reports/coupled_confirmation_v1/bpi2019_seed2_mixed_calibration_only_varied_256_primary95.json": "deb2e2e205af101f135135fc00beb42edb4f3e059ceae6c97c62c6f93e8a690d"
+  }
+}

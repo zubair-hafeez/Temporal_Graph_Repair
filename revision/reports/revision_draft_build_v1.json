@@ -1,0 +1,28 @@
+{
+  "status": "development_draft_compiled",
+  "page_count": 10,
+  "page_limit_includes_references_and_appendices": 15,
+  "compiler_version": "Tectonic 0.17.0",
+  "command": [
+    "/mnt/zubair/Operational_Temporal_Graphs/paper/tools/tectonic",
+    "--only-cached",
+    "--keep-logs",
+    "main.tex"
+  ],
+  "inputs": {
+    "revision/paper/main.tex": "7c2b362604da2b133a7ecfe90e697e0f41010121082e70dfd4d8418e65146a48",
+    "revision/paper/application_example.tex": "afb3e2e18a6ef57650d6b00f45c86df3a026993a1e3aef5e5eb6557d8c2930ce",
+    "revision/paper/references.tex": "b66d54a67d3f042061eacd5b91cfdd9917c2e8daaeda828ccae5cd737e2c70a9",
+    "revision/paper/original_results.tex": "7f1b388958496504e29727faa0cc3248149b207d4f189f4fed4af904f53b0bf8",
+    "revision/paper/results.tex": "9e6d97da768d1dfbe6f67bb446826d9fc14549b9cf9934445a2746c9eb344228",
+    "revision/paper/annotation_costs.tex": "64b53fa7f45614bbeb42c3a09a7ac8acd7eead6cad3b4a0da126149fa2450341",
+    "revision/paper/native_results.tex": "e74f375c87f9e7bcbab1566a3ebfe3d547d3675d53bcf3272687cd12ec7fefc0",
+    "paper/figures/method_overview.pdf": "4da239bd7974177bc4d8c794c18fe2eeaa42da76b33e5b799550a68b190ae937",
+    "paper/figures/confirmation_loan_cases.pdf": "b46c311f114cfe5477e4e8e213f6f013e8f0cb92410b0e53c012c8ea110de0b6"
+  },
+  "script_sha256": "8c37afedf2c57cff86bd6e8817a8c6bc335f955ab3c3b1908d9780efbb42e8d7",
+  "pdf_sha256": "2edcfe0a0a5a7a757e5a298d33cebcc734deb7578bad22ac802eab9793f55597",
+  "log_sha256": "65bdb154a9809a02b3fae6ec4eb7b1eaff2ec7a8da8aeab1c8cf25de84695b53",
+  "overfull_warnings": [],
+  "scope": "Build and page-count verification. Scientific completeness, numerical claims and visual layout require separate review."
+}

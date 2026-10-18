@@ -1,0 +1,266 @@
+{
+  "status": "completed_here_development_pilot",
+  "name": "here_development_bpi2017_seed0_missing10_roots512_epochs30_v1",
+  "domain": "bpi2017",
+  "seed": 0,
+  "missing_rate": 0.1,
+  "epochs": 30,
+  "config": {
+    "d_model": 512,
+    "num_layers": 3,
+    "h": 8,
+    "dropout": 0.1,
+    "d_ff": 2048
+  },
+  "source_graph_sha256": "29fa1e6a4d6f3463ab5c87a501b23716b9986f19bfc4da46343274c658631c12",
+  "runner_sha256": "4b7e74fa2bc57ba7307aa3b391222f6a1fa73f39193ba001db98dde155b2bf0e",
+  "author_commit": "814b1db618aaa9f14e6f471504699ade9fcbf203",
+  "author_files": {
+    "here_LICENSE.md": "796a7f9dd50ab35afcaa24de367870ad494d3ac19e42d504bb8c9491c66aa3b9",
+    "here_train.py": "4903ad303fc85645776a0950d467827f36e98833b2b8a1210a6aca8b69c957fa",
+    "here_model.py": "4f44d790f99a047023c993069d3c86b8dea99d5ff0e4d72c50a2b439dd8dca67",
+    "here_dataset.py": "1ae9e771d662ece5957cac4c4b11225e2041efb72d4437b288db4b7630b0781e"
+  },
+  "observed_events": 19048,
+  "cases": 512,
+  "hidden_test_events": 1837,
+  "known_supervision_events": 17211,
+  "fit_windows": 13929,
+  "validation_windows": 1548,
+  "source_vocab": 197,
+  "target_vocab": 517,
+  "parameter_count": 24784389,
+  "training": [
+    {
+      "epoch": 1,
+      "fit_loss": 2.5643493952625245,
+      "validation_loss": 1.8276380361969937,
+      "seconds": 40.41570114600472
+    },
+    {
+      "epoch": 2,
+      "fit_loss": 1.7429390451117033,
+      "validation_loss": 1.6269906574917823,
+      "seconds": 79.61350282595959
+    },
+    {
+      "epoch": 3,
+      "fit_loss": 1.5802036458808164,
+      "validation_loss": 1.5175321065273482,
+      "seconds": 118.80318160005845
+    },
+    {
+      "epoch": 4,
+      "fit_loss": 1.486767895459855,
+      "validation_loss": 1.4527056610461362,
+      "seconds": 157.99094134999905
+    },
+    {
+      "epoch": 5,
+      "fit_loss": 1.4203542498304977,
+      "validation_loss": 1.4044601739067393,
+      "seconds": 196.65979953901842
+    },
+    {
+      "epoch": 6,
+      "fit_loss": 1.3716307098364584,
+      "validation_loss": 1.3634261955919953,
+      "seconds": 236.7058844199637
+    },
+    {
+      "epoch": 7,
+      "fit_loss": 1.3321851687644846,
+      "validation_loss": 1.3404429044920145,
+      "seconds": 275.0473490949953
+    },
+    {
+      "epoch": 8,
+      "fit_loss": 1.2994272010197732,
+      "validation_loss": 1.3003433967374034,
+      "seconds": 323.71622742398176
+    },
+    {
+      "epoch": 9,
+      "fit_loss": 1.269517269323395,
+      "validation_loss": 1.2744449370915127,
+      "seconds": 372.5911949860165
+    },
+    {
+      "epoch": 10,
+      "fit_loss": 1.2449694082192246,
+      "validation_loss": 1.247895769237243,
+      "seconds": 419.823701287969
+    },
+    {
+      "epoch": 11,
+      "fit_loss": 1.2205752384101483,
+      "validation_loss": 1.228813414106664,
+      "seconds": 464.2993867249461
+    },
+    {
+      "epoch": 12,
+      "fit_loss": 1.199947395636759,
+      "validation_loss": 1.2085480462644518,
+      "seconds": 504.4042361889733
+    },
+    {
+      "epoch": 13,
+      "fit_loss": 1.1817921162609666,
+      "validation_loss": 1.1783156696054125,
+      "seconds": 570.2603633280378
+    },
+    {
+      "epoch": 14,
+      "fit_loss": 1.1623511506687212,
+      "validation_loss": 1.1682598498678698,
+      "seconds": 645.7771089290036
+    },
+    {
+      "epoch": 15,
+      "fit_loss": 1.1447777296453885,
+      "validation_loss": 1.1526067226203447,
+      "seconds": 723.8137404130539
+    },
+    {
+      "epoch": 16,
+      "fit_loss": 1.1301678599090446,
+      "validation_loss": 1.1317649164150672,
+      "seconds": 813.760647919029
+    },
+    {
+      "epoch": 17,
+      "fit_loss": 1.1137692733966114,
+      "validation_loss": 1.1104475978723507,
+      "seconds": 909.0671302539995
+    },
+    {
+      "epoch": 18,
+      "fit_loss": 1.1001580000334301,
+      "validation_loss": 1.1053723981699992,
+      "seconds": 985.1069541099714
+    },
+    {
+      "epoch": 19,
+      "fit_loss": 1.0904461021538305,
+      "validation_loss": 1.0903946450076152,
+      "seconds": 1057.638086752966
+    },
+    {
+      "epoch": 20,
+      "fit_loss": 1.0788399705109448,
+      "validation_loss": 1.0923020133038157,
+      "seconds": 1131.2552338719834
+    },
+    {
+      "epoch": 21,
+      "fit_loss": 1.0743145296685868,
+      "validation_loss": 1.080065506635253,
+      "seconds": 1204.9245084930444
+    },
+    {
+      "epoch": 22,
+      "fit_loss": 1.0665132949464493,
+      "validation_loss": 1.0738493370026658,
+      "seconds": 1278.0383972589625
+    },
+    {
+      "epoch": 23,
+      "fit_loss": 1.0595679300934522,
+      "validation_loss": 1.071957548254544,
+      "seconds": 1350.0915784459794
+    },
+    {
+      "epoch": 24,
+      "fit_loss": 1.0548949687475453,
+      "validation_loss": 1.0634388659418244,
+      "seconds": 1424.0826503570424
+    },
+    {
+      "epoch": 25,
+      "fit_loss": 1.0509760223765323,
+      "validation_loss": 1.0646459134583621,
+      "seconds": 1497.8281724130502
+    },
+    {
+      "epoch": 26,
+      "fit_loss": 1.0466280868009639,
+      "validation_loss": 1.0629743890664012,
+      "seconds": 1570.56482301699
+    },
+    {
+      "epoch": 27,
+      "fit_loss": 1.0424537791108155,
+      "validation_loss": 1.0594399516115482,
+      "seconds": 1643.35745180503
+    },
+    {
+      "epoch": 28,
+      "fit_loss": 1.0402514648492247,
+      "validation_loss": 1.0566504628387923,
+      "seconds": 1716.16373619996
+    },
+    {
+      "epoch": 29,
+      "fit_loss": 1.0361965254855896,
+      "validation_loss": 1.0548911444919626,
+      "seconds": 1789.6148470139597
+    },
+    {
+      "epoch": 30,
+      "fit_loss": 1.0313318333450607,
+      "validation_loss": 1.0492457372626078,
+      "seconds": 1856.3632775939768
+    }
+  ],
+  "limits": [
+    "Development pilot, not reserved confirmation and not a published-score reproduction.",
+    "Author model, tensor dataset, and greedy decoder preserved. Headless orchestration and evaluation split are explicit adaptations.",
+    "No supplied expert attributes or declarative rules; name this HERE-Transformer without expert rules.",
+    "Window validation overlaps known fitting events and is diagnostic only; no masked test identifier enters any training window.",
+    "This closed-case track uses known target IDs as supervision and is separate from the verified-history adaptation budget.",
+    "A two-epoch pilot checks runtime only; final method comparisons require the full declared training budget."
+  ],
+  "model_sha256": "5c3d57cd889211c272f6c4c38bd7595294ac21ce6a56617e5d1dc208828bf0ae",
+  "heldout_missing_id": {
+    "correct": 1573,
+    "assigned": 1837,
+    "hidden": 1837,
+    "accuracy_all_missing": 0.8562874251497006,
+    "precision_assigned": 0.8562874251497006,
+    "coverage": 1.0,
+    "true_cases_unseen_in_known_records": 0
+  },
+  "history_before": {
+    "precision": 1.0,
+    "recall": 0.9039389071374166,
+    "f1": 0.9488302074161851,
+    "exact_history_fraction": 0.04296875,
+    "entities": 512,
+    "per_type": {
+      "Application": {
+        "precision": 1.0,
+        "recall": 0.9039389071374166,
+        "f1": 0.9488302074161851,
+        "exact_history_fraction": 0.04296875,
+        "entities": 512
+      }
+    }
+  },
+  "history_after": {
+    "precision": 0.9861246847278575,
+    "recall": 0.9861867328837938,
+    "f1": 0.9858854013668846,
+    "exact_history_fraction": 0.41796875,
+    "entities": 512,
+    "per_type": {
+      "Application": {
+        "precision": 0.9861246847278575,
+        "recall": 0.9861867328837938,
+        "f1": 0.9858854013668846,
+        "exact_history_fraction": 0.41796875,
+        "entities": 512
+      }
+    }
+  },
+  "seconds": 2027.4768205810105
+}

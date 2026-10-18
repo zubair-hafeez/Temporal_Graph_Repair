@@ -1,0 +1,125 @@
+{
+  "status": "completed_native_controls_development",
+  "name": "native_controls_development_bpi2019_seed0_missing10_roots512_v1",
+  "domain": "bpi2019",
+  "seed": 0,
+  "missing_rate": 0.1,
+  "max_roots": 512,
+  "source_sha256": "80a00f7976b6b3d79fa5576cd1b003016331b58d339112eb4740ac997a7a0025",
+  "implementation_sha256": "a4d3a1282c66b157351834978c0d98ef69e8ef2c2e16f3f74c703b65c14bcd86",
+  "observed_graph_sha256": "6d3da53d517653be8504dc6522ab068e089807680b1372d8ecec1e5ba429fd57",
+  "generated_model_hashes": {
+    "generated_original": "c2a95d9173329ddc77876ccdf00193ade110c63b0487dafb4c13a1d7adfe33e9",
+    "generated_varied": "803be97285c169b99459277debcba0db576224ed62355cd015280b4256b3f07a"
+  },
+  "observed_events": 11581,
+  "hidden_events": 1163,
+  "known_label_training": {
+    "known_query_events_used": 4096,
+    "examples": 524288,
+    "positives": 4096,
+    "real_examples": 524288,
+    "real_positives": 4096,
+    "generated_examples": 0
+  },
+  "results": {
+    "generated_original": {
+      "correct": 235,
+      "assigned": 1163,
+      "hidden": 1163,
+      "accuracy_all_missing": 0.20206362854686155,
+      "history": {
+        "precision": 0.8690652266037192,
+        "recall": 0.920372214289328,
+        "f1": 0.872888181740043,
+        "exact_history_fraction": 0.2890625,
+        "entities": 512,
+        "per_type": {
+          "PO": {
+            "precision": 0.8690652266037192,
+            "recall": 0.920372214289328,
+            "f1": 0.872888181740043,
+            "exact_history_fraction": 0.2890625,
+            "entities": 512
+          }
+        }
+      }
+    },
+    "generated_varied": {
+      "correct": 193,
+      "assigned": 1163,
+      "hidden": 1163,
+      "accuracy_all_missing": 0.16595012897678418,
+      "history": {
+        "precision": 0.8710126923956829,
+        "recall": 0.9168020656494537,
+        "f1": 0.8738726975526798,
+        "exact_history_fraction": 0.283203125,
+        "entities": 512,
+        "per_type": {
+          "PO": {
+            "precision": 0.8710126923956829,
+            "recall": 0.9168020656494537,
+            "f1": 0.8738726975526798,
+            "exact_history_fraction": 0.283203125,
+            "entities": 512
+          }
+        }
+      }
+    },
+    "known_labels_only": {
+      "correct": 892,
+      "assigned": 1163,
+      "hidden": 1163,
+      "accuracy_all_missing": 0.766981943250215,
+      "history": {
+        "precision": 0.9617411911558512,
+        "recall": 0.9480098598247424,
+        "f1": 0.949765468602704,
+        "exact_history_fraction": 0.486328125,
+        "entities": 512,
+        "per_type": {
+          "PO": {
+            "precision": 0.9617411911558512,
+            "recall": 0.9480098598247424,
+            "f1": 0.949765468602704,
+            "exact_history_fraction": 0.486328125,
+            "entities": 512
+          }
+        }
+      }
+    },
+    "nearest_event": {
+      "correct": 825,
+      "assigned": 1163,
+      "hidden": 1163,
+      "accuracy_all_missing": 0.709372312983663,
+      "history": {
+        "precision": 0.9531023580042594,
+        "recall": 0.9289229264334653,
+        "f1": 0.9341334679886143,
+        "exact_history_fraction": 0.384765625,
+        "entities": 512,
+        "per_type": {
+          "PO": {
+            "precision": 0.9531023580042594,
+            "recall": 0.9289229264334653,
+            "f1": 0.9341334679886143,
+            "exact_history_fraction": 0.384765625,
+            "entities": 512
+          }
+        }
+      }
+    }
+  },
+  "contract": "Activity, resource, timestamp and existing case memberships only. No child IDs, vendor context, copied attributes, wrong joins, or aliases. Only missing IDs are modified.",
+  "limits": [
+    "Development comparisons, not fresh confirmation.",
+    "Top-one scoring uses the known single-case task contract; it is not the full iterative repair decoder.",
+    "The target-local boosted control uses up to 4096 known events; HERE uses all remaining known events. Report this unequal fitting sample count.",
+    "Generated-only scorers use no fitting target labels beyond observed memberships."
+  ],
+  "candidate_recall": 0.9484092863284609,
+  "seconds": 29.117421183967963,
+  "predictions_sha256": "06a8ead295994ca4fd744562df367e3f37f092df8dd9d4ae1ab6a29be725b82d"
+}

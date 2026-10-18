@@ -1,0 +1,781 @@
+{
+  "status": "completed_revision_development",
+  "task": {
+    "domain": "bpi2017",
+    "partition": "revision_development",
+    "variant": "mixed",
+    "seed": 2,
+    "target_types": [
+      "Application",
+      "Offer"
+    ],
+    "source_sha256": "29fa1e6a4d6f3463ab5c87a501b23716b9986f19bfc4da46343274c658631c12",
+    "graph_sha256": "ba45052ab6716649e403598f90a3433786523f1eb47a1834e0f63694efc2a7cd",
+    "reference_sha256": "87681001ff08155bb44155bb730e97e4596cecc938645d808cda2d927c938158"
+  },
+  "training_report_sha256": "2956a93822c6799146fb07ebbbf5a490fe01660054dc35437af269604de96d43",
+  "evaluation_implementation_sha256": "af93eef14985dabc0de50f5ec60cb7e16972de4d6c6ce4761bb0c9881e5cfbae",
+  "before": {
+    "precision": 0.9013469878626436,
+    "recall": 0.740872079822796,
+    "f1": 0.7940808619189555,
+    "exact_history_fraction": 0.18585526315789475,
+    "entities": 1216,
+    "per_type": {
+      "Application": {
+        "precision": 0.8789966222154454,
+        "recall": 0.7094409812458082,
+        "f1": 0.770026403456333,
+        "exact_history_fraction": 0.0,
+        "entities": 512
+      },
+      "Offer": {
+        "precision": 0.9176017992424241,
+        "recall": 0.7637310606060622,
+        "f1": 0.8115750135281384,
+        "exact_history_fraction": 0.3210227272727273,
+        "entities": 704
+      }
+    }
+  },
+  "queries_before": {
+    "entities": 1216,
+    "empty_history_fraction": 0.004523026315789474,
+    "first_timestamp_correct_fraction": 0.5106907894736842,
+    "last_timestamp_correct_fraction": 0.5135690789473685,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 503.0,
+        "false_positive": 41.0,
+        "false_negative": 124.0,
+        "true_negative": 548.0,
+        "precision": 0.9246323529411765,
+        "recall": 0.8022328548644339,
+        "f1": 0.8590947907771136
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 1216.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "results": [
+    {
+      "name": "budget_bpi2017_seed2_real_only_16_v1",
+      "regime": "real_only",
+      "total_verified_root_bundles": 16,
+      "thresholds": [
+        0.9881042591788427,
+        0.34676423966962694,
+        1.1
+      ],
+      "model_sha256": "d3f6d5e02a243ba10be2595f677968bbe5ccbaaa4f23046326adb15a5acaf04a",
+      "history": {
+        "precision": 0.9465019367685278,
+        "recall": 0.7988169537288357,
+        "f1": 0.8425344359677047,
+        "exact_history_fraction": 0.38199013157894735,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.970403037325252,
+            "recall": 0.8442117494809864,
+            "f1": 0.8789598236177447,
+            "exact_history_fraction": 0.294921875,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9291193181818183,
+            "recall": 0.7658025568181823,
+            "f1": 0.8160432449494944,
+            "exact_history_fraction": 0.4453125,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 218,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15093,
+        "originally_incorrect_events": 3955,
+        "direct_new_damage": 420,
+        "direct_repaired_events": 2920,
+        "expanded_new_damage": 420,
+        "expanded_repaired_events": 2920
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.013569078947368422,
+        "first_timestamp_correct_fraction": 0.8264802631578947,
+        "last_timestamp_correct_fraction": 0.6607730263157895,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 453.0,
+            "false_positive": 11.0,
+            "false_negative": 174.0,
+            "true_negative": 578.0,
+            "precision": 0.9762931034482759,
+            "recall": 0.722488038277512,
+            "f1": 0.8304307974335472
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 5631,
+      "seconds": 446.65472747804597,
+      "audit_sha256": "5a39490c79f1c419ce8277f01073131e0236b9cae0498c2acfba3f1f9cddb9ee"
+    },
+    {
+      "name": "budget_bpi2017_seed2_real_only_64_v1",
+      "regime": "real_only",
+      "total_verified_root_bundles": 64,
+      "thresholds": [
+        0.9980907845428932,
+        0.18941593498153286,
+        1.1
+      ],
+      "model_sha256": "da27417e3be3c38f2335dcafef8831547579952ed2f054f416a0c3d2526b8010",
+      "history": {
+        "precision": 0.9567916697318019,
+        "recall": 0.7912111018326772,
+        "f1": 0.8456730513283335,
+        "exact_history_fraction": 0.3203125,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9779466218630302,
+            "recall": 0.8205326168526111,
+            "f1": 0.8697597692262246,
+            "exact_history_fraction": 0.17578125,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9414062499999999,
+            "recall": 0.7698863636363643,
+            "f1": 0.8281554383116879,
+            "exact_history_fraction": 0.42542613636363635,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 218,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15093,
+        "originally_incorrect_events": 3955,
+        "direct_new_damage": 392,
+        "direct_repaired_events": 2564,
+        "expanded_new_damage": 392,
+        "expanded_repaired_events": 2564
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.015213815789473685,
+        "first_timestamp_correct_fraction": 0.8120888157894737,
+        "last_timestamp_correct_fraction": 0.6521381578947368,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 417.5,
+            "false_positive": 9.0,
+            "false_negative": 209.5,
+            "true_negative": 580.0,
+            "precision": 0.9788980070339977,
+            "recall": 0.6658692185007975,
+            "f1": 0.7925961082107261
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 5179,
+      "seconds": 500.8881518749986,
+      "audit_sha256": "d55011c3a9b6d7c3247164933b8f1038011f2561ebec3cbdd713193a40b867f6"
+    },
+    {
+      "name": "budget_bpi2017_seed2_real_only_256_v1",
+      "regime": "real_only",
+      "total_verified_root_bundles": 256,
+      "thresholds": [
+        0.9985471552847998,
+        0.5963000262015562,
+        0.9879320279312659
+      ],
+      "model_sha256": "60956de3ef973346225e52e552b2dcfd894b99631c204bbeac2f190919580e99",
+      "history": {
+        "precision": 0.957854547324074,
+        "recall": 0.8317946938094588,
+        "f1": 0.8710138988574654,
+        "exact_history_fraction": 0.3972039473684211,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9774110603113432,
+            "recall": 0.8373288040474662,
+            "f1": 0.879913280123782,
+            "exact_history_fraction": 0.2236328125,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9436316287878787,
+            "recall": 0.8277698863636364,
+            "f1": 0.8645416215728712,
+            "exact_history_fraction": 0.5234375,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 19,
+        "true_pairs": 218,
+        "correct_pairs": 14,
+        "precision": 0.7368421052631579,
+        "recall": 0.06422018348623854,
+        "f1": 0.11814345991561181
+      },
+      "events": {
+        "originally_correct_events": 15093,
+        "originally_incorrect_events": 3955,
+        "direct_new_damage": 265,
+        "direct_repaired_events": 2768,
+        "expanded_new_damage": 268,
+        "expanded_repaired_events": 2767
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.01274671052631579,
+        "first_timestamp_correct_fraction": 0.8556743421052632,
+        "last_timestamp_correct_fraction": 0.7430098684210527,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 501.0,
+            "false_positive": 10.5,
+            "false_negative": 126.0,
+            "true_negative": 578.5,
+            "precision": 0.9794721407624634,
+            "recall": 0.7990430622009569,
+            "f1": 0.8801054018445322
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 5171,
+      "seconds": 499.6771305820439,
+      "audit_sha256": "3f9be36e2749906179d283757c59c56a061586e0de30804697591eac964bd062"
+    },
+    {
+      "name": "budget_bpi2017_seed2_mixed_original_16_v1",
+      "regime": "mixed_original",
+      "total_verified_root_bundles": 16,
+      "thresholds": [
+        0.98061496484957,
+        0.9770377132083076,
+        1.1
+      ],
+      "model_sha256": "0ad70d0c880371b4239f8471596200fdcaf4346b51b2cd66c53eee7117ecd2f4",
+      "history": {
+        "precision": 0.942297553552256,
+        "recall": 0.8337279534871187,
+        "f1": 0.8656779973792633,
+        "exact_history_fraction": 0.3581414473684211,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9526214032282756,
+            "recall": 0.8285739416152409,
+            "f1": 0.8649409419404351,
+            "exact_history_fraction": 0.1572265625,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9347892992424242,
+            "recall": 0.8374763257575761,
+            "f1": 0.8662140376984125,
+            "exact_history_fraction": 0.5042613636363636,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 218,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15093,
+        "originally_incorrect_events": 3955,
+        "direct_new_damage": 403,
+        "direct_repaired_events": 2433,
+        "expanded_new_damage": 403,
+        "expanded_repaired_events": 2433
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.004523026315789474,
+        "first_timestamp_correct_fraction": 0.7450657894736842,
+        "last_timestamp_correct_fraction": 0.6879111842105263,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 518.5,
+            "false_positive": 27.5,
+            "false_negative": 108.5,
+            "true_negative": 561.5,
+            "precision": 0.9496336996336996,
+            "recall": 0.8269537480063796,
+            "f1": 0.8840579710144928
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 4942,
+      "seconds": 500.7505374789471,
+      "audit_sha256": "01dab027b7fef4ae9faccac2887995140ec296ffec0b23aeb3d98d7468846de1"
+    },
+    {
+      "name": "budget_bpi2017_seed2_mixed_original_64_v1",
+      "regime": "mixed_original",
+      "total_verified_root_bundles": 64,
+      "thresholds": [
+        0.9917814755107704,
+        0.7709944238127666,
+        1.1
+      ],
+      "model_sha256": "209b15daf06c88a0ef5f200a9202c42337ec8b4db5956281328d4ccd3aca614e",
+      "history": {
+        "precision": 0.9611251820951824,
+        "recall": 0.8050093177063206,
+        "f1": 0.8552557755508099,
+        "exact_history_fraction": 0.3248355263157895,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.970172307476059,
+            "recall": 0.808462884760847,
+            "f1": 0.8592086574093649,
+            "exact_history_fraction": 0.0927734375,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9545454545454544,
+            "recall": 0.8024976325757578,
+            "f1": 0.8523809523809515,
+            "exact_history_fraction": 0.49360795454545453,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 218,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15093,
+        "originally_incorrect_events": 3955,
+        "direct_new_damage": 337,
+        "direct_repaired_events": 2221,
+        "expanded_new_damage": 337,
+        "expanded_repaired_events": 2221
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.008634868421052632,
+        "first_timestamp_correct_fraction": 0.7689144736842105,
+        "last_timestamp_correct_fraction": 0.7076480263157895,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 503.5,
+            "false_positive": 18.5,
+            "false_negative": 123.5,
+            "true_negative": 570.5,
+            "precision": 0.9645593869731801,
+            "recall": 0.803030303030303,
+            "f1": 0.876414273281114
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 4647,
+      "seconds": 493.44976253900677,
+      "audit_sha256": "d3623c94b027ef9d64962feb57ab8f1b23d39bec8d593b1b3d984105dfabc5f2"
+    },
+    {
+      "name": "budget_bpi2017_seed2_mixed_original_256_v1",
+      "regime": "mixed_original",
+      "total_verified_root_bundles": 256,
+      "thresholds": [
+        0.98974809135134,
+        0.9615014642443506,
+        1.1
+      ],
+      "model_sha256": "9416d365c8915ad9d2e2332f44a66c68bff9ab5bb9366354c430dccf2a851956",
+      "history": {
+        "precision": 0.9596982240727568,
+        "recall": 0.8431759416176027,
+        "f1": 0.8781295616653813,
+        "exact_history_fraction": 0.4321546052631579,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9760117977977973,
+            "recall": 0.833516168633473,
+            "f1": 0.8760966784493286,
+            "exact_history_fraction": 0.2119140625,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9478338068181814,
+            "recall": 0.8502012310606063,
+            "f1": 0.8796080221861469,
+            "exact_history_fraction": 0.5923295454545454,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 218,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15093,
+        "originally_incorrect_events": 3955,
+        "direct_new_damage": 171,
+        "direct_repaired_events": 2698,
+        "expanded_new_damage": 171,
+        "expanded_repaired_events": 2698
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.006167763157894737,
+        "first_timestamp_correct_fraction": 0.8252467105263158,
+        "last_timestamp_correct_fraction": 0.7779605263157895,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 538.0,
+            "false_positive": 16.0,
+            "false_negative": 89.0,
+            "true_negative": 573.0,
+            "precision": 0.9711191335740073,
+            "recall": 0.8580542264752791,
+            "f1": 0.9110922946655376
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 4925,
+      "seconds": 427.2255106929224,
+      "audit_sha256": "4d5c9a5d277364b485301b25cc545b96b7ae8b9d426a13394b81f561d21ad47a"
+    },
+    {
+      "name": "budget_bpi2017_seed2_mixed_varied_16_v1",
+      "regime": "mixed_varied",
+      "total_verified_root_bundles": 16,
+      "thresholds": [
+        0.9612761203798695,
+        0.9798713115268158,
+        1.1
+      ],
+      "model_sha256": "e549a8dc3830a5619bf472e3676f78e59cdab92ddcac9251c9466326d6046634",
+      "history": {
+        "precision": 0.9139585404018802,
+        "recall": 0.8501174969706117,
+        "f1": 0.8620222381404695,
+        "exact_history_fraction": 0.3379934210526316,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9316564627699422,
+            "recall": 0.8521182480135375,
+            "f1": 0.8716300020690054,
+            "exact_history_fraction": 0.208984375,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9010873241341991,
+            "recall": 0.8486624053030308,
+            "f1": 0.8550347734651715,
+            "exact_history_fraction": 0.4318181818181818,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 218,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15093,
+        "originally_incorrect_events": 3955,
+        "direct_new_damage": 819,
+        "direct_repaired_events": 2771,
+        "expanded_new_damage": 819,
+        "expanded_repaired_events": 2771
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.004523026315789474,
+        "first_timestamp_correct_fraction": 0.7574013157894737,
+        "last_timestamp_correct_fraction": 0.6352796052631579,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 526.0,
+            "false_positive": 77.0,
+            "false_negative": 101.0,
+            "true_negative": 512.0,
+            "precision": 0.8723051409618574,
+            "recall": 0.8389154704944178,
+            "f1": 0.8552845528455284
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 6054,
+      "seconds": 431.8799294659402,
+      "audit_sha256": "fa94e78e43cf33172457e2cdf6e8d0539db91bd055dabfe2c26db4cc753cf743"
+    },
+    {
+      "name": "budget_bpi2017_seed2_mixed_varied_64_v1",
+      "regime": "mixed_varied",
+      "total_verified_root_bundles": 64,
+      "thresholds": [
+        0.9907477962125664,
+        0.689630958989109,
+        1.1
+      ],
+      "model_sha256": "8089642aa1951494c5a12a56b3b87e705cd9b6b88f1a2aedce0856c480a92825",
+      "history": {
+        "precision": 0.9626694797766633,
+        "recall": 0.7962245447662998,
+        "f1": 0.850396452130643,
+        "exact_history_fraction": 0.3149671052631579,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.973840014469577,
+            "recall": 0.8034681896532987,
+            "f1": 0.8582905941475801,
+            "exact_history_fraction": 0.1083984375,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9545454545454546,
+            "recall": 0.7909564393939401,
+            "f1": 0.8446552579365073,
+            "exact_history_fraction": 0.46519886363636365,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 218,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15093,
+        "originally_incorrect_events": 3955,
+        "direct_new_damage": 399,
+        "direct_repaired_events": 2159,
+        "expanded_new_damage": 399,
+        "expanded_repaired_events": 2159
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.009457236842105263,
+        "first_timestamp_correct_fraction": 0.803453947368421,
+        "last_timestamp_correct_fraction": 0.694078947368421,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 490.5,
+            "false_positive": 23.5,
+            "false_negative": 136.5,
+            "true_negative": 565.5,
+            "precision": 0.9542801556420234,
+            "recall": 0.7822966507177034,
+            "f1": 0.85977212971078
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 4649,
+      "seconds": 402.09204863989726,
+      "audit_sha256": "9217e3199410c3a889ccb25a514f93754b2db07492006d9c65e3f32225941f13"
+    },
+    {
+      "name": "budget_bpi2017_seed2_mixed_varied_256_v1",
+      "regime": "mixed_varied",
+      "total_verified_root_bundles": 256,
+      "thresholds": [
+        0.9918024368044849,
+        0.9341282065636386,
+        1.1
+      ],
+      "model_sha256": "3d94aeeedf2922726c33f606aac0951839579e3bbcdb9b6fede2fc1fd1de1fb1",
+      "history": {
+        "precision": 0.9614585012436394,
+        "recall": 0.8068842681834004,
+        "f1": 0.8572150000959716,
+        "exact_history_fraction": 0.33758223684210525,
+        "entities": 1216,
+        "per_type": {
+          "Application": {
+            "precision": 0.9772953206619773,
+            "recall": 0.8091724025605784,
+            "f1": 0.8631355942259507,
+            "exact_history_fraction": 0.1328125,
+            "entities": 512
+          },
+          "Offer": {
+            "precision": 0.9499408143939391,
+            "recall": 0.805220170454546,
+            "f1": 0.8529091134559876,
+            "exact_history_fraction": 0.4865056818181818,
+            "entities": 704
+          }
+        }
+      },
+      "identity": {
+        "predicted_pairs": 0,
+        "true_pairs": 218,
+        "correct_pairs": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "events": {
+        "originally_correct_events": 15093,
+        "originally_incorrect_events": 3955,
+        "direct_new_damage": 198,
+        "direct_repaired_events": 2132,
+        "expanded_new_damage": 198,
+        "expanded_repaired_events": 2132
+      },
+      "queries": {
+        "entities": 1216,
+        "empty_history_fraction": 0.009046052631578948,
+        "first_timestamp_correct_fraction": 0.8174342105263158,
+        "last_timestamp_correct_fraction": 0.7388980263157895,
+        "queries": {
+          "cancellation_evidence": {
+            "true_positive": 510.0,
+            "false_positive": 14.5,
+            "false_negative": 117.0,
+            "true_negative": 574.5,
+            "precision": 0.9723546234509056,
+            "recall": 0.8133971291866029,
+            "f1": 0.8858011289622232
+          },
+          "exception_evidence": {
+            "true_positive": 0.0,
+            "false_positive": 0.0,
+            "false_negative": 0.0,
+            "true_negative": 1216.0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        }
+      },
+      "edits": 4307,
+      "seconds": 394.40878533304203,
+      "audit_sha256": "de573b7fbe43b763e61755752d036528d3009732069d9469895b002a1ab31bd4"
+    }
+  ],
+  "seconds": 4105.943633964052
+}

@@ -1,0 +1,31 @@
+{
+  "status": "completed_source_compatibility_audit_no_model_evaluation",
+  "source": "S2AND ArnetMiner",
+  "sha256": {
+    "signatures": "bb32d0c28eda0d56fa4049c3d3a78b8c1451b81454d758879ce89fff3e9a72e3",
+    "papers": "19484aa229454e99bc383c06b1e9258109f7ad1fb0e70bbd15054e50dc39704a",
+    "clusters": "10ed8a38e00ec3c999b71b1a3a817fe06bc9fec6ab42dff541814caacafe640e"
+  },
+  "primary_reference": "https://arxiv.org/abs/2103.07534",
+  "source_distribution": "https://github.com/allenai/S2AND/tree/s2and_paper",
+  "counts": {
+    "signatures": 7144,
+    "curated_identity_clusters": 1512,
+    "observed_author_profiles": 795,
+    "missing_profile_signatures": 13,
+    "impure_observed_profiles": 228,
+    "curated_identities_touching_impure_profiles": 1234,
+    "curated_identities_touching_missing_profiles": 12,
+    "remaining_complete_pure_identities": 274,
+    "remaining_fragmented_identities": 26,
+    "remaining_true_profile_pairs": 51,
+    "year_records": 7131,
+    "minimum_year": 1947,
+    "maximum_year": 2018
+  },
+  "finding": "Observed production author profiles frequently combine multiple curated identities. The current repair contract maps each handle to one true identity and has no split/new-entity operation, so these records do not directly instantiate the claimed task.",
+  "decision": "Do not present this dataset as natural business-error validation. A pure-profile-only analysis would exclude most curated identities and is not representative. Retain this audit and keep natural operational-error validation as an explicit limitation unless another compatible public source is verified.",
+  "user_constraint": "Public data only, explicitly confirmed by the user during revision.",
+  "performance_selection": false,
+  "individual_names_or_emails_released_by_audit": false
+}

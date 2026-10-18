@@ -1,0 +1,38 @@
+{
+  "provenance": {
+    "author_repository_pinned_commit": "085b8d2453b1668b724773b6dd1a0a58213d2a7b",
+    "source_of_pin": "top-level sha in ocip_tree.json",
+    "project_checkout_head_is_separate": true
+  },
+  "artifact_hash_verification": [
+    {
+      "remote_path": "test_anomaly_detection.ipynb",
+      "local_path": "revision/data/natural_feasibility/ocip_notebook.json",
+      "github_blob_sha1": "21d8f571a949d368ea59aa0fa57985b727430110",
+      "computed_git_blob_sha1": "21d8f571a949d368ea59aa0fa57985b727430110",
+      "blob_hash_matched": true,
+      "sha256": "2ad271100632976efb53a41ba4f55baa4b92dec21ece1e9dbff7d73dd608494e"
+    },
+    {
+      "remote_path": "error_patterns/lost_memory.py",
+      "local_path": "revision/data/natural_feasibility/ocip_lost_memory.py",
+      "github_blob_sha1": "10390f49f057551fd4341b9db787db3f77700e75",
+      "computed_git_blob_sha1": "10390f49f057551fd4341b9db787db3f77700e75",
+      "blob_hash_matched": true,
+      "sha256": "88055d42f8c38d1664c8162f63772435901db286a1c5f5ccad98d41a2b00dbb5"
+    },
+    {
+      "remote_path": "error_patterns/object_clones.py",
+      "local_path": "revision/data/natural_feasibility/ocip_object_clones.py",
+      "github_blob_sha1": "10c7d2a5a5c54141efe88a7afad9495d7cb971a1",
+      "computed_git_blob_sha1": "10c7d2a5a5c54141efe88a7afad9495d7cb971a1",
+      "blob_hash_matched": true,
+      "sha256": "bb06eeda47336be2a64722bed12eeb4d1f3537ce606929dac730d979fd162026"
+    }
+  ],
+  "compatibility_findings": {
+    "notebook_demonstrations": "Includes injected-error examples with synthetic labels; the notebook also compares cross-log object relationships to demonstrate naturally observed Lost Relative/Cuckoos Egg discrepancies.",
+    "natural_ground_truth": "Natural cross-log object-object discrepancies are not independently verified event-object repair ground truth.",
+    "scope_implication": "Injected examples can inform related work but do not close our natural-error limitation."
+  }
+}

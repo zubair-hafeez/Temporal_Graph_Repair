@@ -1,0 +1,146 @@
+{
+  "status": "completed_coupled_confirmation",
+  "pins": {
+    "job": {
+      "id": "bpi2017_seed0_clean_mixed_original_64_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "clean",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9883113902576223,
+        0.9570421878446868,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    "protocol_sha256": "84832d6b049cfb1448a7cfec915f93fee9e1a72507037e91c41a4973adc5eeec",
+    "task_sha256": "f46d844ed66cc6ae3f00e10026309275186a2501082875c42178d1a97c731e1f",
+    "model_sha256": "7021623724cf32729154fec7cde8263cb6c6cb749f31102a1adfd5ab1336d22a"
+  },
+  "before": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "exact_history_fraction": 1.0,
+    "entities": 2377,
+    "per_type": {
+      "Application": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_history_fraction": 1.0,
+        "entities": 1024
+      },
+      "Offer": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_history_fraction": 1.0,
+        "entities": 1353
+      }
+    }
+  },
+  "queries_before": {
+    "entities": 2377,
+    "empty_history_fraction": 0.0,
+    "first_timestamp_correct_fraction": 1.0,
+    "last_timestamp_correct_fraction": 1.0,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 1128.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 1249.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 2377.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "history": {
+    "precision": 0.9999763475435189,
+    "recall": 0.9998698781513674,
+    "f1": 0.9999221431934913,
+    "exact_history_fraction": 0.9932688262515776,
+    "entities": 2377,
+    "per_type": {
+      "Application": {
+        "precision": 0.9999450958114693,
+        "recall": 0.9996979495759768,
+        "f1": 0.9998192718466101,
+        "exact_history_fraction": 0.984375,
+        "entities": 1024
+      },
+      "Offer": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_history_fraction": 1.0,
+        "entities": 1353
+      }
+    }
+  },
+  "identity": {
+    "predicted_pairs": 0,
+    "true_pairs": 0,
+    "correct_pairs": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
+  "events": {
+    "originally_correct_events": 39421,
+    "originally_incorrect_events": 0,
+    "direct_new_damage": 16,
+    "direct_repaired_events": 0,
+    "expanded_new_damage": 16,
+    "expanded_repaired_events": 0
+  },
+  "queries": {
+    "entities": 2377,
+    "empty_history_fraction": 0.0,
+    "first_timestamp_correct_fraction": 1.0,
+    "last_timestamp_correct_fraction": 1.0,
+    "queries": {
+      "cancellation_evidence": {
+        "true_positive": 1127.0,
+        "false_positive": 0.0,
+        "false_negative": 1.0,
+        "true_negative": 1249.0,
+        "precision": 1.0,
+        "recall": 0.999113475177305,
+        "f1": 0.9995565410199556
+      },
+      "exception_evidence": {
+        "true_positive": 0.0,
+        "false_positive": 0.0,
+        "false_negative": 0.0,
+        "true_negative": 2377.0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "edits": 16,
+  "this_execution_seconds": 637.472987099085,
+  "resumed_prior_passes": 0,
+  "artifacts": {
+    "repaired.json.gz": "47aeca42b34ffcf3224d61a43396dea062bbc11beb914d2e6c63cef88c11eeb4",
+    "clusters.json": "e1aea8463e392cb24efb64d6e0e1d9788c915bb06a4ace54811b777781f3ce5a",
+    "audit.json": "4345d5565b5e41282db9e20452efe7377452a35cc5d64d93d000233e5b1df6db"
+  }
+}

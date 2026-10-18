@@ -1,0 +1,269 @@
+{
+  "status": "completed_here_native_confirmation",
+  "name": "here_native_bpi2017_seed1_missing30_roots2048_epochs30_v1",
+  "domain": "bpi2017",
+  "seed": 1,
+  "missing_rate": 0.3,
+  "epochs": 30,
+  "config": {
+    "d_model": 512,
+    "num_layers": 3,
+    "h": 8,
+    "dropout": 0.1,
+    "d_ff": 2048
+  },
+  "source_graph_sha256": "891dafeccd5710a72da5008513a48d5b85f479965b9dc2c4b6e21b04f8abafb0",
+  "runner_sha256": "dda2a92df08719cb8274fffe71ab748f7ea87b560c58c39ae7c5e85157ae5979",
+  "observed_graph_sha256": "e98944386b9248995a52275e0b8721e71159d0a29636459b63207f1e89d843b9",
+  "author_commit": "814b1db618aaa9f14e6f471504699ade9fcbf203",
+  "protocol_sha256": "c20c91503824137b73b0621cf492a6a6e05dea86d6783b639333df19299e0428",
+  "author_files": {
+    "here_LICENSE.md": "796a7f9dd50ab35afcaa24de367870ad494d3ac19e42d504bb8c9491c66aa3b9",
+    "here_train.py": "4903ad303fc85645776a0950d467827f36e98833b2b8a1210a6aca8b69c957fa",
+    "here_model.py": "4f44d790f99a047023c993069d3c86b8dea99d5ff0e4d72c50a2b439dd8dca67",
+    "here_dataset.py": "1ae9e771d662ece5957cac4c4b11225e2041efb72d4437b288db4b7630b0781e"
+  },
+  "observed_events": 77981,
+  "cases": 2048,
+  "hidden_test_events": 23322,
+  "known_supervision_events": 54659,
+  "fit_windows": 44262,
+  "validation_windows": 4918,
+  "source_vocab": 209,
+  "target_vocab": 2053,
+  "parameter_count": 26364933,
+  "training": [
+    {
+      "epoch": 1,
+      "fit_loss": 3.6188437845184254,
+      "validation_loss": 2.3701020934717443,
+      "seconds": 125.2828638330102
+    },
+    {
+      "epoch": 2,
+      "fit_loss": 2.178717613414121,
+      "validation_loss": 1.9571724699764717,
+      "seconds": 250.6759671419859
+    },
+    {
+      "epoch": 3,
+      "fit_loss": 1.8933608272332902,
+      "validation_loss": 1.7969728624917627,
+      "seconds": 372.5805007159943
+    },
+    {
+      "epoch": 4,
+      "fit_loss": 1.7541884543903046,
+      "validation_loss": 1.7053426352942862,
+      "seconds": 498.1724063300062
+    },
+    {
+      "epoch": 5,
+      "fit_loss": 1.6631030021600604,
+      "validation_loss": 1.6364970906963194,
+      "seconds": 623.7569911560277
+    },
+    {
+      "epoch": 6,
+      "fit_loss": 1.5962983582693306,
+      "validation_loss": 1.5794648649246712,
+      "seconds": 747.7870643299539
+    },
+    {
+      "epoch": 7,
+      "fit_loss": 1.5419102549746824,
+      "validation_loss": 1.5318004249557247,
+      "seconds": 871.0317009580322
+    },
+    {
+      "epoch": 8,
+      "fit_loss": 1.4981829727749572,
+      "validation_loss": 1.500633385123276,
+      "seconds": 997.0070860879496
+    },
+    {
+      "epoch": 9,
+      "fit_loss": 1.458215670152144,
+      "validation_loss": 1.46181041186418,
+      "seconds": 1119.1609662299743
+    },
+    {
+      "epoch": 10,
+      "fit_loss": 1.4225419713643754,
+      "validation_loss": 1.4211066296430137,
+      "seconds": 1242.3529797999654
+    },
+    {
+      "epoch": 11,
+      "fit_loss": 1.3877244331339869,
+      "validation_loss": 1.3819584224282242,
+      "seconds": 1364.5288579149637
+    },
+    {
+      "epoch": 12,
+      "fit_loss": 1.353602317666654,
+      "validation_loss": 1.3514589110041053,
+      "seconds": 1486.4866471400019
+    },
+    {
+      "epoch": 13,
+      "fit_loss": 1.322759651219933,
+      "validation_loss": 1.3276079786502248,
+      "seconds": 1608.8933362140087
+    },
+    {
+      "epoch": 14,
+      "fit_loss": 1.300562868513855,
+      "validation_loss": 1.3124104255583229,
+      "seconds": 1730.2524617569288
+    },
+    {
+      "epoch": 15,
+      "fit_loss": 1.2825764365939967,
+      "validation_loss": 1.2947800814620847,
+      "seconds": 1851.187989240978
+    },
+    {
+      "epoch": 16,
+      "fit_loss": 1.2684002037227595,
+      "validation_loss": 1.2875388701756796,
+      "seconds": 1973.0591619039187
+    },
+    {
+      "epoch": 17,
+      "fit_loss": 1.257476016623233,
+      "validation_loss": 1.2812790736919497,
+      "seconds": 2104.415704409941
+    },
+    {
+      "epoch": 18,
+      "fit_loss": 1.2480518171116346,
+      "validation_loss": 1.2754281115725759,
+      "seconds": 2234.1555169179337
+    },
+    {
+      "epoch": 19,
+      "fit_loss": 1.2389822201424603,
+      "validation_loss": 1.265838069062892,
+      "seconds": 2370.0956305839354
+    },
+    {
+      "epoch": 20,
+      "fit_loss": 1.2317228842100485,
+      "validation_loss": 1.2636898490471569,
+      "seconds": 2506.0557982110186
+    },
+    {
+      "epoch": 21,
+      "fit_loss": 1.2253868753302923,
+      "validation_loss": 1.2573883289244117,
+      "seconds": 2645.2735309639247
+    },
+    {
+      "epoch": 22,
+      "fit_loss": 1.220255210669804,
+      "validation_loss": 1.2571106102408431,
+      "seconds": 2782.831130521954
+    },
+    {
+      "epoch": 23,
+      "fit_loss": 1.2149972782284963,
+      "validation_loss": 1.24721800369945,
+      "seconds": 2920.555188159924
+    },
+    {
+      "epoch": 24,
+      "fit_loss": 1.210216247236106,
+      "validation_loss": 1.2475243132288862,
+      "seconds": 3053.6399277939927
+    },
+    {
+      "epoch": 25,
+      "fit_loss": 1.206028568751123,
+      "validation_loss": 1.2405052489381496,
+      "seconds": 3190.802461463958
+    },
+    {
+      "epoch": 26,
+      "fit_loss": 1.201546604133915,
+      "validation_loss": 1.2425435463587442,
+      "seconds": 3325.4613011539914
+    },
+    {
+      "epoch": 27,
+      "fit_loss": 1.1979157591779603,
+      "validation_loss": 1.2365704253437073,
+      "seconds": 3465.7472648029216
+    },
+    {
+      "epoch": 28,
+      "fit_loss": 1.1943766212627123,
+      "validation_loss": 1.2341545484899505,
+      "seconds": 3594.4668892170303
+    },
+    {
+      "epoch": 29,
+      "fit_loss": 1.1907436789083972,
+      "validation_loss": 1.234271458687821,
+      "seconds": 3723.9463623670163
+    },
+    {
+      "epoch": 30,
+      "fit_loss": 1.188631712388501,
+      "validation_loss": 1.2243210354471594,
+      "seconds": 3853.223851621966
+    }
+  ],
+  "limits": [
+    "Reserved native-task confirmation, with an explicit adaptation of author code rather than a published-score reproduction.",
+    "Author model, tensor dataset, and greedy decoder preserved. Headless orchestration and evaluation split are explicit adaptations.",
+    "No supplied expert attributes or declarative rules; name this HERE-Transformer without expert rules.",
+    "Window validation overlaps known fitting events and is diagnostic only; no masked test identifier enters any training window.",
+    "This closed-case track uses known target IDs as supervision and is separate from the verified-history adaptation budget.",
+    "Thirty epochs are fixed before native evaluation; final epoch is evaluated without test-based checkpoint selection."
+  ],
+  "model_sha256": "94b723ef680b644cf944b0b1081c3134b60e569df03b42221f4c49c9aa012ad8",
+  "heldout_missing_id": {
+    "correct": 16095,
+    "assigned": 23322,
+    "hidden": 23322,
+    "accuracy_all_missing": 0.6901209158734243,
+    "precision_assigned": 0.6901209158734243,
+    "coverage": 1.0,
+    "true_cases_unseen_in_known_records": 0
+  },
+  "history_before": {
+    "precision": 1.0,
+    "recall": 0.702106061638396,
+    "f1": 0.8223101337887737,
+    "exact_history_fraction": 0.0,
+    "entities": 2048,
+    "per_type": {
+      "Application": {
+        "precision": 1.0,
+        "recall": 0.702106061638396,
+        "f1": 0.8223101337887737,
+        "exact_history_fraction": 0.0,
+        "entities": 2048
+      }
+    }
+  },
+  "history_after": {
+    "precision": 0.9126897390474557,
+    "recall": 0.9074585871264282,
+    "f1": 0.9072266046872434,
+    "exact_history_fraction": 0.02490234375,
+    "entities": 2048,
+    "per_type": {
+      "Application": {
+        "precision": 0.9126897390474557,
+        "recall": 0.9074585871264282,
+        "f1": 0.9072266046872434,
+        "exact_history_fraction": 0.02490234375,
+        "entities": 2048
+      }
+    }
+  },
+  "seconds": 4081.5526510790223,
+  "predictions_sha256": "55f0583953a0cd76b8575b09ffbd21400532c50689cbfe2ee510ba16324e1b57"
+}

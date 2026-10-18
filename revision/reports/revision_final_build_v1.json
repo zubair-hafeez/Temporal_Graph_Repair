@@ -1,0 +1,32 @@
+{
+  "status": "final_revision_compiled",
+  "page_count": 13,
+  "page_limit_includes_references_and_appendices": 15,
+  "compiler_version": "Tectonic 0.17.0",
+  "command": [
+    "/mnt/zubair/Operational_Temporal_Graphs/paper/tools/tectonic",
+    "--only-cached",
+    "--keep-logs",
+    "main.tex"
+  ],
+  "inputs": {
+    "revision/paper/main.tex": "444ccec5f7b141de2476cacbf800899afe1a0fdf0fac6875cf69de78121c056d",
+    "revision/paper/robustness_results.tex": "5a3f1152b46a74b9c51fab1003ea20ade474ab258efe172efbd6e3f191a676c5",
+    "revision/paper/application_example.tex": "67d562942486409afa89aaa0de2ba37d87803c0ab4ef81e31a6423168c9dd08c",
+    "revision/paper/references.tex": "b66d54a67d3f042061eacd5b91cfdd9917c2e8daaeda828ccae5cd737e2c70a9",
+    "revision/paper/original_results.tex": "7f1b388958496504e29727faa0cc3248149b207d4f189f4fed4af904f53b0bf8",
+    "revision/paper/reliability_results.tex": "2552d3a3004fa84696cdf4f820745a333f1eb27b0295854d6ca1b9c302af5462",
+    "revision/paper/budget_results.tex": "99976219e87a247f42368fe893edbd540e4570ac95d38376959d04cecdadb518",
+    "revision/paper/results.tex": "933cfdce7bea6d3408117245224cb3db0ee4fe446fcd288d807edc194e0e8b3e",
+    "revision/paper/annotation_costs.tex": "64b53fa7f45614bbeb42c3a09a7ac8acd7eead6cad3b4a0da126149fa2450341",
+    "revision/paper/native_results.tex": "e74f375c87f9e7bcbab1566a3ebfe3d547d3675d53bcf3272687cd12ec7fefc0",
+    "revision/paper/figures/method_overview.pdf": "c4fd91aba4e44718181b3c439a56dba5e4dd40cc2e39121c4af1805b0e35c6ef",
+    "revision/paper/figures/application_cases.pdf": "f43ce28eb9eff14dd99d4db7ea023dcb3d80d256072769ff8d47001c140036ef",
+    "revision/paper/figures/budget_curves.pdf": "c050aa4bf3213ee877a1f7564d3a0516e3e87091aa0f62d2206fae9eb0a88e18"
+  },
+  "script_sha256": "8c37afedf2c57cff86bd6e8817a8c6bc335f955ab3c3b1908d9780efbb42e8d7",
+  "pdf_sha256": "031bc82eb3d33805a9a7dc502c5ba1fef5a376b52271b41df41d830011b94a24",
+  "log_sha256": "0c978bbda43e769c0640f4ad2243e1de286bafbdbb6c5b2032e63d5b20cf217b",
+  "overfull_warnings": [],
+  "scope": "Build and page-count verification. Scientific completeness, numerical claims and visual layout require separate review."
+}
