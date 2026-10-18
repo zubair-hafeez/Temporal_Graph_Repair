@@ -1,0 +1,255 @@
+{
+  "status": "all_native_confirmation_predictions_verified",
+  "protocol_sha256": "c20c91503824137b73b0621cf492a6a6e05dea86d6783b639333df19299e0428",
+  "audit_script_sha256": "7035c3d5201c6d231b6b852b1f4169fad39c07117db2858da35836965bf8bf54",
+  "jobs": [
+    {
+      "domain": "bpi2017",
+      "seed": 0,
+      "events": 77981,
+      "hidden": 23335,
+      "identical_observed_inputs": true,
+      "methods": {
+        "generated_original": {
+          "correct": 20891,
+          "assigned": 23335,
+          "accuracy": 0.8952646239554317,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "generated_varied": {
+          "correct": 20627,
+          "assigned": 23335,
+          "accuracy": 0.8839511463466895,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "known_labels_only": {
+          "correct": 22017,
+          "assigned": 23335,
+          "accuracy": 0.9435183201199915,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "nearest_event": {
+          "correct": 19433,
+          "assigned": 23335,
+          "accuracy": 0.8327833726162417,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "here": {
+          "correct": 15522,
+          "assigned": 23335,
+          "accuracy": 0.6651810584958218,
+          "source_reference_accuracy_and_history_verified": true
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "seed": 1,
+      "events": 77981,
+      "hidden": 23322,
+      "identical_observed_inputs": true,
+      "methods": {
+        "generated_original": {
+          "correct": 21018,
+          "assigned": 23322,
+          "accuracy": 0.9012091587342423,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "generated_varied": {
+          "correct": 20813,
+          "assigned": 23322,
+          "accuracy": 0.8924191750278707,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "known_labels_only": {
+          "correct": 22063,
+          "assigned": 23322,
+          "accuracy": 0.9460166366520881,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "nearest_event": {
+          "correct": 19536,
+          "assigned": 23322,
+          "accuracy": 0.8376640082325701,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "here": {
+          "correct": 16095,
+          "assigned": 23322,
+          "accuracy": 0.6901209158734243,
+          "source_reference_accuracy_and_history_verified": true
+        }
+      }
+    },
+    {
+      "domain": "bpi2017",
+      "seed": 2,
+      "events": 77981,
+      "hidden": 23302,
+      "identical_observed_inputs": true,
+      "methods": {
+        "generated_original": {
+          "correct": 20929,
+          "assigned": 23302,
+          "accuracy": 0.8981632477898893,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "generated_varied": {
+          "correct": 20723,
+          "assigned": 23302,
+          "accuracy": 0.8893228049094498,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "known_labels_only": {
+          "correct": 22050,
+          "assigned": 23302,
+          "accuracy": 0.9462707063771351,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "nearest_event": {
+          "correct": 19570,
+          "assigned": 23302,
+          "accuracy": 0.8398420736417475,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "here": {
+          "correct": 15895,
+          "assigned": 23302,
+          "accuracy": 0.6821302892455583,
+          "source_reference_accuracy_and_history_verified": true
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "seed": 0,
+      "events": 40483,
+      "hidden": 12096,
+      "identical_observed_inputs": true,
+      "methods": {
+        "generated_original": {
+          "correct": 966,
+          "assigned": 12096,
+          "accuracy": 0.0798611111111111,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "generated_varied": {
+          "correct": 662,
+          "assigned": 12096,
+          "accuracy": 0.05472883597883598,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "known_labels_only": {
+          "correct": 7828,
+          "assigned": 12096,
+          "accuracy": 0.6471560846560847,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "nearest_event": {
+          "correct": 7110,
+          "assigned": 12096,
+          "accuracy": 0.5877976190476191,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "here": {
+          "correct": 5108,
+          "assigned": 12096,
+          "accuracy": 0.42228835978835977,
+          "source_reference_accuracy_and_history_verified": true
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "seed": 1,
+      "events": 40483,
+      "hidden": 12131,
+      "identical_observed_inputs": true,
+      "methods": {
+        "generated_original": {
+          "correct": 1085,
+          "assigned": 12131,
+          "accuracy": 0.0894402769763416,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "generated_varied": {
+          "correct": 816,
+          "assigned": 12131,
+          "accuracy": 0.06726568296100899,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "known_labels_only": {
+          "correct": 7972,
+          "assigned": 12131,
+          "accuracy": 0.6571593438298574,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "nearest_event": {
+          "correct": 7194,
+          "assigned": 12131,
+          "accuracy": 0.5930261313988954,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "here": {
+          "correct": 5036,
+          "assigned": 12131,
+          "accuracy": 0.415134778666227,
+          "source_reference_accuracy_and_history_verified": true
+        }
+      }
+    },
+    {
+      "domain": "bpi2019",
+      "seed": 2,
+      "events": 40483,
+      "hidden": 12015,
+      "identical_observed_inputs": true,
+      "methods": {
+        "generated_original": {
+          "correct": 943,
+          "assigned": 12015,
+          "accuracy": 0.07848522679983354,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "generated_varied": {
+          "correct": 738,
+          "assigned": 12015,
+          "accuracy": 0.06142322097378277,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "known_labels_only": {
+          "correct": 7792,
+          "assigned": 12015,
+          "accuracy": 0.6485226799833541,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "nearest_event": {
+          "correct": 7077,
+          "assigned": 12015,
+          "accuracy": 0.5890137328339575,
+          "source_reference_accuracy_and_history_verified": true
+        },
+        "here": {
+          "correct": 5085,
+          "assigned": 12015,
+          "accuracy": 0.4232209737827715,
+          "source_reference_accuracy_and_history_verified": true
+        }
+      }
+    }
+  ],
+  "inputs": {
+    "revision/reports/here_native_bpi2017_seed0_missing30_roots2048_epochs30_v1.json": "c3c4a7b237caf6a4afd6fc893ca81db0eeb4db2d4880d05f41cf9e5ebc3caa0d",
+    "revision/reports/native_controls_confirmation_bpi2017_seed0_missing30_roots2048_v1.json": "b0ed8366292ea3f367dca12b34d62a6f8cec1caf52fb5559dc664c2907e18b13",
+    "revision/reports/here_native_bpi2017_seed1_missing30_roots2048_epochs30_v1.json": "45e2e84d586079aa292b621d7da2abb2e7038810889608de8c1acf392d2d0186",
+    "revision/reports/native_controls_confirmation_bpi2017_seed1_missing30_roots2048_v1.json": "d28635d09e028c7c36a7ba61245c2a4a5f52867b56606479f6eb9e64baadbf28",
+    "revision/reports/here_native_bpi2017_seed2_missing30_roots2048_epochs30_v1.json": "6a318ca4e4958d28ca6982584fc691637dd8e30bfe19d23da83922d132f7ef7d",
+    "revision/reports/native_controls_confirmation_bpi2017_seed2_missing30_roots2048_v1.json": "83bb5c14dc66365fe4a60e43973741c3c624a5262263ea34a335ec53cec6ccfa",
+    "revision/reports/here_native_bpi2019_seed0_missing30_roots2048_epochs30_v1.json": "7432a024c9b7615ece3b55b63dd0c9462b716f8a6362825bd42966414ea05176",
+    "revision/reports/native_controls_confirmation_bpi2019_seed0_missing30_roots2048_v1.json": "598f6e78bdeece30d99030398ff62fc9984c792988c5e28ee3f981cf6cc8f49e",
+    "revision/reports/here_native_bpi2019_seed1_missing30_roots2048_epochs30_v1.json": "97e422bf12a48b9a655e2421e1b3c30b2720d84961a8c1fd2758338e49a12b64",
+    "revision/reports/native_controls_confirmation_bpi2019_seed1_missing30_roots2048_v1.json": "3ccfed7df85f88b2aea33e6608b48549c4c038285782ca5777d1f701c5915bbd",
+    "revision/reports/here_native_bpi2019_seed2_missing30_roots2048_epochs30_v1.json": "3a877a15cdbd3cc66e2ff388e99ae4ca480204777d7241cc5294122413c3a63c",
+    "revision/reports/native_controls_confirmation_bpi2019_seed2_missing30_roots2048_v1.json": "0ea7980283a821a45bbcf02d07f9dc36797aee75cc566a88aed80b852c75f1ba"
+  }
+}

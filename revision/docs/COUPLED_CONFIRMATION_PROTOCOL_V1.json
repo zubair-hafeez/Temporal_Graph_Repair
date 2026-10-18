@@ -1,0 +1,2738 @@
+{
+  "status": "frozen_before_coupled_confirmation_outcomes",
+  "created_utc": "2026-10-18T03:44:13.909297+00:00",
+  "question": "Do fixed generated supervision and target verification jointly improve offline operational history repair at matched incremental verification budgets?",
+  "primary_comparisons": "Both generated mixtures versus real-only at each of 16, 64 and 256 total verified histories, separately in both applications. Report every paired seed and mean/range; no pooled universal superiority claim or choice of best test model.",
+  "development_decision": "Both generator variants remain because development favors the original mixture for loans and the varied mixture for purchasing. Fixed mixture mass remains unchanged. Calibration-only and zero-label controls distinguish refitting from threshold adaptation. Atomic-root decoding stays a development-only alternative: its benefit is inconsistent relative to confidence tightening. Strict99 is a sensitivity operating point, not the primary method.",
+  "known_evidence_before_freeze": "All development budgets and controls are complete. Separate native missing-ID confirmation is complete and audited: generated scorers perform poorly on purchasing relative to target-local controls. Native data/outputs are disjoint from coupled confirmation; this declaration makes no claim of ignorance of native results.",
+  "claim_limits": [
+    "Previously studied source processes; fresh disjoint roots, not new institutions.",
+    "Injected recording faults and simulated complete verification, not independently verified natural business errors or measured annotation time.",
+    "Three seeds vary allocation/faults on fixed cohorts; these are not three independently sampled populations.",
+    "Historical model and workflow development labels are additional to incremental budgets.",
+    "Losses, harm, missing candidate coverage and all prespecified jobs must be retained. No model/threshold changes after this declaration."
+  ],
+  "domains": {
+    "bpi2017": {
+      "root_type": "Application",
+      "target_types": [
+        "Application",
+        "Offer"
+      ]
+    },
+    "bpi2019": {
+      "root_type": "PO",
+      "target_types": [
+        "PO",
+        "POItem"
+      ]
+    }
+  },
+  "fault_seed_base": 131000,
+  "decoder": {
+    "rounds": 4,
+    "participant_budget": 128,
+    "pair_budget": 64
+  },
+  "execution_shards": 6,
+  "task_shards": {
+    "bpi2017/0/mixed": 0,
+    "bpi2017/0/clean": 0,
+    "bpi2017/0/pipeline": 0,
+    "bpi2017/1/mixed": 1,
+    "bpi2017/1/clean": 1,
+    "bpi2017/1/pipeline": 1,
+    "bpi2017/2/mixed": 2,
+    "bpi2017/2/clean": 2,
+    "bpi2017/2/pipeline": 2,
+    "bpi2019/0/mixed": 3,
+    "bpi2019/0/clean": 3,
+    "bpi2019/0/pipeline": 3,
+    "bpi2019/1/mixed": 4,
+    "bpi2019/1/clean": 4,
+    "bpi2019/1/pipeline": 4,
+    "bpi2019/2/mixed": 5,
+    "bpi2019/2/clean": 5,
+    "bpi2019/2/pipeline": 5
+  },
+  "jobs": [
+    {
+      "id": "bpi2017_seed0_mixed_real_only_16_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_real_only_16_v1.joblib",
+      "thresholds": [
+        0.9994629678684571,
+        0.9978711661113961,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_real_only_64_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9983607409854305,
+        0.900365012405916,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_clean_real_only_64_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "clean",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9983607409854305,
+        0.900365012405916,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_pipeline_real_only_64_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "pipeline",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9983607409854305,
+        0.900365012405916,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_real_only_64_strict99",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9988871100694761,
+        0.9904017118637413,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "strict99"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_real_only_256_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_real_only_256_v1.joblib",
+      "thresholds": [
+        0.9989969605887736,
+        0.7461876769198281,
+        0.9862364942251199
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_mixed_original_16_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_mixed_original_16_v1.joblib",
+      "thresholds": [
+        0.9884885846815933,
+        0.9969250704382032,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_mixed_original_64_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9883113902576223,
+        0.9570421878446868,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_clean_mixed_original_64_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "clean",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9883113902576223,
+        0.9570421878446868,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_pipeline_mixed_original_64_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "pipeline",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9883113902576223,
+        0.9570421878446868,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_mixed_original_256_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_mixed_original_256_v1.joblib",
+      "thresholds": [
+        0.995188599291094,
+        0.929818910293176,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_mixed_varied_16_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_mixed_varied_16_v1.joblib",
+      "thresholds": [
+        0.9883735893175593,
+        0.9981754755698254,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_mixed_varied_64_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9886694335229906,
+        0.9812995464100683,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_clean_mixed_varied_64_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "clean",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9886694335229906,
+        0.9812995464100683,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_pipeline_mixed_varied_64_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "pipeline",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9886694335229906,
+        0.9812995464100683,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_mixed_varied_64_strict99",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9966401454497887,
+        0.9909182974207659,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "strict99"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_mixed_varied_256_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed0_mixed_varied_256_v1.joblib",
+      "thresholds": [
+        0.9935782950089271,
+        0.9205364185799192,
+        0.9901261509890098
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_generated_original_0_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_clean_generated_original_0_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "clean",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_pipeline_generated_original_0_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "pipeline",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_generated_varied_0_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_clean_generated_varied_0_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "clean",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_pipeline_generated_varied_0_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "pipeline",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_calibration_only_varied_16_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 16,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9667728652842226,
+        0.9802920915871871,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_calibration_only_varied_64_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 64,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9509432505247991,
+        0.9881803323750662,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed0_mixed_calibration_only_varied_256_primary95",
+      "domain": "bpi2017",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 256,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9729253543681196,
+        0.9924257362745358,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_real_only_16_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_real_only_16_v1.joblib",
+      "thresholds": [
+        0.999448821594888,
+        0.384512903100136,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_real_only_64_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9955804538512529,
+        0.28610395113457776,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_clean_real_only_64_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "clean",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9955804538512529,
+        0.28610395113457776,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_pipeline_real_only_64_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "pipeline",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9955804538512529,
+        0.28610395113457776,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_real_only_64_strict99",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9983634156332901,
+        0.9900042953700032,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "strict99"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_real_only_256_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_real_only_256_v1.joblib",
+      "thresholds": [
+        0.9983954957110601,
+        0.7854676851531688,
+        0.9934266014175359
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_mixed_original_16_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_mixed_original_16_v1.joblib",
+      "thresholds": [
+        0.9901009461754073,
+        0.9881774036371033,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_mixed_original_64_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9826887757347643,
+        0.4466473986949362,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_clean_mixed_original_64_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "clean",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9826887757347643,
+        0.4466473986949362,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_pipeline_mixed_original_64_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "pipeline",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9826887757347643,
+        0.4466473986949362,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_mixed_original_256_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_mixed_original_256_v1.joblib",
+      "thresholds": [
+        0.9923877893644915,
+        0.8457790817426453,
+        0.9871589531811725
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_mixed_varied_16_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_mixed_varied_16_v1.joblib",
+      "thresholds": [
+        0.9953012908780524,
+        0.9845107215579297,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_mixed_varied_64_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9904826277256752,
+        0.4713616466822164,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_clean_mixed_varied_64_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "clean",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9904826277256752,
+        0.4713616466822164,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_pipeline_mixed_varied_64_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "pipeline",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9904826277256752,
+        0.4713616466822164,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_mixed_varied_64_strict99",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9916394199025961,
+        0.9712957557415498,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "strict99"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_mixed_varied_256_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed1_mixed_varied_256_v1.joblib",
+      "thresholds": [
+        0.9959368739968442,
+        0.8034747865789612,
+        0.9902344428344934
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_generated_original_0_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_clean_generated_original_0_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "clean",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_pipeline_generated_original_0_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "pipeline",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_generated_varied_0_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_clean_generated_varied_0_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "clean",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_pipeline_generated_varied_0_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "pipeline",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_calibration_only_varied_16_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 16,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9341612624901747,
+        0.9860920257366412,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_calibration_only_varied_64_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 64,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.958081269430141,
+        0.9889345617196609,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed1_mixed_calibration_only_varied_256_primary95",
+      "domain": "bpi2017",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 256,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9594404630160825,
+        0.9910559453035683,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_real_only_16_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_real_only_16_v1.joblib",
+      "thresholds": [
+        0.9881042591788427,
+        0.34676423966962694,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_real_only_64_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9980907845428932,
+        0.18941593498153286,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_clean_real_only_64_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "clean",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9980907845428932,
+        0.18941593498153286,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_pipeline_real_only_64_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "pipeline",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9980907845428932,
+        0.18941593498153286,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_real_only_64_strict99",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9991328770078126,
+        0.7416653784731071,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "strict99"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_real_only_256_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_real_only_256_v1.joblib",
+      "thresholds": [
+        0.9985471552847998,
+        0.5963000262015562,
+        0.9879320279312659
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_mixed_original_16_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_mixed_original_16_v1.joblib",
+      "thresholds": [
+        0.98061496484957,
+        0.9770377132083076,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_mixed_original_64_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9917814755107704,
+        0.7709944238127666,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_clean_mixed_original_64_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "clean",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9917814755107704,
+        0.7709944238127666,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_pipeline_mixed_original_64_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "pipeline",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9917814755107704,
+        0.7709944238127666,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_mixed_original_256_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_mixed_original_256_v1.joblib",
+      "thresholds": [
+        0.98974809135134,
+        0.9615014642443506,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_mixed_varied_16_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_mixed_varied_16_v1.joblib",
+      "thresholds": [
+        0.9612761203798695,
+        0.9798713115268158,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_mixed_varied_64_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9907477962125664,
+        0.689630958989109,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_clean_mixed_varied_64_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "clean",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9907477962125664,
+        0.689630958989109,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_pipeline_mixed_varied_64_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "pipeline",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9907477962125664,
+        0.689630958989109,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_mixed_varied_64_strict99",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9948985670057903,
+        0.8540593353049726,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "strict99"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_mixed_varied_256_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2017_seed2_mixed_varied_256_v1.joblib",
+      "thresholds": [
+        0.9918024368044849,
+        0.9341282065636386,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_generated_original_0_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_clean_generated_original_0_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "clean",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_pipeline_generated_original_0_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "pipeline",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_generated_varied_0_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_clean_generated_varied_0_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "clean",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_pipeline_generated_varied_0_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "pipeline",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_calibration_only_varied_16_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 16,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9657608199688594,
+        0.9953271083812776,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_calibration_only_varied_64_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 64,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9817971378080718,
+        0.9925302694814452,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2017_seed2_mixed_calibration_only_varied_256_primary95",
+      "domain": "bpi2017",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 256,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9742164137313448,
+        0.9919023375787754,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_real_only_16_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_real_only_16_v1.joblib",
+      "thresholds": [
+        0.999461733714844,
+        0.9833201659048049,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_real_only_64_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9999026983565877,
+        0.5672369271709532,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_clean_real_only_64_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "clean",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9999026983565877,
+        0.5672369271709532,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_pipeline_real_only_64_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "pipeline",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9999026983565877,
+        0.5672369271709532,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_real_only_64_strict99",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9999026983565877,
+        0.9531928181742585,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "strict99"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_real_only_256_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_real_only_256_v1.joblib",
+      "thresholds": [
+        0.9996734181302998,
+        0.9558715056798978,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_mixed_original_16_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_mixed_original_16_v1.joblib",
+      "thresholds": [
+        0.9877725580464354,
+        0.9922169546301784,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_mixed_original_64_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9969590220569323,
+        0.8191089176850016,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_clean_mixed_original_64_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "clean",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9969590220569323,
+        0.8191089176850016,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_pipeline_mixed_original_64_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "pipeline",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9969590220569323,
+        0.8191089176850016,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_mixed_original_256_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_mixed_original_256_v1.joblib",
+      "thresholds": [
+        0.9964148880969934,
+        0.9424849902332595,
+        0.9972948346564272
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_mixed_varied_16_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_mixed_varied_16_v1.joblib",
+      "thresholds": [
+        0.9849984730026865,
+        0.9911032358108788,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_mixed_varied_64_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9963847350942661,
+        0.8806661104279438,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_clean_mixed_varied_64_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "clean",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9963847350942661,
+        0.8806661104279438,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_pipeline_mixed_varied_64_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "pipeline",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9963847350942661,
+        0.8806661104279438,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_mixed_varied_64_strict99",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9974433013106374,
+        0.9704052344821947,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "strict99"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_mixed_varied_256_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed0_mixed_varied_256_v1.joblib",
+      "thresholds": [
+        0.9957130664148099,
+        0.9568388085475092,
+        0.9974187066062339
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_generated_original_0_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_clean_generated_original_0_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "clean",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_pipeline_generated_original_0_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "pipeline",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_generated_varied_0_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_clean_generated_varied_0_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "clean",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_pipeline_generated_varied_0_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "pipeline",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_calibration_only_varied_16_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 16,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9849881254149879,
+        0.9911205983447797,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_calibration_only_varied_64_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 64,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9928808079562849,
+        0.9761658173980038,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed0_mixed_calibration_only_varied_256_primary95",
+      "domain": "bpi2019",
+      "seed": 0,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 256,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9925720803792707,
+        0.9762688550241949,
+        0.997305178305174
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_real_only_16_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_real_only_16_v1.joblib",
+      "thresholds": [
+        1.1,
+        1.1,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_real_only_64_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9997958342250456,
+        0.9610884629103371,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_clean_real_only_64_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "clean",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9997958342250456,
+        0.9610884629103371,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_pipeline_real_only_64_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "pipeline",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9997958342250456,
+        0.9610884629103371,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_real_only_64_strict99",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_real_only_64_v1.joblib",
+      "thresholds": [
+        0.999871218787135,
+        0.9999202686674319,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "strict99"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_real_only_256_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_real_only_256_v1.joblib",
+      "thresholds": [
+        0.9991990920613864,
+        0.8642421972937129,
+        0.994565387276853
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_mixed_original_16_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_mixed_original_16_v1.joblib",
+      "thresholds": [
+        0.9907536762419722,
+        1.1,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_mixed_original_64_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9969735474088499,
+        0.9646660265711936,
+        0.9694222768273508
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_clean_mixed_original_64_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "clean",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9969735474088499,
+        0.9646660265711936,
+        0.9694222768273508
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_pipeline_mixed_original_64_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "pipeline",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9969735474088499,
+        0.9646660265711936,
+        0.9694222768273508
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_mixed_original_256_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_mixed_original_256_v1.joblib",
+      "thresholds": [
+        0.9965380604950778,
+        0.9269157680427103,
+        0.9917678436129883
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_mixed_varied_16_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_mixed_varied_16_v1.joblib",
+      "thresholds": [
+        0.9828098994569986,
+        1.1,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_mixed_varied_64_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9929464795866475,
+        0.9243242095898245,
+        0.9769999253465175
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_clean_mixed_varied_64_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "clean",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9929464795866475,
+        0.9243242095898245,
+        0.9769999253465175
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_pipeline_mixed_varied_64_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "pipeline",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9929464795866475,
+        0.9243242095898245,
+        0.9769999253465175
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_mixed_varied_64_strict99",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9943860930758084,
+        0.9982305866092963,
+        0.9769999253465175
+      ],
+      "decoder": "original",
+      "operating_point": "strict99"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_mixed_varied_256_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed1_mixed_varied_256_v1.joblib",
+      "thresholds": [
+        0.9948337196156093,
+        0.9407280817634306,
+        0.9920504049122942
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_generated_original_0_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_clean_generated_original_0_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "clean",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_pipeline_generated_original_0_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "pipeline",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_generated_varied_0_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_clean_generated_varied_0_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "clean",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_pipeline_generated_varied_0_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "pipeline",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_calibration_only_varied_16_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 16,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        1.1,
+        0.9839376368833842,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_calibration_only_varied_64_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 64,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9976187379340037,
+        0.9816736510983562,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed1_mixed_calibration_only_varied_256_primary95",
+      "domain": "bpi2019",
+      "seed": 1,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 256,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9973947680665824,
+        0.9783617004674855,
+        0.9966667081909406
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_real_only_16_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_real_only_16_v1.joblib",
+      "thresholds": [
+        0.9980667271264364,
+        0.9054910355169974,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_real_only_64_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9992200376971346,
+        0.8947163375667874,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_clean_real_only_64_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "clean",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9992200376971346,
+        0.8947163375667874,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_pipeline_real_only_64_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "pipeline",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_real_only_64_v1.joblib",
+      "thresholds": [
+        0.9992200376971346,
+        0.8947163375667874,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_real_only_64_strict99",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_real_only_64_v1.joblib",
+      "thresholds": [
+        1.1,
+        0.9948542090574564,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "strict99"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_real_only_256_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "real_only",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_real_only_256_v1.joblib",
+      "thresholds": [
+        0.999453401191684,
+        0.8276931974739546,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_mixed_original_16_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_mixed_original_16_v1.joblib",
+      "thresholds": [
+        0.990867600028821,
+        0.9329071930905914,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_mixed_original_64_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9949880677555523,
+        0.9657908269525682,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_clean_mixed_original_64_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "clean",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9949880677555523,
+        0.9657908269525682,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_pipeline_mixed_original_64_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "pipeline",
+      "regime": "mixed_original",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_mixed_original_64_v1.joblib",
+      "thresholds": [
+        0.9949880677555523,
+        0.9657908269525682,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_mixed_original_256_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_original",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_mixed_original_256_v1.joblib",
+      "thresholds": [
+        0.9988298523872104,
+        0.9392694347677746,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_mixed_varied_16_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 16,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_mixed_varied_16_v1.joblib",
+      "thresholds": [
+        0.9808951720439649,
+        0.8177334322220873,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_mixed_varied_64_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9939542567428614,
+        0.9770763389944978,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_clean_mixed_varied_64_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "clean",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9939542567428614,
+        0.9770763389944978,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_pipeline_mixed_varied_64_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "pipeline",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9939542567428614,
+        0.9770763389944978,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_mixed_varied_64_strict99",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 64,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_mixed_varied_64_v1.joblib",
+      "thresholds": [
+        0.9970597483705497,
+        0.9938023728073746,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "strict99"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_mixed_varied_256_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "mixed_varied",
+      "budget": 256,
+      "model_path": "revision/checkpoints/budget_bpi2019_seed2_mixed_varied_256_v1.joblib",
+      "thresholds": [
+        0.9972154723617161,
+        0.9358808880147622,
+        0.9980266054911411
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_generated_original_0_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_clean_generated_original_0_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "clean",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_pipeline_generated_original_0_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "pipeline",
+      "regime": "generated_original",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_v2.joblib",
+      "thresholds": [
+        0.9938823577614566,
+        0.9995118540295234,
+        0.9949337662112164
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_generated_varied_0_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_clean_generated_varied_0_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "clean",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_pipeline_generated_varied_0_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "pipeline",
+      "regime": "generated_varied",
+      "budget": 0,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9934468885850203,
+        0.9787817511624166,
+        0.9941543621308702
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_calibration_only_varied_16_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 16,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9917603609709853,
+        0.9752008075519331,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_calibration_only_varied_64_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 64,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9942640067303304,
+        0.9731379664072708,
+        1.1
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    },
+    {
+      "id": "bpi2019_seed2_mixed_calibration_only_varied_256_primary95",
+      "domain": "bpi2019",
+      "seed": 2,
+      "variant": "mixed",
+      "regime": "calibration_only_varied",
+      "budget": 256,
+      "model_path": "checkpoints/edit_feature_attributes_v3.joblib",
+      "thresholds": [
+        0.9930491925575279,
+        0.9811605022453403,
+        0.9973535396548383
+      ],
+      "decoder": "original",
+      "operating_point": "primary95"
+    }
+  ],
+  "implementation": {
+    "revision/confirmation.py": "b6503655e696a9c940b1a90a432c9eed1a02d83fa7543b9dfab7c5dd9bdecec8",
+    "revision/evaluation.py": "af93eef14985dabc0de50f5ec60cb7e16972de4d6c6ce4761bb0c9881e5cfbae",
+    "revision/annotation.py": "c67bb8ef654c897b6910339f52188230cd5a0ef6afb2f1f979d5131c256e993c",
+    "revision/budget_learning.py": "7e6904e99aeca7ab2f0f1e58fffbfa9bdc992dd7877f3193a56dbeeb6af73bd2",
+    "revision/extra_controls.py": "dc93f86d32d93e701d2147d4c28fdf80b68290d3acd6757dab4066214a93c311",
+    "revision/cohorts.py": "75266881e3419a0a7fa6e9f281ea61daed48b7b670703a5c975eab37a892f2f7",
+    "revision/freeze_coupled.py": "df4c6912723b846f5e3b7abe8fbd25f3a6430908853a402dd5c105e83d360d11",
+    "tgrepair/__init__.py": "ad83ce5fca3e2bfa1cc153276de4379a3c8302b7f2a0a85ae40503c7bb3d62ca",
+    "tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7",
+    "tgrepair/application_queries.py": "84aa606f0850de1cde0ce51efdcfa6c71d5acb37b3aa951bf9c4cc62db1f026a",
+    "tgrepair/attribute_scenarios.py": "9360ce4e2df9cfb540df9c53648a225b5dbed64aac43c8e94286434710fb1799",
+    "tgrepair/attribute_views.py": "4d5315a4f628743dffa5a1d772e3c07d590b2291b08c6fab423794e83fa3d326",
+    "tgrepair/confirmation_contract.py": "9fc773bf3e615196626f632e81c558ff8d848d05e550d14e00d66717419a4cce",
+    "tgrepair/confirmation_sources.py": "948c530c85746640fb740992640ab3cdb956f5a84c7624cebfd6793dc2445c1b",
+    "tgrepair/corruption.py": "d04efa6b65698f47f47aa2769431ed99ea8626cad7f3bb5fb63c68fbe633361b",
+    "tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2",
+    "tgrepair/decoding.py": "a4ef81f60296eb7a7eb698e8d83e86916ead774b0d90e16c937432d77a70cdfb",
+    "tgrepair/edits.py": "b987ed25b49435cff4d3aa0cabecefb2b9c5aaef2c27a56d56c4e6fc39ab7c6f",
+    "tgrepair/entity_features.py": "6122ad15c21c44645521d0a920f0bd855cd112cf4caca49d548ebc8adba84dff",
+    "tgrepair/external_ocel.py": "bcce5671a277849ed23110c20753b6a0aa89a1fe9faaaacec57caa58f343be80",
+    "tgrepair/factory_plugin.py": "6ac1ade56b775242db66579b75c36ff77af5f2c06ba8bd3c4364d91f48e0055d",
+    "tgrepair/identity_matching.py": "b707a4ca0efa7ade90fc5a15ec6401470a02ddc333c8c8eedacf3921e12ef4ac",
+    "tgrepair/json_stream.py": "ee3624472410e1fe64f41bd0abe21ce6830641fa622a4566af05999e853f15e6",
+    "tgrepair/matching.py": "304595e5d38ef157072cc693c7714ef3c2d4dee408648c860cca6dc97899b54f",
+    "tgrepair/metrics.py": "903faf015149e0095544ee40368bf20412d1cef856e84eebfb36e3e1c8f2e97b",
+    "tgrepair/neural_policy.py": "cf7b6231798a423b80fca4cd447858e4b948c8214f1ff5fb905228ceac46c821",
+    "tgrepair/pipeline_faults.py": "6091ecfa95f9a5c83c6edc3c4c70d114ad949ed1d8a260bb787c71f5e0e5e690",
+    "tgrepair/provenance.py": "21a59b6bd04dc39ef0ec122713904aa6459c83029219c03027ef382342207c3b",
+    "tgrepair/view_decoding.py": "061bb8f361cbe7181ea3d9885149070064b4fb874d3094ce96dc46e0174a7696"
+  },
+  "inputs": {
+    "revision/data/cohorts_v1/bpi2017/confirmation/reference_graph.json.gz": "151336bd812b8f0b1e04ed59a47df572aa3fcc0ed931942b83c82146e5918e1a",
+    "revision/data/cohorts_v1/bpi2017/confirmation/bundles.json": "978dab27d5eedc920a09bd97603d75281fbf751b4684e13a9fb1886712623a9b",
+    "revision/reports/budget_training_bpi2017_seed0_v1.json": "16f59686d0c26b73ea171a31437c91359d27003f8e37410acf3881f478e2f2b0",
+    "revision/reports/extra_models_bpi2017_seed0_v1.json": "76d74872d4bfaa506d1c4cdeb845d26d11b93c465a46f932ee201759e51b9453",
+    "revision/data/annotation_v1/bpi2017/seed0/manifest.json": "4c9b9a64bbda849f94ad802c32dbda5ec9f080d5cebda692ec6142150c0bc7c4",
+    "revision/checkpoints/budget_bpi2017_seed0_real_only_16_v1_calibration.npz": "1a281ae7ee8d1f8dee39240ce55c2761158dd37b58ff4c47359c9d2b569ab0fd",
+    "revision/checkpoints/budget_bpi2017_seed0_real_only_64_v1_calibration.npz": "35a484726760ddb333602e8a9336e340f662b6fde60663345b90f7f042253ba1",
+    "revision/checkpoints/budget_bpi2017_seed0_real_only_256_v1_calibration.npz": "be5c594d0a3865dcec306d62cdeb959afc05c108e4ce0ebd57b1638f1ab0d47e",
+    "revision/checkpoints/budget_bpi2017_seed0_mixed_original_16_v1_calibration.npz": "1553ca337de0ad78f0a2f5137c6a3ee0cfc02ea2c0c89bfe6dd00c788635f0b8",
+    "revision/checkpoints/budget_bpi2017_seed0_mixed_original_64_v1_calibration.npz": "c0e6eea12fa00db972a66326db2f6d34b5779d33f8bdd173608819b8ec6ba249",
+    "revision/checkpoints/budget_bpi2017_seed0_mixed_original_256_v1_calibration.npz": "32bd2fbde84d2f6af5bcf1321bf411a1743844f80d561e39098498f1bc759002",
+    "revision/checkpoints/budget_bpi2017_seed0_mixed_varied_16_v1_calibration.npz": "6a93f0a20d8f27ffa6f863d6e59702d6f784ede22f41ebc2101b5d00c3b94935",
+    "revision/checkpoints/budget_bpi2017_seed0_mixed_varied_64_v1_calibration.npz": "0cc8e73e3b6f4f9c4869f0ade2b26de12989cc5d19f24fee3387d2c9e2cdd6b4",
+    "revision/checkpoints/budget_bpi2017_seed0_mixed_varied_256_v1_calibration.npz": "6fdd89fdd4e9223a703c102a4ed022afa256dd41c9317ae5b5eae7f7d21ab329",
+    "revision/reports/budget_training_bpi2017_seed1_v1.json": "d19e933192c06c9434b2a6c6cfea74090b23cb3042e9f0a1d5692abe78ca8558",
+    "revision/reports/extra_models_bpi2017_seed1_v1.json": "5661ccdfb9ad0b8ab0e6f266d8db807a0077a429e16311bc074215fad3e051ba",
+    "revision/data/annotation_v1/bpi2017/seed1/manifest.json": "7045c2b9d4b61276ca314ac611535c572e91722d1d2b19da0674fa55a5d64dcf",
+    "revision/checkpoints/budget_bpi2017_seed1_real_only_16_v1_calibration.npz": "4f863ac6401e1d676bca0be13d65c337c3696d18f298f8cdb3df56750400f6d3",
+    "revision/checkpoints/budget_bpi2017_seed1_real_only_64_v1_calibration.npz": "d9b96594d278216f303dde475c5fbcbb1372e8a8c8997db130390c714ddefa3b",
+    "revision/checkpoints/budget_bpi2017_seed1_real_only_256_v1_calibration.npz": "718eb1226c8c1099406e95f052f25ea52fdd48c697f5506e55243a78fc02fcd7",
+    "revision/checkpoints/budget_bpi2017_seed1_mixed_original_16_v1_calibration.npz": "8ed75c5fba84f2d1e26a9fed2eec0da99392995eca8fe293cb4e1fb74eea0d46",
+    "revision/checkpoints/budget_bpi2017_seed1_mixed_original_64_v1_calibration.npz": "053fb38f579f776f9f5ce8bce77c4b8b59e2a0a1d610e58578f5d79d37fe242f",
+    "revision/checkpoints/budget_bpi2017_seed1_mixed_original_256_v1_calibration.npz": "3f7237d419d2f7ad941178dbc429ee7963a9d7fe1b9d8bcef8f9e5eaca16c74a",
+    "revision/checkpoints/budget_bpi2017_seed1_mixed_varied_16_v1_calibration.npz": "e69f2d2500cf36d50a796746a7c3420e088fc21c986dc8e32c0ffcee9ce4554e",
+    "revision/checkpoints/budget_bpi2017_seed1_mixed_varied_64_v1_calibration.npz": "9d636de4210dd5b9c46ae7e47601685dba824923d7715a61181aa594d82a3bef",
+    "revision/checkpoints/budget_bpi2017_seed1_mixed_varied_256_v1_calibration.npz": "5c7f5f90622edb5e023483777289a0c001462144ba9535d64e43d0091d83c534",
+    "revision/reports/budget_training_bpi2017_seed2_v1.json": "2956a93822c6799146fb07ebbbf5a490fe01660054dc35437af269604de96d43",
+    "revision/reports/extra_models_bpi2017_seed2_v1.json": "63cb2780beaf480ddcbd24f053908e724fc9b0d7ad35f845a8dc992dae2a7fdb",
+    "revision/data/annotation_v1/bpi2017/seed2/manifest.json": "be2a2131a63ad17020eb169b942ef117072067efec802260ee042f5b43cdf5ba",
+    "revision/checkpoints/budget_bpi2017_seed2_real_only_16_v1_calibration.npz": "1e4a25ecc9c2a69e4e42fa2b250f6520135a11c7a8fdb5e6da6ebc5bbdf175d4",
+    "revision/checkpoints/budget_bpi2017_seed2_real_only_64_v1_calibration.npz": "ea5319d70049a576017309c9ba3929465e17e72e5c0995e078b908016d549370",
+    "revision/checkpoints/budget_bpi2017_seed2_real_only_256_v1_calibration.npz": "fe4388ac13a97391ae77efb8bbb69f42c29ae6f06392507a284cc5c85ba532cf",
+    "revision/checkpoints/budget_bpi2017_seed2_mixed_original_16_v1_calibration.npz": "e012bb2d38cf221cbb893515b2990ea9ed19b4cda201dd9b1cb93d057165177e",
+    "revision/checkpoints/budget_bpi2017_seed2_mixed_original_64_v1_calibration.npz": "3c24af71eec2f4c6a74dd7251117859a845d2e134b5c666c82bbfdd40d2fe43a",
+    "revision/checkpoints/budget_bpi2017_seed2_mixed_original_256_v1_calibration.npz": "b3c333b319a66cd9cce9566e4923ace21177d2309becdb7a2ed7c8dc68c8b570",
+    "revision/checkpoints/budget_bpi2017_seed2_mixed_varied_16_v1_calibration.npz": "5254fa434e94dcc263b503a9cd64a6ae4fab58438f5f21458eaae43d231f0327",
+    "revision/checkpoints/budget_bpi2017_seed2_mixed_varied_64_v1_calibration.npz": "bbdb4ca7a83ffbee66dce222c5c4c3b1065175b91b8b5899473ff67cead6ea58",
+    "revision/checkpoints/budget_bpi2017_seed2_mixed_varied_256_v1_calibration.npz": "5ace0aede57706491ad9157adba8f9e35d61b777af2608119cb40e49cc7fd971",
+    "revision/data/cohorts_v1/bpi2019/confirmation/reference_graph.json.gz": "3dd86953e761e4e56016f6f93ed650aaab0030ae8f6b66b5df2a5536771ab913",
+    "revision/data/cohorts_v1/bpi2019/confirmation/bundles.json": "8355be78fdd506388089ec95d2c5e73be6556eb8b3d96b12cb15de438d98ff28",
+    "revision/reports/budget_training_bpi2019_seed0_v1.json": "eb3c78d86fc79244f6ddab99420318ec5372cf44efd206025730ce032657a43d",
+    "revision/reports/extra_models_bpi2019_seed0_v1.json": "6f3383b741c5796d114e5916008283903d99a31597c72af277187cf0751492c6",
+    "revision/data/annotation_v1/bpi2019/seed0/manifest.json": "011444423813704bf04c52a9c38db816d013fe3b265f31cbca75df19f2cfbd38",
+    "revision/checkpoints/budget_bpi2019_seed0_real_only_16_v1_calibration.npz": "53f7a7eacf09256cba12fba15622fd0f0c03032677a8d04c310508720e782947",
+    "revision/checkpoints/budget_bpi2019_seed0_real_only_64_v1_calibration.npz": "0f9b5069ace6eacf46dba6efe226e2343eab765a588f8c0f339b37230ed24116",
+    "revision/checkpoints/budget_bpi2019_seed0_real_only_256_v1_calibration.npz": "aff8131668d24728e33946676898c1d4b68cc5e6fbde4de21a5a93d613d4856a",
+    "revision/checkpoints/budget_bpi2019_seed0_mixed_original_16_v1_calibration.npz": "7c78e48f3e63257229838c2dc830ad02d2c56a2c44865f4d3d790617b6ac3e92",
+    "revision/checkpoints/budget_bpi2019_seed0_mixed_original_64_v1_calibration.npz": "8780698108b3aa21f21225a519a63a56a72658d47828f3a71c02461faf7a931e",
+    "revision/checkpoints/budget_bpi2019_seed0_mixed_original_256_v1_calibration.npz": "b1ebd448e8bb2d9ff095d8153ff18584c78f95f933b3a402cd8800758e74e455",
+    "revision/checkpoints/budget_bpi2019_seed0_mixed_varied_16_v1_calibration.npz": "57972edc5e50c2ff8e63eb922950d0987d6475c9dd4c043f6152de3629fe334b",
+    "revision/checkpoints/budget_bpi2019_seed0_mixed_varied_64_v1_calibration.npz": "b6129d18d2b5dc248a33fe42a261ef0997d6e8ac4efedd504740bc71fed3ebdc",
+    "revision/checkpoints/budget_bpi2019_seed0_mixed_varied_256_v1_calibration.npz": "5e6638013b67fd24c6b3d6cb909fd76b15dd2e05051e41b8b98f9f649bf809eb",
+    "revision/reports/budget_training_bpi2019_seed1_v1.json": "8c0ca422369dfc6c0de6fd5a5492135859d4f4c6f0bfdbd5105f020ab83ace1d",
+    "revision/reports/extra_models_bpi2019_seed1_v1.json": "537fcd0c603f33bf22a681861b07dc2952f02a8327734de0f0ec93ae3fca25bc",
+    "revision/data/annotation_v1/bpi2019/seed1/manifest.json": "fdaadc7dddb1ee77d6d538f09fba32445716b480b4d7c595da5637d1df5e9957",
+    "revision/checkpoints/budget_bpi2019_seed1_real_only_16_v1_calibration.npz": "a58571d88739d90b2bf6ae37e99ae67ee1beb30a9da62de744cb96d3641b73e9",
+    "revision/checkpoints/budget_bpi2019_seed1_real_only_64_v1_calibration.npz": "a56d4b4bcc6a4a1508cd2d353b0228c3b18afe09b46dfb6012914837929b56f5",
+    "revision/checkpoints/budget_bpi2019_seed1_real_only_256_v1_calibration.npz": "781ede19c5a30fcb1f48d01df92ed5302c1a24aba3ed707862f769110e9cc3a7",
+    "revision/checkpoints/budget_bpi2019_seed1_mixed_original_16_v1_calibration.npz": "1e4efc13c44d71456d4618224ca2e163d7eaee78d85e1e2ffff8bf43a18bea5b",
+    "revision/checkpoints/budget_bpi2019_seed1_mixed_original_64_v1_calibration.npz": "be768580eb49de54b72028296f75f1978ac4252007974965b8e622abe095c0be",
+    "revision/checkpoints/budget_bpi2019_seed1_mixed_original_256_v1_calibration.npz": "d75ff4f515151e210b36df03423b51dffacee1d3c9f938b7be54bab5d4677c37",
+    "revision/checkpoints/budget_bpi2019_seed1_mixed_varied_16_v1_calibration.npz": "8617f4dcd86f8ea23c199c9b84af9a28e6713576f5259344415a89d747388b78",
+    "revision/checkpoints/budget_bpi2019_seed1_mixed_varied_64_v1_calibration.npz": "64ae41c16ee36048bb337c65c6a4ac1b59d7a57892a4d2e377b1abe379ccfb83",
+    "revision/checkpoints/budget_bpi2019_seed1_mixed_varied_256_v1_calibration.npz": "dae53b5a2bd26e1814b016f1d6208476c1946432a9d615d9edc9a0b8cad99efd",
+    "revision/reports/budget_training_bpi2019_seed2_v1.json": "de163290a79e33c2464b714910c2d12a28fa55cda868c7987dcb07ea4b206f95",
+    "revision/reports/extra_models_bpi2019_seed2_v1.json": "3e85300b9ab42d598042d6df610495d63112868c63f09da6de13465b7d411021",
+    "revision/data/annotation_v1/bpi2019/seed2/manifest.json": "3aa83be4fe3b933518d663f7ef34989ddafc011b12284debecca622b4d4ace8e",
+    "revision/checkpoints/budget_bpi2019_seed2_real_only_16_v1_calibration.npz": "6796685052c97c5963ac39d643b1f28eb45ad6f6e5be80ca325bdfa9580df567",
+    "revision/checkpoints/budget_bpi2019_seed2_real_only_64_v1_calibration.npz": "2f55426a2d0e396284ef5036470f39f144d903bcd1e2dcc2a69e4defb01323e3",
+    "revision/checkpoints/budget_bpi2019_seed2_real_only_256_v1_calibration.npz": "843b284eb2f369fda0ab5b7573d32ca3b8fc9bd8091520b95c1f083272591ca4",
+    "revision/checkpoints/budget_bpi2019_seed2_mixed_original_16_v1_calibration.npz": "02fe843c04c00618ed5637b51e8cab2f15dd5b8ca40b16f68e6a23b4afb96ad3",
+    "revision/checkpoints/budget_bpi2019_seed2_mixed_original_64_v1_calibration.npz": "06d11d1725c397000d9c5e974d4de053270f71a7975871482f36ad0f8a6c3336",
+    "revision/checkpoints/budget_bpi2019_seed2_mixed_original_256_v1_calibration.npz": "e97dfb6c5c882cb4680e3edc930b8ba0b5cdb7ff5eba67867ab320ce158c7c7b",
+    "revision/checkpoints/budget_bpi2019_seed2_mixed_varied_16_v1_calibration.npz": "add6e7af43bd0f2a64b826c2904e37facfb275d0b931e2009fcc47737ff78dd3",
+    "revision/checkpoints/budget_bpi2019_seed2_mixed_varied_64_v1_calibration.npz": "7f48d88f1e056a84d0852c9269bd11e405e0221bd8e0c86387ce23b09fe3f7c6",
+    "revision/checkpoints/budget_bpi2019_seed2_mixed_varied_256_v1_calibration.npz": "c716ac1ca7483d886cc812f11a21f97846e20c83b1d75eb1fa3cb15dd83ed2fc",
+    "revision/docs/COHORT_PLAN_V1.json": "fbc0bff178bed416596009016ac4c31f991fb52f849a87f37bcc5b7f4f98469d",
+    "revision/reports/development_summary_v1.json": "cb160990f96d07ab22b084b812afd65ea213788f3f6ac90b9876097dbf26d7a7",
+    "revision/reports/native_confirmation_audit_v1.json": "1821d90662fc598a74d72b744c62759a5460407669847c4e8fa04a9f4e8ae0ec"
+  },
+  "models": {
+    "revision/checkpoints/budget_bpi2017_seed0_real_only_16_v1.joblib": "9ea52df21d204e9c4401afb6ed1e86360fdd40f6e87a6de48505eb4302093136",
+    "revision/checkpoints/budget_bpi2017_seed0_real_only_64_v1.joblib": "85e1ee63da0eb47a478c32c345fe4c3d0c916e494bb7addfa67f18e62eb3063b",
+    "revision/checkpoints/budget_bpi2017_seed0_real_only_256_v1.joblib": "0e8ed6add57f6680df3636fdbd9bb08c94eba98c4ae64b7ffe8c1de28d4a6d2f",
+    "revision/checkpoints/budget_bpi2017_seed0_mixed_original_16_v1.joblib": "ca2d5460e0c799a145d0fec25333f58425b1656c6545cddbf8b15a9b69b890f3",
+    "revision/checkpoints/budget_bpi2017_seed0_mixed_original_64_v1.joblib": "7021623724cf32729154fec7cde8263cb6c6cb749f31102a1adfd5ab1336d22a",
+    "revision/checkpoints/budget_bpi2017_seed0_mixed_original_256_v1.joblib": "410291005ffaa3f0e34d0303a7ce1756b4ca55569f376c34c9749162cb700e2c",
+    "revision/checkpoints/budget_bpi2017_seed0_mixed_varied_16_v1.joblib": "c54ec17b1e88444cefac690499bbd584336dfa75c2ade61e9410a39e7437e593",
+    "revision/checkpoints/budget_bpi2017_seed0_mixed_varied_64_v1.joblib": "98992061d56597b830cf79f44dd9a5923b31e1c0a7ae4f3ee73dde27c983cf47",
+    "revision/checkpoints/budget_bpi2017_seed0_mixed_varied_256_v1.joblib": "9037c542d99443ee8a076ff08463fb4b5820ab32f36ea56e631fd2ae88fbc802",
+    "checkpoints/edit_feature_v2.joblib": "c2a95d9173329ddc77876ccdf00193ade110c63b0487dafb4c13a1d7adfe33e9",
+    "checkpoints/edit_feature_attributes_v3.joblib": "803be97285c169b99459277debcba0db576224ed62355cd015280b4256b3f07a",
+    "revision/checkpoints/budget_bpi2017_seed1_real_only_16_v1.joblib": "f5b5937710d9961884dc44d6c4342b4cdddfaa40dfcefa56d3ee4ff73c02fc38",
+    "revision/checkpoints/budget_bpi2017_seed1_real_only_64_v1.joblib": "ff79d7f66f72916fb9b52e7848218b2481464869ba40f7b24961c99732f46440",
+    "revision/checkpoints/budget_bpi2017_seed1_real_only_256_v1.joblib": "b10cfebcfedabeeaaa524cd90ff8d933bdb71f2e6036eb45e01313bc107bd6b4",
+    "revision/checkpoints/budget_bpi2017_seed1_mixed_original_16_v1.joblib": "a149046ee462c24aff09dadd4b1097fbea009f9a14140353fd0cc0acc6039b27",
+    "revision/checkpoints/budget_bpi2017_seed1_mixed_original_64_v1.joblib": "6cc37fbe05e846b7019a9d51b47de63cfa7272ee8233fb16f49455b6c57e0787",
+    "revision/checkpoints/budget_bpi2017_seed1_mixed_original_256_v1.joblib": "b391599b0f1622c6e19b657f7a21482b2f77e101c775c413f610eefcb67b1ba4",
+    "revision/checkpoints/budget_bpi2017_seed1_mixed_varied_16_v1.joblib": "4de781189191f11627bfe81fe4ad90919f5189a708553ca27f6d2aafe2993f33",
+    "revision/checkpoints/budget_bpi2017_seed1_mixed_varied_64_v1.joblib": "eddbd28315e44056b2b1d097425074efa12d648b71f3ea4e9440c3dc08599337",
+    "revision/checkpoints/budget_bpi2017_seed1_mixed_varied_256_v1.joblib": "d1b1d4286dcc7afb7d908b72a72b5fab2b60cc7d7c58bb9eb5a1418a14f1e5b0",
+    "revision/checkpoints/budget_bpi2017_seed2_real_only_16_v1.joblib": "d3f6d5e02a243ba10be2595f677968bbe5ccbaaa4f23046326adb15a5acaf04a",
+    "revision/checkpoints/budget_bpi2017_seed2_real_only_64_v1.joblib": "da27417e3be3c38f2335dcafef8831547579952ed2f054f416a0c3d2526b8010",
+    "revision/checkpoints/budget_bpi2017_seed2_real_only_256_v1.joblib": "60956de3ef973346225e52e552b2dcfd894b99631c204bbeac2f190919580e99",
+    "revision/checkpoints/budget_bpi2017_seed2_mixed_original_16_v1.joblib": "0ad70d0c880371b4239f8471596200fdcaf4346b51b2cd66c53eee7117ecd2f4",
+    "revision/checkpoints/budget_bpi2017_seed2_mixed_original_64_v1.joblib": "209b15daf06c88a0ef5f200a9202c42337ec8b4db5956281328d4ccd3aca614e",
+    "revision/checkpoints/budget_bpi2017_seed2_mixed_original_256_v1.joblib": "9416d365c8915ad9d2e2332f44a66c68bff9ab5bb9366354c430dccf2a851956",
+    "revision/checkpoints/budget_bpi2017_seed2_mixed_varied_16_v1.joblib": "e549a8dc3830a5619bf472e3676f78e59cdab92ddcac9251c9466326d6046634",
+    "revision/checkpoints/budget_bpi2017_seed2_mixed_varied_64_v1.joblib": "8089642aa1951494c5a12a56b3b87e705cd9b6b88f1a2aedce0856c480a92825",
+    "revision/checkpoints/budget_bpi2017_seed2_mixed_varied_256_v1.joblib": "3d94aeeedf2922726c33f606aac0951839579e3bbcdb9b6fede2fc1fd1de1fb1",
+    "revision/checkpoints/budget_bpi2019_seed0_real_only_16_v1.joblib": "201b842c9122d6039ee4f0cbf505a5038582e1a88ed5b34f03be6fd5a5d8afe0",
+    "revision/checkpoints/budget_bpi2019_seed0_real_only_64_v1.joblib": "294d4d8d4b306c85076fca244d46cf140b1e2a8b7a0a4f1c957161b1dcb083c3",
+    "revision/checkpoints/budget_bpi2019_seed0_real_only_256_v1.joblib": "7f4cfc24eac1f0e5c6a7bf493ac41954acf7ed8bbf35eb2ac916d6c0fd6ac456",
+    "revision/checkpoints/budget_bpi2019_seed0_mixed_original_16_v1.joblib": "67a52e698b387677c2a6b9eb74b30ce145843a3868e58a159d9a1a0a73aae277",
+    "revision/checkpoints/budget_bpi2019_seed0_mixed_original_64_v1.joblib": "2cbd0d11eeacac21c2e94025457b9e55139a4834922da7689f5c9a2801f6c106",
+    "revision/checkpoints/budget_bpi2019_seed0_mixed_original_256_v1.joblib": "2c0cd9dcf07ef73e3f945059df8d17103007f5bdc3d93b0f9d4161a6fd183aa6",
+    "revision/checkpoints/budget_bpi2019_seed0_mixed_varied_16_v1.joblib": "f4615fd460b09261f5078dbdc1448a6d59cdae0c4b3db1cbb47bafe823a77d66",
+    "revision/checkpoints/budget_bpi2019_seed0_mixed_varied_64_v1.joblib": "cde8db609a518eba5c7d41c7735a51b04937adfda505903065c49166a8fc4c69",
+    "revision/checkpoints/budget_bpi2019_seed0_mixed_varied_256_v1.joblib": "c80186ed07bba86b6efa96cabc4e8af8749947ad61956a68c703d853783fef8c",
+    "revision/checkpoints/budget_bpi2019_seed1_real_only_16_v1.joblib": "fc6790cf1a33101baf3b3418f0686842abbb973ec35c474b95a336bae26a38cf",
+    "revision/checkpoints/budget_bpi2019_seed1_real_only_64_v1.joblib": "8d7888eef68cca01e98e9f32da2387c7b478aef4089c5e4fac67164064fbcb4f",
+    "revision/checkpoints/budget_bpi2019_seed1_real_only_256_v1.joblib": "282143db4b4d929ea66358a9211455ef175b84185ae6ad005aaa3671406fc0b6",
+    "revision/checkpoints/budget_bpi2019_seed1_mixed_original_16_v1.joblib": "5777e836705513c9cb89e371d5e341ffb5e8b8c0f15228f843d0fba388fca1e7",
+    "revision/checkpoints/budget_bpi2019_seed1_mixed_original_64_v1.joblib": "12430ac6e14a170589bfaf883cbb1351b65fb54cd931d56b6d5323b3bd72a1c3",
+    "revision/checkpoints/budget_bpi2019_seed1_mixed_original_256_v1.joblib": "5ed85189a563e21d65e0331ea6733467c9decf1790c43feb25f5144041b00589",
+    "revision/checkpoints/budget_bpi2019_seed1_mixed_varied_16_v1.joblib": "22a0a3a3eaeb574f24acf3af6d59701920d898fa595407b03202fd480bda58e6",
+    "revision/checkpoints/budget_bpi2019_seed1_mixed_varied_64_v1.joblib": "036cdc4f4515b5fb9f8ac2b9fb255da6331c528d5f31c9da3b76a9778705190e",
+    "revision/checkpoints/budget_bpi2019_seed1_mixed_varied_256_v1.joblib": "78f33fe6c4c5c8ee646ba043ca0c10f7d5305c519c205b6c5e68db26cb3f120f",
+    "revision/checkpoints/budget_bpi2019_seed2_real_only_16_v1.joblib": "d1e052ad338ea69656ee963dc9fb8ef285e93b318f6935dc7da958580594e312",
+    "revision/checkpoints/budget_bpi2019_seed2_real_only_64_v1.joblib": "f1e841647d086edfc276382823259f36a5ec8e443ea25aa77f0e13a23dac38df",
+    "revision/checkpoints/budget_bpi2019_seed2_real_only_256_v1.joblib": "1dd86ec51df9111b98cf2e5017020ce9214629a2ea1e3e77edda4a318cf7da65",
+    "revision/checkpoints/budget_bpi2019_seed2_mixed_original_16_v1.joblib": "bade4facd90f4f36d9b076e797d8736d34e19f3f324c4cef366663ba759dfc9a",
+    "revision/checkpoints/budget_bpi2019_seed2_mixed_original_64_v1.joblib": "7fcb3da09e2253132aee45cfb49b98f3a01f0c046102a2b8fa4df852747e0261",
+    "revision/checkpoints/budget_bpi2019_seed2_mixed_original_256_v1.joblib": "9f5c555553c61aaf46ac41858f72287b5d06b3807e5c5babbb117bf24e116aa2",
+    "revision/checkpoints/budget_bpi2019_seed2_mixed_varied_16_v1.joblib": "ff9323df204193d9271cf49ad02f2fb6d4eee3ec6da2243368aefcd008aad084",
+    "revision/checkpoints/budget_bpi2019_seed2_mixed_varied_64_v1.joblib": "19f6ab18cabc11ea2c65e9971728b3230ee534aa5b1d5b224d88b2e71c4f2184",
+    "revision/checkpoints/budget_bpi2019_seed2_mixed_varied_256_v1.joblib": "6a72efcd97f17ae7aca35fb39816e836a3401a86b1ed9c4f333cbd6b4b341849"
+  },
+  "analysis": {
+    "primary": "entity-and-alias-macro history F1",
+    "secondary": [
+      "exact-history fraction",
+      "identity pair precision/recall",
+      "expanded newly damaged and repaired events",
+      "cancellation and temporal-boundary query recovery"
+    ],
+    "summary": "Mean, observed range and paired seed differences. Do not count correlated events as independent replicates or infer population confidence from three runs.",
+    "robustness": "Clean and independent pipeline faults for all three budget64 regimes and both zero-label generators; strict99 only on mixed faults at budget64 for real-only and mixed-varied.",
+    "completion": "Every declared job must complete or an explicit failure be reported. No stopping after favorable outcomes."
+  }
+}

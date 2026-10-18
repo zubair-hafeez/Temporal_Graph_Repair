@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Native missing-identifier accuracy across three seeds. Entries report mean (min--max) percent.}
+\label{tab:native-missing-id-results}
+\begin{tabular}{lrr}
+\toprule
+Method & Loan (BPI 2017) & Purchasing (BPI 2019) \\
+\midrule
+Generated, original & 89.8 (89.5--90.1) & 8.3 (7.8--8.9) \\
+Generated, varied & 88.9 (88.4--89.2) & 6.1 (5.5--6.7) \\
+Known-label HGB & 94.5 (94.4--94.6) & 65.1 (64.7--65.7) \\
+Nearest event & 83.7 (83.3--84.0) & 59.0 (58.8--59.3) \\
+HERE-Transformer (no expert rules) & 67.9 (66.5--69.0) & 42.0 (41.5--42.3) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The evaluation masks 30\% of event identifiers and restricts predictions to the closed catalog of known cases. Candidate recall averages 98.1\% (range 98.1--98.2\%) for loans and 86.0\% (range 85.9--86.0\%) for purchasing. Generated supervision has no universal advantage: both generated methods exceed nearest-event accuracy on loans, while generated accuracy falls to 8.3\% and 6.1\% on purchasing, well below nearest event and the known-label HGB control. The known-label HGB control has the highest accuracy in both domains. HERE-Transformer is evaluated without expert rules.

@@ -15,6 +15,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='task', required=True)
     sub.add_parser('runtime')
+    sub.add_parser('process-status')
     cohorts = sub.add_parser('prepare-cohorts')
     cohorts.add_argument('--domain', choices=['bpi2017', 'bpi2019'], required=True)
     native_cohorts = sub.add_parser('prepare-native-cohort')
@@ -51,8 +52,16 @@ def main():
     native = sub.add_parser('native-confirmation')
     native.add_argument('--domain', choices=['bpi2017', 'bpi2019'], required=True)
     native.add_argument('--device', choices=['cuda:0', 'cuda:1'], required=True)
+    confirm = sub.add_parser('coupled-confirmation')
+    confirm.add_argument('--shard', type=int, required=True)
+    confirm.add_argument('--shards', type=int, required=True)
+    followup = sub.add_parser('development-followups')
+    followup.add_argument('--domain', choices=['bpi2017', 'bpi2019'], required=True)
     args = parser.parse_args()
-    if args.task == 'runtime':
+    if args.task == 'process-status':
+        from revision.monitor import status
+        status()
+    elif args.task == 'runtime':
         import torch
         report = {'python': sys.version, 'torch': torch.__version__,
                   'cuda_available': torch.cuda.is_available(), 'devices': []}
@@ -95,6 +104,12 @@ def main():
     elif args.task == 'native-confirmation':
         from revision.native_protocol import run_suite
         run_suite(args.domain, args.device)
+    elif args.task == 'coupled-confirmation':
+        from revision.confirmation import run_shard
+        run_shard(args.shard, args.shards)
+    elif args.task == 'development-followups':
+        from revision.development_followup import run
+        run(args.domain)
 
 
 if __name__ == '__main__':

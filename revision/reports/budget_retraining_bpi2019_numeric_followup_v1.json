@@ -1,0 +1,47 @@
+{
+  "status": "selected_models_numerically_reproduced_with_identical_calibration_decisions",
+  "domain": "bpi2019",
+  "seed": 0,
+  "budget": 64,
+  "script_sha256": "606d338f022a91790fc5d5545953969b0472c8a4560a5c8d4a1142db0f829132",
+  "original_report_sha256": "eb3c78d86fc79244f6ddab99420318ec5372cf44efd206025730ce032657a43d",
+  "generated_cache_inventory_sha256": "d4a557d14b23e3542e62c4fe3f9b31328d5a9323b17dd9d33e5caa00b377c496",
+  "scope": "Same-runtime refitting from saved features, all three regimes. Does not certify independent-hardware retraining or raw-to-feature regeneration.",
+  "models": [
+    {
+      "name": "budget_bpi2019_seed0_real_only_64_v1",
+      "checkpoint_sha256": "169f0d236f1d398ea5bfbe81da326fa2c755d5a93e2c0d8faa6a98265bcaf702",
+      "checkpoint_bytes_identical": false,
+      "calibration_predictions_identical": false,
+      "maximum_prediction_difference": 3.3306690738754696e-15,
+      "thresholds_identical": true,
+      "threshold_maximum_difference": 0.0,
+      "calibration_decisions_changed": 0,
+      "calibration_predictions_close_at_1e_12": true
+    },
+    {
+      "name": "budget_bpi2019_seed0_mixed_original_64_v1",
+      "checkpoint_sha256": "bfccd179ff3c1b93dc5f2e5a30558d0fc0aac9ef86b27357df42d89427304b2b",
+      "checkpoint_bytes_identical": false,
+      "calibration_predictions_identical": false,
+      "maximum_prediction_difference": 5.329070518200751e-15,
+      "thresholds_identical": true,
+      "threshold_maximum_difference": 0.0,
+      "calibration_decisions_changed": 0,
+      "calibration_predictions_close_at_1e_12": true
+    },
+    {
+      "name": "budget_bpi2019_seed0_mixed_varied_64_v1",
+      "checkpoint_sha256": "2b77cee43d5591599e7ebc2c5f9d0292616ee796a1a91aa12a631b877c59f6ed",
+      "checkpoint_bytes_identical": false,
+      "calibration_predictions_identical": false,
+      "maximum_prediction_difference": 1.3015630240253984e-13,
+      "thresholds_identical": true,
+      "threshold_maximum_difference": 0.0,
+      "calibration_decisions_changed": 0,
+      "calibration_predictions_close_at_1e_12": true
+    }
+  ],
+  "limitation": "Exact byte/score equality failed in the initial audit at approximately 1e-15. This follow-up reports exact equality separately and checks absolute score/threshold tolerance 1e-12 and exact calibration decisions. Full iterative decoding replay is not established by this fitting check.",
+  "seconds": 49.390380976954475
+}

@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\caption{History F1 in the earlier frozen paired observation study; mean [min, max] over three confirmation trials.}
+\label{tab:original-paired-observation-results}
+\begin{tabular}{lccc}
+\toprule
+Domain & Damaged & Original generated & Varied generated \\
+\midrule
+Loan (BPI 2017) & 0.7872 [0.7865, 0.7878] & 0.7914 [0.7878, 0.7963] & 0.8050 [0.8012, 0.8076] \\
+Purchasing (BPI 2019) & 0.7598 [0.7561, 0.7640] & 0.8091 [0.7915, 0.8247] & 0.8263 [0.8114, 0.8412] \\
+BPI 2012 check & 0.7453 [0.7413, 0.7524] & 0.7760 [0.7662, 0.7825] & 0.8155 [0.8069, 0.8274] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These results are from the earlier frozen paired observation study, not the fresh revised native confirmation. On BPI 2017, the separate pipeline-fault condition decreased history F1 in all three trials (mean 0.7785 to 0.7771); no true identity pairs were recovered. On the BPI 2012 check partition, source-supervised training reached 0.8778 [0.8692, 0.8887], above the varied-generated mean in the table. A separate generated simulator confirmation over 96 held-out worlds reported original-observation F1 0.7588 [0.7554, 0.7650] and varied-observation F1 0.8000 [0.7913, 0.8113], from a shared damaged baseline of 0.7340.

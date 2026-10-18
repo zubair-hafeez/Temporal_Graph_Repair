@@ -1,0 +1,20 @@
+{
+  "status": "running_retraining_spot_check",
+  "domain": "bpi2019",
+  "seed": 0,
+  "budget": 64,
+  "script_sha256": "de6a97c40db33ad5e4245035f12d0a692873a99bf0586b07fc7dde1023007e3b",
+  "original_report_sha256": "eb3c78d86fc79244f6ddab99420318ec5372cf44efd206025730ce032657a43d",
+  "generated_cache_inventory_sha256": "d4a557d14b23e3542e62c4fe3f9b31328d5a9323b17dd9d33e5caa00b377c496",
+  "scope": "Same-runtime refitting from saved features, all three regimes. Does not certify independent-hardware retraining or raw-to-feature regeneration.",
+  "models": [
+    {
+      "name": "budget_bpi2019_seed0_real_only_64_v1",
+      "checkpoint_sha256": "9e144d447ece47d90a202087d17aaca31b1855e3075a0aa659920e496329bce7",
+      "checkpoint_bytes_identical": false,
+      "calibration_predictions_identical": false,
+      "maximum_prediction_difference": 3.3306690738754696e-15,
+      "thresholds_identical": true
+    }
+  ]
+}

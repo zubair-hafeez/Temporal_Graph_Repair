@@ -3,7 +3,7 @@
   "user_constraint": "At most 15 pages total including references and appendices; iterate to an evidence-supported good paper for final review only.",
   "original_study": "Preserved. Original protocol and frozen scientific code unchanged. Original manuscript archived under paper/archive/review_v1 and original review bundle remains intact.",
   "goal_status": "active",
-  "current_stage": "Remaining matched-budget development seeds; native cohort preparation; reliability controls and public artifact audit",
+  "current_stage": "Coupled confirmation frozen; all native and development jobs complete and native predictions independently audited.",
   "completed": [
     "Revision charter and prospective cohort plan saved before new record selection.",
     "BPI2017/BPI2019 fresh root/child-disjoint partitions prepared: 512 development, 1024 annotation, 1024 confirmation, 256 native comparison each. Original audited roots and original 1024-root confirmation excluded.",
@@ -23,34 +23,38 @@
     "Zero-label and full-budget calibration-only controls prepared for seed0, both domains, not yet decoded.",
     "Root-transaction reliability control implemented; a strict 99%-calibration original decoder is included as a fair comparator. Development evaluation only.",
     "11 distinct revision tests have passed (10 full suite plus new protocol boundary test; two relevant native tests also passed).",
-    "Public OCIP artifact audit completed using lower-cost model and pinned blob verification. Natural demonstrations concern cross-log object-object disagreements, not independent event-object repair truth."
+    "Public OCIP artifact audit completed using lower-cost model and pinned blob verification. Natural demonstrations concern cross-log object-object disagreements, not independent event-object repair truth.",
+    "Lower-cost bounded artifact, bibliography and annotation-cost audits completed; all 18 verification totals match budgets.",
+    "Prepared atomic per-pass/resumable coupled-confirmation runner; it rejects missing freeze and modified jobs. Three boundary tests passed.",
+    "Both complete four-partition cohort rebuilds reproduced graph bytes, bundle bytes and raw-root selection hashes exactly from explicitly located public sources; reports saved in revision/reports/cohort_reproduction_*_v1.json.",
+    "All 54 budget development conditions and 18 extra/reliability development controls complete.",
+    "All six native conditions with five matched methods completed; source-based prediction audit passed.",
+    "Six selected budget64 models numerically refitted within 1e-12 with identical calibration thresholds and decisions; byte identity did not reproduce and is not claimed."
   ],
   "running_jobs": {
-    "budget_development_bpi2017_seed1": {
-      "session_id": 40577
+    "coupled_confirmation_shard0": {
+      "session_id": 28297,
+      "log": "revision/reports/coupled_shard0_v1.log"
     },
-    "budget_development_bpi2019_seed1": {
-      "session_id": 91361
+    "coupled_confirmation_shard1": {
+      "session_id": 87263,
+      "log": "revision/reports/coupled_shard1_v1.log"
     },
-    "budget_development_bpi2017_seed2": {
-      "session_id": 9258
+    "coupled_confirmation_shard2": {
+      "session_id": 69461,
+      "log": "revision/reports/coupled_shard2_v1.log"
     },
-    "budget_development_bpi2019_seed2": {
-      "session_id": 70749
+    "coupled_confirmation_shard3": {
+      "session_id": 62317,
+      "log": "revision/reports/coupled_shard3_v1.log"
     },
-    "native_confirmation_bpi2017_all_seeds": {
-      "session_id": 43875,
-      "device": "cuda:0"
+    "coupled_confirmation_shard4": {
+      "session_id": 9789,
+      "log": "revision/reports/coupled_shard4_v1.log"
     },
-    "native_confirmation_bpi2019_all_seeds": {
-      "session_id": 15359,
-      "device": "cuda:1"
-    },
-    "reliability_development_bpi2017_seed0": {
-      "session_id": 98530
-    },
-    "reliability_development_bpi2019_seed0": {
-      "session_id": 16789
+    "coupled_confirmation_shard5": {
+      "session_id": 36180,
+      "log": "revision/reports/coupled_shard5_v1.log"
     }
   },
   "completed_jobs": {
@@ -74,27 +78,37 @@
       "missing_events": 413,
       "seconds": 29.5558
     },
-    "warning": "Only two epochs; not evidence of full-budget method performance. Need full declared 30-epoch training and matched-input generated/source/temporal baselines, plus adequate data-volume assessment. No native-comparison outcomes opened."
+    "warning": "Historical pilots only. Full native comparison is complete and independently audited; see revision/reports/native_confirmation_audit_v1.json."
   },
   "critical_next_steps": [
-    "Monitor both development evaluations; they take roughly 80-100 seconds per pass with 3-5 million candidate edits.",
-    "Complete credible full-budget HERE comparison protocol on missing case IDs. Author model uses closed case vocabulary, activity/resource/time inputs and optional expert rules; this runner currently has no expert rules.",
-    "Assess data volume before native confirmation. Current sealed 256-root native purchasing cohort has only 4441 events; consider an explicitly pre-outcome expansion so a data-hungry Transformer is not evaluated only at small scale.",
-    "Prepare remaining allocation seeds and budget-zero controls after reviewing implementation correctness. Any calibration-only control must count its actual label usage.",
-    "Investigate reliability improvements on development evidence; compare against calibrated original decoding rather than adding untested complexity.",
-    "Audit ArnetMiner compatibility. Natural author mentions are not proof of naturally wrong loan/order associations; do not force this case into the main paper.",
-    "Freeze exact revised method/evaluation jobs before any fresh confirmation outcomes. All 1024-root confirmation and native-comparison outcomes currently unopened.",
-    "Write and validate <=15-page manuscript and reproducible final-review bundle once evidence is complete."
+    "Complete all 156 frozen coupled-confirmation jobs across six shards.",
+    "Recompute results from saved prediction artifacts and check event-content invariance.",
+    "Finish <=15-page manuscript with all outcomes and limitations; compile and visually inspect.",
+    "Assemble final-review reproducibility artifact and evidence audit."
   ],
   "label_budget_caution": "These are incremental fitting/calibration budgets on fresh histories in previously studied source processes. Historical research/development labels are not zero and must be disclosed. Do not claim a total project-wide annotation budget or unseen-domain transfer from these same-source cohorts.",
   "gpu_runner": "/home/zubair/zubairEnv/bin/python revision/research.py",
   "gpu_approval": "Saved categorical prefix for the paper runner; CUDA works outside sandbox. Both RTX A6000 GPUs verified. Use approved runner for future GPU jobs.",
   "untracked_user_files": "Preserve paper/.ipynb_checkpoints/.",
   "no_external_submission": true,
-  "updated_utc": "2026-10-16T05:41:22.554330+00:00",
+  "updated_utc": "2026-10-18T03:44:38.987773+00:00",
   "public_data_only": true,
   "user_preferences": {
     "public_data_only": true,
     "small_tasks": "Use lower-cost models for bounded audits/formatting; main agent retains scientific decisions and review."
+  },
+  "manuscript_draft": {
+    "path": "revision/paper/main.pdf",
+    "status": "incomplete_development_draft_with_explicit_pending_results",
+    "pages": 8,
+    "overfull_boxes": 0,
+    "note": "Not final-review ready; 7-page allowance remains for completed results and layout."
+  },
+  "latest_checkpoint_commit": "8294809",
+  "coupled_confirmation": {
+    "status": "frozen_and_execution_started",
+    "protocol": "revision/docs/COUPLED_CONFIRMATION_PROTOCOL_V1.json",
+    "sha256": "84832d6b049cfb1448a7cfec915f93fee9e1a72507037e91c41a4973adc5eeec",
+    "jobs": 156
   }
 }

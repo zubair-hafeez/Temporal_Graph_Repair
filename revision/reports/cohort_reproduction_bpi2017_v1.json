@@ -1,0 +1,46 @@
+{
+  "status": "all_revision_cohorts_reproduced_byte_identically",
+  "domain": "bpi2017",
+  "source_sha256": "183c5e5189282779c811c78c33ff936351b3dd201165d612211fc220936f8249",
+  "adapter_sha256": "75266881e3419a0a7fa6e9f281ea61daed48b7b670703a5c975eab37a892f2f7",
+  "reproduction_script_sha256": "c5f5c040e9031b54e348c433df30450045a9e110bc13b2c5e5ea855e15ce371f",
+  "partitions": {
+    "development": {
+      "matches": {
+        "graph": true,
+        "bundles": true,
+        "root_selection": true
+      },
+      "events": 19048,
+      "root_bundles": 512
+    },
+    "annotation": {
+      "matches": {
+        "graph": true,
+        "bundles": true,
+        "root_selection": true
+      },
+      "events": 37566,
+      "root_bundles": 1024
+    },
+    "confirmation": {
+      "matches": {
+        "graph": true,
+        "bundles": true,
+        "root_selection": true
+      },
+      "events": 39421,
+      "root_bundles": 1024
+    },
+    "native_comparison": {
+      "matches": {
+        "graph": true,
+        "bundles": true,
+        "root_selection": true
+      },
+      "events": 77981,
+      "root_bundles": 2048
+    }
+  },
+  "scope": "Byte verification of source adaptation, partitioning and anonymization; no model outcomes opened."
+}
