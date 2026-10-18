@@ -4,6 +4,8 @@ The user has now authorized iterative improvements and a maximum of **15 total p
 
 The new goal is honest stronger evidence: total verified-history budgets including calibration, fair published-code comparisons, reduced repair harm, and independently verifiable natural-error evidence if obtainable. Existing inspected outcomes are development evidence for new decisions. Fresh confirmation outcomes require a new freeze. No external submission, RF, or full factory expansion is authorized. The saved GPU approval covers `/home/zubair/zubairEnv/bin/python revision/research.py`.
 
+Current revision checkpoint (18 October UTC): all development and six native comparisons finished. Native predictions audited. Combined-repair protocol `revision/docs/COUPLED_CONFIRMATION_PROTOCOL_V1.json` is frozen (SHA256 `84832d6b049cfb1448a7cfec915f93fee9e1a72507037e91c41a4973adc5eeec`); 156 jobs run across six shards recorded in `revision/STATE.json`. No model or scientific dependency changes are allowed. Completed comparisons are in the 10-page draft; combined results, final audit and final review bundle remain. The user permits lower-cost models for bounded small tasks. Read `revision/REPRODUCE.txt` for reproduction scope and exact-byte retraining limitations.
+
 ## Preserved original final-review state
 
 The user-authorized scientific work is complete and the manuscript is prepared for final author review. Nothing has been submitted or published. The earlier Operational_Temporal_Graphs paper is preserved. RF and the general scientific dataset factory remain outside this paper's scope. No sub-agents were authorized.

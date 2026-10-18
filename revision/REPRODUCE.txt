@@ -1,0 +1,109 @@
+TEMPORAL GRAPH REPAIR: REVISION REPRODUCTION GUIDE
+
+Scope
+This revision uses public BPI 2017 and BPI 2019 records. The main task repairs
+injected missing/wrong event-object links and fragmented identifiers. The
+separate HERE comparison only completes missing single-case identifiers.
+Neither experiment supplies independently verified natural business errors.
+Verification budgets are simulated complete-history reference accesses.
+
+Frozen studies
+1. Original study: docs/CONFIRMATION_PROTOCOL_V1.json (unchanged).
+2. Native comparison: revision/docs/NATIVE_CONFIRMATION_PROTOCOL_V1.json.
+3. Combined repair: revision/docs/COUPLED_CONFIRMATION_PROTOCOL_V1.json.
+The protocols have separate cohorts and access boundaries. Native outcomes
+were known before the combined-repair freeze; this is declared in its protocol.
+
+Environment
+Run commands from Temporal_Graph_Repair using the pinned requirements.txt.
+The original interpreter is /home/zubair/zubairEnv/bin/python. CUDA is only
+needed to refit the HERE Transformer; repair decoding and evidence audits run
+on CPU. Saved model files are trusted local research artifacts; do not load
+unknown joblib/pickle files from an untrusted source.
+
+Read results without rerunning expensive models
+  python revision/audit_native_results.py
+  python revision/audit_coupled_results.py
+  python revision/build_coupled_results.py
+The last two commands require completion of all 156 combined-repair jobs.
+The audit replays saved edits, checks event and context preservation, and
+independently calculates primary history scores and expanded damage. It does
+not rerun model inference. All reported conditions, including losses, are
+retained in revision/reports/coupled_results_v1.csv and coupled_summary_v1.json.
+
+Rebuild source cohorts from independently obtained public files
+  python revision/reproduce_cohorts.py --domain bpi2017 --source PATH_TO_BPI2017_XES_GZ --output-directory NEW_DIRECTORY
+  python revision/reproduce_cohorts.py --domain bpi2019 --source PATH_TO_BPIC19_OCEL2_ZIP --output-directory ANOTHER_NEW_DIRECTORY
+Expected SHA256:
+  BPI 2017: 183c5e5189282779c811c78c33ff936351b3dd201165d612211fc220936f8249
+  BPI 2019 OCEL ZIP: f4196103cb1c41bc26e04993dd10a44b8229cd05eebc3d66c2f11f2d859a9893
+The portable builder accepts paths explicitly and checks these exact sources.
+Both domains' four original revision partitions reproduced byte-identically.
+The separately expanded 2048-root native blocks are governed by the native
+cohort amendment; the four-partition replay does not certify that expansion.
+
+Complete or resume declared inference
+  python revision/research.py coupled-confirmation --shard 0 --shards 6
+Repeat with shard numbers 1 through 5. Each shard owns one domain/allocation
+seed and every variant belonging to it. Never run the same shard twice at the
+same time. The runner checks frozen files and completed artifacts, skips
+verified completed jobs and replays completed passes for interrupted jobs.
+A directory with partial task creation may require an explicit documented
+recovery; it is not silently treated as a complete task. Completed jobs are
+not rerun by this command. For fresh replication, use a separate installation
+and keep original evidence separate from new outputs.
+
+Native training and evaluation
+  python revision/research.py native-confirmation --domain bpi2017 --device cuda:0
+  python revision/research.py native-confirmation --domain bpi2019 --device cuda:1
+Each command contains three seeds, 30 HERE epochs per seed and four matched
+controls. All original native runs are complete. Existing completed results
+are checked and skipped. The author model is supplied under revision/vendor/
+with its license and pinned source commit. No expert rules are supplied.
+The 30-epoch final checkpoint is used; diagnostic validation was not used to
+select the best test epoch. This adaptation is not a replication of all
+settings or expert-rule conditions in the published HERE paper.
+
+Refitting from saved features
+  python revision/replay_training.py --domain bpi2017 --output-directory NEW_REPLAY_DIRECTORY
+  python revision/replay_training.py --domain bpi2019 --output-directory ANOTHER_REPLAY_DIRECTORY
+These fixed checks refit seed-zero, budget-64 models for all three regimes.
+The original exact-byte requirement failed. Follow-up refits differed by at
+most about 1.4e-13 in calibration scores, with identical selected thresholds
+and calibration decisions. The checks therefore report 1e-12 absolute
+numeric agreement, exact decisions, and byte equality separately. They do
+not certify identical full iterative decoding after fresh training, nor
+independent-hardware replication. The generated feature inventory was saved
+after fitting and is not a retrospective pretraining freeze.
+
+Full raw-to-feature regeneration is a separate operation. Follow the original
+README and saved generation recipes, then the revision annotation and budget
+training commands in revision/research.py, in a separate output installation.
+Do not overwrite models pinned to existing experimental results. A new fitted
+artifact needs its own provenance and evaluation declaration.
+
+Manuscript
+  python revision/build_paper.py --draft
+  python revision/build_paper.py
+The second command requires no pending research text. Both enforce a maximum
+of 15 total pages, including references and appendices. The default compiler
+and cache point to this installation; --compiler selects another Tectonic
+binary. Citation compilation and page count do not replace visual review.
+
+Interpretation limits
+Fresh histories come from previously studied processes, with shared context
+resources allowed. Three seeds do not establish cross-institution transfer.
+Threshold calibration precision is empirical and does not bound future harm.
+Generated-only methods have severe purchasing losses in the native task.
+Timings have different scopes and concurrent resource use; do not compute
+an end-to-end method speedup from them. Natural-error compatibility audits
+found public sources requiring unsupported identity splitting or a different
+relation type; these sources were not used as positive validation cases.
+
+Local review only
+No data, models or manuscript have been submitted or published. Public source
+availability does not by itself authorize unrestricted redistribution. Check
+each source's terms before sharing a review package externally. The existing
+factory directory name is only a historical source dependency of the original
+temporal generator; no RF experiment or general factory expansion is part of
+this revision.
