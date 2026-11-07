@@ -1,0 +1,112 @@
+MATCHED REPEATED-CORRUPTION FOLLOW-UP — October 2026
+
+Working project: /mnt/zubair/Temporal_Graph_Repair
+The user's /home/zubair/mnt_zubair/Temporal_Graph_Repair names the same project.
+Interpreter: /home/zubair/zubairEnv/bin/python
+Run commands from the project root, with the existing requirements.txt environment.
+
+All new experimental code, generated worlds, models, logs, predictions, audits,
+protocol and summaries are isolated under revision/improvement_v2/. Existing
+frozen scientific code and previous experimental results are not modified.
+
+Question
+Does generated supervision improve repair beyond eight distinct corruptions of
+exactly the same verified real histories? Budgets 16/64/256 include calibration.
+The two arms use byte-identical real fitting and calibration arrays. History
+verification is simulated access to public reference representations; it is not
+investigator annotation. Roles are root/child-disjoint and nested by budget.
+
+Scope
+This is an exploratory follow-up on 128 hash-selected roots from each previously
+used confirmation cohort. Three seeds vary allocation and faults, not institutions
+or source processes. A new frozen protocol records choices before new model
+outcomes, but does not turn reused source cohorts into independent confirmation.
+One simultaneous edit pass with atomic root substitutions differs from the old
+four-pass study. Do not directly compare its scores to the old 1024-root results.
+Only selected verified histories enter real fitting/calibration graph context.
+Both arms have identical real examples and differ by added generated examples;
+total training rows and compute are intentionally measured rather than equalized.
+
+Generated execution
+32 executable worlds, 16 roots each, with root/item/resource structure, varying
+arrival overlap, resource queues, lognormal durations, cancellations, retries,
+coarse timestamp recording and varying noisy fields. Eight independently seeded
+recording conditions cover mixed, independent, mild, severe, missing-dominant,
+wrong-dominant, fragmentation-dominant and pipeline faults. Two additional empty
+history graphs represent unresolved ambiguity, with no uniquely justified edit.
+They have multiple compatible latent truths, not an arbitrarily chosen positive.
+The ambiguity stress test is narrow: indistinguishable empty catalog histories.
+No claim of natural incident rates, calibrated digital twins, or comprehensive
+ambiguity detection is made. Individual generator mechanisms are not ablated.
+
+Information ablations
+At budget64, retrain generated-plus-real using no timestamps, no context objects,
+no descriptive fields, or no history edges. Projection precedes candidate
+retrieval, index construction and fitting. No-context retains the root/child
+incidence needed to represent target histories; no-history removes all incidence
+from the evidence index, retaining the current association only to define an edit
+and its current cardinality. This is an information study with boosted scorers,
+not evidence that a graph neural architecture is necessary or superior.
+
+Safety
+Fixed calibration precision targets .95/.99, minimum five correct actions per
+operation. Insufficient support means abstention. Safe decoding rejects tied
+additions, co-occurring alias merges, merge scores below .99, and merges that are
+not mutual best with a .05 margin. The exactly-one-root contract is supplied by
+the source schema. It cannot certify the identity of the selected replacement.
+No-threshold tuning uses test labels. Recovery/damage operating points are
+descriptive; a harm frontier is not a deployment guarantee or a new held-out
+threshold-selection set. Original-event content is immutable. Saved edit programs
+and prior-event/cluster dictionaries permit exact replay and undo.
+
+Reproduction
+  python -m pytest -q revision/improvement_v2/test_method.py
+  python -m revision.improvement_v2.run freeze
+  python -m revision.improvement_v2.run generated
+  python -m revision.improvement_v2.run domain --domain bpi2017
+  python -m revision.improvement_v2.run domain --domain bpi2019
+  python -m revision.improvement_v2.benchmark_generation
+  python -m revision.improvement_v2.analyze
+  python -m revision.improvement_v2.present
+  python -m revision.improvement_v2.report
+  python -m revision.improvement_v2.make_claims
+  python -m revision.improvement_v2.build
+
+The saved final manuscript/visual-review evidence can be checked with:
+  python -m revision.improvement_v2.review
+After rebuilding a different PDF, inspect all pages and update visual_review.json
+with the actual inspected PDF hash before claiming that final review passed.
+
+Do not run two workers for the same domain. Domain workers may run concurrently.
+The original execution uses four CPU threads per domain worker. Cached stages
+verify their checksums and resume completed fitting/evaluations. For a genuinely
+fresh rerun, copy project code and required cohort inputs to a separate workspace,
+retain protocol.json and remove only copied data/models/results/generated caches
+and logs under the copied improvement_v2 directory. Never delete original runs.
+Run generated then domain stages. Fresh model-file bytes may differ across hosts.
+
+Measured resources
+Each cache, model and evaluation records monotonic wall and process CPU seconds.
+Evaluation includes scoring, applying edits and metrics; end-to-end estimates add
+the measured shared candidate-construction cost. File I/O is not included in that
+estimate. Domain totals include caching and writes. Peak RSS is reported in KiB.
+Generated construction cost is shared and amortizable. Dollar cost and energy
+are not measured. Timings are on this host under concurrent load, not a benchmark
+against other hardware. Human verification time is not inferred from bundle count.
+
+Human evidence
+The user explicitly allowed skipping natural-error investigator adjudication and
+measured human verification time if not readily available. Neither is claimed.
+These remain requirements for a later field study, not completed experiments.
+
+Evidence outputs
+  protocol.json             design and input/code hashes
+  generated_manifest.json   executed worlds and recording mechanisms
+  results/<domain>/summary.json   all 78 conditions per source, including losses
+  analysis.json             independent replay/metric audit and paired outcomes
+  per_trial.csv             all 156 per-condition measurements
+  RESULTS.txt               readable primary, ablation, safety, stress and cost results
+  figures/                  exportable recovery-versus-damage visualization
+  paper_table_*.tex         automatically derived manuscript tables
+  build.json                updated paper source/PDF correspondence
+  review.json               final manuscript and artifact checks

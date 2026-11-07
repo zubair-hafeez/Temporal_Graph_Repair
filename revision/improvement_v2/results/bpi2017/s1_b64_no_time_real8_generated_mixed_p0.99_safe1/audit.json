@@ -1,0 +1,79 @@
+{
+  "mode": "single_pass_atomic_root",
+  "safe": true,
+  "thresholds": [
+    0.9959291173052344,
+    0.9787768785857855,
+    1.1
+  ],
+  "rejected": {
+    "tied_addition": 144410,
+    "merge_floor": 17999,
+    "non_mutual_or_low_margin": 3
+  },
+  "edits": [
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000004778",
+        "target": "o000000331"
+      },
+      "score": 0.9975804118240622
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003725",
+        "target": "o000000331"
+      },
+      "score": 0.9970513197675934
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003454",
+        "target": "o000000331"
+      },
+      "score": 0.9970513197675934
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003595",
+        "target": "o000000052"
+      },
+      "score": 0.9966357969162776
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001920",
+        "target": "o000000052"
+      },
+      "score": 0.9962032911939984
+    }
+  ],
+  "undo": [
+    {
+      "prior_events": {
+        "e000004778": [
+          "o000000433"
+        ],
+        "e000003725": [
+          "o000000433"
+        ],
+        "e000003454": [
+          "o000000433"
+        ],
+        "e000003595": [
+          "o000000214"
+        ],
+        "e000001920": [
+          "o000000214"
+        ]
+      },
+      "prior_clusters": {}
+    }
+  ],
+  "seconds": 1.0060554509982467
+}

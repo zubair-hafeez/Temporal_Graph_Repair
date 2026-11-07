@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering\small
+\caption{Repeated-corruption follow-up: three-seed means on 128 reused roots per source. $R_8$ uses eight corruptions of each verified fitting set; $+G$ adds generated histories. $q$ is the calibration precision target. Recovery and damage count fully corrected initially incorrect events and newly incorrect initially correct events, with alias expansion. Equal $q$ does not guarantee equal test damage.}
+\label{tab:repeated-corruption}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrr rr rr rr}
+\toprule
+ & & & \multicolumn{2}{c}{History F1 (\%)} & \multicolumn{2}{c}{Recovered} & \multicolumn{2}{c}{Damaged} \\
+Source & Budget & $q$ & $R_8$ & $+G$ & $R_8$ & $+G$ & $R_8$ & $+G$ \\ \midrule
+Loans & 16 & 0.95 & 79.2 & 79.4 & 64 & 67 & 10.0 & 4.0 \\
+ & 16 & 0.99 & 78.9 & 79.2 & 55 & 35 & 6.7 & 1.3 \\
+ & 64 & 0.95 & 81.6 & 79.6 & 237 & 108 & 1.7 & 1.7 \\
+ & 64 & 0.99 & 79.2 & 79.0 & 30 & 67 & 0.0 & 0.0 \\
+ & 256 & 0.95 & 80.5 & 80.0 & 123 & 102 & 2.3 & 2.3 \\
+ & 256 & 0.99 & 79.4 & 79.2 & 46 & 38 & 1.7 & 1.0 \\
+\midrule
+Purchasing & 16 & 0.95 & 82.7 & 80.9 & 388 & 257 & 25.0 & 19.3 \\
+ & 16 & 0.99 & 80.5 & 81.0 & 269 & 236 & 7.7 & 13.0 \\
+ & 64 & 0.95 & 83.5 & 82.6 & 501 & 423 & 15.7 & 10.0 \\
+ & 64 & 0.99 & 81.1 & 80.5 & 343 & 309 & 2.7 & 4.7 \\
+ & 256 & 0.95 & 81.3 & 80.7 & 350 & 347 & 7.7 & 6.7 \\
+ & 256 & 0.99 & 79.7 & 78.2 & 253 & 196 & 1.7 & 1.3 \\
+\bottomrule
+\end{tabular}
+\end{table}

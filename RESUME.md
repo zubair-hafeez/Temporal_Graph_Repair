@@ -1,3 +1,84 @@
+PAPER RELOCATED
+Compiling Temporal Walks for Exact Counterfactual Audits now lives in
+/mnt/zubair/Temporal_Walk_Counterfactual_Audits/
+Its PDF is PAPER.pdf there. The local rEPAIR. LATEST_PAPER.pdf
+opens this directory's earlier workflow-repair paper.
+
+CURRENT COMPLETED PAPER — 20 OCTOBER 2026
+
+The independent temporal-learning study is complete and reviewed:
+/mnt/zubair/Temporal_Walk_Counterfactual_Audits/paper/main.pdf,12 pages including references.
+Title: Compiling Temporal Walks for Exact Counterfactual Audits.
+Latest shortcut: /mnt/zubair/Temporal_Walk_Counterfactual_Audits/PAPER.pdf.
+Read /mnt/zubair/Temporal_Walk_Counterfactual_Audits/docs/STATUS.json, REPRODUCE.txt, CLAIMS.txt,
+and results/final_review.json before further work. No workers remain.
+
+Frozen confirmation001 is complete:6000predictions,72audit tasks,
+113644hypotheses,2048full-replay probes; exact score differences0.
+Dispersed median speedups20.303/4.318/38.808; source1.319/1.564/0.950.
+All approximate top1/minimum-budget answers agree; this limitation is explicit.
+The neural supplement is development-only:9fits,24declared/23nonempty tasks,
+40037hypotheses.46tests passed. Every numerical table comes from saved results.
+The PDF and source/model/evidence hashes passed final verification.
+
+Do not claim general predictive SOTA, universal novelty priority, natural-error
+performance or measured human verification savings. Do not reuse these opened
+confirmation outcomes as fresh evidence for a modified hypothesis. No external
+submission occurred. Prior completed repair findings and its paper are preserved
+as a separate study, not an alternative draft of the new temporal-learning paper.
+
+--- Historical workflow-repair notes; current-paper pointers above take precedence ---
+
+CURRENT CONFIRMATION — OCTOBER 2026
+
+ACTIVE NEW TRACK (October 20): /mnt/zubair/Temporal_Walk_Counterfactual_Audits/.
+User authorized independent research, including changes of hypothesis. Read that
+directory's STATUS.json and NOTES.txt first. Use the neighboring temporal paper
+library as primary literature, ignoring its previously proposed research ideas.
+The confirmation manuscript below remains the latest completed paper.
+
+Latest manuscript: revision/paper/main.pdf, 14 pages including references.
+Current experiment/report directory: revision/confirmation_v3/.
+Read RESULTS.txt, REPRODUCE.txt, protocol.json, freshness.json and review.json there.
+All 768 fixed-model conditions are complete and independently audited. The study
+uses 36 unchanged fits and 1,024 untouched root histories per source, after excluding
+all earlier target partitions including the expanded 2,048-root native block.
+
+At 64 loan bundles and calibration target .99, generated training raises mean
+full-event recovery 30.2→62.5 per 128-root block and lowers new damage 2.08→0.00.
+The paired conditional 95% recovery-gain interval is [29.5, 35.3]; all eight block
+averages improve. One of three fitted-seed means loses recovery; training-population
+uncertainty is outside that interval. Mean history F1 falls 0.23 percentage points. At 256 bundles,
+augmentation has worse mean F1, recovery and damage at both targets in both sources.
+Never-merge controls show that guarded merging retains useful identities but
+adds residual harm: none of four combinations satisfies the no-added-harm benefit.
+
+All 66 tests passed; all 14 PDF pages were visually reviewed. Final current review:
+revision/confirmation_v3/review.json. No workers remain. Do not restart completed
+runs or tune on these confirmation outcomes. No external submission was made.
+Natural-error adjudication and human-time collection remain skipped by user
+permission. New histories are from known processes, not unseen institutions.
+
+--- Historical notes below; current-paper instructions above take precedence ---
+
+CURRENT FOLLOW-UP — 19 OCTOBER 2026
+
+Latest manuscript: revision/paper/main.pdf, 15 pages including references.
+New code, experiments and results: revision/improvement_v2/.
+Read revision/improvement_v2/RESULTS.txt and REPRODUCE.txt for the current work.
+60 models and 156 follow-up repair conditions are complete; all calibrations,
+edit programs, undo records and principal metrics passed independent replay.
+The strict budget64 loan comparison improves mean full-event recovery from
+30.3 to 67.0 with zero observed new damage, but loses in one of three seeds.
+Generated data does not consistently dominate the repeated-corruption baseline.
+Conservative merge checks reduce harm while sacrificing some true alias recovery.
+Natural-error adjudication and human-time collection were skipped with explicit
+user authorization. Existing source cohorts were reused; this is exploratory.
+Earlier experimental evidence is preserved. Do not rerun completed workers.
+Current manuscript review record: revision/improvement_v2/review.json.
+
+--- Historical notes from before this follow-up ---
+
 # Latest-paper-only organization — 18 October 2026
 
 User explicitly requested removal of ALL earlier-version papers. Completed: keep only `revision/paper/main.pdf` (13 pages), with root `LATEST_PAPER.pdf` shortcut. Earlier manuscript files and obsolete prose sources are deleted; experimental records and support assets remain. See `reports/organization/latest_paper_only_20261018.json`. Historical notes below about preserving earlier manuscripts or reconstructing earlier release packages are superseded. Do not restore deleted manuscript versions unless explicitly requested. No new research work is authorized by cleanup.

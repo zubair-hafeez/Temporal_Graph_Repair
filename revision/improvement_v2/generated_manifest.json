@@ -1,0 +1,582 @@
+{
+  "worlds": [
+    {
+      "world": 0,
+      "events": 150,
+      "activities": {
+        "create": 32,
+        "check": 31,
+        "execute": 27,
+        "settle": 25,
+        "retry_settle": 8,
+        "retry_check": 9,
+        "retry_execute": 11,
+        "cancel": 7
+      },
+      "fault": "mixed",
+      "clean_sha256": "c0cfabb9ea9d7baa36530d792f15798006735df2f60d7ac9258f46b1134d4e4e",
+      "observed_sha256": "d5669031dc4bdbcfc915bbb8154668fd46c87cdd50c2c12a79b02ebaa93a48b7",
+      "reference_sha256": "636b62acabffab1d5058a62d5eeddd1e9d4361dd376a6243c6ca1f7f33ff75ed"
+    },
+    {
+      "world": 1,
+      "events": 138,
+      "activities": {
+        "create": 29,
+        "retry_check": 15,
+        "check": 26,
+        "execute": 25,
+        "cancel": 5,
+        "retry_settle": 8,
+        "settle": 24,
+        "retry_execute": 6
+      },
+      "fault": "independent",
+      "clean_sha256": "f7008e9db404895feb07bf7af3cde70ea7e304fd472a3b1aad3f6cd866909f57",
+      "observed_sha256": "23f53e17a7a92f8a78fc7f269eab54a15c52975ef60fbbd856b89d27c4d4b763",
+      "reference_sha256": "3687ca733c6d775733f0c5672f1aaa79b56422f0157834b9753734797125cb27"
+    },
+    {
+      "world": 2,
+      "events": 139,
+      "activities": {
+        "create": 31,
+        "check": 27,
+        "execute": 25,
+        "settle": 23,
+        "retry_execute": 7,
+        "retry_settle": 11,
+        "retry_check": 7,
+        "cancel": 8
+      },
+      "fault": "mild",
+      "clean_sha256": "a84021b0983d8c84aaab1b5c86ae9e93cabc088505ae0a4e05fa78712108172d",
+      "observed_sha256": "18430cb9b7c7a12b77f4a2f035a7cf15bf08595b6af677cff4901d16d9c477be",
+      "reference_sha256": "f7738efd1f0aa8e5c612bc35eaa35cb324282b51adc27eb90ba3d0d2f6f79371"
+    },
+    {
+      "world": 3,
+      "events": 146,
+      "activities": {
+        "create": 31,
+        "check": 29,
+        "retry_execute": 11,
+        "execute": 29,
+        "retry_settle": 8,
+        "settle": 25,
+        "retry_check": 7,
+        "cancel": 6
+      },
+      "fault": "severe",
+      "clean_sha256": "059f8415858477453cc7f4025cca452598152a900be80d1872fc5f729577d2e8",
+      "observed_sha256": "34a552602773cd183ad148d253449bfb3812cabdd1d10d87df82c07d89c60242",
+      "reference_sha256": "80c7b499818f7f2f1c61fc43612e7cb8d133a27be5b6547b8fc70e479046a385"
+    },
+    {
+      "world": 4,
+      "events": 131,
+      "activities": {
+        "create": 30,
+        "retry_check": 9,
+        "check": 26,
+        "execute": 23,
+        "settle": 20,
+        "cancel": 10,
+        "retry_execute": 5,
+        "retry_settle": 8
+      },
+      "fault": "missing",
+      "clean_sha256": "55cf654b7b110f0b734e11770ef6b00bb1ab2e8e4fc257c7b4ffc7a14d42c4d7",
+      "observed_sha256": "a67168fe0c4e584fb7d541f5ac1a082ead3ec83587b039fc855cf4a6b8135d67",
+      "reference_sha256": "5b3438452eb21f88ab23bd2ba08956c5a4f71a21b496908c2eef9831c3de962e"
+    },
+    {
+      "world": 5,
+      "events": 170,
+      "activities": {
+        "create": 38,
+        "check": 34,
+        "execute": 33,
+        "settle": 30,
+        "retry_settle": 10,
+        "retry_execute": 11,
+        "cancel": 8,
+        "retry_check": 6
+      },
+      "fault": "wrong",
+      "clean_sha256": "0e30dfd53444b09d9e21ad1abee201b36a34e0ecf1b2662a7e5dee309e587c4c",
+      "observed_sha256": "ecbf261b9e829dc634e93d43d6f88249573ddc8097ec359ae6b577e42858aaa3",
+      "reference_sha256": "58fc059ebba7878f4514360214c86b0a7c5338d7bbbf9dd1ff8bea6b99f8d7c8"
+    },
+    {
+      "world": 6,
+      "events": 122,
+      "activities": {
+        "create": 28,
+        "check": 25,
+        "retry_execute": 6,
+        "execute": 24,
+        "retry_settle": 8,
+        "settle": 23,
+        "retry_check": 3,
+        "cancel": 5
+      },
+      "fault": "fragment",
+      "clean_sha256": "c2d3703a1aa6d57504db5246ce5ac6944cd1c37c75747689fa07157efa6c8850",
+      "observed_sha256": "889069684315bc6ad8ca6ef4f207410098c0472a6412e45c4a4501699a153b23",
+      "reference_sha256": "c1838b50ae6f241b3165c825f17f0ca9989d812175dbbdb644e73abffe82cc88"
+    },
+    {
+      "world": 7,
+      "events": 133,
+      "activities": {
+        "create": 30,
+        "check": 27,
+        "execute": 22,
+        "cancel": 13,
+        "settle": 17,
+        "retry_settle": 8,
+        "retry_execute": 9,
+        "retry_check": 7
+      },
+      "fault": "pipeline",
+      "clean_sha256": "09e013354d5a89f17741a61924910a5e1fb05fe50dc98f739a1664db017e3ce9",
+      "observed_sha256": "b661929c5692249d000c8d412a5f6217a0afafcd16c2a74b0b2bbd6158bbdb42",
+      "reference_sha256": "bc73723b2a9370d48857f58517200ab8693211167a0d81764e53e0dddaa2fd01"
+    },
+    {
+      "world": 8,
+      "events": 116,
+      "activities": {
+        "create": 28,
+        "check": 24,
+        "cancel": 10,
+        "execute": 20,
+        "retry_execute": 8,
+        "settle": 18,
+        "retry_settle": 6,
+        "retry_check": 2
+      },
+      "fault": "mixed",
+      "clean_sha256": "7106a74ed12475363dff18e153fb179beab502421f20fb01b6447f7349992521",
+      "observed_sha256": "37df2b04d39c8f408c087480cc8bc58a86ddd8f367a4b06c08c4388e3fd225be",
+      "reference_sha256": "ff739266b3243125e715254d93a69adfb8cb78eddb29527fac39ca1c70a44d3e"
+    },
+    {
+      "world": 9,
+      "events": 136,
+      "activities": {
+        "create": 31,
+        "check": 29,
+        "retry_execute": 9,
+        "execute": 23,
+        "cancel": 14,
+        "retry_check": 7,
+        "settle": 17,
+        "retry_settle": 6
+      },
+      "fault": "independent",
+      "clean_sha256": "38276f50e06c8d12d629970632b77a565dcdd0f887f862b68d39c6c9a0ad74e3",
+      "observed_sha256": "874d0071926f0acb8e3ee23c2bd8b3614bf02fb3df98245b9c107e0a49bb8e57",
+      "reference_sha256": "00f1a29f81f4de9c108247e3e992c0e6f1872de26469e2413163a12fa66a6ce4"
+    },
+    {
+      "world": 10,
+      "events": 151,
+      "activities": {
+        "create": 35,
+        "check": 31,
+        "retry_execute": 8,
+        "execute": 29,
+        "settle": 25,
+        "retry_settle": 3,
+        "cancel": 10,
+        "retry_check": 10
+      },
+      "fault": "mild",
+      "clean_sha256": "ea2396f71700ebea62d0c53ebecac9ba4ae354afa8ad49823a4b58e610db374f",
+      "observed_sha256": "a9cea0ec67696661a7edee08be47db19ccb885cbcbf1ba413e930f439065cb3a",
+      "reference_sha256": "394c6ebfe8929bb19ef7be9cf63dd3c13a665ff2506164047e93b3fffa1e44e7"
+    },
+    {
+      "world": 11,
+      "events": 151,
+      "activities": {
+        "create": 34,
+        "cancel": 11,
+        "retry_check": 10,
+        "check": 27,
+        "retry_execute": 13,
+        "execute": 26,
+        "retry_settle": 7,
+        "settle": 23
+      },
+      "fault": "severe",
+      "clean_sha256": "6a24d4efdd9794a78a061dc054fe112b6cd6293ea22045aa16ec68adc7b36814",
+      "observed_sha256": "8764b089e6d7ed27ccc31eadcabfd76546fae3dd48e69ea720128cfb353df767",
+      "reference_sha256": "354df857d8b71042cd44452f084bf79369a8ea4acbb2d393aac55c29a5db664c"
+    },
+    {
+      "world": 12,
+      "events": 137,
+      "activities": {
+        "create": 32,
+        "cancel": 10,
+        "retry_check": 8,
+        "check": 29,
+        "execute": 26,
+        "settle": 22,
+        "retry_execute": 7,
+        "retry_settle": 3
+      },
+      "fault": "missing",
+      "clean_sha256": "e79bc4b50b862aa3ba87f1cdb7bc638e3a3a51ccf708e2083bce15e8d8410d31",
+      "observed_sha256": "2aa59975454b0e2a5538f587f0bcd0d31aceb0ae9151e4ff2850d90bdbb096bc",
+      "reference_sha256": "50b7844d21dc7d6a6bb8fed27d706d375fa8f8136d8075713edc5923edd24e49"
+    },
+    {
+      "world": 13,
+      "events": 127,
+      "activities": {
+        "create": 27,
+        "check": 26,
+        "execute": 25,
+        "retry_settle": 11,
+        "settle": 24,
+        "retry_execute": 7,
+        "retry_check": 4,
+        "cancel": 3
+      },
+      "fault": "wrong",
+      "clean_sha256": "37e9d41efb5fd21e4d3a27006d7a0155754820af124579b20764ab9550f768f8",
+      "observed_sha256": "024fcd4d38ab504b657ff4c369700547366be3067003204930fe44767888ab3b",
+      "reference_sha256": "0afd17d054fefd4baf0e9a489e36cd58a123c62b4da7f1c77e89218a7ac20456"
+    },
+    {
+      "world": 14,
+      "events": 131,
+      "activities": {
+        "create": 31,
+        "cancel": 6,
+        "check": 26,
+        "execute": 25,
+        "settle": 25,
+        "retry_execute": 7,
+        "retry_check": 7,
+        "retry_settle": 4
+      },
+      "fault": "fragment",
+      "clean_sha256": "4a92e3eb653b7a0f047650cd1f60c794a7093d04e851e783b022704cc3da9203",
+      "observed_sha256": "ac983b578c88f16916173958c94b9b1f8bfa3aacf3db8f4c8725f8d6256353a6",
+      "reference_sha256": "e9a1373787425428e4829d55a5f76e539e1260df61d279fe8d34a7f299f63009"
+    },
+    {
+      "world": 15,
+      "events": 131,
+      "activities": {
+        "create": 30,
+        "check": 26,
+        "retry_execute": 8,
+        "execute": 24,
+        "retry_settle": 6,
+        "settle": 23,
+        "cancel": 7,
+        "retry_check": 7
+      },
+      "fault": "pipeline",
+      "clean_sha256": "5df37dfd2cbd306d047fb8326ff3f18e005b4acddc2ed53b7ab9cb5de5ad01e3",
+      "observed_sha256": "568bf6f7a2c898fb502658f134d402ded2c79edbaefd68fb532850660d95371b",
+      "reference_sha256": "83ad8747afa0fb5ca8dc0fc59ebed51bd93f8caae898c649d9e66c53a0a3fd80"
+    },
+    {
+      "world": 16,
+      "events": 129,
+      "activities": {
+        "create": 29,
+        "retry_check": 7,
+        "check": 27,
+        "retry_execute": 5,
+        "execute": 25,
+        "settle": 24,
+        "cancel": 5,
+        "retry_settle": 7
+      },
+      "fault": "mixed",
+      "clean_sha256": "f56d1bbe4211332a84378e58755a98464633f2ff2c10cf0e5d0dfa989bce84da",
+      "observed_sha256": "7bb6fdf48d443a684beaccd57b862318c4323fb28df1795c9dfa3c81c1269216",
+      "reference_sha256": "80d1ad69d932fe2f2a7d3c7958526aabb729e1ceca13a09068749d0874d9b244"
+    },
+    {
+      "world": 17,
+      "events": 159,
+      "activities": {
+        "create": 35,
+        "check": 32,
+        "execute": 30,
+        "cancel": 7,
+        "settle": 28,
+        "retry_check": 10,
+        "retry_execute": 6,
+        "retry_settle": 11
+      },
+      "fault": "independent",
+      "clean_sha256": "e12abf342d04b94a24ee072e763d5d2d1df358315ad6bc99dff54efadef73080",
+      "observed_sha256": "f8b85ac799a8d27a44933ebbbabdab4d3854f8bda6121d1ab60fba6ffe89a54f",
+      "reference_sha256": "a432b845198ff74430aa55506d4c6a9bd621a6c6b45e04bd91ce433ede0765ef"
+    },
+    {
+      "world": 18,
+      "events": 137,
+      "activities": {
+        "create": 32,
+        "check": 30,
+        "execute": 28,
+        "settle": 26,
+        "retry_execute": 7,
+        "retry_check": 5,
+        "retry_settle": 3,
+        "cancel": 6
+      },
+      "fault": "mild",
+      "clean_sha256": "16d5309138bd0eaa83bdb343f6be6e0bf5b20e3727b7392c2b0af47cd0867306",
+      "observed_sha256": "38e2dffc80d230e5cb4714d786e4841db1756a8317dab70a5711294b7621d65c",
+      "reference_sha256": "7dde4aec67a2aaf5a33ac71d1cc7a073a3f35be20ea1e6d9986c3e740b8eec3a"
+    },
+    {
+      "world": 19,
+      "events": 143,
+      "activities": {
+        "create": 33,
+        "retry_check": 7,
+        "check": 31,
+        "execute": 25,
+        "cancel": 13,
+        "retry_execute": 10,
+        "settle": 20,
+        "retry_settle": 4
+      },
+      "fault": "severe",
+      "clean_sha256": "a8a6bbfcd0462e3ba6d046f5a891cff24b46024755ccb08275f1dfb46a3b489b",
+      "observed_sha256": "e112078b5285faf31b485f707b72c01267179a83f6e77e263479b3d6ee3a5aae",
+      "reference_sha256": "607002e8fdce8ab4c2d14800685c80df1f654c04e1f1516364b3345fc9384c88"
+    },
+    {
+      "world": 20,
+      "events": 136,
+      "activities": {
+        "create": 30,
+        "check": 28,
+        "retry_execute": 6,
+        "execute": 26,
+        "retry_settle": 8,
+        "settle": 24,
+        "retry_check": 8,
+        "cancel": 6
+      },
+      "fault": "missing",
+      "clean_sha256": "e28c279e360436145577225bfad0414abd983745a8956b20ec2f3cd8ab107606",
+      "observed_sha256": "58937b31458267b006f498edfd48c4c3f04ddd5a0a5ecb88a8f9158805bb092e",
+      "reference_sha256": "6768a5035ab50548d44ada31bf22a7a8d3e1ec02c09fb5a620b8ed05e40ad85c"
+    },
+    {
+      "world": 21,
+      "events": 141,
+      "activities": {
+        "create": 32,
+        "check": 30,
+        "retry_execute": 7,
+        "execute": 28,
+        "settle": 26,
+        "retry_settle": 6,
+        "retry_check": 6,
+        "cancel": 6
+      },
+      "fault": "wrong",
+      "clean_sha256": "7cf229be9ab13fe8ea8b47636fc5f3b3b4c29c90af27a32303e3d59113f926c9",
+      "observed_sha256": "7903ca5467a12ff1ae4c45e4a03b2afb4689829cc7e7ad86f5961ebaf635b0ae",
+      "reference_sha256": "860d2b96d95eb29835e6c4b64ee6ad7af78594d1f39419a15dbf669bbdf3acdd"
+    },
+    {
+      "world": 22,
+      "events": 145,
+      "activities": {
+        "create": 31,
+        "retry_check": 14,
+        "check": 29,
+        "execute": 25,
+        "settle": 23,
+        "retry_settle": 6,
+        "retry_execute": 9,
+        "cancel": 8
+      },
+      "fault": "fragment",
+      "clean_sha256": "d9ad497e8508b00f32bf4b1a13bd324a9f4f8a71183a76307f3aacfef25dbeff",
+      "observed_sha256": "d1844ce1c6b693d0e851dec1349c1ba29136dc90214f4534bc05a7f3f818182b",
+      "reference_sha256": "28711ee1cfab55a2a2bcfa490a035ccd32a97c47a11aafee476e1bba2e269aab"
+    },
+    {
+      "world": 23,
+      "events": 144,
+      "activities": {
+        "create": 32,
+        "check": 31,
+        "execute": 28,
+        "retry_settle": 3,
+        "settle": 25,
+        "cancel": 7,
+        "retry_check": 9,
+        "retry_execute": 9
+      },
+      "fault": "pipeline",
+      "clean_sha256": "da9c4b6097e9585c90ade12af97130872bba89664cc3fbd7db45b1077290697f",
+      "observed_sha256": "4875bdb7f7b0aac95be1226e4e68d546d1e0188aed5ed5a05fa2a7680dc20c31",
+      "reference_sha256": "ca201887761cd8508a67acb28a63f5d525642114b911d9718af4fb5539c7928c"
+    },
+    {
+      "world": 24,
+      "events": 132,
+      "activities": {
+        "create": 30,
+        "check": 26,
+        "cancel": 6,
+        "retry_check": 7,
+        "execute": 24,
+        "settle": 24,
+        "retry_settle": 6,
+        "retry_execute": 9
+      },
+      "fault": "mixed",
+      "clean_sha256": "1fb42a13cf76206ec58d12c217468d56beda8e8a2860e983de2a7aa79797f805",
+      "observed_sha256": "db2c09296508a093acaeb97ef6ff4ce43a26029195dd3ce641b703513cbce9c6",
+      "reference_sha256": "88933b2c1dbec82d92592b27bf940eb56900268b4f223b71e1f2d39f6fb9002f"
+    },
+    {
+      "world": 25,
+      "events": 130,
+      "activities": {
+        "create": 27,
+        "check": 27,
+        "retry_execute": 8,
+        "execute": 24,
+        "settle": 21,
+        "cancel": 6,
+        "retry_check": 10,
+        "retry_settle": 7
+      },
+      "fault": "independent",
+      "clean_sha256": "cd86420ed9822384755f0443b244e3cf58350c86619002f31e62dd4a75353d0e",
+      "observed_sha256": "e3b836204a560e3b14d1800e7c51301b036ead63835c934982d8f5b331b0d5a4",
+      "reference_sha256": "fd56584cc98c317a42841668e5104de3d88d2ab0382891d2b3bec9662901da7b"
+    },
+    {
+      "world": 26,
+      "events": 168,
+      "activities": {
+        "create": 38,
+        "check": 32,
+        "cancel": 14,
+        "execute": 28,
+        "settle": 24,
+        "retry_check": 11,
+        "retry_execute": 13,
+        "retry_settle": 8
+      },
+      "fault": "mild",
+      "clean_sha256": "2b5619774199c5fc682686b54d82b49f6a57da275179e479c5862eb4f9c83eb3",
+      "observed_sha256": "906835a22a37bd9eeacc4b6d1b53bcbedbc3407eaca169579c9f39ee255e8a3c",
+      "reference_sha256": "548b9d9e85330b72b8fcedc117b0bbf6c2e4bd853ac0af325cc022ccc487ab72"
+    },
+    {
+      "world": 27,
+      "events": 153,
+      "activities": {
+        "create": 34,
+        "check": 32,
+        "execute": 29,
+        "retry_settle": 10,
+        "settle": 25,
+        "cancel": 9,
+        "retry_check": 6,
+        "retry_execute": 8
+      },
+      "fault": "severe",
+      "clean_sha256": "705e8a44350f395353fe14d56ed9ee67f0da1f18bcaa2cfc53c48430b9890f4b",
+      "observed_sha256": "e16fa804d220509fea9fafbf103816f96923aa147b33795e361adf9f910b01b0",
+      "reference_sha256": "0c766af45bfac788b1b0c41ce54ca6000a5a1d490fb19dcf76f41d9117b0b754"
+    },
+    {
+      "world": 28,
+      "events": 142,
+      "activities": {
+        "create": 34,
+        "retry_check": 5,
+        "check": 31,
+        "retry_execute": 6,
+        "execute": 27,
+        "settle": 21,
+        "cancel": 13,
+        "retry_settle": 5
+      },
+      "fault": "missing",
+      "clean_sha256": "446be5fc3104ee957a21c4333801298036e00bfd9ee220e8217bdb37b33a0661",
+      "observed_sha256": "9c41c1ae86d72c67053b97cad52441129ff321e9668141be29c88fe2fde55461",
+      "reference_sha256": "5f680804aa976bd6c8e9cb921f64cdb32487871e4e639b4017f91aba1947aad0"
+    },
+    {
+      "world": 29,
+      "events": 116,
+      "activities": {
+        "create": 28,
+        "check": 26,
+        "execute": 21,
+        "settle": 20,
+        "retry_settle": 7,
+        "cancel": 8,
+        "retry_check": 2,
+        "retry_execute": 4
+      },
+      "fault": "wrong",
+      "clean_sha256": "c12afc933f542508d269e061a0e8891cfe7dff45e66a65b5b5ca1dea776493a2",
+      "observed_sha256": "ef7561cf2660f2821510983ac7b16421977a9a3740ffbb970aaca50caacce87f",
+      "reference_sha256": "71a5f511a631ec8dcdb07c7bfeca95124c1be8b5cf3444e4163cf0a16cdf6665"
+    },
+    {
+      "world": 30,
+      "events": 168,
+      "activities": {
+        "create": 37,
+        "check": 33,
+        "execute": 31,
+        "settle": 28,
+        "retry_settle": 7,
+        "retry_execute": 10,
+        "cancel": 9,
+        "retry_check": 13
+      },
+      "fault": "fragment",
+      "clean_sha256": "f992ff33fc941e63e37c9a8b8515f7ce3a849135aeae5ce03898069eebe6de4d",
+      "observed_sha256": "d3bf5e9376403748d48bd329e50ddcf93c5cc4a9439813202e7884ad5cbd6fa8",
+      "reference_sha256": "ad64f2cf1747c9233cee3a5148bb41d93cbf21befb04731570f5159451a7e109"
+    },
+    {
+      "world": 31,
+      "events": 155,
+      "activities": {
+        "create": 34,
+        "check": 31,
+        "retry_execute": 10,
+        "execute": 29,
+        "settle": 28,
+        "retry_settle": 9,
+        "cancel": 6,
+        "retry_check": 8
+      },
+      "fault": "pipeline",
+      "clean_sha256": "ae0c9a9df1a0f20ea0391b05a51ae697ddbf8d1efce91a5234006ba10c36b0a9",
+      "observed_sha256": "f3c2c83045c766ad5ed59b7dfb9a050bec47171ef05f65a20c301ab57e5c0647",
+      "reference_sha256": "f9a1e632fac8dfabbfbc56afa0071cb9a0e0371d981943079c58a2cc7bd768aa"
+    }
+  ],
+  "ambiguity_graphs": 2,
+  "protocol_sha256": "72c687b26ca9a767b4ce0ba521f633702d358239c427c3928771f085503d6914"
+}

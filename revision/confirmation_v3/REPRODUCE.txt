@@ -1,0 +1,74 @@
+FRESH-HISTORY CONFIRMATION AND NEVER-MERGE CONTROL
+Project: /mnt/zubair/Temporal_Graph_Repair
+Interpreter: /home/zubair/zubairEnv/bin/python
+
+This study freezes 36 previously fitted models, their real-data budgets and
+calibration thresholds. It adds no generated examples or fitting labels.
+The protocol was written before selecting or scoring the new histories.
+
+Freshness: the source adapter reconstructs all previous raw root selections.
+It excludes original feasibility prefixes and original confirmation histories,
+then extends the revision ranking AFTER development512, annotation1024,
+confirmation1024 and the expanded native2048 blocks. All four previous raw root
+selection hashes must reproduce. The next1024 roots are divided into eight
+128-root blocks by a fixed outcome-independent hash. Target roots and children
+are disjoint across prior/new partitions and blocks. Context resources/vendors
+can overlap. This is new-history confirmation in previously studied source
+processes, not independent institutions, natural errors, or new source schemas.
+
+Public reference histories are treated as clean for controlled fault injection.
+The verified real fitting/calibration budget remains16/64/256 per model, split
+75%/25%, with identical real training arrays in both arms. The 36 saved models
+were trained before this protocol. All three seeds and both precision targets
+are retained. The primary grid comprises576 conditions. The safety comparison
+adds192 conditions (unguarded and never_merge at budget64,target.99), for768.
+No-edit predictions are also scored for all48 block/fault configurations.
+
+Never-merge uses the exact guarded decoder with an infinite merge threshold.
+It retains addition tie rejection and atomic root replacement, so only merge
+eligibility changes. It still repairs participation and can introduce wrong
+links. Its zero false-merge count does not imply zero event damage.
+
+Hypotheses and interval rules are frozen in protocol.json. Paired comparisons
+average three fixed fitted-model/fault runs per block, then resample the eight
+blocks10000 times. These conditional percentile intervals summarize sampled
+history variation within the same source process. They do not measure uncertainty
+over training populations or independent institutions, and are not adjusted for
+all secondary comparisons. All results, including failures, must be reported.
+
+Commands, from project root:
+  python -m pytest -q revision/confirmation_v3/test_method.py
+  python -m revision.confirmation_v3.run freeze
+  python -m revision.confirmation_v3.run prepare --domain bpi2017
+  python -m revision.confirmation_v3.run prepare --domain bpi2019
+  python -m revision.confirmation_v3.run run --domain bpi2017
+  python -m revision.confirmation_v3.run run --domain bpi2019
+  python -m revision.confirmation_v3.freshness
+  python -m revision.confirmation_v3.analyze
+  python -m revision.confirmation_v3.seed_sensitivity
+  python -m revision.confirmation_v3.budget_table
+  python -m revision.confirmation_v3.present
+  python -m revision.confirmation_v3.plot_design
+  python -m revision.confirmation_v3.write_findings
+  python -m revision.confirmation_v3.build
+  python -m revision.confirmation_v3.review
+
+Only one worker per domain. Workers may execute concurrently, with four CPU
+threads each. Completed results check input/model/artifact hashes before reuse.
+Existing frozen implementations and earlier experimental results stay unchanged.
+The analyzer replays every edit, independently recomputes history F1, full-event
+recovery and damage including false-merge contamination, and verifies exact undo
+and immutable event content. The final review requires a current PDF visual audit.
+
+Artifacts:
+  protocol.json: prospective design and hashes
+  data/<domain>/cohort.json: exclusion audit and block hashes
+  data/<domain>/block*/source_roots.json: evaluator-only raw provenance
+  results/<domain>/summary.json: every declared evaluation and actual CPU/wall cost
+  analysis.json, per_trial.csv: independently checked results
+  RESULTS.txt: readable comparisons, uncertainty, hypothesis outcomes
+  paper_table_*.tex, figures/: derived manuscript tables and exportable figures
+  build.json, review.json: current-paper correspondence and review
+
+Natural-error adjudication and human verification time remain unmeasured, as
+previously authorized by the user. No submission or external publication occurs.

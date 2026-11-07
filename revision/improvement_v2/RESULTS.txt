@@ -1,0 +1,108 @@
+REPEATED-CORRUPTION FOLLOW-UP: COMPLETE RESULTS
+
+60 fitted models; 156 fixed-grid repair conditions; 2 sources; 3 seeds.
+All edits, undo records, calibration scores/thresholds and main metrics audited.
+These are reused source cohorts, not independent confirmation or natural errors.
+Values below are three-seed means. F1 is a percentage; R/H are recovered/damaged events.
+
+MATCHED REAL-HISTORY BUDGETS
+Source  Budget  q     Real8: F1 / R / H       +Generated: F1 / R / H
+bpi2017   16 0.95   79.21 /   64.3 /  10.0     79.37 /   67.3 /   4.0
+bpi2017   16 0.99   78.88 /   55.0 /   6.7     79.23 /   35.0 /   1.3
+bpi2017   64 0.95   81.62 /  236.7 /   1.7     79.55 /  108.3 /   1.7
+bpi2017   64 0.99   79.18 /   30.3 /   0.0     78.96 /   67.0 /   0.0
+bpi2017  256 0.95   80.47 /  123.0 /   2.3     79.98 /  102.3 /   2.3
+bpi2017  256 0.99   79.43 /   45.7 /   1.7     79.20 /   37.7 /   1.0
+bpi2019   16 0.95   82.74 /  387.7 /  25.0     80.88 /  256.7 /  19.3
+bpi2019   16 0.99   80.50 /  268.7 /   7.7     80.96 /  236.3 /  13.0
+bpi2019   64 0.95   83.48 /  500.7 /  15.7     82.55 /  422.7 /  10.0
+bpi2019   64 0.99   81.14 /  342.7 /   2.7     80.50 /  308.7 /   4.7
+bpi2019  256 0.95   81.33 /  350.3 /   7.7     80.66 /  347.0 /   6.7
+bpi2019  256 0.99   79.74 /  252.7 /   1.7     78.18 /  196.0 /   1.3
+
+SEED-LEVEL RECOVERY/DAMAGE DOMINANCE AT IDENTICAL CALIBRATION TARGETS
+Dominance requires at least as much recovery and no more damage, with one strict inequality.
+Identical calibration precision targets do not guarantee identical test harm.
+bpi2017 B=16 q=0.95: generated dominates 1/3; real dominates 1/3
+bpi2017 B=16 q=0.99: generated dominates 1/3; real dominates 1/3
+bpi2017 B=64 q=0.95: generated dominates 0/3; real dominates 1/3
+bpi2017 B=64 q=0.99: generated dominates 2/3; real dominates 1/3
+bpi2017 B=256 q=0.95: generated dominates 0/3; real dominates 1/3
+bpi2017 B=256 q=0.99: generated dominates 1/3; real dominates 1/3
+bpi2019 B=16 q=0.95: generated dominates 0/3; real dominates 0/3
+bpi2019 B=16 q=0.99: generated dominates 0/3; real dominates 1/3
+bpi2019 B=64 q=0.95: generated dominates 0/3; real dominates 1/3
+bpi2019 B=64 q=0.99: generated dominates 0/3; real dominates 1/3
+bpi2019 B=256 q=0.95: generated dominates 0/3; real dominates 0/3
+bpi2019 B=256 q=0.99: generated dominates 0/3; real dominates 2/3
+
+INFORMATION ABLATIONS: GENERATED ARM, BUDGET64, q=.95
+bpi2017 full           F1=79.55, R=108.3, H=1.7
+bpi2017 no_time        F1=78.38, R=7.7, H=0.0
+bpi2017 no_context     F1=79.41, R=80.7, H=2.0
+bpi2017 no_attributes  F1=79.88, R=137.0, H=4.7
+bpi2017 no_history     F1=78.27, R=0.0, H=0.0
+bpi2019 full           F1=82.55, R=422.7, H=10.0
+bpi2019 no_time        F1=81.70, R=423.7, H=7.3
+bpi2019 no_context     F1=80.90, R=326.7, H=8.3
+bpi2019 no_attributes  F1=80.23, R=358.0, H=12.0
+bpi2019 no_history     F1=76.18, R=0.0, H=0.0
+
+GUARD COMPARISON: BUDGET64, q=.99, SAME FITTED MODELS AND THRESHOLDS
+Both retain atomic root substitutions; only tie/merge guards change.
+bpi2017 real8            guarded=False R=30.3, H=39.7, true_pairs=5.3, false_pairs=3.7
+bpi2017 real8            guarded=True R=30.3, H=0.0, true_pairs=1.7, false_pairs=0.0
+bpi2017 real8_generated  guarded=False R=67.0, H=0.0, true_pairs=0.0, false_pairs=0.0
+bpi2017 real8_generated  guarded=True R=67.0, H=0.0, true_pairs=0.0, false_pairs=0.0
+bpi2019 real8            guarded=False R=342.7, H=7.7, true_pairs=12.7, false_pairs=2.3
+bpi2019 real8            guarded=True R=342.7, H=2.7, true_pairs=12.0, false_pairs=0.3
+bpi2019 real8_generated  guarded=False R=307.7, H=10.3, true_pairs=19.3, false_pairs=2.0
+bpi2019 real8_generated  guarded=True R=308.7, H=4.7, true_pairs=14.7, false_pairs=0.3
+
+CLEAN AND KNOWN-FAMILY PIPELINE STRESS: BUDGET64, q=.95
+bpi2017 clean    real8            F1=99.93, R=0.0, H=0.7
+bpi2017 clean    real8_generated  F1=100.00, R=0.0, H=0.0
+bpi2017 pipeline real8            F1=78.29, R=0.3, H=4.7
+bpi2017 pipeline real8_generated  F1=77.81, R=0.0, H=1.7
+bpi2019 clean    real8            F1=99.96, R=0.0, H=6.0
+bpi2019 clean    real8_generated  F1=99.97, R=0.0, H=5.3
+bpi2019 pipeline real8            F1=81.05, R=92.0, H=59.0
+bpi2019 pipeline real8_generated  F1=80.81, R=54.0, H=39.3
+
+EMPTY-HISTORY AMBIGUITY CHALLENGE
+guarded=False: 192/192 events left unresolved; 0 unsupported edits
+guarded=True: 192/192 events left unresolved; 0 unsupported edits
+
+MEASURED COMPUTE
+Times reflect this host and concurrent workers, not a hardware-independent benchmark.
+CPU: AMD Ryzen Threadripper PRO 5955WX 16-Cores. Four fitting threads per worker; no GPU training.
+32-world execution+fault creation: 0.148s wall / 0.148s CPU, excluding disk I/O.
+Shared full-information generated feature cache: 10.13s wall.
+bpi2017 full worker: 1312.4s wall / 2420.9s CPU; peak RSS 3.90 GiB.
+  B= 16 real8            mean fit 1.22s wall / 4.42s CPU; inference+metrics+feature construction 33.03s wall
+  B= 16 real8_generated  mean fit 3.65s wall / 14.06s CPU; inference+metrics+feature construction 32.93s wall
+  B= 64 real8            mean fit 3.51s wall / 13.44s CPU; inference+metrics+feature construction 33.04s wall
+  B= 64 real8_generated  mean fit 5.70s wall / 22.04s CPU; inference+metrics+feature construction 32.80s wall
+  B=256 real8            mean fit 7.17s wall / 27.55s CPU; inference+metrics+feature construction 32.99s wall
+  B=256 real8_generated  mean fit 9.17s wall / 35.35s CPU; inference+metrics+feature construction 32.71s wall
+bpi2019 full worker: 1170.4s wall / 2104.8s CPU; peak RSS 2.64 GiB.
+  B= 16 real8            mean fit 1.30s wall / 4.73s CPU; inference+metrics+feature construction 21.49s wall
+  B= 16 real8_generated  mean fit 3.68s wall / 14.14s CPU; inference+metrics+feature construction 21.40s wall
+  B= 64 real8            mean fit 4.63s wall / 17.67s CPU; inference+metrics+feature construction 21.42s wall
+  B= 64 real8_generated  mean fit 7.09s wall / 27.48s CPU; inference+metrics+feature construction 21.43s wall
+  B=256 real8            mean fit 8.15s wall / 31.18s CPU; inference+metrics+feature construction 21.27s wall
+  B=256 real8_generated  mean fit 11.01s wall / 42.15s CPU; inference+metrics+feature construction 21.42s wall
+
+BOUNDARIES
+Budgets count complete reference histories, including held-out calibration histories.
+The added generated examples change training row count and weight distribution; compute is not matched.
+No timestamps removes time before retrieval; no-context retains target root/child incidence.
+No-history removes all incidence from evidence, retaining current links only to define candidate operations.
+The ambiguity challenge has indistinguishable empty histories; it does not cover every ambiguity mechanism.
+Pipeline faults are among training variants, so their stress test is not an unseen-family test.
+A fixed equal mixture and one bounded generator do not establish that all synthetic data is unnecessary.
+The user authorized skipping investigator-verified natural errors and actual human-time collection.
+No measured annotation-time saving, universal safety, causal generator-component effect or architecture superiority is claimed.
+Earlier results remain preserved and use a different cohort size/context/decoder; their scores are not directly comparable.
+
+Reproduce with REPRODUCE.txt; exact per-trial values and ranges are in per_trial.csv and analysis.json.

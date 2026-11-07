@@ -1,0 +1,122 @@
+{
+  "status": "frozen_before_followup_model_outcomes",
+  "created_utc": "2026-10-20T02:31:13Z",
+  "design": "Exploratory follow-up on previously evaluated source cohorts; not independent confirmation.",
+  "domains": [
+    "bpi2017",
+    "bpi2019"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "budgets": [
+    16,
+    64,
+    256
+  ],
+  "fit_fraction": 0.75,
+  "arms": [
+    "real8",
+    "real8_generated"
+  ],
+  "fit_corruptions": [
+    "mixed",
+    "independent",
+    "mild",
+    "severe",
+    "missing",
+    "wrong",
+    "fragment",
+    "pipeline"
+  ],
+  "calibration_corruptions": [
+    "mixed",
+    "independent",
+    "pipeline"
+  ],
+  "calibration_precision_targets": [
+    0.95,
+    0.99
+  ],
+  "minimum_correct": 5,
+  "fit_event_queries_per_corruption": 256,
+  "calibration_event_queries_per_corruption": 512,
+  "generated_worlds": 32,
+  "generated_roots_per_world": 16,
+  "generated_ambiguity_graphs": 2,
+  "fit_settings": {
+    "iterations": 200,
+    "leaves": 15,
+    "learning_rate": 0.08,
+    "l2": 1.0,
+    "real_generated_weight_mass": [
+      0.5,
+      0.5
+    ],
+    "class_balance": true
+  },
+  "test_roots": 128,
+  "test_selection": "first 128 hashes of improvement_v2_test:<opaque root>, same for all seeds",
+  "primary": "mixed faults, both arms, all budgets/seeds, both precision targets",
+  "ablations": "generated arm, budget64, all seeds, both precision targets; project before retrieval",
+  "ablation_modes": [
+    "full",
+    "no_time",
+    "no_context",
+    "no_attributes",
+    "no_history"
+  ],
+  "stress": "clean and pipeline, both arms, budget64, all seeds, precision .95",
+  "safety": "with/without guards on mixed, both arms, budget64, all seeds, precision .99",
+  "decoding": "one pass, atomic exactly-one-root substitution, commuting edits",
+  "safety_guards": {
+    "merge_score_floor": 0.99,
+    "mutual_best_margin": 0.05,
+    "reject_cooccurring_merges": true,
+    "reject_tied_additions": true
+  },
+  "interpretation": "Compare entire fixed recovery/damage grid, not a test-selected deployment threshold. No guaranteed harm bound.",
+  "human_evidence": "Natural-error labels and human verification time unavailable; user authorized skipping these.",
+  "implementation": {
+    "revision/improvement_v2/method.py": "c1f7b037a029131b13d3494ac1a6aa6b106b6eb5f77e6823eca72868b8a824fe",
+    "revision/improvement_v2/run.py": "b0581b7bbd71abcbbe47c7a9f66f87de85a3f208b309b79e7f20c665350e8f8e",
+    "revision/budget_learning.py": "7e6904e99aeca7ab2f0f1e58fffbfa9bdc992dd7877f3193a56dbeeb6af73bd2",
+    "revision/annotation.py": "c67bb8ef654c897b6910339f52188230cd5a0ef6afb2f1f979d5131c256e993c",
+    "revision/evaluation.py": "af93eef14985dabc0de50f5ec60cb7e16972de4d6c6ce4761bb0c9881e5cfbae",
+    "revision/transactional_decoding.py": "30a126df1a948f00e870f81fa85602546e9c9c416004ba8cbcd5c58a70bab937",
+    "tgrepair/external_ocel.py": "bcce5671a277849ed23110c20753b6a0aa89a1fe9faaaacec57caa58f343be80",
+    "tgrepair/matching.py": "304595e5d38ef157072cc693c7714ef3c2d4dee408648c860cca6dc97899b54f",
+    "tgrepair/confirmation_sources.py": "948c530c85746640fb740992640ab3cdb956f5a84c7624cebfd6793dc2445c1b",
+    "tgrepair/corruption.py": "d04efa6b65698f47f47aa2769431ed99ea8626cad7f3bb5fb63c68fbe633361b",
+    "tgrepair/json_stream.py": "ee3624472410e1fe64f41bd0abe21ce6830641fa622a4566af05999e853f15e6",
+    "tgrepair/decoding.py": "a4ef81f60296eb7a7eb698e8d83e86916ead774b0d90e16c937432d77a70cdfb",
+    "tgrepair/entity_features.py": "6122ad15c21c44645521d0a920f0bd855cd112cf4caca49d548ebc8adba84dff",
+    "tgrepair/view_decoding.py": "061bb8f361cbe7181ea3d9885149070064b4fb874d3094ce96dc46e0174a7696",
+    "tgrepair/pipeline_faults.py": "6091ecfa95f9a5c83c6edc3c4c70d114ad949ed1d8a260bb787c71f5e0e5e690",
+    "tgrepair/attribute_scenarios.py": "9360ce4e2df9cfb540df9c53648a225b5dbed64aac43c8e94286434710fb1799",
+    "tgrepair/action_features.py": "6e4e9f422b3bdf39e647c7414eca6c88ee291fececd0b056838f652abf6cb2a7",
+    "tgrepair/provenance.py": "21a59b6bd04dc39ef0ec122713904aa6459c83029219c03027ef382342207c3b",
+    "tgrepair/edits.py": "b987ed25b49435cff4d3aa0cabecefb2b9c5aaef2c27a56d56c4e6fc39ab7c6f",
+    "tgrepair/metrics.py": "903faf015149e0095544ee40368bf20412d1cef856e84eebfb36e3e1c8f2e97b",
+    "tgrepair/factory_plugin.py": "6ac1ade56b775242db66579b75c36ff77af5f2c06ba8bd3c4364d91f48e0055d",
+    "tgrepair/application_queries.py": "84aa606f0850de1cde0ce51efdcfa6c71d5acb37b3aa951bf9c4cc62db1f026a",
+    "tgrepair/data.py": "c3da13d55a0e42708e8f1d2c9d940e50f547f4434624c1669a595d4eefa1dfd2",
+    "tgrepair/attribute_views.py": "4d5315a4f628743dffa5a1d772e3c07d590b2291b08c6fab423794e83fa3d326",
+    "tgrepair/confirmation_contract.py": "9fc773bf3e615196626f632e81c558ff8d848d05e550d14e00d66717419a4cce",
+    "tgrepair/neural_policy.py": "cf7b6231798a423b80fca4cd447858e4b948c8214f1ff5fb905228ceac46c821",
+    "tgrepair/__init__.py": "ad83ce5fca3e2bfa1cc153276de4379a3c8302b7f2a0a85ae40503c7bb3d62ca",
+    "tgrepair/identity_matching.py": "b707a4ca0efa7ade90fc5a15ec6401470a02ddc333c8c8eedacf3921e12ef4ac"
+  },
+  "inputs": {
+    "revision/data/cohorts_v1/bpi2017/annotation/reference_graph.json.gz": "7e51775a59d4a31cae7778e3ce25719434aaf44758fc99800dcb0d4a90f860d3",
+    "revision/data/cohorts_v1/bpi2017/annotation/bundles.json": "e308e3267aac700d5aa045c8d8a3f8923968b91c5a67dd46d102edaffd3a82b3",
+    "revision/data/cohorts_v1/bpi2017/confirmation/reference_graph.json.gz": "151336bd812b8f0b1e04ed59a47df572aa3fcc0ed931942b83c82146e5918e1a",
+    "revision/data/cohorts_v1/bpi2017/confirmation/bundles.json": "978dab27d5eedc920a09bd97603d75281fbf751b4684e13a9fb1886712623a9b",
+    "revision/data/cohorts_v1/bpi2019/annotation/reference_graph.json.gz": "d6e82b484e522414c1d04ec912c59704820c09c702a6c03f39dec0a084be4cdb",
+    "revision/data/cohorts_v1/bpi2019/annotation/bundles.json": "add8ab471a9279acd473fd55144ed3a6f98a8bf4da65c8a8d4b71183f6a41d2d",
+    "revision/data/cohorts_v1/bpi2019/confirmation/reference_graph.json.gz": "3dd86953e761e4e56016f6f93ed650aaab0030ae8f6b66b5df2a5536771ab913",
+    "revision/data/cohorts_v1/bpi2019/confirmation/bundles.json": "8355be78fdd506388089ec95d2c5e73be6556eb8b3d96b12cb15de438d98ff28"
+  }
+}

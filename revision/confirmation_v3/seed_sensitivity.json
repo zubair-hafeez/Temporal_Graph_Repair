@@ -1,0 +1,63 @@
+{
+  "scope": "Descriptive decomposition of H1 across the three existing fitted-model/fault seeds. No new fit or hypothesis selection.",
+  "per_trial_sha256": "be18d68613cb66130897f5d8247bc3da1a7e88e1984ba02565d7dc782e2ea7bb",
+  "script_sha256": "0eb8e02155671916b58534b1c9c987641fe59ff787cd2ed7e1687e5bacf15543",
+  "seeds": [
+    {
+      "seed": 0,
+      "real8": {
+        "recovery": 17.125,
+        "damage": 6.125,
+        "f1": 0.8109015257450942
+      },
+      "real8_generated": {
+        "recovery": 22.625,
+        "damage": 0.0,
+        "f1": 0.7983348590827248
+      },
+      "difference": {
+        "recovery": 5.5,
+        "damage": -6.125,
+        "f1": -0.012566666662369386
+      }
+    },
+    {
+      "seed": 1,
+      "real8": {
+        "recovery": 19.0,
+        "damage": 0.125,
+        "f1": 0.7936458509910842
+      },
+      "real8_generated": {
+        "recovery": 7.5,
+        "damage": 0.0,
+        "f1": 0.7898011834895837
+      },
+      "difference": {
+        "recovery": -11.5,
+        "damage": -0.125,
+        "f1": -0.003844667501500476
+      }
+    },
+    {
+      "seed": 2,
+      "real8": {
+        "recovery": 54.5,
+        "damage": 0.0,
+        "f1": 0.7910313219469758
+      },
+      "real8_generated": {
+        "recovery": 157.5,
+        "damage": 0.0,
+        "f1": 0.8003969311188645
+      },
+      "difference": {
+        "recovery": 103.0,
+        "damage": 0.0,
+        "f1": 0.009365609171888667
+      }
+    }
+  ],
+  "positive_recovery_seed_means": 2,
+  "negative_recovery_seed_means": 1
+}

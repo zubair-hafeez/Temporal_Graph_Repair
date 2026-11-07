@@ -1,0 +1,64 @@
+{
+  "pins": {
+    "domain": "bpi2017",
+    "block": 2,
+    "seed": 0,
+    "budget": 256,
+    "arm": "real8_generated",
+    "precision": 0.95,
+    "policy": "guarded",
+    "protocol_sha256": "2027f2bbdb47b5702f5e71b8d3566ef607c09be7296ab38e706b68ba808ae411",
+    "cohort_sha256": "7ef2ee76e65c7a2756dc3fca17afb0c39ab75da306fc95ff29eed925d93fd667",
+    "model": "revision/improvement_v2/models/bpi2017/seed0_budget256_full_real8_generated.joblib",
+    "model_sha256": "86dbe49e71682efe17ed3932dcd3d1ce14d32ae30fe288ff2b2517253fcc23e3",
+    "observed_sha256": "7910c6ef54a490f1adaaf3ec9cb73593625d3d18d365760133f935f1c70c2b6a",
+    "reference_sha256": "59aedb09bb21a2b1fcce45460b161e958e4f9cbbcd48c6272628ef36b903a8ba"
+  },
+  "history": {
+    "precision": 0.9288229269070585,
+    "recall": 0.7661943070807098,
+    "f1": 0.821983665707143,
+    "exact_history_fraction": 0.2182410423452769,
+    "entities": 307,
+    "per_type": {
+      "Application": {
+        "precision": 0.9010961345869805,
+        "recall": 0.7439191583888896,
+        "f1": 0.7977940325448719,
+        "exact_history_fraction": 0.0078125,
+        "entities": 128
+      },
+      "Offer": {
+        "precision": 0.9486499068901305,
+        "recall": 0.7821229050279329,
+        "f1": 0.839281280482398,
+        "exact_history_fraction": 0.3687150837988827,
+        "entities": 179
+      }
+    }
+  },
+  "identity": {
+    "predicted_pairs": 5,
+    "true_pairs": 55,
+    "correct_pairs": 5,
+    "precision": 1.0,
+    "recall": 0.09090909090909091,
+    "f1": 0.16666666666666666
+  },
+  "events": {
+    "originally_correct_events": 4022,
+    "originally_incorrect_events": 1004,
+    "direct_new_damage": 0,
+    "direct_repaired_events": 113,
+    "expanded_new_damage": 0,
+    "expanded_repaired_events": 113
+  },
+  "seconds": 1.0815668010618538,
+  "cpu_seconds": 1.0956536310000047,
+  "undo_verified": true,
+  "artifacts": {
+    "repaired.json.gz": "e9d04fd5af21b82101f3f71f29312b6a010e62b9992d2be2aeea78f7584c73d6",
+    "clusters.json": "c3dc131b75c291db3ad56d240ca23d4e7ba361f4159406aadfbb70a8e8cda094",
+    "audit.json": "be98cd421b9012e1fd40e9b3001dc2a437befe84b3d6d0f9c7422393d5a9814c"
+  }
+}

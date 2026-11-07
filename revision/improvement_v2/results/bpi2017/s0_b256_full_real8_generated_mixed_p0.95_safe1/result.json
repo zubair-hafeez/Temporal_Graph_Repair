@@ -1,0 +1,56 @@
+{
+  "history": {
+    "precision": 0.9151790042378336,
+    "recall": 0.7423843186141106,
+    "f1": 0.8016649622961082,
+    "exact_history_fraction": 0.17891373801916932,
+    "entities": 313,
+    "per_type": {
+      "Application": {
+        "precision": 0.8986408463003266,
+        "recall": 0.7450491541110665,
+        "f1": 0.7981282727575582,
+        "exact_history_fraction": 0.0,
+        "entities": 128
+      },
+      "Offer": {
+        "precision": 0.9266216216216214,
+        "recall": 0.7405405405405405,
+        "f1": 0.8041119691119695,
+        "exact_history_fraction": 0.3027027027027027,
+        "entities": 185
+      }
+    }
+  },
+  "identity": {
+    "predicted_pairs": 3,
+    "true_pairs": 51,
+    "correct_pairs": 2,
+    "precision": 0.6666666666666666,
+    "recall": 0.0392156862745098,
+    "f1": 0.07407407407407407
+  },
+  "events": {
+    "originally_correct_events": 3889,
+    "originally_incorrect_events": 1053,
+    "direct_new_damage": 2,
+    "direct_repaired_events": 135,
+    "expanded_new_damage": 4,
+    "expanded_repaired_events": 134
+  },
+  "seconds": 3.925459972815588,
+  "cpu_seconds": 12.387748267999996,
+  "feature_seconds": 28.95528406999074,
+  "feature_cpu_seconds": 28.941249231,
+  "candidate_actions": 1279114,
+  "edits": 253,
+  "precision_target": 0.95,
+  "safe": true,
+  "model_sha256": "86dbe49e71682efe17ed3932dcd3d1ce14d32ae30fe288ff2b2517253fcc23e3",
+  "undo_verified": true,
+  "artifacts": {
+    "repaired.json.gz": "e338797cedf3e43be0479d44dd51c0f78419f05dc40c0922e4510dc01d1ee263",
+    "clusters.json": "12c63af7065b32b9a6635d0db1d3356f7202eaba0fea6fbba3637f6d9029b2a8",
+    "audit.json": "01e7923944417876135d1505ed3129fda7a51b7ebae685032c946a7685175f8d"
+  }
+}

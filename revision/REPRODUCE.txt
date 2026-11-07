@@ -1,3 +1,47 @@
+CURRENT CONFIRMATION — OCTOBER 2026
+
+Latest manuscript: revision/paper/main.pdf, 14 pages including references.
+Current experiment/report directory: revision/confirmation_v3/.
+Read RESULTS.txt, REPRODUCE.txt, protocol.json, freshness.json and review.json there.
+All 768 fixed-model conditions are complete and independently audited. The study
+uses 36 unchanged fits and 1,024 untouched root histories per source, after excluding
+all earlier target partitions including the expanded 2,048-root native block.
+
+At 64 loan bundles and calibration target .99, generated training raises mean
+full-event recovery 30.2→62.5 per 128-root block and lowers new damage 2.08→0.00.
+The paired conditional 95% recovery-gain interval is [29.5, 35.3]; all eight block
+averages improve. One of three fitted-seed means loses recovery; training-population
+uncertainty is outside that interval. Mean history F1 falls 0.23 percentage points. At 256 bundles,
+augmentation has worse mean F1, recovery and damage at both targets in both sources.
+Never-merge controls show that guarded merging retains useful identities but
+adds residual harm: none of four combinations satisfies the no-added-harm benefit.
+
+All 66 tests passed; all 14 PDF pages were visually reviewed. Final current review:
+revision/confirmation_v3/review.json. No workers remain. Do not restart completed
+runs or tune on these confirmation outcomes. No external submission was made.
+Natural-error adjudication and human-time collection remain skipped by user
+permission. New histories are from known processes, not unseen institutions.
+
+--- Historical notes below; current-paper instructions above take precedence ---
+
+CURRENT FOLLOW-UP — 19 OCTOBER 2026
+
+Latest manuscript: revision/paper/main.pdf, 15 pages including references.
+New code, experiments and results: revision/improvement_v2/.
+Read revision/improvement_v2/RESULTS.txt and REPRODUCE.txt for the current work.
+60 models and 156 follow-up repair conditions are complete; all calibrations,
+edit programs, undo records and principal metrics passed independent replay.
+The strict budget64 loan comparison improves mean full-event recovery from
+30.3 to 67.0 with zero observed new damage, but loses in one of three seeds.
+Generated data does not consistently dominate the repeated-corruption baseline.
+Conservative merge checks reduce harm while sacrificing some true alias recovery.
+Natural-error adjudication and human-time collection were skipped with explicit
+user authorization. Existing source cohorts were reused; this is exploratory.
+Earlier experimental evidence is preserved. Do not rerun completed workers.
+Current manuscript review record: revision/improvement_v2/review.json.
+
+--- Historical notes from before this follow-up ---
+
 TEMPORAL GRAPH REPAIR: REVISION REPRODUCTION GUIDE
 
 Scope

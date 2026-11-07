@@ -1,0 +1,59 @@
+{
+  "mode": "single_pass_atomic_root",
+  "safe": true,
+  "thresholds": [
+    0.9969215859284289,
+    1.1,
+    1.1
+  ],
+  "rejected": {
+    "tied_addition": 59521,
+    "merge_floor": 16999,
+    "non_mutual_or_low_margin": 2
+  },
+  "edits": [
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000000222",
+        "target": "o000000157"
+      },
+      "score": 0.9982949385557867
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003664",
+        "target": "o000000395"
+      },
+      "score": 0.9980756358261663
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001690",
+        "target": "o000000220"
+      },
+      "score": 0.9973035731820359
+    }
+  ],
+  "undo": [
+    {
+      "prior_events": {
+        "e000001690": [
+          "o000000038"
+        ],
+        "e000003664": [
+          "o000000076",
+          "o000000364"
+        ],
+        "e000000222": [
+          "o000000192",
+          "o000000277"
+        ]
+      },
+      "prior_clusters": {}
+    }
+  ],
+  "seconds": 0.9932132109533995
+}

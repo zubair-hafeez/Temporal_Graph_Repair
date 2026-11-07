@@ -1,0 +1,196 @@
+{
+  "mode": "single_pass_atomic_root",
+  "safe": true,
+  "thresholds": [
+    0.9933674291023304,
+    0.9786252876384639,
+    0.9887552903748297
+  ],
+  "rejected": {
+    "tied_addition": 178876,
+    "merge_floor": 17376
+  },
+  "edits": [
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001517",
+        "target": "o000000188"
+      },
+      "score": 0.9986822658553471
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003538",
+        "target": "o000000478"
+      },
+      "score": 0.9974959494768029
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002805",
+        "target": "o000000022"
+      },
+      "score": 0.9971939943493131
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001678",
+        "target": "o000000323"
+      },
+      "score": 0.997046462834602
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002946",
+        "target": "o000000083"
+      },
+      "score": 0.9966869973825316
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000004210",
+        "target": "o000000447"
+      },
+      "score": 0.9956533774284139
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002731",
+        "target": "o000000452"
+      },
+      "score": 0.9953874285171063
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003701",
+        "target": "o000000090"
+      },
+      "score": 0.9948297173792922
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001240",
+        "target": "o000000302"
+      },
+      "score": 0.9940414110458734
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000004891",
+        "target": "o000000070"
+      },
+      "score": 0.9937555413755625
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001712",
+        "target": "o000000273"
+      },
+      "score": 0.9937126656440939
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001535",
+        "target": "o000000070"
+      },
+      "score": 0.9936706807246308
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001356",
+        "target": "o000000273"
+      },
+      "score": 0.9936542089472793
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001257",
+        "target": "o000000273"
+      },
+      "score": 0.9936542089472793
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002021",
+        "target": "o000000273"
+      },
+      "score": 0.9934128667106839
+    }
+  ],
+  "undo": [
+    {
+      "prior_events": {
+        "e000002731": [
+          "o000000197",
+          "o000000353"
+        ],
+        "e000001535": [
+          "o000000009"
+        ],
+        "e000004891": [
+          "o000000009"
+        ],
+        "e000002946": [
+          "o000000082",
+          "o000000430"
+        ],
+        "e000001517": [
+          "o000000419",
+          "o000000423"
+        ],
+        "e000001678": [
+          "o000000195",
+          "o000000272"
+        ],
+        "e000002805": [
+          "o000000175",
+          "o000000189"
+        ],
+        "e000002021": [
+          "o000000248"
+        ],
+        "e000001356": [
+          "o000000248"
+        ],
+        "e000001712": [
+          "o000000248"
+        ],
+        "e000001257": [
+          "o000000248"
+        ],
+        "e000001240": [
+          "o000000459"
+        ],
+        "e000004210": [
+          "o000000123",
+          "o000000271"
+        ],
+        "e000003701": [
+          "o000000309",
+          "o000000352"
+        ],
+        "e000003538": [
+          "o000000196",
+          "o000000473"
+        ]
+      },
+      "prior_clusters": {}
+    }
+  ],
+  "seconds": 1.0040595571044832
+}

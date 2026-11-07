@@ -1,0 +1,64 @@
+{
+  "pins": {
+    "domain": "bpi2019",
+    "block": 6,
+    "seed": 0,
+    "budget": 64,
+    "arm": "real8",
+    "precision": 0.99,
+    "policy": "unguarded",
+    "protocol_sha256": "2027f2bbdb47b5702f5e71b8d3566ef607c09be7296ab38e706b68ba808ae411",
+    "cohort_sha256": "31376ffe4a4df4ddc067b85953111554a7b2a71f82b45bc3bfd46bd3d2bc5798",
+    "model": "revision/improvement_v2/models/bpi2019/seed0_budget64_full_real8.joblib",
+    "model_sha256": "ffb6739b8766cf330de5b05eeaa0c632978ce87c909d2441d80260690cf3aa45",
+    "observed_sha256": "70f2665e7fedf923e3c098e9ae1a7d391d7bd1253fc6c7a7caa6a8b30f6f7681",
+    "reference_sha256": "42812b520ec45ad4d58ecfbdfebe8787208e8c40d05a8b204701686729ad9bff"
+  },
+  "history": {
+    "precision": 0.926882682160165,
+    "recall": 0.7535125073383794,
+    "f1": 0.805290304448979,
+    "exact_history_fraction": 0.2744807121661721,
+    "entities": 674,
+    "per_type": {
+      "PO": {
+        "precision": 0.805731330590889,
+        "recall": 0.7732741863067627,
+        "f1": 0.7572246039334913,
+        "exact_history_fraction": 0.0703125,
+        "entities": 128
+      },
+      "POItem": {
+        "precision": 0.9552844642130357,
+        "recall": 0.7488797327816888,
+        "f1": 0.816558454020374,
+        "exact_history_fraction": 0.32234432234432236,
+        "entities": 546
+      }
+    }
+  },
+  "identity": {
+    "predicted_pairs": 0,
+    "true_pairs": 156,
+    "correct_pairs": 0,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "events": {
+    "originally_correct_events": 2142,
+    "originally_incorrect_events": 1155,
+    "direct_new_damage": 0,
+    "direct_repaired_events": 434,
+    "expanded_new_damage": 0,
+    "expanded_repaired_events": 434
+  },
+  "seconds": 0.04178068786859512,
+  "cpu_seconds": 0.04175824699996156,
+  "undo_verified": true,
+  "artifacts": {
+    "repaired.json.gz": "0414ddcc4e8abcdf8f59ead920d64c81bb05c85513622bbb34eebe6755a0aa64",
+    "clusters.json": "5bdb71b71818de5013a5d2b3ebceace2853a7b84afb9de16bcf8af74d41b7d9c",
+    "audit.json": "18a0cc83376431a6fe3e4927bbb29d46569fea396e82f1ff38ab67c0bf6e7be6"
+  }
+}

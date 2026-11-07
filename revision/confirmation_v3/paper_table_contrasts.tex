@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Prespecified contrasts at 64 bundles and $q=.99$: mean differences [conditional 95\% intervals]. The first row tests augmentation with guarded decoding; other rows subtract never merge from guarded decoding. F1 differences are percentage points; recovery and harm are events per 128-root block. Intervals resample eight blocks after averaging three fixed model/fault runs; no multiplicity correction is applied.}
+\label{tab:fresh-contrasts}
+\begin{tabular}{ll rrr}
+\toprule
+Source & Contrast & $\Delta$ F1 & $\Delta R$ & $\Delta H$ \\ \midrule
+Loans & $+G-R_8$ & -0.23 [-0.30, -0.18] & 32.3 [29.5, 35.3] & -2.08 [-3.75, -0.75] \\
+Loans & $R_8$: guard--never & 0.27 [0.20, 0.35] & 0.0 [0.0, 0.0] & 1.79 [0.54, 3.38] \\
+Loans & $+G$: guard--never & 0.00 [0.00, 0.00] & 0.0 [0.0, 0.0] & 0.00 [0.00, 0.00] \\
+Purchasing & $R_8$: guard--never & 0.52 [0.42, 0.63] & -0.6 [-1.0, -0.2] & 0.71 [0.25, 1.17] \\
+Purchasing & $+G$: guard--never & 0.85 [0.76, 0.93] & -1.8 [-2.8, -1.0] & 1.25 [0.62, 1.87] \\
+\bottomrule
+\end{tabular}
+\end{table}

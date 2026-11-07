@@ -1,0 +1,294 @@
+{
+  "mode": "single_pass_atomic_root",
+  "safe": true,
+  "thresholds": [
+    0.9988192014606654,
+    0.9876234744840459,
+    1.1
+  ],
+  "rejected": {
+    "tied_addition": 78813,
+    "merge_floor": 13834,
+    "non_mutual_or_low_margin": 1
+  },
+  "edits": [
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003338",
+        "target": "o000000211"
+      },
+      "score": 0.999357228636202
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000000625",
+        "target": "o000000300"
+      },
+      "score": 0.9992574079364921
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001089",
+        "target": "o000000062"
+      },
+      "score": 0.999052194821631
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000000860",
+        "target": "o000000211"
+      },
+      "score": 0.9989847201997145
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000002550",
+        "target": "o000000292"
+      },
+      "score": 0.9987064740340937
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002550",
+        "target": "o000000277"
+      },
+      "score": 0.9990271874796733
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000004295",
+        "target": "o000000407"
+      },
+      "score": 0.9983255250767017
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000004295",
+        "target": "o000000224"
+      },
+      "score": 0.9989847653481098
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000000645",
+        "target": "o000000127"
+      },
+      "score": 0.9960078265438245
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000000645",
+        "target": "o000000132"
+      },
+      "score": 0.9991380817289873
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000004293",
+        "target": "o000000316"
+      },
+      "score": 0.9951723622690363
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000001762",
+        "target": "o000000428"
+      },
+      "score": 0.9947430334288504
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000002742",
+        "target": "o000000229"
+      },
+      "score": 0.9941836826994567
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000001729",
+        "target": "o000000164"
+      },
+      "score": 0.9936102317827599
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000000092",
+        "target": "o000000145"
+      },
+      "score": 0.9930273141882867
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000004075",
+        "target": "o000000229"
+      },
+      "score": 0.9917990485466289
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000000148",
+        "target": "o000000096"
+      },
+      "score": 0.9911691888009696
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000002450",
+        "target": "o000000396"
+      },
+      "score": 0.9910745593775739
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002450",
+        "target": "o000000412"
+      },
+      "score": 0.998968423948608
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000000525",
+        "target": "o000000100"
+      },
+      "score": 0.9903421795934498
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000003842",
+        "target": "o000000351"
+      },
+      "score": 0.9897522989806318
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000002190",
+        "target": "o000000157"
+      },
+      "score": 0.9897522989806318
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000002349",
+        "target": "o000000369"
+      },
+      "score": 0.9888213944040485
+    }
+  ],
+  "undo": [
+    {
+      "prior_events": {
+        "e000001729": [
+          "o000000164",
+          "o000000189"
+        ],
+        "e000000645": [
+          "o000000064",
+          "o000000127"
+        ],
+        "e000000092": [
+          "o000000145",
+          "o000000444"
+        ],
+        "e000002450": [
+          "o000000061",
+          "o000000092",
+          "o000000396"
+        ],
+        "e000001762": [
+          "o000000292",
+          "o000000428",
+          "o000000472"
+        ],
+        "e000004295": [
+          "o000000276",
+          "o000000407",
+          "o000000469"
+        ],
+        "e000000148": [
+          "o000000096",
+          "o000000137",
+          "o000000388"
+        ],
+        "e000000625": [
+          "o000000314"
+        ],
+        "e000004075": [
+          "o000000008",
+          "o000000051",
+          "o000000229"
+        ],
+        "e000002349": [
+          "o000000174",
+          "o000000255",
+          "o000000369"
+        ],
+        "e000003842": [
+          "o000000174",
+          "o000000351",
+          "o000000439"
+        ],
+        "e000000525": [
+          "o000000004",
+          "o000000100",
+          "o000000288"
+        ],
+        "e000001089": [
+          "o000000474"
+        ],
+        "e000002742": [
+          "o000000167",
+          "o000000226",
+          "o000000229"
+        ],
+        "e000003338": [
+          "o000000383",
+          "o000000388"
+        ],
+        "e000000860": [
+          "o000000383",
+          "o000000388"
+        ],
+        "e000002190": [
+          "o000000125",
+          "o000000151",
+          "o000000157"
+        ],
+        "e000002550": [
+          "o000000292",
+          "o000000450"
+        ],
+        "e000004293": [
+          "o000000316",
+          "o000000401",
+          "o000000435"
+        ]
+      },
+      "prior_clusters": {}
+    }
+  ],
+  "seconds": 0.9978347930591553,
+  "policy": "guarded"
+}

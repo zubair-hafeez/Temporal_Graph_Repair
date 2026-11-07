@@ -1,0 +1,10 @@
+\subsection{Exploratory repeated-corruption study}
+\label{sec:followup}
+The precursor study fitted 60 models and evaluated 156 repair conditions, including the full-input models reused for confirmation and the input ablations below. Choices were frozen before the new model outcomes. Evaluation uses 128 hash-selected roots from each previously evaluated confirmation cohort: 4,942 loan and 2,792 purchasing events. These reused source histories make this an exploratory follow-up, not independent confirmation. A single simultaneous proposal pass commits root replacements atomically. Both fixed calibration targets, .95 and .99, are reported. A guard rejects tied additions and permits merges only at score at least .99, without co-occurring handles, and with mutual-best scores separated from alternatives by .05. The same guard applies to both training arms. Its observed harm must still be measured; score thresholds are not guarantees. Different cohort size, context and decoding make these scores non-comparable to the earlier four-pass results.
+
+\input{../improvement_v2/paper_table_primary.tex}
+
+\input{followup_interpretation.tex}
+
+\input{../improvement_v2/paper_table_ablation.tex}
+

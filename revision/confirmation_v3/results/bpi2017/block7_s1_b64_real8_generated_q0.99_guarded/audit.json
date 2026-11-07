@@ -1,0 +1,117 @@
+{
+  "mode": "single_pass_atomic_root",
+  "safe": true,
+  "thresholds": [
+    0.9983048052375806,
+    0.9945265962986776,
+    1.1
+  ],
+  "rejected": {
+    "tied_addition": 37243,
+    "merge_floor": 13647,
+    "non_mutual_or_low_margin": 3
+  },
+  "edits": [
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002904",
+        "target": "o000000350"
+      },
+      "score": 0.9990342509959422
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000000465",
+        "target": "o000000350"
+      },
+      "score": 0.998842655302875
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003906",
+        "target": "o000000018"
+      },
+      "score": 0.9986200626169022
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002290",
+        "target": "o000000026"
+      },
+      "score": 0.9986059965896307
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001168",
+        "target": "o000000426"
+      },
+      "score": 0.9983746856299732
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000000381",
+        "target": "o000000462"
+      },
+      "score": 0.9983606898217693
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000000161",
+        "target": "o000000462"
+      },
+      "score": 0.9983206337742145
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000002344",
+        "target": "o000000078"
+      },
+      "score": 0.9961350232052544
+    }
+  ],
+  "undo": [
+    {
+      "prior_events": {
+        "e000002290": [
+          "o000000036",
+          "o000000220"
+        ],
+        "e000002904": [
+          "o000000028"
+        ],
+        "e000000465": [
+          "o000000028"
+        ],
+        "e000002344": [
+          "o000000078",
+          "o000000418",
+          "o000000429"
+        ],
+        "e000003906": [
+          "o000000248",
+          "o000000269"
+        ],
+        "e000000381": [
+          "o000000019"
+        ],
+        "e000000161": [
+          "o000000019"
+        ],
+        "e000001168": [
+          "o000000056"
+        ]
+      },
+      "prior_clusters": {}
+    }
+  ],
+  "seconds": 1.0219431680161506,
+  "policy": "guarded"
+}

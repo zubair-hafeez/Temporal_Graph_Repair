@@ -1,11 +1,28 @@
-# Generative temporal graph repair
+> **Complete research snapshot:** Code and manuscript files are browsable here. Datasets, checkpoints, caches, ignored files and original local Git metadata are included in the split archives attached to [release research-snapshot-20261107T032034Z](https://github.com/zubair-hafeez/Temporal_Graph_Repair/releases/tag/research-snapshot-20261107T032034Z). See [restore instructions](github_snapshot/RESTORE.md) and [verification report](github_snapshot/VERIFICATION_REPORT.md). A normal Git clone does not download those archives.
 
-**Latest paper only:** [LATEST_PAPER.pdf](LATEST_PAPER.pdf) — 13 pages. Earlier manuscript versions have been deleted at your request. [START_HERE.txt](START_HERE.txt) is the authoritative folder guide. Historical notes and package recipes below may reference retired papers or archives.
+PAPER RELOCATED
+Compiling Temporal Walks for Exact Counterfactual Audits now lives in
+/mnt/zubair/Temporal_Walk_Counterfactual_Audits/
+Its PDF is PAPER.pdf there. The local rEPAIR. LATEST_PAPER.pdf
+opens this directory's earlier workflow-repair paper.
 
+# Temporal graph learning and repair
 
-**Single consolidated project folder.** Open [LATEST_PAPER.pdf](LATEST_PAPER.pdf) for the current 13-page paper. Read [START_HERE.txt](START_HERE.txt) for the directory guide. The two former review-copy folders and the redundant original tar archive were merged here and removed after content verification. Earlier manuscript versions have been removed. Unique historical files and the merge inventory are under `archives/`.
+**Latest paper:** [Compiling Temporal Walks for Exact Counterfactual Audits](/mnt/zubair/Temporal_Walk_Counterfactual_Audits/paper/main.pdf) — **12 pages including references and appendices**. Its shortcut is `/mnt/zubair/Temporal_Walk_Counterfactual_Audits/PAPER.pdf`.
 
-> Completed revision: [current manuscript](revision/paper/main.pdf), 13 total pages including references, is ready for author review. All 156 combined-repair evaluations and six native comparisons are complete. Start with [the revision review guide](revision/REVIEW_NOTES.txt) and [reproduction instructions](revision/REPRODUCE.txt). Original experimental evidence remains preserved; the earlier manuscript was removed.
+The new paper develops exact repeated deletion evaluation for bounded-degree temporal walk predictors. It includes proofs, a compact endpoint-transfer representation, optimized exact controls, and a protocol frozen before later confirmation outcomes were opened.
+
+Across three datasets, confirmation covers **6,000 predictions and 113,644 deletion hypotheses in 72 audits**. Median total-cost speedups for dispersed historical candidates are **20.30×, 4.32×, and 38.81×** on MOOC, Wikipedia, and LastFM. Recent-source candidates include losses. The independent-edit approximation matches every observed confirmation decision; the paper reports that limitation explicitly.
+
+**46 tests pass.** A separate neural-decoder development replication adds nine fits and 40,037 hypotheses. Saved prediction ranks, candidate cohorts, witnesses and timing arithmetic were independently checked; the full manuscript was visually reviewed. These results support a specialized computational contribution, not general predictive SOTA or a guarantee of conference acceptance.
+
+Start with the [research overview](/mnt/zubair/Temporal_Walk_Counterfactual_Audits/docs/RESEARCH_HISTORY.txt), [reproduction guide](/mnt/zubair/Temporal_Walk_Counterfactual_Audits/docs/REPRODUCE.txt), [claim boundaries](/mnt/zubair/Temporal_Walk_Counterfactual_Audits/docs/CLAIMS.txt), and [final review](/mnt/zubair/Temporal_Walk_Counterfactual_Audits/results/final_review.json). Editable manuscript: [main.tex](/mnt/zubair/Temporal_Walk_Counterfactual_Audits/paper/main.tex).
+
+The [earlier workflow-repair study](revision/paper/main.pdf) is a distinct completed study. Its equal-budget generation comparisons and never-merge baseline remain preserved in [confirmation_v3](revision/confirmation_v3/RESULTS.txt). Generation helped conditionally at a small loan-data budget, but did not establish general benefit and worsened the tested larger-budget settings. Natural-error adjudication and human-time collection remain unmeasured, as authorized.
+
+## Historical workflow-repair documentation
+
+The material below describes the earlier study; current-paper instructions above take precedence.
 
 Research manuscript and reproduction package for author review: learn transferable restoration of event participation and fragmented identities from generated operational histories. The application is traceability in purchasing, loan processing, and logistics. Start with [the latest paper](revision/paper/main.pdf) and [the plain-English review guide](REVIEW_NOTES.txt).
 
@@ -29,9 +46,9 @@ python scripts/collect_confirmation_evidence.py \
 
 The seven evaluation suites are `primary`, `clean`, `pipeline`, `source`, `adaptation`, `structural`, and `controls`. `scripts/run_confirmation_suite.py --plan-only` lists exact jobs without running them. Existing runs require `--resume`; process locks prevent duplicate suite execution. Frozen files must remain unchanged during confirmation. The [operational continuation declaration](docs/CONFIRMATION_OPERATIONAL_CONTINUATION_V1.json) records recovery after interrupted tool processes, preserving partial reports and the original scientific choices.
 
-## Reproducing the current consolidated project
+## Earlier consolidated-project workflows
 
-Use [revision/REPRODUCE.txt](revision/REPRODUCE.txt) for the current experiments. Check the saved final evidence with `python revision/audit_final_review.py`; check preservation of the retired review copies with `python scripts/verify_consolidation.py`. Both commands use the documented Python 3.10 environment.
+Use [the current reproduction guide](revision/confirmation_v3/REPRODUCE.txt) for the new confirmation and manuscript. Older review manifests and consolidation records concern their historical artifact states; they are retained for provenance. The documented environment is Python 3.10.
 
 ### Historical original-package instructions
 

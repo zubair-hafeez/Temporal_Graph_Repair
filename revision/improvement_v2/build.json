@@ -1,0 +1,36 @@
+{
+  "status": "built_for_review",
+  "pages": 15,
+  "page_limit": 15,
+  "inputs": {
+    "revision/paper/main.tex": "b6200d752ff2f7b31c3606fbfbee041a3f6fb1aa0e67769d6455ba49f429ed9f",
+    "revision/paper/robustness_results.tex": "5a3f1152b46a74b9c51fab1003ea20ade474ab258efe172efbd6e3f191a676c5",
+    "revision/paper/application_example.tex": "67d562942486409afa89aaa0de2ba37d87803c0ab4ef81e31a6423168c9dd08c",
+    "revision/paper/references.tex": "b66d54a67d3f042061eacd5b91cfdd9917c2e8daaeda828ccae5cd737e2c70a9",
+    "revision/paper/original_results.tex": "7f1b388958496504e29727faa0cc3248149b207d4f189f4fed4af904f53b0bf8",
+    "revision/paper/reliability_results.tex": "2552d3a3004fa84696cdf4f820745a333f1eb27b0295854d6ca1b9c302af5462",
+    "revision/paper/budget_results.tex": "99976219e87a247f42368fe893edbd540e4570ac95d38376959d04cecdadb518",
+    "revision/paper/followup.tex": "f9c519c42c72aac7c37ef38e471ffc2c8a080f45da1b94376dd8a6a6ed4305e8",
+    "revision/paper/results.tex": "132ccc3504ad71ab508a40f677b00da6ab82b2d5741042e073e6e3ba59980b1c",
+    "revision/paper/annotation_costs.tex": "64b53fa7f45614bbeb42c3a09a7ac8acd7eead6cad3b4a0da126149fa2450341",
+    "revision/paper/followup_interpretation.tex": "5a9819494dd16a68229f50c6b39c0423b2edd79b7e47963646f5b5601416d741",
+    "revision/paper/native_results.tex": "e74f375c87f9e7bcbab1566a3ebfe3d547d3675d53bcf3272687cd12ec7fefc0",
+    "revision/improvement_v2/paper_table_ablation.tex": "e658688e49a4c9e239986e499f83c3ec5a31cf30fa4b3501a6f8491b834b01d5",
+    "revision/improvement_v2/paper_table_primary.tex": "74bb9c54a957ce2f6fbd80129cba16b8c71b12b76d38e8886e8f63d3be4f2654",
+    "revision/paper/figures/method_overview.pdf": "c4fd91aba4e44718181b3c439a56dba5e4dd40cc2e39121c4af1805b0e35c6ef",
+    "revision/paper/figures/application_cases.pdf": "f43ce28eb9eff14dd99d4db7ea023dcb3d80d256072769ff8d47001c140036ef",
+    "revision/paper/figures/budget_curves.pdf": "c050aa4bf3213ee877a1f7564d3a0516e3e87091aa0f62d2206fae9eb0a88e18",
+    "revision/improvement_v2/figures/recovery_damage.pdf": "f07132498987579a06a727bfba162e3839352f18dbbf6ac74a975de654a717a6"
+  },
+  "pdf_sha256": "dbfb3fd457c3e628589c765d077ae1ffad9cdbde4ab9c2ba23055b1787ec966a",
+  "log_sha256": "459551d31dcd3c8dc1a11eaf8f6ff47d7de50e4d0f0232261c28e3729b6ed735",
+  "command": [
+    "/mnt/zubair/Operational_Temporal_Graphs/paper/tools/tectonic",
+    "--only-cached",
+    "--keep-logs",
+    "main.tex"
+  ],
+  "overfull": [],
+  "script_sha256": "e25cfb5792d591200e8922476d5dc2257c9166fb94b909fb7c389da523d704a0",
+  "analysis_sha256": "6c3c7de11e35b8238b96ab8996ad892bcaaf102aa0cd7d923d53173edff7f167"
+}

@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Untouched-history confirmation: means over eight disjoint 128-root blocks and three fixed fitted-model/fault seeds. $R_8$ repeatedly corrupts the same verified histories; $+G$ adds generated training. Budgets include calibration. $R$ counts fully recovered events and $H$ newly damaged events per block; all false-merge effects are included. History F1 is percent.}
+\label{tab:fresh-primary}
+\begin{tabular}{lrr rr rr rr}
+\toprule
+Source & Budget & $q$ & F1 $R_8$ & F1 $+G$ & $R$ $R_8$ & $R$ $+G$ & $H$ $R_8$ & $H$ $+G$ \\ \midrule
+Loans & 16 & 0.95 & 80.0 & 80.0 & 65.8 & 58.5 & 6.38 & 2.21 \\
+ & 16 & 0.99 & 79.8 & 79.9 & 55.6 & 32.4 & 3.71 & 0.42 \\
+ & 64 & 0.95 & 82.0 & 80.2 & 226.6 & 98.2 & 2.96 & 1.25 \\
+ & 64 & 0.99 & 79.9 & 79.6 & 30.2 & 62.5 & 2.08 & 0.00 \\
+ & 256 & 0.95 & 81.1 & 80.7 & 110.4 & 94.1 & 1.38 & 1.71 \\
+ & 256 & 0.99 & 80.1 & 80.0 & 42.2 & 34.2 & 0.75 & 3.58 \\
+\midrule
+Purchasing & 16 & 0.95 & 82.8 & 80.8 & 390.0 & 273.4 & 16.54 & 15.00 \\
+ & 16 & 0.99 & 80.5 & 80.7 & 271.0 & 255.8 & 7.88 & 12.21 \\
+ & 64 & 0.95 & 83.5 & 82.3 & 565.2 & 455.4 & 15.79 & 26.62 \\
+ & 64 & 0.99 & 81.0 & 80.3 & 400.3 & 329.2 & 5.42 & 16.62 \\
+ & 256 & 0.95 & 81.3 & 80.4 & 414.7 & 369.3 & 6.42 & 6.92 \\
+ & 256 & 0.99 & 79.6 & 77.9 & 309.3 & 207.5 & 1.25 & 1.33 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,20 @@
+{
+  "events": 16,
+  "unresolved": 16,
+  "unsupported_edits": 0,
+  "audit": {
+    "mode": "single_pass_atomic_root",
+    "safe": true,
+    "thresholds": [
+      0.9985066558360589,
+      0.8256946497125142,
+      0.9960161265503882
+    ],
+    "rejected": {
+      "tied_addition": 512
+    },
+    "edits": [],
+    "undo": [],
+    "seconds": 0.0004056289326399565
+  }
+}

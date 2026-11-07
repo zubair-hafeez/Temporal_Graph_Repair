@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "domains": [
+    {
+      "domain": "bpi2017",
+      "raw_roots": 1024,
+      "unique_events": 40273,
+      "cohort_sha256": "7ef2ee76e65c7a2756dc3fca17afb0c39ab75da306fc95ff29eed925d93fd667",
+      "checks": [
+        "raw block union equals frozen selected cohort",
+        "block ordering matches declared hash",
+        "all prior partition hashes unchanged",
+        "original excluded roots unchanged",
+        "target bundles do not overlap within blocks",
+        "exactly one native root per retained event"
+      ]
+    },
+    {
+      "domain": "bpi2019",
+      "raw_roots": 1024,
+      "unique_events": 25040,
+      "cohort_sha256": "31376ffe4a4df4ddc067b85953111554a7b2a71f82b45bc3bfd46bd3d2bc5798",
+      "checks": [
+        "raw block union equals frozen selected cohort",
+        "block ordering matches declared hash",
+        "all prior partition hashes unchanged",
+        "original excluded roots unchanged",
+        "target bundles do not overlap within blocks",
+        "exactly one native root per retained event"
+      ]
+    }
+  ],
+  "script_sha256": "91f248ac4431f64600341064aebf5669ad6bccdd2fb9059b77756862c04a6dae",
+  "scope": "Disjoint target histories in this project; known source schemas and potentially shared context."
+}

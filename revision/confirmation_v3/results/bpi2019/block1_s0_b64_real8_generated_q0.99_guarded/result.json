@@ -1,0 +1,64 @@
+{
+  "pins": {
+    "domain": "bpi2019",
+    "block": 1,
+    "seed": 0,
+    "budget": 64,
+    "arm": "real8_generated",
+    "precision": 0.99,
+    "policy": "guarded",
+    "protocol_sha256": "2027f2bbdb47b5702f5e71b8d3566ef607c09be7296ab38e706b68ba808ae411",
+    "cohort_sha256": "31376ffe4a4df4ddc067b85953111554a7b2a71f82b45bc3bfd46bd3d2bc5798",
+    "model": "revision/improvement_v2/models/bpi2019/seed0_budget64_full_real8_generated.joblib",
+    "model_sha256": "05ee390adfb7782dfbc3c0a025f17ced72508931f5975fccdea3b8bf610cab75",
+    "observed_sha256": "3aaff95ef7413801fb8e4ad64c1a5295fcbdb26ef9c1420509db6a8224db40e9",
+    "reference_sha256": "3241300e2bb4ec18d3b0fe0cc02bdb5944a2131f6aa3b59bc08358e1676f24d9"
+  },
+  "history": {
+    "precision": 0.9239845063217891,
+    "recall": 0.8005918665840874,
+    "f1": 0.834771200431275,
+    "exact_history_fraction": 0.2824074074074074,
+    "entities": 540,
+    "per_type": {
+      "PO": {
+        "precision": 0.8161771955688581,
+        "recall": 0.8422315917622976,
+        "f1": 0.804611506002305,
+        "exact_history_fraction": 0.0859375,
+        "entities": 128
+      },
+      "POItem": {
+        "precision": 0.9574780397595934,
+        "recall": 0.7876552529364884,
+        "f1": 0.8441412025839643,
+        "exact_history_fraction": 0.3434466019417476,
+        "entities": 412
+      }
+    }
+  },
+  "identity": {
+    "predicted_pairs": 30,
+    "true_pairs": 115,
+    "correct_pairs": 30,
+    "precision": 1.0,
+    "recall": 0.2608695652173913,
+    "f1": 0.41379310344827586
+  },
+  "events": {
+    "originally_correct_events": 1766,
+    "originally_incorrect_events": 853,
+    "direct_new_damage": 70,
+    "direct_repaired_events": 334,
+    "expanded_new_damage": 70,
+    "expanded_repaired_events": 334
+  },
+  "seconds": 0.627479248913005,
+  "cpu_seconds": 0.627188751999995,
+  "undo_verified": true,
+  "artifacts": {
+    "repaired.json.gz": "91b18e9bbb13b49f7e61f81c7740dec14f0018cdefc806291cd1964287566e7a",
+    "clusters.json": "20945fd6b7a8ff73a9b2ce0671d88d702f6c7503a5585487cbfcfb6b8ead4e17",
+    "audit.json": "222d20a90c6510ba879c50b924a8b1f0892026c5e61554f38d5981dbc88ca4a4"
+  }
+}

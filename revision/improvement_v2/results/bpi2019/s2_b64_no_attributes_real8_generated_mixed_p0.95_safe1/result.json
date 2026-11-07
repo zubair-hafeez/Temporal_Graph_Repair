@@ -1,0 +1,56 @@
+{
+  "history": {
+    "precision": 0.9155531036311455,
+    "recall": 0.7624414819821058,
+    "f1": 0.8091412702443143,
+    "exact_history_fraction": 0.24385964912280703,
+    "entities": 570,
+    "per_type": {
+      "POItem": {
+        "precision": 0.9401817137111256,
+        "recall": 0.7505388884453119,
+        "f1": 0.8133500470340309,
+        "exact_history_fraction": 0.29411764705882354,
+        "entities": 442
+      },
+      "PO": {
+        "precision": 0.8305074344487136,
+        "recall": 0.803542625288846,
+        "f1": 0.7946078378923203,
+        "exact_history_fraction": 0.0703125,
+        "entities": 128
+      }
+    }
+  },
+  "identity": {
+    "predicted_pairs": 0,
+    "true_pairs": 104,
+    "correct_pairs": 0,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "events": {
+    "originally_correct_events": 1810,
+    "originally_incorrect_events": 982,
+    "direct_new_damage": 3,
+    "direct_repaired_events": 357,
+    "expanded_new_damage": 3,
+    "expanded_repaired_events": 357
+  },
+  "seconds": 2.539709233911708,
+  "cpu_seconds": 8.084043245999965,
+  "feature_seconds": 16.69498552195728,
+  "feature_cpu_seconds": 16.686613451000085,
+  "candidate_actions": 742702,
+  "edits": 728,
+  "precision_target": 0.95,
+  "safe": true,
+  "model_sha256": "252c625d65934d4f2b37e7f0594cbf14d7a7f5e627ae288ad0f6916b90d84153",
+  "undo_verified": true,
+  "artifacts": {
+    "repaired.json.gz": "44ff2ca639b542dec9eb266bc7fb77136aa2327e4c7c486b24af79a72b70b3d4",
+    "clusters.json": "797480de9e510b5911921f181e40fa12de0e99fb91e3d7bb57d8b656b3878073",
+    "audit.json": "74a4bf6df3753df321db1bf1473461594e4c02d01e26401daffa037749689405"
+  }
+}

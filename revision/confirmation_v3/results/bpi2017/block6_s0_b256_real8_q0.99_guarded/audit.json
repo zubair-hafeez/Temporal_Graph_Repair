@@ -1,0 +1,620 @@
+{
+  "mode": "single_pass_atomic_root",
+  "safe": true,
+  "thresholds": [
+    0.9996298414230903,
+    0.9991026426887905,
+    0.9979310630680476
+  ],
+  "rejected": {
+    "tied_addition": 25836,
+    "merge_floor": 13340,
+    "non_mutual_or_low_margin": 2
+  },
+  "edits": [
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000001301",
+        "target": "o000000439"
+      },
+      "score": 0.9998026539088036
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003687",
+        "target": "o000000116"
+      },
+      "score": 0.9998023724239593
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003576",
+        "target": "o000000219"
+      },
+      "score": 0.9997679172331009
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000000825",
+        "target": "o000000218"
+      },
+      "score": 0.9997635655786192
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002536",
+        "target": "o000000218"
+      },
+      "score": 0.9997635655786192
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003590",
+        "target": "o000000342"
+      },
+      "score": 0.9997543039452663
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001132",
+        "target": "o000000072"
+      },
+      "score": 0.9997523270761101
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000004164",
+        "target": "o000000068"
+      },
+      "score": 0.9997499527288516
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001704",
+        "target": "o000000049"
+      },
+      "score": 0.9997437548182195
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002773",
+        "target": "o000000053"
+      },
+      "score": 0.999741068628683
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003762",
+        "target": "o000000072"
+      },
+      "score": 0.9997345459078724
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001163",
+        "target": "o000000119"
+      },
+      "score": 0.9997297986648117
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003362",
+        "target": "o000000119"
+      },
+      "score": 0.999721783245451
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003094",
+        "target": "o000000254"
+      },
+      "score": 0.9997199975327798
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000004316",
+        "target": "o000000202"
+      },
+      "score": 0.9997149919415175
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002528",
+        "target": "o000000131"
+      },
+      "score": 0.9997062072797833
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000004323",
+        "target": "o000000211"
+      },
+      "score": 0.9997011613464178
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000004040",
+        "target": "o000000422"
+      },
+      "score": 0.9997009815570121
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000004327",
+        "target": "o000000120"
+      },
+      "score": 0.9997002408337963
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002103",
+        "target": "o000000116"
+      },
+      "score": 0.9996932550153753
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001579",
+        "target": "o000000448"
+      },
+      "score": 0.9996890527597351
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000004481",
+        "target": "o000000420"
+      },
+      "score": 0.9996822746570627
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000001139",
+        "target": "o000000451"
+      },
+      "score": 0.999827773568823
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001139",
+        "target": "o000000397"
+      },
+      "score": 0.9996812264152922
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001030",
+        "target": "o000000338"
+      },
+      "score": 0.9996778879927029
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000001162",
+        "target": "o000000186"
+      },
+      "score": 0.9996768258349019
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000001357",
+        "target": "o000000250"
+      },
+      "score": 0.9996713325880533
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002083",
+        "target": "o000000145"
+      },
+      "score": 0.9996697758226275
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000003154",
+        "target": "o000000355"
+      },
+      "score": 0.999851132553601
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000003154",
+        "target": "o000000277"
+      },
+      "score": 0.9996684760507445
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000000894",
+        "target": "o000000412"
+      },
+      "score": 0.9996673191514703
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000000456",
+        "target": "o000000188"
+      },
+      "score": 0.9996657042268374
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000000135",
+        "target": "o000000191"
+      },
+      "score": 0.9996633581989008
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000000013",
+        "target": "o000000006"
+      },
+      "score": 0.9996596861686335
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002968",
+        "target": "o000000353"
+      },
+      "score": 0.9996566403715866
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000002156",
+        "target": "o000000425"
+      },
+      "score": 0.9996452387313601
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000000799",
+        "target": "o000000116"
+      },
+      "score": 0.9996535153819365
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000000799",
+        "target": "o000000072"
+      },
+      "score": 0.9996358642301694
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000002345",
+        "target": "o000000457"
+      },
+      "score": 0.9995621338992673
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000003531",
+        "target": "o000000281"
+      },
+      "score": 0.9994336229879384
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000000245",
+        "target": "o000000194"
+      },
+      "score": 0.9993439261233129
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000004491",
+        "target": "o000000027"
+      },
+      "score": 0.9993143641919656
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000004491",
+        "target": "o000000033"
+      },
+      "score": 0.9996899195425824
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000001290",
+        "target": "o000000085"
+      },
+      "score": 0.9992936086296917
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000003561",
+        "target": "o000000460"
+      },
+      "score": 0.9992936086296917
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000002552",
+        "target": "o000000258"
+      },
+      "score": 0.9992763063410027
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000003201",
+        "target": "o000000128"
+      },
+      "score": 0.9992763063410027
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000002007",
+        "target": "o000000451"
+      },
+      "score": 0.9991826150323635
+    },
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000002007",
+        "target": "o000000342"
+      },
+      "score": 0.9996516706620467
+    },
+    {
+      "edit": {
+        "operation": "REMOVE_PARTICIPANT",
+        "source": "e000003547",
+        "target": "o000000252"
+      },
+      "score": 0.9991570638373284
+    },
+    {
+      "edit": {
+        "operation": "MERGE_ALIASES",
+        "source": "o000000386",
+        "target": "o000000433"
+      },
+      "score": 0.9984478132188798
+    }
+  ],
+  "undo": [
+    {
+      "prior_events": {
+        "e000004164": [
+          "o000000185"
+        ],
+        "e000002968": [
+          "o000000132",
+          "o000000463"
+        ],
+        "e000002345": [
+          "o000000068",
+          "o000000286",
+          "o000000457"
+        ],
+        "e000003531": [
+          "o000000281",
+          "o000000400",
+          "o000000434"
+        ],
+        "e000001844": [
+          "o000000057",
+          "o000000274",
+          "o000000433"
+        ],
+        "e000003047": [
+          "o000000074",
+          "o000000274",
+          "o000000433"
+        ],
+        "e000003154": [
+          "o000000087",
+          "o000000355"
+        ],
+        "e000002528": [
+          "o000000180"
+        ],
+        "e000001357": [
+          "o000000316"
+        ],
+        "e000001162": [
+          "o000000025",
+          "o000000065",
+          "o000000186"
+        ],
+        "e000004491": [
+          "o000000005",
+          "o000000027",
+          "o000000331"
+        ],
+        "e000001579": [
+          "o000000180"
+        ],
+        "e000004323": [
+          "o000000164"
+        ],
+        "e000001139": [
+          "o000000164",
+          "o000000451"
+        ],
+        "e000001301": [
+          "o000000439",
+          "o000000458"
+        ],
+        "e000002103": [
+          "o000000203"
+        ],
+        "e000001704": [
+          "o000000176",
+          "o000000203"
+        ],
+        "e000003687": [
+          "o000000203"
+        ],
+        "e000004327": [
+          "o000000339"
+        ],
+        "e000003590": [
+          "o000000164"
+        ],
+        "e000002007": [
+          "o000000164",
+          "o000000206",
+          "o000000451"
+        ],
+        "e000003576": [
+          "o000000019"
+        ],
+        "e000000013": [
+          "o000000174"
+        ],
+        "e000000456": [
+          "o000000010",
+          "o000000299"
+        ],
+        "e000003362": [
+          "o000000275"
+        ],
+        "e000001163": [
+          "o000000154",
+          "o000000199"
+        ],
+        "e000000825": [
+          "o000000003",
+          "o000000132"
+        ],
+        "e000002536": [
+          "o000000132",
+          "o000000326"
+        ],
+        "e000001290": [
+          "o000000085",
+          "o000000238",
+          "o000000442"
+        ],
+        "e000002083": [
+          "o000000031"
+        ],
+        "e000002156": [
+          "o000000023",
+          "o000000145",
+          "o000000425"
+        ],
+        "e000000135": [
+          "o000000163",
+          "o000000191",
+          "o000000345"
+        ],
+        "e000003561": [
+          "o000000174",
+          "o000000221",
+          "o000000460"
+        ],
+        "e000001030": [
+          "o000000194",
+          "o000000263"
+        ],
+        "e000004316": [
+          "o000000020",
+          "o000000168"
+        ],
+        "e000002552": [
+          "o000000258",
+          "o000000280",
+          "o000000347"
+        ],
+        "e000004481": [
+          "o000000130"
+        ],
+        "e000003547": [
+          "o000000084",
+          "o000000252",
+          "o000000357"
+        ],
+        "e000004040": [
+          "o000000257",
+          "o000000408"
+        ],
+        "e000002773": [
+          "o000000189",
+          "o000000226"
+        ],
+        "e000000799": [
+          "o000000116",
+          "o000000455"
+        ],
+        "e000001132": [
+          "o000000455"
+        ],
+        "e000003762": [
+          "o000000455"
+        ],
+        "e000003201": [
+          "o000000128",
+          "o000000339",
+          "o000000362"
+        ],
+        "e000003094": [
+          "o000000133"
+        ],
+        "e000000894": [
+          "o000000126"
+        ],
+        "e000000245": [
+          "o000000194",
+          "o000000229",
+          "o000000401"
+        ]
+      },
+      "prior_clusters": {
+        "o000000433": "o000000433"
+      }
+    }
+  ],
+  "seconds": 0.9553635879419744,
+  "policy": "guarded"
+}

@@ -1,0 +1,42 @@
+{
+  "status": "built_for_review",
+  "pages": 14,
+  "page_limit": 15,
+  "inputs": {
+    "revision/paper/main.tex": "f02f5086f7efd9595d2082674dc5a4088686cd8a924035100aa3597740202497",
+    "revision/paper/robustness_results.tex": "5a3f1152b46a74b9c51fab1003ea20ade474ab258efe172efbd6e3f191a676c5",
+    "revision/paper/application_example.tex": "67d562942486409afa89aaa0de2ba37d87803c0ab4ef81e31a6423168c9dd08c",
+    "revision/paper/references.tex": "b66d54a67d3f042061eacd5b91cfdd9917c2e8daaeda828ccae5cd737e2c70a9",
+    "revision/paper/original_results.tex": "7f1b388958496504e29727faa0cc3248149b207d4f189f4fed4af904f53b0bf8",
+    "revision/paper/confirmation_interpretation.tex": "02196b1417e8fb4b8427575e2566ac4b362260e5db1db165dca09ae23411ea42",
+    "revision/paper/reliability_results.tex": "2552d3a3004fa84696cdf4f820745a333f1eb27b0295854d6ca1b9c302af5462",
+    "revision/paper/budget_results.tex": "99976219e87a247f42368fe893edbd540e4570ac95d38376959d04cecdadb518",
+    "revision/paper/followup.tex": "6da6bd821adf43444f3e8195dbb351e9a531fcf8eaa090349f8af4174d256b45",
+    "revision/paper/results.tex": "fc29a59b17f0d90a1b1104b78ec788c7393e157c5f613a4270f9ff3ae911a035",
+    "revision/paper/annotation_costs.tex": "64b53fa7f45614bbeb42c3a09a7ac8acd7eead6cad3b4a0da126149fa2450341",
+    "revision/paper/followup_interpretation.tex": "780043eb992ed0465f24344ab8aea40ebe4413352dfb7113571b93596865fc29",
+    "revision/paper/confirmation.tex": "7c092cc5d94f60d013c20ada7af0337d5b7ddd44113034a1bd98a11914e37552",
+    "revision/paper/confirmation_design.tex": "29e0c18117755c76cc9d6d0d775a022f930d7b03fc361d76bb0973b11ca97828",
+    "revision/paper/native_results.tex": "e74f375c87f9e7bcbab1566a3ebfe3d547d3675d53bcf3272687cd12ec7fefc0",
+    "revision/confirmation_v3/paper_table_safety.tex": "8a53a545e3850aebf0dfa9c5ffc6fde9105838a5cb06c043675609abbc118b49",
+    "revision/confirmation_v3/paper_table_budget.tex": "0aa5208a11c816e52a6c05353e9223832a813e713cc7400db7af5bbf49d6c0f8",
+    "revision/confirmation_v3/paper_table_contrasts.tex": "eb6b359633bd2a1b7b9b6f139c31cefe1d8daf5bcee2f16143cca521cdc1ba69",
+    "revision/confirmation_v3/paper_table_primary.tex": "6ab0a42766e75be5b88db12b50b37939ad4fd8b665d0b067cf910d328e86e491",
+    "revision/improvement_v2/paper_table_ablation.tex": "e658688e49a4c9e239986e499f83c3ec5a31cf30fa4b3501a6f8491b834b01d5",
+    "revision/improvement_v2/paper_table_primary.tex": "74bb9c54a957ce2f6fbd80129cba16b8c71b12b76d38e8886e8f63d3be4f2654",
+    "revision/confirmation_v3/figures/study_design.pdf": "33c1ecaab3a2718999dc3d7924d2a671abaf3f5acbe23ff4d93573d4b1549a0a",
+    "revision/paper/figures/application_cases.pdf": "f43ce28eb9eff14dd99d4db7ea023dcb3d80d256072769ff8d47001c140036ef",
+    "revision/paper/figures/budget_curves.pdf": "c050aa4bf3213ee877a1f7564d3a0516e3e87091aa0f62d2206fae9eb0a88e18"
+  },
+  "pdf_sha256": "5ba569bf4a9d3bba7e14bc47996a708212e87033ef7ab37a1b5e85ed2eadc573",
+  "log_sha256": "823569df8af2e11dfdc3fbb751e65f8782d86fac1c40c074800573c202c175ec",
+  "command": [
+    "/mnt/zubair/Operational_Temporal_Graphs/paper/tools/tectonic",
+    "--only-cached",
+    "--keep-logs",
+    "main.tex"
+  ],
+  "overfull": [],
+  "script_sha256": "92d3cb45a2d90836582e6d6c096003660080a044d62789e764e11795466e89e4",
+  "analysis_sha256": "19a3f73acf8961c1f73be40597a37d8290acb12cab4641a720e1e2f3ef914564"
+}

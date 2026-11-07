@@ -1,9 +1,9 @@
 {
-  "status": "completed_for_author_review",
+  "status": "fresh_confirmation_completed_for_author_review",
   "user_constraint": "At most 15 pages total including references and appendices; iterate to an evidence-supported good paper for final review only.",
   "original_study": "Original experimental evidence retained; earlier manuscript PDFs and source entrypoints removed at explicit user request.",
-  "goal_status": "active",
-  "current_stage": "Frozen combined-repair runs in progress; reproduction dependency/guide and final review/package gates prepared.",
+  "goal_status": "complete",
+  "current_stage": "768 fixed-model conditions independently audited; latest 14-page paper built and visually reviewed.",
   "completed": [
     "Revision charter and prospective cohort plan saved before new record selection.",
     "BPI2017/BPI2019 fresh root/child-disjoint partitions prepared: 512 development, 1024 annotation, 1024 confirmation, 256 native comparison each. Original audited roots and original 1024-root confirmation excluded.",
@@ -30,7 +30,8 @@
     "All 54 budget development conditions and 18 extra/reliability development controls complete.",
     "All six native conditions with five matched methods completed; source-based prediction audit passed.",
     "Six selected budget64 models numerically refitted within 1e-12 with identical calibration thresholds and decisions; byte identity did not reproduce and is not claimed.",
-    "Added explicit Python/tokenizer reproduction dependencies, application benefit/harm illustration, and gated final review/package builders. Current draft is 10 pages with no overfull boxes."
+    "Added explicit Python/tokenizer reproduction dependencies, application benefit/harm illustration, and gated final review/package builders. Current draft is 10 pages with no overfull boxes.",
+    "Completed untouched-history confirmation and never-merge comparisons:768 audited conditions, paired block intervals,66 passing tests,14-page visually reviewed manuscript."
   ],
   "running_jobs": {},
   "completed_jobs": {
@@ -57,7 +58,7 @@
     "warning": "Historical pilots only. Full native comparison is complete and independently audited; see revision/reports/native_confirmation_audit_v1.json."
   },
   "critical_next_steps": [
-    "User scientific review, author details and venue selection; no automatic submission."
+    "Author review of updated 15-page paper and complete follow-up results; no automatic additional experiments."
   ],
   "label_budget_caution": "These are incremental fitting/calibration budgets on fresh histories in previously studied source processes. Historical research/development labels are not zero and must be disclosed. Do not claim a total project-wide annotation budget or unseen-domain transfer from these same-source cohorts.",
   "gpu_runner": "/home/zubair/zubairEnv/bin/python revision/research.py",
@@ -90,13 +91,31 @@
     "package": "revision/build_review_package.py",
     "note": "Final review needs completed experimental audit, final compiled PDF, numerical claims receipts and an actual visual/scientific review; do not fabricate completion receipts."
   },
-  "stage": "final_manuscript_and_evidence_review",
-  "final_review": "revision/reports/final_revision_review_v1.json",
+  "stage": "untouched_history_confirmation_never_merge_and_paper_complete",
+  "final_review": "revision/confirmation_v3/review.json",
   "review_guide": "revision/REVIEW_NOTES.txt",
   "review_package": "/mnt/zubair/Temporal_Graph_Repair",
   "consolidated_project": "/mnt/zubair/Temporal_Graph_Repair",
   "latest_paper": "revision/paper/main.pdf",
-  "latest_paper_shortcut": "LATEST_PAPER.pdf",
+  "latest_paper_shortcut": "rEPAIR. LATEST_PAPER.pdf",
   "consolidation_manifest": "archives/CONSOLIDATION_MANIFEST.json",
-  "manuscript_retention": "latest_only"
+  "manuscript_retention": "latest_only",
+  "followup_state": "revision/improvement_v2/STATUS.json",
+  "previous_final_review": "revision/reports/final_revision_review_v1.json",
+  "next_action": "Author review of revision/paper/main.pdf and revision/confirmation_v3/RESULTS.txt. All confirmation experiments and checks are complete; no workers remain running.",
+  "followup_scope": "Exploratory reused-cohort comparison; identical real histories, eight corruptions, generated augmentation, input ablations, guards and measured CPU/wall costs. Natural-error adjudication and human-time collection skipped with user authorization.",
+  "active_revision_state": "revision/confirmation_v3/STATUS.json",
+  "latest_paper_pages": 14,
+  "workers": [],
+  "confirmation_v3": {
+    "status": "complete",
+    "directory": "revision/confirmation_v3",
+    "conditions": 768,
+    "fixed_models": 36,
+    "fresh_roots_per_source": 1024,
+    "hypothesis_H1": "supported_conditionally",
+    "hypothesis_H2": "no_combination_supported",
+    "pdf_sha256": "5ba569bf4a9d3bba7e14bc47996a708212e87033ef7ab37a1b5e85ed2eadc573",
+    "seed_sensitivity": "One of three fixed fitted-seed means loses loan recovery; block intervals are conditional on the fixed fits."
+  }
 }

@@ -1,0 +1,42 @@
+DESIGN AND EXECUTION NOTES
+
+The user authorized two additions: untouched-history confirmation and a never-merge
+safety control. Both use the existing generated collection, fixed fits and fixed
+calibration thresholds. No outcome-driven method revision is part of this study.
+
+The initial protocol and initial run implementation are retained as
+protocol_initial.json and run_initial.py. A preparation-only amendment sorts raw
+adapter events by timestamp before validated block subsetting. The loan adapter
+returns traces consecutively, whereas Graph.validate requires chronological order.
+The initial loan preparation failed before computing any new repair outcome.
+No source selection, model, hypothesis, threshold, fault seed or analysis changed.
+Purchasing was rebuilt under the amended protocol; its graph, bundle, raw-root and
+selection-audit artifacts exactly matched the pre-amendment preparation.
+
+The fresh-cohort provenance check is separate from outcome analysis. It verifies
+that all raw block roots jointly equal the planned selection, block order follows
+the declared hash, original exclusion hashes and every older partition hash match,
+all target bundles are disjoint, and every retained native event has exactly one
+root. The older expanded native block contains2048 roots, all excluded here.
+
+The 36 model files and their saved calibration outputs are pinned. Real fitting
+and calibration caches were already audited as identical across the two arms in
+the earlier study; the present study introduces no fitting or annotation access.
+
+Comparisons are paired within block/fault/model seed. A never-merge intervention
+can change which participation edits commute with the selected batch, so its
+outcomes need not equal guarded decoding with merge records simply removed after
+the fact. The implementation excludes merges before transaction selection and
+lets the unchanged decoder choose its remaining supported repairs. Tests verify
+that atomic replacements and ambiguity abstention still work.
+
+Event recovery and history retrieval are distinct endpoints. Fragmentation alone
+can lower history F1 even when each event maps to the correct canonical identity.
+Correct merging can therefore improve F1 and identity-pair recovery without
+changing the fully recovered-event count. Full false-merge contamination is
+included when computing new damage.
+
+All eight blocks per source are retained. No test threshold or preferred model
+is selected from these outcomes. Confirmation uncertainty is conditional on
+fixed models, fixed source processes, and this block sampling/fault design.
+The bootstrap does not quantify cross-institution or training-population variation.

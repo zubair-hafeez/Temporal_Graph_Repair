@@ -1,0 +1,37 @@
+{
+  "mode": "single_pass_atomic_root",
+  "safe": true,
+  "thresholds": [
+    0.9985066558360589,
+    0.8256946497125142,
+    0.9960161265503882
+  ],
+  "rejected": {
+    "tied_addition": 105156,
+    "merge_floor": 23785
+  },
+  "edits": [
+    {
+      "edit": {
+        "operation": "ADD_PARTICIPANT",
+        "source": "e000000448",
+        "target": "o000000671"
+      },
+      "score": 0.9986809934770869
+    }
+  ],
+  "undo": [
+    {
+      "prior_events": {
+        "e000000448": [
+          "o000000115",
+          "o000000187",
+          "o000000561",
+          "o000000749"
+        ]
+      },
+      "prior_clusters": {}
+    }
+  ],
+  "seconds": 0.6252211129758507
+}

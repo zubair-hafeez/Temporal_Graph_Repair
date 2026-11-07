@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Merge-policy confirmation at 64 verified bundles and $q=.99$. $R$ and $H$ are fully recovered and newly damaged events. TP/FP count true/false merged identity pairs. Never merge retains the guarded participation rules and atomic root replacements. Counts and F1 (percent) average the same 24 runs per setting.}
+\label{tab:fresh-safety}
+\begin{tabular}{lll rrrrr}
+\toprule
+Source & Arm & Policy & F1 & $R$ & $H$ & TP & FP \\ \midrule
+Loans & $R_8$ & Unguarded & 80.0 & 30.2 & 38.12 & 5.21 & 3.17 \\
+ &  & Guarded & 79.9 & 30.2 & 2.08 & 2.75 & 0.38 \\
+ &  & Never merge & 79.6 & 30.2 & 0.29 & 0.00 & 0.00 \\
+ & $+G$ & Unguarded & 79.6 & 62.5 & 0.00 & 0.00 & 0.00 \\
+ &  & Guarded & 79.6 & 62.5 & 0.00 & 0.00 & 0.00 \\
+ &  & Never merge & 79.6 & 62.5 & 0.00 & 0.00 & 0.00 \\
+\midrule
+Purchasing & $R_8$ & Unguarded & 81.0 & 400.0 & 10.54 & 11.17 & 1.75 \\
+ &  & Guarded & 81.0 & 400.3 & 5.42 & 9.46 & 0.33 \\
+ &  & Never merge & 80.5 & 400.9 & 4.71 & 0.00 & 0.00 \\
+ & $+G$ & Unguarded & 80.5 & 327.2 & 27.54 & 21.42 & 3.17 \\
+ &  & Guarded & 80.3 & 329.2 & 16.62 & 16.08 & 0.38 \\
+ &  & Never merge & 79.4 & 331.0 & 15.38 & 0.00 & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table}

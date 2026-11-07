@@ -1,0 +1,64 @@
+{
+  "pins": {
+    "domain": "bpi2019",
+    "block": 2,
+    "seed": 2,
+    "budget": 64,
+    "arm": "real8_generated",
+    "precision": 0.99,
+    "policy": "unguarded",
+    "protocol_sha256": "2027f2bbdb47b5702f5e71b8d3566ef607c09be7296ab38e706b68ba808ae411",
+    "cohort_sha256": "31376ffe4a4df4ddc067b85953111554a7b2a71f82b45bc3bfd46bd3d2bc5798",
+    "model": "revision/improvement_v2/models/bpi2019/seed2_budget64_full_real8_generated.joblib",
+    "model_sha256": "19cc713942fcd69793aca51b6816648f75a419bdb12821ab88324682772ffa07",
+    "observed_sha256": "ce21e624c0dd702e796ed75209d1e75a7720435d4dfcff530ad000afaecfe1fd",
+    "reference_sha256": "5925686b621b0dbc4cde773cb7f7189627e1f5b8451f6af086ab318ff9759cef"
+  },
+  "history": {
+    "precision": 0.8895461225686407,
+    "recall": 0.7685406316400409,
+    "f1": 0.7996950025240351,
+    "exact_history_fraction": 0.21804511278195488,
+    "entities": 532,
+    "per_type": {
+      "PO": {
+        "precision": 0.7811790481163889,
+        "recall": 0.7747569084158406,
+        "f1": 0.7475172587605201,
+        "exact_history_fraction": 0.03125,
+        "entities": 128
+      },
+      "POItem": {
+        "precision": 0.9238802451673738,
+        "recall": 0.7665711182061241,
+        "f1": 0.8162265649045544,
+        "exact_history_fraction": 0.27722772277227725,
+        "entities": 404
+      }
+    }
+  },
+  "identity": {
+    "predicted_pairs": 0,
+    "true_pairs": 102,
+    "correct_pairs": 0,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "events": {
+    "originally_correct_events": 2115,
+    "originally_incorrect_events": 1072,
+    "direct_new_damage": 1,
+    "direct_repaired_events": 275,
+    "expanded_new_damage": 1,
+    "expanded_repaired_events": 275
+  },
+  "seconds": 0.03650310798548162,
+  "cpu_seconds": 0.03647804500008078,
+  "undo_verified": true,
+  "artifacts": {
+    "repaired.json.gz": "0990e639fdf7b15dc32850a5d5f9b8acf968435c472ef6834b0ec97fc48c59d1",
+    "clusters.json": "04c5203262834036aea677dc518de1675359e036f2abb9c12704feda303b3be5",
+    "audit.json": "7f9e1090ddb3dc1ae576870a26ef4fed4c4c5b0ad93e64663ce094ea77e93f2b"
+  }
+}

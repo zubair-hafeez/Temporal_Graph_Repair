@@ -1,0 +1,182 @@
+FRESH-HISTORY CONFIRMATION: COMPLETE RESULTS
+
+768 conditions, 36 unchanged fitted models, 8 disjoint 128-root blocks per source.
+Means below average 24 block/model-seed runs per setting. R=full-event recovery;
+H=newly damaged originally correct events (full identity-cluster expansion).
+F1 is percent. Counts are per 128-root block, not per 1,024-root source.
+All errors are injected; target histories are fresh, source processes are familiar.
+
+PRIMARY GRID: source budget q | Real8 F1 R H | +Generated F1 R H
+bpi2017 16 0.95 | 79.99 65.83 6.38 | 80.00 58.54 2.21
+bpi2017 16 0.99 | 79.79 55.58 3.71 | 79.87 32.42 0.42
+bpi2017 64 0.95 | 82.01 226.58 2.96 | 80.20 98.21 1.25
+bpi2017 64 0.99 | 79.85 30.21 2.08 | 79.62 62.54 0.00
+bpi2017 256 0.95 | 81.14 110.38 1.38 | 80.66 94.12 1.71
+bpi2017 256 0.99 | 80.07 42.17 0.75 | 79.96 34.17 3.58
+bpi2019 16 0.95 | 82.78 389.96 16.54 | 80.80 273.38 15.00
+bpi2019 16 0.99 | 80.51 271.00 7.88 | 80.70 255.75 12.21
+bpi2019 64 0.95 | 83.54 565.25 15.79 | 82.26 455.38 26.62
+bpi2019 64 0.99 | 80.98 400.33 5.42 | 80.28 329.21 16.62
+bpi2019 256 0.95 | 81.26 414.67 6.42 | 80.35 369.29 6.92
+bpi2019 256 0.99 | 79.62 309.29 1.25 | 77.87 207.46 1.33
+
+SAFETY: budget 64, q=.99; mean per 128-root block
+source arm policy | F1 R H truePairs falsePairs
+bpi2017 real8 unguarded | 80.000 30.167 38.125 5.208 3.167
+bpi2017 real8 guarded | 79.853 30.208 2.083 2.750 0.375
+bpi2017 real8 never_merge | 79.579 30.208 0.292 0.000 0.000
+bpi2017 real8_generated unguarded | 79.618 62.542 0.000 0.000 0.000
+bpi2017 real8_generated guarded | 79.618 62.542 0.000 0.000 0.000
+bpi2017 real8_generated never_merge | 79.618 62.542 0.000 0.000 0.000
+bpi2019 real8 unguarded | 81.039 400.000 10.542 11.167 1.750
+bpi2019 real8 guarded | 80.978 400.333 5.417 9.458 0.333
+bpi2019 real8 never_merge | 80.458 400.917 4.708 0.000 0.000
+bpi2019 real8_generated unguarded | 80.510 327.208 27.542 21.417 3.167
+bpi2019 real8_generated guarded | 80.276 329.208 16.625 16.083 0.375
+bpi2019 real8_generated never_merge | 79.427 331.000 15.375 0.000 0.000
+
+PAIRED CONTRASTS: left minus right; mean [conditional paired block-bootstrap 95% interval]
+Three fixed model/fault runs are averaged within each block before 10,000 resamples.
+Intervals are conditional on these fitted models and source processes; no multiplicity adjustment.
+bpi2017 budget16 q0.95 ['real8_generated', 'guarded'] - ['real8', 'guarded']
+  f1: 0.0167 [-0.0597, 0.0865], positive/negative blocks 6/2
+  recovery: -7.2917 [-10.9583, -3.9583], positive/negative blocks 0/8
+  damage: -4.1667 [-4.9583, -3.4167], positive/negative blocks 0/8
+  correct_pairs: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+  false_pairs: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+bpi2017 budget16 q0.99 ['real8_generated', 'guarded'] - ['real8', 'guarded']
+  f1: 0.0784 [-0.0297, 0.1827], positive/negative blocks 5/3
+  recovery: -23.1667 [-26.7500, -19.2917], positive/negative blocks 0/8
+  damage: -3.2917 [-4.1667, -2.4583], positive/negative blocks 0/8
+  correct_pairs: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+  false_pairs: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+bpi2017 budget64 q0.95 ['real8_generated', 'guarded'] - ['real8', 'guarded']
+  f1: -1.8123 [-1.9390, -1.6772], positive/negative blocks 0/8
+  recovery: -128.3750 [-132.4167, -124.7917], positive/negative blocks 0/8
+  damage: -1.7083 [-2.7083, -0.7917], positive/negative blocks 1/7
+  correct_pairs: -2.0000 [-2.6250, -1.4167], positive/negative blocks 0/8
+  false_pairs: -0.3333 [-0.4583, -0.2083], positive/negative blocks 0/7
+bpi2017 budget64 q0.99 ['real8_generated', 'guarded'] - ['real8', 'guarded']
+  f1: -0.2349 [-0.3013, -0.1795], positive/negative blocks 0/8
+  recovery: 32.3333 [29.5000, 35.3333], positive/negative blocks 8/0
+  damage: -2.0833 [-3.7500, -0.7500], positive/negative blocks 0/8
+  correct_pairs: -2.7500 [-3.4167, -2.0417], positive/negative blocks 0/8
+  false_pairs: -0.3750 [-0.5000, -0.2500], positive/negative blocks 0/7
+bpi2017 budget256 q0.95 ['real8_generated', 'guarded'] - ['real8', 'guarded']
+  f1: -0.4768 [-0.5913, -0.3769], positive/negative blocks 0/8
+  recovery: -16.2500 [-22.1250, -9.0000], positive/negative blocks 1/7
+  damage: 0.3333 [-0.3333, 1.1250], positive/negative blocks 4/2
+  correct_pairs: 0.9167 [0.4167, 1.4583], positive/negative blocks 7/1
+  false_pairs: 0.2083 [-0.0417, 0.5000], positive/negative blocks 4/1
+bpi2017 budget256 q0.99 ['real8_generated', 'guarded'] - ['real8', 'guarded']
+  f1: -0.1123 [-0.1857, -0.0344], positive/negative blocks 2/6
+  recovery: -8.0000 [-12.0833, -3.3333], positive/negative blocks 1/7
+  damage: 2.8333 [0.6250, 5.2917], positive/negative blocks 6/1
+  correct_pairs: 1.5417 [0.8750, 2.2083], positive/negative blocks 7/1
+  false_pairs: 0.3333 [0.0833, 0.5833], positive/negative blocks 6/1
+bpi2017 budget64 q0.99 ['real8', 'guarded'] - ['real8', 'never_merge']
+  f1: 0.2737 [0.1965, 0.3520], positive/negative blocks 8/0
+  recovery: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+  damage: 1.7917 [0.5417, 3.3750], positive/negative blocks 7/0
+  correct_pairs: 2.7500 [2.0417, 3.4167], positive/negative blocks 8/0
+  false_pairs: 0.3750 [0.2500, 0.5000], positive/negative blocks 7/0
+bpi2017 budget64 q0.99 ['real8', 'guarded'] - ['real8', 'unguarded']
+  f1: -0.1478 [-0.1939, -0.1086], positive/negative blocks 0/8
+  recovery: 0.0417 [0.0000, 0.1250], positive/negative blocks 1/0
+  damage: -36.0417 [-56.8750, -18.0417], positive/negative blocks 0/8
+  correct_pairs: -2.4583 [-2.7500, -2.2083], positive/negative blocks 0/8
+  false_pairs: -2.7917 [-3.6250, -1.9167], positive/negative blocks 0/8
+bpi2017 budget64 q0.99 ['real8_generated', 'guarded'] - ['real8_generated', 'never_merge']
+  f1: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+  recovery: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+  damage: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+  correct_pairs: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+  false_pairs: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+bpi2017 budget64 q0.99 ['real8_generated', 'guarded'] - ['real8_generated', 'unguarded']
+  f1: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+  recovery: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+  damage: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+  correct_pairs: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+  false_pairs: 0.0000 [0.0000, 0.0000], positive/negative blocks 0/0
+bpi2019 budget16 q0.95 ['real8_generated', 'guarded'] - ['real8', 'guarded']
+  f1: -1.9792 [-2.2142, -1.7732], positive/negative blocks 0/8
+  recovery: -116.5833 [-135.0833, -98.3750], positive/negative blocks 0/8
+  damage: -1.5417 [-4.5417, 0.7917], positive/negative blocks 3/5
+  correct_pairs: 9.5417 [6.7917, 12.4167], positive/negative blocks 8/0
+  false_pairs: 0.3750 [-0.0833, 0.8333], positive/negative blocks 4/2
+bpi2019 budget16 q0.99 ['real8_generated', 'guarded'] - ['real8', 'guarded']
+  f1: 0.1860 [0.0113, 0.3532], positive/negative blocks 5/3
+  recovery: -15.2500 [-25.3333, -6.5417], positive/negative blocks 0/8
+  damage: 4.3333 [0.3333, 7.8333], positive/negative blocks 7/1
+  correct_pairs: 9.7083 [6.9167, 12.5417], positive/negative blocks 8/0
+  false_pairs: 0.4167 [-0.0417, 0.8750], positive/negative blocks 5/2
+bpi2019 budget64 q0.95 ['real8_generated', 'guarded'] - ['real8', 'guarded']
+  f1: -1.2851 [-1.4270, -1.1229], positive/negative blocks 0/8
+  recovery: -109.8750 [-127.5427, -92.1667], positive/negative blocks 0/8
+  damage: 10.8333 [0.6667, 22.7083], positive/negative blocks 5/3
+  correct_pairs: 7.3750 [5.7500, 8.7917], positive/negative blocks 8/0
+  false_pairs: 0.0833 [-0.2083, 0.3333], positive/negative blocks 4/2
+bpi2019 budget64 q0.99 ['real8_generated', 'guarded'] - ['real8', 'guarded']
+  f1: -0.7018 [-0.8802, -0.5114], positive/negative blocks 0/8
+  recovery: -71.1250 [-88.0000, -54.7906], positive/negative blocks 0/8
+  damage: 11.2083 [2.1667, 23.5417], positive/negative blocks 8/0
+  correct_pairs: 6.6250 [5.0833, 7.8750], positive/negative blocks 8/0
+  false_pairs: 0.0417 [-0.2083, 0.2917], positive/negative blocks 3/2
+bpi2019 budget256 q0.95 ['real8_generated', 'guarded'] - ['real8', 'guarded']
+  f1: -0.9021 [-1.0272, -0.7151], positive/negative blocks 0/8
+  recovery: -45.3750 [-65.1667, -25.4583], positive/negative blocks 1/7
+  damage: 0.5000 [-0.5000, 1.5833], positive/negative blocks 3/4
+  correct_pairs: -8.1250 [-9.0833, -7.1667], positive/negative blocks 0/8
+  false_pairs: -0.0417 [-0.1250, 0.0000], positive/negative blocks 0/1
+bpi2019 budget256 q0.99 ['real8_generated', 'guarded'] - ['real8', 'guarded']
+  f1: -1.7546 [-1.8850, -1.6080], positive/negative blocks 0/8
+  recovery: -101.8333 [-125.9583, -76.3333], positive/negative blocks 0/8
+  damage: 0.0833 [-0.3750, 0.5833], positive/negative blocks 3/4
+  correct_pairs: -8.3750 [-9.3333, -7.4167], positive/negative blocks 0/8
+  false_pairs: -0.0417 [-0.1250, 0.0000], positive/negative blocks 0/1
+bpi2019 budget64 q0.99 ['real8', 'guarded'] - ['real8', 'never_merge']
+  f1: 0.5204 [0.4199, 0.6328], positive/negative blocks 8/0
+  recovery: -0.5833 [-0.9583, -0.2500], positive/negative blocks 0/6
+  damage: 0.7083 [0.2500, 1.1667], positive/negative blocks 5/0
+  correct_pairs: 9.4583 [7.5833, 11.5417], positive/negative blocks 8/0
+  false_pairs: 0.3333 [0.1250, 0.5833], positive/negative blocks 5/0
+bpi2019 budget64 q0.99 ['real8', 'guarded'] - ['real8', 'unguarded']
+  f1: -0.0607 [-0.0770, -0.0446], positive/negative blocks 0/8
+  recovery: 0.3333 [0.0000, 0.7083], positive/negative blocks 4/1
+  damage: -5.1250 [-8.8333, -2.5833], positive/negative blocks 0/8
+  correct_pairs: -1.7083 [-2.1667, -1.2917], positive/negative blocks 0/8
+  false_pairs: -1.4167 [-2.3750, -0.7083], positive/negative blocks 0/8
+bpi2019 budget64 q0.99 ['real8_generated', 'guarded'] - ['real8_generated', 'never_merge']
+  f1: 0.8492 [0.7616, 0.9276], positive/negative blocks 8/0
+  recovery: -1.7917 [-2.7917, -1.0000], positive/negative blocks 0/8
+  damage: 1.2500 [0.6250, 1.8750], positive/negative blocks 6/0
+  correct_pairs: 16.0833 [13.9583, 18.2083], positive/negative blocks 8/0
+  false_pairs: 0.3750 [0.2083, 0.5417], positive/negative blocks 6/0
+bpi2019 budget64 q0.99 ['real8_generated', 'guarded'] - ['real8_generated', 'unguarded']
+  f1: -0.2339 [-0.2931, -0.1772], positive/negative blocks 0/8
+  recovery: 2.0000 [0.7500, 3.5833], positive/negative blocks 7/0
+  damage: -10.9167 [-19.1667, -5.7083], positive/negative blocks 0/8
+  correct_pairs: -5.3333 [-6.6250, -3.9167], positive/negative blocks 0/8
+  false_pairs: -2.7917 [-4.5833, -1.6667], positive/negative blocks 0/8
+
+PRESPECIFIED HYPOTHESIS DECISIONS
+{'hypothesis': 'H1', 'mean_direction': True, 'interval_supported': True}
+{'hypothesis': 'H2', 'domain': 'bpi2017', 'arm': 'real8', 'mean_direction': False, 'interval_supported': False}
+{'hypothesis': 'H2', 'domain': 'bpi2017', 'arm': 'real8_generated', 'mean_direction': False, 'interval_supported': False}
+{'hypothesis': 'H2', 'domain': 'bpi2019', 'arm': 'real8', 'mean_direction': False, 'interval_supported': False}
+{'hypothesis': 'H2', 'domain': 'bpi2019', 'arm': 'real8_generated', 'mean_direction': False, 'interval_supported': False}
+
+FITTED-SEED SENSITIVITY OF H1: descriptive, conditional on the existing fits
+seed0: recovery difference 5.500; damage difference -6.125; F1 difference -1.257 percentage points
+seed1: recovery difference -11.500; damage difference -0.125; F1 difference -0.384 percentage points
+seed2: recovery difference 103.000; damage difference 0.000; F1 difference 0.937 percentage points
+One of three fitted-seed means loses recovery. Block-bootstrap intervals do not cover training-population uncertainty.
+
+COHORT AND COMPUTE
+bpi2017: 40273 unique events, 1,024 fresh roots; evaluation worker wall 1598.6 s; CPU 2935.9 s; peak RSS 1.43 GiB
+  No-edit mean history F1 78.854%; recovery 0, damage 0.
+bpi2019: 25040 unique events, 1,024 fresh roots; evaluation worker wall 1155.5 s; CPU 2039.9 s; peak RSS 1.35 GiB
+  No-edit mean history F1 75.845%; recovery 0, damage 0.
+Worker timings exclude raw-source preparation and independent post-run auditing.
+No new training compute, annotations, natural-error adjudication or human-time measurement.
+All 768 saved repairs independently replayed; metrics recomputed; original events and exact undo verified.

@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering\small
+\caption{Input ablations of $+G$, budget 64, $q=.95$: three-seed means. Information is removed before retrieval and fitting. No-context retains target root/child incidence; no-history removes incidence from the evidence index. These are information ablations, not architecture comparisons.}
+\label{tab:followup-ablation}
+\begin{tabular}{l rrr rrr}
+\toprule
+ & \multicolumn{3}{c}{Loans} & \multicolumn{3}{c}{Purchasing} \\
+Input & F1 (\%) & Recovered & Damaged & F1 (\%) & Recovered & Damaged \\ \midrule
+All information & 79.6 & 108 & 1.7 & 82.6 & 423 & 10.0 \\
+No timestamps & 78.4 & 8 & 0.0 & 81.7 & 424 & 7.3 \\
+No context objects & 79.4 & 81 & 2.0 & 80.9 & 327 & 8.3 \\
+No descriptions & 79.9 & 137 & 4.7 & 80.2 & 358 & 12.0 \\
+No history edges & 78.3 & 0 & 0.0 & 76.2 & 0 & 0.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
