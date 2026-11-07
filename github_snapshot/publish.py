@@ -13,7 +13,12 @@ ENV = dict(os.environ, GH_CONFIG_DIR=str(BASE/'.gh'))
 
 
 def gh(*args, **kwargs):
-    return subprocess.run([str(GH), *args], env=ENV, check=True, **kwargs)
+    try:
+        return subprocess.run([str(GH), *args], env=ENV, check=True, **kwargs)
+    except subprocess.CalledProcessError as exc:
+        if exc.stderr:
+            print(exc.stderr, flush=True)
+        raise
 
 
 def digest(path):
@@ -26,6 +31,7 @@ def digest(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--inspect-release', action='store_true')
     parser.add_argument('projects', nargs='+', choices=('Temporal_Graph_Repair', 'Operational_Temporal_Graphs'))
     args = parser.parse_args()
     login = json.loads(gh('api', 'user', capture_output=True, text=True).stdout)['login']
@@ -36,6 +42,9 @@ def main():
         prepared = json.loads((BASE/(project+'_prepared.json')).read_text())
         repo, tag = prepared['repository'], prepared['release_tag']
         source = Path(prepared['source_copy'])
+        if args.inspect_release:
+            gh('release', 'view', tag, '--repo', repo, '--json', 'id,apiUrl,isDraft,tagName,assets')
+            continue
         view = subprocess.run([str(GH), 'repo', 'view', repo, '--json', 'nameWithOwner,isPrivate'],
                               env=ENV, capture_output=True, text=True)
         if view.returncode:
@@ -68,8 +77,8 @@ def main():
                 continue
             print('Uploading:', project, path.name, path.stat().st_size, flush=True)
             gh('release', 'upload', tag, str(path), '--repo', repo)
-        details = json.loads(gh('api', 'repos/'+repo+'/releases/tags/'+tag,
-                                capture_output=True, text=True).stdout)
+        details = json.loads(gh('release', 'view', tag, '--repo', repo, '--json',
+                               'assets,apiUrl,isDraft,tagName', capture_output=True, text=True).stdout)
         expected = {p.name: p.stat().st_size for p in snapshot.iterdir() if p.is_file()}
         assets = {a['name']: a for a in details['assets']}
         for name, size in expected.items():
