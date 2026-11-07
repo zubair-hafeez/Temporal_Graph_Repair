@@ -1,9 +1,0 @@
-{
-  "status": "timing_scope_documented_from_source_before_native_completion",
-  "environment": "Concurrent research jobs on the shared machine; timings are descriptive execution costs, not an isolated system-speed benchmark.",
-  "here_native_seconds": "Starts after graph projection, record/window preparation, tokenizer fitting, model construction and artifact setup. Includes 30 training epochs, diagnostic validation, final model serialization, inference and metric computation. The final seconds field is set before prediction JSON and repaired-graph serialization.",
-  "native_controls_seconds": "Starts before graph loading/projection. Includes feature preparation, known-label HGB fitting, candidate scoring, nearest-event prediction and metric computation. Excludes final prediction JSON and report serialization.",
-  "coupled_decoder_seconds": "Elapsed decoder execution. Feature construction, scoring and graph updates are included. Input/model loading and final application metrics are outside this scope. A resumed run must disclose prior passes and cannot be described as the full uninterrupted wall time.",
-  "budget_training_seconds": "Cumulative elapsed time from the start of the complete training call. Each model row is a cumulative checkpoint, not a standalone model training time.",
-  "reporting_rule": "Name timing scopes explicitly. Do not compute a fair end-to-end speedup from these unmatched fields, or infer isolated throughput from concurrently running jobs. Training epochs, query counts and parameter counts are separately reported."
-}
